@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Projects</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script>
+        function loadSidebar() {
+            fetch("resources/sidebar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("sidebar-container").innerHTML = data;
+                });
+        }
+    </script>
+</head>
+<body onload="loadSidebar()">
+
+    <!-- Sidebar Placeholder -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>(My)Self</h1>
+        <p>[I care about caring. Animals and sentience. My favourite things are.]</p>
+    </div>
+
+</body>
+</html>
+
