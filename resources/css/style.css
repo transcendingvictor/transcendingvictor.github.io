@@ -1,9 +1,60 @@
+/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
-    margin: 40px;
-    padding: 20px;
-    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
-h1 {
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #f8f0e3;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar .profile-pic {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
     color: #333;
+    font-weight: bold;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 270px; /* Space for sidebar */
+    padding: 40px;
+    max-width: 800px;
+}
+
+.main-content h1, .main-content h2 {
+    color: #333;
+}
+
+.main-content p {
+    line-height: 1.6;
 }
