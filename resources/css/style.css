@@ -8,7 +8,7 @@ body {
 }
 
 /* Sidebar Styling */
-.sidebar {
+header {
     width: 350px; /* change .main-content margin to be 50px bigger */
     background-color: #d0e6d8;
     padding: 40px;
@@ -16,7 +16,6 @@ body {
     height: 100%;
     overflow: auto;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-
 }
 
 .sidebar h2 {
@@ -54,6 +53,7 @@ body {
     margin-left: 450px; /*Space for sidebar. 50px more than .sidebar width */
     padding: 40px;
     max-width: 800px;
+    /* background-color: #eaf4ea;
 }
 
 .main-content h1, .main-content h2 {
