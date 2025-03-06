@@ -2,53 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Projects</title>
-    <link rel="stylesheet" href="resources/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>About | M. Reboredo Prado</title>
+
+    <!-- Fonts -->
+    <link href="resources/fonts/Computer Modern/Sans/cmun-sans.css" rel="stylesheet">
+    <link href="resources/fonts/Computer Modern/Serif/cmun-serif.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/a39fa44c6b.js" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet-->
+    <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Header acting as a persistent sidebar -->
     <header>
-        <!-- Copy your current sidebar code here -->
-        <img src="resources/img/victor_abrigo_graduacion.jpg" alt="Your Photo" class="profile-pic">
-        <h2>Víctor Abia Alonso</h2>
-        <p class="email"><b>victor.abia-alonso@city.ac.uk</b></p>
-        <p class="bio">1st year PhD Student in AI Value Alignment. I'm interested in social choice, multiagent systems and moral value systems.</p>
-        
-        <div class="sidebar-links">
-            <a href="https://github.com/transcendingvictor" target="_blank">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/v%C3%ADctor-abia-alonso-8492a31bb/" target="_blank">LinkedIn</a> | 
-            <a href="https://www.youtube.com/@transcendingvictor" target="_blank">Youtube</a> | 
-            <a href="https://orcid.org/0009-0004-1775-8405" target="_blank">ORCID</a>
+        <div class="me">
+            <a aria-current="page" href="./self.html" >
+                <img class="circularimage borderimage" alt="me!" src="./resources/img/victor_abrigo_graduacion.jpg" width="100" height="100">
+                <p> <strong> Víctor Abia Alonso </strong> </p>
+            </a>
         </div>
-    
-        <div class="nav-box nav-box-academic">
-            <ul>
-                <li><a href="index.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="talks.html">Talks & Public</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-            </ul>
+        <p> 1st year PhD Student in AI Value Alignment interested in social choice, multiagent systems and moral value systems.
+        <div class="links">
+            <span> <a target="_blank" rel="nofollow noopener noreferrer"
+                      href="https://github.com/transcendingvictor">Github</a> </span>
+            <span class="tab"></span>
+            <span> <a target="_blank" rel="nofollow noopener noreferrer"
+                      href="https://www.linkedin.com/in/v%C3%ADctor-abia-alonso-8492a31bb/">LinkedIn</a> </span>
+            <span class="tab"></span>
+            <span> <a target="_blank" rel="nofollow noopener noreferrer"
+                      href="https://orcid.org/0009-0004-1775-8405">ORCID</a> </span>
+            <span class="tab"></span>
+            <span> <a target="_blank" rel="nofollow noopener noreferrer"
+                      href="https://www.youtube.com/@transcendingvictor">Youtube</a> </span>
         </div>
-        
-        <div class="nav-box nav-box-personal">
-            <ul>
-                <li><a href="self.html">Self</a></li>
-                <li><a href="poems.html">Poems</a></li>
-                <li><a href="reflective.html">Reflective Writing</a></li>
-                <li><a href="youtube.html">YouTube</a></li>
-            </ul>
-        </div>
+    <!-- Academic Box -->
+    <div class="nav-box nav-box-academic">
+        <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="talks.html">Talks & Public</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+        </ul>
+    </div>
+    <!-- Personal Box -->
+    <div class="nav-box nav-box-personal">
+        <ul>
+            <li><a href="self.html">Self</a></li>
+            <li><a href="poems.html">Poems</a></li>
+            <li><a href="reflective.html">Reflective Writing</a></li>
+            <li><a href="youtube.html">YouTube</a></li>
+        </ul>
+    </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <h1>Publications</h1>
-        <p>[Placeholder text for your publication section. Add details about your research papers and publications.]</p>
+    <div class="mainbody">
+        <div class="sc mright"> <strong> last modified: nov, <span class="dsc">2024 </span> </strong> </div>
+        <h1>Talks</h1>
+        <div class="talk">
+            <h2>Webs in the Wind: A Network Exploration of the Polar Vortex</h2>
+            <p>
+                All atmospheric phenomena, from daily weather patterns to the global climate system, are invariably
+                influenced by atmospheric flow. Despite its importance, its complex behaviour makes extracting
+                informative features from its dynamics challenging. In this talk, I will present a network-based
+                approach to explore relationships between different flow structures. Using three phenomenon- and
+                model-independent methods, we will investigate coherence patterns, vortical interactions, and
+                Lagrangian coherent structures in an idealised model of the Northern Hemisphere stratospheric polar
+                vortex. I will argue that networks built from fluid data retain essential information about the
+                system's dynamics, allowing us to reveal the underlying interaction patterns straightforwardly and
+                offering a fresh perspective on atmospheric behaviour.
+            </p>
+            <div class="sc"> <strong> nov <span class="dsc">5, 2024</span> &middot networks group seminar &middot
+                mathematical institute &middot university of oxford
+            </strong> </div>
+            <div class="sc"> <strong> nov <span class="dsc">7, 2024</span> &middot climate dynamics group seminar &middot
+                atmospheric, oceanic and planetary physics &middot university of oxford
+            </strong> </div>
+        </div>
     </div>
-
 </body>
 </html>
-

@@ -1,108 +1,364 @@
-/* General Page Styling */
-body {
-    font-family: Arial, sans-serif;
+/* Style */
+@media only screen and (min-width:750px) {
+    html {
+      font-size: 17px;
+    }
+  }
+  @media only screen and (max-width:750px) {
+    html {
+      font-size: 15px;
+    }
+  }
+  
+  * {
     margin: 0;
     padding: 0;
+    font-family: Aleo, sans-serif;
+    box-sizing: border-box;
+    text-align: justify;
+  }
+  
+  body{
+    font-weight: 350;
+    line-height: 1.5;
+  }
+  
+  a {color: black}
+  a:hover {text-decoration: underline; color:#5A8859 !important;}
+  
+  .tab{padding-left:0.75rem;}
+  
+  .listtext{
+    margin: 0 0 0.5rem 1rem;
+  }
+  
+  p {
+    margin: 0 0 0.5rem 0;
+  }
+  
+  h2 {
+  }
+  
+  .mycentredparent {
     display: flex;
-    background-color: #eaf4ea;
-}
-
-/* Sidebar Styling */
-header {
-    width: 350px; /* change .main-content margin to be 50px bigger */
-    background-color: #d0e6d8;
-    padding: 40px;
-    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100%;
-    overflow: auto;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .mycentredchild {
+    margin: auto;
+  }
+  
+  /* Container */
+  
+  div.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Side */
+  
+  @media only screen and (max-width:1100px) {
+      header {
+        width: 100%;
+        margin-right: 1rem;
+        padding: 2rem;
+        font-size: 90%;
+      background-color: #c4e6cc;
+    }
+  }
+  
+  @media only screen and (min-width:1100px) {
+    header {
+      height: 100%;
+      width: 21rem;
+      margin-right: 1rem;
+      padding: 5rem 2rem 5rem 2rem;
+      font-size: 90%;
+      display: inline-block;
+      position: fixed;
+      overflow: scroll;
+      bottom: 0;
+      left: 0;
+      background-color: #c4e6cc;
+    }
+  }
+  
+  header a {
+    text-decoration: none;
+  }
+  
+  header p {
+    width: 16rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.sidebar h2 {
-    text-align: center;
+.links a {
+    background-color: #E5E5E5; /* Light gray background */
+    padding: 6px 4px; /* Some padding */
+    border-radius: 6px; /* Rounded corners */
+    text-decoration: none !important; /* Remove underline */
+    color: black !important; /* Ensure text remains black */
+    font-weight: bold; /* Make text slightly bolder */
+    transition: background-color 0.2s ease-in-out;
 }
 
-.sidebar .profile-pic {
+.links a:hover {
+    background-color: #D0D0D0; /* Slightly darker gray on hover */
+}
+
+.links .tab {
+    color: black;
+    font-weight: bold;
+    padding: 0 5px;
+}
+  
+  nav {
+    width: 100%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: black;
+    border-radius: 1rem;
+  }
+  
+  nav a {
+    padding: 1rem;
     display: block;
-    width: 150px;
-    height: 150px;
+    font-weight: bold;
+  }
+  
+  nav a.top {
+    border-top-left-radius: 0.9rem;
+    border-top-right-radius: 0.9rem;
+  }
+  
+  nav a.bottom {
+    border-bottom-left-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
+  }
+  
+  nav a:hover {
+    text-decoration: none;
+    color: black !important;
+    background-color: #a2d6ab !important;
+  }
+  
+  nav a.active {
+    background-color: #a0c9aa !important;
+  }
+  
+  nav ul {
+    width: 100%;
+    list-style-type: none;
+  }
+  
+  
+  /* Body */
+  
+  .mright {
+    text-align: right;
+  }
+  
+  .mcenter {
+    text-align: center;
+  }
+  
+  .sc {
+    font-variant: small-caps;
+  }
+  
+  .dsc {
+    font-size: 75%;
+  }
+  
+  @media only screen and (max-width:1100px) {
+    .mainbody {
+      width: 100%;
+      padding: 4rem;
+      font-size: 100%;
+      background-color: #f1fcee;
+    }
+  }
+  
+  @media only screen and (min-width:1100px) {
+    .mainbody {
+      height: 100%;
+      padding: 4rem;
+      font-size: 100%;
+      display: inline-block;
+      position: fixed;
+      overflow: scroll;
+      left: 21rem;
+      bottom: 0;
+      right: 0;
+      background-color: #f1fcee;
+    }
+  }
+  
+  @media only screen and (min-width:750px) {
+    .projgrid {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    }
+  }
+  @media only screen and (max-width:750px) {
+    .projgrid {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+  }
+  
+  
+  .proj {
+    padding: 0.2rem;
+    border: 0.1rem solid #1c1c1c;
+    border-radius: 10px;
+    transition-property: all;
+    transition-duration: 250ms;
+  }
+  
+  .proj:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px #1c1c1c;
+  }
+  
+  .proj hr {
+    margin: auto;
+    width: 95%;
+    border-top: 0.1rem dotted #1c1c1c;
+  }
+  
+  .projhead {
+    padding: 0.5rem;
+    color: #FCF5EE;
+    background-color: #1c1c1c;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  
+  .projtitle {
+    text-align: center;
+    min-height: 7.5rem;
+    padding: 1rem;
+    border: 0.1rem solid black;
+    background-position: left center;
+    background-size: cover;
+  }
+  
+  .projtitle h3{
+      text-shadow:
+      -1.5px -1.5px 0 #FCF5EE,
+       0   -1.5px 0 #FCF5EE,
+       1.5px -1.5px 0 #FCF5EE,
+       1.5px  0   0 #FCF5EE,
+       1.5px  1.5px 0 #FCF5EE,
+       0    1.5px 0 #FCF5EE,
+      -1.5px  1.5px 0 #FCF5EE,
+      -1.5px  0   0 #FCF5EE;
+  }
+  
+  .projbody {
+    padding: 0.75rem 1rem;
+  }
+  
+  .projlinks ul {
+    width: 100%;
+    list-style-type: none;
+  }
+  
+  .projlinks a {
+    padding: 0.75rem 1rem;
+    display: block;
+  }
+  
+  .projlinks a:hover {
+    color: black !important;
+    background-color: #F6E1CB !important;
+  }
+  
+  .projlinks a.bottom {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+  
+  .circularimage {
+    border-radius: 50%;
+  }
+  
+  @media only screen and (min-width:750px) {
+    .rightsideimage {
+      float: right;
+      height: auto;
+      width: 15rem;
+      margin: 0px 0px 15px 20px;
+      margin: 0 2rem;
+    }
+  
+    .leftsideimage {
+      float: left;
+      height: 15rem;
+      width: auto;
+      margin: 0px 0px 15px 20px;
+      padding: 1rem;
+    }
+  }
+  
+  @media only screen and (max-width:750px) {
+    .rightsideimage {
+      display: inline-block;
+      margin: 0 auto;
+      height: 15rem;
+      width: auto;
+      margin: 1rem;
+    }
+    .leftsideimage {
+      display: inline-block;
+      margin: 0 auto;
+      height: 15rem;
+      width: auto;
+      margin: 1rem;
+    }
+  }
+  
+  
+  .centerimage {
+    display: inline-block;
+    margin: 0 auto;
+    height: 15rem;
+    width: auto;
+    padding: 1rem;
+  }
+  
+  .borderimage{
+    display: block;
+    width: 160px;
+    height: 160px;
     border-radius: 30%;
-    border: 4px solid #fff; 
-    margin: 30px auto;
+    border: 4px solid #e6e6e6 !important; 
+    margin: 25px auto;
     object-fit: cover;  /* This makes the image fit & crop */
     object-position: 20% 20%; /* Fine-tune focus (horizontal, vertical) */
-}
+  }
+  
+  .talk {
+    padding: 1rem;
+  }
 
-.sidebar nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar nav ul li {
-    margin: 10px 0;
-}
-
-.sidebar nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Main Content Styling */
-.main-content {
-    margin-left: 450px; /*Space for sidebar. 50px more than .sidebar width */
-    padding: 40px;
-    max-width: 800px;
-    /* background-color: #eaf4ea;
-}
-
-.main-content h1, .main-content h2 {
-    color: #333;
-}
-
-.main-content p {
-    line-height: 1.6;
-}
-
-.sidebar .email {
-    text-align: center;
-    font-weight: bold;
-    margin: 0 auto 10px auto;
-    font-size: 1em;
-}
-
-.sidebar .bio {
-    text-align: justify;      /* Spreads text to both margins */
-    line-height: 1.6;         /* More comfortable reading */
-    font-size: 1em;           /* Adjust as you like */
-    margin: 0 auto 10px auto;
-    max-width: 330px;         /* Control the paragraph width if desired */
-}
-
-.sidebar-links {
-    text-align: center; 
-    margin-top: 15px;
-}
-
-/* Make each link a 'block' so it takes up the full line width */
-.sidebar-links a {
-    display: inline-block;    /* or block, if you want each on its own line */
-    padding: 6px 9px;        /* bigger clickable area */
-    margin: 2px;
-    color: #000;
-    background-color: #e2e8e4; /* subtle background if you want */
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-/* Hover effect */
-.sidebar-links a:hover {
-    background-color: #cbd3cf; /* slightly darker shade on hover */
-    color: #333;
-}
-
-.nav-box {
+  .nav-box {
     /* Basic box styling */
     padding: 10px;
     border-radius: 10px;
@@ -121,7 +377,7 @@ header {
 .nav-box li {
     padding: 12px;
     font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.23s ease-in-out;
 }
 
 .nav-box a {
@@ -129,6 +385,11 @@ header {
     color: #000; /* Black text */
     display: block; /* Entire row clickable */
 }
+
+.nav-box a:hover {
+    color: black !important; /* Keep text black */
+}
+
 
 /* A soft reddish background for academic box */
 .nav-box-academic li {
@@ -159,5 +420,3 @@ header {
 .nav-box-personal li:hover {
     background-color: #ccc0de; /* Darker hover */
 }
-
-
