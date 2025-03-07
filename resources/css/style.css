@@ -225,10 +225,11 @@
   
   .proj {
     padding: 0.2rem;
-    border: 0.1rem solid #1c1c1c;
+    border: 0.3rem solid #1c1c1c;
     border-radius: 10px;
     transition-property: all;
-    transition-duration: 250ms;
+    transition-duration: 200ms;
+    background-color: #eaffd3;
   }
   
   .proj:hover {
@@ -245,7 +246,7 @@
   .projhead {
     padding: 0.5rem;
     color: #FCF5EE;
-    background-color: #1c1c1c;
+    background-color: #0c4604;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
   }
@@ -259,7 +260,7 @@
     background-size: cover;
   }
   
-  .projtitle h3{
+  /* .projtitle h3{
       text-shadow:
       -1.5px -1.5px 0 #FCF5EE,
        0   -1.5px 0 #FCF5EE,
@@ -269,7 +270,7 @@
        0    1.5px 0 #FCF5EE,
       -1.5px  1.5px 0 #FCF5EE,
       -1.5px  0   0 #FCF5EE;
-  }
+  } */
   
   .projbody {
     padding: 0.75rem 1rem;
