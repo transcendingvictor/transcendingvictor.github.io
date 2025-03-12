@@ -229,7 +229,7 @@
     border-radius: 10px;
     transition-property: all;
     transition-duration: 200ms;
-    background-color: #eaffd3;
+    background-color: #fde7e7;
   }
   
   .proj:hover {
@@ -246,7 +246,7 @@
   .projhead {
     padding: 0.5rem;
     color: #FCF5EE;
-    background-color: #0c4604;
+    background-color: #461304;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
   }
@@ -420,4 +420,52 @@
 
 .nav-box-personal li:hover {
     background-color: #ccc0de; /* Darker hover */
+}
+
+.publication {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.publication img {
+  width: 120px;
+  height: auto;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+
+.pub-content {
+  flex-grow: 1;
+}
+
+.pub-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.pub-content .authors {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.pub-content .abstract {
+  margin-bottom: 0.5rem;
+}
+
+.pub-content a.pdf-link {
+  color: #461304;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pub-content a.pdf-link:hover {
+  text-decoration: underline;
+}
+
+.pub-content .abstract {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
