@@ -363,7 +363,7 @@
     /* Basic box styling */
     padding: 10px;
     border-radius: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     margin-top: 30px;
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -468,4 +468,20 @@
 .pub-content .abstract {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
+}
+
+/* Soft rounded corners for non-circular photos */
+.softcorners {
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Make the right-side image scale more naturally on phones */
+@media only screen and (max-width:750px) {
+  .rightsideimage {
+    width: 80%;
+    height: auto;       /* override the fixed 15rem for better responsiveness */
+    margin: 1rem auto;  /* centered with vertical spacing */
+    float: none;        /* ensure stacking order on small screens */
+  }
 }
