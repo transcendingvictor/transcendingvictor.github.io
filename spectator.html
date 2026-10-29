@@ -85,6 +85,11 @@
             <button type="button" data-set-lang="en">English</button>
         </div>
 
+        <div class="sp-search">
+            <input id="sp-q" type="search" placeholder="Buscar en mis listas…" data-ph-en="Search my lists…" aria-label="Buscar / Search">
+        </div>
+        <p class="sp-noresults" hidden><span data-l="es">Nada por aquí. Prueba con otra palabra.</span><span data-l="en">Nothing here. Try another word.</span></p>
+
         <h1><span data-l="es">Espectador</span><span data-l="en">Spectator</span></h1>
         <p class="sp-intro" data-l="es">
             Mi <a href="obra-completa/">obra completa</a> es el camino de ida: lo que hago y le mando al mundo.
@@ -175,6 +180,13 @@
         </section>
 
         <section class="sp-list">
+            <h2><span data-l="es">Momento antifavorito del día</span><span data-l="en">Least favourite time of day</span></h2>
+            <ol class="sp-sky">
+                <li class="hungry"><b data-l="es">Antes de comer</b><b data-l="en">Right before lunch</b><span data-l="es">right before lunch</span><span data-l="en">antes de comer</span></li>
+            </ol>
+        </section>
+
+        <section class="sp-list">
             <h2><span data-l="es">Ídolos de 2026</span><span data-l="en">Idols of 2026</span></h2>
             <ol class="sp-ranked">
                 <li><b>Marcos</b>, <span data-l="es">amigo gallego del Siegfried</span><span data-l="en">Galician friend from Siegfried</span></li>
@@ -193,6 +205,35 @@
                 <li><b data-l="es">Catalán</b><b data-l="en">Catalan</b><span class="lvl" style="--n:3"></span></li>
                 <li><b>Esperanto</b> <i data-l="es">(lo chapurreo)</i><i data-l="en">(I get by)</i><span class="lvl" style="--n:1"></span></li>
                 <li><b data-l="es">Francés</b><b data-l="en">French</b> <i data-l="es">(lo chapurreo)</i><i data-l="en">(I get by)</i><span class="lvl" style="--n:1"></span></li>
+            </ul>
+        </section>
+
+        <section class="sp-list">
+            <h2><span data-l="es">Canciones favoritas</span><span data-l="en">Favourite songs</span></h2>
+            <ol class="sp-songs">
+                <li data-search="mi monstruo y yo veintiuno">
+                    <span class="sp-rank">1</span>
+                    <iframe title="Mi monstruo y yo, Veintiuno" src="https://open.spotify.com/embed/track/67wbhq7my8mYJWNxwbQZCK?utm_source=generator" height="152" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </li>
+            </ol>
+        </section>
+
+        <section class="sp-list">
+            <h2><span data-l="es">Artistas favoritos</span><span data-l="en">Favourite artists</span></h2>
+            <div class="sp-artists">
+                <div class="sp-artist" data-search="la moda la m.o.d.a. maravillosa orquesta del alcohol burgos">
+                    <iframe title="La M.O.D.A." src="https://open.spotify.com/embed/artist/1vBn5Puz4mdZopZEHq1QDq?utm_source=generator" height="152" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>
+                <div class="sp-artist" data-search="mvrk">
+                    <iframe title="mvrk" src="https://open.spotify.com/embed/artist/6WCTfR8dIuTqWrFrzt2yl0?utm_source=generator" height="152" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="sp-list">
+            <h2><span data-l="es">Refranes favoritos</span><span data-l="en">Favourite sayings</span></h2>
+            <ul class="sp-sayings">
+                <li data-search="a buen entendedor a word to the wise"><span data-l="es">A buen entendedor,</span><span data-l="en">A word to the wise,</span></li>
             </ul>
         </section>
 
@@ -301,6 +342,11 @@
             document.querySelectorAll('[data-set-lang]').forEach(function (b) {
                 b.setAttribute('aria-pressed', String(b.dataset.setLang === l));
             });
+            var input = document.getElementById('sp-q');
+            if (input) {
+                input.dataset.phEs = input.dataset.phEs || input.placeholder;
+                input.placeholder = l === 'en' ? input.dataset.phEn : input.dataset.phEs;
+            }
             try { localStorage.setItem('lang', l); } catch (e) {}
         }
         var q = new URLSearchParams(location.search).get('lang');
@@ -309,6 +355,29 @@
         setLang(q === 'en' || q === 'es' ? q : (saved === 'en' ? 'en' : 'es'));
         document.querySelectorAll('[data-set-lang]').forEach(function (b) {
             b.addEventListener('click', function () { setLang(b.dataset.setLang); });
+        });
+
+        // Search: hides list items that do not match and sections left empty.
+        var q = document.getElementById('sp-q');
+        var none = document.querySelector('.sp-noresults');
+        function norm(t) { return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+        q.addEventListener('input', function () {
+            var term = norm(q.value.trim());
+            var anyShown = false;
+            document.querySelectorAll('.sp-list').forEach(function (sec) {
+                var items = sec.querySelectorAll('li, .sp-film, .sp-poet, .sp-artist');
+                var title = norm(sec.querySelector('h2').textContent);
+                var shown = 0;
+                items.forEach(function (it) {
+                    var text = norm(it.textContent + ' ' + (it.dataset.search || ''));
+                    var ok = !term || title.indexOf(term) !== -1 || text.indexOf(term) !== -1;
+                    it.classList.toggle('sp-hide', !ok);
+                    if (ok) shown++;
+                });
+                sec.classList.toggle('sp-hide', shown === 0);
+                if (shown) anyShown = true;
+            });
+            none.hidden = anyShown;
         });
 
         // Poem sheet, opened by #hash so it can be shared and closed with Back.
