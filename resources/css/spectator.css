@@ -485,3 +485,15 @@ html[data-lang="en"] [data-l="es"] {
   text-align: left;
   color: #4b3a6e;
 }
+
+.sp-player-tall { height: 152px; margin-top: 0.8rem; }
+
+.sp-chip-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border: 0.1rem dashed #1c1c1c;
+  border-radius: 1rem;
+  background-color: #faf6ff;
+  text-decoration: none;
+}
