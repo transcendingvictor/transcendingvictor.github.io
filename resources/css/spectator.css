@@ -1,0 +1,180 @@
+/* Spectator page: the personal (purple) side of the site */
+.spectator li, .spectator .sp-meta, .spectator h3 { text-align: left; }
+.spectator h2 {
+  margin: 2.2rem 0 0.8rem;
+}
+
+.sp-intro {
+  max-width: 42rem;
+}
+
+.sp-note {
+  font-size: 0.9rem;
+  color: #6b6b66;
+}
+
+.sp-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  vertical-align: middle;
+  padding: 0.15rem 0.5rem;
+  border-radius: 1rem;
+  background-color: #e5d8f7;
+}
+
+/* Films */
+.sp-films {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 1.2rem;
+  max-width: 42rem;
+}
+
+.sp-film {
+  position: relative;
+  padding: 0.6rem;
+  border: 0.2rem solid #1c1c1c;
+  border-radius: 10px;
+  background-color: #e5d8f7;
+  transition: all 200ms;
+}
+
+.sp-film:hover {
+  transform: translate(-5px, -5px) rotate(-1deg);
+  box-shadow: 5px 5px #1c1c1c;
+}
+
+.sp-film img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  background-color: #d5c8e7;
+}
+
+.sp-film h3 {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.sp-meta {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.sp-rank {
+  position: absolute;
+  top: -0.8rem;
+  left: -0.8rem;
+  width: 2rem;
+  height: 2rem;
+  line-height: 1.8rem;
+  text-align: center;
+  font-weight: 700;
+  border: 0.15rem solid #1c1c1c;
+  border-radius: 50%;
+  background-color: #fcd8d8;
+  z-index: 1;
+}
+
+/* Ranked lists */
+.sp-ranked,
+.sp-words,
+.sp-sky,
+.sp-langs {
+  list-style: none;
+  max-width: 34rem;
+  counter-reset: rank;
+}
+
+.sp-ranked li,
+.sp-words li {
+  counter-increment: rank;
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 0.4rem;
+  border-radius: 8px;
+  background-color: #e5d8f7;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.sp-ranked li::before,
+.sp-words li::before {
+  content: counter(rank);
+  font-weight: 700;
+  min-width: 1.2rem;
+}
+
+.sp-ranked li:hover,
+.sp-words li:hover {
+  background-color: #d5c8e7;
+  transform: translateX(4px);
+}
+
+.sp-ranked li { display: block; }
+.sp-ranked li::before { margin-right: 0.6rem; }
+
+.sp-words .es {
+  font-weight: 700;
+  flex: 1;
+}
+
+.sp-words .en {
+  font-style: italic;
+  text-align: right;
+}
+
+/* Moments of the day, coloured like the sky at that time */
+.sp-sky li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.4rem;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.sp-sky li:hover { transform: scale(1.02); }
+.sp-sky span { font-size: 0.85rem; font-style: italic; }
+.sp-sky .nautical { background: linear-gradient(90deg, #1f2a5a, #4b4f8c); color: #f1ecff; }
+.sp-sky .civil { background: linear-gradient(90deg, #6f6aa8, #e7a6b8); color: #1c1c1c; }
+.sp-sky .golden { background: linear-gradient(90deg, #f6c66b, #fde7b0); color: #1c1c1c; }
+
+/* Languages */
+.sp-langs li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0;
+}
+
+.sp-langs b { min-width: 6rem; }
+.sp-langs i { font-size: 0.85rem; }
+
+.sp-langs .lvl {
+  margin-left: auto;
+  width: 10rem;
+  height: 0.6rem;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #b9a3e0 calc(var(--n) * 20%), #ece4f9 0);
+}
+
+.sp-credits {
+  margin-top: 3rem;
+  font-size: 0.75rem;
+  color: #6b6b66;
+}
+
+@media only screen and (max-width:750px) {
+  .sp-films { grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+  .sp-film { padding: 0.35rem; }
+  .sp-film h3 { font-size: 0.85rem; }
+  .sp-meta { font-size: 0.7rem; }
+  .sp-rank { width: 1.6rem; height: 1.6rem; line-height: 1.4rem; font-size: 0.8rem; }
+  .sp-langs i { white-space: nowrap; }
+  .sp-langs .lvl { width: 5rem; }
+}

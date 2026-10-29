@@ -99,6 +99,8 @@
   
   .links {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 8px;
     justify-content: center;
     align-items: center;
 }
@@ -110,6 +112,7 @@
     text-decoration: none !important; /* Remove underline */
     color: black !important; /* Ensure text remains black */
     font-weight: bold; /* Make text slightly bolder */
+    white-space: nowrap;
     transition: background-color 0.2s ease-in-out;
 }
 
