@@ -1,0 +1,83 @@
+:root {
+  --fondo: #fbfaf6;
+  --tinta: #1d1d1b;
+  --suave: #6b6b66;
+  --linea: #e4e2da;
+  --verde: #5a8859;
+  --verde-claro: #c4e6cc;
+  --marca: rgba(90, 136, 89, 0.16);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--fondo);
+  color: var(--tinta);
+  font-family: Aleo, Georgia, serif;
+  font-weight: 350;
+  line-height: 1.6;
+}
+
+a { color: inherit; }
+a:hover { color: var(--verde); }
+
+.contenedor { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1rem 5rem; }
+
+.migas { font-size: 0.85rem; color: var(--suave); margin-bottom: 2rem; }
+.migas a { text-decoration: none; }
+
+h1 { font-family: "Vollkorn SC", Georgia, serif; font-weight: 600; font-size: 2rem; line-height: 1.2; margin-bottom: 0.5rem; }
+.entradilla { color: var(--suave); margin-bottom: 2rem; }
+
+/* Índice */
+.filtros { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+.filtros input, .filtros select {
+  font: inherit; font-size: 0.9rem; padding: 0.35rem 0.6rem;
+  border: 1px solid var(--linea); border-radius: 6px; background: #fff; color: var(--tinta);
+}
+.filtros input { flex: 1 1 12rem; }
+
+.anio { font-family: "Vollkorn SC", Georgia, serif; font-size: 1.2rem; margin: 2rem 0 0.5rem; color: var(--verde); }
+.lista { list-style: none; }
+.lista li { border-top: 1px solid var(--linea); }
+.lista a { display: flex; gap: 1rem; align-items: baseline; padding: 0.55rem 0; text-decoration: none; }
+.lista .t { flex: 1; }
+.lista .m { font-size: 0.8rem; color: var(--suave); white-space: nowrap; }
+.vacio { color: var(--suave); padding: 1rem 0; }
+
+/* Poema */
+.meta { font-size: 0.85rem; color: var(--suave); margin-bottom: 1.5rem; }
+.meta a { color: var(--suave); }
+
+.interruptor { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--suave); cursor: pointer; user-select: none; margin-bottom: 2rem; }
+.interruptor input { accent-color: var(--verde); }
+
+.poema { white-space: pre-wrap; font-size: 1.1rem; line-height: 1.75; margin-bottom: 2.5rem; }
+.poema .estrofa { display: block; height: 1rem; }
+.verso { display: block; min-height: 1.75em; }
+
+.anotado { transition: background-color 0.2s, box-shadow 0.2s; border-radius: 2px; }
+.con-notas .anotado { box-shadow: inset 0 -1px 0 var(--verde); cursor: pointer; }
+.con-notas .anotado:hover, .con-notas .anotado.activo { background: var(--marca); }
+
+.nota {
+  display: none; margin: 0.4rem 0 0.8rem; padding: 0.7rem 0.9rem;
+  border-left: 2px solid var(--verde); background: #fff;
+  font-size: 0.92rem; line-height: 1.5; white-space: normal; color: var(--tinta);
+}
+.nota.abierta { display: block; }
+
+section { margin-top: 2.5rem; }
+h2 { font-family: "Vollkorn SC", Georgia, serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; }
+.valoracion { border-top: 1px solid var(--linea); padding: 0.8rem 0; }
+.valoracion .cab { font-size: 0.85rem; color: var(--suave); margin-bottom: 0.3rem; }
+.valoracion .nota-num { color: var(--verde); font-weight: 600; }
+details summary { cursor: pointer; font-size: 0.85rem; color: var(--suave); padding: 0.5rem 0; }
+
+.navegacion { display: flex; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--linea); font-size: 0.9rem; }
+.navegacion a { text-decoration: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --fondo: #171816; --tinta: #e9e7df; --suave: #a3a29b; --linea: #33352f; --verde: #8fc08e; --marca: rgba(143, 192, 142, 0.18); }
+  .filtros input, .filtros select, .nota { background: #20221f; }
+}
