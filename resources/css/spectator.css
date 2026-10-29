@@ -178,3 +178,184 @@
   .sp-langs i { white-space: nowrap; }
   .sp-langs .lvl { width: 5rem; }
 }
+
+
+/* Poets */
+.sp-poets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 1rem;
+  max-width: 42rem;
+}
+
+.sp-poet {
+  position: relative;
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  padding: 0.6rem;
+  border: 0.2rem solid #1c1c1c;
+  border-radius: 10px;
+  background-color: #e5d8f7;
+  text-decoration: none;
+  color: #1c1c1c;
+  transition: all 200ms;
+}
+
+.sp-poet:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px #1c1c1c;
+  color: #1c1c1c !important;
+  text-decoration: none;
+}
+
+.sp-poet img,
+.sp-monogram {
+  flex: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 30%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  filter: grayscale(1);
+}
+
+.sp-monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Vollkorn SC", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #d5c8e7;
+}
+
+.sp-poet-txt {
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-poet-txt * { text-align: left; }
+.sp-go { font-size: 0.8rem; font-style: italic; }
+
+/* Poem sheet */
+.sp-sheet-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(40, 20, 70, 0.25);
+  z-index: 10;
+}
+
+.sp-sheet {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(36rem, 92vw);
+  padding: 2rem 2rem 4rem;
+  overflow-y: auto;
+  background-color: #faf6ff;
+  border-left: 0.2rem solid #1c1c1c;
+  box-shadow: -6px 0 #e5d8f7;
+  transform: translateX(105%);
+  transition: transform 300ms ease;
+  z-index: 11;
+}
+
+.sp-sheet.open { transform: translateX(0); }
+
+.sp-close {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sp-poem h2 { margin: 0.3rem 0 1.2rem; text-align: left; }
+.sp-poem p { text-align: left; }
+.sp-verses p { margin-bottom: 1rem; line-height: 1.7; }
+
+.sp-bilingual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.sp-bilingual [lang="es"] {
+  color: #6b5a8a;
+  font-style: italic;
+  border-left: 2px solid #e5d8f7;
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width:750px) {
+  .sp-poets { grid-template-columns: 1fr; }
+  .sp-sheet { padding: 1.5rem 1.2rem 3rem; }
+}
+
+/* Two languages in one file: each text has a data-l="es" and a data-l="en" twin */
+html[data-lang="es"] [data-l="en"],
+html[data-lang="en"] [data-l="es"] {
+  display: none !important;
+}
+
+.sp-langswitch {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0;
+  margin-bottom: 1rem;
+}
+
+.sp-langswitch button {
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.4rem 1.1rem;
+  border: 0.15rem solid #1c1c1c;
+  background-color: #faf6ff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sp-langswitch button:first-child { border-radius: 2rem 0 0 2rem; border-right: none; }
+.sp-langswitch button:last-child { border-radius: 0 2rem 2rem 0; }
+.sp-langswitch button:hover { background-color: #e5d8f7; }
+.sp-langswitch button[aria-pressed="true"] { background-color: #b9a3e0; }
+
+/* Books open an excerpt in the same sheet */
+.sp-books a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sp-books a:hover { color: inherit !important; text-decoration: none; }
+
+.sp-quote {
+  margin: 0 0 1.5rem;
+  padding: 0.2rem 0 0.2rem 1.2rem;
+  border-left: 0.25rem solid #b9a3e0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.sp-quote p { text-align: left; }
+
+.sp-trans {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #6b5a8a;
+}
+
+.sp-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.1rem;
+  border: 0.15rem solid #1c1c1c;
+  border-radius: 2rem;
+  background-color: #e5d8f7;
+  font-weight: 700;
+  text-decoration: none;
+}
