@@ -23,8 +23,15 @@ a:hover { color: var(--verde); }
 
 .contenedor { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1rem 5rem; }
 
-.migas { font-size: 0.85rem; color: var(--suave); margin-bottom: 2rem; }
+.migas { display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--suave); margin-bottom: 2rem; }
 .migas a { text-decoration: none; }
+
+.idioma { display: inline-flex; border: 1px solid var(--linea); border-radius: 999px; overflow: hidden; }
+.idioma button {
+  font: inherit; font-size: 0.8rem; letter-spacing: 0.04em; padding: 0.25rem 0.75rem;
+  border: 0; background: transparent; color: var(--suave); cursor: pointer;
+}
+.idioma button[aria-pressed="true"] { background: var(--verde); color: #fff; }
 
 h1 { font-family: "Vollkorn SC", Georgia, serif; font-weight: 600; font-size: 2rem; line-height: 1.2; margin-bottom: 0.5rem; }
 .entradilla { color: var(--suave); margin-bottom: 2rem; }
