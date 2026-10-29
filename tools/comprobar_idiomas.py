@@ -1,5 +1,8 @@
 """Comprueba que cada texto en español (data-l="es") tiene su gemelo en inglés (data-l="en").
 
+Un texto que solo existe en un idioma a propósito (p. ej. la traducción de una cita)
+lleva además el atributo data-solo y no se cuenta.
+
 Uso: python tools/comprobar_idiomas.py spectator.html
 """
 import sys
@@ -15,7 +18,8 @@ class Comprobador(HTMLParser):
         self.errores = 0
 
     def handle_starttag(self, tag, attrs):
-        self.pila[-1].append(dict(attrs).get("data-l"))
+        a = dict(attrs)
+        self.pila[-1].append(None if "data-solo" in a else a.get("data-l"))
         if tag not in VACIOS:
             self.pila.append([])
 

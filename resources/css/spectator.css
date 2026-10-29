@@ -323,3 +323,39 @@ html[data-lang="en"] [data-l="es"] {
 .sp-langswitch button:last-child { border-radius: 0 2rem 2rem 0; }
 .sp-langswitch button:hover { background-color: #e5d8f7; }
 .sp-langswitch button[aria-pressed="true"] { background-color: #b9a3e0; }
+
+/* Books open an excerpt in the same sheet */
+.sp-books a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sp-books a:hover { color: inherit !important; text-decoration: none; }
+
+.sp-quote {
+  margin: 0 0 1.5rem;
+  padding: 0.2rem 0 0.2rem 1.2rem;
+  border-left: 0.25rem solid #b9a3e0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.sp-quote p { text-align: left; }
+
+.sp-trans {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #6b5a8a;
+}
+
+.sp-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.1rem;
+  border: 0.15rem solid #1c1c1c;
+  border-radius: 2rem;
+  background-color: #e5d8f7;
+  font-weight: 700;
+  text-decoration: none;
+}
