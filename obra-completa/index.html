@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Obra completa | Víctor Abia Alonso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Vollkorn+SC:wght@400;600&display=swap" rel="stylesheet">
+  <link href="obra.css" rel="stylesheet">
+</head>
+<body>
+  <main class="contenedor">
+    <nav class="migas"><a href="../poems.html">← Víctor Abia Alonso</a></nav>
+    <h1>Obra completa</h1>
+    <p class="entradilla">Poemas y textos desde 2016, ordenados por fecha.</p>
+
+    <div class="filtros">
+      <input id="buscar" type="search" placeholder="Buscar un título o un verso…">
+      <select id="formato">
+        <option value="">Todo</option>
+        <option value="poema">Poemas</option>
+        <option value="texto-poetico">Mentiras banales</option>
+      </select>
+      <select id="etiqueta"><option value="">Cualquier tema</option></select>
+    </div>
+
+    <div id="indice"></div>
+  </main>
+  <script src="obra.js"></script>
+  <script>Obra.indice();</script>
+</body>
+</html>
