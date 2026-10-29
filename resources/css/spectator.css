@@ -291,7 +291,7 @@
 }
 
 @media only screen and (max-width:750px) {
-  .sp-poets { grid-template-columns: 1fr; }
+  .sp-poets, .sp-artists { grid-template-columns: 1fr; }
   .sp-sheet { padding: 1.5rem 1.2rem 3rem; }
 }
 
@@ -397,13 +397,13 @@ html[data-lang="en"] [data-l="es"] {
 
 .sp-artists {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
   max-width: 42rem;
 }
 
 .sp-artist {
-  padding: 1rem;
+  padding: 0.6rem;
   border: 0.2rem solid #1c1c1c;
   border-radius: 10px;
   background-color: #e5d8f7;
@@ -412,17 +412,20 @@ html[data-lang="en"] [data-l="es"] {
 
 .sp-artist:hover { transform: translate(-4px, -4px); box-shadow: 4px 4px #1c1c1c; }
 
-.sp-artist-pic {
-  display: block;
-  width: 7rem;
-  height: 7rem;
-  margin: 0 auto 0.6rem;
-  border-radius: 50%;
-  border: 0.2rem solid #1c1c1c;
-  object-fit: cover;
+.sp-artist-head {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
 }
 
-.sp-artist h3, .sp-artist .sp-meta { text-align: center; }
+/* Same size and shape as the poets' portraits, so the page keeps one rhythm */
+.sp-artist-pic {
+  flex: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 30%;
+  object-fit: cover;
+}
 
 .sp-chips {
   list-style: none;
@@ -496,4 +499,99 @@ html[data-lang="en"] [data-l="es"] {
   border-radius: 1rem;
   background-color: #faf6ff;
   text-decoration: none;
+}
+
+/* Chapters: small labels that group the lists into a story */
+.sp-chapter {
+  margin: 3.5rem 0 -1rem;
+  font-family: "Vollkorn SC", serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  color: #8a76b3;
+  text-align: left;
+  border-top: 0.1rem dashed #b9a3e0;
+  padding-top: 0.6rem;
+  max-width: 42rem;
+}
+
+/* Favourite vs least favourite moment, face to face */
+.sp-duel {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0.8rem;
+  align-items: start;
+  max-width: 42rem;
+}
+
+.sp-duel-col h3 { font-size: 0.95rem; margin-bottom: 0.5rem; text-align: left; }
+.sp-duel .sp-sky li { flex-direction: column; align-items: flex-start; gap: 0.1rem; min-height: 3.6rem; }
+.sp-duel .sp-sky .hungry { min-height: calc(3 * 3.6rem + 2 * 0.4rem); justify-content: center; }
+
+.sp-vs {
+  align-self: center;
+  font-family: "Vollkorn SC", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #8a76b3;
+  transform: rotate(-8deg);
+}
+
+/* Countries by their shape */
+.sp-countries {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 42rem;
+}
+
+.sp-country {
+  position: relative;
+  padding: 0.8rem 0.6rem 0.6rem;
+  border: 0.2rem solid #1c1c1c;
+  border-radius: 10px;
+  background-color: #e5d8f7;
+  text-align: center;
+  transition: all 200ms;
+}
+
+.sp-country:hover { transform: translate(-4px, -4px); box-shadow: 4px 4px #1c1c1c; }
+
+.sp-country svg {
+  display: block;
+  width: 100%;
+  height: 7rem;
+  margin-bottom: 0.4rem;
+}
+
+.sp-country path {
+  fill: #b9a3e0;
+  stroke: #1c1c1c;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: round;
+  transition: fill 200ms;
+}
+
+.sp-country:hover path { fill: #8a76b3; }
+.sp-country h3 { font-size: 0.85rem; text-align: center; }
+
+/* Recited poems */
+.sp-video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: 0.5rem 0 1rem;
+  border: 0.15rem solid #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sp-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+@media only screen and (max-width:750px) {
+  .sp-duel { gap: 0.4rem; }
+  .sp-duel .sp-sky li { padding: 0.6rem; font-size: 0.85rem; }
+  .sp-vs { font-size: 1rem; }
+  .sp-countries { gap: 0.6rem; }
+  .sp-country svg { height: 5rem; }
+  .sp-country h3 { font-size: 0.7rem; }
 }
