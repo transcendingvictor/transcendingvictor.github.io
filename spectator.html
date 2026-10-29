@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     
-        <title>Spectator | Víctor Abia Alonso</title>
+        <title>Espectador | Víctor Abia Alonso</title>
     
         <!-- Fonts -->
         <link href="resources/fonts/Computer Modern/Sans/cmun-sans.css" rel="stylesheet">
@@ -64,7 +64,7 @@
             <span class="tab"></span>
             <span> <a href="obra-completa/">Obra completa</a> </span>
             <span class="tab"></span>
-            <span> <a href="spectator.html">Spectator</a> </span>
+            <span> <a href="spectator.html">Espectador</a> </span>
             <span class="tab"></span>
         </div>
 
@@ -80,31 +80,41 @@
     <!-- Main Content -->
     <div class="mainbody spectator">
 
-        <h1>Spectator</h1>
-        <p class="sp-intro">
+        <div class="sp-langswitch" role="group" aria-label="Idioma / Language">
+            <button type="button" data-set-lang="es">Español</button>
+            <button type="button" data-set-lang="en">English</button>
+        </div>
+
+        <h1><span data-l="es">Espectador</span><span data-l="en">Spectator</span></h1>
+        <p class="sp-intro" data-l="es">
+            Mi <a href="obra-completa/">obra completa</a> es el camino de ida: lo que hago y le mando al mundo.
+            Esta página es el de vuelta: lo que el mundo me manda a mí y se queda. Películas, poetas, palabras, libros, personas, momentos del día.
+            Listas por orden de preferencia, que pueden cambiar.
+        </p>
+        <p class="sp-intro" data-l="en">
             My <a href="obra-completa/">obra completa</a> is the way out: what I make and send to the world.
-            This page is the way back in: what the world sends to me and stays. Films, words, books, people, times of day.
+            This page is the way back in: what the world sends to me and stays. Films, poets, words, books, people, times of day.
             Lists in order of preference, which may change.
         </p>
 
         <section class="sp-list">
-            <h2>Favourite films</h2>
+            <h2><span data-l="es">Películas favoritas</span><span data-l="en">Favourite films</span></h2>
             <div class="sp-films">
                 <article class="sp-film">
                     <span class="sp-rank">1</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg" alt="Inception poster" loading="lazy">
-                    <h3>Inception</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg" alt="Inception" loading="lazy">
+                    <h3><span data-l="es">Origen</span><span data-l="en">Inception</span></h3>
                     <p class="sp-meta">Christopher Nolan · 2010</p>
                 </article>
                 <article class="sp-film">
                     <span class="sp-rank">2</span>
-                    <img src="resources/img/vertigo_poster.jpg" alt="Vertigo poster" loading="lazy">
-                    <h3>Vertigo</h3>
+                    <img src="resources/img/vertigo_poster.jpg" alt="Vertigo" loading="lazy">
+                    <h3><span data-l="es">Vértigo</span><span data-l="en">Vertigo</span></h3>
                     <p class="sp-meta">Alfred Hitchcock · 1958</p>
                 </article>
                 <article class="sp-film">
                     <span class="sp-rank">3</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg" alt="Pulp Fiction poster" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg" alt="Pulp Fiction" loading="lazy">
                     <h3>Pulp Fiction</h3>
                     <p class="sp-meta">Quentin Tarantino · 1994</p>
                 </article>
@@ -112,8 +122,42 @@
         </section>
 
         <section class="sp-list">
-            <h2>Favourite words</h2>
-            <p class="sp-note">Spanish on the left, a possible English on the right. One word each, no cheating.</p>
+            <h2><span data-l="es">Poetas</span><span data-l="en">Poets</span></h2>
+            <p class="sp-note"><span data-l="es">Toca un poeta para leer uno de sus poemas.</span><span data-l="en">Tap a poet to read one of their poems.</span></p>
+            <div class="sp-poets">
+                <a class="sp-poet" href="#hernandez">
+                    <span class="sp-rank">1</span>
+                    <img src="resources/img/poeta_miguel_hernandez.jpg" alt="Miguel Hernández" loading="lazy">
+                    <span class="sp-poet-txt">
+                        <b>Miguel Hernández</b>
+                        <span class="sp-meta">1910 – 1942</span>
+                        <span class="sp-go">«No cesará este rayo…» →</span>
+                    </span>
+                </a>
+                <a class="sp-poet" href="#otero">
+                    <span class="sp-rank">2</span>
+                    <span class="sp-monogram" aria-hidden="true">BO</span>
+                    <span class="sp-poet-txt">
+                        <b>Blas de Otero</b>
+                        <span class="sp-meta">1916 – 1979</span>
+                        <span class="sp-go">«Me haces daño, Señor…» →</span>
+                    </span>
+                </a>
+                <a class="sp-poet" href="#plath">
+                    <span class="sp-rank">3</span>
+                    <img src="resources/img/poeta_sylvia_plath.jpg" alt="Sylvia Plath" loading="lazy">
+                    <span class="sp-poet-txt">
+                        <b>Sylvia Plath</b>
+                        <span class="sp-meta">1932 – 1963</span>
+                        <span class="sp-go">«Lady Lazarus» →</span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <section class="sp-list">
+            <h2><span data-l="es">Palabras favoritas</span><span data-l="en">Favourite words</span></h2>
+            <p class="sp-note"><span data-l="es">A la derecha, una posible traducción al inglés. Tiene que ser una sola palabra.</span><span data-l="en">Spanish words, with a possible English translation on the right. One word each.</span></p>
             <ol class="sp-words">
                 <li><span class="es">sabes</span><span class="en">you know</span></li>
                 <li><span class="es">eso</span><span class="en">that's it / exactly</span></li>
@@ -122,38 +166,38 @@
         </section>
 
         <section class="sp-list">
-            <h2>Favourite moment of the day</h2>
+            <h2><span data-l="es">Momento favorito del día</span><span data-l="en">Favourite time of day</span></h2>
             <ol class="sp-sky">
-                <li class="nautical"><b>Nautical twilight</b><span>crepúsculo náutico</span></li>
-                <li class="civil"><b>Civil twilight</b><span>crepúsculo civil</span></li>
-                <li class="golden"><b>Golden hour</b><span>hora dorada</span></li>
+                <li class="nautical"><b data-l="es">Crepúsculo náutico</b><b data-l="en">Nautical twilight</b><span data-l="es">nautical twilight</span><span data-l="en">crepúsculo náutico</span></li>
+                <li class="civil"><b data-l="es">Crepúsculo civil</b><b data-l="en">Civil twilight</b><span data-l="es">civil twilight</span><span data-l="en">crepúsculo civil</span></li>
+                <li class="golden"><b data-l="es">Hora dorada</b><b data-l="en">Golden hour</b><span data-l="es">golden hour</span><span data-l="en">hora dorada</span></li>
             </ol>
         </section>
 
         <section class="sp-list">
-            <h2>Idols of 2026</h2>
+            <h2><span data-l="es">Ídolos de 2026</span><span data-l="en">Idols of 2026</span></h2>
             <ol class="sp-ranked">
-                <li><b>Marcos Gallego</b>, friend and colleague from Sigfre</li>
-                <li><b>Miguelín</b></li>
-                <li><b>The theatre</b>, personified by Etienne, Miguel and Carla</li>
-                <li><b>Jimbo</b>, from the Scouts</li>
+                <li><b>Marcos</b>, <span data-l="es">amigo gallego del Siegfried</span><span data-l="en">Galician friend from Siegfried</span></li>
+                <li><b>Miguel</b></li>
+                <li><b data-l="es">El teatro</b><b data-l="en">The theatre</b>, <span data-l="es">personificado en Etienne, Miguel y Carla</span><span data-l="en">personified by Etienne, Miguel and Carla</span></li>
+                <li><b>Jimbo</b>, <span data-l="es">de los Scouts</span><span data-l="en">from the Scouts</span></li>
                 <li><b>Alba</b></li>
             </ol>
         </section>
 
         <section class="sp-list">
-            <h2>Languages I speak</h2>
+            <h2><span data-l="es">Lenguas que hablo</span><span data-l="en">Languages I speak</span></h2>
             <ul class="sp-langs">
-                <li><b>Spanish</b><span class="lvl" style="--n:5"></span></li>
-                <li><b>English</b><span class="lvl" style="--n:5"></span></li>
-                <li><b>Catalan</b><span class="lvl" style="--n:3"></span></li>
-                <li><b>Esperanto</b> <i>(I get by)</i><span class="lvl" style="--n:1"></span></li>
-                <li><b>French</b> <i>(I get by)</i><span class="lvl" style="--n:1"></span></li>
+                <li><b data-l="es">Español</b><b data-l="en">Spanish</b><span class="lvl" style="--n:5"></span></li>
+                <li><b data-l="es">Inglés</b><b data-l="en">English</b><span class="lvl" style="--n:5"></span></li>
+                <li><b data-l="es">Catalán</b><b data-l="en">Catalan</b><span class="lvl" style="--n:3"></span></li>
+                <li><b>Esperanto</b> <i data-l="es">(lo chapurreo)</i><i data-l="en">(I get by)</i><span class="lvl" style="--n:1"></span></li>
+                <li><b data-l="es">Francés</b><b data-l="en">French</b> <i data-l="es">(lo chapurreo)</i><i data-l="en">(I get by)</i><span class="lvl" style="--n:1"></span></li>
             </ul>
         </section>
 
         <section class="sp-list">
-            <h2>Favourite books <span class="sp-tag">provisional</span></h2>
+            <h2><span data-l="es">Libros favoritos</span><span data-l="en">Favourite books</span> <span class="sp-tag">provisional</span></h2>
             <ol class="sp-ranked">
                 <li><b><i>Nada</i></b>, Carmen Laforet (1945)</li>
                 <li><b><i>Comerás flores</i></b>, Lucía Solla Sobral (2023)</li>
@@ -161,8 +205,103 @@
             </ol>
         </section>
 
-        <p class="sp-credits">Posters via Wikimedia.</p>
+        <p class="sp-credits"><span data-l="es">Pósters y retratos vía Wikimedia.</span><span data-l="en">Posters and portraits via Wikimedia.</span></p>
     </div>
+
+    <!-- Poem sheet: slides in over the page; the page stays visible behind it -->
+    <div class="sp-sheet-bg" hidden></div>
+    <aside class="sp-sheet" id="sp-sheet" aria-hidden="true">
+        <a class="sp-close" href="#">← <span data-l="es">Volver</span><span data-l="en">Back</span></a>
+
+        <article class="sp-poem" data-poem="hernandez" hidden>
+            <p class="sp-meta">Miguel Hernández · <i>El rayo que no cesa</i> (1936)</p>
+            <h2>¿No cesará este rayo que me habita…?</h2>
+            <div class="sp-verses">
+                <p>¿No cesará este rayo que me habita<br>
+                el corazón de exasperadas fieras<br>
+                y de fraguas coléricas y herreras<br>
+                donde el metal más fresco se marchita?</p>
+                <p>¿No cesará esta terca estalactita<br>
+                de cultivar sus duras cabelleras<br>
+                como espadas y rígidas hogueras<br>
+                hacia mi corazón que muge y grita?</p>
+                <p>Este rayo ni cesa ni se agota:<br>
+                de mí mismo tomó su procedencia<br>
+                y ejercita en mí mismo sus furores.</p>
+                <p>Esta obstinada piedra de mí brota<br>
+                y sobre mí dirige la insistencia<br>
+                de sus lluviosos rayos destructores.</p>
+            </div>
+        </article>
+
+        <article class="sp-poem" data-poem="otero" hidden>
+            <p class="sp-meta">Blas de Otero · <span data-l="es">soneto</span><span data-l="en">sonnet</span></p>
+            <h2>Me haces daño, Señor…</h2>
+            <div class="sp-verses">
+                <p>Me haces daño, Señor. Quita tu mano<br>
+                de encima. Déjame con mi vacío,<br>
+                déjame. Para abismo, con el mío<br>
+                tengo bastante.</p>
+            </div>
+            <p class="sp-note"><span data-l="es">Primeros versos. El soneto sigue protegido por derechos de autor, así que aquí va solo el comienzo.</span><span data-l="en">Opening lines. The sonnet is still under copyright, so only the beginning is quoted here.</span></p>
+            <p><a target="_blank" rel="noopener" href="https://es.wikipedia.org/wiki/Blas_de_Otero"><span data-l="es">Más sobre Blas de Otero →</span><span data-l="en">More about Blas de Otero →</span></a></p>
+        </article>
+
+        <article class="sp-poem" data-poem="plath" hidden>
+            <p class="sp-meta">Sylvia Plath · <i>Ariel</i> (1965)</p>
+            <h2>Lady Lazarus</h2>
+            <div class="sp-bilingual">
+                <p lang="en">Dying<br>Is an art, like everything else.<br>I do it exceptionally well.</p>
+                <p lang="es">Morir<br>es un arte, como todo.<br>Yo lo hago excepcionalmente bien.</p>
+            </div>
+            <p class="sp-note"><span data-l="es">Un fragmento, con traducción verso a verso. El poema sigue protegido por derechos de autor, así que el texto entero está en el enlace.</span><span data-l="en">An excerpt with a line-by-line Spanish translation. The poem is still under copyright, so the full text is at the link.</span></p>
+            <p><a target="_blank" rel="noopener" href="https://www.poetryfoundation.org/poems/49000/lady-lazarus"><span data-l="es">Leer el poema entero (inglés) →</span><span data-l="en">Read the full poem →</span></a></p>
+        </article>
+    </aside>
+
+    <script>
+    (function () {
+        // Language: Spanish by default; ?lang=en or the switch changes it and it is remembered.
+        var root = document.documentElement;
+        function setLang(l) {
+            root.lang = l;
+            root.dataset.lang = l;
+            document.title = (l === 'es' ? 'Espectador' : 'Spectator') + ' | Víctor Abia Alonso';
+            document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+                b.setAttribute('aria-pressed', String(b.dataset.setLang === l));
+            });
+            try { localStorage.setItem('lang', l); } catch (e) {}
+        }
+        var q = new URLSearchParams(location.search).get('lang');
+        var saved = null;
+        try { saved = localStorage.getItem('lang'); } catch (e) {}
+        setLang(q === 'en' || q === 'es' ? q : (saved === 'en' ? 'en' : 'es'));
+        document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+            b.addEventListener('click', function () { setLang(b.dataset.setLang); });
+        });
+
+        // Poem sheet, opened by #hash so it can be shared and closed with Back.
+        var sheet = document.getElementById('sp-sheet');
+        var bg = document.querySelector('.sp-sheet-bg');
+        function show() {
+            var id = location.hash.slice(1);
+            var found = false;
+            document.querySelectorAll('.sp-poem').forEach(function (p) {
+                var on = p.dataset.poem === id;
+                p.hidden = !on;
+                found = found || on;
+            });
+            sheet.classList.toggle('open', found);
+            sheet.setAttribute('aria-hidden', String(!found));
+            bg.hidden = !found;
+            if (found) sheet.scrollTop = 0;
+        }
+        bg.addEventListener('click', function () { location.hash = ''; });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') location.hash = ''; });
+        window.addEventListener('hashchange', show);
+        show();
+    })();
+    </script>
 
 </body>
 </html>
