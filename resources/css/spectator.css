@@ -625,6 +625,9 @@ html[data-lang="en"] [data-l="es"] {
 html[data-lang="es"] .sp-lines .sp-tr[lang="en"],
 html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .sp-lines .sp-gap { height: 0.9rem; }
+.sp-lines .sp-cut { color: #7a6a99; }
+.sp-epi { margin-left: auto; width: fit-content; max-width: 100%; font-size: min(0.85rem, 3.3vw); font-style: italic; color: #4b3f5e; }
+.sp-epi .sp-epi-by { margin-top: 0.3rem; text-align: right; font-style: normal; }
 
 /* Series: posters, two big and three small */
 .sp-series-big,
