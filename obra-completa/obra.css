@@ -139,6 +139,7 @@ main:not(.analisis) .capas, main:not(.analisis) > section { display: none; }
 .rimas b { display: inline-block; min-width: 1.6em; text-align: center; border-radius: 3px; background: var(--rima); font-weight: 600; }
 .aviso { font-size: 0.82rem; color: var(--suave); border: 1px dashed var(--linea); border-radius: 6px; padding: 0.5rem 0.75rem; margin-bottom: 0.9rem; }
 .lectura p { margin-bottom: 0.7rem; }
+.lectura .cab-analisis { font-size: 0.85rem; color: var(--suave); }
 .puntos { display: inline-flex; gap: 0.25rem; vertical-align: middle; }
 .puntos i { width: 0.6rem; height: 0.6rem; border-radius: 50%; border: 1px solid var(--verde); }
 .puntos i.lleno { background: var(--verde); }

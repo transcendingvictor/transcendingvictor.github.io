@@ -191,7 +191,8 @@
   ],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "6",
    "rasgos": {
     "profundidad": 3,
@@ -203,45 +204,45 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Primer cuarteto: el «nosotros» sabe que algo pasa y prefiere no saber. El tiempo lo delata: el sol lo niega y la lluvia lo sabe.",
      "desde": 1,
      "hasta": 4
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El agua es la que sabe. Toda el agua del poema (marea, ahogarse, gotas) va del lado del «tú».",
      "fragmento": "la lluvia lo sabe bien"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Tres palabras sin verbo, como una enumeración de lo que hay dentro.",
      "fragmento": "Cuevas oscuras incertidumbre"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Llorar ya no sirve y la vela no se volverá a encender: el verso más largo seguido del más corto, como si la forma también se apagara.",
      "desde": 9,
      "hasta": 12
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "«Fuera» se repite y cambia de peso: de un sitio a algo mucho más grave.",
      "fragmento": "Fuera de esta vida"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Prepara el final: algo que se hincha y todavía no revienta.",
      "fragmento": "El globo no cede"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Cierre: se acepta que el otro estalle, pero se le pide silencio. Lo más duro del poema.",
      "desde": 24,
      "hasta": 26
@@ -379,7 +380,8 @@
   "anotaciones": [],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "7",
    "rasgos": {
     "profundidad": 3,
@@ -391,33 +393,33 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Las tres primeras estrofas: el deseo de ser normal. Cada terceto acaba en un remate seco de cuatro sílabas.",
      "desde": 1,
      "hasta": 9
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El deseo dicho con la misma sequedad que los otros remates, y por eso hace gracia.",
      "fragmento": "Quiero senos"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La paradoja del poema: para ser normal hay que ser rebelde, que también es una norma.",
      "fragmento": "Seré el malote desobediente"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Las tres últimas: la lista de tópicos del rebelde y un remate que se ríe de ella.",
      "desde": 10,
      "hasta": 18
     },
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Dicho popular: «Come mierda: un millón de moscas no pueden estar equivocadas», para reírse de quien sigue a la mayoría.",
      "fragmento": "Un millón de moscas"
     }
@@ -629,7 +631,8 @@
   ],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "7",
    "rasgos": {
     "profundidad": 3,
@@ -641,44 +644,44 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Primera redondilla: la noticia y el tono. Lo solemne («se mueren los inmortales») pegado a lo vulgar («a tomar por culo»).",
      "desde": 1,
      "hasta": 4
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Cada estrofa nombra una categoría con prefijo de negación (inmortales, invencibles, infalibles) y la desmiente.",
      "fragmento": "los invencibles se han ido"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La paradoja sale de la misma raíz.",
      "fragmento": "los infalibles fallaron"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "No murieron de verdad: lo que cambia es que el yo se da cuenta de que eran mortales.",
      "fragmento": "recordé que eran mortales"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Palabra inventada, por «sin igual».",
      "fragmento": "iniguales"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La última categoría que cae.",
      "fragmento": "Los sinceros nos mintieron"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Todo junto, como un título o una etiqueta. El título del poema desordena las letras de «inmortales».",
      "fragmento": "LosInmortalesMurieron"
     }
@@ -890,7 +893,8 @@
   ],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "6",
    "rasgos": {
     "profundidad": 3,
@@ -902,45 +906,45 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los cuartetos son consejos en segunda persona: sigue tu senda, repara la tienda.",
      "desde": 1,
      "hasta": 8
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "«TU» en mayúsculas, aquí y en «TU senda»: la felicidad y el camino son tuyos, no de quien los rompe.",
      "fragmento": "TU felicidad"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Una tienda de campaña, un refugio provisional: eso era la realidad inventada.",
      "fragmento": "se rompe tu tienda"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los tercetos pasan a la primera persona y a las preguntas: el que aconsejaba está en el mismo sitio.",
      "desde": 9,
      "hasta": 14
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La esperanza se va con lo que se va.",
      "fragmento": "La esperanza coge el mismo vagón"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Lo rápido (una palabra) contra lo lento: la fugacidad del título.",
      "fragmento": "un amor lento"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Todo resumido en un verso.",
      "fragmento": "Alegría irreal, una ilusión"
     }
@@ -1335,7 +1339,8 @@
   ],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "7",
    "rasgos": {
     "profundidad": 4,
@@ -1347,63 +1352,63 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Arranque: el relativismo. Solo hay realidades, no una verdad.",
      "desde": 1,
      "hasta": 4
     },
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Dientes como perlas y cabello como cascada: tópicos de la belleza femenina de la poesía petrarquista, que la estrofa siguiente llama «idealización».",
      "fragmento": "Tus dientes ahora son perlas"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El propio poema señala lo anterior como idealización.",
      "fragmento": "fruto de idealización"
     },
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Romeo, el de Shakespeare, como modelo de amante.",
      "fragmento": "Romeos"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Lo que se busca: algo cotidiano, cuerdo y sano; y si no puede ser bonito, que al menos sea ético.",
      "desde": 17,
      "hasta": 24
     },
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Del mito griego: lo que se abre ya no se puede cerrar. Vuelve más abajo: «¿Abrirás la caja un día?».",
      "fragmento": "una caja de Pandora"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Paradoja que se contradice a sí misma; recoge el «no hay una verdad absoluta» del principio.",
      "fragmento": "La verdad es que no hay verdades"
     },
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Significa «sabiduría» en griego. Puede ser un nombre o un juego con la palabra; no lo sé.",
      "fragmento": "Sofía"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El poema se mira a sí mismo: como es poesía, no quiere acabar mal.",
      "fragmento": "como esto es poesía"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Final sin respuesta, a propósito: nadie ha buceado el mar entero.",
      "desde": 49,
      "hasta": 52
@@ -1536,7 +1541,8 @@
   ],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "7",
    "rasgos": {
     "profundidad": 3,
@@ -1548,39 +1554,39 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los cuartetos: del mal sabor del ambiente nuevo al momento en que no existen miedos.",
      "desde": 1,
      "hasta": 8
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "No te encadenes a lo extraño del principio.",
      "fragmento": "no te esposes"
     },
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La ambrosía o el néctar de la mitología griega.",
      "fragmento": "zumo de dioses"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los tercetos son la caída: cascada, shock, terremoto, infierno.",
      "desde": 9,
      "hasta": 14
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Del sufrimiento queda solo una pizca, que rima con el pellizco de la cascada.",
      "fragmento": "una pizca"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Un vacío dentro de otro: lo que se posee en el infierno.",
      "fragmento": "un vaso vacío en un barco roto"
     }
@@ -1898,7 +1904,8 @@
   ],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "7",
    "rasgos": {
     "profundidad": 3,
@@ -1910,39 +1917,39 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los cuartetos: una lista de hipótesis sobre por qué un amor no llega a pasar.",
      "desde": 1,
      "hasta": 8
     },
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La manzana del Génesis, el fruto prohibido, que enlaza con el «amor prohibido» del verso anterior.",
      "fragmento": "la misma maldita manzana"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Sonrisas, recuerdos, miradas: una historia con todo menos la acción.",
      "desde": 9,
      "hasta": 11
     },
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El pícaro de Quevedo («Historia de la vida del Buscón»), o simplemente el que busca.",
      "fragmento": "buscón"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El reparto de culpas acaba en desorden.",
      "fragmento": "patas arriba"
     },
     {
      "capa": "forma",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "«Será» abre siete versos, y «Serás» y «Seré» otros dos: anáfora que sostiene todo el soneto.",
      "desde": 1,
      "hasta": 14
@@ -2101,7 +2108,8 @@
   ],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "7",
    "rasgos": {
     "profundidad": 3,
@@ -2113,45 +2121,45 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Las dos primeras estrofas montan la metáfora: trenes que chocan, trincheras, guerra de desgaste. El yo solo mira.",
      "desde": 1,
      "hasta": 8
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Dos fuerzas que van de frente la una contra la otra.",
      "fragmento": "La colisión de dos trenes"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El título y la moraleja.",
      "fragmento": "El no actuar me hizo necio"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La victoria pírrica.",
      "fragmento": "a qué precio"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La sangre del fuego cruzado, que nadie mira.",
      "fragmento": "La lluvia roja"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Al final la guerra de los otros le cae encima, en menos de diez segundos.",
      "desde": 17,
      "hasta": 20
     },
     {
      "capa": "forma",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La última estrofa va en mayúsculas y pierde la rima de los extremos (narices, vida): la forma se rompe a la vez que el choque.",
      "desde": 17,
      "hasta": 20
@@ -2285,7 +2293,8 @@
   ],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "6",
    "rasgos": {
     "profundidad": 2,
@@ -2297,39 +2306,39 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los cuartetos son el daño: árbol desgajado, muralla impenetrable, tumba.",
      "desde": 1,
      "hasta": 8
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Las ramas arrancadas del tronco.",
      "fragmento": "un árbol desgajado"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El poema sabe que es el destino de lo que cuenta.",
      "fragmento": "Acabará en poema"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los tercetos pasan al ataque y señalan contradicciones: si no es mala, por qué ataca; si no es sumisa, por qué acata.",
      "desde": 9,
      "hasta": 14
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Baratas, y luego «ricas» con un toque de ignorancia: ironía con el dinero.",
      "fragmento": "Ideas baratas"
     },
     {
      "capa": "forma",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "«atacas» y «acatas» tienen casi las mismas letras cambiadas de sitio, y las rimas C y D suenan igual en las vocales (a-a).",
      "desde": 9,
      "hasta": 10
@@ -2691,7 +2700,8 @@
   "anotaciones": [],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "8",
    "rasgos": {
     "profundidad": 4,
@@ -2703,45 +2713,45 @@
    "anotaciones": [
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El título viene de «Living is easy with eyes closed», de «Strawberry Fields Forever» de los Beatles, que también da título a la película de David Trueba «Vivir es fácil con los ojos cerrados» (2013).",
      "fragmento": "Es fácil ser con los ojos cerrados"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los cuartetos pintan la vida fácil del que no mira: ojos cerrados, faroles apagados, bebida.",
      "desde": 1,
      "hasta": 8
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Dos manos, dos salidas: la bebida y el libro, y gana la primera.",
      "fragmento": "con mano en la bebida"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Se recoge al final: son las hojas siguientes que moja el whisky.",
      "fragmento": "cuentos no empezados"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los tercetos cierran la salida: abrir los ojos no basta si no hay luz.",
      "desde": 9,
      "hasta": 14
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La luz que pedía el terceto anterior no llega.",
      "fragmento": "La cerilla no prende"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La mejor imagen: lo que todavía no se ha leído ni escrito se estropea antes de llegar.",
      "fragmento": "el whisky moja las hojas siguientes"
     }
@@ -2880,7 +2890,8 @@
   "anotaciones": [],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "8",
    "rasgos": {
     "profundidad": 3,
@@ -2892,39 +2903,39 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El título, «Oído», es un anagrama de «odio».",
      "fragmento": "Te odio por abrazarme"
     },
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Recuerda al «Odi et amo» de Catulo: odio y amo a la vez.",
      "desde": 1,
      "hasta": 8
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los tercetos lo pasan a fuego: un amor que incendia a carne viva.",
      "desde": 9,
      "hasta": 14
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La cobardía como lo que mueve.",
      "fragmento": "¿Gallina como motor?"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Lo que empujaba ahora alumbra.",
      "fragmento": "el locomotor de ayer es un faro"
     },
     {
      "capa": "forma",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "«claro» cierra un verso y abre el siguiente (anadiplosis), y cambia de sentido: de «evidente» a un claro del bosque que se incendia.",
      "desde": 9,
      "hasta": 10
@@ -3040,7 +3051,8 @@
   "anotaciones": [],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "7",
    "rasgos": {
     "profundidad": 3,
@@ -3052,39 +3064,39 @@
    "anotaciones": [
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Recuerda a la letrilla de Quevedo «Poderoso caballero es don Dinero».",
      "fragmento": "El dinero no pasará de moda"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los dos tópicos contra el dinero: la felicidad está en los matices y el oro deja solo.",
      "fragmento": "que la felicidad está en los matices"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Trato de usted: aire de sermón al revés.",
      "fragmento": "mire"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El yo se incluye entre los «inhumanos».",
      "desde": 12,
      "hasta": 14
     },
     {
      "capa": "forma",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El primer verso se repite entero en el quinto, como un estribillo.",
      "desde": 1,
      "hasta": 5
     },
     {
      "capa": "forma",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "En los tercetos las rimas van en paralelo: necesitamos e inhumanos (m y n), entendemos y menos (m y n otra vez).",
      "desde": 9,
      "hasta": 14
@@ -3364,7 +3376,8 @@
   "anotaciones": [],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "6",
    "rasgos": {
     "profundidad": 3,
@@ -3376,25 +3389,25 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Trato de usted, como una explicación educada a alguien.",
      "fragmento": "No piense"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La paradoja central: el título llama enfermedad al aburrimiento y él no consigue aburrirse.",
      "fragmento": "No consigo aburrirme"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Eso es lo que hace sufrir: la cabeza no para.",
      "fragmento": "el constante vaivén de un pensamiento"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El sentimiento ocupando el sitio del pensamiento.",
      "fragmento": "Corazón, márchate de mi cabeza"
     }
@@ -3538,7 +3551,8 @@
   ],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "8",
    "rasgos": {
     "profundidad": 3,
@@ -3550,39 +3564,39 @@
    "anotaciones": [
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los cuatro elementos de Empédocles y de la tradición clásica: aire, agua, fuego y tierra, en ese orden.",
      "desde": 1,
      "hasta": 8
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Aire. Cada elemento llega con un «como»: el viento, el agua, el fuego, la tierra.",
      "fragmento": "como el viento"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La palabra se repite como si se atascara.",
      "fragmento": "re-refrescaste"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La otra persona es el mundo, pero exagerado, y eso da paso a las catástrofes.",
      "fragmento": "una hipérbole del mundo"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Los cuatro elementos otra vez, ahora como desastres naturales: volcán (fuego), tornado (aire), seísmo (tierra) y aguacero (agua).",
      "desde": 14,
      "hasta": 15
     },
     {
      "capa": "forma",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Si se leen como un solo verso salen 11 sílabas y rima en -ero con sincero y quiero: el soneto está completo y el último verso se parte para que «Aguacero» caiga solo.",
      "desde": 14,
      "hasta": 15
@@ -3666,7 +3680,8 @@
   "anotaciones": [],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "6",
    "rasgos": {
     "profundidad": 2,
@@ -3678,19 +3693,19 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "El título dice «existencia» y el primer verso «presencia»: la palabra cambia nada más empezar.",
      "fragmento": "Tu presencia desafía"
     },
     {
      "capa": "referencia",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Esencia y existencia: la pareja de conceptos de la filosofía (el existencialismo dice que la existencia precede a la esencia).",
      "fragmento": "en esencia a mi existencia"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Las rimas cambian justo cuando el poema deja de pensar y suplica.",
      "desde": 7,
      "hasta": 8
@@ -3820,7 +3835,8 @@
   ],
   "valoraciones": [],
   "lectura": {
-   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "fecha": "2026-10-30",
+   "estado": "provisional",
    "nota": "8",
    "rasgos": {
     "profundidad": 3,
@@ -3832,45 +3848,45 @@
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Inflar despacio, como un globo: lo contrario de un golpe. Vuelve en «Has inflado mi pecho».",
      "fragmento": "Has inflado mi cuerpo"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Un estado intermedio que dura.",
      "fragmento": "no estalla ni está lleno"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Volar y navegar a la vez: aire y agua.",
      "fragmento": "volar contigo"
     },
     {
      "capa": "sentido",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "La declaración se dice con cautela.",
      "fragmento": "un poco sí te quiero"
     },
     {
      "capa": "forma",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "También riman los finales de los primeros hemistiquios: «murmura» y «dulzura» con la rima B (-ura), y «bailar» con «empapar».",
      "desde": 5,
      "hasta": 8
     },
     {
      "capa": "forma",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Lo mismo en la última estrofa: «digo» y «contigo», y «pecho» y «entiendo» en asonante.",
      "desde": 9,
      "hasta": 12
     },
     {
      "capa": "forma",
-     "autor": "claude",
+     "autor": "provisional",
      "texto": "Y en la primera: «atado» y «tirado» en consonante, «cuerpo» y «cierto» en asonante.",
      "desde": 1,
      "hasta": 4

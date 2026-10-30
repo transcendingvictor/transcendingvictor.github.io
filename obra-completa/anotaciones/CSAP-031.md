@@ -39,9 +39,10 @@ Escalonado: v15
 
 - "(melotriz)": Pista de dedicatoria, como en otros poemas del blog. Ejemplo de anotación: falta que Víctor la explique.
 
-## Lectura de Claude
+## Análisis del autor
 
-Estado: borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.
+Fecha: 2026-10-30
+Estado: provisional
 Nota: 8/10
 Profundidad: 3/5
 Dureza: 1/5

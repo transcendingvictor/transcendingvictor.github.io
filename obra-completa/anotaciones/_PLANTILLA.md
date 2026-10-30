@@ -27,9 +27,10 @@ Esquema:
 - v1-2 [sentido]:
 - "fragmento" [referencia]:
 
-## Lectura de Claude
+## Análisis del autor
 
-Estado: borrador generado por Claude el AAAA-MM-DD. No está basado en nada que haya dicho Víctor.
+Fecha: AAAA-MM-DD
+Estado: provisional (quitar cuando el análisis sea de Víctor)
 Nota: _/10
 Profundidad: _/5
 Dureza: _/5

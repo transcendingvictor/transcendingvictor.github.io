@@ -8,7 +8,7 @@ Formato de las anotaciones (ver anotaciones/_PLANTILLA.md):
   - v3 [forma]: texto          capa de la nota: forma, sentido (por defecto) o referencia
   ## Forma                     esquema, rimas (- a: …) y cada verso (- v1: 11 A · nota);
                                «Escalonado: v15» = verso partido que empieza donde acaba el anterior
-  ## Lectura de Claude         borrador de Claude: nota, rasgos sobre 5, párrafo y notas
+  ## Análisis del autor        fecha, nota, rasgos sobre 5, párrafo y notas («Estado: provisional» mientras sea un borrador)
 """
 import csv, json, os, re
 
@@ -73,7 +73,7 @@ RASGOS = ("profundidad", "dureza", "interés", "sonoridad")
 
 
 def leer_lectura(texto):
-    """Lectura de Claude: estado, nota, rasgos sobre 5, un párrafo y notas por verso."""
+    """Análisis del autor: fecha, estado, nota, rasgos sobre 5, un párrafo y notas por verso."""
     if not texto:
         return None
     c = claves(texto)
@@ -85,8 +85,8 @@ def leer_lectura(texto):
         m = re.match(r"(\d)", c.get(r, ""))
         if m:
             rasgos[r] = int(m[1])
-    return dict(estado=c.get("estado", ""), nota=nota[1] if nota else "", rasgos=rasgos,
-                texto="\n\n".join(parrafos), anotaciones=notas_por_verso(texto, "claude"))
+    return dict(fecha=c.get("fecha", ""), estado=c.get("estado", ""), nota=nota[1] if nota else "", rasgos=rasgos,
+                texto="\n\n".join(parrafos), anotaciones=notas_por_verso(texto, "provisional" if c.get("estado") else "autor"))
 
 
 def leer_anotaciones(ruta):
@@ -107,7 +107,7 @@ def leer_anotaciones(ruta):
         # Las observaciones de cada verso también se ven como notas de la capa de forma
         notas += [dict(capa="forma", autor="claude", desde=int(v), hasta=int(v), texto=d["nota"], metro=True)
                   for v, d in forma["versos"].items() if d["nota"]]
-    lectura = leer_lectura(s.get("lectura de claude", ""))
+    lectura = leer_lectura(s.get("análisis del autor", ""))
     return dict(explicacion=explicacion, anotaciones=notas, valoraciones=valoraciones, forma=forma, lectura=lectura)
 
 
