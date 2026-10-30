@@ -634,31 +634,25 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .sp-epi { margin-left: auto; width: fit-content; max-width: 100%; font-size: min(0.85rem, 3.3vw); font-style: italic; color: #4b3f5e; }
 .sp-epi .sp-epi-by { margin-top: 0.3rem; text-align: right; font-style: normal; }
 
-/* Stanzas: rhyme scheme drawn as coloured dots */
-.sp-stanzas li { flex-wrap: wrap; align-items: center; }
-.sp-stanzas .sp-meta { color: #6b5a8a; margin-left: 0.5rem; }
-.sp-rhyme { display: inline-flex; flex-wrap: wrap; flex-basis: 100%; gap: 3px; margin: 0.2rem 0 0 1.8rem; align-items: center; }
+/* Stanzas: each line a bubble with its syllable count on top; same colour, same rhyme */
+.sp-ranked.sp-stanzas li { flex-wrap: wrap; align-items: center; }
+.sp-stanzas .sp-meta { color: #6b5a8a; margin-left: 0.9rem; }
+.sp-rhyme { display: flex; flex-wrap: wrap; flex: 0 0 100%; gap: 4px; margin: 0.5rem 0 0.1rem 1.8rem; align-items: flex-end; }
+.sp-v { display: inline-flex; flex-direction: column; align-items: center; font-style: normal; }
+.sp-v small { font-size: 0.55rem; line-height: 1; margin-bottom: 2px; color: #6b5a8a; }
 .sp-r {
-  display: inline-block; width: 1.25rem; height: 1.25rem; border-radius: 50%;
-  background-color: var(--c); color: #fff; font-style: normal; font-size: 0.7rem; font-weight: 700;
-  line-height: 1.25rem; text-align: center;
+  display: inline-block; width: 1.3rem; height: 1.3rem; border-radius: 50%;
+  border: 1px solid rgba(28, 28, 28, 0.25);
+  background-color: var(--c); color: #2b2b2b; font-style: normal; font-size: 0.7rem; font-weight: 700;
+  line-height: 1.2rem; text-align: center;
 }
-.sp-r-s { width: 0.95rem; height: 0.95rem; line-height: 0.95rem; font-size: 0.6rem; }
-.sp-gap-s { display: inline-block; width: 0.45rem; }
-
-/* Cities: three favourites, then four I want to visit (dashed, like a plan) */
-.sp-cities { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 42rem; }
-.sp-cities-wish { grid-template-columns: repeat(4, 1fr); gap: 0.8rem; }
-.sp-city {
-  position: relative; padding: 0.6rem;
-  border: 0.2rem solid #1c1c1c; border-radius: 10px; background-color: #e5d8f7;
-  transition: all 200ms;
-}
-.sp-city:hover { transform: translate(-4px, -4px) rotate(-1deg); box-shadow: 4px 4px #1c1c1c; }
-.sp-city img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; background-color: #d5c8e7; }
-.sp-city h3 { margin-top: 0.5rem; text-align: left; }
-.sp-city-wish { border-style: dashed; background-color: #f3ecfc; }
-.sp-city-wish h3 { font-size: 0.95rem; }
+.sp-r-s { width: 1.05rem; height: 1.05rem; line-height: 0.95rem; font-size: 0.62rem; }
+.sp-r-xs { width: 0.8rem; height: 0.8rem; line-height: 0.7rem; font-size: 0.5rem; }
+.sp-split { display: inline-flex; gap: 2px; font-style: normal; }
+.sp-r-half-l { width: 0.75rem; border-radius: 1.3rem 0 0 1.3rem; text-align: right; padding-right: 1px; }
+.sp-r-half-r { width: 0.75rem; border-radius: 0 1.3rem 1.3rem 0; text-align: left; padding-left: 1px; }
+.sp-gap-s { display: inline-block; width: 0.5rem; }
+.sp-more { font-style: normal; color: #6b5a8a; font-weight: 700; padding: 0 0.2rem; }
 
 /* Copyright warning under the fragments, with a sad face (one day, a photo) */
 .sp-warning {
@@ -794,9 +788,11 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-cities-wish { grid-template-columns: repeat(2, 1fr); }
   .sp-city { padding: 0.35rem; }
   .sp-city h3 { font-size: 0.85rem; }
-  .sp-rhyme { flex-basis: 100%; margin-left: 1.8rem; gap: 2px; }
-  .sp-r { width: 1.05rem; height: 1.05rem; line-height: 1.05rem; font-size: 0.6rem; }
-  .sp-r-s { width: 0.85rem; height: 0.85rem; line-height: 0.85rem; font-size: 0.55rem; }
+  .sp-rhyme { margin-left: 1.4rem; gap: 2px; }
+  .sp-r { width: 1.1rem; height: 1.1rem; line-height: 1rem; font-size: 0.6rem; }
+  .sp-r-s { width: 0.9rem; height: 0.9rem; line-height: 0.8rem; font-size: 0.55rem; }
+  .sp-r-xs { width: 0.7rem; height: 0.7rem; line-height: 0.6rem; font-size: 0.45rem; }
+  .sp-r-half-l, .sp-r-half-r { width: 0.62rem; }
   .sp-gap-s { width: 0.3rem; }
 }
 
