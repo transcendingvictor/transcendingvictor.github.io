@@ -45,9 +45,12 @@ Sonoridad: 4/5
 
 Los cuartetos son consejos en segunda persona: sigue tu senda, repara la tienda. En los tercetos el que aconseja pasa a preguntarse en primera persona por qué los sentimientos son tan frágiles, como si se descubriera en el mismo sitio que el «tú». El último verso lo resume todo en dos palabras: ilusión, alegría irreal.
 
-- v1-3 [sentido]: «TU» en mayúsculas: la felicidad y el camino son tuyos, no de quien los rompe.
-- v9-11 [sentido]: Cambio a la primera persona y a las preguntas.
-- v10 [sentido]: La esperanza se sube al mismo vagón que lo que se va.
-- v12-13 [sentido]: Una sola palabra agrieta más que un amor lento: lo rápido contra lo lento, como en el título.
+- v1-8 [sentido]: Los cuartetos son consejos en segunda persona: sigue tu senda, repara la tienda.
+- "TU felicidad" [sentido]: «TU» en mayúsculas, aquí y en «TU senda»: la felicidad y el camino son tuyos, no de quien los rompe.
+- "se rompe tu tienda" [sentido]: Una tienda de campaña, un refugio provisional: eso era la realidad inventada.
+- v9-14 [sentido]: Los tercetos pasan a la primera persona y a las preguntas: el que aconsejaba está en el mismo sitio.
+- "La esperanza coge el mismo vagón" [sentido]: La esperanza se va con lo que se va.
+- "un amor lento" [sentido]: Lo rápido (una palabra) contra lo lento: la fugacidad del título.
+- "Alegría irreal, una ilusión" [sentido]: Todo resumido en un verso.
 
 ## Valoraciones

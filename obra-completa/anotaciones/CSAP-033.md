@@ -46,10 +46,10 @@ Sonoridad: 5/5
 
 Un poema de amor tranquilo y lento, con el verso largo y sereno del alejandrino. La imagen que lo vertebra es inflarse: el cuerpo, luego el pecho, que no estalla ni se llena. El cierre se queda a propósito corto de palabras: «un poco sí te quiero». Benalmádena, en la costa de Málaga, da el sitio y quizá el aire de mar del poema.
 
-- v1 [sentido]: Inflar despacio, como un globo: lo contrario de un golpe.
-- v9 [sentido]: No estalla ni está lleno: un estado intermedio que dura.
-- v11 [sentido]: Volar y navegar a la vez: aire y agua.
-- v12 [sentido]: «un poco sí»: la declaración se dice con cautela.
+- "Has inflado mi cuerpo" [sentido]: Inflar despacio, como un globo: lo contrario de un golpe. Vuelve en «Has inflado mi pecho».
+- "no estalla ni está lleno" [sentido]: Un estado intermedio que dura.
+- "volar contigo" [sentido]: Volar y navegar a la vez: aire y agua.
+- "un poco sí te quiero" [sentido]: La declaración se dice con cautela.
 - v5-8 [forma]: También riman los finales de los primeros hemistiquios: «murmura» y «dulzura» con la rima B (-ura), y «bailar» con «empapar».
 - v9-12 [forma]: Lo mismo en la última estrofa: «digo» y «contigo», y «pecho» y «entiendo» en asonante.
 - v1-4 [forma]: Y en la primera: «atado» y «tirado» en consonante, «cuerpo» y «cierto» en asonante.

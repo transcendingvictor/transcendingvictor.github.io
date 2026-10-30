@@ -47,9 +47,11 @@ Sonoridad: 4/5
 
 Un ciclo en dos tiempos. Los cuartetos van de la incomodidad del ambiente nuevo al momento en que todo sabe a zumo de dioses y no hay miedo. Los tercetos son la caída: cascada, shock, terremoto, infierno. El último verso es una imagen doble de vacío: un vaso vacío dentro de un barco roto. La pregunta del título queda en el aire: el miedo no aparece en la parte buena y sí en lo que queda después.
 
-- v3 [sentido]: «no te esposes»: no te encadenes a lo extraño del principio.
-- v6 [referencia]: Zumo de dioses: la ambrosía o el néctar de la mitología griega.
-- v12-13 [sentido]: Del sufrimiento queda solo «una pizca», que rima con el pellizco de la cascada.
-- v14 [sentido]: Lo que se posee en el infierno es un vacío dentro de otro.
+- v1-8 [sentido]: Los cuartetos: del mal sabor del ambiente nuevo al momento en que no existen miedos.
+- "no te esposes" [sentido]: No te encadenes a lo extraño del principio.
+- "zumo de dioses" [referencia]: La ambrosía o el néctar de la mitología griega.
+- v9-14 [sentido]: Los tercetos son la caída: cascada, shock, terremoto, infierno.
+- "una pizca" [sentido]: Del sufrimiento queda solo una pizca, que rima con el pellizco de la cascada.
+- "un vaso vacío en un barco roto" [sentido]: Un vacío dentro de otro: lo que se posee en el infierno.
 
 ## Valoraciones

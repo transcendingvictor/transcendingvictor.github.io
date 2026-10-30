@@ -57,9 +57,12 @@ Sonoridad: 3/5
 
 Todo el poema es una metáfora de guerra y de accidente: dos trenes que van a chocar, trincheras, guerra de desgaste, fuego cruzado. El yo mira desde fuera y no hace nada, porque piensa que el choque es inevitable y que alguien ganará. Al final la lluvia roja le cae a él: lo que parecía la guerra de otros le destroza la vida en diez segundos. El título es la moraleja.
 
-- v1 [sentido]: Dos trenes: dos fuerzas que van de frente la una contra la otra.
-- v12 [sentido]: «Ganar sí, pero a qué precio»: la victoria pírrica.
-- v13-15 [sentido]: La lluvia roja, la sangre del fuego cruzado, que nadie mira.
+- v1-8 [sentido]: Las dos primeras estrofas montan la metáfora: trenes que chocan, trincheras, guerra de desgaste. El yo solo mira.
+- "La colisión de dos trenes" [sentido]: Dos fuerzas que van de frente la una contra la otra.
+- "El no actuar me hizo necio" [sentido]: El título y la moraleja.
+- "a qué precio" [sentido]: La victoria pírrica.
+- "La lluvia roja" [sentido]: La sangre del fuego cruzado, que nadie mira.
+- v17-20 [sentido]: Al final la guerra de los otros le cae encima, en menos de diez segundos.
 - v17-20 [forma]: La última estrofa va en mayúsculas y pierde la rima de los extremos (narices, vida): la forma se rompe a la vez que el choque.
 
 ## Valoraciones

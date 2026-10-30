@@ -152,7 +152,8 @@
      "rima": "j",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2016-11-26",
   "fecha_escritura": "",
@@ -176,14 +177,16 @@
     "autor": "claude",
     "desde": 11,
     "hasta": 11,
-    "texto": "el verso más largo del poema, justo antes del más corto"
+    "texto": "el verso más largo del poema, justo antes del más corto",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 21,
     "hasta": 21,
-    "texto": "«continúan» (está escrito sin tilde)"
+    "texto": "«continúan» (está escrito sin tilde)",
+    "metro": true
    }
   ],
   "valoraciones": [],
@@ -201,30 +204,47 @@
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "El sol y la vida lo niegan y la lluvia lo sabe: el tiempo como testigo de lo que le pasa al «tú».",
-     "desde": 3,
+     "texto": "Primer cuarteto: el «nosotros» sabe que algo pasa y prefiere no saber. El tiempo lo delata: el sol lo niega y la lluvia lo sabe.",
+     "desde": 1,
      "hasta": 4
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "La vela que no se volverá a encender y «te apagas»: el verso más largo seguido del más corto, como si la forma también se apagara.",
-     "desde": 11,
+     "texto": "El agua es la que sabe. Toda el agua del poema (marea, ahogarse, gotas) va del lado del «tú».",
+     "fragmento": "la lluvia lo sabe bien"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Tres palabras sin verbo, como una enumeración de lo que hay dentro.",
+     "fragmento": "Cuevas oscuras incertidumbre"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Llorar ya no sirve y la vela no se volverá a encender: el verso más largo seguido del más corto, como si la forma también se apagara.",
+     "desde": 9,
      "hasta": 12
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "«fuera / Fuera de esta vida»: la palabra se repite y cambia de peso, de un sitio a algo mucho más grave.",
-     "desde": 15,
-     "hasta": 16
+     "texto": "«Fuera» se repite y cambia de peso: de un sitio a algo mucho más grave.",
+     "fragmento": "Fuera de esta vida"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "El globo que no cede prepara el «si vas a explotar, explota» del final.",
-     "desde": 20,
-     "hasta": 20
+     "texto": "Prepara el final: algo que se hincha y todavía no revienta.",
+     "fragmento": "El globo no cede"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Cierre: se acepta que el otro estalle, pero se le pide silencio. Lo más duro del poema.",
+     "desde": 24,
+     "hasta": 26
     }
    ]
   }
@@ -337,7 +357,8 @@
      "rima": "f",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2016-12-14",
   "fecha_escritura": "",
@@ -371,23 +392,34 @@
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "«Quiero senos»: el deseo dicho con la misma sequedad que los otros remates, y por eso hace gracia.",
-     "desde": 6,
-     "hasta": 6
+     "texto": "Las tres primeras estrofas: el deseo de ser normal. Cada terceto acaba en un remate seco de cuatro sílabas.",
+     "desde": 1,
+     "hasta": 9
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Criticar los Oscar, volver tarde, fumar hierba: rebeldía de catálogo.",
+     "texto": "El deseo dicho con la misma sequedad que los otros remates, y por eso hace gracia.",
+     "fragmento": "Quiero senos"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "La paradoja del poema: para ser normal hay que ser rebelde, que también es una norma.",
+     "fragmento": "Seré el malote desobediente"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Las tres últimas: la lista de tópicos del rebelde y un remate que se ríe de ella.",
      "desde": 10,
-     "hasta": 12
+     "hasta": 18
     },
     {
      "capa": "referencia",
      "autor": "claude",
-     "texto": "Dicho popular: «Come mierda: un millón de moscas no pueden estar equivocadas», que se usa para reírse de quien sigue a la mayoría.",
-     "desde": 16,
-     "hasta": 18
+     "texto": "Dicho popular: «Come mierda: un millón de moscas no pueden estar equivocadas», para reírse de quien sigue a la mayoría.",
+     "fragmento": "Un millón de moscas"
     }
    ]
   }
@@ -535,7 +567,8 @@
      "rima": "j",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2016-12-15",
   "fecha_escritura": "",
@@ -558,35 +591,40 @@
     "autor": "claude",
     "desde": 8,
     "hasta": 8,
-    "texto": "leyendo «ahora» en dos sílabas (sinéresis); si no, 9"
+    "texto": "leyendo «ahora» en dos sílabas (sinéresis); si no, 9",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 10,
     "hasta": 10,
-    "texto": "con sinéresis en «ahora»"
+    "texto": "con sinéresis en «ahora»",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 11,
     "hasta": 11,
-    "texto": "con sinéresis en «ahora»"
+    "texto": "con sinéresis en «ahora»",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 16,
     "hasta": 16,
-    "texto": "un poco corto"
+    "texto": "un poco corto",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 19,
     "hasta": 19,
-    "texto": "leyendo «qué es» (está escrito «ques es»)"
+    "texto": "leyendo «qué es» (está escrito «ques es»)",
+    "metro": true
    }
   ],
   "valoraciones": [],
@@ -604,30 +642,45 @@
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "«los infalibles fallaron»: la paradoja sale de la misma raíz.",
-     "desde": 9,
-     "hasta": 9
+     "texto": "Primera redondilla: la noticia y el tono. Lo solemne («se mueren los inmortales») pegado a lo vulgar («a tomar por culo»).",
+     "desde": 1,
+     "hasta": 4
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Cada estrofa nombra una categoría con prefijo de negación (inmortales, invencibles, infalibles) y la desmiente.",
+     "fragmento": "los invencibles se han ido"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "La paradoja sale de la misma raíz.",
+     "fragmento": "los infalibles fallaron"
     },
     {
      "capa": "sentido",
      "autor": "claude",
      "texto": "No murieron de verdad: lo que cambia es que el yo se da cuenta de que eran mortales.",
-     "desde": 13,
-     "hasta": 14
+     "fragmento": "recordé que eran mortales"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "«iniguales»: palabra inventada, por «sin igual».",
-     "desde": 15,
-     "hasta": 15
+     "texto": "Palabra inventada, por «sin igual».",
+     "fragmento": "iniguales"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Todo junto, como un título o una etiqueta: el verso que da sentido al título desordenado.",
-     "desde": 24,
-     "hasta": 24
+     "texto": "La última categoría que cae.",
+     "fragmento": "Los sinceros nos mintieron"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Todo junto, como un título o una etiqueta. El título del poema desordena las letras de «inmortales».",
+     "fragmento": "LosInmortalesMurieron"
     }
    ]
   }
@@ -791,7 +844,8 @@
      "rima": "D",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2017-01-07",
   "fecha_escritura": "",
@@ -814,21 +868,24 @@
     "autor": "claude",
     "desde": 3,
     "hasta": 3,
-    "texto": "11 si se hace hiato en «de | andar»"
+    "texto": "11 si se hace hiato en «de | andar»",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 5,
     "hasta": 5,
-    "texto": "con sinéresis en «realidad»; «inventando» por «inventado»"
+    "texto": "con sinéresis en «realidad»; «inventando» por «inventado»",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 11,
     "hasta": 11,
-    "texto": "con sinéresis en «ahora»"
+    "texto": "con sinéresis en «ahora»",
+    "metro": true
    }
   ],
   "valoraciones": [],
@@ -846,30 +903,46 @@
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "«TU» en mayúsculas: la felicidad y el camino son tuyos, no de quien los rompe.",
+     "texto": "Los cuartetos son consejos en segunda persona: sigue tu senda, repara la tienda.",
      "desde": 1,
-     "hasta": 3
+     "hasta": 8
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Cambio a la primera persona y a las preguntas.",
+     "texto": "«TU» en mayúsculas, aquí y en «TU senda»: la felicidad y el camino son tuyos, no de quien los rompe.",
+     "fragmento": "TU felicidad"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Una tienda de campaña, un refugio provisional: eso era la realidad inventada.",
+     "fragmento": "se rompe tu tienda"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Los tercetos pasan a la primera persona y a las preguntas: el que aconsejaba está en el mismo sitio.",
      "desde": 9,
-     "hasta": 11
+     "hasta": 14
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "La esperanza se sube al mismo vagón que lo que se va.",
-     "desde": 10,
-     "hasta": 10
+     "texto": "La esperanza se va con lo que se va.",
+     "fragmento": "La esperanza coge el mismo vagón"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Una sola palabra agrieta más que un amor lento: lo rápido contra lo lento, como en el título.",
-     "desde": 12,
-     "hasta": 13
+     "texto": "Lo rápido (una palabra) contra lo lento: la fugacidad del título.",
+     "fragmento": "un amor lento"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Todo resumido en un verso.",
+     "fragmento": "Alegría irreal, una ilusión"
     }
    ]
   }
@@ -1167,7 +1240,8 @@
      "rima": "t",
      "nota": "con sinéresis en «buceó»"
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2017-04-17",
   "fecha_escritura": "",
@@ -1191,63 +1265,72 @@
     "autor": "claude",
     "desde": 3,
     "hasta": 3,
-    "texto": "con sinéresis en «realidades»; si no, 9"
+    "texto": "con sinéresis en «realidades»; si no, 9",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 4,
     "hasta": 4,
-    "texto": "con sinalefa en «hay una»"
+    "texto": "con sinalefa en «hay una»",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 7,
     "hasta": 7,
-    "texto": "con sinéresis en «ahora»"
+    "texto": "con sinéresis en «ahora»",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 10,
     "hasta": 10,
-    "texto": "con sinéresis en «idealización»"
+    "texto": "con sinéresis en «idealización»",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 11,
     "hasta": 11,
-    "texto": "por la sinalefa «para_Estás»; 8 si se respeta la pausa de los dos puntos"
+    "texto": "por la sinalefa «para_Estás»; 8 si se respeta la pausa de los dos puntos",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 18,
     "hasta": 18,
-    "texto": "«se» por «ser»"
+    "texto": "«se» por «ser»",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 20,
     "hasta": 20,
-    "texto": "con sinéresis en «sea»"
+    "texto": "con sinéresis en «sea»",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 45,
     "hasta": 45,
-    "texto": "con sinéresis en «poesía»"
+    "texto": "con sinéresis en «poesía»",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 52,
     "hasta": 52,
-    "texto": "con sinéresis en «buceó»"
+    "texto": "con sinéresis en «buceó»",
+    "metro": true
    }
   ],
   "valoraciones": [],
@@ -1265,58 +1348,65 @@
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Relativismo: solo hay realidades, no una verdad.",
-     "desde": 3,
+     "texto": "Arranque: el relativismo. Solo hay realidades, no una verdad.",
+     "desde": 1,
      "hasta": 4
     },
     {
      "capa": "referencia",
      "autor": "claude",
-     "texto": "Dientes como perlas y cabello como cascada: tópicos de la belleza femenina de la poesía petrarquista, que el verso siguiente llama «idealización».",
-     "desde": 7,
-     "hasta": 8
+     "texto": "Dientes como perlas y cabello como cascada: tópicos de la belleza femenina de la poesía petrarquista, que la estrofa siguiente llama «idealización».",
+     "fragmento": "Tus dientes ahora son perlas"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "El propio poema señala lo anterior como idealización.",
+     "fragmento": "fruto de idealización"
     },
     {
      "capa": "referencia",
      "autor": "claude",
      "texto": "Romeo, el de Shakespeare, como modelo de amante.",
-     "desde": 13,
-     "hasta": 13
+     "fragmento": "Romeos"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Si no puede ser bonito, que al menos sea ético: la ética por encima de la poesía.",
-     "desde": 21,
+     "texto": "Lo que se busca: algo cotidiano, cuerdo y sano; y si no puede ser bonito, que al menos sea ético.",
+     "desde": 17,
      "hasta": 24
     },
     {
      "capa": "referencia",
      "autor": "claude",
-     "texto": "La caja de Pandora, del mito griego: lo que se abre ya no se puede cerrar.",
-     "desde": 31,
-     "hasta": 31
+     "texto": "Del mito griego: lo que se abre ya no se puede cerrar. Vuelve más abajo: «¿Abrirás la caja un día?».",
+     "fragmento": "una caja de Pandora"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Paradoja que se contradice a sí misma: si no hay verdades, eso tampoco lo es.",
-     "desde": 39,
-     "hasta": 39
+     "texto": "Paradoja que se contradice a sí misma; recoge el «no hay una verdad absoluta» del principio.",
+     "fragmento": "La verdad es que no hay verdades"
     },
     {
      "capa": "referencia",
      "autor": "claude",
-     "texto": "Sofía significa «sabiduría» en griego. Puede ser un nombre o un juego con la palabra; no lo sé.",
-     "desde": 41,
-     "hasta": 41
+     "texto": "Significa «sabiduría» en griego. Puede ser un nombre o un juego con la palabra; no lo sé.",
+     "fragmento": "Sofía"
     },
     {
      "capa": "sentido",
      "autor": "claude",
      "texto": "El poema se mira a sí mismo: como es poesía, no quiere acabar mal.",
-     "desde": 45,
-     "hasta": 46
+     "fragmento": "como esto es poesía"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Final sin respuesta, a propósito: nadie ha buceado el mar entero.",
+     "desde": 49,
+     "hasta": 52
     }
    ]
   }
@@ -1408,7 +1498,8 @@
      "rima": "E",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2017-08-01",
   "fecha_escritura": "",
@@ -1431,14 +1522,16 @@
     "autor": "claude",
     "desde": 4,
     "hasta": 4,
-    "texto": "«explendor» por «esplendor»"
+    "texto": "«explendor» por «esplendor»",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 7,
     "hasta": 7,
-    "texto": "11 con hiato en «no | existen»"
+    "texto": "11 con hiato en «no | existen»",
+    "metro": true
    }
   ],
   "valoraciones": [],
@@ -1456,30 +1549,40 @@
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "«no te esposes»: no te encadenes a lo extraño del principio.",
-     "desde": 3,
-     "hasta": 3
+     "texto": "Los cuartetos: del mal sabor del ambiente nuevo al momento en que no existen miedos.",
+     "desde": 1,
+     "hasta": 8
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "No te encadenes a lo extraño del principio.",
+     "fragmento": "no te esposes"
     },
     {
      "capa": "referencia",
      "autor": "claude",
-     "texto": "Zumo de dioses: la ambrosía o el néctar de la mitología griega.",
-     "desde": 6,
-     "hasta": 6
+     "texto": "La ambrosía o el néctar de la mitología griega.",
+     "fragmento": "zumo de dioses"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Del sufrimiento queda solo «una pizca», que rima con el pellizco de la cascada.",
-     "desde": 12,
-     "hasta": 13
-    },
-    {
-     "capa": "sentido",
-     "autor": "claude",
-     "texto": "Lo que se posee en el infierno es un vacío dentro de otro.",
-     "desde": 14,
+     "texto": "Los tercetos son la caída: cascada, shock, terremoto, infierno.",
+     "desde": 9,
      "hasta": 14
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Del sufrimiento queda solo una pizca, que rima con el pellizco de la cascada.",
+     "fragmento": "una pizca"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Un vacío dentro de otro: lo que se posee en el infierno.",
+     "fragmento": "un vaso vacío en un barco roto"
     }
    ]
   }
@@ -1765,7 +1868,8 @@
      "rima": "D",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2018-03-28",
   "fecha_escritura": "",
@@ -1788,7 +1892,8 @@
     "autor": "claude",
     "desde": 1,
     "hasta": 1,
-    "texto": "leyendo «prohibido» en tres sílabas, como se pronuncia; si no, 12"
+    "texto": "leyendo «prohibido» en tres sílabas, como se pronuncia; si no, 12",
+    "metro": true
    }
   ],
   "valoraciones": [],
@@ -1804,25 +1909,36 @@
    "texto": "",
    "anotaciones": [
     {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Los cuartetos: una lista de hipótesis sobre por qué un amor no llega a pasar.",
+     "desde": 1,
+     "hasta": 8
+    },
+    {
      "capa": "referencia",
      "autor": "claude",
      "texto": "La manzana del Génesis, el fruto prohibido, que enlaza con el «amor prohibido» del verso anterior.",
-     "desde": 2,
-     "hasta": 2
+     "fragmento": "la misma maldita manzana"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Sonrisas, recuerdos, miradas: todo menos la acción.",
+     "texto": "Sonrisas, recuerdos, miradas: una historia con todo menos la acción.",
      "desde": 9,
      "hasta": 11
     },
     {
      "capa": "referencia",
      "autor": "claude",
-     "texto": "Buscón: el pícaro de Quevedo («Historia de la vida del Buscón»), o simplemente el que busca.",
-     "desde": 13,
-     "hasta": 13
+     "texto": "El pícaro de Quevedo («Historia de la vida del Buscón»), o simplemente el que busca.",
+     "fragmento": "buscón"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "El reparto de culpas acaba en desorden.",
+     "fragmento": "patas arriba"
     },
     {
      "capa": "forma",
@@ -1955,7 +2071,8 @@
      "rima": "-",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2018-04-15",
   "fecha_escritura": "",
@@ -1978,7 +2095,8 @@
     "autor": "claude",
     "desde": 9,
     "hasta": 9,
-    "texto": "con hiato en «ac-tu-ar»; si no, 7"
+    "texto": "con hiato en «ac-tu-ar»; si no, 7",
+    "metro": true
    }
   ],
   "valoraciones": [],
@@ -1996,23 +2114,40 @@
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Dos trenes: dos fuerzas que van de frente la una contra la otra.",
+     "texto": "Las dos primeras estrofas montan la metáfora: trenes que chocan, trincheras, guerra de desgaste. El yo solo mira.",
      "desde": 1,
-     "hasta": 1
+     "hasta": 8
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "«Ganar sí, pero a qué precio»: la victoria pírrica.",
-     "desde": 12,
-     "hasta": 12
+     "texto": "Dos fuerzas que van de frente la una contra la otra.",
+     "fragmento": "La colisión de dos trenes"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "La lluvia roja, la sangre del fuego cruzado, que nadie mira.",
-     "desde": 13,
-     "hasta": 15
+     "texto": "El título y la moraleja.",
+     "fragmento": "El no actuar me hizo necio"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "La victoria pírrica.",
+     "fragmento": "a qué precio"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "La sangre del fuego cruzado, que nadie mira.",
+     "fragmento": "La lluvia roja"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Al final la guerra de los otros le cae encima, en menos de diez segundos.",
+     "desde": 17,
+     "hasta": 20
     },
     {
      "capa": "forma",
@@ -2111,7 +2246,8 @@
      "rima": "E",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2018-04-27",
   "fecha_escritura": "",
@@ -2135,14 +2271,16 @@
     "autor": "claude",
     "desde": 5,
     "hasta": 5,
-    "texto": "11 con hiato en «impenetrable | eres»"
+    "texto": "11 con hiato en «impenetrable | eres»",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 13,
     "hasta": 13,
-    "texto": "con sinéresis en «ideas»; si no, 12"
+    "texto": "con sinéresis en «ideas»; si no, 12",
+    "metro": true
    }
   ],
   "valoraciones": [],
@@ -2160,23 +2298,34 @@
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "El árbol desgajado: las ramas arrancadas del tronco.",
+     "texto": "Los cuartetos son el daño: árbol desgajado, muralla impenetrable, tumba.",
      "desde": 1,
-     "hasta": 1
-    },
-    {
-     "capa": "sentido",
-     "autor": "claude",
-     "texto": "«Acabará en poema»: el poema sabe que es el destino de lo que cuenta.",
-     "desde": 8,
      "hasta": 8
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Ideas baratas que se vuelven «ricas» con un toque de ignorancia: ironía con el dinero.",
-     "desde": 13,
+     "texto": "Las ramas arrancadas del tronco.",
+     "fragmento": "un árbol desgajado"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "El poema sabe que es el destino de lo que cuenta.",
+     "fragmento": "Acabará en poema"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Los tercetos pasan al ataque y señalan contradicciones: si no es mala, por qué ataca; si no es sumisa, por qué acata.",
+     "desde": 9,
      "hasta": 14
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Baratas, y luego «ricas» con un toque de ignorancia: ironía con el dinero.",
+     "fragmento": "Ideas baratas"
     },
     {
      "capa": "forma",
@@ -2520,7 +2669,8 @@
      "rima": "E",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2019-01-30",
   "fecha_escritura": "",
@@ -2554,30 +2704,46 @@
     {
      "capa": "referencia",
      "autor": "claude",
-     "texto": "El título y el primer verso vienen de «Living is easy with eyes closed», de «Strawberry Fields Forever» de los Beatles, que también da título a la película de David Trueba «Vivir es fácil con los ojos cerrados» (2013).",
-     "desde": 1,
-     "hasta": 1
+     "texto": "El título viene de «Living is easy with eyes closed», de «Strawberry Fields Forever» de los Beatles, que también da título a la película de David Trueba «Vivir es fácil con los ojos cerrados» (2013).",
+     "fragmento": "Es fácil ser con los ojos cerrados"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Dos manos, dos salidas: la bebida y el libro, y gana la primera.",
-     "desde": 7,
+     "texto": "Los cuartetos pintan la vida fácil del que no mira: ojos cerrados, faroles apagados, bebida.",
+     "desde": 1,
      "hasta": 8
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Abrir los ojos no sirve de nada en la noche: hace falta algo que ilumine.",
-     "desde": 9,
-     "hasta": 11
+     "texto": "Dos manos, dos salidas: la bebida y el libro, y gana la primera.",
+     "fragmento": "con mano en la bebida"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Las hojas siguientes del libro sin empezar del verso 8: se estropean antes de llegar a ellas.",
-     "desde": 14,
+     "texto": "Se recoge al final: son las hojas siguientes que moja el whisky.",
+     "fragmento": "cuentos no empezados"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Los tercetos cierran la salida: abrir los ojos no basta si no hay luz.",
+     "desde": 9,
      "hasta": 14
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "La luz que pedía el terceto anterior no llega.",
+     "fragmento": "La cerilla no prende"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "La mejor imagen: lo que todavía no se ha leído ni escrito se estropea antes de llegar.",
+     "fragmento": "el whisky moja las hojas siguientes"
     }
    ]
   }
@@ -2692,7 +2858,8 @@
      "rima": "D",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2019-03-28",
   "fecha_escritura": "",
@@ -2726,9 +2893,8 @@
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "El título es un anagrama de «odio».",
-     "desde": 1,
-     "hasta": 1
+     "texto": "El título, «Oído», es un anagrama de «odio».",
+     "fragmento": "Te odio por abrazarme"
     },
     {
      "capa": "referencia",
@@ -2740,16 +2906,21 @@
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "«¿Gallina como motor?»: la cobardía como lo que mueve.",
-     "desde": 11,
-     "hasta": 11
+     "texto": "Los tercetos lo pasan a fuego: un amor que incendia a carne viva.",
+     "desde": 9,
+     "hasta": 14
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Del locomotor al faro: lo que empujaba ahora alumbra, y el alma que ciega huye.",
-     "desde": 13,
-     "hasta": 14
+     "texto": "La cobardía como lo que mueve.",
+     "fragmento": "¿Gallina como motor?"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Lo que empujaba ahora alumbra.",
+     "fragmento": "el locomotor de ayer es un faro"
     },
     {
      "capa": "forma",
@@ -2847,7 +3018,8 @@
      "rima": "D",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2019-04-12",
   "fecha_escritura": "",
@@ -2876,21 +3048,25 @@
     "interés": 4,
     "sonoridad": 3
    },
-   "texto": "Un soneto satírico sobre el dinero. Va contra los moralistas que dicen que la felicidad está en los matices, pero no se pone por encima: el último terceto se incluye a sí mismo, que si se encuentra veinte euros se los queda. El tono de usted («mire») le da aire de discurso o de sermón al revés.",
+   "texto": "Un soneto satírico sobre el dinero. Va contra los moralistas que dicen que la felicidad está en los matices, pero no se pone por encima: el último terceto se incluye a sí mismo, que si se encuentra veinte euros se los queda. El tono de usted («mire») le da aire de discurso o de sermón al revés. El título suena parecido a «dinero» (¡Nero!) y también recuerda a Nerón; no sé si va por ahí.",
    "anotaciones": [
     {
      "capa": "referencia",
      "autor": "claude",
      "texto": "Recuerda a la letrilla de Quevedo «Poderoso caballero es don Dinero».",
-     "desde": 1,
-     "hasta": 1
+     "fragmento": "El dinero no pasará de moda"
     },
     {
      "capa": "sentido",
      "autor": "claude",
      "texto": "Los dos tópicos contra el dinero: la felicidad está en los matices y el oro deja solo.",
-     "desde": 3,
-     "hasta": 4
+     "fragmento": "que la felicidad está en los matices"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Trato de usted: aire de sermón al revés.",
+     "fragmento": "mire"
     },
     {
      "capa": "sentido",
@@ -2898,13 +3074,6 @@
      "texto": "El yo se incluye entre los «inhumanos».",
      "desde": 12,
      "hasta": 14
-    },
-    {
-     "capa": "referencia",
-     "autor": "claude",
-     "texto": "El título suena parecido a «dinero» (¡Nero! / dinero) y también recuerda a Nerón. No sé si va por ahí.",
-     "desde": 1,
-     "hasta": 1
     },
     {
      "capa": "forma",
@@ -3174,7 +3343,8 @@
      "rima": "A",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2020-08-29",
   "fecha_escritura": "",
@@ -3207,23 +3377,26 @@
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "«No piense», «si no me escucha»: trato de usted.",
-     "desde": 1,
-     "hasta": 2
+     "texto": "Trato de usted, como una explicación educada a alguien.",
+     "fragmento": "No piense"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "La paradoja central: intenta aburrirse y no puede.",
-     "desde": 3,
-     "hasta": 3
+     "texto": "La paradoja central: el título llama enfermedad al aburrimiento y él no consigue aburrirse.",
+     "fragmento": "No consigo aburrirme"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "El corazón metido en la cabeza: el sentimiento ocupando el sitio del pensamiento.",
-     "desde": 8,
-     "hasta": 8
+     "texto": "Eso es lo que hace sufrir: la cabeza no para.",
+     "fragmento": "el constante vaivén de un pensamiento"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "El sentimiento ocupando el sitio del pensamiento.",
+     "fragmento": "Corazón, márchate de mi cabeza"
     }
    ]
   }
@@ -3312,14 +3485,17 @@
     "14": {
      "silabas": 8,
      "rima": "-",
-     "nota": "junto con el verso siguiente forma un endecasílabo: «volcán, tornado, seísmo. Aguacero»"
+     "nota": "junto con el siguiente forma un endecasílabo: «volcán, tornado, seísmo. Aguacero»"
     },
     "15": {
      "silabas": 4,
      "rima": "D",
      "nota": ""
     }
-   }
+   },
+   "escalonados": [
+    15
+   ]
   },
   "fecha_publicacion": "2020-08-29",
   "fecha_escritura": "",
@@ -3348,14 +3524,16 @@
     "autor": "claude",
     "desde": 3,
     "hasta": 3,
-    "texto": "11 sin la repetición «re-»: el tartamudeo añade una sílaba"
+    "texto": "11 sin la repetición «re-»: el tartamudeo añade una sílaba",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 14,
     "hasta": 14,
-    "texto": "junto con el verso siguiente forma un endecasílabo: «volcán, tornado, seísmo. Aguacero»"
+    "texto": "junto con el siguiente forma un endecasílabo: «volcán, tornado, seísmo. Aguacero»",
+    "metro": true
    }
   ],
   "valoraciones": [],
@@ -3373,28 +3551,32 @@
     {
      "capa": "referencia",
      "autor": "claude",
-     "texto": "Los cuatro elementos de Empédocles y de la tradición clásica: aire, agua, fuego y tierra.",
+     "texto": "Los cuatro elementos de Empédocles y de la tradición clásica: aire, agua, fuego y tierra, en ese orden.",
      "desde": 1,
      "hasta": 8
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "«re-refrescaste»: la palabra se repite como si se atascara.",
-     "desde": 3,
-     "hasta": 3
+     "texto": "Aire. Cada elemento llega con un «como»: el viento, el agua, el fuego, la tierra.",
+     "fragmento": "como el viento"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "«una hipérbole del mundo»: la otra persona es el mundo, pero exagerado, y eso da paso a las catástrofes.",
-     "desde": 13,
-     "hasta": 13
+     "texto": "La palabra se repite como si se atascara.",
+     "fragmento": "re-refrescaste"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Los cuatro elementos otra vez, ahora como desastres naturales.",
+     "texto": "La otra persona es el mundo, pero exagerado, y eso da paso a las catástrofes.",
+     "fragmento": "una hipérbole del mundo"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Los cuatro elementos otra vez, ahora como desastres naturales: volcán (fuego), tornado (aire), seísmo (tierra) y aguacero (agua).",
      "desde": 14,
      "hasta": 15
     },
@@ -3463,7 +3645,8 @@
      "rima": "c",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2020-08-29",
   "fecha_escritura": "",
@@ -3497,15 +3680,13 @@
      "capa": "sentido",
      "autor": "claude",
      "texto": "El título dice «existencia» y el primer verso «presencia»: la palabra cambia nada más empezar.",
-     "desde": 1,
-     "hasta": 1
+     "fragmento": "Tu presencia desafía"
     },
     {
      "capa": "referencia",
      "autor": "claude",
      "texto": "Esencia y existencia: la pareja de conceptos de la filosofía (el existencialismo dice que la existencia precede a la esencia).",
-     "desde": 2,
-     "hasta": 2
+     "fragmento": "en esencia a mi existencia"
     },
     {
      "capa": "sentido",
@@ -3594,7 +3775,8 @@
      "rima": "E",
      "nota": ""
     }
-   }
+   },
+   "escalonados": []
   },
   "fecha_publicacion": "2021-03-23",
   "fecha_escritura": "",
@@ -3624,14 +3806,16 @@
     "autor": "claude",
     "desde": 2,
     "hasta": 2,
-    "texto": "con sinalefa entre los hemistiquios («atado_a»); si no, 15"
+    "texto": "con sinalefa entre los hemistiquios («atado_a»); si no, 15",
+    "metro": true
    },
    {
     "capa": "forma",
     "autor": "claude",
     "desde": 5,
     "hasta": 5,
-    "texto": "el segundo hemistiquio tiene 6"
+    "texto": "el segundo hemistiquio tiene 6",
+    "metro": true
    }
   ],
   "valoraciones": [],
@@ -3649,30 +3833,26 @@
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "Inflar despacio, como un globo: lo contrario de un golpe.",
-     "desde": 1,
-     "hasta": 1
+     "texto": "Inflar despacio, como un globo: lo contrario de un golpe. Vuelve en «Has inflado mi pecho».",
+     "fragmento": "Has inflado mi cuerpo"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "No estalla ni está lleno: un estado intermedio que dura.",
-     "desde": 9,
-     "hasta": 9
+     "texto": "Un estado intermedio que dura.",
+     "fragmento": "no estalla ni está lleno"
     },
     {
      "capa": "sentido",
      "autor": "claude",
      "texto": "Volar y navegar a la vez: aire y agua.",
-     "desde": 11,
-     "hasta": 11
+     "fragmento": "volar contigo"
     },
     {
      "capa": "sentido",
      "autor": "claude",
-     "texto": "«un poco sí»: la declaración se dice con cautela.",
-     "desde": 12,
-     "hasta": 12
+     "texto": "La declaración se dice con cautela.",
+     "fragmento": "un poco sí te quiero"
     },
     {
      "capa": "forma",

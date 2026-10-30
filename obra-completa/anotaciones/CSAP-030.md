@@ -38,8 +38,9 @@ Sonoridad: 4/5
 
 Una paradoja: el título llama enfermedad al aburrimiento, pero lo que cuenta es que no consigue aburrirse. El pensamiento va y viene sin parar y eso es lo que hace sufrir. Está escrito de usted, como una explicación educada a alguien, y acaba con una orden al corazón: que se vaya de la cabeza.
 
-- v1-2 [sentido]: «No piense», «si no me escucha»: trato de usted.
-- v3 [sentido]: La paradoja central: intenta aburrirse y no puede.
-- v8 [sentido]: El corazón metido en la cabeza: el sentimiento ocupando el sitio del pensamiento.
+- "No piense" [sentido]: Trato de usted, como una explicación educada a alguien.
+- "No consigo aburrirme" [sentido]: La paradoja central: el título llama enfermedad al aburrimiento y él no consigue aburrirse.
+- "el constante vaivén de un pensamiento" [sentido]: Eso es lo que hace sufrir: la cabeza no para.
+- "Corazón, márchate de mi cabeza" [sentido]: El sentimiento ocupando el sitio del pensamiento.
 
 ## Valoraciones

@@ -65,9 +65,12 @@ Sonoridad: 3/5
 
 Un «nosotros» que sigue viviendo y no quiere saber le habla a un «tú» que se apaga. Todo el poema enfrenta el agua (lluvia, marea, ahogarse, gotas) con la luz (sol, vela, luces), y la luz va perdiendo. El final es lo más duro: se acepta que el otro estalle, pero se le pide silencio.
 
-- v3-4 [sentido]: El sol y la vida lo niegan y la lluvia lo sabe: el tiempo como testigo de lo que le pasa al «tú».
-- v11-12 [sentido]: La vela que no se volverá a encender y «te apagas»: el verso más largo seguido del más corto, como si la forma también se apagara.
-- v15-16 [sentido]: «fuera / Fuera de esta vida»: la palabra se repite y cambia de peso, de un sitio a algo mucho más grave.
-- v20 [sentido]: El globo que no cede prepara el «si vas a explotar, explota» del final.
+- v1-4 [sentido]: Primer cuarteto: el «nosotros» sabe que algo pasa y prefiere no saber. El tiempo lo delata: el sol lo niega y la lluvia lo sabe.
+- "la lluvia lo sabe bien" [sentido]: El agua es la que sabe. Toda el agua del poema (marea, ahogarse, gotas) va del lado del «tú».
+- "Cuevas oscuras incertidumbre" [sentido]: Tres palabras sin verbo, como una enumeración de lo que hay dentro.
+- v9-12 [sentido]: Llorar ya no sirve y la vela no se volverá a encender: el verso más largo seguido del más corto, como si la forma también se apagara.
+- "Fuera de esta vida" [sentido]: «Fuera» se repite y cambia de peso: de un sitio a algo mucho más grave.
+- "El globo no cede" [sentido]: Prepara el final: algo que se hincha y todavía no revienta.
+- v24-26 [sentido]: Cierre: se acepta que el otro estalle, pero se le pide silencio. Lo más duro del poema.
 
 ## Valoraciones

@@ -6,7 +6,8 @@ Formato de las anotaciones (ver anotaciones/_PLANTILLA.md):
   - v3-4: texto                anota los versos 3 y 4 (se cuentan solo las líneas con texto)
   - "fragmento": texto         anota ese trozo exacto del poema
   - v3 [forma]: texto          capa de la nota: forma, sentido (por defecto) o referencia
-  ## Forma                     esquema, rimas (- a: …) y cada verso (- v1: 11 A · nota)
+  ## Forma                     esquema, rimas (- a: …) y cada verso (- v1: 11 A · nota);
+                               «Escalonado: v15» = verso partido que empieza donde acaba el anterior
   ## Lectura de Claude         borrador de Claude: nota, rasgos sobre 5, párrafo y notas
 """
 import csv, json, os, re
@@ -55,7 +56,8 @@ def leer_forma(texto):
         return None
     c = claves(texto)
     forma = dict(estado=c.get("estado", ""), estrofa=c.get("estrofa", ""), medida=c.get("medida", ""),
-                 esquema=c.get("esquema", ""), rimas={}, versos={})
+                 esquema=c.get("esquema", ""), rimas={}, versos={},
+                 escalonados=[int(n) for n in re.findall(r"v(\d+)", c.get("escalonado", ""))])
     for linea in texto.splitlines():
         m = re.match(r"^- *v(\d+): *(\d+) +([A-Za-z-])(?: *· *(.+))?$", linea)
         if m:
@@ -103,7 +105,7 @@ def leer_anotaciones(ruta):
     forma = leer_forma(s.get("forma", ""))
     if forma:
         # Las observaciones de cada verso también se ven como notas de la capa de forma
-        notas += [dict(capa="forma", autor="claude", desde=int(v), hasta=int(v), texto=d["nota"])
+        notas += [dict(capa="forma", autor="claude", desde=int(v), hasta=int(v), texto=d["nota"], metro=True)
                   for v, d in forma["versos"].items() if d["nota"]]
     lectura = leer_lectura(s.get("lectura de claude", ""))
     return dict(explicacion=explicacion, anotaciones=notas, valoraciones=valoraciones, forma=forma, lectura=lectura)

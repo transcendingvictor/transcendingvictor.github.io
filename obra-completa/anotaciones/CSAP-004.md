@@ -51,8 +51,10 @@ Sonoridad: 4/5
 
 «1+» se lee «uno más». Es una sátira del adolescente que, para ser normal, se pone el disfraz de rebelde, que también es una norma. La primera mitad es el deseo de encajar; la segunda, la lista de tópicos del malote, y el remate le da la vuelta al argumento de que la mayoría tiene razón. Los versos cortos del final de cada terceto funcionan como golpes de humor.
 
-- v6 [sentido]: «Quiero senos»: el deseo dicho con la misma sequedad que los otros remates, y por eso hace gracia.
-- v10-12 [sentido]: Criticar los Oscar, volver tarde, fumar hierba: rebeldía de catálogo.
-- v16-18 [referencia]: Dicho popular: «Come mierda: un millón de moscas no pueden estar equivocadas», que se usa para reírse de quien sigue a la mayoría.
+- v1-9 [sentido]: Las tres primeras estrofas: el deseo de ser normal. Cada terceto acaba en un remate seco de cuatro sílabas.
+- "Quiero senos" [sentido]: El deseo dicho con la misma sequedad que los otros remates, y por eso hace gracia.
+- "Seré el malote desobediente" [sentido]: La paradoja del poema: para ser normal hay que ser rebelde, que también es una norma.
+- v10-18 [sentido]: Las tres últimas: la lista de tópicos del rebelde y un remate que se ríe de ella.
+- "Un millón de moscas" [referencia]: Dicho popular: «Come mierda: un millón de moscas no pueden estar equivocadas», para reírse de quien sigue a la mayoría.
 
 ## Valoraciones

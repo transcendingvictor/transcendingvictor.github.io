@@ -46,10 +46,11 @@ Sonoridad: 5/5
 
 El título, «Oído», tiene las mismas letras que «odio», y el poema es un odio que en realidad es amor: te odio por abrazarme, por atraparme, pero estoy encantado. Los cuartetos lo dicen con «te odio» repetido y los tercetos lo pasan a fuego: un amor que incendia a carne viva. Al final el yo se acusa de hipócrita por escribirlo, y lo que antes movía (el locomotor) ahora guía (el faro).
 
-- v1 [sentido]: El título es un anagrama de «odio».
+- "Te odio por abrazarme" [sentido]: El título, «Oído», es un anagrama de «odio».
 - v1-8 [referencia]: Recuerda al «Odi et amo» de Catulo: odio y amo a la vez.
-- v11 [sentido]: «¿Gallina como motor?»: la cobardía como lo que mueve.
-- v13-14 [sentido]: Del locomotor al faro: lo que empujaba ahora alumbra, y el alma que ciega huye.
+- v9-14 [sentido]: Los tercetos lo pasan a fuego: un amor que incendia a carne viva.
+- "¿Gallina como motor?" [sentido]: La cobardía como lo que mueve.
+- "el locomotor de ayer es un faro" [sentido]: Lo que empujaba ahora alumbra.
 - v9-10 [forma]: «claro» cierra un verso y abre el siguiente (anadiplosis), y cambia de sentido: de «evidente» a un claro del bosque que se incendia.
 
 ## Valoraciones

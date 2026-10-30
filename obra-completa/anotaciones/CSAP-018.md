@@ -47,9 +47,11 @@ Sonoridad: 4/5
 
 Un reproche directo, con nombre. Los cuartetos son el daño: el mundo como un árbol desgajado, la muralla impenetrable, la tumba. Los tercetos pasan al ataque y señalan contradicciones: si no es mala, por qué ataca; si no es sumisa, por qué acata los patrones que critica. El título es un imperativo que puede ir en dos direcciones: que ella cambie, o que le cambie a él.
 
-- v1 [sentido]: El árbol desgajado: las ramas arrancadas del tronco.
-- v8 [sentido]: «Acabará en poema»: el poema sabe que es el destino de lo que cuenta.
-- v13-14 [sentido]: Ideas baratas que se vuelven «ricas» con un toque de ignorancia: ironía con el dinero.
+- v1-8 [sentido]: Los cuartetos son el daño: árbol desgajado, muralla impenetrable, tumba.
+- "un árbol desgajado" [sentido]: Las ramas arrancadas del tronco.
+- "Acabará en poema" [sentido]: El poema sabe que es el destino de lo que cuenta.
+- v9-14 [sentido]: Los tercetos pasan al ataque y señalan contradicciones: si no es mala, por qué ataca; si no es sumisa, por qué acata.
+- "Ideas baratas" [sentido]: Baratas, y luego «ricas» con un toque de ignorancia: ironía con el dinero.
 - v9-10 [forma]: «atacas» y «acatas» tienen casi las mismas letras cambiadas de sitio, y las rimas C y D suenan igual en las vocales (a-a).
 
 ## Valoraciones

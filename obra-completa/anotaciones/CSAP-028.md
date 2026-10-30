@@ -44,12 +44,12 @@ Dureza: 3/5
 Interés: 4/5
 Sonoridad: 3/5
 
-Un soneto satírico sobre el dinero. Va contra los moralistas que dicen que la felicidad está en los matices, pero no se pone por encima: el último terceto se incluye a sí mismo, que si se encuentra veinte euros se los queda. El tono de usted («mire») le da aire de discurso o de sermón al revés.
+Un soneto satírico sobre el dinero. Va contra los moralistas que dicen que la felicidad está en los matices, pero no se pone por encima: el último terceto se incluye a sí mismo, que si se encuentra veinte euros se los queda. El tono de usted («mire») le da aire de discurso o de sermón al revés. El título suena parecido a «dinero» (¡Nero!) y también recuerda a Nerón; no sé si va por ahí.
 
-- v1 [referencia]: Recuerda a la letrilla de Quevedo «Poderoso caballero es don Dinero».
-- v3-4 [sentido]: Los dos tópicos contra el dinero: la felicidad está en los matices y el oro deja solo.
+- "El dinero no pasará de moda" [referencia]: Recuerda a la letrilla de Quevedo «Poderoso caballero es don Dinero».
+- "que la felicidad está en los matices" [sentido]: Los dos tópicos contra el dinero: la felicidad está en los matices y el oro deja solo.
+- "mire" [sentido]: Trato de usted: aire de sermón al revés.
 - v12-14 [sentido]: El yo se incluye entre los «inhumanos».
-- v1 [referencia]: El título suena parecido a «dinero» (¡Nero! / dinero) y también recuerda a Nerón. No sé si va por ahí.
 - v1-5 [forma]: El primer verso se repite entero en el quinto, como un estribillo.
 - v9-14 [forma]: En los tercetos las rimas van en paralelo: necesitamos e inhumanos (m y n), entendemos y menos (m y n otra vez).
 

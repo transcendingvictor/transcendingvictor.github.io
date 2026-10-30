@@ -63,9 +63,12 @@ Sonoridad: 4/5
 
 Una elegía con ironía por la caída de los que parecían intocables. Cada estrofa nombra una categoría con prefijo de negación (inmortales, invencibles, infalibles, iniguales) y la desmiente: los infalibles fallaron, los sinceros mintieron. El registro baja a propósito («a tomar por culo») justo al lado del tono solemne. El título desordena las letras de «inmortales», igual que el último verso pega todas las palabras.
 
-- v9 [sentido]: «los infalibles fallaron»: la paradoja sale de la misma raíz.
-- v13-14 [sentido]: No murieron de verdad: lo que cambia es que el yo se da cuenta de que eran mortales.
-- v15 [sentido]: «iniguales»: palabra inventada, por «sin igual».
-- v24 [sentido]: Todo junto, como un título o una etiqueta: el verso que da sentido al título desordenado.
+- v1-4 [sentido]: Primera redondilla: la noticia y el tono. Lo solemne («se mueren los inmortales») pegado a lo vulgar («a tomar por culo»).
+- "los invencibles se han ido" [sentido]: Cada estrofa nombra una categoría con prefijo de negación (inmortales, invencibles, infalibles) y la desmiente.
+- "los infalibles fallaron" [sentido]: La paradoja sale de la misma raíz.
+- "recordé que eran mortales" [sentido]: No murieron de verdad: lo que cambia es que el yo se da cuenta de que eran mortales.
+- "iniguales" [sentido]: Palabra inventada, por «sin igual».
+- "Los sinceros nos mintieron" [sentido]: La última categoría que cae.
+- "LosInmortalesMurieron" [sentido]: Todo junto, como un título o una etiqueta. El título del poema desordena las letras de «inmortales».
 
 ## Valoraciones

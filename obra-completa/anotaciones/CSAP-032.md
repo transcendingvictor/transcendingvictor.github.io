@@ -38,8 +38,8 @@ Sonoridad: 4/5
 
 Corto y directo. Empieza con un vocabulario casi filosófico (presencia, esencia, existencia, biografía) y termina con lo más sencillo: no te vayas, eres mi primer amor. El paso de una cosa a otra es lo que hace el poema.
 
-- v1 [sentido]: El título dice «existencia» y el primer verso «presencia»: la palabra cambia nada más empezar.
-- v2 [referencia]: Esencia y existencia: la pareja de conceptos de la filosofía (el existencialismo dice que la existencia precede a la esencia).
+- "Tu presencia desafía" [sentido]: El título dice «existencia» y el primer verso «presencia»: la palabra cambia nada más empezar.
+- "en esencia a mi existencia" [referencia]: Esencia y existencia: la pareja de conceptos de la filosofía (el existencialismo dice que la existencia precede a la esencia).
 - v7-8 [sentido]: Las rimas cambian justo cuando el poema deja de pensar y suplica.
 
 ## Valoraciones

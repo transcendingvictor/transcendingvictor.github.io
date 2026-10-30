@@ -46,9 +46,11 @@ Sonoridad: 4/5
 
 Una lista de hipótesis sobre por qué un amor no llega a pasar: que sea prohibido, la manzana, no poder hacer lo que se siente, el valor. Los tercetos lo dan la vuelta: es una historia con todos los ingredientes menos la acción. El final reparte culpas, la voluntad pasiva de ella y el afán de buscón de él, y termina en que todo está patas arriba.
 
-- v2 [referencia]: La manzana del Génesis, el fruto prohibido, que enlaza con el «amor prohibido» del verso anterior.
-- v9-11 [sentido]: Sonrisas, recuerdos, miradas: todo menos la acción.
-- v13 [referencia]: Buscón: el pícaro de Quevedo («Historia de la vida del Buscón»), o simplemente el que busca.
+- v1-8 [sentido]: Los cuartetos: una lista de hipótesis sobre por qué un amor no llega a pasar.
+- "la misma maldita manzana" [referencia]: La manzana del Génesis, el fruto prohibido, que enlaza con el «amor prohibido» del verso anterior.
+- v9-11 [sentido]: Sonrisas, recuerdos, miradas: una historia con todo menos la acción.
+- "buscón" [referencia]: El pícaro de Quevedo («Historia de la vida del Buscón»), o simplemente el que busca.
+- "patas arriba" [sentido]: El reparto de culpas acaba en desorden.
 - v1-14 [forma]: «Será» abre siete versos, y «Serás» y «Seré» otros dos: anáfora que sostiene todo el soneto.
 
 ## Valoraciones

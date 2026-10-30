@@ -46,9 +46,12 @@ Sonoridad: 4/5
 
 Los cuartetos describen la vida fácil del que no mira: los ojos cerrados, los faroles de salida apagados, una mano en la bebida y en la otra un libro sin empezar. Los tercetos cierran la salida: abrir los ojos no basta si no hay luz, y la luz no llega (la cerilla no prende, falta oxígeno). La última imagen es la mejor: el whisky moja las hojas siguientes, lo que todavía no se ha leído ni escrito.
 
-- v1 [referencia]: El título y el primer verso vienen de «Living is easy with eyes closed», de «Strawberry Fields Forever» de los Beatles, que también da título a la película de David Trueba «Vivir es fácil con los ojos cerrados» (2013).
-- v7-8 [sentido]: Dos manos, dos salidas: la bebida y el libro, y gana la primera.
-- v9-11 [sentido]: Abrir los ojos no sirve de nada en la noche: hace falta algo que ilumine.
-- v14 [sentido]: Las hojas siguientes del libro sin empezar del verso 8: se estropean antes de llegar a ellas.
+- "Es fácil ser con los ojos cerrados" [referencia]: El título viene de «Living is easy with eyes closed», de «Strawberry Fields Forever» de los Beatles, que también da título a la película de David Trueba «Vivir es fácil con los ojos cerrados» (2013).
+- v1-8 [sentido]: Los cuartetos pintan la vida fácil del que no mira: ojos cerrados, faroles apagados, bebida.
+- "con mano en la bebida" [sentido]: Dos manos, dos salidas: la bebida y el libro, y gana la primera.
+- "cuentos no empezados" [sentido]: Se recoge al final: son las hojas siguientes que moja el whisky.
+- v9-14 [sentido]: Los tercetos cierran la salida: abrir los ojos no basta si no hay luz.
+- "La cerilla no prende" [sentido]: La luz que pedía el terceto anterior no llega.
+- "el whisky moja las hojas siguientes" [sentido]: La mejor imagen: lo que todavía no se ha leído ni escrito se estropea antes de llegar.
 
 ## Valoraciones

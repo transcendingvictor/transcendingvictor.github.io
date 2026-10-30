@@ -101,13 +101,15 @@ Sonoridad: 3/5
 
 Un diálogo con un «tú» sobre la verdad: empieza con «no hay una verdad absoluta» y acaba en la paradoja «la verdad es que no hay verdades». En medio se ríe de la idealización amorosa (dientes de perla, pelo en cascada) y pide algo cotidiano, cuerdo y sano, aunque sea menos poético. El final no responde a nada a propósito: no hay respuestas correctas. El título junta lo infinito y lo mortífero, la misma tensión que todo el poema.
 
-- v3-4 [sentido]: Relativismo: solo hay realidades, no una verdad.
-- v7-8 [referencia]: Dientes como perlas y cabello como cascada: tópicos de la belleza femenina de la poesía petrarquista, que el verso siguiente llama «idealización».
-- v13 [referencia]: Romeo, el de Shakespeare, como modelo de amante.
-- v21-24 [sentido]: Si no puede ser bonito, que al menos sea ético: la ética por encima de la poesía.
-- v31 [referencia]: La caja de Pandora, del mito griego: lo que se abre ya no se puede cerrar.
-- v39 [sentido]: Paradoja que se contradice a sí misma: si no hay verdades, eso tampoco lo es.
-- v41 [referencia]: Sofía significa «sabiduría» en griego. Puede ser un nombre o un juego con la palabra; no lo sé.
-- v45-46 [sentido]: El poema se mira a sí mismo: como es poesía, no quiere acabar mal.
+- v1-4 [sentido]: Arranque: el relativismo. Solo hay realidades, no una verdad.
+- "Tus dientes ahora son perlas" [referencia]: Dientes como perlas y cabello como cascada: tópicos de la belleza femenina de la poesía petrarquista, que la estrofa siguiente llama «idealización».
+- "fruto de idealización" [sentido]: El propio poema señala lo anterior como idealización.
+- "Romeos" [referencia]: Romeo, el de Shakespeare, como modelo de amante.
+- v17-24 [sentido]: Lo que se busca: algo cotidiano, cuerdo y sano; y si no puede ser bonito, que al menos sea ético.
+- "una caja de Pandora" [referencia]: Del mito griego: lo que se abre ya no se puede cerrar. Vuelve más abajo: «¿Abrirás la caja un día?».
+- "La verdad es que no hay verdades" [sentido]: Paradoja que se contradice a sí misma; recoge el «no hay una verdad absoluta» del principio.
+- "Sofía" [referencia]: Significa «sabiduría» en griego. Puede ser un nombre o un juego con la palabra; no lo sé.
+- "como esto es poesía" [sentido]: El poema se mira a sí mismo: como es poesía, no quiere acabar mal.
+- v49-52 [sentido]: Final sin respuesta, a propósito: nadie ha buceado el mar entero.
 
 ## Valoraciones
