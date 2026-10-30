@@ -13,7 +13,7 @@ const Obra = (() => {
     try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; }
   };
 
-  // Idioma de la interfaz (los poemas no se traducen). Misma clave 'lang' y atributo
+  // Idioma de la interfaz (en inglés, los poemas añaden su traducción bajo cada verso). Misma clave 'lang' y atributo
   // html[data-lang] que el resto de la web, para que la elección se comparta.
   const TEXTOS = {
     es: {
@@ -178,12 +178,15 @@ const Obra = (() => {
     // Cada línea del poema; las vacías son separación de estrofa. El texto va en .txt para
     // que el subrayado de un verso siga a las letras y no a todo el ancho.
     const lineas = p.texto.split("\n");
+    const en = p.texto_en ? p.texto_en.split("\n") : [];
     const caja = el("div", { class: "poema" });
     const nodos = [];
     let n = 0;
-    for (const l of lineas) {
+    for (const [i, l] of lineas.entries()) {
       if (!l.trim()) { caja.append(el("span", { class: "estrofa" })); continue; }
       const v = el("span", { class: "verso" }, el("span", { class: "txt" }, l));
+      // Traducción bajo el verso; solo se ve con la web en inglés
+      if (en[i] && en[i] !== l) v.append(el("span", { class: "tr", lang: "en" }, en[i]));
       v.dataset.v = ++n;
       caja.append(v);
       nodos.push(v);
@@ -308,7 +311,7 @@ const Obra = (() => {
       if (i < 0) { main.append(el("p", { class: "vacio" }, T("noEncuentro"))); return; }
       const p = piezas[i];
       document.title = `${p.titulo} | Obra completa`;
-      main.append(el("h1", {}, p.titulo));
+      main.append(el("h1", {}, p.titulo, p.titulo_en && p.titulo_en !== p.titulo ? el("span", { class: "tr", lang: "en" }, p.titulo_en) : ""));
       const meta = el("p", { class: "meta" }, fechaLarga(fecha(p)));
       if (p.fecha_escritura) meta.append(T("publicado")(fechaLarga(p.fecha_publicacion)));
       meta.append(" · ", el("a", { href: p.url, target: "_blank", rel: "noopener" }, p.fuente));

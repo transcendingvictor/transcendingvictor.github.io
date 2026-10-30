@@ -9,6 +9,9 @@ Formato de las anotaciones (ver anotaciones/_PLANTILLA.md):
   ## Forma                     esquema, rimas (- a: …) y cada verso (- v1: 11 A · nota);
                                «Escalonado: v15» = verso partido que empieza donde acaba el anterior
   ## Análisis del autor        fecha, nota, rasgos sobre 5, párrafo y notas («Estado: provisional» mientras sea un borrador)
+
+Traducciones al inglés en traducciones/CODIGO.txt: primera línea el título y después el
+poema línea a línea, con las mismas líneas (y huecos) que el original.
 """
 import csv, json, os, re
 
@@ -122,6 +125,12 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
     p["etiquetas"] = [e for e in p["etiquetas"].split(";") if e]
     ruta = os.path.join(HERE, "anotaciones", r["codigo"] + ".md")
     p.update(leer_anotaciones(ruta) if os.path.exists(ruta) else dict(explicacion="", anotaciones=[], valoraciones=[], forma=None, lectura=None))
+    trad = os.path.join(HERE, "traducciones", r["codigo"] + ".txt")
+    if os.path.exists(trad):
+        lineas = open(trad, encoding="utf-8").read().rstrip("\n").split("\n")
+        if len(lineas) - 1 != len(p["texto"].split("\n")):
+            raise SystemExit(f"{trad}: no tiene las mismas líneas que el original")
+        p["titulo_en"], p["texto_en"] = lineas[0], "\n".join(lineas[1:])
     piezas.append(p)
 
 piezas.sort(key=lambda p: p["fecha_escritura"] or p["fecha_publicacion"])

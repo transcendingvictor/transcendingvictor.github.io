@@ -95,6 +95,10 @@ main:not(.analisis) .capas, main:not(.analisis) > section { display: none; }
 .poema { white-space: pre-wrap; font-size: 1.1rem; line-height: 1.75; margin-bottom: 2.5rem; }
 .poema .estrofa { display: block; height: 1rem; }
 .verso { display: block; min-height: 1.75em; }
+/* Traducción: pequeña, debajo del verso y solo con la web en inglés; el original siempre se ve */
+.tr { display: none; }
+html[data-lang="en"] .verso .tr { display: block; margin: -0.35rem 0 0.35rem; font-size: 0.85rem; line-height: 1.35; font-style: italic; color: #5d7f62; }
+html[data-lang="en"] h1 .tr { display: block; margin-top: 0.3rem; font-size: 1rem; font-weight: 400; font-style: italic; color: #5d7f62; letter-spacing: 0; text-transform: none; font-variant: normal; }
 
 .anotado { transition: background-color 0.2s, box-shadow 0.2s; border-radius: 2px; }
 .on-forma .c-forma, .on-sentido .c-sentido, .on-referencia .c-referencia { cursor: pointer; }
