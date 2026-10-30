@@ -1,8 +1,8 @@
 :root {
-  --fondo: #fbfaf6;
+  --fondo: #f1fcee;
   --tinta: #1d1d1b;
   --suave: #6b6b66;
-  --linea: #e4e2da;
+  --linea: #cfe3cc;
   --verde: #5a8859;
   --verde-claro: #c4e6cc;
   --marca: rgba(90, 136, 89, 0.16);
@@ -23,8 +23,15 @@ a:hover { color: var(--verde); }
 
 .contenedor { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1rem 5rem; }
 
-.migas { font-size: 0.85rem; color: var(--suave); margin-bottom: 2rem; }
+.migas { display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--suave); margin-bottom: 2rem; }
 .migas a { text-decoration: none; }
+
+.idioma { display: inline-flex; border: 1px solid var(--linea); border-radius: 999px; overflow: hidden; }
+.idioma button {
+  font: inherit; font-size: 0.8rem; letter-spacing: 0.04em; padding: 0.25rem 0.75rem;
+  border: 0; background: transparent; color: var(--suave); cursor: pointer;
+}
+.idioma button[aria-pressed="true"] { background: var(--verde); color: #fff; }
 
 h1 { font-family: "Vollkorn SC", Georgia, serif; font-weight: 600; font-size: 2rem; line-height: 1.2; margin-bottom: 0.5rem; }
 .entradilla { color: var(--suave); margin-bottom: 2rem; }
@@ -33,16 +40,29 @@ h1 { font-family: "Vollkorn SC", Georgia, serif; font-weight: 600; font-size: 2r
 .filtros { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
 .filtros input, .filtros select {
   font: inherit; font-size: 0.9rem; padding: 0.35rem 0.6rem;
-  border: 1px solid var(--linea); border-radius: 6px; background: #fff; color: var(--tinta);
+  border: 0.15rem solid var(--tinta); border-radius: 999px; background: #fff; color: var(--tinta); padding: 0.35rem 0.9rem;
 }
 .filtros input { flex: 1 1 12rem; }
 
-.anio { font-family: "Vollkorn SC", Georgia, serif; font-size: 1.2rem; margin: 2rem 0 0.5rem; color: var(--verde); }
-.lista { list-style: none; }
-.lista li { border-top: 1px solid var(--linea); }
-.lista a { display: flex; gap: 1rem; align-items: baseline; padding: 0.55rem 0; text-decoration: none; }
-.lista .t { flex: 1; }
-.lista .m { font-size: 0.8rem; color: var(--suave); white-space: nowrap; }
+.cuenta { font-size: 0.85rem; color: var(--suave); margin: -0.8rem 0 1rem; }
+
+.anio { font-family: "Vollkorn SC", Georgia, serif; font-size: 1.5rem; margin: 2.2rem 0 0.8rem; color: var(--verde); }
+
+/* Cada pieza es una burbuja: el título manda, luego la fecha y dos versos */
+.burbujas { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(13.5rem, 1fr)); gap: 1rem; }
+.burbuja {
+  display: flex; flex-direction: column; gap: 0.35rem; height: 100%;
+  padding: 0.9rem 1rem 1rem;
+  border: 0.2rem solid var(--tinta); border-radius: 16px;
+  background: var(--color, #e5d8f7); color: var(--tinta);
+  text-decoration: none; transition: transform 200ms, box-shadow 200ms;
+}
+.burbuja:hover { color: var(--tinta); transform: translate(-4px, -4px) rotate(-0.6deg); box-shadow: 4px 4px var(--tinta); }
+.burbuja .t { font-size: 1.5rem; font-weight: 700; line-height: 1.15; }
+.burbuja .f { font-size: 0.8rem; color: #4a4a45; }
+.burbuja .v { margin-top: 0.3rem; font-size: 0.85rem; font-style: italic; line-height: 1.4; color: #3d3d39; white-space: pre-line; }
+.burbuja .tipo { align-self: flex-start; margin-top: auto; padding: 0.05rem 0.5rem; border: 1px solid var(--tinta); border-radius: 999px; font-size: 0.7rem; background: rgba(255,255,255,0.5); }
+.burbuja .v + .tipo { margin-top: 0.5rem; }
 .vacio { color: var(--suave); padding: 1rem 0; }
 
 /* Poema */
@@ -76,8 +96,3 @@ details summary { cursor: pointer; font-size: 0.85rem; color: var(--suave); padd
 
 .navegacion { display: flex; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--linea); font-size: 0.9rem; }
 .navegacion a { text-decoration: none; }
-
-@media (prefers-color-scheme: dark) {
-  :root { --fondo: #171816; --tinta: #e9e7df; --suave: #a3a29b; --linea: #33352f; --verde: #8fc08e; --marca: rgba(143, 192, 142, 0.18); }
-  .filtros input, .filtros select, .nota { background: #20221f; }
-}

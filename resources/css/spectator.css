@@ -634,6 +634,56 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .sp-epi { margin-left: auto; width: fit-content; max-width: 100%; font-size: min(0.85rem, 3.3vw); font-style: italic; color: #4b3f5e; }
 .sp-epi .sp-epi-by { margin-top: 0.3rem; text-align: right; font-style: normal; }
 
+/* Stanzas: each line a bubble with its syllable count on top; same colour, same rhyme */
+.sp-ranked.sp-stanzas { max-width: 42rem; }
+.sp-ranked.sp-stanzas li { display: flex; flex-wrap: wrap; align-items: flex-end; row-gap: 0; column-gap: 0.2rem; }
+.sp-ranked.sp-stanzas li::before { min-width: 1rem; align-self: center; }
+.sp-stanzas .sp-meta { color: #6b5a8a; margin-left: 0.6rem; align-self: center; }
+.sp-stanzas li > b { align-self: center; }
+.sp-rhyme { display: flex; flex-wrap: wrap; gap: 4px; margin: 0 0 0 auto; padding-left: 1rem; align-items: flex-end; }
+.sp-stanza-wide .sp-rhyme { flex: 0 0 100%; margin: 0.5rem 0 0.1rem; padding-left: 1.8rem; box-sizing: border-box; }
+.sp-rhyme-alex { gap: 0.9rem; }
+.sp-alex { display: inline-flex; height: 1.3rem; border: 1px solid rgba(28, 28, 28, 0.25); border-radius: 1.3rem; background-color: var(--c); font-style: normal; }
+.sp-alex > i { width: var(--h, 1.4rem); font-style: normal; font-size: 0.7rem; font-weight: 700; line-height: 1.2rem; text-align: center; color: #2b2b2b; }
+.sp-alex > i:first-child { border-right: 2px dotted #6b5a8a; }
+.sp-alex-lab { display: flex; flex-direction: column; align-items: center; min-height: 1.4rem; margin-top: 1px; font-size: 0.55rem; font-style: normal; line-height: 1.1; color: #6b5a8a; white-space: nowrap; }
+.sp-ar { display: grid; grid-template-columns: 1fr; font-size: 0.7rem; line-height: 1; }
+.sp-ar-2 { grid-template-columns: var(--h, 1.4rem) var(--h, 1.4rem); column-gap: 2px; }
+.sp-ar i { font-style: normal; text-align: center; }
+.sp-v { display: inline-flex; flex-direction: column; align-items: center; font-style: normal; }
+.sp-v small { font-size: 0.55rem; line-height: 1; margin-bottom: 2px; color: #6b5a8a; }
+.sp-r {
+  display: inline-block; width: 1.3rem; height: 1.3rem; border-radius: 50%;
+  border: 1px solid rgba(28, 28, 28, 0.25);
+  background-color: var(--c); color: #2b2b2b; font-style: normal; font-size: 0.7rem; font-weight: 700;
+  line-height: 1.2rem; text-align: center;
+}
+.sp-r-s { width: 1.05rem; height: 1.05rem; line-height: 0.95rem; font-size: 0.62rem; }
+.sp-r-xs { width: 0.8rem; height: 0.8rem; line-height: 0.7rem; font-size: 0.5rem; }
+.sp-split { display: inline-flex; gap: 2px; font-style: normal; }
+.sp-r-half-l { width: 0.75rem; border-radius: 1.3rem 0 0 1.3rem; text-align: right; padding-right: 1px; }
+.sp-r-half-r { width: 0.75rem; border-radius: 0 1.3rem 1.3rem 0; text-align: left; padding-left: 1px; }
+.sp-gap-s { display: inline-block; width: 0.5rem; }
+.sp-more { font-style: normal; color: #6b5a8a; font-weight: 700; padding: 0 0.2rem; }
+
+/* Copyright warning under the fragments, with a sad face (one day, a photo) */
+.sp-warning {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1rem;
+  border: 0.15rem dashed #6b5a8a;
+  border-radius: 10px;
+  background-color: #f3ecfc;
+  text-align: left;
+  font-size: 0.88rem;
+  color: #3d3350;
+}
+.sp-warning p { margin: 0; text-align: left; }
+.sp-warning b { display: block; margin-bottom: 0.2rem; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.75rem; color: #6b5a8a; }
+.sp-warning-face { flex: none; font-size: 2rem; line-height: 1; filter: grayscale(0.3); }
+
 /* Series: posters, two big and three small */
 .sp-series-big,
 .sp-series-small {
@@ -671,7 +721,7 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .sp-show-small h3 { font-size: 0.95rem; }
 .sp-show-note { font-size: 0.85rem; margin: 0.4rem 0 0; text-align: left; }
 
-/* Songs of my life: a line with a dot per song, oldest first */
+/* Songs of my life: a line with a dot per song, oldest first; thin rows */
 .sp-timeline {
   list-style: none;
   max-width: 42rem;
@@ -682,7 +732,7 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 
 .sp-timeline li {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 0.45rem;
   text-align: left;
 }
 
@@ -690,7 +740,7 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   content: "";
   position: absolute;
   left: -1.75rem;
-  top: 0.25rem;
+  top: 0.95rem;
   width: 0.9rem;
   height: 0.9rem;
   border: 0.2rem solid #1c1c1c;
@@ -699,14 +749,130 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   box-sizing: border-box;
 }
 
-.sp-when { display: block; min-height: 1.2rem; margin-bottom: 0.3rem; font-size: 0.9rem; }
-.sp-when small { margin-left: 0.5rem; color: #6b5a8a; }
-.sp-when b + small { margin-left: 0.5rem; }
-.sp-when small:first-child { margin-left: 0; }
+.sp-song {
+  display: grid;
+  grid-template-columns: 8.5rem 2.4rem 1fr auto;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  padding: 0.3rem 0.8rem 0.3rem 0.6rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #282828;
+  color: #fff;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+
+.sp-song:hover, .sp-song[aria-expanded="true"] { background-color: #3a3a3a; }
+.sp-song img { width: 2.4rem; height: 2.4rem; border-radius: 4px; object-fit: cover; }
+.sp-when { display: flex; flex-direction: column; line-height: 1.15; font-size: 0.85rem; text-align: left; }
+.sp-when small { color: #b9a8dc; font-size: 0.72rem; text-align: left; }
+.sp-song-txt { display: flex; flex-direction: column; min-width: 0; line-height: 1.2; }
+.sp-song-txt b, .sp-song-txt span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sp-song-txt b { font-size: 0.92rem; }
+.sp-song-txt span { font-size: 0.78rem; color: #b3b3b3; }
+.sp-play {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #1c1c1c;
+  font-size: 0.75rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+.sp-song[aria-expanded="true"] .sp-play { background-color: #1ed760; }
+.sp-timeline .sp-player { margin-top: 0.3rem; }
 
 @media only screen and (max-width:750px) {
   .sp-series-big { grid-template-columns: 1fr; }
   .sp-series-small { gap: 0.6rem; }
   .sp-series-small { grid-template-columns: 1fr; }
   .sp-show-small .sp-poster { width: 3.5rem; }
+  .sp-song { grid-template-columns: 2.2rem 1fr auto; gap: 0.15rem 0.6rem; padding-left: 0.5rem; }
+  .sp-when { grid-column: 1 / -1; flex-direction: row; align-items: baseline; gap: 0.4rem; }
+  .sp-timeline li::before { top: 0.35rem; }
+  .sp-song img { width: 2.2rem; height: 2.2rem; }
+  .sp-cities { gap: 0.6rem; }
+  .sp-cities-wish { grid-template-columns: repeat(2, 1fr); }
+  .sp-city { padding: 0.35rem; }
+  .sp-city h3 { font-size: 0.85rem; }
+  .sp-rhyme, .sp-stanza-wide .sp-rhyme { flex: 0 0 100%; margin: 0.4rem 0 0; padding-left: 1.2rem; gap: 2px; box-sizing: border-box; }
+  .sp-rhyme-alex, .sp-stanza-wide .sp-rhyme-alex { gap: 0.5rem; }
+  .sp-rhyme-alex { --h: 1.1rem; }
+  .sp-r { width: 1.1rem; height: 1.1rem; line-height: 1rem; font-size: 0.6rem; }
+  .sp-r-s { width: 0.9rem; height: 0.9rem; line-height: 0.8rem; font-size: 0.55rem; }
+  .sp-r-xs { width: 0.7rem; height: 0.7rem; line-height: 0.6rem; font-size: 0.45rem; }
+  .sp-r-half-l, .sp-r-half-r { width: 0.62rem; }
+  .sp-gap-s { width: 0.3rem; }
+}
+
+/* Recordatorios: goals as cards with a big adjective */
+.rc-state { display: inline-block; margin-left: 0.4rem; padding: 0.05rem 0.55rem; border: 0.15rem solid #2e8b57; border-radius: 999px; color: #2e8b57; font-size: 0.75rem; font-weight: 700; vertical-align: middle; }
+.rc-goals { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 42rem; }
+.rc-goal { position: relative; padding: 1rem 1.1rem 0.9rem; border: 0.2rem solid #1c1c1c; border-radius: 14px; background-color: #e5d8f7; transition: all 200ms; }
+.rc-goal:nth-child(2) { background-color: #fcd8d8; }
+.rc-goal:nth-child(3) { background-color: #c4e6cc; }
+.rc-goal:nth-child(4) { background-color: #fde7b0; }
+.rc-goal:hover { transform: translate(-4px, -4px) rotate(-0.6deg); box-shadow: 4px 4px #1c1c1c; }
+.rc-goal h3 { font-size: 1.6rem; margin: 0.2rem 0 0.4rem; text-align: left; }
+.rc-goal p { margin: 0; font-size: 0.92rem; text-align: left; }
+@media only screen and (max-width:750px) { .rc-goals { grid-template-columns: 1fr; } }
+.rc-intro { margin: 1.8rem 0 -0.5rem; font-style: italic; }
+
+/* Para mí: after the credits the whole background turns dark green, down to the end of the page */
+.rc-night {
+  margin-top: 7rem;
+  padding: 3rem 0 2rem;
+  background-color: #1f3d2c;
+  box-shadow: 0 0 0 100vmax #1f3d2c;
+  clip-path: inset(0 -100vmax -100vmax -100vmax);
+  color: #e9f3ea;
+}
+.rc-title { color: #f1fcee; font-family: "Vollkorn SC", serif; letter-spacing: 0.04em; }
+.rc-warning {
+  max-width: 34rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0.8rem 1rem;
+  border: 0.15rem dashed #f7d59c;
+  border-radius: 10px;
+  color: #f7e7c4;
+  text-align: left;
+}
+.rc-warning b { display: block; margin-bottom: 0.2rem; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.8rem; color: #f7d59c; }
+.rc-warning p { margin: 0; font-size: 0.95rem; text-align: left; }
+.rc-night .rc-intro, .rc-night .sp-note { color: #b7cfbd; }
+.rc-night h2 { color: #f1fcee; }
+.rc-night .rc-state { border-color: #9fdcb0; color: #9fdcb0; }
+.rc-night .rc-goal { border-color: #0f1f16; color: #1c1c1c; }
+.rc-night .rc-goal:hover { box-shadow: 4px 4px #0f1f16; }
+.rc-night .sp-rank { border-color: #0f1f16; }
+@media only screen and (max-width:750px) {
+  .sp-artists { grid-template-columns: 1fr; }
+  .sp-artist { min-width: 0; }
+}
+
+/* Stanzas, compact: number | name (with its note under it) | drawing right after, all rows the same width */
+.sp-ranked.sp-stanzas { width: fit-content; max-width: 100%; }
+.sp-ranked.sp-stanzas li {
+  display: grid;
+  grid-template-columns: 1rem 10.5rem auto;
+  grid-template-areas: "n name rhyme" "n meta rhyme";
+  align-items: center;
+  column-gap: 0.6rem;
+  row-gap: 0;
+}
+.sp-ranked.sp-stanzas li::before { grid-area: n; align-self: center; }
+.sp-stanzas li > b { grid-area: name; align-self: end; }
+.sp-stanzas .sp-meta { grid-area: meta; align-self: start; margin: 0; font-size: 0.78rem; }
+.sp-stanzas li:not(:has(.sp-meta)) > b { grid-row: 1 / 3; align-self: center; }
+.sp-stanzas .sp-rhyme, .sp-stanza-wide .sp-rhyme { grid-area: rhyme; margin: 0; padding: 0; flex: none; }
+@media only screen and (max-width:750px) {
+  .sp-ranked.sp-stanzas { width: auto; }
+  .sp-ranked.sp-stanzas li { grid-template-columns: 1rem 1fr; grid-template-areas: "n name" "n meta" "n rhyme"; }
+  .sp-stanzas .sp-rhyme, .sp-stanza-wide .sp-rhyme { margin-top: 0.3rem; }
+  .sp-stanzas li:not(:has(.sp-meta)) > b { grid-row: auto; }
 }
