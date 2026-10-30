@@ -854,3 +854,25 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-artists { grid-template-columns: 1fr; }
   .sp-artist { min-width: 0; }
 }
+
+/* Stanzas, compact: number | name (with its note under it) | drawing right after, all rows the same width */
+.sp-ranked.sp-stanzas { width: fit-content; max-width: 100%; }
+.sp-ranked.sp-stanzas li {
+  display: grid;
+  grid-template-columns: 1rem 10.5rem auto;
+  grid-template-areas: "n name rhyme" "n meta rhyme";
+  align-items: center;
+  column-gap: 0.6rem;
+  row-gap: 0;
+}
+.sp-ranked.sp-stanzas li::before { grid-area: n; align-self: center; }
+.sp-stanzas li > b { grid-area: name; align-self: end; }
+.sp-stanzas .sp-meta { grid-area: meta; align-self: start; margin: 0; font-size: 0.78rem; }
+.sp-stanzas li:not(:has(.sp-meta)) > b { grid-row: 1 / 3; align-self: center; }
+.sp-stanzas .sp-rhyme, .sp-stanza-wide .sp-rhyme { grid-area: rhyme; margin: 0; padding: 0; flex: none; }
+@media only screen and (max-width:750px) {
+  .sp-ranked.sp-stanzas { width: auto; }
+  .sp-ranked.sp-stanzas li { grid-template-columns: 1rem 1fr; grid-template-areas: "n name" "n meta" "n rhyme"; }
+  .sp-stanzas .sp-rhyme, .sp-stanza-wide .sp-rhyme { margin-top: 0.3rem; }
+  .sp-stanzas li:not(:has(.sp-meta)) > b { grid-row: auto; }
+}
