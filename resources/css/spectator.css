@@ -811,3 +811,4 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .rc-goal h3 { font-size: 1.6rem; margin: 0.2rem 0 0.4rem; text-align: left; }
 .rc-goal p { margin: 0; font-size: 0.92rem; text-align: left; }
 @media only screen and (max-width:750px) { .rc-goals { grid-template-columns: 1fr; } }
+.rc-intro { margin: 1.8rem 0 -0.5rem; font-style: italic; }

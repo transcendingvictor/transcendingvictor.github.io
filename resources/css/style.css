@@ -527,5 +527,3 @@
 .balanza .bz-twitter { left: 50%; top: 74.3%; }
 .balanza .bz-youtube { left: 85%; top: 0; }
 .balanza .bz-espectador:hover, .balanza .bz-obra:hover { background-color: #d5c8e7; }
-.bz-extra { width: auto !important; margin: -0.6rem 0 0 !important; text-align: center; font-size: 0.8rem; }
-.bz-extra a { text-decoration: underline !important; }
