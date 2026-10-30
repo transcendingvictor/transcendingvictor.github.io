@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,18 +11,18 @@
 </head>
 <body>
   <main class="contenedor">
-    <nav class="migas"><a href="../index.html">← Víctor Abia Alonso</a></nav>
-    <h1>Obra completa</h1>
-    <p class="entradilla">Poemas y textos desde 2016, ordenados por fecha. Se publicaron primero en <a href="https://cienciassocialesyasuntospersonales.blogspot.com/" target="_blank" rel="noopener">Ciencias sociales y asuntos personales</a> y en <a href="https://cienciassocialesymentirasbanales.blogspot.com/" target="_blank" rel="noopener">Ciencias sociales y mentiras banales</a>.</p>
+    <nav class="migas"><a href="../index.html">← Víctor Abia Alonso</a><span id="idioma"></span></nav>
+    <h1 data-t="titulo">Obra completa</h1>
+    <p class="entradilla"><span data-t="entradilla">Poemas y textos desde 2016, ordenados por fecha. Se publicaron primero en</span> <a href="https://cienciassocialesyasuntospersonales.blogspot.com/" target="_blank" rel="noopener">Ciencias sociales y asuntos personales</a> <span data-t="y">y en</span> <a href="https://cienciassocialesymentirasbanales.blogspot.com/" target="_blank" rel="noopener">Ciencias sociales y mentiras banales</a>.</p>
 
     <div class="filtros">
-      <input id="buscar" type="search" placeholder="Buscar un título o un verso…">
+      <input id="buscar" type="search" placeholder="Buscar un título o un verso…" data-t-placeholder="buscar">
       <select id="formato">
-        <option value="">Todo</option>
-        <option value="poema">Poemas</option>
-        <option value="texto-poetico">Mentiras banales</option>
+        <option value="" data-t="todo">Todo</option>
+        <option value="poema" data-t="poemas">Poemas</option>
+        <option value="texto-poetico" data-t="banales">Mentiras banales</option>
       </select>
-      <select id="etiqueta"><option value="">Cualquier tema</option></select>
+      <select id="etiqueta"><option value="" data-t="cualquier">Cualquier tema</option></select>
     </div>
 
     <div id="indice"></div>
