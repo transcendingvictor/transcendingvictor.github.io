@@ -644,9 +644,12 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .sp-stanza-wide .sp-rhyme { flex: 0 0 100%; margin: 0.5rem 0 0.1rem; padding-left: 1.8rem; box-sizing: border-box; }
 .sp-rhyme-alex { gap: 0.9rem; }
 .sp-alex { display: inline-flex; height: 1.3rem; border: 1px solid rgba(28, 28, 28, 0.25); border-radius: 1.3rem; background-color: var(--c); font-style: normal; }
-.sp-alex > i { width: 1.4rem; font-style: normal; font-size: 0.7rem; font-weight: 700; line-height: 1.2rem; text-align: center; color: #2b2b2b; }
+.sp-alex > i { width: var(--h, 1.4rem); font-style: normal; font-size: 0.7rem; font-weight: 700; line-height: 1.2rem; text-align: center; color: #2b2b2b; }
 .sp-alex > i:first-child { border-right: 2px dotted #6b5a8a; }
-.sp-alex-lab { min-height: 0.8rem; margin-top: 2px; font-size: 0.55rem; font-style: normal; line-height: 1; color: #6b5a8a; white-space: nowrap; }
+.sp-alex-lab { display: flex; flex-direction: column; align-items: center; min-height: 1.4rem; margin-top: 1px; font-size: 0.55rem; font-style: normal; line-height: 1.1; color: #6b5a8a; white-space: nowrap; }
+.sp-ar { display: grid; grid-template-columns: 1fr; font-size: 0.7rem; line-height: 1; }
+.sp-ar-2 { grid-template-columns: var(--h, 1.4rem) var(--h, 1.4rem); column-gap: 2px; }
+.sp-ar i { font-style: normal; text-align: center; }
 .sp-v { display: inline-flex; flex-direction: column; align-items: center; font-style: normal; }
 .sp-v small { font-size: 0.55rem; line-height: 1; margin-bottom: 2px; color: #6b5a8a; }
 .sp-r {
@@ -799,7 +802,7 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-city h3 { font-size: 0.85rem; }
   .sp-rhyme, .sp-stanza-wide .sp-rhyme { flex: 0 0 100%; margin: 0.4rem 0 0; padding-left: 1.2rem; gap: 2px; box-sizing: border-box; }
   .sp-rhyme-alex, .sp-stanza-wide .sp-rhyme-alex { gap: 0.5rem; }
-  .sp-alex > i { width: 1.1rem; }
+  .sp-rhyme-alex { --h: 1.1rem; }
   .sp-r { width: 1.1rem; height: 1.1rem; line-height: 1rem; font-size: 0.6rem; }
   .sp-r-s { width: 0.9rem; height: 0.9rem; line-height: 0.8rem; font-size: 0.55rem; }
   .sp-r-xs { width: 0.7rem; height: 0.7rem; line-height: 0.6rem; font-size: 0.45rem; }
