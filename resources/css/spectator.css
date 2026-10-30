@@ -634,6 +634,24 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .sp-epi { margin-left: auto; width: fit-content; max-width: 100%; font-size: min(0.85rem, 3.3vw); font-style: italic; color: #4b3f5e; }
 .sp-epi .sp-epi-by { margin-top: 0.3rem; text-align: right; font-style: normal; }
 
+/* Copyright warning under the fragments, with a sad face (one day, a photo) */
+.sp-warning {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1rem;
+  border: 0.15rem dashed #6b5a8a;
+  border-radius: 10px;
+  background-color: #f3ecfc;
+  text-align: left;
+  font-size: 0.88rem;
+  color: #3d3350;
+}
+.sp-warning p { margin: 0; text-align: left; }
+.sp-warning b { display: block; margin-bottom: 0.2rem; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.75rem; color: #6b5a8a; }
+.sp-warning-face { flex: none; font-size: 2rem; line-height: 1; filter: grayscale(0.3); }
+
 /* Series: posters, two big and three small */
 .sp-series-big,
 .sp-series-small {
