@@ -20,7 +20,7 @@ const Obra = (() => {
       titulo: "Obra completa", volver: "← Obra completa",
       entradilla: "Poemas y textos desde 2016, ordenados por fecha. Se publicaron primero en", y: "y en",
       buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Poemas", banales: "Mentiras banales",
-      cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 pieza" : `${n} piezas`, banalesMeta: "mentiras banales · ", comentado: " · comentado",
+      cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 pieza" : `${n} piezas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado",
       noEncuentro: "No encuentro esa pieza.", publicado: f => ` (publicado el ${f})`, verComentarios: "Ver comentarios",
       explicacion: "Explicación", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
       meses: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
@@ -30,7 +30,7 @@ const Obra = (() => {
       titulo: "Complete works", volver: "← Complete works",
       entradilla: "Poems and texts since 2016, in date order, mostly in Spanish. They first appeared on", y: "and",
       buscar: "Search a title or a line…", todo: "All", poemas: "Poems", banales: "Mentiras banales",
-      cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 piece" : `${n} pieces`, banalesMeta: "mentiras banales · ", comentado: " · annotated",
+      cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 piece" : `${n} pieces`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated",
       noEncuentro: "I can't find that piece.", publicado: f => ` (published ${f})`, verComentarios: "Show comments",
       explicacion: "Explanation", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
       meses: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -85,7 +85,6 @@ const Obra = (() => {
         (!formato.value || p.formato === formato.value) &&
         (!conTema || !etiqueta.value || p.etiquetas.includes(etiqueta.value)) &&
         (!q || (p.titulo + "\n" + p.texto).toLowerCase().includes(q));
-      const dosVersos = p => p.texto.split("\n").filter(l => l.trim()).slice(0, 2).join("\n");
       const pintar = () => {
         const q = buscar.value.trim().toLowerCase();
         // Cuántas piezas hay de cada tema con la búsqueda actual, para no tener que probarlos
@@ -110,9 +109,12 @@ const Obra = (() => {
           const marca = p.anotaciones.length || p.valoraciones.length ? T("comentado") : "";
           const b = el("a", { class: "burbuja", href: `poema.html?c=${p.codigo}` },
             el("span", { class: "t" }, p.titulo),
-            el("span", { class: "f" }, fechaLarga(fecha(p)) + marca),
-            el("span", { class: "v" }, dosVersos(p)));
-          if (p.formato !== "poema") b.append(el("span", { class: "tipo" }, T("banales")));
+            el("span", { class: "f" }, fechaLarga(fecha(p)) + marca));
+          // Etiquetas: el blog de donde viene y, si la tiene, la dedicatoria con su código
+          const etiquetas = el("span", { class: "etiquetas" },
+            el("span", { class: "tipo" }, /mentiras banales/i.test(p.fuente) ? "mentiras banales" : "asuntos personales"));
+          if (p.dedicatoria_pista) etiquetas.append(el("span", { class: "dedica", title: T("dedicada") }, "✉ " + p.dedicatoria_pista));
+          b.append(etiquetas);
           b.style.setProperty("--color", COLORES[k++ % COLORES.length]);
           ul.append(el("li", {}, b));
         }

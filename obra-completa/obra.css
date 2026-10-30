@@ -58,11 +58,12 @@ h1 { font-family: "Vollkorn SC", Georgia, serif; font-weight: 600; font-size: 2r
   text-decoration: none; transition: transform 200ms, box-shadow 200ms;
 }
 .burbuja:hover { color: var(--tinta); transform: translate(-4px, -4px) rotate(-0.6deg); box-shadow: 4px 4px var(--tinta); }
-.burbuja .t { font-size: 1.5rem; font-weight: 700; line-height: 1.15; }
+.burbuja .t { font-size: clamp(1.4rem, 2.2vw, 1.9rem); font-weight: 700; line-height: 1.1; overflow-wrap: break-word; hyphens: auto; }
 .burbuja .f { font-size: 0.8rem; color: #4a4a45; }
-.burbuja .v { margin-top: 0.3rem; font-size: 0.85rem; font-style: italic; line-height: 1.4; color: #3d3d39; white-space: pre-line; }
-.burbuja .tipo { align-self: flex-start; margin-top: auto; padding: 0.05rem 0.5rem; border: 1px solid var(--tinta); border-radius: 999px; font-size: 0.7rem; background: rgba(255,255,255,0.5); }
-.burbuja .v + .tipo { margin-top: 0.5rem; }
+.burbuja .etiquetas { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: auto; padding-top: 0.6rem; }
+.burbuja .tipo, .burbuja .dedica { padding: 0.05rem 0.5rem; border: 1px solid var(--tinta); font-size: 0.7rem; background: rgba(255,255,255,0.5); }
+.burbuja .tipo { border-radius: 999px; }
+.burbuja .dedica { border-radius: 2px; border-style: dashed; }
 .vacio { color: var(--suave); padding: 1rem 0; }
 
 /* Poema */
