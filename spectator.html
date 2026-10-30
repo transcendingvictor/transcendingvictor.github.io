@@ -453,6 +453,60 @@
             </div>
         </section>
 
+        <section class="sp-list">
+            <h2><span data-l="es">Ciudades favoritas</span><span data-l="en">Favourite cities</span></h2>
+            <div class="sp-cities">
+                <article class="sp-city" data-search="ciudad de mexico mexico city cdmx">
+                    <span class="sp-rank">1</span>
+                    <img src="resources/img/ciudad_cdmx.jpg" alt="Ciudad de México" loading="lazy">
+                    <h3><span data-l="es">Ciudad de México</span><span data-l="en">Mexico City</span></h3>
+                    <p class="sp-meta"><span data-l="es">México</span><span data-l="en">Mexico</span></p>
+                </article>
+                <article class="sp-city" data-search="montreal canada">
+                    <span class="sp-rank">2</span>
+                    <img src="resources/img/ciudad_montreal.jpg" alt="Montreal" loading="lazy">
+                    <h3>Montreal</h3>
+                    <p class="sp-meta"><span data-l="es">Canadá</span><span data-l="en">Canada</span></p>
+                </article>
+                <article class="sp-city" data-search="barcelona españa spain">
+                    <span class="sp-rank">3</span>
+                    <img src="resources/img/ciudad_barcelona.jpg" alt="Barcelona" loading="lazy">
+                    <h3>Barcelona</h3>
+                    <p class="sp-meta"><span data-l="es">España</span><span data-l="en">Spain</span></p>
+                </article>
+            </div>
+        </section>
+
+        <section class="sp-list">
+            <h2><span data-l="es">Ciudades a las que quiero ir</span><span data-l="en">Cities I want to visit</span></h2>
+            <div class="sp-cities sp-cities-wish">
+                <article class="sp-city sp-city-wish" data-search="buenos aires argentina">
+                    <span class="sp-rank">1</span>
+                    <img src="resources/img/ciudad_buenos_aires.jpg" alt="Buenos Aires" loading="lazy">
+                    <h3>Buenos Aires</h3>
+                    <p class="sp-meta"><span data-l="es">Argentina</span><span data-l="en">Argentina</span></p>
+                </article>
+                <article class="sp-city sp-city-wish" data-search="vigo galicia españa spain">
+                    <span class="sp-rank">2</span>
+                    <img src="resources/img/ciudad_vigo.jpg" alt="Vigo" loading="lazy">
+                    <h3>Vigo</h3>
+                    <p class="sp-meta"><span data-l="es">España</span><span data-l="en">Spain</span></p>
+                </article>
+                <article class="sp-city sp-city-wish" data-search="cadiz cádiz españa spain">
+                    <span class="sp-rank">3</span>
+                    <img src="resources/img/ciudad_cadiz.jpg" alt="Cádiz" loading="lazy">
+                    <h3>Cádiz</h3>
+                    <p class="sp-meta"><span data-l="es">España</span><span data-l="en">Spain</span></p>
+                </article>
+                <article class="sp-city sp-city-wish" data-search="nueva orleans new orleans">
+                    <span class="sp-rank">4</span>
+                    <img src="resources/img/ciudad_nueva_orleans.jpg" alt="Nueva Orleans" loading="lazy">
+                    <h3><span data-l="es">Nueva Orleans</span><span data-l="en">New Orleans</span></h3>
+                    <p class="sp-meta"><span data-l="es">Estados Unidos</span><span data-l="en">United States</span></p>
+                </article>
+            </div>
+        </section>
+
         <p class="sp-chapter">V · <span data-l="es">Personas</span><span data-l="en">People</span></p>
 
         <section class="sp-list">
@@ -472,7 +526,7 @@
                 <li><span data-l="es">Carteles de <i>Origen</i>, <i>Vértigo</i> y <i>Pulp Fiction</i>: Wikipedia / Wikimedia.</span><span data-l="en">Posters of <i>Inception</i>, <i>Vertigo</i> and <i>Pulp Fiction</i>: Wikipedia / Wikimedia.</span></li>
                 <li><span data-l="es">Carteles de las series: The Movie Database (TMDB).</span><span data-l="en">Series posters: The Movie Database (TMDB).</span></li>
                 <li><span data-l="es">Portadas de los libros: Open Library.</span><span data-l="en">Book covers: Open Library.</span></li>
-                <li><span data-l="es">Retratos de Miguel Hernández, Sylvia Plath y Pío Baroja: Wikimedia Commons.</span><span data-l="en">Portraits of Miguel Hernández, Sylvia Plath and Pío Baroja: Wikimedia Commons.</span></li>
+                <li><span data-l="es">Retratos de Miguel Hernández, Sylvia Plath y Pío Baroja, y fotos de ciudades: Wikimedia Commons.</span><span data-l="en">Portraits of Miguel Hernández, Sylvia Plath and Pío Baroja, and city photos: Wikimedia Commons.</span></li>
                 <li><span data-l="es">Foto de Blas de Otero: Manuel María Fernández Gochi, CC BY-SA 4.0, recortada.</span><span data-l="en">Blas de Otero photo: Manuel María Fernández Gochi, CC BY-SA 4.0, cropped.</span></li>
                 <li><span data-l="es">Fotos de artistas, carátulas y reproductores: Spotify.</span><span data-l="en">Artist photos, cover art and players: Spotify.</span></li>
                 <li><span data-l="es">Siluetas de países: Natural Earth (dominio público).</span><span data-l="en">Country silhouettes: Natural Earth (public domain).</span></li>
@@ -640,7 +694,7 @@
             var term = norm(q.value.trim());
             var anyShown = false;
             document.querySelectorAll('.sp-list').forEach(function (sec) {
-                var items = sec.querySelectorAll('.sp-list > ol > li, .sp-list > ul > li, .sp-sky > li:not(.sp-empty), .sp-film, .sp-poet, .sp-artist, .sp-country, .sp-show');
+                var items = sec.querySelectorAll('.sp-list > ol > li, .sp-list > ul > li, .sp-sky > li:not(.sp-empty), .sp-film, .sp-poet, .sp-artist, .sp-country, .sp-show, .sp-city');
                 var title = norm(sec.querySelector('h2').textContent);
                 var shown = 0;
                 items.forEach(function (it) {

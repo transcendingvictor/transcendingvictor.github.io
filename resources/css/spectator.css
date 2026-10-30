@@ -646,6 +646,20 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .sp-r-s { width: 0.95rem; height: 0.95rem; line-height: 0.95rem; font-size: 0.6rem; }
 .sp-gap-s { display: inline-block; width: 0.45rem; }
 
+/* Cities: three favourites, then four I want to visit (dashed, like a plan) */
+.sp-cities { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 42rem; }
+.sp-cities-wish { grid-template-columns: repeat(4, 1fr); gap: 0.8rem; }
+.sp-city {
+  position: relative; padding: 0.6rem;
+  border: 0.2rem solid #1c1c1c; border-radius: 10px; background-color: #e5d8f7;
+  transition: all 200ms;
+}
+.sp-city:hover { transform: translate(-4px, -4px) rotate(-1deg); box-shadow: 4px 4px #1c1c1c; }
+.sp-city img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; background-color: #d5c8e7; }
+.sp-city h3 { margin-top: 0.5rem; text-align: left; }
+.sp-city-wish { border-style: dashed; background-color: #f3ecfc; }
+.sp-city-wish h3 { font-size: 0.95rem; }
+
 /* Copyright warning under the fragments, with a sad face (one day, a photo) */
 .sp-warning {
   display: flex;
@@ -776,6 +790,10 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-when { grid-column: 1 / -1; flex-direction: row; align-items: baseline; gap: 0.4rem; }
   .sp-timeline li::before { top: 0.35rem; }
   .sp-song img { width: 2.2rem; height: 2.2rem; }
+  .sp-cities { gap: 0.6rem; }
+  .sp-cities-wish { grid-template-columns: repeat(2, 1fr); }
+  .sp-city { padding: 0.35rem; }
+  .sp-city h3 { font-size: 0.85rem; }
   .sp-rhyme { flex-basis: 100%; margin-left: 1.8rem; gap: 2px; }
   .sp-r { width: 1.05rem; height: 1.05rem; line-height: 1.05rem; font-size: 0.6rem; }
   .sp-r-s { width: 0.85rem; height: 0.85rem; line-height: 0.85rem; font-size: 0.55rem; }
