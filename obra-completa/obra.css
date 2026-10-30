@@ -70,23 +70,57 @@ h1 { font-family: "Vollkorn SC", Georgia, serif; font-weight: 600; font-size: 2r
 .meta { font-size: 0.85rem; color: var(--suave); margin-bottom: 1.5rem; }
 .meta a { color: var(--suave); }
 
-.interruptor { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--suave); cursor: pointer; user-select: none; margin-bottom: 2rem; }
-.interruptor input { accent-color: var(--verde); }
+/* Botones de capas: Forma · Sentido · Referencias */
+:root { --c-forma: #8a5fbf; --c-sentido: var(--verde); --c-referencia: #c0753a; }
+.capas { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2rem; }
+.capas button {
+  font: inherit; font-size: 0.85rem; padding: 0.25rem 0.85rem; cursor: pointer;
+  border: 1px solid var(--color-capa); border-radius: 999px; background: transparent; color: var(--color-capa);
+}
+.capas button[aria-pressed="true"] { background: var(--color-capa); color: #fff; }
+.capa-forma { --color-capa: var(--c-forma); }
+.capa-sentido { --color-capa: var(--c-sentido); }
+.capa-referencia { --color-capa: var(--c-referencia); }
 
 .poema { white-space: pre-wrap; font-size: 1.1rem; line-height: 1.75; margin-bottom: 2.5rem; }
 .poema .estrofa { display: block; height: 1rem; }
 .verso { display: block; min-height: 1.75em; }
 
 .anotado { transition: background-color 0.2s, box-shadow 0.2s; border-radius: 2px; }
-.con-notas .anotado { box-shadow: inset 0 -1px 0 var(--verde); cursor: pointer; }
-.con-notas .anotado:hover, .con-notas .anotado.activo { background: var(--marca); }
+.on-forma .c-forma, .on-sentido .c-sentido, .on-referencia .c-referencia { cursor: pointer; }
+.on-forma .c-forma { box-shadow: inset 0 -1px 0 var(--c-forma); }
+.on-sentido .c-sentido { box-shadow: inset 0 -1px 0 var(--c-sentido); }
+.on-referencia .c-referencia { box-shadow: inset 0 -1px 0 var(--c-referencia); }
+.on-sentido .c-sentido.c-referencia.anotado { box-shadow: inset 0 -1px 0 var(--c-sentido), inset 0 -3px 0 var(--fondo), inset 0 -4px 0 var(--c-referencia); }
+.on-forma .anotado.c-forma:hover, .on-sentido .anotado.c-sentido:hover, .on-referencia .anotado.c-referencia:hover, .anotado.activo { background: var(--marca); }
 
 .nota {
   display: none; margin: 0.4rem 0 0.8rem; padding: 0.7rem 0.9rem;
-  border-left: 2px solid var(--verde); background: #fff;
+  border-left: 2px solid var(--color-capa, var(--verde)); background: #fff;
   font-size: 0.92rem; line-height: 1.5; white-space: normal; color: var(--tinta);
 }
 .nota.abierta { display: block; }
+.nota .autor {
+  display: inline-block; margin-right: 0.5rem; padding: 0 0.45rem; border: 1px dashed var(--suave); border-radius: 2px;
+  font-size: 0.7rem; color: var(--suave); vertical-align: 0.1em;
+}
+
+/* Forma: sílabas y letra de rima al margen, y la palabra que rima coloreada */
+.metro { display: none; float: right; margin-left: 1rem; font-size: 0.75rem; color: var(--suave); font-variant-numeric: tabular-nums; }
+.metro b { display: inline-block; min-width: 1.3em; text-align: center; border-radius: 3px; background: var(--rima, transparent); color: var(--tinta); font-weight: 600; }
+.on-forma .metro { display: inline; }
+.on-forma .rima { background: var(--rima); border-radius: 3px; }
+
+.forma dl, .lectura .rasgos { display: grid; grid-template-columns: max-content 1fr; gap: 0.25rem 1rem; margin-bottom: 0.8rem; font-size: 0.95rem; }
+.forma dt, .lectura dt { color: var(--suave); }
+.rimas { list-style: none; font-size: 0.9rem; }
+.rimas li { padding: 0.15rem 0; }
+.rimas b { display: inline-block; min-width: 1.6em; text-align: center; border-radius: 3px; background: var(--rima); font-weight: 600; }
+.aviso { font-size: 0.82rem; color: var(--suave); border: 1px dashed var(--linea); border-radius: 6px; padding: 0.5rem 0.75rem; margin-bottom: 0.9rem; }
+.lectura p { margin-bottom: 0.7rem; }
+.puntos { display: inline-flex; gap: 0.25rem; vertical-align: middle; }
+.puntos i { width: 0.6rem; height: 0.6rem; border-radius: 50%; border: 1px solid var(--verde); }
+.puntos i.lleno { background: var(--verde); }
 
 section { margin-top: 2.5rem; }
 h2 { font-family: "Vollkorn SC", Georgia, serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; }

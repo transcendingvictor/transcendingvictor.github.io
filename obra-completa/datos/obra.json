@@ -3,7 +3,157 @@
   "codigo": "CSAP-003",
   "titulo": "Máxima Incomprensión.",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "verso libre, en un solo bloque",
+   "medida": "irregular, de 4 a 17 sílabas",
+   "esquema": "casi todos los versos tienen pareja asonante, aunque no sigan un orden fijo",
+   "rimas": {
+    "a": "asonante a-o · algo, negarlo",
+    "b": "asonante en é (aguda) · qué, bien, ayer, encender",
+    "c": "asonante u-e · incertidumbre, luces",
+    "d": "asonante a-a · nada, apagas",
+    "e": "asonante en á (aguda) · matar, bajará, más",
+    "f": "asonante o-e · ahogues, oyes",
+    "g": "asonante e-a · fuera, problemas",
+    "h": "asonante u-a · acumulas, continúan",
+    "i": "consonante -oro · lloro, ignoro",
+    "j": "asonante e-o · medio, silencio",
+    "k": "asonante o-a · gotas, explota"
+   },
+   "versos": {
+    "1": {
+     "silabas": 9,
+     "rima": "A",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 12,
+     "rima": "A",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 10,
+     "rima": "B",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 10,
+     "rima": "C",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 7,
+     "rima": "-",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 8,
+     "rima": "c",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 11,
+     "rima": "E",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 10,
+     "rima": "B",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 12,
+     "rima": "D",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 17,
+     "rima": "B",
+     "nota": "el verso más largo del poema, justo antes del más corto"
+    },
+    "12": {
+     "silabas": 4,
+     "rima": "d",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 8,
+     "rima": "e",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 8,
+     "rima": "f",
+     "nota": ""
+    },
+    "15": {
+     "silabas": 8,
+     "rima": "g",
+     "nota": ""
+    },
+    "16": {
+     "silabas": 7,
+     "rima": "f",
+     "nota": ""
+    },
+    "17": {
+     "silabas": 8,
+     "rima": "h",
+     "nota": ""
+    },
+    "18": {
+     "silabas": 8,
+     "rima": "i",
+     "nota": ""
+    },
+    "19": {
+     "silabas": 7,
+     "rima": "i",
+     "nota": ""
+    },
+    "20": {
+     "silabas": 10,
+     "rima": "E",
+     "nota": ""
+    },
+    "21": {
+     "silabas": 8,
+     "rima": "h",
+     "nota": "«continúan» (está escrito sin tilde)"
+    },
+    "22": {
+     "silabas": 8,
+     "rima": "g",
+     "nota": ""
+    },
+    "23": {
+     "silabas": 4,
+     "rima": "j",
+     "nota": ""
+    },
+    "24": {
+     "silabas": 10,
+     "rima": "K",
+     "nota": ""
+    },
+    "25": {
+     "silabas": 8,
+     "rima": "k",
+     "nota": ""
+    },
+    "26": {
+     "silabas": 5,
+     "rima": "j",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2016-11-26",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -20,14 +170,175 @@
   "subtitulo": "",
   "texto": "Ya sabemos que te pasa algo\nPero no queremos saber el qué\nEl sol y la vida parecen negarlo\nPero la lluvia lo sabe bien.\nCuevas oscuras incertidumbre\nToda rareza cambia\nNosotras vivas, con luces\nA ti la ventana te va a matar.\nLlorar ya no toca, tocó ayer\nPero realmente no sirvió de nada\nY mientras ves como la vela no se volverá a encender,\nTú, te apagas.\nLa marea bajará\nMientras tanto no te ahogues\nQue yo te esperaré fuera\nFuera de esta vida ¿oyes?\nTú te paras y acumulas\nYo te miro y no lloro\nSiento algo y lo ignoro\nEl globo no cede. un poco más.\nNuestras vidas continuan\nNo nos vengas con problemas\nde por medio\nY calla aunque no te queden gotas\nSi vas a explotar, explota\npero en silencio\n\n(estefana)\n\nVí. Ab. Al.",
   "explicacion": "",
-  "anotaciones": [],
-  "valoraciones": []
+  "anotaciones": [
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 11,
+    "hasta": 11,
+    "texto": "el verso más largo del poema, justo antes del más corto"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 21,
+    "hasta": 21,
+    "texto": "«continúan» (está escrito sin tilde)"
+   }
+  ],
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "6",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 4,
+    "interés": 3,
+    "sonoridad": 3
+   },
+   "texto": "Un «nosotros» que sigue viviendo y no quiere saber le habla a un «tú» que se apaga. Todo el poema enfrenta el agua (lluvia, marea, ahogarse, gotas) con la luz (sol, vela, luces), y la luz va perdiendo. El final es lo más duro: se acepta que el otro estalle, pero se le pide silencio.",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "El sol y la vida lo niegan y la lluvia lo sabe: el tiempo como testigo de lo que le pasa al «tú».",
+     "desde": 3,
+     "hasta": 4
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "La vela que no se volverá a encender y «te apagas»: el verso más largo seguido del más corto, como si la forma también se apagara.",
+     "desde": 11,
+     "hasta": 12
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«fuera / Fuera de esta vida»: la palabra se repite y cambia de peso, de un sitio a algo mucho más grave.",
+     "desde": 15,
+     "hasta": 16
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "El globo que no cede prepara el «si vas a explotar, explota» del final.",
+     "desde": 20,
+     "hasta": 20
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-004",
   "titulo": "1+",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "seis tercetos",
+   "medida": "cada terceto tiene un verso de 6, uno de 10 y un remate de 4",
+   "esquema": "aBc aBc aBc / dEf dEf dEf. Las tres primeras estrofas riman en consonante; las tres últimas mezclan consonante y asonante",
+   "rimas": {
+    "a": "consonante -al · mal, chaval, normal",
+    "b": "consonante -ente · corriente, adolescente, desobediente",
+    "c": "consonante -eno · menos, senos, ameno",
+    "d": "asonante o-a · Oscars, coscas, moscas (coscas y moscas además en consonante)",
+    "e": "consonante -ada · madrugada, encaminada, equivocadas",
+    "f": "asonante e-a · hierba, pierdas, mierda. Víctor (2026-10-30): no es consonante, pero siempre hay una r y el sonido de la a; tiene ahí un jueguito"
+   },
+   "versos": {
+    "1": {
+     "silabas": 6,
+     "rima": "a",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 10,
+     "rima": "B",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 4,
+     "rima": "c",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 6,
+     "rima": "a",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 10,
+     "rima": "B",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 4,
+     "rima": "c",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 6,
+     "rima": "a",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 10,
+     "rima": "B",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 4,
+     "rima": "c",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 6,
+     "rima": "d",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 10,
+     "rima": "E",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 4,
+     "rima": "f",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 6,
+     "rima": "d",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 10,
+     "rima": "E",
+     "nota": ""
+    },
+    "15": {
+     "silabas": 4,
+     "rima": "f",
+     "nota": ""
+    },
+    "16": {
+     "silabas": 6,
+     "rima": "d",
+     "nota": ""
+    },
+    "17": {
+     "silabas": 10,
+     "rima": "E",
+     "nota": ""
+    },
+    "18": {
+     "silabas": 4,
+     "rima": "f",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2016-12-14",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -45,13 +356,187 @@
   "texto": "No lo hago tan mal\nTodo el mundo sigue esa corriente\nNo soy menos\n\nUn simple chaval\nTengo que ser un adolescente\nQuiero senos\n\nPara ser normal\nSeré el malote desobediente\nNada ameno\n\nCriticar los Oscars\nRegresar tarde en la madrugada\nFumar hierba\n\nLuego ya te coscas\nLa sociedad no va encaminada\nYa te pierdas\n\nUn millón de moscas\nNo pueden estar equivocadas\nCome mierda.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "7",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 2,
+    "interés": 4,
+    "sonoridad": 4
+   },
+   "texto": "«1+» se lee «uno más». Es una sátira del adolescente que, para ser normal, se pone el disfraz de rebelde, que también es una norma. La primera mitad es el deseo de encajar; la segunda, la lista de tópicos del malote, y el remate le da la vuelta al argumento de que la mayoría tiene razón. Los versos cortos del final de cada terceto funcionan como golpes de humor.",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«Quiero senos»: el deseo dicho con la misma sequedad que los otros remates, y por eso hace gracia.",
+     "desde": 6,
+     "hasta": 6
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Criticar los Oscar, volver tarde, fumar hierba: rebeldía de catálogo.",
+     "desde": 10,
+     "hasta": 12
+    },
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "Dicho popular: «Come mierda: un millón de moscas no pueden estar equivocadas», que se usa para reírse de quien sigue a la mayoría.",
+     "desde": 16,
+     "hasta": 18
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-005",
   "titulo": "Imnoratles",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "seis redondillas",
+   "medida": "octosílabos",
+   "esquema": "abba cddc effe gaag hiih jkkj. La rima de la primera estrofa (-ales) vuelve en la cuarta",
+   "rimas": {
+    "a": "consonante -ales · inmortales, normales, mortales, iniguales",
+    "b": "consonante -ulo · culo, chulo",
+    "c": "consonante -í (aguda) · aquí, mí",
+    "d": "consonante -ido · sentido, ido",
+    "e": "consonante -aron · fallaron, callaron",
+    "f": "asonante i-e · existen, chiste (casi consonante: solo sobra la n)",
+    "g": "asonante e-a · murieran, cualquiera (casi consonante)",
+    "h": "consonante -ase · base, pase",
+    "i": "consonante -ecto · perfecto, correcto",
+    "j": "consonante -ieron · mintieron, murieron",
+    "k": "consonante -or · mejor, sudor"
+   },
+   "versos": {
+    "1": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 8,
+     "rima": "c",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 8,
+     "rima": "d",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 8,
+     "rima": "d",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 8,
+     "rima": "c",
+     "nota": "leyendo «ahora» en dos sílabas (sinéresis); si no, 9"
+    },
+    "9": {
+     "silabas": 8,
+     "rima": "e",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 8,
+     "rima": "f",
+     "nota": "con sinéresis en «ahora»"
+    },
+    "11": {
+     "silabas": 8,
+     "rima": "f",
+     "nota": "con sinéresis en «ahora»"
+    },
+    "12": {
+     "silabas": 8,
+     "rima": "e",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 8,
+     "rima": "g",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "15": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "16": {
+     "silabas": 7,
+     "rima": "g",
+     "nota": "un poco corto"
+    },
+    "17": {
+     "silabas": 8,
+     "rima": "h",
+     "nota": ""
+    },
+    "18": {
+     "silabas": 8,
+     "rima": "i",
+     "nota": ""
+    },
+    "19": {
+     "silabas": 8,
+     "rima": "i",
+     "nota": "leyendo «qué es» (está escrito «ques es»)"
+    },
+    "20": {
+     "silabas": 8,
+     "rima": "h",
+     "nota": ""
+    },
+    "21": {
+     "silabas": 8,
+     "rima": "j",
+     "nota": ""
+    },
+    "22": {
+     "silabas": 9,
+     "rima": "k",
+     "nota": ""
+    },
+    "23": {
+     "silabas": 8,
+     "rima": "k",
+     "nota": ""
+    },
+    "24": {
+     "silabas": 8,
+     "rima": "j",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2016-12-15",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -67,14 +552,91 @@
   "subtitulo": "",
   "texto": "Se mueren los inmortales\ny todo a tomar por culo\nlos vulgarismos de chulo\nnos dominan, son normales\n\nContinuar viviendo aquí\nno tiene tanto sentido\nlos invencibles se han ido\nahora, ¿quién cuida de mi?\n\nlos infalibles fallaron\ny estos ahora ya no existen\nlo lógico es ahora un chiste\nlos habladores callaron\n\nno es que murieran, murieran\nrecordé que eran mortales\nantes eran iniguales\nhoy, hoy unos cualquiera\n\nYa no tenemos la base\nya todo no es tan perfecto.\n¿Dictaminar ques es correcto\no dejar que el tiempo pase?\n\nLos sinceros nos mintieron .\nLas cosas fueron a mejor\ny empapados de sudor.\nLosInmortalesMurieron⃣\n\n(clara)\nVí. Ab. Al.",
   "explicacion": "",
-  "anotaciones": [],
-  "valoraciones": []
+  "anotaciones": [
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 8,
+    "hasta": 8,
+    "texto": "leyendo «ahora» en dos sílabas (sinéresis); si no, 9"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 10,
+    "hasta": 10,
+    "texto": "con sinéresis en «ahora»"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 11,
+    "hasta": 11,
+    "texto": "con sinéresis en «ahora»"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 16,
+    "hasta": 16,
+    "texto": "un poco corto"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 19,
+    "hasta": 19,
+    "texto": "leyendo «qué es» (está escrito «ques es»)"
+   }
+  ],
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "7",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 3,
+    "interés": 4,
+    "sonoridad": 4
+   },
+   "texto": "Una elegía con ironía por la caída de los que parecían intocables. Cada estrofa nombra una categoría con prefijo de negación (inmortales, invencibles, infalibles, iniguales) y la desmiente: los infalibles fallaron, los sinceros mintieron. El registro baja a propósito («a tomar por culo») justo al lado del tono solemne. El título desordena las letras de «inmortales», igual que el último verso pega todas las palabras.",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«los infalibles fallaron»: la paradoja sale de la misma raíz.",
+     "desde": 9,
+     "hasta": 9
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "No murieron de verdad: lo que cambia es que el yo se da cuenta de que eran mortales.",
+     "desde": 13,
+     "hasta": 14
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«iniguales»: palabra inventada, por «sin igual».",
+     "desde": 15,
+     "hasta": 15
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Todo junto, como un título o una etiqueta: el verso que da sentido al título desordenado.",
+     "desde": 24,
+     "hasta": 24
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-006",
   "titulo": "PoeMalillo",
   "formato": "poema",
-  "forma": "poema",
+  "forma": null,
   "fecha_publicacion": "2016-12-21",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -91,13 +653,14 @@
   "texto": "Unas estereotipadas\nno cumplen estereotipos\ny me insultan.\n\nNoto que no saben nada,\ncon cada palabra flipo\nno es mi culpa.\n\nVuestros roles tan cerrados\npara juzgar a personas\n\"anormales\".\n\nDeben ser eliminados\nporque estos cuentos de monas\nson los males.\n\n(lucia)\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-007",
   "titulo": "Casi Manrico",
   "formato": "poema",
-  "forma": "poema",
+  "forma": null,
   "fecha_publicacion": "2016-12-21",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -115,13 +678,14 @@
   "texto": "La vida con todo pasa\nmientras tu pasas de todo\ny te mueres.\n\nÉl que está feliz arrasa\nasí que cuida tu modo\nsi prefieres.\n\nTus no infinitos instantes\nestán mal aprovechados\nte estás yendo.\n\nPor eso ponte los guantes\ny afronta tiempos helados\nya viniendo.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-008",
   "titulo": "AlItErAtIoN",
   "formato": "poema",
-  "forma": "juego-verbal",
+  "forma": null,
   "fecha_publicacion": "2016-12-24",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -138,13 +702,97 @@
   "texto": "Los mismos mimos memos mimados me maman Mamen.\nEmanan manos en Omán.\n\nMiman monos al maná.\n\nNo más nemos, menos nomos mamá.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-009",
   "titulo": "Fugacidad",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "soneto",
+   "medida": "endecasílabos",
+   "esquema": "ABBA ABBA CDC DCD",
+   "rimas": {
+    "a": "consonante -ad · felicidad, verdad, realidad, maldad",
+    "b": "consonante -enda · venda, senda, tienda, enmienda",
+    "c": "consonante -ento · sentimientos, aliento, lento (sentimientos lleva una s de más)",
+    "d": "consonante -ón · vagón, corazón, ilusión"
+   },
+   "versos": {
+    "1": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 10,
+     "rima": "B",
+     "nota": "11 si se hace hiato en «de | andar»"
+    },
+    "4": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": "con sinéresis en «realidad»; «inventando» por «inventado»"
+    },
+    "6": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 10,
+     "rima": "B",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": "con sinéresis en «ahora»"
+    },
+    "12": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2017-01-07",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -160,14 +808,367 @@
   "subtitulo": "",
   "texto": "Si alguien arruina TU felicidad\no si alguien fatal te quita la venda,\nno pares de andar, sigue TU senda.\nSiempre atrévete a entender tu verdad.\n\nSi te has inventando una realidad\ny de repente se rompe tu tienda\nreconstruye, repara, haz enmienda,\nno quieres, fuera, ver tanta maldad\n\n¿Por qué tan frágiles los sentimientos?\nLa esperanza coge el mismo vagón.\n¿Por qué antes sí y ahora no tengo aliento?\n\n¿Por qué una palabra a mi corazón\nlo agrieta mucho más que un amor lento?\nAlegría irreal, una ilusión.\n\nVí. Ab. Al.",
   "explicacion": "",
-  "anotaciones": [],
-  "valoraciones": []
+  "anotaciones": [
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 3,
+    "hasta": 3,
+    "texto": "11 si se hace hiato en «de | andar»"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 5,
+    "hasta": 5,
+    "texto": "con sinéresis en «realidad»; «inventando» por «inventado»"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 11,
+    "hasta": 11,
+    "texto": "con sinéresis en «ahora»"
+   }
+  ],
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "6",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 3,
+    "interés": 3,
+    "sonoridad": 4
+   },
+   "texto": "",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«TU» en mayúsculas: la felicidad y el camino son tuyos, no de quien los rompe.",
+     "desde": 1,
+     "hasta": 3
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Cambio a la primera persona y a las preguntas.",
+     "desde": 9,
+     "hasta": 11
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "La esperanza se sube al mismo vagón que lo que se va.",
+     "desde": 10,
+     "hasta": 10
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Una sola palabra agrieta más que un amor lento: lo rápido contra lo lento, como en el título.",
+     "desde": 12,
+     "hasta": 13
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-010",
   "titulo": "infinitaVIDA MORTÍFERA",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "trece cuartetas",
+   "medida": "octosílabos",
+   "esquema": "rima cruzada (abab) en todas. Varias rimas vuelven más adelante: -ades y -ad en la décima estrofa, -ada en la octava, -ía en la undécima y la duodécima, -al en las dos últimas",
+   "rimas": {
+    "a": "consonante -ades · enfades, realidades, verdades",
+    "b": "consonante -uta · inmuta, absoluta",
+    "c": "consonante -erla · haberla, perlas",
+    "d": "consonante -ada · determinada, cascada, cerrada, truncada",
+    "e": "consonante -algo · algo, salgo",
+    "f": "consonante -ón · idealización, corazón",
+    "g": "consonante -eos · Romeos, feos",
+    "h": "consonante -aña · caña, patrañas",
+    "i": "consonante -amos · buscamos, seamos",
+    "j": "consonante -ano · cotidiano, sano",
+    "k": "consonante -ad · verdad, calamidad, neutralidad",
+    "l": "consonante -ético (esdrújula) · poético, ético",
+    "m": "consonante -osa · cosa, esposa",
+    "n": "consonante -undo · mundo, vagabundo",
+    "o": "consonante -ora · ahora, Pandora",
+    "p": "consonante -ar · llorar, soñar",
+    "q": "consonante -ido · sido, existido",
+    "r": "consonante -ía · Sofía, día, poesía, disfrutarías",
+    "s": "consonante -ás · vas, más",
+    "t": "asonante en á · mal, final, mal, mar (mal y final en consonante; mar solo cambia la l por la r)",
+    "u": "asonante e-a · respuesta, correctas"
+   },
+   "versos": {
+    "1": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": "con sinéresis en «realidades»; si no, 9"
+    },
+    "4": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": "con sinalefa en «hay una»"
+    },
+    "5": {
+     "silabas": 8,
+     "rima": "c",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 8,
+     "rima": "d",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 8,
+     "rima": "c",
+     "nota": "con sinéresis en «ahora»"
+    },
+    "8": {
+     "silabas": 8,
+     "rima": "d",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 8,
+     "rima": "e",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 8,
+     "rima": "f",
+     "nota": "con sinéresis en «idealización»"
+    },
+    "11": {
+     "silabas": 7,
+     "rima": "e",
+     "nota": "por la sinalefa «para_Estás»; 8 si se respeta la pausa de los dos puntos"
+    },
+    "12": {
+     "silabas": 8,
+     "rima": "f",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 8,
+     "rima": "g",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 8,
+     "rima": "h",
+     "nota": ""
+    },
+    "15": {
+     "silabas": 8,
+     "rima": "g",
+     "nota": ""
+    },
+    "16": {
+     "silabas": 8,
+     "rima": "h",
+     "nota": ""
+    },
+    "17": {
+     "silabas": 8,
+     "rima": "i",
+     "nota": ""
+    },
+    "18": {
+     "silabas": 8,
+     "rima": "j",
+     "nota": "«se» por «ser»"
+    },
+    "19": {
+     "silabas": 8,
+     "rima": "i",
+     "nota": ""
+    },
+    "20": {
+     "silabas": 8,
+     "rima": "j",
+     "nota": "con sinéresis en «sea»"
+    },
+    "21": {
+     "silabas": 8,
+     "rima": "k",
+     "nota": ""
+    },
+    "22": {
+     "silabas": 8,
+     "rima": "l",
+     "nota": ""
+    },
+    "23": {
+     "silabas": 8,
+     "rima": "k",
+     "nota": ""
+    },
+    "24": {
+     "silabas": 8,
+     "rima": "l",
+     "nota": ""
+    },
+    "25": {
+     "silabas": 8,
+     "rima": "m",
+     "nota": ""
+    },
+    "26": {
+     "silabas": 8,
+     "rima": "n",
+     "nota": ""
+    },
+    "27": {
+     "silabas": 8,
+     "rima": "m",
+     "nota": ""
+    },
+    "28": {
+     "silabas": 8,
+     "rima": "n",
+     "nota": ""
+    },
+    "29": {
+     "silabas": 8,
+     "rima": "o",
+     "nota": ""
+    },
+    "30": {
+     "silabas": 8,
+     "rima": "d",
+     "nota": ""
+    },
+    "31": {
+     "silabas": 8,
+     "rima": "o",
+     "nota": ""
+    },
+    "32": {
+     "silabas": 8,
+     "rima": "d",
+     "nota": ""
+    },
+    "33": {
+     "silabas": 8,
+     "rima": "p",
+     "nota": ""
+    },
+    "34": {
+     "silabas": 9,
+     "rima": "q",
+     "nota": ""
+    },
+    "35": {
+     "silabas": 8,
+     "rima": "p",
+     "nota": ""
+    },
+    "36": {
+     "silabas": 8,
+     "rima": "q",
+     "nota": ""
+    },
+    "37": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "38": {
+     "silabas": 8,
+     "rima": "k",
+     "nota": ""
+    },
+    "39": {
+     "silabas": 9,
+     "rima": "a",
+     "nota": ""
+    },
+    "40": {
+     "silabas": 8,
+     "rima": "k",
+     "nota": ""
+    },
+    "41": {
+     "silabas": 9,
+     "rima": "r",
+     "nota": ""
+    },
+    "42": {
+     "silabas": 8,
+     "rima": "s",
+     "nota": ""
+    },
+    "43": {
+     "silabas": 8,
+     "rima": "r",
+     "nota": ""
+    },
+    "44": {
+     "silabas": 8,
+     "rima": "s",
+     "nota": ""
+    },
+    "45": {
+     "silabas": 8,
+     "rima": "r",
+     "nota": "con sinéresis en «poesía»"
+    },
+    "46": {
+     "silabas": 8,
+     "rima": "t",
+     "nota": ""
+    },
+    "47": {
+     "silabas": 8,
+     "rima": "r",
+     "nota": ""
+    },
+    "48": {
+     "silabas": 8,
+     "rima": "t",
+     "nota": ""
+    },
+    "49": {
+     "silabas": 8,
+     "rima": "u",
+     "nota": ""
+    },
+    "50": {
+     "silabas": 8,
+     "rima": "t",
+     "nota": ""
+    },
+    "51": {
+     "silabas": 8,
+     "rima": "u",
+     "nota": ""
+    },
+    "52": {
+     "silabas": 8,
+     "rima": "t",
+     "nota": "con sinéresis en «buceó»"
+    }
+   }
+  },
   "fecha_publicacion": "2017-04-17",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -184,14 +1185,231 @@
   "subtitulo": "",
   "texto": "Yo no quiero que te enfades:\n-Eres alguien que se inmuta-.\nSolo existen realidades.\nNo hay una verdad absoluta.\n\nAunque debería haberla,\nperfección determinada.\nTus dientes ahora son perlas\ny tu pelo una cascada.\n\nEsto se crea por algo\nfruto de idealización\npara: \"Estás fuera, salgo,\n¡me palpita el corazón!\n\nNecesitamos Romeos\nque lleguen y te den caña.\nTambién tendrá que haber feos,\namor y aquellas patrañas.\n\nLo que nosotros buscamos\ntiene que se cotidiano\nalgo que todos seamos\nque sea bueno, cuerdo y sano.\n\nY tiene que ser verdad\nno vale con lo poético\nsi es una calamidad,\npor lo menos, que sea ético.\n\nNo puede ser otra cosa\n\"BIEN\" y para todo el mundo\nque incluso entiendas, la esposa\nde tu mejor vagabundo.\n\nIncomprensible es ahora\nsi abierta, nunca cerrada\nuna caja de Pandora\nes una puerta truncada.\n\n¿Por qué no sirve llorar?\nCon lo fácil que habría sido.\nUna gota y a soñar,\nSOÑAR, porque no ha existido.\n\nPor eso tú no te enfades\nporque esa no es la verdad.\n-La verdad es que no hay verdades-.\nGrados de neutralidad.\n\nSerán decisiones Sofía.\nTe dejas, vienes y vas.\n¿Abrirás la caja un día?\n¿Sonreirás un rato más?\n\nPero como esto es poesía\ny no quiero acabar mal:\n¿Enserio disfrutarías\nen un río sin final?\n\nNo pienses en tu respuesta,\npor supuesto estará mal\nnunca hay respuestas correctas\nnadie buceó por el mar.\n\n(felicidad)\n\nVí. Ab. Al.",
   "explicacion": "",
-  "anotaciones": [],
-  "valoraciones": []
+  "anotaciones": [
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 3,
+    "hasta": 3,
+    "texto": "con sinéresis en «realidades»; si no, 9"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 4,
+    "hasta": 4,
+    "texto": "con sinalefa en «hay una»"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 7,
+    "hasta": 7,
+    "texto": "con sinéresis en «ahora»"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 10,
+    "hasta": 10,
+    "texto": "con sinéresis en «idealización»"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 11,
+    "hasta": 11,
+    "texto": "por la sinalefa «para_Estás»; 8 si se respeta la pausa de los dos puntos"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 18,
+    "hasta": 18,
+    "texto": "«se» por «ser»"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 20,
+    "hasta": 20,
+    "texto": "con sinéresis en «sea»"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 45,
+    "hasta": 45,
+    "texto": "con sinéresis en «poesía»"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 52,
+    "hasta": 52,
+    "texto": "con sinéresis en «buceó»"
+   }
+  ],
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "7",
+   "rasgos": {
+    "profundidad": 4,
+    "dureza": 2,
+    "interés": 4,
+    "sonoridad": 3
+   },
+   "texto": "Un diálogo con un «tú» sobre la verdad: empieza con «no hay una verdad absoluta» y acaba en la paradoja «la verdad es que no hay verdades». En medio se ríe de la idealización amorosa (dientes de perla, pelo en cascada) y pide algo cotidiano, cuerdo y sano, aunque sea menos poético. El final no responde a nada a propósito: no hay respuestas correctas. El título junta lo infinito y lo mortífero, la misma tensión que todo el poema.",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Relativismo: solo hay realidades, no una verdad.",
+     "desde": 3,
+     "hasta": 4
+    },
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "Dientes como perlas y cabello como cascada: tópicos de la belleza femenina de la poesía petrarquista, que el verso siguiente llama «idealización».",
+     "desde": 7,
+     "hasta": 8
+    },
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "Romeo, el de Shakespeare, como modelo de amante.",
+     "desde": 13,
+     "hasta": 13
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Si no puede ser bonito, que al menos sea ético: la ética por encima de la poesía.",
+     "desde": 21,
+     "hasta": 24
+    },
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "La caja de Pandora, del mito griego: lo que se abre ya no se puede cerrar.",
+     "desde": 31,
+     "hasta": 31
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Paradoja que se contradice a sí misma: si no hay verdades, eso tampoco lo es.",
+     "desde": 39,
+     "hasta": 39
+    },
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "Sofía significa «sabiduría» en griego. Puede ser un nombre o un juego con la palabra; no lo sé.",
+     "desde": 41,
+     "hasta": 41
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "El poema se mira a sí mismo: como es poesía, no quiere acabar mal.",
+     "desde": 45,
+     "hasta": 46
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-011",
   "titulo": "¿Miedo?",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "soneto",
+   "medida": "endecasílabos",
+   "esquema": "ABBA ABBA CDE CDE",
+   "rimas": {
+    "a": "consonante -or · sabor, esplendor, motor, dolor",
+    "b": "consonante -oses · toses, esposes, dioses, poses",
+    "c": "consonante -izca · pellizca, pizca",
+    "d": "consonante -erno · eterno, infierno",
+    "e": "consonante -oto · terremoto, roto"
+   },
+   "versos": {
+    "1": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": "«explendor» por «esplendor»"
+    },
+    "5": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 10,
+     "rima": "B",
+     "nota": "11 con hiato en «no | existen»"
+    },
+    "8": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 11,
+     "rima": "E",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 11,
+     "rima": "E",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2017-08-01",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -207,14 +1425,70 @@
   "subtitulo": "",
   "texto": "Aunque al principio no guste el sabor\npuesto que con el nuevo ambiente toses\n(cuando todo es extraño) no te esposes,\nintenta desarrollar tu explendor.\n\nPorque cuando arrancamos el motor\ny todo nos sabe a zumo de dioses\nsomos quien somos, no existen poses\nno existen miedos no existe el dolor.\n\nPero llega la cascada y pellizca.\nEl sueño termina en un shock eterno.\nNo sabes qué hacer en un terremoto.\n\nEl sufrimiento te deja una pizca\nde algo que posees en el infierno:\nun vaso vacío en un barco roto.\n\n(hiacia)\n\nVí. Ab. Al.",
   "explicacion": "",
-  "anotaciones": [],
-  "valoraciones": []
+  "anotaciones": [
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 4,
+    "hasta": 4,
+    "texto": "«explendor» por «esplendor»"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 7,
+    "hasta": 7,
+    "texto": "11 con hiato en «no | existen»"
+   }
+  ],
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "7",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 3,
+    "interés": 3,
+    "sonoridad": 4
+   },
+   "texto": "Un ciclo en dos tiempos. Los cuartetos van de la incomodidad del ambiente nuevo al momento en que todo sabe a zumo de dioses y no hay miedo. Los tercetos son la caída: cascada, shock, terremoto, infierno. El último verso es una imagen doble de vacío: un vaso vacío dentro de un barco roto. La pregunta del título queda en el aire: el miedo no aparece en la parte buena y sí en lo que queda después.",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«no te esposes»: no te encadenes a lo extraño del principio.",
+     "desde": 3,
+     "hasta": 3
+    },
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "Zumo de dioses: la ambrosía o el néctar de la mitología griega.",
+     "desde": 6,
+     "hasta": 6
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Del sufrimiento queda solo «una pizca», que rima con el pellizco de la cascada.",
+     "desde": 12,
+     "hasta": 13
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Lo que se posee en el infierno es un vacío dentro de otro.",
+     "desde": 14,
+     "hasta": 14
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-012",
   "titulo": "Si hubiera...",
   "formato": "poema",
-  "forma": "poema",
+  "forma": null,
   "fecha_publicacion": "2017-08-05",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -231,13 +1505,14 @@
   "texto": "La vida se cierra en banda\ninvadida por la muerte.\nYa no eres tú la que manda,\ncasi nadie puede verte.\n\nVas por una cuerda floja\ndelimitada por nada.\nNo haces lo que se te antoja:\nUNA SENDA YA MARCADA\nTras las flores pervertidas\neres el agua estancada.\nLos recuerdos que no olvidas\ndejan tu vela apagada.\n\nYa tarde para estrenar\npues has mordido el anzuelo,\nya te cuesta más andar,\nya no eres un arroyuelo.\n\nSi volvieras al pasado\na un lugar menos estrecho\n¿En cuánto habrías cambiado?\n(Si te arrepientes de lo hecho)\n\nLo interesante es la vida\ny esperas que no se esfume\nen tu tumba corroída\ncuando el cuerpo se consume.\n\n(muerte)\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-013",
   "titulo": "Estúpidos valientes.",
   "formato": "poema",
-  "forma": "poema",
+  "forma": null,
   "fecha_publicacion": "2017-08-05",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -254,13 +1529,14 @@
   "texto": "Me saca de mi rutina calmada.\nMi plana senda se gira y se mueve.\nA la serena balanza le llueve\ny el agua la deja descolocada.\n\nFrío, calor, una pasión parada.\nCualquier avión que a las nubes me lleve.\nBusco una flor que me sienta y me cebe,\ny que luzca por sí sola ilimitada.\n\nAparezco con mi ímpetu hambriento.\nDesgarro pétalos y quito vida.\nMis lágrimas explotan, muero lento.\n\n¡Cómo alguien tiende a la huida,\nse deja invadir por un sentimiento\ny por su poca calma se suicida!\n\n(hiacia)\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-001",
   "titulo": "HAY",
   "formato": "texto-poetico",
-  "forma": "prosa-poetica",
+  "forma": null,
   "fecha_publicacion": "2017-10-12",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -278,13 +1554,14 @@
   "texto": "Hay que intentar imaginar salir de esta corriente,\nhay que excavar donde el que miente crea infelicidad,\nhay que fardar, y ganar, y cantar mientras se pueda,\nhay que gritar para sentir y para hacer todo distinto,\nhay que ignorar para pensar y no hacernos todo un lío,\nhay que buscar por donde todos miran pero con gafas de incredulidad,\nhay que pegar, hay que romper, hay que saborear  desastres\npara calmar y enloquecer y ver como se va delante,\nhay que sonar porque si no, porque si no todo es un asco,\nhay que evitar el día aburrido que se retuerce y no se escucha,\nhay que abolir pasividad hay que llamar...   y llamar...  y llamar...\nporque al final la inspiración se muda,\nlas dudas dan igual,\n¡malditas conjeturas! Que se pierden\npor no importar\na nadie\npues nada va a cambiar.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-002",
   "titulo": "HOY",
   "formato": "texto-poetico",
-  "forma": "prosa-poetica",
+  "forma": null,
   "fecha_publicacion": "2017-10-21",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -302,13 +1579,14 @@
   "texto": "Otro día más que queda en el recuerdo.\nOtro día más que se desvanece.\nOtro día más que al exigir vitalidad\nes triturado con indiferencia.\n\nOtro día más y mis facciones muestran\nneutralidad pasiva parecida a la de ayer,\ny digo parecida porque hoy me he acordado\nque no he vuelto a hacer nada, nada excitante.\n\nOtro día más que carece de sentido por sí solo.\nOtro día que es una simple transición\na un futuro perfecto e idealizado que no entiendo\ny tengo inmensas dudas de querer continuar, así.\n\nOtro de muchos días y semanas sin algo\nque me haga bailar sobre las tinieblas que me invaden\nque me haga respirar profundo, que me haga sollozar caliente...\nque me haga olvidar que es otro día más.\n\nOtro día que me aburre y que me cansa\nque me sumerge en esta fosa que se hace mas profunda.\nOtro día que me agota y que me quita las ganas de nadar.\nQue ya no sé si me importa morir ahogado.\n\nOtro día más, otro día más, otro día más, otro día más.\nOtro día más que ahora es mi presente y que va a dar igual.\nOtro en el que no se aprecia como se desvanecen los rayos de sol.\nOtro día más, que parece un día de más que en verdad es un día menos.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-003",
   "titulo": "La rutina aliena la alegría",
   "formato": "texto-poetico",
-  "forma": "prosa-poetica",
+  "forma": null,
   "fecha_publicacion": "2017-12-02",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -326,13 +1604,14 @@
   "texto": "Qué pasaría si hoy fuera tu último día,\nsi tu melodía vital ahora se apagase\nQué pasaría si el tiempo se te acabase,\nsi te fueras a morir, ¿qué pasaría?\n\nQué pasaría si esta fuera la ultima vez\nque te reconocieras en un espejo.\nQué pasaría al mirar de nuevo.\nQue pasaría con tu madurez.\n\nQué pasaría si te olvidas de quien amas\nSi ya nunca recordaras quién es;\nsi toda esa masa de denso placer\nse descompusiera en nada.\n\nCrees que te daría igual\nno volver a sentarte en el sillón,\nno volver a escuchar esa canción,\nno volver a desnudarte en el mar.\n\nNo volver a acariciar su pelo,\nno volver a hacer proezas,\nno volver a ser naturaleza,\nno volver a admirar el cielo.\n\nQué pasaría si nada importara un bledo.\nQué pasaría si no pudiéramos pensar\nlo que pudiera  o no pudiese pasar.\n¿Qué pasaría? Que no pasaría-mos miedo\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-014",
   "titulo": "¿SIEMPRE?",
   "formato": "poema",
-  "forma": "poema",
+  "forma": null,
   "fecha_publicacion": "2017-12-07",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -349,13 +1628,14 @@
   "texto": "Algunos campos se arrasan,\nalgunas chicas son feas,\nalgunas mentiras pasan.\n\nAlgunas noticias hieren,\nalguna rata se cuela,\nalgunos gigantes mueren.\n\nAlguna roca se mueve,\nalguna lágrima escapa\ny sí, sí, a veces llueve.\n\nAlgún buen beso se ignora,\nalgún gran cuadro se rompe,\nalgún cuerdo se enamora.\n\nAlguna bestia es batida,\nalgún mal ocurre cerca,\nalguna historia se olvida.\n\nAlgunas cosas no cambian:\nNo existe montaña plana,\nni una humana tan sabia,\ny no, no siempre se gana.\n\n(clara)\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-015",
   "titulo": "Unidireccional",
   "formato": "poema",
-  "forma": "poema",
+  "forma": null,
   "fecha_publicacion": "2017-12-07",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -372,13 +1652,14 @@
   "texto": "Pérdida que no te pertenecía.\nDolor innecesario que sufriste.\nUna falsa sensación que no viste\npor alguien que no te correspondía.\n\nUna grata persona parecía\npero te obsesionaste y estás triste,\nda igual quién eras o quién fuiste\nsi al otro lado nadie te veía.\n\n¿Para qué? Encariñarse sin sentido\n¿Por qué?   De la persona equivocada\nque en ningún caso te habría querido.\n\nAhora nunca le darás demasiada\nimportancia (por culpa de Cupido)\na la que te mire y como si nada.\n\n(iciar)\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-004",
   "titulo": "Simplemente",
   "formato": "texto-poetico",
-  "forma": "juego-verbal",
+  "forma": null,
   "fecha_publicacion": "2018-03-20",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -395,13 +1676,97 @@
   "texto": "Si siempre llamas la atención,\nque llames la atención ya no llama la atención,\nentonces, ¿llamas la atención?\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-016",
   "titulo": "Será",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "soneto",
+   "medida": "endecasílabos",
+   "esquema": "ABBA ABBA CDC DCD",
+   "rimas": {
+    "a": "consonante -ente · simplemente, siente, valiente, probablemente",
+    "b": "consonante -ana · manzana, empana, membrana, gana",
+    "c": "consonante -ón · ficción, acción, buscón",
+    "d": "consonante -iva · cautivas, pasiva, arriba (arriba se escribe con b, pero suena igual)"
+   },
+   "versos": {
+    "1": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": "leyendo «prohibido» en tres sílabas, como se pronuncia; si no, 12"
+    },
+    "2": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2018-03-28",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -417,14 +1782,181 @@
   "subtitulo": "",
   "texto": "Será un amor prohibido simplemente.\nSerá la misma maldita manzana.\nSerá el no conseguir lo que me empana\no no poder hacer lo que se siente.\n\nSerá que no sé si hay que ser valiente.\n¿Será pasión que cruza la membrana\nde hacer todo lo que nos da la gana?\nSerá olvidar, será, probablemente.\n\nSonrisas sin lágrimas de ficción,\nrecuerdos de esas miradas cautivas,\nla gran historia sin ninguna acción.\n\nSerás tú y tu voluntad pasiva.\nSeré yo por mi afán de ser buscón.\nSerá todo, un mundo patas arriba.\n\n(carmela)\n\nVí. Ab. Al.",
   "explicacion": "",
-  "anotaciones": [],
-  "valoraciones": []
+  "anotaciones": [
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 1,
+    "hasta": 1,
+    "texto": "leyendo «prohibido» en tres sílabas, como se pronuncia; si no, 12"
+   }
+  ],
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "7",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 2,
+    "interés": 4,
+    "sonoridad": 4
+   },
+   "texto": "",
+   "anotaciones": [
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "La manzana del Génesis, el fruto prohibido, que enlaza con el «amor prohibido» del verso anterior.",
+     "desde": 2,
+     "hasta": 2
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Sonrisas, recuerdos, miradas: todo menos la acción.",
+     "desde": 9,
+     "hasta": 11
+    },
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "Buscón: el pícaro de Quevedo («Historia de la vida del Buscón»), o simplemente el que busca.",
+     "desde": 13,
+     "hasta": 13
+    },
+    {
+     "capa": "forma",
+     "autor": "claude",
+     "texto": "«Será» abre siete versos, y «Serás» y «Seré» otros dos: anáfora que sostiene todo el soneto.",
+     "desde": 1,
+     "hasta": 14
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-017",
   "titulo": "El no actuar me hizo necio.",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "cinco redondillas",
+   "medida": "octosílabos, con algún verso de 9",
+   "esquema": "abba cddc effe ghhg y una última estrofa (-jj-) que pierde la rima de los extremos",
+   "rimas": {
+    "a": "consonante -enes · trenes, rehenes",
+    "b": "consonante -eras · trincheras, esperas",
+    "c": "consonante -iendo · combatiendo, evadiendo",
+    "d": "asonante a-e · desgaste, desastre (casi consonante: desastre solo añade una r)",
+    "e": "consonante -ecio · necio, precio",
+    "f": "consonante -ar · chocar, ganar",
+    "g": "consonante -oja · roja, arroja («roja» cabe entera dentro de «arroja»)",
+    "h": "consonante -ado · cruzado, ignorado",
+    "j": "asonante u-o · mundo, segundos"
+   },
+   "versos": {
+    "1": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 8,
+     "rima": "c",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 8,
+     "rima": "d",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 9,
+     "rima": "d",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 8,
+     "rima": "c",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 8,
+     "rima": "e",
+     "nota": "con hiato en «ac-tu-ar»; si no, 7"
+    },
+    "10": {
+     "silabas": 9,
+     "rima": "f",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 8,
+     "rima": "f",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 8,
+     "rima": "e",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 8,
+     "rima": "g",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 8,
+     "rima": "h",
+     "nota": ""
+    },
+    "15": {
+     "silabas": 9,
+     "rima": "h",
+     "nota": ""
+    },
+    "16": {
+     "silabas": 8,
+     "rima": "g",
+     "nota": ""
+    },
+    "17": {
+     "silabas": 8,
+     "rima": "-",
+     "nota": ""
+    },
+    "18": {
+     "silabas": 9,
+     "rima": "j",
+     "nota": ""
+    },
+    "19": {
+     "silabas": 8,
+     "rima": "j",
+     "nota": ""
+    },
+    "20": {
+     "silabas": 8,
+     "rima": "-",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2018-04-15",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -440,14 +1972,147 @@
   "subtitulo": "",
   "texto": "La colisión de dos trenes.\nLa batalla de trincheras\ndonde simplemente esperas\na que no cojan rehenes.\n\nVerles a ellos combatiendo\nuna guerra de desgaste\ndonde se sentía el desastre\ny este se estaba evadiendo...\n\nEl no actuar me hizo necio,\npues: se tenían que chocar.\n¡Por fin alguien va a ganar!\nGanar sí, pero a qué precio.\n\n¡Sorpresa! La lluvia roja\nvendrá del fuego cruzado\n(aparentemente ignorado).\nVerás que desgracia arroja...\n\nEN MIS MALDITAS NARICES\nCHOCARON, TIRARON MI MUNDO.\nY EN MENOS DE 10 SEGUNDOS\nME DESTROZARON LA VIDA\n\nVí. Ab. Al.\n\n(baymi)",
   "explicacion": "",
-  "anotaciones": [],
-  "valoraciones": []
+  "anotaciones": [
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 9,
+    "hasta": 9,
+    "texto": "con hiato en «ac-tu-ar»; si no, 7"
+   }
+  ],
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "7",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 4,
+    "interés": 4,
+    "sonoridad": 3
+   },
+   "texto": "",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Dos trenes: dos fuerzas que van de frente la una contra la otra.",
+     "desde": 1,
+     "hasta": 1
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«Ganar sí, pero a qué precio»: la victoria pírrica.",
+     "desde": 12,
+     "hasta": 12
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "La lluvia roja, la sangre del fuego cruzado, que nadie mira.",
+     "desde": 13,
+     "hasta": 15
+    },
+    {
+     "capa": "forma",
+     "autor": "claude",
+     "texto": "La última estrofa va en mayúsculas y pierde la rima de los extremos (narices, vida): la forma se rompe a la vez que el choque.",
+     "desde": 17,
+     "hasta": 20
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-018",
   "titulo": "CÁMBIAME",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "soneto",
+   "medida": "endecasílabos, con dos versos de 10 y 12",
+   "esquema": "ABBA ABBA CDE CDE",
+   "rimas": {
+    "a": "consonante -ado · desgajado, debilitado, comprobado, comprobado (la misma palabra rima consigo misma)",
+    "b": "consonante -ara · Sara, cara, vara, cavara («cavara» contiene «vara»)",
+    "c": "consonante -acas · atacas, sacas",
+    "d": "consonante -atas · acatas, baratas",
+    "e": "consonante -icas · criticas, ricas"
+   },
+   "versos": {
+    "1": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 10,
+     "rima": "A",
+     "nota": "11 con hiato en «impenetrable | eres»"
+    },
+    "6": {
+     "silabas": 12,
+     "rima": "B",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 11,
+     "rima": "E",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": "con sinéresis en «ideas»; si no, 12"
+    },
+    "14": {
+     "silabas": 11,
+     "rima": "E",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2018-04-27",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -464,14 +2129,70 @@
   "subtitulo": "",
   "texto": "Mi mundo como un árbol desgajado\npor tu culpa, por tus palabras Sara,\npor tu asco, tu rechazo, por la cara\nasesina. Ya estoy debilitado...\n\nImpenetrable eres, comprobado.\nUna muralla cuya curiosa vara\nme empujará... Si mi tumba cavara...\nAcabará en poema, comprobado.\n\nSi no eres tan mala, ¿por qué me atacas?\nSi no eres tan sumisa, ¿por qué acatas,\nesclava, los patrones que criticas?\n\nEsa personalidad que te sacas\nde tu mundo infantil. Ideas baratas\ncon un toque de ignorancia, son ricas.\n\n(sara)\n\nVí. Ab. Al.",
   "explicacion": "",
-  "anotaciones": [],
-  "valoraciones": []
+  "anotaciones": [
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 5,
+    "hasta": 5,
+    "texto": "11 con hiato en «impenetrable | eres»"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 13,
+    "hasta": 13,
+    "texto": "con sinéresis en «ideas»; si no, 12"
+   }
+  ],
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "6",
+   "rasgos": {
+    "profundidad": 2,
+    "dureza": 5,
+    "interés": 3,
+    "sonoridad": 4
+   },
+   "texto": "Un reproche directo, con nombre. Los cuartetos son el daño: el mundo como un árbol desgajado, la muralla impenetrable, la tumba. Los tercetos pasan al ataque y señalan contradicciones: si no es mala, por qué ataca; si no es sumisa, por qué acata los patrones que critica. El título es un imperativo que puede ir en dos direcciones: que ella cambie, o que le cambie a él.",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "El árbol desgajado: las ramas arrancadas del tronco.",
+     "desde": 1,
+     "hasta": 1
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«Acabará en poema»: el poema sabe que es el destino de lo que cuenta.",
+     "desde": 8,
+     "hasta": 8
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Ideas baratas que se vuelven «ricas» con un toque de ignorancia: ironía con el dinero.",
+     "desde": 13,
+     "hasta": 14
+    },
+    {
+     "capa": "forma",
+     "autor": "claude",
+     "texto": "«atacas» y «acatas» tienen casi las mismas letras cambiadas de sitio, y las rimas C y D suenan igual en las vocales (a-a).",
+     "desde": 9,
+     "hasta": 10
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-019",
   "titulo": "Fugaz como tus labios escupiéndome.",
   "formato": "poema",
-  "forma": "soneto",
+  "forma": null,
   "fecha_publicacion": "2018-04-29",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -488,13 +2209,14 @@
   "texto": "Fugaz como el mensaje en la botella.\nFugaz como el invierno que se queda.\nFugaz como el incendio en la arboleda.\nFugaz y caliente como una estrella.\n\nEs tan fugaz, tan fugaz y tan bella\nla senda interminable, la vereda\n(¿la verdad?) que me azota sin que pueda\nentender nada. Entenderle a ella...\n\nLas sombras me guían al caminar.\nLa noche me incita si, al oído,\nme dice que la tengo que matar.\n\nTonto. La mato. La chispa he prendido\ny no he aprendido a entender, a amar.\nEl mundo tan claro... Yo tan perdido...\n\nVí. Ab. Al.\n\n(algO)",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-020",
   "titulo": "Sinceridad.",
   "formato": "poema",
-  "forma": "poema",
+  "forma": null,
   "fecha_publicacion": "2018-05-16",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -511,13 +2233,14 @@
   "texto": "Están vacíos los cuerpos de la gente\ncuando miro\nde repente\ny se escucha asfixiado su suspiro\n\nEl aullido censurado, cautivo,\nsin verdad.\nUn mendigo\nque sabe que solo queda esperar.\n\nY cómo esperan esos malditos perros,\naferrados\nal suceso\nque rápido les dejará pelados.\n\nYo mataré a materia amateur\nsolo cómica,\nes deber\ncastigar a las cáscaras hipócritas.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-021",
   "titulo": "Terrorista",
   "formato": "poema",
-  "forma": "poema",
+  "forma": null,
   "fecha_publicacion": "2018-06-15",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -534,13 +2257,14 @@
   "texto": "Si entendiese aquella voz que murmura.\nSi supiese lo que me está diciendo\nesa voz entrecortada. ¡No la entiendo!\nTan tenue, tan corta, tan insegura.\n\nSi escuchase aquella voz que murmura\na lo lejos. La voz que no pretendo\nentender y espero que se esté yendo\ncon todas sus preguntas, su locura.\n\nTú que pasas y vives a deshora.\nTira el antifaz. Mira a la colina.\nSoy la realidad (tu mayor horror).\n\n¡Cállate! - le dije-. Por eso ahora\nyo continuo engullendo gasolina\npara alimentar mi llama interior.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-005",
   "titulo": "El juego",
   "formato": "texto-poetico",
-  "forma": "juego-verbal",
+  "forma": null,
   "fecha_publicacion": "2018-06-17",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -558,13 +2282,14 @@
   "texto": "Nuestras abejas zumbadas\npor los panales.\n\nOvejas balan baladas\nsi son normales.\n\nAguas chapurrean calladas\npor los canales.\n\nEl elefante barrita\nde chocolate.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-022",
   "titulo": "Neandertal",
   "formato": "poema",
-  "forma": "soneto",
+  "forma": null,
   "fecha_publicacion": "2018-06-18",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -581,13 +2306,14 @@
   "texto": "Si la historia la escriben los ganadores\nte ganaré en el juego de la vida,\nte machacaré. Serás la bandida\ncruel, cruel como los perdedores.\n\nSi solo se recuerda a los mejores\nseré mejor que tú en esta partida.\n¡Atácame! Mi ambición homicida\nte quitará la vida y los temores.\n\nY se empaparán tus ojos de lágrimas.\nY se empaparán tus carnes de sangre.\nY me suplicarás por tu destino.\n\nY se olvidará tu muerte trágica\npues la historia no la escribe un fiambre,\nla escribimos perfectos asesinos.\n\nVí. Ab. Al.\n\n(nenuyss)",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-023",
   "titulo": "Mí vacío",
   "formato": "poema",
-  "forma": "soneto",
+  "forma": null,
   "fecha_publicacion": "2018-06-28",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -604,13 +2330,14 @@
   "texto": "Solo estoy rodeado de gente.\nSolo inmerso en un mundo que me ignora.\nSolo por no escapar, y me devora\nla frialdad asesina omnipresente.\n\nEstoy rodeado solo de gente\nruin, perversa, manipuladora.\n¡Gentuza que no entiendo por qué llora!\nSolo y rodeado completamente.\n\nCompletamente confuso y cansado\nde las películas sin argumento.\nTendré que emigrar. Pasar de quién pasa\n\nde pasar. Pasear conocimiento\nfalso, ¡todo es falso! Esta asimilado...\nY te ahoga el vacío, y te ahoga la masa.\n\nVí. Ab. Al.\n\n(algalex)",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-006",
   "titulo": "No me mandes más mensajes desde Valencia",
   "formato": "texto-poetico",
-  "forma": "prosa-poetica",
+  "forma": null,
   "fecha_publicacion": "2018-08-26",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -629,13 +2356,14 @@
   "texto": "No me mandes más mensajes\ncontándome tus grandes vacaciones.\nNo me hables de tus fiestas.\nNo me narres tus locuras.\nNo me mandes más mensajes.\n\nNo me mandes más mensajes\nde tus inolvidables acampadas,\nde tus noches estrelladas,\nde tus largas caminatas.\nNo me mandes más mensajes.\n\nNo me mandes más mensajes\ndiciendo que me echas mucho de menos\ndesde esa alejada nube,\nnube donde yo te tengo.\nNo me mandes mas mensajes.\n\nNo me mandes más mensajes,\nni fotos que me recuerden quién eres.\nTampoco me llames nunca.\nTampoco me mates nunca.\nNo me mandes más mensajes.\n\nNo me mandes más mensajes\nque puede que no soporte escuchar.\nO mándamelos si quieres\nsi en este lapso no importa\nque me mandes más mensajes.\n\nVí. Ab. Al.\n\n(lialytea)",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-024",
   "titulo": "Vagamente sonriendo",
   "formato": "poema",
-  "forma": "poema",
+  "forma": null,
   "fecha_publicacion": "2018-08-28",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -653,13 +2381,14 @@
   "texto": "Tumbadito en el campo,\ntumbadito y a oscuras.\nAnte un cielo estrellado,\nante un cielo de dudas.\n\nLuciérnagas volando\nen la cúpula negra.\nPoco a poco intentando\ndivisar las perseidas\n\nme pregunto curioso,\npensando -quizá- en males,\nsi no seremos nosotros\ncomo estrellas fugaces.\n\nViajeras e intranquilas\nno paran de correr,\nlas estrellas que miras\ny no vuelves a ver.\n\nSe pierden en la noche\ncon Cáncer y con Piscis,\nte piden que no llores,\nno te perderé Lily.\n\n¡Qué cosas pienso a veces!\nEste cielo me invade\ncon ideas que vienen\ncomo estrellas fugaces.\n\nVí. Ab. Al.\n\n(lialytea)",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-007",
   "titulo": "La verdades aúllan.",
   "formato": "texto-poetico",
-  "forma": "verso-libre",
+  "forma": null,
   "fecha_publicacion": "2018-11-15",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -676,13 +2405,14 @@
   "texto": "Me masturbo pensando en cohetes, que no vuelan.\nMe perturba escuchar la verdad.\nMe enamora observar rebaños degollados\ncomo blancas esponjas bañadas en su propia sangre,\npero me aterrorizan los lobos... Hoy hay tantos,\ntantos vestidos de blanco, tantos mentirosos.\n\nYo soy una cazadora,\nuna cazadora de invierno,        blanca y caliente.\nYo abrazo verdades a bazucazos y cazo,\ncazo cohetes, ¿cohetes? No, cabezas.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-025",
   "titulo": "Ignorancia + Libertad",
   "formato": "poema",
-  "forma": "poema",
+  "forma": null,
   "fecha_publicacion": "2018-12-31",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -700,13 +2430,98 @@
   "texto": "Esperar en silencio siempre es duro\ncuando tu huracanada alma chirría,\npor querer navegar y estar vacía,\nen este riachuelo corto y oscuro.\n\nFrustra empezar a divisar el muro\ndel final de la fugaz travesía\nsin haberme ido contigo, Sofía,\nhasta aquel rincón donde no hay futuro.\n\nEste río ya no fluye tan lento\ny mi silencio a esta alma mía enfada,\nella se crece mientras yo me quedo.\n\n¿Cómo voy a aprovechar el momento?\nSi los momentos sin ti no son nada.\n-¡Carpe diem! -me dicen, y no puedo.\n\nVí. Ab. Al.\n\n(ríos franceses sabiondos)",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-026",
   "titulo": "Vivir es fácil con los ojos cerrados",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "soneto",
+   "medida": "endecasílabos",
+   "esquema": "ABBA ABBA CDE CDE",
+   "rimas": {
+    "a": "consonante -ados · cerrados, inacabados, apagados, empezados",
+    "b": "consonante -ida · vida, olvida, salida, bebida",
+    "c": "consonante -iras · miras, respiras",
+    "d": "consonante -ine · ilumine, termine",
+    "e": "consonante -entes · diferentes, siguientes"
+   },
+   "versos": {
+    "1": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 11,
+     "rima": "E",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 11,
+     "rima": "E",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2019-01-30",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -724,13 +2539,54 @@
   "texto": "Es fácil ser con los ojos cerrados\nuna persona más en esta vida\nque por su situación externa olvida\ntodos sus sueños siempre inacabados.\n\nVivir es fácil también si apagados\nlos faroles que muestran la salida\nestán, y estás con mano en la bebida\ny en la otra un libro, cuentos no empezados.\n\nNo basta con abrirlos pues no miras\nnada si no hay algo que te ilumine:\nen la noche no hay cosas diferentes.\n\nLa cerilla no prende, no respiras\noxígeno ya, pides que termine:\nel whisky moja las hojas siguientes.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "8",
+   "rasgos": {
+    "profundidad": 4,
+    "dureza": 3,
+    "interés": 4,
+    "sonoridad": 4
+   },
+   "texto": "",
+   "anotaciones": [
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "El título y el primer verso vienen de «Living is easy with eyes closed», de «Strawberry Fields Forever» de los Beatles, que también da título a la película de David Trueba «Vivir es fácil con los ojos cerrados» (2013).",
+     "desde": 1,
+     "hasta": 1
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Dos manos, dos salidas: la bebida y el libro, y gana la primera.",
+     "desde": 7,
+     "hasta": 8
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Abrir los ojos no sirve de nada en la noche: hace falta algo que ilumine.",
+     "desde": 9,
+     "hasta": 11
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Las hojas siguientes del libro sin empezar del verso 8: se estropean antes de llegar a ellas.",
+     "desde": 14,
+     "hasta": 14
+    }
+   ]
+  }
  },
  {
   "codigo": "CSMB-008",
   "titulo": "¿Dónde? Aquí.",
   "formato": "texto-poetico",
-  "forma": "verso-libre",
+  "forma": null,
   "fecha_publicacion": "2019-03-17",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -747,13 +2603,97 @@
   "texto": "Llaman a la puerta de tu casa y al abrir\nte das cuenta de que eras tú quien estaba llamando fuera.\n\nEntras y te encuentras a alguien queriendo morir.\nLuego piensas que si lo que quiere es morir pues que muera.\n\nLiberarse de la vida no es coherente de por sí\nporque implica que la muerte tiene que ser la frontera.\n\nSi la muerte es esa puerta de tu casa: no la vi.\nAquel que mira las cosas desde dentro no se entera.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-027",
   "titulo": "Oído",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "soneto",
+   "medida": "endecasílabos",
+   "esquema": "ABBA ABBA CDC DCD",
+   "rimas": {
+    "a": "consonante -erte · fuerte, verte, suerte, quererte",
+    "b": "consonante -ado · malvado, enfado, encantado, estado",
+    "c": "consonante -aro · claro, raro, faro",
+    "d": "consonante -iva · viva, escriba, fugitiva (escriba con b, pero suena igual)"
+   },
+   "versos": {
+    "1": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2019-03-28",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -771,13 +2711,144 @@
   "texto": "Te odio por abrazarme con tu fuerte\nhechizo inocentemente malvado.\nSon tus colores con los que me enfado\npero es tu alma por lo que quiero verte.\n\nTe odio por atraparme -¿mala suerte?-\ncon tus brazos... pero estoy encantado,\nTe culpo pero más culpo a mi estado\ny te odio pero más odio quererte.\n\nEs amor como fuego eso está claro,\nun claro que me incendia a carne viva.\n¿Gallina como motor? Todo es raro.\n\n¿Cómo de hipócrita es que hoy yo te escriba:\nel locomotor de ayer es un faro\nque alma que ciega es alma fugitiva?\n\n(deswaze)\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "8",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 3,
+    "interés": 4,
+    "sonoridad": 5
+   },
+   "texto": "El título, «Oído», tiene las mismas letras que «odio», y el poema es un odio que en realidad es amor: te odio por abrazarme, por atraparme, pero estoy encantado. Los cuartetos lo dicen con «te odio» repetido y los tercetos lo pasan a fuego: un amor que incendia a carne viva. Al final el yo se acusa de hipócrita por escribirlo, y lo que antes movía (el locomotor) ahora guía (el faro).",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "El título es un anagrama de «odio».",
+     "desde": 1,
+     "hasta": 1
+    },
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "Recuerda al «Odi et amo» de Catulo: odio y amo a la vez.",
+     "desde": 1,
+     "hasta": 8
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«¿Gallina como motor?»: la cobardía como lo que mueve.",
+     "desde": 11,
+     "hasta": 11
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Del locomotor al faro: lo que empujaba ahora alumbra, y el alma que ciega huye.",
+     "desde": 13,
+     "hasta": 14
+    },
+    {
+     "capa": "forma",
+     "autor": "claude",
+     "texto": "«claro» cierra un verso y abre el siguiente (anadiplosis), y cambia de sentido: de «evidente» a un claro del bosque que se incendia.",
+     "desde": 9,
+     "hasta": 10
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-028",
   "titulo": "Víctor: ¡Nero!",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "soneto",
+   "medida": "endecasílabos",
+   "esquema": "ABBA ABBA CDC DCD, todo en asonante",
+   "rimas": {
+    "a": "asonante o-a · moda, sola, moda, cosa",
+    "b": "asonante i-e · prediquen, matices, pide, mire",
+    "c": "asonante a-o · necesitamos, inhumanos, pavos",
+    "d": "asonante e-o · entendemos, menos, quedo"
+   },
+   "versos": {
+    "1": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 12,
+     "rima": "B",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2019-04-12",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -795,13 +2866,68 @@
   "texto": "El dinero no pasará de moda\npor muchos moralistas que prediquen\nque la felicidad está en los matices\ny que el oro deja a la gente sola.\n\nEl dinero no pasará de moda\npues nos ofrece lo que se le pide,\ncualquier sucio bien es dinero, mire,\nya nos arrastramos por cualquier cosa.\n\nSobran cosas que no necesitamos\ny lo esencial es lo que no entendemos,\n¿somos así todos los inhumanos?\n\nSomos horrorosos, yo por lo menos\nsi casualmente encuentro veinte pavos\nme dará igual si está bien, me los quedo.\n\nVí. Ab. Al.\n(wichinegro)",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "7",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 3,
+    "interés": 4,
+    "sonoridad": 3
+   },
+   "texto": "Un soneto satírico sobre el dinero. Va contra los moralistas que dicen que la felicidad está en los matices, pero no se pone por encima: el último terceto se incluye a sí mismo, que si se encuentra veinte euros se los queda. El tono de usted («mire») le da aire de discurso o de sermón al revés.",
+   "anotaciones": [
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "Recuerda a la letrilla de Quevedo «Poderoso caballero es don Dinero».",
+     "desde": 1,
+     "hasta": 1
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Los dos tópicos contra el dinero: la felicidad está en los matices y el oro deja solo.",
+     "desde": 3,
+     "hasta": 4
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "El yo se incluye entre los «inhumanos».",
+     "desde": 12,
+     "hasta": 14
+    },
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "El título suena parecido a «dinero» (¡Nero! / dinero) y también recuerda a Nerón. No sé si va por ahí.",
+     "desde": 1,
+     "hasta": 1
+    },
+    {
+     "capa": "forma",
+     "autor": "claude",
+     "texto": "El primer verso se repite entero en el quinto, como un estribillo.",
+     "desde": 1,
+     "hasta": 5
+    },
+    {
+     "capa": "forma",
+     "autor": "claude",
+     "texto": "En los tercetos las rimas van en paralelo: necesitamos e inhumanos (m y n), entendemos y menos (m y n otra vez).",
+     "desde": 9,
+     "hasta": 14
+    }
+   ]
+  }
  },
  {
   "codigo": "CSMB-009",
   "titulo": "Repatriar rabia",
   "formato": "texto-poetico",
-  "forma": "verso-libre",
+  "forma": null,
   "fecha_publicacion": "2019-04-12",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -819,13 +2945,14 @@
   "texto": "Hay un congreso con presos comprimidos, ilesos oprimidos como perros.\nPero perdón por perpetrar matricidios a partes de un perverso edificio si más vicios que ver la verborrea de verbos reales:\nmentir, matar, montar, mutar.\nConsentir el mal...\nCon sentir, amar, con contar contigo...\n\nHay un congreso con versos que han conseguido\nseguir guiando a verdades maltratadas.\nHan intentado mentir y han malmentido\namamantando imágenes imaginarias\n\nHay un congreso donde solo ingresa\nla industrialización de las conciencias,\nla ciencia perfecta de la obediencia\nque te envuelve pero no te interesa.\n\nHay un congreso donde los diputados\nDiscuten sobre cambiar su prefijo:\ncambiar el \"di\" por \"im\" o \"puta\" a secas...\nEllos decidirán, yo nunca elijo.\n\nHay un congreso donde se representan\npresentimientos presos, reprimidos.\nHay un congreso donde solo se sientan\nsantos votados por nuestros gemidos.\n\nHay un congreso donde la libertad\nha sido sutilmente confundida\nentre diferentes colores iguales...\n¡No hay libertad entre la bolsa y la vida!\n(Nunca habrá libertad si la pasión\nO cualquier mantra que mienta a tu mente\nTransforma a la memoria o la pervierte)\n\nHay un congreso donde se obliga a creer en la noción de una nación carente de verdad y,\n¡viva el olvido evidente! Para forzar un consentido sinsentido de muerte de la razón.\nSi la explicación es la pasión que sientes por una imagen idealizada que defiende que las personas pese a ser diferentes tienen que ser igual ante la patria...\n\nVotar es evitar la libertad.\nVotar es vetar a tus acciones\nDe su soberanía nacional.\n\nMentir es mantear mitos\nQue matan a la verdad,\nNiegan la posibilidad\nDe escuchar mis secos gritos.\n\nHay un congreso donde se obliga a creer en el chiste de una bendita nación que existe porque existe por su propia noción  de que son compatriotas del país de pandereta quién nació en esta porción de guerra entre idiotas  que matan por diversión.\n\nPorque no hay mayor placer que ver al desamigo correr y disparar hasta que pare el corazón.\nPorque no hay mayor afán que el de imponer al no nacido el deber de proteger al elegido jefe del estado que le ha acogido y que le ha cogido el poder de elegir vivir lejos de una democracia, que es una demos de Grecia, que es donde escribo.\nPorque no hay mayor amor que el amor por amor, el amor de por sí\nNO! No el amor para sí\nNO!  No el el amor a una nación o a un estado que perdura por la oscura bandera que espera significado.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-029",
   "titulo": "Segunda parte",
   "formato": "poema",
-  "forma": "poema",
+  "forma": null,
   "fecha_publicacion": "2019-05-26",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -843,13 +2970,14 @@
   "texto": "Me duelen la orejas al oírte\n[inserte verso para encabalgar]\nSi mil pasiones te hacen divagar\nmis mil presiones pueden confundirte.\n\nMe duelen las orejas al oírte\ncallar -ruido imposible de afirmar-.\nY cayó y yo no te pude escuchar...\n...y calló... y ya no pude evadirte.\n\nPorque las cuerdas salvavidas muerdo,\nporque \"fuego con fuego\", y desordeno\ntus órdenes de mentira cual lerdo.\n\nPorque el sol brilla y no duele su seno.\nPorque siempre le dan más cuerda al cuerdo\ny tú brillas distinto...       pero bueno.\n\nVí. Ab. Al.\n(deswaze)",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-010",
   "titulo": "Tragicomedia",
   "formato": "texto-poetico",
-  "forma": "juego-verbal",
+  "forma": null,
   "fecha_publicacion": "2019-06-02",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -867,13 +2995,14 @@
   "texto": "Roja que te quiero Rojas\nFernando de-de dónde vienes?\n\nAlcahueta alcalina\nCeleste celestina\nque une\na unos\ny a otros despoja\ny arrojas... lo más grande.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-015",
   "titulo": "21/06/2019",
   "formato": "texto-poetico",
-  "forma": "prosa-poetica",
+  "forma": null,
   "fecha_publicacion": "2020-05-03",
   "fecha_escritura": "2019-06-21",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -890,13 +3019,14 @@
   "texto": "Tengo frío\ny es el día más caluroso del año.\n\nÍntegramente os fuisteis\npero algo quedó. ¿Qué dará? Qué más da\n\ntengo frío\ny la pizza vuela del congelador al horno.\n\nDe lo que se come se cría\npero no la he partido apenas:\nella no sabe quién es y está caliente y\n\ntengo frío\nporque me ahogo en un mar de... de...\nde metáforas vacías. Cero Kelvin.\n\nPero si te acercas a la Estrella sumergida\nbajo la frontera de... de la carretera de...\nde Córdoba, Fráncfort, Sydney, -rancho-\n¿Hará calor?\n\nTengo frío,\npero porque me he enfriado pensando,\ntengo hambre también, y frío.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-011",
   "titulo": "no muere solo",
   "formato": "texto-poetico",
-  "forma": "verso-libre",
+  "forma": null,
   "fecha_publicacion": "2019-06-24",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -913,13 +3043,14 @@
   "texto": "La realidad no muere   solo se transforma\ncomo la suave plastilina de tus piernas.\n\nMis ojitos te buscan    por buscarte     por tener algo que hacer   pero te buscan.\nTu mirada me frustra   por frustrarme   -no tiene nada que ver-   pero me frustra\nno la encuentro   me mata\nestá perdida   no me mata\nno se encuentra   me transforma.\n\nY mientras tanto,\nla realidad aprieta los dientes\npara seguir existiendo.\n\nLa realidad no muere   solo engorda\ncomo un sauce que te envuelve que no llora.\n\nTus piernas se derriten en sentido contrario\nporque cada día eres menos alta.\nHundirse en las rodillas movedizas.\nTodos los días te pierdes,\nte fulminas al mirarte te-t-tiemblas.\n\nY mientras tanto,\nla realidad mastica sus propias muelas,\naprieta los puños\npara seguir existiendo\n\nLa realidad no muere   solo nace\ncomo si del rubio pelo de Rapunzel se tratase..\n\n...un aroma marino me enamora.\nCuando sonríes de mentira yo sonrío de verdad.\nCuando te ríes de mentira yo me río,\nde verdad que yo me río cuando alguien bromea y me lo creo.\nAunque no estés, si te veo...\n...si el rechazo animal que recorre cada arcada\nno fuera la dislocación de la mandíbula/Me cortas.\nTe desnudas. \"Fuck your feelings\" -gritas. Susurras: \"Fuck your feelings\"\n\nY mientras tanto,\nla realidad aprieta los dientes y los puños\naguanta la respiración como puede\nse desgarra las entrañas\ntraga saliva\nse encoge\nmantiene la vista rígida\naguanta el pulso\n-más que su corazón-\nse muerde el labio\ncon cara de circunstancia\naparenta estar dormida\nno muerta, traspuesta,\nno muerta, cansada,\ntraga saliva,\nesta vez, tragándose también sus palabras\nllora\npara seguir existiendo.\n\nLa realidad no muere   solo muda.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-012",
   "titulo": "Está lloviendo y tengo sed",
   "formato": "texto-poetico",
-  "forma": "verso-libre",
+  "forma": null,
   "fecha_publicacion": "2019-06-25",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -937,13 +3068,14 @@
   "texto": "Cinco boquiabiertos minutos.\n¿Hace cuánto que no escarabajo?\nMe duermes, cielo, con tu mirada gris.\nMe  agota  pescar sin caña.\n\nCinco boquiagrises minutos.\n¿Por qué están más mojados mis ojos?\nMe engañas, cielo, con tu homogenial cara\nMe evitas y yo soy mis labios.\n\nCinco perdidos minutos.\n¿Dónde los habré dejado?\nMe muero de sed y de ideas.\nMe muero de sed y de ideas.\n\n.          .          .          .\n.          .          .          .\n.          .          .          .\n.          .          .          .\n\n.          .          .          .\n.          .          .          .\n.          .          .          .\n.          .          .          .\n\nSiete inmanentes minutos.\n¿Cómo de mirada es la perdida?\nMe equivoco, cielo, con tu rutinaria.\nMe sublimas y no puedo ser mi cuerpo.\n\nSiete metafóricos minutos.\n¿Por qué la lluvia no entra en mi boca?\nMe evidencias,   ielo, con tu natural.\nMe llueves pero yo ya no soy nada.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-013",
   "titulo": "del dos mil dos",
   "formato": "texto-poetico",
-  "forma": "verso-libre",
+  "forma": null,
   "fecha_publicacion": "2019-07-19",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -961,13 +3093,14 @@
   "texto": "Because I'm floating on a casual gloom\n\nOver the gaze of the human ground.\n\nBecause the tension that a hand can hold\n\ncan be released in matter of seconds.\n\nBecause the traffic lights in Dublin\n\nAre struggling to stop, to stop whatever.\n\nBecause the endless chilling wind continues\n\n[when they say no,\n\nno amigo can help when they say no amigo can\n\nHELP!\n\nWalking along Ireland is like reading for Don Quijote.\n\nIs this real? Inés? Can you hear me?\n--el puto reconnecting--\n\nRandomness means no freedom, and you know it.\n\n--el puto reconnecting--\n\nNo freedom means no love.\n\n--el puto reconnecting--\n\n--el puto reconnecting--\n\n--el puto reconnecting--\n\nCall duration: 03:10",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSMB-014",
   "titulo": "Abogado defensor",
   "formato": "texto-poetico",
-  "forma": "prosa",
+  "forma": null,
   "fecha_publicacion": "2020-04-25",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y mentiras banales",
@@ -984,13 +3117,65 @@
   "texto": "Con todos mis respetos, señoría,\nconsidero que aquí no ha habido crimen.\nSon solo cuatro versos que, aunque rimen,\nno duelen, no comenten  poesía.\n\nVí. Ab. Al.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": null
  },
  {
   "codigo": "CSAP-030",
   "titulo": "Enfermedad: aburrimiento.",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "dos cuartetos (como medio soneto)",
+   "medida": "endecasílabos",
+   "esquema": "ABBA ABBA",
+   "rimas": {
+    "a": "consonante -eza · pereza, tristeza, destreza, cabeza",
+    "b": "consonante -ento · aburrimiento, intento, pensamiento, sufrimiento"
+   },
+   "versos": {
+    "1": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2020-08-29",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -1007,13 +3192,135 @@
   "texto": "No piense que es por rabia o por pereza\nsi no me escucha hablar de aburrimiento.\nNo consigo aburrirme, aunque lo intento,\npor rozar levemente la tristeza.\n\nRazón de no dominar tal destreza:\nel constante vaivén de un pensamiento\ncausante del distractor sufrimiento.\nCorazón, márchate de mi cabeza.\n\nVí. Ab. Al.\n(deswaze)",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "6",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 2,
+    "interés": 3,
+    "sonoridad": 4
+   },
+   "texto": "",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«No piense», «si no me escucha»: trato de usted.",
+     "desde": 1,
+     "hasta": 2
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "La paradoja central: intenta aburrirse y no puede.",
+     "desde": 3,
+     "hasta": 3
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "El corazón metido en la cabeza: el sentimiento ocupando el sitio del pensamiento.",
+     "desde": 8,
+     "hasta": 8
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-031",
   "titulo": "Con tus cuatro elementos me confundo.",
   "formato": "poema",
-  "forma": "soneto",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "soneto, con el último verso partido en dos",
+   "medida": "endecasílabos, con algunos de 12 en el primer cuarteto",
+   "esquema": "ABBA ABBA CDC DCD",
+   "rimas": {
+    "a": "consonante -al · liberal, cultural, animal, primaveral",
+    "b": "consonante -ento · viento, aliento, lento, sustento",
+    "c": "consonante -undo · profundo, confundo, mundo",
+    "d": "consonante -ero · sincero, quiero, aguacero"
+   },
+   "versos": {
+    "1": {
+     "silabas": 12,
+     "rima": "A",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 12,
+     "rima": "B",
+     "nota": "11 sin la repetición «re-»: el tartamudeo añade una sílaba"
+    },
+    "4": {
+     "silabas": 12,
+     "rima": "A",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 8,
+     "rima": "-",
+     "nota": "junto con el verso siguiente forma un endecasílabo: «volcán, tornado, seísmo. Aguacero»"
+    },
+    "15": {
+     "silabas": 4,
+     "rima": "D",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2020-08-29",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -1031,17 +3338,133 @@
   "explicacion": "",
   "anotaciones": [
    {
-    "fragmento": "(melotriz)",
-    "texto": "Pista de dedicatoria, como en otros poemas del blog. Ejemplo de anotación: falta que Víctor la explique."
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Pista de dedicatoria, como en otros poemas del blog. Ejemplo de anotación: falta que Víctor la explique.",
+    "fragmento": "(melotriz)"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 3,
+    "hasta": 3,
+    "texto": "11 sin la repetición «re-»: el tartamudeo añade una sílaba"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 14,
+    "hasta": 14,
+    "texto": "junto con el verso siguiente forma un endecasílabo: «volcán, tornado, seísmo. Aguacero»"
    }
   ],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "8",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 1,
+    "interés": 4,
+    "sonoridad": 4
+   },
+   "texto": "Un soneto de amor construido sobre los cuatro elementos. Los cuartetos los recorren en orden: aire (el viento), agua, fuego y tierra, cada uno con algo que la otra persona le ha hecho. El primer terceto confiesa que no termina de encajar, y el segundo los pide todos a la vez para luego exagerarlos: el final cambia cada elemento por su versión catastrófica, volcán (fuego), tornado (aire), seísmo (tierra) y aguacero (agua).",
+   "anotaciones": [
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "Los cuatro elementos de Empédocles y de la tradición clásica: aire, agua, fuego y tierra.",
+     "desde": 1,
+     "hasta": 8
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«re-refrescaste»: la palabra se repite como si se atascara.",
+     "desde": 3,
+     "hasta": 3
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«una hipérbole del mundo»: la otra persona es el mundo, pero exagerado, y eso da paso a las catástrofes.",
+     "desde": 13,
+     "hasta": 13
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Los cuatro elementos otra vez, ahora como desastres naturales.",
+     "desde": 14,
+     "hasta": 15
+    },
+    {
+     "capa": "forma",
+     "autor": "claude",
+     "texto": "Si se leen como un solo verso salen 11 sílabas y rima en -ero con sincero y quiero: el soneto está completo y el último verso se parte para que «Aguacero» caiga solo.",
+     "desde": 14,
+     "hasta": 15
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-032",
   "titulo": "Tu existencia desafía",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "una octavilla",
+   "medida": "octosílabos",
+   "esquema": "abba abcc. Las dos primeras rimas se repiten y el pareado del final cambia a otra",
+   "rimas": {
+    "a": "consonante -ía · desafía, biografía, todavía",
+    "b": "consonante -encia · existencia, consecuencia, ausencia",
+    "c": "consonante -or · favor, amor"
+   },
+   "versos": {
+    "1": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 8,
+     "rima": "c",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 8,
+     "rima": "c",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2020-08-29",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -1058,13 +3481,121 @@
   "texto": "Tu presencia desafía\nen esencia a mi existencia\ny tu vida, en consecuencia,\na toda mi biografía.\nNo te vayas todavía.\nNo soportaré tu ausencia.\nNo te vayas, por favor.\nEres mi primer amor.",
   "explicacion": "",
   "anotaciones": [],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "6",
+   "rasgos": {
+    "profundidad": 2,
+    "dureza": 1,
+    "interés": 3,
+    "sonoridad": 4
+   },
+   "texto": "Corto y directo. Empieza con un vocabulario casi filosófico (presencia, esencia, existencia, biografía) y termina con lo más sencillo: no te vayas, eres mi primer amor. El paso de una cosa a otra es lo que hace el poema.",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "El título dice «existencia» y el primer verso «presencia»: la palabra cambia nada más empezar.",
+     "desde": 1,
+     "hasta": 1
+    },
+    {
+     "capa": "referencia",
+     "autor": "claude",
+     "texto": "Esencia y existencia: la pareja de conceptos de la filosofía (el existencialismo dice que la existencia precede a la esencia).",
+     "desde": 2,
+     "hasta": 2
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Las rimas cambian justo cuando el poema deja de pensar y suplica.",
+     "desde": 7,
+     "hasta": 8
+    }
+   ]
+  }
  },
  {
   "codigo": "CSAP-033",
   "titulo": "Benalmádena",
   "formato": "poema",
-  "forma": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada por Claude el 2026-10-30",
+   "estrofa": "tres serventesios",
+   "medida": "alejandrinos (7 + 7), con la cesura marcada por el doble espacio",
+   "esquema": "ABAB ACAC DEDE. La rima A (-ente) vuelve en la segunda estrofa",
+   "rimas": {
+    "a": "consonante -ente · lentamente, obediente, sonrientes, gentes",
+    "b": "consonante -ura · cintura, hermosura",
+    "c": "consonante -ita · habita, incita",
+    "d": "consonante -eno · lleno, freno",
+    "e": "consonante -ero · pasajero, quiero"
+   },
+   "versos": {
+    "1": {
+     "silabas": 14,
+     "rima": "A",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 14,
+     "rima": "B",
+     "nota": "con sinalefa entre los hemistiquios («atado_a»); si no, 15"
+    },
+    "3": {
+     "silabas": 14,
+     "rima": "A",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 14,
+     "rima": "B",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 13,
+     "rima": "A",
+     "nota": "el segundo hemistiquio tiene 6"
+    },
+    "6": {
+     "silabas": 14,
+     "rima": "C",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 14,
+     "rima": "A",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 14,
+     "rima": "C",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 14,
+     "rima": "D",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 14,
+     "rima": "E",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 14,
+     "rima": "D",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 14,
+     "rima": "E",
+     "nota": ""
+    }
+   }
+  },
   "fecha_publicacion": "2021-03-23",
   "fecha_escritura": "",
   "fuente": "Ciencias sociales y asuntos personales",
@@ -1083,10 +3614,88 @@
   "explicacion": "",
   "anotaciones": [
    {
-    "fragmento": "Ví. Ab. Al.",
-    "texto": "Firma con las iniciales de Víctor Abia Alonso. Ejemplo de anotación."
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Firma con las iniciales de Víctor Abia Alonso. Ejemplo de anotación.",
+    "fragmento": "Ví. Ab. Al."
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 2,
+    "hasta": 2,
+    "texto": "con sinalefa entre los hemistiquios («atado_a»); si no, 15"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 5,
+    "hasta": 5,
+    "texto": "el segundo hemistiquio tiene 6"
    }
   ],
-  "valoraciones": []
+  "valoraciones": [],
+  "lectura": {
+   "estado": "borrador generado por Claude el 2026-10-30. No está basado en nada que haya dicho Víctor: es un intento para ver cómo quedaría.",
+   "nota": "8",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 1,
+    "interés": 4,
+    "sonoridad": 5
+   },
+   "texto": "Un poema de amor tranquilo y lento, con el verso largo y sereno del alejandrino. La imagen que lo vertebra es inflarse: el cuerpo, luego el pecho, que no estalla ni se llena. El cierre se queda a propósito corto de palabras: «un poco sí te quiero». Benalmádena, en la costa de Málaga, da el sitio y quizá el aire de mar del poema.",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Inflar despacio, como un globo: lo contrario de un golpe.",
+     "desde": 1,
+     "hasta": 1
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "No estalla ni está lleno: un estado intermedio que dura.",
+     "desde": 9,
+     "hasta": 9
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "Volar y navegar a la vez: aire y agua.",
+     "desde": 11,
+     "hasta": 11
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "«un poco sí»: la declaración se dice con cautela.",
+     "desde": 12,
+     "hasta": 12
+    },
+    {
+     "capa": "forma",
+     "autor": "claude",
+     "texto": "También riman los finales de los primeros hemistiquios: «murmura» y «dulzura» con la rima B (-ura), y «bailar» con «empapar».",
+     "desde": 5,
+     "hasta": 8
+    },
+    {
+     "capa": "forma",
+     "autor": "claude",
+     "texto": "Lo mismo en la última estrofa: «digo» y «contigo», y «pecho» y «entiendo» en asonante.",
+     "desde": 9,
+     "hasta": 12
+    },
+    {
+     "capa": "forma",
+     "autor": "claude",
+     "texto": "Y en la primera: «atado» y «tirado» en consonante, «cuerpo» y «cierto» en asonante.",
+     "desde": 1,
+     "hasta": 4
+    }
+   ]
+  }
  }
 ]
