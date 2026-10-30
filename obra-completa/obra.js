@@ -20,7 +20,7 @@ const Obra = (() => {
       titulo: "Obra completa", volver: "← Obra completa",
       entradilla: "Poemas y textos desde 2016, ordenados por fecha. Se publicaron primero en", y: "y en",
       buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Poemas", banales: "Mentiras banales",
-      cualquier: "Cualquier tema", vacio: "Nada por aquí.", banalesMeta: "mentiras banales · ", comentado: " · comentado",
+      cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 pieza" : `${n} piezas`, banalesMeta: "mentiras banales · ", comentado: " · comentado",
       noEncuentro: "No encuentro esa pieza.", publicado: f => ` (publicado el ${f})`, verComentarios: "Ver comentarios",
       explicacion: "Explicación", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
       meses: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
@@ -30,7 +30,7 @@ const Obra = (() => {
       titulo: "Complete works", volver: "← Complete works",
       entradilla: "Poems and texts since 2016, in date order, mostly in Spanish. They first appeared on", y: "and",
       buscar: "Search a title or a line…", todo: "All", poemas: "Poems", banales: "Mentiras banales",
-      cualquier: "Any theme", vacio: "Nothing here.", banalesMeta: "mentiras banales · ", comentado: " · annotated",
+      cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 piece" : `${n} pieces`, banalesMeta: "mentiras banales · ", comentado: " · annotated",
       noEncuentro: "I can't find that piece.", publicado: f => ` (published ${f})`, verComentarios: "Show comments",
       explicacion: "Explanation", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
       meses: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -75,24 +75,46 @@ const Obra = (() => {
     const formato = document.getElementById("formato");
     const etiqueta = document.getElementById("etiqueta");
     traducirEstaticos();
+    // Mismos colores que el resto de la web; dentro de un año se van alternando
+    const COLORES = ["#e5d8f7", "#fcd8d8", "#c4e6cc", "#fde7b0", "#d6e6f7"];
+    const cuenta = el("p", { class: "cuenta" });
+    caja.before(cuenta);
     cargar().then(piezas => {
-      [...new Set(piezas.flatMap(p => p.etiquetas))].sort().forEach(e => etiqueta.append(el("option", { value: e }, e.replace(/-/g, " "))));
+      const temas = [...new Set(piezas.flatMap(p => p.etiquetas))].sort();
+      const encaja = (p, q, conTema) =>
+        (!formato.value || p.formato === formato.value) &&
+        (!conTema || !etiqueta.value || p.etiquetas.includes(etiqueta.value)) &&
+        (!q || (p.titulo + "\n" + p.texto).toLowerCase().includes(q));
+      const dosVersos = p => p.texto.split("\n").filter(l => l.trim()).slice(0, 2).join("\n");
       const pintar = () => {
         const q = buscar.value.trim().toLowerCase();
-        const lista = piezas.filter(p =>
-          (!formato.value || p.formato === formato.value) &&
-          (!etiqueta.value || p.etiquetas.includes(etiqueta.value)) &&
-          (!q || (p.titulo + "\n" + p.texto).toLowerCase().includes(q)));
+        // Cuántas piezas hay de cada tema con la búsqueda actual, para no tener que probarlos
+        const sinTema = piezas.filter(p => encaja(p, q, false));
+        const elegido = etiqueta.value;
+        etiqueta.replaceChildren(el("option", { value: "" }, `${T("cualquier")} (${sinTema.length})`),
+          ...temas.map(e => {
+            const n = sinTema.filter(p => p.etiquetas.includes(e)).length;
+            const o = el("option", { value: e }, `${e.replace(/-/g, " ")} (${n})`);
+            if (!n && e !== elegido) o.disabled = true;
+            return o;
+          }));
+        etiqueta.value = elegido;
+        const lista = piezas.filter(p => encaja(p, q, true));
+        cuenta.textContent = T("cuenta")(lista.length);
         caja.replaceChildren();
         if (!lista.length) { caja.append(el("p", { class: "vacio" }, T("vacio"))); return; }
-        let anio = null, ul = null;
+        let anio = null, ul = null, k = 0;
         for (const p of lista) {
           const a = fecha(p).slice(0, 4);
-          if (a !== anio) { anio = a; caja.append(el("h2", { class: "anio" }, a)); ul = caja.appendChild(el("ul", { class: "lista" })); }
+          if (a !== anio) { anio = a; k = 0; caja.append(el("h2", { class: "anio" }, a)); ul = caja.appendChild(el("ul", { class: "burbujas" })); }
           const marca = p.anotaciones.length || p.valoraciones.length ? T("comentado") : "";
-          ul.append(el("li", {}, el("a", { href: `poema.html?c=${p.codigo}` },
+          const b = el("a", { class: "burbuja", href: `poema.html?c=${p.codigo}` },
             el("span", { class: "t" }, p.titulo),
-            el("span", { class: "m" }, (p.formato === "poema" ? "" : T("banalesMeta")) + fechaLarga(fecha(p)) + marca))));
+            el("span", { class: "f" }, fechaLarga(fecha(p)) + marca),
+            el("span", { class: "v" }, dosVersos(p)));
+          if (p.formato !== "poema") b.append(el("span", { class: "tipo" }, T("banales")));
+          b.style.setProperty("--color", COLORES[k++ % COLORES.length]);
+          ul.append(el("li", {}, b));
         }
       };
       [buscar, formato, etiqueta].forEach(c => c.addEventListener("input", pintar));
