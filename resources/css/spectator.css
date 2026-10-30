@@ -799,3 +799,15 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-r-s { width: 0.85rem; height: 0.85rem; line-height: 0.85rem; font-size: 0.55rem; }
   .sp-gap-s { width: 0.3rem; }
 }
+
+/* Recordatorios: goals as cards with a big adjective */
+.rc-state { display: inline-block; margin-left: 0.4rem; padding: 0.05rem 0.55rem; border: 0.15rem solid #2e8b57; border-radius: 999px; color: #2e8b57; font-size: 0.75rem; font-weight: 700; vertical-align: middle; }
+.rc-goals { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 42rem; }
+.rc-goal { position: relative; padding: 1rem 1.1rem 0.9rem; border: 0.2rem solid #1c1c1c; border-radius: 14px; background-color: #e5d8f7; transition: all 200ms; }
+.rc-goal:nth-child(2) { background-color: #fcd8d8; }
+.rc-goal:nth-child(3) { background-color: #c4e6cc; }
+.rc-goal:nth-child(4) { background-color: #fde7b0; }
+.rc-goal:hover { transform: translate(-4px, -4px) rotate(-0.6deg); box-shadow: 4px 4px #1c1c1c; }
+.rc-goal h3 { font-size: 1.6rem; margin: 0.2rem 0 0.4rem; text-align: left; }
+.rc-goal p { margin: 0; font-size: 0.92rem; text-align: left; }
+@media only screen and (max-width:750px) { .rc-goals { grid-template-columns: 1fr; } }
