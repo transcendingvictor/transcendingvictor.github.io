@@ -581,6 +581,8 @@
         // Poem sheet, opened by #hash so it can be shared and closed with Back.
         var sheet = document.getElementById('sp-sheet');
         var bg = document.querySelector('.sp-sheet-bg');
+        // Remember where the reader was, so closing a sheet goes back there and not to the top
+        var savedY = 0, isOpen = false, openedHere = false;
         function show() {
             var id = location.hash.slice(1);
             var found = false;
@@ -589,14 +591,27 @@
                 p.hidden = !on;
                 found = found || on;
             });
+            if (found && !isOpen) savedY = window.scrollY;
             sheet.classList.toggle('open', found);
             sheet.setAttribute('aria-hidden', String(!found));
             bg.hidden = !found;
             if (found) sheet.scrollTop = 0;
+            if (!found && isOpen) window.scrollTo(0, savedY);
+            isOpen = found;
         }
-        bg.addEventListener('click', function () { location.hash = ''; });
-        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') location.hash = ''; });
-        window.addEventListener('hashchange', show);
+        function close(e) {
+            if (e) e.preventDefault();
+            if (openedHere) { history.back(); return; }
+            history.replaceState(null, '', location.pathname + location.search);
+            show();
+        }
+        document.querySelector('.sp-close').addEventListener('click', close);
+        bg.addEventListener('click', close);
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && isOpen) close(); });
+        window.addEventListener('hashchange', function () {
+            openedHere = location.hash.length > 1;
+            show();
+        });
         show();
     })();
     </script>
