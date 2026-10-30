@@ -809,20 +809,34 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 @media only screen and (max-width:750px) { .rc-goals { grid-template-columns: 1fr; } }
 .rc-intro { margin: 1.8rem 0 -0.5rem; font-style: italic; }
 
-/* Para mí: after the credits, dark green and quieter; pastel cards keep their colours */
+/* Para mí: after the credits the whole background turns dark green, down to the end of the page */
 .rc-night {
-  max-width: 44rem;
-  margin: 6rem 0 2rem;
-  padding: 0.5rem 1.6rem 2.2rem;
-  border-radius: 22px;
+  margin-top: 7rem;
+  padding: 3rem 0 2rem;
   background-color: #1f3d2c;
+  box-shadow: 0 0 0 100vmax #1f3d2c;
+  clip-path: inset(0 -100vmax -100vmax -100vmax);
   color: #e9f3ea;
 }
-.rc-night .sp-chapter { color: #c9b8ee; border-top-color: #5d7f69; margin-top: 2rem; }
+.rc-title { color: #f1fcee; font-family: "Vollkorn SC", serif; letter-spacing: 0.04em; }
+.rc-warning {
+  max-width: 34rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0.8rem 1rem;
+  border: 0.15rem dashed #f7d59c;
+  border-radius: 10px;
+  color: #f7e7c4;
+  text-align: left;
+}
+.rc-warning b { display: block; margin-bottom: 0.2rem; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.8rem; color: #f7d59c; }
+.rc-warning p { margin: 0; font-size: 0.95rem; text-align: left; }
 .rc-night .rc-intro, .rc-night .sp-note { color: #b7cfbd; }
 .rc-night h2 { color: #f1fcee; }
 .rc-night .rc-state { border-color: #9fdcb0; color: #9fdcb0; }
 .rc-night .rc-goal { border-color: #0f1f16; color: #1c1c1c; }
 .rc-night .rc-goal:hover { box-shadow: 4px 4px #0f1f16; }
 .rc-night .sp-rank { border-color: #0f1f16; }
-@media only screen and (max-width:750px) { .rc-night { padding: 0.3rem 1rem 1.6rem; margin-top: 4rem; } }
+@media only screen and (max-width:750px) {
+  .sp-artists { grid-template-columns: 1fr; }
+  .sp-artist { min-width: 0; }
+}
