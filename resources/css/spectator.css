@@ -595,3 +595,110 @@ html[data-lang="en"] [data-l="es"] {
   .sp-country svg { height: 5rem; }
   .sp-country h3 { font-size: 0.7rem; }
 }
+
+/* Empty slot among the least favourite moments: on purpose */
+.sp-duel .sp-sky .hungry { min-height: 3.6rem; }
+.sp-sky .sp-empty {
+  min-height: 3.6rem;
+  border: 0.15rem dashed #c9c5bc;
+  background: transparent;
+}
+
+/* Poems: each verse whole on one line; the translation goes under it,
+   smaller, and only when the page is in the other language */
+.sp-lines {
+  margin-bottom: 1rem;
+  font-size: min(1.05rem, 4vw);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.sp-lines span { display: block; white-space: nowrap; }
+.sp-lines .sp-tr {
+  white-space: normal;
+  margin: 0 0 0.35rem 0.8rem;
+  font-size: 0.8em;
+  font-style: italic;
+  line-height: 1.3;
+  color: #7a6a99;
+}
+html[data-lang="es"] .sp-lines .sp-tr[lang="en"],
+html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
+.sp-lines .sp-gap { height: 0.9rem; }
+
+/* Series: posters, two big and three small */
+.sp-series-big,
+.sp-series-small {
+  display: grid;
+  gap: 1rem;
+  max-width: 42rem;
+}
+
+.sp-series-big { grid-template-columns: repeat(2, 1fr); margin-bottom: 1rem; }
+.sp-series-small { grid-template-columns: repeat(3, 1fr); }
+
+.sp-show {
+  position: relative;
+  padding: 0.6rem;
+  border: 0.2rem solid #1c1c1c;
+  border-radius: 10px;
+  background-color: #e5d8f7;
+  transition: all 200ms;
+}
+
+.sp-show:hover { transform: translate(-4px, -4px); box-shadow: 4px 4px #1c1c1c; }
+
+.sp-show { display: flex; gap: 0.8rem; align-items: flex-start; }
+.sp-show .sp-poster {
+  flex: none;
+  width: 7rem;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  background-color: #d5c8e7;
+}
+.sp-show-small .sp-poster { width: 4rem; }
+.sp-show-txt { min-width: 0; text-align: left; }
+.sp-show-txt h3 { margin: 0.1rem 0 0.3rem; text-align: left; }
+.sp-show-small h3 { font-size: 0.95rem; }
+.sp-show-note { font-size: 0.85rem; margin: 0.4rem 0 0; text-align: left; }
+
+/* Songs of my life: a line with a dot per song, oldest first */
+.sp-timeline {
+  list-style: none;
+  max-width: 42rem;
+  margin: 0;
+  padding: 0 0 0 1.2rem;
+  border-left: 0.2rem solid #1c1c1c;
+}
+
+.sp-timeline li {
+  position: relative;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.sp-timeline li::before {
+  content: "";
+  position: absolute;
+  left: -1.75rem;
+  top: 0.25rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 0.2rem solid #1c1c1c;
+  border-radius: 50%;
+  background-color: #e5d8f7;
+  box-sizing: border-box;
+}
+
+.sp-when { display: block; min-height: 1.2rem; margin-bottom: 0.3rem; font-size: 0.9rem; }
+.sp-when small { margin-left: 0.5rem; color: #6b5a8a; }
+.sp-when b + small { margin-left: 0.5rem; }
+.sp-when small:first-child { margin-left: 0; }
+
+@media only screen and (max-width:750px) {
+  .sp-series-big { grid-template-columns: 1fr; }
+  .sp-series-small { gap: 0.6rem; }
+  .sp-series-small { grid-template-columns: 1fr; }
+  .sp-show-small .sp-poster { width: 3.5rem; }
+}
