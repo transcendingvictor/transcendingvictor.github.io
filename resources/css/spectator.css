@@ -604,21 +604,29 @@ html[data-lang="en"] [data-l="es"] {
   background: transparent;
 }
 
-/* Poems: original on the left, translation on the right, line by line */
+/* Poems: each verse whole on one line; the translation goes under it,
+   smaller, and only when the page is in the other language */
 .sp-lines {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 1.2rem;
-  row-gap: 0.15rem;
   margin-bottom: 1rem;
-  line-height: 1.6;
+  font-size: min(1.05rem, 4vw);
+  line-height: 1.5;
+  text-align: left;
 }
 
-.sp-lines span { text-align: left; }
-.sp-lines .sp-tr { color: #6b5a8a; font-style: italic; border-left: 2px solid #e5d8f7; padding-left: 0.8rem; }
-.sp-lines .sp-gap { height: 0.8rem; }
+.sp-lines span { display: block; white-space: nowrap; }
+.sp-lines .sp-tr {
+  white-space: normal;
+  margin: 0 0 0.35rem 0.8rem;
+  font-size: 0.8em;
+  font-style: italic;
+  line-height: 1.3;
+  color: #7a6a99;
+}
+html[data-lang="es"] .sp-lines .sp-tr[lang="en"],
+html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
+.sp-lines .sp-gap { height: 0.9rem; }
 
-/* Series: logos drawn with type, two big and three small */
+/* Series: posters, two big and three small */
 .sp-series-big,
 .sp-series-small {
   display: grid;
@@ -640,67 +648,57 @@ html[data-lang="en"] [data-l="es"] {
 
 .sp-show:hover { transform: translate(-4px, -4px); box-shadow: 4px 4px #1c1c1c; }
 
-.sp-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 8rem;
-  margin-bottom: 0.5rem;
+.sp-show { display: flex; gap: 0.8rem; align-items: flex-start; }
+.sp-show .sp-poster {
+  flex: none;
+  width: 7rem;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
   border-radius: 6px;
-  text-align: center;
-  line-height: 1.05;
+  background-color: #d5c8e7;
+}
+.sp-show-small .sp-poster { width: 4rem; }
+.sp-show-txt { min-width: 0; text-align: left; }
+.sp-show-txt h3 { margin: 0.1rem 0 0.3rem; text-align: left; }
+.sp-show-small h3 { font-size: 0.95rem; }
+.sp-show-note { font-size: 0.85rem; margin: 0.4rem 0 0; text-align: left; }
+
+/* Songs of my life: a line with a dot per song, oldest first */
+.sp-timeline {
+  list-style: none;
+  max-width: 42rem;
+  margin: 0;
+  padding: 0 0 0 1.2rem;
+  border-left: 0.2rem solid #1c1c1c;
 }
 
-.sp-show-small .sp-logo { height: 5rem; }
-.sp-show-note { font-size: 0.85rem; margin: 0.3rem 0 0; text-align: left; }
-
-.sp-logo-paquita {
-  background-color: #f7d6e0;
-  color: #c0185b;
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-weight: 700;
-  font-size: 2rem;
+.sp-timeline li {
+  position: relative;
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
-.sp-logo-community {
-  background-color: #23312a;
-  color: #f4f1e8;
-  font-family: "Courier New", monospace;
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 0.05em;
+.sp-timeline li::before {
+  content: "";
+  position: absolute;
+  left: -1.75rem;
+  top: 0.25rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 0.2rem solid #1c1c1c;
+  border-radius: 50%;
+  background-color: #e5d8f7;
+  box-sizing: border-box;
 }
 
-.sp-logo-office {
-  background-color: #f2f2ee;
-  color: #1c1c1c;
-  font-family: "Courier New", monospace;
-  font-weight: 700;
-  font-size: 1.1rem;
-  border: 0.1rem solid #1c1c1c;
-}
-
-.sp-logo-poquita {
-  background-color: #fde7b0;
-  color: #4b3a2a;
-  font-family: Aleo, serif;
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-
-.sp-logo-ngnl {
-  background: linear-gradient(135deg, #d93d6b, #6a3fd1);
-  color: #fff;
-  font-family: Impact, "Arial Black", sans-serif;
-  font-size: 1.1rem;
-  letter-spacing: 0.04em;
-}
+.sp-when { display: block; min-height: 1.2rem; margin-bottom: 0.3rem; font-size: 0.9rem; }
+.sp-when small { margin-left: 0.5rem; color: #6b5a8a; }
+.sp-when b + small { margin-left: 0.5rem; }
+.sp-when small:first-child { margin-left: 0; }
 
 @media only screen and (max-width:750px) {
-  .sp-lines { column-gap: 0.6rem; font-size: 0.85rem; }
   .sp-series-big { grid-template-columns: 1fr; }
   .sp-series-small { gap: 0.6rem; }
-  .sp-show-small .sp-logo { font-size: 0.85rem; }
-  .sp-show-small .sp-meta { font-size: 0.7rem; }
+  .sp-series-small { grid-template-columns: 1fr; }
+  .sp-show-small .sp-poster { width: 3.5rem; }
 }
