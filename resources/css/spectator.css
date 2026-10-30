@@ -167,7 +167,12 @@
   margin-top: 3rem;
   font-size: 0.75rem;
   color: #6b6b66;
+  text-align: left;
 }
+
+.sp-credits p { margin: 0 0 0.3rem; }
+.sp-credits ul { margin: 0; padding-left: 1.1rem; }
+.sp-credits li { margin-bottom: 0.15rem; }
 
 @media only screen and (max-width:750px) {
   .sp-films { grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
