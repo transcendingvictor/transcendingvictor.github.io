@@ -707,7 +707,7 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .sp-warning b { display: block; margin-bottom: 0.2rem; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.75rem; color: #6b5a8a; }
 .sp-warning-face { flex: none; font-size: 2rem; line-height: 1; filter: grayscale(0.3); }
 
-/* Series: posters, two big and three small */
+/* Series: posters, two big and the rest small, two per row */
 .sp-series-big,
 .sp-series-small {
   display: grid;
@@ -716,7 +716,7 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 }
 
 .sp-series-big { grid-template-columns: repeat(2, 1fr); margin-bottom: 1rem; }
-.sp-series-small { grid-template-columns: repeat(3, 1fr); }
+.sp-series-small { grid-template-columns: repeat(2, 1fr); }
 
 .sp-show {
   position: relative;
