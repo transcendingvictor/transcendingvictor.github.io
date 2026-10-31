@@ -13,7 +13,7 @@ const Obra = (() => {
     try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; }
   };
 
-  // Idioma de la interfaz (los poemas no se traducen). Misma clave 'lang' y atributo
+  // Idioma de la interfaz (en inglés, los poemas añaden su traducción bajo cada verso). Misma clave 'lang' y atributo
   // html[data-lang] que el resto de la web, para que la elección se comparta.
   const TEXTOS = {
     es: {
@@ -21,8 +21,12 @@ const Obra = (() => {
       entradilla: "Poemas y textos desde 2016, ordenados por fecha. Se publicaron primero en", y: "y en",
       buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Poemas", banales: "Mentiras banales",
       cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 pieza" : `${n} piezas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado",
-      noEncuentro: "No encuentro esa pieza.", publicado: f => ` (publicado el ${f})`, verComentarios: "Ver comentarios",
+      noEncuentro: "No encuentro esa pieza.", publicado: f => ` (publicado el ${f})`,
       explicacion: "Explicación", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
+      analisis: "Análisis", capas: { forma: "Forma", sentido: "Sentido", referencia: "Referencias" }, provisional: "provisional",
+      forma: "Forma", estrofa: "Estrofa", medida: "Medida", esquema: "Esquema",
+      lectura: "Análisis del autor", notaGeneral: "Nota general",
+      rasgos: { profundidad: "Profundidad", dureza: "Dureza", "interés": "Interés", sonoridad: "Sonoridad" },
       meses: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
       fechaLarga: (d, m, a) => d ? `${d} de ${m} de ${a}` : m ? `${m} de ${a}` : a,
     },
@@ -31,8 +35,12 @@ const Obra = (() => {
       entradilla: "Poems and texts since 2016, in date order, mostly in Spanish. They first appeared on", y: "and",
       buscar: "Search a title or a line…", todo: "All", poemas: "Poems", banales: "Mentiras banales",
       cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 piece" : `${n} pieces`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated",
-      noEncuentro: "I can't find that piece.", publicado: f => ` (published ${f})`, verComentarios: "Show comments",
+      noEncuentro: "I can't find that piece.", publicado: f => ` (published ${f})`,
       explicacion: "Explanation", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
+      analisis: "Analysis", capas: { forma: "Form", sentido: "Meaning", referencia: "References" }, provisional: "placeholder",
+      forma: "Form", estrofa: "Stanza", medida: "Metre", esquema: "Rhyme scheme",
+      lectura: "Author's analysis", notaGeneral: "Overall score",
+      rasgos: { profundidad: "Depth", dureza: "Harshness", "interés": "Interest", sonoridad: "Sound" },
       meses: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
       fechaLarga: (d, m, a) => d ? `${d} ${m} ${a}` : m ? `${m} ${a}` : a,
     },
@@ -106,7 +114,7 @@ const Obra = (() => {
         for (const p of lista) {
           const a = fecha(p).slice(0, 4);
           if (a !== anio) { anio = a; k = 0; caja.append(el("h2", { class: "anio" }, a)); ul = caja.appendChild(el("ul", { class: "burbujas" })); }
-          const marca = p.anotaciones.length || p.valoraciones.length ? T("comentado") : "";
+          const marca = p.anotaciones.some(a => a.autor === "victor") || p.valoraciones.length ? T("comentado") : "";
           const b = el("a", { class: "burbuja", href: `poema.html?c=${p.codigo}` },
             el("span", { class: "t" }, p.titulo),
             el("span", { class: "f" }, fechaLarga(fecha(p)) + marca));
@@ -125,43 +133,170 @@ const Obra = (() => {
     });
   }
 
+  // Capas de comentarios: cada nota pertenece a una y cada botón enciende la suya
+  const CAPAS = ["forma", "sentido", "referencia"];
+  const COLORES_RIMA = ["#f7c6c6", "#c9e4f7", "#fbe3a6", "#d4c9f2", "#bfe5c8", "#f8d2e8",
+    "#d9ecb0", "#f9d7b5", "#c4dede", "#e8d4c0", "#dcd6f7", "#f2e2a0"];
+  // Mismo color para la misma rima, en el orden en que aparecen
+  const ordenRimas = f => [...new Set(Object.keys(f.versos).sort((a, b) => a - b)
+    .map(v => f.versos[v].rima.toLowerCase()).filter(r => r !== "-"))];
+  const colorRima = (f, r) => COLORES_RIMA[Math.max(0, ordenRimas(f).indexOf(r)) % COLORES_RIMA.length];
+
+  const lateral = window.matchMedia("(min-width: 1280px)");
+  const cerrarNota = n => {
+    n.classList.remove("abierta");
+    (n._marcados || []).forEach(m => m.classList.remove("activo"));
+  };
+
+  // Versos partidos: empiezan donde acaba el anterior, como si siguieran en la misma línea
+  const escalonar = (caja, versos) => versos.forEach(n => {
+    const v = caja.querySelector(`.verso[data-v="${n}"]`), prev = caja.querySelector(`.verso[data-v="${n - 1}"]`);
+    if (!v || !prev) return;
+    v.style.paddingLeft = "";
+    const r = document.createRange();
+    r.selectNodeContents(prev.querySelector(".txt"));
+    const rects = [...r.getClientRects()].filter(x => x.width);
+    if (rects.length) v.style.paddingLeft = (rects[rects.length - 1].right - prev.getBoundingClientRect().left + 6) + "px";
+  });
+
+  // Envuelve en un span el primer trozo de texto que coincida, sin tocar lo ya marcado
+  const envolver = (raiz, trozo, clase) => {
+    const textos = [];
+    const recorrer = x => x.childNodes.forEach(h => h.nodeType === 3 ? textos.push(h) : recorrer(h));
+    recorrer(raiz);
+    for (const t of textos) {
+      const k = t.textContent.indexOf(trozo);
+      if (k < 0) continue;
+      const s = el("span", { class: clase }, trozo);
+      t.replaceWith(t.textContent.slice(0, k), s, t.textContent.slice(k + trozo.length));
+      return s;
+    }
+    return null;
+  };
+
   function versos(p) {
-    // Cada línea del poema; las vacías son separación de estrofa.
+    // Cada línea del poema; las vacías son separación de estrofa. El texto va en .txt para
+    // que el subrayado de un verso siga a las letras y no a todo el ancho.
     const lineas = p.texto.split("\n");
+    const en = p.texto_en ? p.texto_en.split("\n") : [];
     const caja = el("div", { class: "poema" });
     const nodos = [];
     let n = 0;
-    for (const l of lineas) {
+    for (const [i, l] of lineas.entries()) {
       if (!l.trim()) { caja.append(el("span", { class: "estrofa" })); continue; }
-      const v = el("span", { class: "verso" }, l);
+      const v = el("span", { class: "verso" }, el("span", { class: "txt" }, l));
+      // Traducción bajo el verso; solo se ve con la web en inglés
+      if (en[i] && en[i] !== l) v.append(el("span", { class: "tr", lang: "en" }, en[i]));
       v.dataset.v = ++n;
       caja.append(v);
       nodos.push(v);
     }
-    p.anotaciones.forEach((a, i) => {
-      const nota = el("div", { class: "nota" }, a.texto);
-      let marcados = [];
+    const txt = v => v.querySelector(".txt");
+    // Forma: al margen, sílabas y letra de rima; sus observaciones se abren desde ahí
+    const metros = {};
+    if (p.forma) nodos.forEach(v => {
+      const d = p.forma.versos[v.dataset.v];
+      if (!d) return;
+      const r = d.rima.toLowerCase();
+      const metro = el("span", { class: "metro" }, `${d.silabas} `, el("b", {}, d.rima === "-" ? "–" : d.rima));
+      if (r !== "-") metro.style.setProperty("--rima", colorRima(p.forma, r));
+      v.prepend(metro);
+      metros[v.dataset.v] = metro;
+    });
+    const notas = [...p.anotaciones, ...(p.lectura ? p.lectura.anotaciones : [])];
+    notas.forEach(a => {
+      const nota = el("div", { class: `nota capa-${a.capa}` });
+      if (a.autor === "provisional") nota.append(el("span", { class: "autor" }, T("provisional")));
+      nota.append(a.texto);
+      let marcados = [], tras;
       if (a.fragmento) {
-        const v = nodos.find(x => x.textContent.includes(a.fragmento));
+        const v = nodos.find(x => txt(x).textContent.includes(a.fragmento));
         if (!v) return;
-        const t = v.textContent, k = t.indexOf(a.fragmento);
-        const s = el("span", { class: "anotado" }, a.fragmento);
-        v.replaceChildren(t.slice(0, k), s, t.slice(k + a.fragmento.length));
-        marcados = [s];
-        v.after(nota);
+        marcados = [envolver(txt(v), a.fragmento, "anotado")];
+        tras = v;
       } else {
-        marcados = nodos.slice(a.desde - 1, a.hasta).map(v => { v.classList.add("anotado"); return v; });
-        if (!marcados.length) return;
-        marcados[marcados.length - 1].after(nota);
+        const vs = nodos.slice(a.desde - 1, a.hasta);
+        if (!vs.length) return;
+        // Un verso se subraya (o su número, si la nota es de la medida); un tramo lleva raya al margen
+        marcados = vs.length > 1 ? vs : [a.metro && metros[a.desde] ? metros[a.desde] : txt(vs[0])];
+        tras = vs[vs.length - 1];
       }
+      // Si varias notas caen en el mismo verso, van una detrás de otra
+      while (tras.nextElementSibling && tras.nextElementSibling.classList.contains("nota")) tras = tras.nextElementSibling;
+      tras.after(nota);
+      const tramo = marcados.length > 1 || marcados[0].classList.contains("verso");
+      const tam = a.fragmento ? 0 : a.hasta - a.desde + 1;
+      marcados.forEach(m => m.classList.add("anotado", `${tramo ? "r" : "c"}-${a.capa}`));
       const abrir = () => {
-        if (!caja.parentNode.classList.contains("con-notas")) return;
-        const abierta = nota.classList.toggle("abierta");
-        marcados.forEach(m => m.classList.toggle("activo", abierta));
+        const abierta = !nota.classList.contains("abierta");
+        // Como en Genius: en pantalla ancha la nota sale al lado y solo hay una abierta
+        if (abierta && lateral.matches) caja.querySelectorAll(".nota.abierta").forEach(cerrarNota);
+        if (!abierta) { cerrarNota(nota); return; }
+        nota.classList.add("abierta");
+        marcados.forEach(m => m.classList.add("activo"));
+        nota._marcados = marcados;
+        if (lateral.matches) nota.style.top = marcados[0].offsetTop + "px";
       };
-      marcados.forEach(m => m.addEventListener("click", abrir));
+      marcados.forEach(m => (m._notas = m._notas || []).push({ capa: a.capa, tam, abrir }));
+    });
+    // Un clic abre la nota más concreta de las capas encendidas (trozo > verso > tramo)
+    caja.querySelectorAll(".anotado").forEach(m => m.addEventListener("click", e => {
+      const on = m._notas.filter(n => caja.parentNode.classList.contains(`on-${n.capa}`));
+      if (!on.length) return;
+      e.stopPropagation();
+      on.sort((x, y) => x.tam - y.tam)[0].abrir();
+    }));
+    // La última palabra de cada verso, coloreada según su rima
+    if (p.forma) nodos.forEach(v => {
+      const d = p.forma.versos[v.dataset.v];
+      if (!d || d.rima === "-") return;
+      const textos = [];
+      const recorrer = x => x.childNodes.forEach(h => h.nodeType === 3 ? textos.push(h) : recorrer(h));
+      recorrer(txt(v));
+      for (let i = textos.length - 1; i >= 0; i--) {
+        const t = textos[i].textContent, m = t.match(/([\p{L}\p{N}]+)([^\p{L}\p{N}]*)$/u);
+        if (!m) continue;
+        const s = el("span", { class: "rima" }, m[1]);
+        s.style.setProperty("--rima", colorRima(p.forma, d.rima.toLowerCase()));
+        textos[i].replaceWith(t.slice(0, m.index), s, m[2]);
+        break;
+      }
     });
     return caja;
+  }
+
+  function forma(f) {
+    const s = el("section", { class: "forma" }, el("h2", {}, T("forma")));
+    if (f.estado) s.append(el("p", { class: "aviso" }, f.estado));
+    const dl = el("dl");
+    [["estrofa", f.estrofa], ["medida", f.medida], ["esquema", f.esquema]].forEach(([k, v]) => {
+      if (v) dl.append(el("dt", {}, T(k)), el("dd", {}, v));
+    });
+    s.append(dl);
+    const ul = el("ul", { class: "rimas" });
+    Object.entries(f.rimas).forEach(([l, texto]) => {
+      const b = el("b", {}, l.toUpperCase());
+      b.style.setProperty("--rima", colorRima(f, l));
+      ul.append(el("li", {}, b, " ", texto));
+    });
+    if (ul.children.length) s.append(ul);
+    return s;
+  }
+
+  function lectura(l) {
+    const s = el("section", { class: "lectura" }, el("h2", {}, T("lectura")));
+    const cab = [l.fecha ? fechaLarga(l.fecha) : "", l.estado ? T("provisional") : ""].filter(Boolean).join(" · ");
+    if (cab) s.append(el("p", { class: "cab-analisis" }, cab));
+    const tabla = el("dl", { class: "rasgos" });
+    if (l.nota) tabla.append(el("dt", {}, T("notaGeneral")), el("dd", {}, el("span", { class: "nota-num" }, `${l.nota}/10`)));
+    Object.entries(l.rasgos).forEach(([k, v]) => {
+      const puntos = el("span", { class: "puntos", title: `${v}/5` });
+      for (let i = 1; i <= 5; i++) puntos.append(el("i", i <= v ? { class: "lleno" } : {}));
+      tabla.append(el("dt", {}, T("rasgos")[k] || k), el("dd", {}, puntos));
+    });
+    s.append(tabla);
+    l.texto.split(/\n\n/).forEach(t => s.append(el("p", {}, t)));
+    return s;
   }
 
   function poema() {
@@ -176,29 +311,59 @@ const Obra = (() => {
       if (i < 0) { main.append(el("p", { class: "vacio" }, T("noEncuentro"))); return; }
       const p = piezas[i];
       document.title = `${p.titulo} | Obra completa`;
-      main.append(el("h1", {}, p.titulo));
+      main.append(el("h1", {}, p.titulo, p.titulo_en && p.titulo_en !== p.titulo ? el("span", { class: "tr", lang: "en" }, p.titulo_en) : ""));
       const meta = el("p", { class: "meta" }, fechaLarga(fecha(p)));
       if (p.fecha_escritura) meta.append(T("publicado")(fechaLarga(p.fecha_publicacion)));
       meta.append(" · ", el("a", { href: p.url, target: "_blank", rel: "noopener" }, p.fuente));
       main.append(meta);
 
       const cuerpo = el("div");
-      if (p.anotaciones.length) {
-        const chk = el("input", { type: "checkbox" });
-        chk.checked = guardado("obra-notas") === "1";
-        const aplicar = () => {
-          cuerpo.classList.toggle("con-notas", chk.checked);
-          if (!chk.checked) cuerpo.querySelectorAll(".abierta, .activo").forEach(n => n.classList.remove("abierta", "activo"));
-          guardado("obra-notas", chk.checked ? "1" : "0");
-        };
-        chk.addEventListener("change", aplicar);
-        main.append(el("label", { class: "interruptor" }, chk, T("verComentarios")));
+      // Todo el análisis cuelga de un interruptor: apagado, solo queda el poema
+      const todas = [...p.anotaciones, ...(p.lectura ? p.lectura.anotaciones : [])];
+      const hay = CAPAS.filter(c => (c === "forma" && p.forma) || todas.some(a => a.capa === c));
+      const conAnalisis = hay.length || p.explicacion || p.valoraciones.length;
+      let activas = (guardado("obra-capas") || "").split(",").filter(c => hay.includes(c));
+      const sw = el("input", { type: "checkbox", role: "switch" });
+      sw.checked = guardado("obra-analisis") === "1";
+      const barra = el("div", { class: "capas", role: "group" });
+      const aplicar = () => {
+        main.classList.toggle("analisis", sw.checked);
+        CAPAS.forEach(c => cuerpo.classList.toggle(`on-${c}`, sw.checked && activas.includes(c)));
+        cuerpo.querySelectorAll(".nota.abierta").forEach(n => {
+          if (!CAPAS.some(c => n.classList.contains(`capa-${c}`) && cuerpo.classList.contains(`on-${c}`))) cerrarNota(n);
+        });
+        barra.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(activas.includes(b.dataset.capa))));
+        guardado("obra-analisis", sw.checked ? "1" : "0");
+        guardado("obra-capas", activas.join(","));
+      };
+      hay.forEach(c => {
+        const b = el("button", { type: "button", class: `capa-${c}`, "data-capa": c }, T("capas")[c]);
+        b.addEventListener("click", () => {
+          activas = activas.includes(c) ? activas.filter(x => x !== c) : [...activas, c];
+          aplicar();
+        });
+        barra.append(b);
+      });
+      sw.addEventListener("change", () => {
+        if (sw.checked && !activas.length) activas = [...hay];
         aplicar();
-      }
+      });
+      if (conAnalisis) main.append(el("div", { class: "herramientas" },
+        el("label", { class: "interruptor" }, sw, el("span", { class: "pista" }), T("analisis")), barra));
       cuerpo.append(versos(p));
       main.append(cuerpo);
+      aplicar();
+      const partidos = p.forma ? p.forma.escalonados : [];
+      if (partidos.length) {
+        const caja = cuerpo.querySelector(".poema");
+        const ajustar = () => escalonar(caja, partidos);
+        ajustar();
+        document.fonts.ready.then(ajustar);
+        window.addEventListener("resize", ajustar);
+      }
 
       if (p.explicacion) main.append(el("section", {}, el("h2", {}, T("explicacion")), el("p", {}, p.explicacion)));
+      if (p.forma) main.append(forma(p.forma));
       if (p.valoraciones.length) {
         const s = el("section", {}, el("h2", {}, T("valoracion")));
         const bloque = v => el("div", { class: "valoracion" },
@@ -212,6 +377,8 @@ const Obra = (() => {
         }
         main.append(s);
       }
+
+      if (p.lectura) main.append(lectura(p.lectura));
 
       const nav = el("nav", { class: "navegacion" });
       nav.append(i > 0 ? el("a", { href: `poema.html?c=${piezas[i - 1].codigo}` }, "← " + piezas[i - 1].titulo) : el("span"));
