@@ -901,3 +901,77 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-stanzas .sp-rhyme, .sp-stanza-wide .sp-rhyme { margin-top: 0.3rem; }
   .sp-stanzas li:not(:has(.sp-meta)) > b { grid-row: auto; }
 }
+
+/* ── Phone: made for the thumb ──────────────────────────────────────────
+   More width for the content, and card lists become rows you swipe through
+   sideways, one card at a time, with dots underneath; the page itself only
+   scrolls down. */
+@media only screen and (max-width:750px) {
+  .mainbody.spectator { padding: 2rem 1rem 3rem; }
+
+  .sp-swipe {
+    display: flex !important;
+    gap: 0.9rem;
+    max-width: none;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0.8rem;
+    padding: 0.8rem 0.8rem 0.6rem;
+    margin: 0 -1rem;
+    scrollbar-width: none;
+  }
+  .sp-swipe::-webkit-scrollbar { display: none; }
+  .sp-swipe > * { flex: 0 0 78%; min-width: 0; scroll-snap-align: start; }
+  .sp-swipe > *:hover { transform: none; box-shadow: none; }
+  .sp-swipe > *:last-child { margin-right: 0.8rem; }
+
+  /* Series: big and small ones become one row of posters, like the films */
+  .sp-series-big, .sp-series-small { display: contents; }
+  .sp-series .sp-show { flex: 0 0 70%; min-width: 0; scroll-snap-align: start; flex-direction: column; gap: 0.5rem; padding: 0.6rem; }
+  .sp-series .sp-show:hover { transform: none; box-shadow: none; }
+  .sp-series .sp-poster, .sp-series .sp-show-small .sp-poster { width: 100%; height: auto; aspect-ratio: 2 / 3; }
+  .sp-series .sp-show h3 { font-size: 1.15rem; }
+  .sp-series .sp-meta { font-size: 0.85rem; }
+  .sp-series .sp-show:last-child { margin-right: 0.8rem; }
+
+  /* Films and books: one poster per swipe, readable without zooming */
+  .sp-films.sp-swipe > * { flex-basis: 70%; padding: 0.6rem; }
+  .sp-films.sp-swipe h3 { font-size: 1.15rem; }
+  .sp-films.sp-swipe .sp-meta { font-size: 0.85rem; }
+
+  .sp-poets.sp-swipe > *, .sp-artists.sp-swipe > * { flex-basis: 84%; }
+  .rc-goals.sp-swipe > * { flex-basis: 80%; }
+
+  .sp-rank { width: 2rem; height: 2rem; line-height: 1.75rem; font-size: 0.95rem; }
+
+  .sp-dots { display: flex; justify-content: center; gap: 0.5rem; margin: 0.2rem 0 0.4rem; }
+  .sp-dots button {
+    width: 0.6rem; height: 0.6rem; padding: 0;
+    border: 0.12rem solid #1c1c1c; border-radius: 50%;
+    background: transparent; cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  .sp-dots button[aria-current="true"] { background-color: #1c1c1c; transform: scale(1.25); }
+  .rc-night .sp-dots button { border-color: #f1fcee; }
+  .rc-night .sp-dots button[aria-current="true"] { background-color: #f1fcee; }
+
+  /* Bigger targets for the thumb */
+  .sp-langswitch button { padding: 0.55rem 1.3rem; }
+  .sp-search input { min-height: 2.8rem; font-size: 1rem; }
+}
+@media only screen and (min-width:751px) { .sp-dots { display: none; } }
+
+/* Phone: the sidebar becomes a short header (photo and name, sections in a row, the balance)
+   so the lists start sooner */
+@media only screen and (max-width:750px) {
+  header { padding-top: 1.2rem !important; padding-bottom: 0.8rem !important; }
+  header .me img { width: 4.5rem !important; height: 4.5rem !important; margin: 0 auto 0.4rem !important; }
+  header .me p { width: auto; margin: 0 !important; text-align: center; }
+  header > p, header > u, header > .links, header > .sc { display: none !important; }
+  header .nav-box { margin: 0.8rem 0 0.4rem; padding: 0.3rem; }
+  header .nav-box ul { display: flex; overflow-x: auto; scrollbar-width: none; border-radius: 10px; }
+  header .nav-box ul::-webkit-scrollbar { display: none; }
+  header .nav-box li { flex: 1 1 auto; padding: 0.75rem 0.4rem; border-radius: 0 !important; }
+  header .nav-box a { white-space: nowrap; font-size: 0.82rem; text-align: center; }
+}
