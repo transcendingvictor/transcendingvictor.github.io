@@ -113,7 +113,12 @@ const Obra = (() => {
         let anio = null, ul = null, k = 0;
         for (const p of lista) {
           const a = fecha(p).slice(0, 4);
-          if (a !== anio) { anio = a; k = 0; caja.append(el("h2", { class: "anio" }, a)); ul = caja.appendChild(el("ul", { class: "burbujas" })); }
+          if (a !== anio) {
+            anio = a; k = 0;
+            const n = lista.filter(x => fecha(x).startsWith(a)).length;
+            caja.append(el("h2", { class: "anio" }, a, el("span", { class: "n" }, String(n))));
+            ul = caja.appendChild(el("ul", { class: "burbujas" }));
+          }
           const marca = p.anotaciones.some(a => a.autor === "victor") || p.valoraciones.length ? T("comentado") : "";
           const b = el("a", { class: "burbuja", href: `poema.html?c=${p.codigo}` },
             el("span", { class: "t" }, p.titulo),
@@ -384,6 +389,21 @@ const Obra = (() => {
       nav.append(i > 0 ? el("a", { href: `poema.html?c=${piezas[i - 1].codigo}` }, "← " + piezas[i - 1].titulo) : el("span"));
       nav.append(i < piezas.length - 1 ? el("a", { href: `poema.html?c=${piezas[i + 1].codigo}` }, piezas[i + 1].titulo + " →") : el("span"));
       main.append(nav);
+      // En el móvil, deslizar el poema hacia un lado lleva al anterior o al siguiente
+      let x0 = null, y0 = 0;
+      main.addEventListener("touchstart", e => {
+        const t = e.touches[0];
+        x0 = e.touches.length === 1 && !e.target.closest("input, select, .nota") ? t.clientX : null;
+        y0 = t.clientY;
+      }, { passive: true });
+      main.addEventListener("touchend", e => {
+        if (x0 === null) return;
+        const t = e.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0;
+        x0 = null;
+        if (Math.abs(dx) < 70 || Math.abs(dy) > Math.abs(dx) * 0.6) return;
+        const destino = dx < 0 ? piezas[i + 1] : piezas[i - 1];
+        if (destino) location.href = `poema.html?c=${destino.codigo}`;
+      }, { passive: true });
       };
       selectorIdioma(pintar);
       pintar();

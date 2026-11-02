@@ -109,7 +109,7 @@
 
         <section class="sp-list">
             <h2><span data-l="es">Películas favoritas</span><span data-l="en">Favourite films</span></h2>
-            <div class="sp-films">
+            <div class="sp-films sp-swipe">
                 <article class="sp-film">
                     <span class="sp-rank">1</span>
                     <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg" alt="Inception" loading="lazy">
@@ -133,6 +133,7 @@
 
         <section class="sp-list">
             <h2><span data-l="es">Series favoritas</span><span data-l="en">Favourite series</span></h2>
+            <div class="sp-series sp-swipe">
             <div class="sp-series-big">
                 <article class="sp-show" data-search="paquita salas los javis">
                     <span class="sp-rank">1</span>
@@ -140,7 +141,6 @@
                     <div class="sp-show-txt">
                     <h3>Paquita Salas</h3>
                     <p class="sp-meta">Los Javis · 2016–2019 · 3 <span data-l="es">temporadas</span><span data-l="en">seasons</span></p>
-                    <p class="sp-show-note"><span data-l="es">Falso documental sobre una representante de actores de Navarrete que se quedó en los noventa.</span><span data-l="en">A mockumentary about an actors' agent from Navarrete who got stuck in the nineties.</span></p>
                     </div>
                 </article>
                 <article class="sp-show" data-search="cortar por la linea de puntos strappare lungo i bordi tear along the dotted line zerocalcare netflix">
@@ -149,7 +149,6 @@
                     <div class="sp-show-txt">
                     <h3><span data-l="es">Cortar por la línea de puntos</span><span data-l="en">Tear Along the Dotted Line</span></h3>
                     <p class="sp-meta">Zerocalcare · Netflix · 2021 · 6 <span data-l="es">episodios</span><span data-l="en">episodes</span></p>
-                    <p class="sp-show-note"><span data-l="es">Animación italiana: Zero, un dibujante de Roma, repasa su vida con su conciencia, que es un armadillo.</span><span data-l="en">Italian animation: Zero, a cartoonist from Rome, goes over his life with his conscience, who is an armadillo.</span></p>
                     </div>
                 </article>
             </div>
@@ -187,12 +186,13 @@
                     </div>
                 </article>
             </div>
+            </div>
         </section>
 
         <section class="sp-list">
             <h2><span data-l="es">Libros favoritos</span><span data-l="en">Favourite books</span> <span class="sp-tag">provisional</span></h2>
             <p class="sp-note"><span data-l="es">Toca un libro para leer un extracto.</span><span data-l="en">Tap a book to read an excerpt.</span></p>
-            <div class="sp-films sp-bookgrid">
+            <div class="sp-films sp-bookgrid sp-swipe">
                 <a class="sp-film sp-book" href="#nada">
                     <span class="sp-rank">1</span>
                     <img src="https://covers.openlibrary.org/b/id/10663896-L.jpg" alt="Nada" loading="lazy">
@@ -216,53 +216,41 @@
 
         <section class="sp-list">
             <h2><span data-l="es">Poetas</span><span data-l="en">Poets</span></h2>
-            <p class="sp-note"><span data-l="es">Toca un poeta para leer uno de sus poemas.</span><span data-l="en">Tap a poet to read one of their poems.</span></p>
-            <div class="sp-poets">
-                <a class="sp-poet" href="#hernandez">
-                    <span class="sp-rank">1</span>
-                    <img src="resources/img/poeta_miguel_hernandez.jpg" alt="Miguel Hernández" loading="lazy">
-                    <span class="sp-poet-txt">
-                        <b>Miguel Hernández</b>
-                        <span class="sp-meta">1910 – 1942</span>
-                        <span class="sp-go">«¿No cesará este rayo que me habita?» →</span>
-                    </span>
-                </a>
-                <a class="sp-poet" href="#otero">
-                    <span class="sp-rank">2</span>
-                    <img src="resources/img/poeta_blas_de_otero.jpg" alt="Blas de Otero" loading="lazy">
-                    <span class="sp-poet-txt">
-                        <b>Blas de Otero</b>
-                        <span class="sp-meta">1916 – 1979</span>
-                        <span class="sp-go">«Lástima» →</span>
-                    </span>
-                </a>
-                <a class="sp-poet" href="#plath">
-                    <span class="sp-rank">3</span>
-                    <img src="resources/img/poeta_sylvia_plath.jpg" alt="Sylvia Plath" loading="lazy">
-                    <span class="sp-poet-txt">
-                        <b>Sylvia Plath</b>
-                        <span class="sp-meta">1932 – 1963</span>
-                        <span class="sp-go">«Lady Lazarus» →</span>
-                    </span>
-                </a>
+            <p class="sp-note"><span data-l="es">Todavía no puedo elegir al mejor.</span><span data-l="en">I still can't choose the best one.</span></p>
+            <div class="sp-tiers">
+                <div class="sp-tier sp-tier-s">
+                    <span class="sp-tier-lab">S</span>
+                    <ul>
+                        <li data-search="jorge manrique"><b>Jorge Manrique</b></li>
+                        <li data-search="ruben dario rubén darío"><b>Rubén Darío</b></li>
+                        <li data-search="miguel hernandez hernández"><b>Miguel Hernández</b></li>
+                        <li data-search="blas de otero"><b>Blas de Otero</b></li>
+                        <li data-search="chantal maillard"><b>Chantal Maillard</b></li>
+                        <li class="sp-tier-anon" data-search="anonimo anónimo anonymous cantar de mio cid romance conde arnaldos no me mueve mi dios"><b><span data-l="es">Anónimo</span><span data-l="en">Anonymous</span></b><small><i>Cantar de mio Cid</i> · <span data-l="es"><i>Romance del conde Arnaldos</i></span><span data-l="en"><i>Romance del conde Arnaldos</i></span> · «No me mueve, mi Dios, para quererte»</small></li>
+                    </ul>
+                </div>
+                <div class="sp-tier sp-tier-a">
+                    <span class="sp-tier-lab">A</span>
+                    <ul>
+                        <li data-search="arcipreste de hita juan ruiz libro de buen amor"><b>Arcipreste de Hita</b><small><i>Libro de buen amor</i></small></li>
+                        <li data-search="garcilaso de la vega"><b>Garcilaso de la Vega</b></li>
+                        <li data-search="gongora góngora"><b>Góngora</b></li>
+                        <li data-search="quevedo"><b>Quevedo</b></li>
+                        <li data-search="lorca federico garcia"><b>Lorca</b></li>
+                    </ul>
+                </div>
+                <div class="sp-tier sp-tier-b">
+                    <span class="sp-tier-lab">B</span>
+                    <ul>
+                        <li data-search="becquer bécquer gustavo adolfo"><b>Bécquer</b></li>
+                        <li data-search="juan ramon jimenez"><b>Juan Ramón Jiménez</b></li>
+                        <li data-search="sylvia plath"><b>Sylvia Plath</b></li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <p class="sp-chapter">II · <span data-l="es">Oído</span><span data-l="en">Ears</span></p>
-
-        <section class="sp-list">
-            <h2><span data-l="es">Canciones favoritas</span><span data-l="en">Favourite songs</span></h2>
-            <ol class="sp-songs">
-                <li data-search="mi monstruo y yo veintiuno">
-                    <span class="sp-rank">1</span>
-                    <iframe class="sp-player" title="Mi monstruo y yo, Veintiuno" src="https://open.spotify.com/embed/track/67wbhq7my8mYJWNxwbQZCK?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                </li>
-                <li data-search="the arrival yan qing">
-                    <span class="sp-rank">2</span>
-                    <iframe class="sp-player" title="the arrival, Yan Qing" src="https://open.spotify.com/embed/track/3ZR5rPz9XDYK2PTOGP8mOD?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                </li>
-            </ol>
-        </section>
 
         <section class="sp-list">
             <h2><span data-l="es">Canciones que fueron mis favoritas</span><span data-l="en">Songs that were once my favourite</span></h2>
@@ -346,7 +334,7 @@
         <section class="sp-list">
             <h2><span data-l="es">Artistas favoritos</span><span data-l="en">Favourite artists</span></h2>
             <p class="sp-note"><span data-l="es">Mis canciones de cada uno, en orden. Toca una para escucharla.</span><span data-l="en">My songs by each of them, in order. Tap one to listen.</span></p>
-            <div class="sp-artists">
+            <div class="sp-artists sp-swipe">
                 <div class="sp-artist" data-search="la moda la m.o.d.a. maravillosa orquesta del alcohol burgos">
                     <div class="sp-artist-head"><img class="sp-artist-pic" src="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb597bbff23d5d27da6d3dde14" alt="La M.O.D.A." loading="lazy"><span class="sp-poet-txt"><b>La M.O.D.A.</b><span class="sp-meta">Burgos</span></span></div>
                     <ol class="sp-chips">
@@ -370,15 +358,29 @@
                 </div>
                 <div class="sp-artist" data-search="mvrk">
                     <div class="sp-artist-head"><img class="sp-artist-pic" src="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5ebffc3d0acfa836722752a397d" alt="mvrk" loading="lazy"><span class="sp-poet-txt"><b>mvrk</b><span class="sp-meta">Rap</span></span></div>
-                    <ol class="sp-chips">
-                        <li><button type="button" data-track="1bD7GGvgZdqTBcAPJ9NYoG" aria-pressed="true">Algo nos olíamos</button></li>
-                        <li><button type="button" data-track="3WFmq2n3RValfsDQKSJWvc">Niebla</button></li>
-                        <li><button type="button" data-track="3itGtF3ug31bgqAts7t56d">zigzag</button></li>
-                        <li><button type="button" data-track="7mheRDZGtVLHVLI1Ks46Jg">byeBYE</button></li>
-                        <li><button type="button" data-track="2zvvoRLAWTaq0PbbcWUsoc">Apretar +</button></li>
-                        <li><button type="button" data-track="08CdXHL0ABAyK38GYBowmT">Auxilio</button></li>
-                    </ol>
-                    <iframe class="sp-player" title="mvrk" src="https://open.spotify.com/embed/track/1bD7GGvgZdqTBcAPJ9NYoG?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    <div class="sp-albums">
+                        <div class="sp-album">
+                            <img src="https://i.scdn.co/image/ab67616d00004851575fa3800e6a0c55e8e29cfa" alt="" loading="lazy">
+                            <p><i>La fe que me tengas</i> <span class="sp-meta"><span data-l="es">feb 2024</span><span data-l="en">Feb 2024</span></span></p>
+                            <ol class="sp-chips">
+                            <li><button type="button" data-track="4z0g53lA8sqINPeJ4bpjNu" aria-pressed="true">55 mph</button></li>
+                            <li><button type="button" data-track="1bD7GGvgZdqTBcAPJ9NYoG">Algo nos olíamos</button></li>
+                            <li><button type="button" data-track="3WFmq2n3RValfsDQKSJWvc">Niebla</button></li>
+                            </ol>
+                        </div>
+                        <div class="sp-album">
+                            <img src="https://i.scdn.co/image/ab67616d00004851c007d1483cfe9452be8f7f9a" alt="" loading="lazy">
+                            <p><i>PÓRTATE BIEN!</i> <span class="sp-meta"><span data-l="es">may 2025</span><span data-l="en">May 2025</span></span></p>
+                            <ol class="sp-chips">
+                            <li><button type="button" data-track="7mheRDZGtVLHVLI1Ks46Jg">byeBYE</button></li>
+                            <li><button type="button" data-track="2zvvoRLAWTaq0PbbcWUsoc">Apretar +</button></li>
+                            <li><button type="button" data-track="3itGtF3ug31bgqAts7t56d">zigzag</button></li>
+                            <li><button type="button" data-track="5WvUiQfEPIvqGwPFFdQcuO">Warning</button></li>
+                            <li><button type="button" data-track="08CdXHL0ABAyK38GYBowmT">Auxilio</button></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <iframe class="sp-player" title="mvrk" src="https://open.spotify.com/embed/track/4z0g53lA8sqINPeJ4bpjNu?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                 </div>
             </div>
         </section>
@@ -387,7 +389,6 @@
 
         <section class="sp-list">
             <h2><span data-l="es">Palabras favoritas</span><span data-l="en">Favourite words</span></h2>
-            <p class="sp-note"><span data-l="es">A la derecha, una posible traducción al inglés. Tiene que ser una sola palabra.</span><span data-l="en">Spanish words, with a possible English translation on the right. One word each.</span></p>
             <ol class="sp-words">
                 <li><span class="es">sabes</span><span class="en">you know</span></li>
                 <li><span class="es">eso</span><span class="en">that's it / exactly</span></li>
@@ -404,7 +405,7 @@
 
         <section class="sp-list">
             <h2><span data-l="es">Estrofas favoritas</span><span data-l="en">Favourite stanzas</span></h2>
-            <p class="sp-note"><span data-l="es">Cada burbuja es un verso, con sus sílabas encima; mismo color, misma rima. En minúscula, arte menor.</span><span data-l="en">Each bubble is a line, with its syllables on top; same colour, same rhyme. Lowercase means short lines.</span></p>
+            <p class="sp-note"><span data-l="es">¿Cuántas conocías ya?</span><span data-l="en">How many did you already know?</span></p>
             <ol class="sp-ranked sp-stanzas">
                 <li data-search="soneto sonnet"><b data-l="es">soneto</b><b data-l="en">sonnet</b><span class="sp-rhyme" aria-hidden="true"><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#f4b6c8">A</i></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#b9c8f2">B</i></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#b9c8f2">B</i></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#f4b6c8">A</i></i><i class="sp-gap-s"></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#f4b6c8">A</i></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#b9c8f2">B</i></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#b9c8f2">B</i></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#f4b6c8">A</i></i><i class="sp-gap-s"></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#b8e0c2">C</i></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#f7d59c">D</i></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#b8e0c2">C</i></i><i class="sp-gap-s"></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#f7d59c">D</i></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#b8e0c2">C</i></i><i class="sp-v"><small>11</small><i class="sp-r" style="--c:#f7d59c">D</i></i></span></li>
                 <li data-search="decima décima espinela"><b>décima</b><span class="sp-rhyme" aria-hidden="true"><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#f4b6c8">a</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#b9c8f2">b</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#b9c8f2">b</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#f4b6c8">a</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#f4b6c8">a</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#b8e0c2">c</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#b8e0c2">c</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#f7d59c">d</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#f7d59c">d</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#b8e0c2">c</i></i></span></li>
@@ -412,6 +413,16 @@
                 <li data-search="coplas manriqueñas pie quebrado manrique"><b data-l="es">coplas manriqueñas</b><b data-l="en">Manrique stanzas</b><span class="sp-meta"><span data-l="es">de pie quebrado</span><span data-l="en">with a broken foot</span></span><span class="sp-rhyme" aria-hidden="true"><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#f4b6c8">a</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#b9c8f2">b</i></i><i class="sp-v"><small>4</small><i class="sp-r sp-r-xs" style="--c:#b8e0c2">c</i></i><i class="sp-gap-s"></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#f4b6c8">a</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#b9c8f2">b</i></i><i class="sp-v"><small>4</small><i class="sp-r sp-r-xs" style="--c:#b8e0c2">c</i></i></span></li>
                 <li data-search="romance ballad"><b data-l="es">romance</b><b data-l="en">romance (ballad)</b><span class="sp-rhyme" aria-hidden="true"><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#deded8">-</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#f4b6c8">a</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#deded8">-</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#f4b6c8">a</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#deded8">-</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#f4b6c8">a</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#deded8">-</i></i><i class="sp-v"><small>8</small><i class="sp-r sp-r-s" style="--c:#f4b6c8">a</i></i><i class="sp-more">…</i></span></li>
                 <li data-search="cuaderna via"><b>cuaderna vía</b><span class="sp-meta"><span data-l="es">4 alejandrinos monorrimos</span><span data-l="en">4 single-rhyme alexandrines</span></span><span class="sp-rhyme sp-rhyme-alex"><i class="sp-v"><small>7 + 7</small><i class="sp-alex" style="--c:#f4b6c8"><i></i><i>A</i></i><em class="sp-alex-lab"><span class="sp-ar"><i>↑</i></span><span data-l="es">cesura</span><span data-l="en">caesura</span></em></i><i class="sp-v"><small>7 + 7</small><i class="sp-alex" style="--c:#f4b6c8"><i></i><i>A</i></i><em class="sp-alex-lab"><span class="sp-ar sp-ar-2"><i>↑</i><i>↑</i></span><span data-l="es">hemistiquios</span><span data-l="en">hemistichs</span></em></i><i class="sp-v"><small>7 + 7</small><i class="sp-alex" style="--c:#f4b6c8"><i></i><i>A</i></i><em class="sp-alex-lab"></em></i><i class="sp-v"><small>7 + 7</small><i class="sp-alex" style="--c:#f4b6c8"><i></i><i>A</i></i><em class="sp-alex-lab"></em></i></span></li>
+            </ol>
+        </section>
+
+        <section class="sp-list">
+            <h2><span data-l="es">Números favoritos</span><span data-l="en">Favourite numbers</span></h2>
+            <ol class="sp-numbers">
+                <li data-search="menos cinco minus five -5"><span class="sp-rank">1</span>−5</li>
+                <li data-search="veintisiete twenty-seven 27"><span class="sp-rank">2</span>27</li>
+                <li data-search="noventa y uno ninety-one 91"><span class="sp-rank">3</span>91</li>
+                <li data-search="ochenta y cuatro eighty-four 84"><span class="sp-rank">4</span>84</li>
             </ol>
         </section>
 
@@ -433,7 +444,7 @@
                     <h3><span data-l="es">Antifavoritos*</span><span data-l="en">Least favourite*</span></h3>
                     <ol class="sp-sky">
                 <li class="hungry"><b data-l="es">Justo antes de comer</b><b data-l="en">Right before lunch</b><span data-l="es">right before lunch</span><span data-l="en">justo antes de comer</span></li>
-                <li class="hungry"><b data-l="es">Justo antes de comer</b><b data-l="en">Right before lunch</b><span data-l="es">right before lunch</span><span data-l="en">justo antes de comer</span></li>
+                <li class="hungry"><b data-l="es">Justo antes de justo antes de comer</b><b data-l="en">Right before right before lunch</b><span data-l="es">right before right before lunch</span><span data-l="en">justo antes de justo antes de comer</span></li>
                 <li class="hungry"><b data-l="es">Justo antes de cenar</b><b data-l="en">Right before dinner</b><span data-l="es">right before dinner</span><span data-l="en">justo antes de cenar</span></li>
             </ol>
                 </div>
@@ -480,10 +491,11 @@
                 <article class="sp-city" data-search="barcelona españa spain">
                     <span class="sp-rank">3</span>
                     <img src="resources/img/ciudad_barcelona.jpg" alt="Barcelona" loading="lazy">
-                    <h3>Barcelona</h3>
+                    <h3>Barcelona<sup class="sp-ast">*</sup></h3>
                     <p class="sp-meta"><span data-l="es">España</span><span data-l="en">Spain</span></p>
                 </article>
             </div>
+            <p class="sp-note sp-asterisk"><span data-l="es">* No temas, Madrid no cuenta, no puede contar, soy de Madrid.</span><span data-l="en">* Don't worry, Madrid doesn't count, it can't count, I'm from Madrid.</span></p>
         </section>
 
         <section class="sp-list">
@@ -535,11 +547,10 @@
                 <li><span data-l="es">Carteles de <i>Origen</i>, <i>Vértigo</i> y <i>Pulp Fiction</i>: Wikipedia / Wikimedia.</span><span data-l="en">Posters of <i>Inception</i>, <i>Vertigo</i> and <i>Pulp Fiction</i>: Wikipedia / Wikimedia.</span></li>
                 <li><span data-l="es">Carteles de las series: The Movie Database (TMDB).</span><span data-l="en">Series posters: The Movie Database (TMDB).</span></li>
                 <li><span data-l="es">Portadas de los libros: Open Library.</span><span data-l="en">Book covers: Open Library.</span></li>
-                <li><span data-l="es">Retratos de Miguel Hernández, Sylvia Plath y Pío Baroja, y fotos de ciudades: Wikimedia Commons.</span><span data-l="en">Portraits of Miguel Hernández, Sylvia Plath and Pío Baroja, and city photos: Wikimedia Commons.</span></li>
-                <li><span data-l="es">Foto de Blas de Otero: Manuel María Fernández Gochi, CC BY-SA 4.0, recortada.</span><span data-l="en">Blas de Otero photo: Manuel María Fernández Gochi, CC BY-SA 4.0, cropped.</span></li>
+                <li><span data-l="es">Retrato de Pío Baroja y fotos de ciudades: Wikimedia Commons.</span><span data-l="en">Portrait of Pío Baroja and city photos: Wikimedia Commons.</span></li>
                 <li><span data-l="es">Fotos de artistas, carátulas y reproductores: Spotify.</span><span data-l="en">Artist photos, cover art and players: Spotify.</span></li>
                 <li><span data-l="es">Siluetas de países: Natural Earth (dominio público).</span><span data-l="en">Country silhouettes: Natural Earth (public domain).</span></li>
-                <li><span data-l="es">Los poemas de Blas de Otero y Sylvia Plath y los extractos de libros pertenecen a sus autores y editoriales; se citan como fragmentos. El soneto de Miguel Hernández es de dominio público.</span><span data-l="en">The poems by Blas de Otero and Sylvia Plath and the book excerpts belong to their authors and publishers; they are quoted as fragments. Miguel Hernández's sonnet is in the public domain.</span></li>
+                <li><span data-l="es">Los extractos de libros pertenecen a sus autores y editoriales; se citan como fragmentos.</span><span data-l="en">The book excerpts belong to their authors and publishers; they are quoted as fragments.</span></li>
             </ul>
         </div>
 
@@ -555,7 +566,7 @@
             <section class="sp-list">
                 <h2><span data-l="es">Objetivos de 2026</span><span data-l="en">Goals for 2026</span> <span class="rc-state"><span data-l="es">abierto</span><span data-l="en">open</span></span></h2>
                 <p class="sp-note"><span data-l="es">Me los puse en julio de 2026. Ser más…</span><span data-l="en">I set them in July 2026. To be more…</span></p>
-                <div class="rc-goals">
+                <div class="rc-goals sp-swipe">
                     <article class="rc-goal">
                         <span class="sp-rank">1</span>
                         <h3><span data-l="es">Infantil</span><span data-l="en">Childlike</span></h3>
@@ -578,88 +589,30 @@
                     </article>
                 </div>
             </section>
+
+            <section class="sp-list">
+                <h2><span data-l="es">Estado de felicidad</span><span data-l="en">Happiness level</span></h2>
+                <div class="rc-hp">
+                    <div class="rc-hp-top"><span class="rc-hp-lvl">LVL</span><b class="rc-hp-num">10<small>/10</small></b></div>
+                    <div class="rc-hp-bar" role="img" aria-label="10/10"><i style="--c:#e86a5c"></i><i style="--c:#ec8455"></i><i style="--c:#f09d50"></i><i style="--c:#f2b64d"></i><i style="--c:#f2c94e"></i><i style="--c:#d8d65a"></i><i style="--c:#a9d86c"></i><i style="--c:#7fd38a"></i><i style="--c:#5fd8a6"></i><i style="--c:#5ee0c0"></i></div>
+                    <svg class="rc-chart" viewBox="0 0 320 130" role="img" aria-label="2026: de 4-5 en enero a 10 desde octubre">
+                        <defs><linearGradient id="rc-heat" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#e86a5c"/><stop offset="0.45" stop-color="#f2c14e"/><stop offset="0.75" stop-color="#7fd38a"/><stop offset="1" stop-color="#5ee0c0"/></linearGradient></defs>
+                        <g class="rc-grid"><line x1="22" x2="312" y1="108.0" y2="108.0"/><text x="17" y="111.0" text-anchor="end">0</text><line x1="22" x2="312" y1="58.0" y2="58.0"/><text x="17" y="61.0" text-anchor="end">5</text><line x1="22" x2="312" y1="8.0" y2="8.0"/><text x="17" y="11.0" text-anchor="end">10</text></g>
+                        <path class="rc-area" d="M22.0 63.0 L69.0 58.0 L96.9 53.0 L117.6 43.0 L142.3 38.0 L166.2 23.0 L181.3 18.0 L246.7 18.0 L247.5 8.0 L265.0 8.0 L265.0 108.0 L22.0 108.0 Z"/>
+                        <path class="rc-line" d="M22.0 63.0 L69.0 58.0 L96.9 53.0 L117.6 43.0 L142.3 38.0 L166.2 23.0 L181.3 18.0 L246.7 18.0 L247.5 8.0 L265.0 8.0"/>
+                        <circle class="rc-now" cx="265.0" cy="8.0" r="4"/>
+                        <g class="rc-months"><text x="33.2" y="124" text-anchor="middle"><tspan data-l="es">E</tspan><tspan data-l="en">J</tspan></text><text x="57.9" y="124" text-anchor="middle">F</text><text x="80.2" y="124" text-anchor="middle">M</text><text x="104.9" y="124" text-anchor="middle">A</text><text x="128.8" y="124" text-anchor="middle">M</text><text x="153.5" y="124" text-anchor="middle">J</text><text x="177.4" y="124" text-anchor="middle">J</text><text x="202.1" y="124" text-anchor="middle">A</text><text x="226.8" y="124" text-anchor="middle">S</text><text x="250.7" y="124" text-anchor="middle">O</text><text x="275.4" y="124" text-anchor="middle">N</text><text x="299.3" y="124" text-anchor="middle">D</text></g>
+                    </svg>
+                </div>
+            </section>
         </div>
     </div>
 
-    <!-- Poem sheet: slides in over the page; the page stays visible behind it -->
+    <!-- Book sheet: slides in over the page; the page stays visible behind it -->
     <div class="sp-sheet-bg" hidden></div>
     <aside class="sp-sheet" id="sp-sheet" aria-hidden="true">
         <a class="sp-close" href="#">← <span data-l="es">Volver</span><span data-l="en">Back</span></a>
 
-        <article class="sp-poem" data-poem="hernandez" hidden>
-            <p class="sp-meta">Miguel Hernández · <i>El rayo que no cesa</i> (1936), <span data-l="es">soneto 2</span><span data-l="en">sonnet 2</span></p>
-            <h2>¿No cesará este rayo que me habita?</h2>
-            <div class="sp-lines">
-                <span lang="es">¿No cesará este rayo que me habita</span><span lang="en" class="sp-tr">Will it never cease, this lightning that lives</span>
-                <span lang="es">el corazón de exasperadas fieras</span><span lang="en" class="sp-tr">in my heart of exasperated beasts</span>
-                <span lang="es">y de fraguas coléricas y herreras</span><span lang="en" class="sp-tr">and of wrathful forges and smithies</span>
-                <span lang="es">donde el metal más fresco se marchita?</span><span lang="en" class="sp-tr">where the freshest metal withers?</span>
-                <span class="sp-gap"></span>
-                <span lang="es">¿No cesará esta terca estalactita</span><span lang="en" class="sp-tr">Will it never cease, this stubborn stalactite,</span>
-                <span lang="es">de cultivar sus duras cabelleras</span><span lang="en" class="sp-tr">from growing its hard manes</span>
-                <span lang="es">como espadas y rígidas hogueras</span><span lang="en" class="sp-tr">like swords and rigid bonfires</span>
-                <span lang="es">hacia mi corazón que muge y grita?</span><span lang="en" class="sp-tr">towards my heart that bellows and screams?</span>
-                <span class="sp-gap"></span>
-                <span lang="es">Este rayo ni cesa ni se agota:</span><span lang="en" class="sp-tr">This lightning neither ceases nor wears out:</span>
-                <span lang="es">de mí mismo tomó su procedencia</span><span lang="en" class="sp-tr">it took its origin from me myself</span>
-                <span lang="es">y ejercita en mí mismo sus furores.</span><span lang="en" class="sp-tr">and practises its furies on me myself.</span>
-                <span class="sp-gap"></span>
-                <span lang="es">Esta obstinada piedra de mí brota</span><span lang="en" class="sp-tr">This obstinate stone springs from me</span>
-                <span lang="es">y sobre mí dirige la insistencia</span><span lang="en" class="sp-tr">and aims at me the insistence</span>
-                <span lang="es">de sus lluviosos rayos destructores.</span><span lang="en" class="sp-tr">of its rainy, destructive bolts.</span>
-            </div>
-        </article>
-
-        <article class="sp-poem" data-poem="otero" hidden>
-            <p class="sp-meta">Blas de Otero · <i>Ancia</i> (1958)</p>
-            <h2>Lástima</h2>
-            <div class="sp-lines sp-epi">
-                <span lang="es">Cosa de grande maravilla y lástima</span>
-                <span lang="es">que sea aquí tanta flaqueza e</span>
-                <span lang="es">impurezas del ánima, que, siendo la</span>
-                <span lang="es">mano de Dios de suyo tan blanda</span>
-                <span lang="es">y suave, la sienta el ánima aquí tan</span>
-                <span lang="es">grave y contraria.</span>
-                <span lang="en" class="sp-tr">A thing of great wonder and pity that the soul should here be so weak and impure that, the hand of God being in itself so soft and gentle, the soul should here feel it so heavy and contrary.</span>
-                <span class="sp-epi-by">San Juan de la Cruz</span>
-            </div>
-            <div class="sp-lines">
-                <span lang="es">Me haces daño, Señor. Quita tu mano</span><span lang="en" class="sp-tr">You hurt me, Lord. Take your hand</span>
-                <span lang="es">de encima. Déjame con mi vacío,</span><span lang="en" class="sp-tr">off me. Leave me with my emptiness,</span>
-                <span lang="es">déjame. Para abismo, con el mío</span><span lang="en" class="sp-tr">leave me. For an abyss, my own</span>
-                <span lang="es">tengo bastante. ¡Oh Dios!, si eres humano,</span><span lang="en" class="sp-tr">is quite enough. Oh God, if you are human,</span>
-                <span class="sp-gap"></span>
-                <span class="sp-cut">[…]</span>
-            </div>
-            <aside class="sp-warning">
-                <span class="sp-warning-face" aria-hidden="true">😔</span>
-                <p><b data-l="es">Aviso</b><b data-l="en">Warning</b>
-                <span data-l="es">Vivimos en un mundo donde existen los derechos de autor y las obras tienen propiedad intelectual. Por eso no puedo ponerte aquí el poema entero, y es una pena, porque me encantaría compartirlo contigo ya. Pero me rijo por un sistema de leyes que sobrepasa mi poder.</span><span data-l="en">We live in a world where copyright exists and works are intellectual property. That's why I can't put the whole poem here, which is a shame, because I'd love to share it with you right now. But I'm bound by a system of laws beyond my power.</span></p>
-            </aside>
-        </article>
-
-        <article class="sp-poem" data-poem="plath" hidden>
-            <p class="sp-meta">Sylvia Plath · <i>Ariel</i> (1965)</p>
-            <h2>Lady Lazarus</h2>
-            <div class="sp-lines">
-                <span lang="en">I have done it again.</span><span lang="es" class="sp-tr">Lo he vuelto a hacer.</span>
-                <span lang="en">One year in every ten</span><span lang="es" class="sp-tr">Un año de cada diez</span>
-                <span lang="en">I manage it——</span><span lang="es" class="sp-tr">lo consigo——</span>
-                <span class="sp-gap"></span>
-                <span class="sp-cut">[…]</span>
-                <span class="sp-gap"></span>
-                <span lang="en">Dying</span><span lang="es" class="sp-tr">Morir</span>
-                <span lang="en">Is an art, like everything else.</span><span lang="es" class="sp-tr">es un arte, como todo.</span>
-                <span lang="en">I do it exceptionally well.</span><span lang="es" class="sp-tr">Yo lo hago excepcionalmente bien.</span>
-                <span class="sp-gap"></span>
-                <span class="sp-cut">[…]</span>
-            </div>
-            <aside class="sp-warning">
-                <span class="sp-warning-face" aria-hidden="true">😔</span>
-                <p><b data-l="es">Aviso</b><b data-l="en">Warning</b>
-                <span data-l="es">Vivimos en un mundo donde existen los derechos de autor y las obras tienen propiedad intelectual. Por eso no puedo ponerte aquí el poema entero, y es una pena, porque me encantaría compartirlo contigo ya. Pero me rijo por un sistema de leyes que sobrepasa mi poder.</span><span data-l="en">We live in a world where copyright exists and works are intellectual property. That's why I can't put the whole poem here, which is a shame, because I'd love to share it with you right now. But I'm bound by a system of laws beyond my power.</span></p>
-            </aside>
-        </article>
         <article class="sp-poem" data-poem="nada" hidden>
             <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/10663896-L.jpg" alt=""><figcaption><span data-l="es">Barcelona, primeros años cuarenta. Andrea llega sola a la calle de Aribau.</span><span data-l="en">Barcelona, early 1940s. Andrea arrives alone at Aribau street.</span></figcaption></figure>
             <p class="sp-meta">Carmen Laforet · <i>Nada</i> (1945)</p>
@@ -740,7 +693,7 @@
             var term = norm(q.value.trim());
             var anyShown = false;
             document.querySelectorAll('.sp-list').forEach(function (sec) {
-                var items = sec.querySelectorAll('.sp-list > ol > li, .sp-list > ul > li, .sp-sky > li:not(.sp-empty), .sp-film, .sp-poet, .sp-artist, .sp-country, .sp-show, .sp-city');
+                var items = sec.querySelectorAll('.sp-list > ol > li, .sp-list > ul > li, .sp-tier li, .sp-sky > li:not(.sp-empty), .sp-numbers > li, .sp-film, .sp-poet, .sp-artist, .sp-country, .sp-show, .sp-city');
                 var title = norm(sec.querySelector('h2').textContent);
                 var shown = 0;
                 items.forEach(function (it) {
@@ -815,6 +768,44 @@
                 li.appendChild(f);
                 btn.setAttribute('aria-expanded', 'true');
             });
+        });
+    })();
+    </script>
+    <script>
+    // On the phone, card lists are swiped sideways: a dot per card shows where you are
+    (function () {
+        document.querySelectorAll('.sp-swipe').forEach(function (row) {
+            var cards = Array.prototype.filter.call(row.querySelectorAll('.sp-film, .sp-show, .sp-poet, .sp-artist, .rc-goal'),
+                function (c) { return c.closest('.sp-swipe') === row; });
+            if (cards.length < 2) return;
+            var dots = document.createElement('div');
+            dots.className = 'sp-dots';
+            cards.forEach(function (card, i) {
+                var b = document.createElement('button');
+                b.type = 'button';
+                b.setAttribute('aria-label', String(i + 1));
+                b.addEventListener('click', function () {
+                    row.scrollTo({ left: card.offsetLeft - row.offsetLeft - 12, behavior: 'smooth' });
+                });
+                dots.appendChild(b);
+            });
+            row.after(dots);
+            var mark = function () {
+                var visible = cards.filter(function (c) { return !c.hidden && c.offsetParent; });
+                var i = 0, best = Infinity;
+                visible.forEach(function (c, k) {
+                    var d = Math.abs(c.getBoundingClientRect().left - row.getBoundingClientRect().left);
+                    if (d < best) { best = d; i = cards.indexOf(c); }
+                });
+                Array.prototype.forEach.call(dots.children, function (b, k) {
+                    b.hidden = !visible.includes(cards[k]);
+                    b.setAttribute('aria-current', String(k === i));
+                });
+            };
+            row.addEventListener('scroll', function () { requestAnimationFrame(mark); }, { passive: true });
+            window.addEventListener('resize', mark);
+            document.addEventListener('input', function () { setTimeout(mark, 0); });
+            mark();
         });
     })();
     </script>
