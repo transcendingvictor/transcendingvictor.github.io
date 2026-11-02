@@ -157,3 +157,38 @@ details summary { cursor: pointer; font-size: 0.85rem; color: var(--suave); padd
 
 .navegacion { display: flex; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--linea); font-size: 0.9rem; }
 .navegacion a { text-decoration: none; }
+
+/* Año con el número de piezas */
+.anio .n { margin-left: 0.5rem; font-family: inherit; font-size: 0.85rem; color: var(--suave); }
+
+/* Móvil: hecho para el pulgar. Cada año es una fila que se desliza de lado, una burbuja
+   tras otra; la página solo baja. En el poema, anterior y siguiente quedan abajo, a mano */
+@media (max-width: 750px) {
+  .burbujas {
+    display: flex; gap: 0.8rem;
+    overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory; scroll-padding-inline: 1rem;
+    margin: 0 -1rem; padding: 0.3rem 1rem 0.8rem;
+    scrollbar-width: none;
+  }
+  .burbujas::-webkit-scrollbar { display: none; }
+  .burbujas li { flex: 0 0 72%; scroll-snap-align: start; min-height: 10.5rem; }
+  .burbujas li:last-child { margin-right: 1rem; }
+  .burbuja:hover { transform: none; box-shadow: none; }
+  .burbuja .t { font-size: 1.6rem; }
+  .anio { margin: 1.6rem 0 0.4rem; }
+  .filtros input, .filtros select { min-height: 2.8rem; font-size: 1rem; }
+
+  .navegacion {
+    position: sticky; bottom: 0; z-index: 5;
+    margin: 2.5rem -1rem 0; padding: 0.6rem 1rem calc(0.6rem + env(safe-area-inset-bottom));
+    background: var(--fondo); border-top: 0.15rem solid var(--tinta);
+  }
+  .navegacion a {
+    flex: 1 1 0; min-width: 0; padding: 0.7rem 0.8rem;
+    border: 0.15rem solid var(--tinta); border-radius: 999px; background: #fff;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .navegacion a:last-child { text-align: right; }
+  .navegacion span { flex: 1 1 0; }
+}
