@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261102d" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261102e" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -578,22 +578,22 @@
 
         <section class="sp-list">
             <h2><span data-l="es">Momentos del día</span><span data-l="en">Times of day</span></h2>
-            <div class="sp-duel">
+            <div class="sp-duel sp-swipe">
                 <div class="sp-duel-col">
                     <h3><span data-l="es">Favoritos</span><span data-l="en">Favourite</span></h3>
                     <ol class="sp-sky">
-                <li class="nautical"><b data-l="es">Crepúsculo náutico</b><b data-l="en">Nautical twilight</b><span data-l="es">nautical twilight</span><span data-l="en">crepúsculo náutico</span></li>
-                <li class="civil"><b data-l="es">Crepúsculo civil</b><b data-l="en">Civil twilight</b><span data-l="es">civil twilight</span><span data-l="en">crepúsculo civil</span></li>
-                <li class="golden"><b data-l="es">Hora dorada</b><b data-l="en">Golden hour</b><span data-l="es">golden hour</span><span data-l="en">hora dorada</span></li>
+                <li class="nautical"><b data-l="es">Crepúsculo náutico</b><b data-l="en">Nautical twilight</b></li>
+                <li class="civil"><b data-l="es">Crepúsculo civil</b><b data-l="en">Civil twilight</b></li>
+                <li class="golden"><b data-l="es">Hora dorada</b><b data-l="en">Golden hour</b></li>
             </ol>
                 </div>
                 <span class="sp-vs" aria-hidden="true">vs</span>
                 <div class="sp-duel-col">
                     <h3><span data-l="es">Antifavoritos*</span><span data-l="en">Least favourite*</span></h3>
                     <ol class="sp-sky">
-                <li class="hungry"><b data-l="es">Justo antes de comer</b><b data-l="en">Right before lunch</b><span data-l="es">right before lunch</span><span data-l="en">justo antes de comer</span></li>
-                <li class="hungry"><b data-l="es">Justo antes de justo antes de comer</b><b data-l="en">Right before right before lunch</b><span data-l="es">right before right before lunch</span><span data-l="en">justo antes de justo antes de comer</span></li>
-                <li class="hungry"><b data-l="es">Justo antes de cenar</b><b data-l="en">Right before dinner</b><span data-l="es">right before dinner</span><span data-l="en">justo antes de cenar</span></li>
+                <li class="hungry"><b data-l="es">Justo antes de comer</b><b data-l="en">Right before lunch</b></li>
+                <li class="hungry"><b data-l="es">Justo antes de justo antes de comer</b><b data-l="en">Right before right before lunch</b></li>
+                <li class="hungry"><b data-l="es">Justo antes de cenar</b><b data-l="en">Right before dinner</b></li>
             </ol>
                 </div>
             </div>
@@ -946,7 +946,7 @@
     // On the phone, card lists are swiped sideways: a dot per card shows where you are
     (function () {
         document.querySelectorAll('.sp-swipe').forEach(function (row) {
-            var cards = Array.prototype.filter.call(row.querySelectorAll('.sp-film, .sp-show, .sp-poet, .sp-artist, .rc-goal'),
+            var cards = Array.prototype.filter.call(row.querySelectorAll('.sp-film, .sp-show, .sp-poet, .sp-artist, .rc-goal, .sp-duel-col'),
                 function (c) { return c.closest('.sp-swipe') === row; });
             if (cards.length < 2) return;
             var dots = document.createElement('div');

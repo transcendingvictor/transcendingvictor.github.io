@@ -1118,3 +1118,14 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-booktime li::before { top: 0.35rem; }
   .sp-medal { right: -0.3rem; }
 }
+
+/* Times of day on the phone: favourites first, big; swipe to the least favourite */
+@media only screen and (max-width:750px) {
+  .sp-duel.sp-swipe { gap: 0.8rem; }
+  .sp-duel.sp-swipe > .sp-duel-col { flex: 0 0 86%; }
+  .sp-duel.sp-swipe > .sp-vs { display: none; }
+  .sp-duel-col h3 { font-size: 1.2rem; margin-bottom: 0.6rem; }
+  .sp-duel .sp-sky li { font-size: 1.1rem; padding: 0.9rem 1rem; min-height: 5.4rem; justify-content: center; line-height: 1.25; }
+  .sp-duel .sp-sky li span { font-size: 0.9rem; }
+  .sp-duel .sp-sky .hungry { min-height: 5.4rem; }
+}
