@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261102b" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -220,7 +220,7 @@
             <div class="sp-tiers">
                 <div class="sp-tier sp-tier-s">
                     <span class="sp-tier-lab">S</span>
-                    <div class="sp-bards sp-swipe">
+                    <div class="sp-deck">
                         <article class="sp-bard" data-search="jorge manrique coplas">
                             <img src="resources/img/poeta_jorge_manrique.jpg" alt="Jorge Manrique" loading="lazy">
                             <h3>Jorge Manrique</h3>
@@ -255,7 +255,7 @@
                 </div>
                 <div class="sp-tier sp-tier-a">
                     <span class="sp-tier-lab">A</span>
-                    <div class="sp-bards sp-swipe">
+                    <div class="sp-deck">
                         <article class="sp-bard" data-search="arcipreste de hita juan ruiz libro de buen amor">
                             <img src="resources/img/poeta_arcipreste_hita.jpg" alt="Arcipreste de Hita" loading="lazy">
                             <h3>Arcipreste de Hita</h3>
@@ -285,7 +285,7 @@
                 </div>
                 <div class="sp-tier sp-tier-b">
                     <span class="sp-tier-lab">B</span>
-                    <div class="sp-bards sp-swipe">
+                    <div class="sp-deck">
                         <article class="sp-bard" data-search="becquer bécquer gustavo adolfo rimas leyendas">
                             <img src="resources/img/poeta_becquer.jpg" alt="Bécquer" loading="lazy">
                             <h3>Bécquer</h3>
@@ -352,6 +352,14 @@
                         <span class="sp-play" aria-hidden="true">▶</span>
                     </button>
                 </li>
+                <li data-search="el pensamiento circular ivan ferreiro iván">
+                    <button type="button" class="sp-song" data-track="29t3cccZkM7LkI4ssqZg6r" aria-expanded="false">
+                        <span class="sp-when"><b>2019</b><small><span data-l="es">enero</span><span data-l="en">January</span></small></span>
+                        <img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d000048514b2bfb2a270ac5a14eba4eed" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b>El pensamiento circular</b><span>Iván Ferreiro</span></span>
+                        <span class="sp-play" aria-hidden="true">▶</span>
+                    </button>
+                </li>
                 <li data-search="mi monstruo y yo veintiuno">
                     <button type="button" class="sp-song" data-track="67wbhq7my8mYJWNxwbQZCK" aria-expanded="false">
                         <span class="sp-when"><b>2021</b></span>
@@ -373,6 +381,14 @@
                         <span class="sp-when"><b>2026</b><small><span data-l="es">abril</span><span data-l="en">April</span></small></span>
                         <img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00004851bc81387c8a0832745989f02a" alt="" loading="lazy">
                         <span class="sp-song-txt"><b>Basureta (Tiempos raros)</b><span>Kase.O</span></span>
+                        <span class="sp-play" aria-hidden="true">▶</span>
+                    </button>
+                </li>
+                <li data-search="ya t has corrido ya te has corrido metrika d.basto">
+                    <button type="button" class="sp-song" data-track="6kz9Q0xOSj7t6Nny7ZNVaV" aria-expanded="false">
+                        <span class="sp-when"><b>2026</b><small><span data-l="es">septiembre</span><span data-l="en">September</span></small></span>
+                        <img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00004851e501dcafd838fadefb5b9e55" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b>Ya t Has Corrido?</b><span>Metrika</span></span>
                         <span class="sp-play" aria-hidden="true">▶</span>
                     </button>
                 </li>
@@ -619,7 +635,7 @@
                     <article class="rc-goal">
                         <span class="sp-rank">2</span>
                         <h3><span data-l="es">Trabajador</span><span data-l="en">Hard-working</span></h3>
-                        <p><span data-l="es">No necesariamente productivo, pero sentirme orgulloso de mi esfuerzo, y buscarlo.</span><span data-l="en">Not necessarily productive, but proud of my effort, and seeking it out.</span></p>
+                        <p><span data-l="es">No nos medimos por resultados, sino por esfuerzo. No necesariamente productivo, pero sentirme orgulloso de mi esfuerzo, y buscarlo.</span><span data-l="en">We don't measure ourselves by results, but by effort. Not necessarily productive, but proud of my effort, and seeking it out.</span></p>
                     </article>
                     <article class="rc-goal">
                         <span class="sp-rank">3</span>
@@ -830,7 +846,7 @@
     // On the phone, card lists are swiped sideways: a dot per card shows where you are
     (function () {
         document.querySelectorAll('.sp-swipe').forEach(function (row) {
-            var cards = Array.prototype.filter.call(row.querySelectorAll('.sp-film, .sp-show, .sp-poet, .sp-bard, .sp-artist, .rc-goal'),
+            var cards = Array.prototype.filter.call(row.querySelectorAll('.sp-film, .sp-show, .sp-poet, .sp-artist, .rc-goal'),
                 function (c) { return c.closest('.sp-swipe') === row; });
             if (cards.length < 2) return;
             var dots = document.createElement('div');
@@ -863,6 +879,95 @@
             document.addEventListener('input', function () { setTimeout(mark, 0); });
             mark();
         });
+    })();
+    </script>
+    <script>
+    // Poets: each tier is a deck of cards. Only the top card is seen; a flick sends it away and shows the next
+    (function () {
+        var decks = [];
+        document.querySelectorAll('.sp-deck').forEach(function (deck) {
+            var all = Array.prototype.slice.call(deck.querySelectorAll('.sp-bard'));
+            var idx = 0, busy = false;
+            var bar = document.createElement('div');
+            bar.className = 'sp-deck-bar';
+            bar.innerHTML = '<button type="button" class="sp-deck-prev" aria-label="‹">‹</button><span class="sp-deck-n"></span><button type="button" class="sp-deck-next" aria-label="›">›</button>';
+            deck.after(bar);
+            var n = bar.querySelector('.sp-deck-n');
+            function cards() { return all.filter(function (c) { return !c.classList.contains('sp-hide'); }); }
+            function render() {
+                var cs = cards();
+                if (idx >= cs.length) idx = 0;
+                all.forEach(function (c) { c.className = c.className.replace(/ ?sp-pos-\S+/g, ''); c.style.transform = ''; c.setAttribute('aria-hidden', 'true'); });
+                cs.forEach(function (c, k) {
+                    var d = (k - idx + cs.length) % cs.length;
+                    c.classList.add('sp-pos-' + (d > 2 ? 'x' : d));
+                    if (d === 0) c.removeAttribute('aria-hidden');
+                });
+                n.textContent = cs.length ? (idx + 1) + ' / ' + cs.length : '';
+                bar.hidden = cs.length < 2;
+                deck.closest('.sp-tier').classList.toggle('sp-hide', cs.length === 0);
+            }
+            function go(dir) {
+                var cs = cards();
+                if (busy || cs.length < 2) return;
+                busy = true;
+                var top = cs[idx];
+                if (dir > 0) {
+                    top.classList.add('sp-fly');
+                    top.style.transform = 'translateX(-130%) rotate(-14deg)';
+                    setTimeout(function () { top.classList.remove('sp-fly'); idx = (idx + 1) % cs.length; render(); busy = false; }, 260);
+                } else {
+                    idx = (idx - 1 + cs.length) % cs.length;
+                    var back = cs[idx];
+                    back.style.transform = 'translateX(130%) rotate(14deg)';
+                    render();
+                    back.style.transform = 'translateX(130%) rotate(14deg)';
+                    back.getBoundingClientRect();
+                    back.classList.add('sp-fly');
+                    back.style.transform = '';
+                    setTimeout(function () { back.classList.remove('sp-fly'); busy = false; }, 260);
+                }
+            }
+            bar.querySelector('.sp-deck-prev').addEventListener('click', function () { go(-1); });
+            bar.querySelector('.sp-deck-next').addEventListener('click', function () { go(1); });
+            // Drag with the thumb: the card follows the finger and leaves if pulled far enough
+            var x0 = null, y0 = 0, dx = 0, drag = false, card = null;
+            deck.addEventListener('pointerdown', function (e) {
+                if (busy) return;
+                card = cards()[idx]; if (!card) return;
+                x0 = e.clientX; y0 = e.clientY; dx = 0; drag = false;
+            });
+            deck.addEventListener('pointermove', function (e) {
+                if (x0 === null) return;
+                dx = e.clientX - x0;
+                if (!drag && Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(e.clientY - y0)) { drag = true; deck.setPointerCapture(e.pointerId); }
+                if (drag) card.style.transform = 'translateX(' + dx + 'px) rotate(' + (dx / 18) + 'deg)';
+            });
+            function end() {
+                if (x0 === null) return;
+                x0 = null;
+                if (!drag) { return; }
+                if (Math.abs(dx) > 60) {
+                    if (dx < 0) { go(1); }
+                    else { card.style.transform = ''; go(-1); }
+                } else {
+                    card.classList.add('sp-fly'); card.style.transform = '';
+                    setTimeout(function () { card.classList.remove('sp-fly'); }, 260);
+                }
+            }
+            deck.addEventListener('pointerup', end);
+            deck.addEventListener('pointercancel', end);
+            deck.addEventListener('click', function (e) { if (Math.abs(dx) < 8 && window.matchMedia('(hover: hover)').matches) go(1); });
+            deck.tabIndex = 0;
+            deck.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowRight') { go(1); e.preventDefault(); }
+                if (e.key === 'ArrowLeft') { go(-1); e.preventDefault(); }
+            });
+            decks.push(function () { idx = 0; render(); });
+            render();
+        });
+        var q = document.getElementById('sp-q');
+        if (q) q.addEventListener('input', function () { decks.forEach(function (f) { f(); }); });
     })();
     </script>
 </body>
