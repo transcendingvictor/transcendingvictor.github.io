@@ -384,14 +384,7 @@ html[data-lang="en"] [data-l="es"] {
 /* Least favourite moment */
 .sp-sky .hungry { background: repeating-linear-gradient(135deg, #d9d6cf 0 12px, #e8e5de 12px 24px); color: #1c1c1c; }
 
-/* Songs and artists (Spotify players, dark theme so they stay calm) */
-.sp-songs {
-  list-style: none;
-  max-width: 34rem;
-}
-
-.sp-songs li { position: relative; margin-bottom: 0.8rem; }
-
+/* Artists (Spotify players, dark theme so they stay calm) */
 .sp-player {
   display: block;
   width: 100%;
@@ -975,3 +968,23 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   header .nav-box li { flex: 1 1 auto; padding: 0.75rem 0.4rem; border-radius: 0 !important; }
   header .nav-box a { white-space: nowrap; font-size: 0.82rem; text-align: center; }
 }
+
+/* Artists with albums: a small cover and its date, then my songs from it, in order */
+.sp-albums { display: flex; flex-direction: column; gap: 0.5rem; margin: 0.7rem 0 0.8rem; }
+.sp-album { display: grid; grid-template-columns: 2.4rem 1fr; column-gap: 0.55rem; align-items: center; }
+.sp-album img { grid-row: 1 / 3; width: 2.4rem; height: 2.4rem; border-radius: 4px; border: 0.1rem solid #1c1c1c; align-self: start; }
+.sp-album p { margin: 0; font-size: 0.8rem; line-height: 1.2; text-align: left; }
+.sp-album p .sp-meta { font-size: 0.72rem; }
+.sp-album .sp-chips { margin: 0.25rem 0 0; gap: 0.25rem; }
+.sp-album .sp-chips button { font-size: 0.72rem; padding: 0.1rem 0.45rem; }
+
+/* Favourite numbers: one big figure per tile */
+.sp-numbers { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; max-width: 30rem; }
+.sp-numbers li {
+  position: relative; padding: 0.9rem 0.4rem 0.7rem;
+  border: 0.2rem solid #1c1c1c; border-radius: 10px; background-color: #e5d8f7;
+  text-align: center; font-size: 1.9rem; font-weight: 700; line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.sp-ast { font-size: 0.7em; font-weight: 400; margin-left: 0.1em; }
+.spectator .sp-asterisk { text-align: left; font-size: 0.8rem; margin-top: 0.5rem; }
