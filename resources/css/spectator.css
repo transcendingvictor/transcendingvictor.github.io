@@ -988,3 +988,26 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 }
 .sp-ast { font-size: 0.7em; font-weight: 400; margin-left: 0.1em; }
 .spectator .sp-asterisk { text-align: left; font-size: 0.8rem; margin-top: 0.5rem; }
+
+/* Happiness: a level bar like in a video game (ten segments, warm to bright) and the year so far */
+.rc-hp { max-width: 24rem; padding: 0.9rem 1rem 0.6rem; border: 0.2rem solid #0f1f16; border-radius: 12px; background-color: #17301f; }
+.rc-hp-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.45rem; color: #f1fcee; }
+.rc-hp-lvl { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; color: #9fdcb0; }
+.rc-hp-num { font-size: 2rem; line-height: 1; font-variant-numeric: tabular-nums; text-shadow: 0 0 12px rgba(94, 224, 192, 0.55); }
+.rc-hp-num small { font-size: 0.9rem; color: #9fdcb0; margin-left: 0.15rem; text-shadow: none; }
+.rc-hp-bar { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; padding: 3px; border: 0.15rem solid #f1fcee; border-radius: 6px; }
+.rc-hp-bar i { height: 1.2rem; border-radius: 2px; background-color: var(--c); box-shadow: 0 0 6px var(--c); animation: rc-fill 0.5s backwards; }
+.rc-hp-bar i:nth-child(n+9) { animation: rc-fill 0.5s backwards, rc-glow 2.4s 0.6s ease-in-out infinite; }
+.rc-hp-bar i:nth-child(1) { animation-delay: 0s; } .rc-hp-bar i:nth-child(2) { animation-delay: .05s; } .rc-hp-bar i:nth-child(3) { animation-delay: .1s; }
+.rc-hp-bar i:nth-child(4) { animation-delay: .15s; } .rc-hp-bar i:nth-child(5) { animation-delay: .2s; } .rc-hp-bar i:nth-child(6) { animation-delay: .25s; }
+.rc-hp-bar i:nth-child(7) { animation-delay: .3s; } .rc-hp-bar i:nth-child(8) { animation-delay: .35s; }
+.rc-hp-bar i:nth-child(9) { animation-delay: .4s, 0.6s; } .rc-hp-bar i:nth-child(10) { animation-delay: .45s, 0.6s; }
+@keyframes rc-fill { from { opacity: 0; transform: scaleY(0.3); } }
+@keyframes rc-glow { 50% { filter: brightness(1.25); box-shadow: 0 0 12px var(--c); } }
+@media (prefers-reduced-motion: reduce) { .rc-hp-bar i { animation: none !important; } }
+.rc-chart { display: block; width: 100%; height: auto; margin-top: 0.8rem; font-family: inherit; }
+.rc-chart text { font-size: 8px; fill: #9fb8a6; }
+.rc-chart .rc-grid line { stroke: #2e4a37; stroke-width: 1; stroke-dasharray: 2 3; }
+.rc-chart .rc-area { fill: url(#rc-heat); opacity: 0.22; }
+.rc-chart .rc-line { fill: none; stroke: url(#rc-heat); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.rc-chart .rc-now { fill: #5ee0c0; stroke: #f1fcee; stroke-width: 1.5; }
