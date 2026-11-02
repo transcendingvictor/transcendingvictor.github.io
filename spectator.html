@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261102c" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -190,28 +190,68 @@
         </section>
 
         <section class="sp-list">
-            <h2><span data-l="es">Libros favoritos</span><span data-l="en">Favourite books</span> <span class="sp-tag">provisional</span></h2>
-            <p class="sp-note"><span data-l="es">Toca un libro para leer un extracto.</span><span data-l="en">Tap a book to read an excerpt.</span></p>
-            <div class="sp-films sp-bookgrid sp-swipe">
-                <a class="sp-film sp-book" href="#nada">
-                    <span class="sp-rank">1</span>
-                    <img src="https://covers.openlibrary.org/b/id/10663896-L.jpg" alt="Nada" loading="lazy">
-                    <h3><i>Nada</i></h3>
-                    <p class="sp-meta">Carmen Laforet · 1945</p>
-                </a>
-                <a class="sp-film sp-book" href="#comeras">
-                    <span class="sp-rank">2</span>
-                    <img src="https://covers.openlibrary.org/b/id/15131618-L.jpg" alt="Comerás flores" loading="lazy">
-                    <h3><i>Comerás flores</i></h3>
-                    <p class="sp-meta">Lucía Solla Sobral · 2023</p>
-                </a>
-                <a class="sp-film sp-book" href="#arbol">
-                    <span class="sp-rank">3</span>
-                    <img src="https://covers.openlibrary.org/b/id/10510356-L.jpg" alt="El árbol de la ciencia" loading="lazy">
-                    <h3><i>El árbol de la ciencia</i></h3>
-                    <p class="sp-meta">Pío Baroja · 1911</p>
-                </a>
-            </div>
+            <h2><span data-l="es">Libros que fueron mis favoritos</span><span data-l="en">Books that were once my favourite</span></h2>
+            <ol class="sp-timeline sp-booktime">
+                <li data-search="el mundo de sofia jostein gaarder filosofia">
+                    <a class="sp-bookrow" href="#sofia">
+                        <span class="sp-when"><b>2015</b></span>
+                        <img src="https://covers.openlibrary.org/b/id/1048142-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>El mundo de Sofía</i></b><span>Jostein Gaarder</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                </li>
+                <li data-search="manifiesto comunista marx engels">
+                    <a class="sp-bookrow" href="#manifiesto">
+                        <span class="sp-when"><b>2018</b><small><span data-l="es">febrero</span><span data-l="en">February</span></small></span>
+                        <img src="https://covers.openlibrary.org/b/id/10601290-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>El manifiesto comunista</i></b><span>Karl Marx <span data-l="es">y</span><span data-l="en">and</span> Friedrich Engels</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                </li>
+                <li data-search="la metamorfosis kafka">
+                    <a class="sp-bookrow" href="#metamorfosis">
+                        <span class="sp-when"><b>2018</b><small><span data-l="es">junio</span><span data-l="en">June</span></small></span>
+                        <img src="https://covers.openlibrary.org/b/id/14073660-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>La metamorfosis</i></b><span>Franz Kafka</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                </li>
+                <li data-search="anarquia estado y utopia robert nozick filosofia">
+                    <a class="sp-bookrow" href="#nozick">
+                        <span class="sp-when"><b>2019</b><small><span data-l="es">verano</span><span data-l="en">summer</span></small></span>
+                        <img src="https://covers.openlibrary.org/b/id/12326832-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>Anarquía, Estado y utopía</i> <span class="sp-tag">provisional</span></b><span>Robert Nozick</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                </li>
+                <li data-search="comeras flores lucia solla sobral">
+                    <a class="sp-bookrow" href="#comeras">
+                        <span class="sp-when"><b>2026</b><small><span data-l="es">abril</span><span data-l="en">April</span></small></span>
+                        <img src="https://covers.openlibrary.org/b/id/15131618-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>Comerás flores</i></b><span>Lucía Solla Sobral</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                    <span class="sp-medal sp-medal-silver" aria-hidden="true"></span>
+                </li>
+                <li data-search="nada carmen laforet">
+                    <a class="sp-bookrow" href="#nada">
+                        <span class="sp-when"><b>2026</b><small><span data-l="es">junio</span><span data-l="en">June</span></small></span>
+                        <img src="https://covers.openlibrary.org/b/id/10663896-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>Nada</i></b><span>Carmen Laforet</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                    <span class="sp-medal sp-medal-gold" aria-hidden="true"></span>
+                </li>
+                <li data-search="el arbol de la ciencia pio baroja">
+                    <a class="sp-bookrow" href="#arbol">
+                        <span class="sp-when"><b>2026</b><small><span data-l="es">septiembre</span><span data-l="en">September</span></small></span>
+                        <img src="https://covers.openlibrary.org/b/id/10510356-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>El árbol de la ciencia</i></b><span>Pío Baroja</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                    <span class="sp-medal sp-medal-bronze" aria-hidden="true"></span>
+                </li>
+            </ol>
         </section>
 
         <section class="sp-list">
@@ -220,7 +260,7 @@
             <div class="sp-tiers">
                 <div class="sp-tier sp-tier-s">
                     <span class="sp-tier-lab">S</span>
-                    <div class="sp-bards sp-swipe">
+                    <div class="sp-deck">
                         <article class="sp-bard" data-search="jorge manrique coplas">
                             <img src="resources/img/poeta_jorge_manrique.jpg" alt="Jorge Manrique" loading="lazy">
                             <h3>Jorge Manrique</h3>
@@ -255,7 +295,7 @@
                 </div>
                 <div class="sp-tier sp-tier-a">
                     <span class="sp-tier-lab">A</span>
-                    <div class="sp-bards sp-swipe">
+                    <div class="sp-deck">
                         <article class="sp-bard" data-search="arcipreste de hita juan ruiz libro de buen amor">
                             <img src="resources/img/poeta_arcipreste_hita.jpg" alt="Arcipreste de Hita" loading="lazy">
                             <h3>Arcipreste de Hita</h3>
@@ -285,7 +325,7 @@
                 </div>
                 <div class="sp-tier sp-tier-b">
                     <span class="sp-tier-lab">B</span>
-                    <div class="sp-bards sp-swipe">
+                    <div class="sp-deck">
                         <article class="sp-bard" data-search="becquer bécquer gustavo adolfo rimas leyendas">
                             <img src="resources/img/poeta_becquer.jpg" alt="Bécquer" loading="lazy">
                             <h3>Bécquer</h3>
@@ -352,6 +392,14 @@
                         <span class="sp-play" aria-hidden="true">▶</span>
                     </button>
                 </li>
+                <li data-search="el pensamiento circular ivan ferreiro iván">
+                    <button type="button" class="sp-song" data-track="29t3cccZkM7LkI4ssqZg6r" aria-expanded="false">
+                        <span class="sp-when"><b>2019</b><small><span data-l="es">enero</span><span data-l="en">January</span></small></span>
+                        <img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d000048514b2bfb2a270ac5a14eba4eed" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b>El pensamiento circular</b><span>Iván Ferreiro</span></span>
+                        <span class="sp-play" aria-hidden="true">▶</span>
+                    </button>
+                </li>
                 <li data-search="mi monstruo y yo veintiuno">
                     <button type="button" class="sp-song" data-track="67wbhq7my8mYJWNxwbQZCK" aria-expanded="false">
                         <span class="sp-when"><b>2021</b></span>
@@ -359,6 +407,7 @@
                         <span class="sp-song-txt"><b>Mi monstruo y yo</b><span>Veintiuno</span></span>
                         <span class="sp-play" aria-hidden="true">▶</span>
                     </button>
+                    <span class="sp-medal sp-medal-gold" aria-hidden="true"></span>
                 </li>
                 <li data-search="apretar + apretar más mvrk">
                     <button type="button" class="sp-song" data-track="2zvvoRLAWTaq0PbbcWUsoc" aria-expanded="false">
@@ -367,12 +416,29 @@
                         <span class="sp-song-txt"><b>Apretar +</b><span>mvrk</span></span>
                         <span class="sp-play" aria-hidden="true">▶</span>
                     </button>
+                    <span class="sp-medal sp-medal-bronze" aria-hidden="true"></span>
                 </li>
                 <li data-search="basureta tiempos raros kase.o kaseo">
                     <button type="button" class="sp-song" data-track="3o4whF6e25WeOnLBdsLFsX" aria-expanded="false">
                         <span class="sp-when"><b>2026</b><small><span data-l="es">abril</span><span data-l="en">April</span></small></span>
                         <img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00004851bc81387c8a0832745989f02a" alt="" loading="lazy">
                         <span class="sp-song-txt"><b>Basureta (Tiempos raros)</b><span>Kase.O</span></span>
+                        <span class="sp-play" aria-hidden="true">▶</span>
+                    </button>
+                </li>
+                <li data-search="rimar.io rimario golden edition segrelles">
+                    <button type="button" class="sp-song" data-track="43nrhs1oUUvmRM2f3quOdN" aria-expanded="false">
+                        <span class="sp-when"><b>2026</b><small><span data-l="es">mayo</span><span data-l="en">May</span></small></span>
+                        <img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d000048511fa5e5fdf089fda931683335" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b>RIMAR.IO Golden Edition</b><span>Segrelles</span></span>
+                        <span class="sp-play" aria-hidden="true">▶</span>
+                    </button>
+                </li>
+                <li data-search="ya t has corrido ya te has corrido metrika d.basto">
+                    <button type="button" class="sp-song" data-track="6kz9Q0xOSj7t6Nny7ZNVaV" aria-expanded="false">
+                        <span class="sp-when"><b>2026</b><small><span data-l="es">septiembre</span><span data-l="en">September</span></small></span>
+                        <img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00004851e501dcafd838fadefb5b9e55" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b>Ya t Has Corrido?</b><span>Metrika</span></span>
                         <span class="sp-play" aria-hidden="true">▶</span>
                     </button>
                 </li>
@@ -383,6 +449,7 @@
                         <span class="sp-song-txt"><b>the arrival</b><span>Yan Qing</span></span>
                         <span class="sp-play" aria-hidden="true">▶</span>
                     </button>
+                    <span class="sp-medal sp-medal-silver" aria-hidden="true"></span>
                 </li>
             </ol>
         </section>
@@ -401,16 +468,6 @@
                         <li><a class="sp-chip-link" href="https://www.youtube.com/watch?v=GMGBK_qhPj8" target="_blank" rel="noopener">Campo amarillo ↗</a></li>
                     </ol>
                     <iframe class="sp-player" title="La M.O.D.A." src="https://open.spotify.com/embed/track/5D0HvEIpQzF3gbjGLHkKIx?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                </div>
-                <div class="sp-artist" data-search="jaloner freestyle argentina">
-                    <div class="sp-artist-head"><img class="sp-artist-pic" src="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb5b823152726f9e91c55d5374" alt="Jaloner" loading="lazy"><span class="sp-poet-txt"><b>Jaloner</b><span class="sp-meta">Rap</span></span></div>
-                    <ol class="sp-chips">
-                        <li><button type="button" data-track="3LrzbbyJK522LWn8tCjsjA" aria-pressed="true">La ley del más fuerte</button></li>
-                        <li><button type="button" data-track="55R4gGpyk0Whx0012zvN2H">El resplandor</button></li>
-                        <li><button type="button" data-track="0LbgSbJ7OfqDMpJCZgXZAs">Eterno retorno</button></li>
-                        <li><button type="button" data-track="5xYu1rkqQvUqRIcYmMkCzt">Capitán del espacio</button></li>
-                    </ol>
-                    <iframe class="sp-player" title="Jaloner" src="https://open.spotify.com/embed/track/3LrzbbyJK522LWn8tCjsjA?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                 </div>
                 <div class="sp-artist" data-search="mvrk">
                     <div class="sp-artist-head"><img class="sp-artist-pic" src="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5ebffc3d0acfa836722752a397d" alt="mvrk" loading="lazy"><span class="sp-poet-txt"><b>mvrk</b><span class="sp-meta">Rap</span></span></div>
@@ -437,6 +494,33 @@
                         </div>
                     </div>
                     <iframe class="sp-player" title="mvrk" src="https://open.spotify.com/embed/track/4z0g53lA8sqINPeJ4bpjNu?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>
+                <div class="sp-artist" data-search="amaia romero cuando no se quien soy aitana">
+                    <div class="sp-artist-head"><img class="sp-artist-pic" src="https://i.scdn.co/image/ab6761610000e5ebd8c27cf88071ec8df272ac50" alt="Amaia" loading="lazy"><span class="sp-poet-txt"><b>Amaia</b><span class="sp-meta">Pamplona</span></span></div>
+                    <div class="sp-albums">
+                        <div class="sp-album">
+                            <img src="https://i.scdn.co/image/ab67616d000048512d859d2befd3943301146740" alt="" loading="lazy">
+                            <p><i>Cuando no sé quién soy</i> <span class="sp-meta"><span data-l="es">may 2022</span><span data-l="en">May 2022</span></span> <span class="sp-tag"><span data-l="es">álbum clave</span><span data-l="en">key album</span></span></p>
+                            <ol class="sp-chips">
+                            <li><button type="button" data-track="5PHEToa3yWlCiagig8MFE9" aria-pressed="true">La canción que no quiero cantarte</button></li>
+                            <li><button type="button" data-track="6jiD1Cr3DjXlFPuT6QxjQ3">Yo invito</button></li>
+                            <li><button type="button" data-track="16v7ZAjjwtyy8CRfO2vIhG">Dilo sin hablar</button></li>
+                            <li><button type="button" data-track="1zcoKXkjNP3DXeF9NAhgcm">Bienvenidos al show</button></li>
+                            <li><button type="button" data-track="4CKMhupEL2mkwZKoL9c3Wv">Santos que yo te pinte</button></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <iframe class="sp-player" title="Amaia" src="https://open.spotify.com/embed/track/5PHEToa3yWlCiagig8MFE9?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>
+                <div class="sp-artist" data-search="jaloner freestyle argentina">
+                    <div class="sp-artist-head"><img class="sp-artist-pic" src="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb5b823152726f9e91c55d5374" alt="Jaloner" loading="lazy"><span class="sp-poet-txt"><b>Jaloner</b><span class="sp-meta">Rap</span></span></div>
+                    <ol class="sp-chips">
+                        <li><button type="button" data-track="3LrzbbyJK522LWn8tCjsjA" aria-pressed="true">La ley del más fuerte</button></li>
+                        <li><button type="button" data-track="55R4gGpyk0Whx0012zvN2H">El resplandor</button></li>
+                        <li><button type="button" data-track="0LbgSbJ7OfqDMpJCZgXZAs">Eterno retorno</button></li>
+                        <li><button type="button" data-track="5xYu1rkqQvUqRIcYmMkCzt">Capitán del espacio</button></li>
+                    </ol>
+                    <iframe class="sp-player" title="Jaloner" src="https://open.spotify.com/embed/track/3LrzbbyJK522LWn8tCjsjA?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                 </div>
             </div>
         </section>
@@ -619,7 +703,7 @@
                     <article class="rc-goal">
                         <span class="sp-rank">2</span>
                         <h3><span data-l="es">Trabajador</span><span data-l="en">Hard-working</span></h3>
-                        <p><span data-l="es">No necesariamente productivo, pero sentirme orgulloso de mi esfuerzo, y buscarlo.</span><span data-l="en">Not necessarily productive, but proud of my effort, and seeking it out.</span></p>
+                        <p><span data-l="es">No nos medimos por resultados, sino por esfuerzo. No necesariamente productivo, pero sentirme orgulloso de mi esfuerzo, y buscarlo.</span><span data-l="en">We don't measure ourselves by results, but by effort. Not necessarily productive, but proud of my effort, and seeking it out.</span></p>
                     </article>
                     <article class="rc-goal">
                         <span class="sp-rank">3</span>
@@ -668,9 +752,33 @@
     <aside class="sp-sheet" id="sp-sheet" aria-hidden="true">
         <a class="sp-close" href="#">← <span data-l="es">Volver</span><span data-l="en">Back</span></a>
 
+        <article class="sp-poem" data-poem="sofia" hidden>
+            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/1048142-L.jpg" alt=""><figcaption><span data-l="es">Noruega. Sofía, de catorce años, recibe cartas anónimas que le cuentan la historia de la filosofía.</span><span data-l="en">Norway. Sophie, fourteen, receives anonymous letters that tell her the history of philosophy.</span></figcaption></figure>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Jostein Gaarder</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Oslo, 1991</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">noruego</span><span data-l="en">Norwegian</span> (<i>Sofies verden</i>)</dd></div></dl>
+            <h2>El mundo de Sofía</h2>
+        </article>
+
+        <article class="sp-poem" data-poem="manifiesto" hidden>
+            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/10601290-L.jpg" alt=""><figcaption><span data-l="es">El programa de la Liga de los Comunistas, escrito en vísperas de las revoluciones de 1848.</span><span data-l="en">The programme of the Communist League, written on the eve of the revolutions of 1848.</span></figcaption></figure>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autores</span><span data-l="en">Authors</span></dt><dd>Karl Marx <span data-l="es">y</span><span data-l="en">and</span> Friedrich Engels</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd><span data-l="es">Londres</span><span data-l="en">London</span>, 1848</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">alemán</span><span data-l="en">German</span> (<i>Manifest der Kommunistischen Partei</i>)</dd></div></dl>
+            <h2>El manifiesto comunista</h2>
+        </article>
+
+        <article class="sp-poem" data-poem="metamorfosis" hidden>
+            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/14073660-L.jpg" alt=""><figcaption><span data-l="es">Gregor Samsa se despierta convertido en un insecto.</span><span data-l="en">Gregor Samsa wakes up transformed into an insect.</span></figcaption></figure>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Franz Kafka</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Leipzig, 1915</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">alemán</span><span data-l="en">German</span> (<i>Die Verwandlung</i>)</dd></div></dl>
+            <h2>La metamorfosis</h2>
+        </article>
+
+        <article class="sp-poem" data-poem="nozick" hidden>
+            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/12326832-L.jpg" alt=""><figcaption><span data-l="es">Una defensa del Estado mínimo, en respuesta a <i>Teoría de la justicia</i>, de Rawls.</span><span data-l="en">A defence of the minimal state, in response to Rawls's <i>A Theory of Justice</i>.</span></figcaption></figure>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Robert Nozick</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd><span data-l="es">Nueva York</span><span data-l="en">New York</span>, 1974</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">inglés</span><span data-l="en">English</span> (<i>Anarchy, State, and Utopia</i>)</dd></div></dl>
+            <h2>Anarquía, Estado y utopía</h2>
+        </article>
+
         <article class="sp-poem" data-poem="nada" hidden>
             <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/10663896-L.jpg" alt=""><figcaption><span data-l="es">Barcelona, primeros años cuarenta. Andrea llega sola a la calle de Aribau.</span><span data-l="en">Barcelona, early 1940s. Andrea arrives alone at Aribau street.</span></figcaption></figure>
-            <p class="sp-meta">Carmen Laforet · <i>Nada</i> (1945)</p>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Carmen Laforet</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Barcelona, 1945</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">español</span><span data-l="en">Spanish</span></dd></div></dl>
             <h2>Nada</h2>
             <blockquote class="sp-quote">
                 <p>Me marchaba ahora sin haber conocido nada de lo que confusamente esperaba: la vida en su plenitud, la alegría, el interés profundo, el amor. De la casa de la calle de Aribau no me llevaba nada. Al menos, así creía yo entonces.</p>
@@ -680,7 +788,7 @@
 
         <article class="sp-poem" data-poem="comeras" hidden>
             <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/15131618-L.jpg" alt=""><figcaption><span data-l="es">Marina, recién graduada, conoce a Jaime, veinte años mayor.</span><span data-l="en">Marina, just graduated, meets Jaime, twenty years older.</span></figcaption></figure>
-            <p class="sp-meta">Lucía Solla Sobral · <i>Comerás flores</i> (2023)</p>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Lucía Solla Sobral</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Barcelona, 2025</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">español</span><span data-l="en">Spanish</span></dd></div></dl>
             <h2>Comerás flores</h2>
             <blockquote class="sp-quote">
                 <p>El silencio en una casa es como dejarse el gas abierto.</p>
@@ -694,7 +802,7 @@
 
         <article class="sp-poem" data-poem="arbol" hidden>
             <figure class="sp-figure"><div class="sp-hero-pair"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/10510356-L.jpg" alt=""><img class="sp-hero" src="resources/img/autor_pio_baroja.jpg" alt="Pío Baroja"></div><figcaption><span data-l="es">Madrid, finales del XIX. Andrés Hurtado estudia Medicina y busca un sentido. A la derecha, Baroja en 1953.</span><span data-l="en">Madrid, late 19th century. Andrés Hurtado studies medicine and looks for meaning. Right, Baroja in 1953.</span></figcaption></figure>
-            <p class="sp-meta">Pío Baroja · <i>El árbol de la ciencia</i> (1911)</p>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Pío Baroja</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Madrid, 1911</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">español</span><span data-l="en">Spanish</span></dd></div></dl>
             <h2>El árbol de la ciencia</h2>
             <blockquote class="sp-quote">
                 <p>Pensaba que en la vida ni había ni podía haber justicia. La vida era una corriente tumultuosa e inconsciente donde los actores representaban una tragedia que no comprendían, y los hombres, llegados a un estado de intelectualidad, contemplaban la escena con una mirada compasiva y piadosa.</p>
@@ -830,7 +938,7 @@
     // On the phone, card lists are swiped sideways: a dot per card shows where you are
     (function () {
         document.querySelectorAll('.sp-swipe').forEach(function (row) {
-            var cards = Array.prototype.filter.call(row.querySelectorAll('.sp-film, .sp-show, .sp-poet, .sp-bard, .sp-artist, .rc-goal'),
+            var cards = Array.prototype.filter.call(row.querySelectorAll('.sp-film, .sp-show, .sp-poet, .sp-artist, .rc-goal'),
                 function (c) { return c.closest('.sp-swipe') === row; });
             if (cards.length < 2) return;
             var dots = document.createElement('div');
@@ -863,6 +971,95 @@
             document.addEventListener('input', function () { setTimeout(mark, 0); });
             mark();
         });
+    })();
+    </script>
+    <script>
+    // Poets: each tier is a deck of cards. Only the top card is seen; a flick sends it away and shows the next
+    (function () {
+        var decks = [];
+        document.querySelectorAll('.sp-deck').forEach(function (deck) {
+            var all = Array.prototype.slice.call(deck.querySelectorAll('.sp-bard'));
+            var idx = 0, busy = false;
+            var bar = document.createElement('div');
+            bar.className = 'sp-deck-bar';
+            bar.innerHTML = '<button type="button" class="sp-deck-prev" aria-label="‹">‹</button><span class="sp-deck-n"></span><button type="button" class="sp-deck-next" aria-label="›">›</button>';
+            deck.after(bar);
+            var n = bar.querySelector('.sp-deck-n');
+            function cards() { return all.filter(function (c) { return !c.classList.contains('sp-hide'); }); }
+            function render() {
+                var cs = cards();
+                if (idx >= cs.length) idx = 0;
+                all.forEach(function (c) { c.className = c.className.replace(/ ?sp-pos-\S+/g, ''); c.style.transform = ''; c.setAttribute('aria-hidden', 'true'); });
+                cs.forEach(function (c, k) {
+                    var d = (k - idx + cs.length) % cs.length;
+                    c.classList.add('sp-pos-' + (d > 2 ? 'x' : d));
+                    if (d === 0) c.removeAttribute('aria-hidden');
+                });
+                n.textContent = cs.length ? (idx + 1) + ' / ' + cs.length : '';
+                bar.hidden = cs.length < 2;
+                deck.closest('.sp-tier').classList.toggle('sp-hide', cs.length === 0);
+            }
+            function go(dir) {
+                var cs = cards();
+                if (busy || cs.length < 2) return;
+                busy = true;
+                var top = cs[idx];
+                if (dir > 0) {
+                    top.classList.add('sp-fly');
+                    top.style.transform = 'translateX(-130%) rotate(-14deg)';
+                    setTimeout(function () { top.classList.remove('sp-fly'); idx = (idx + 1) % cs.length; render(); busy = false; }, 260);
+                } else {
+                    idx = (idx - 1 + cs.length) % cs.length;
+                    var back = cs[idx];
+                    back.style.transform = 'translateX(130%) rotate(14deg)';
+                    render();
+                    back.style.transform = 'translateX(130%) rotate(14deg)';
+                    back.getBoundingClientRect();
+                    back.classList.add('sp-fly');
+                    back.style.transform = '';
+                    setTimeout(function () { back.classList.remove('sp-fly'); busy = false; }, 260);
+                }
+            }
+            bar.querySelector('.sp-deck-prev').addEventListener('click', function () { go(-1); });
+            bar.querySelector('.sp-deck-next').addEventListener('click', function () { go(1); });
+            // Drag with the thumb: the card follows the finger and leaves if pulled far enough
+            var x0 = null, y0 = 0, dx = 0, drag = false, card = null;
+            deck.addEventListener('pointerdown', function (e) {
+                if (busy) return;
+                card = cards()[idx]; if (!card) return;
+                x0 = e.clientX; y0 = e.clientY; dx = 0; drag = false;
+            });
+            deck.addEventListener('pointermove', function (e) {
+                if (x0 === null) return;
+                dx = e.clientX - x0;
+                if (!drag && Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(e.clientY - y0)) { drag = true; deck.setPointerCapture(e.pointerId); }
+                if (drag) card.style.transform = 'translateX(' + dx + 'px) rotate(' + (dx / 18) + 'deg)';
+            });
+            function end() {
+                if (x0 === null) return;
+                x0 = null;
+                if (!drag) { return; }
+                if (Math.abs(dx) > 60) {
+                    if (dx < 0) { go(1); }
+                    else { card.style.transform = ''; go(-1); }
+                } else {
+                    card.classList.add('sp-fly'); card.style.transform = '';
+                    setTimeout(function () { card.classList.remove('sp-fly'); }, 260);
+                }
+            }
+            deck.addEventListener('pointerup', end);
+            deck.addEventListener('pointercancel', end);
+            deck.addEventListener('click', function (e) { if (Math.abs(dx) < 8 && window.matchMedia('(hover: hover)').matches) go(1); });
+            deck.tabIndex = 0;
+            deck.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowRight') { go(1); e.preventDefault(); }
+                if (e.key === 'ArrowLeft') { go(-1); e.preventDefault(); }
+            });
+            decks.push(function () { idx = 0; render(); });
+            render();
+        });
+        var q = document.getElementById('sp-q');
+        if (q) q.addEventListener('input', function () { decks.forEach(function (f) { f(); }); });
     })();
     </script>
 </body>
