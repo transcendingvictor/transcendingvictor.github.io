@@ -1047,5 +1047,69 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-tier-lab { width: 2.3rem; height: 2.3rem; font-size: 1.3rem; border: 0.2rem solid #1c1c1c; border-radius: 8px; }
   .sp-deck { width: min(82%, 17rem); }
 }
+
+/* Books of my life: same line as the songs, in light colours; each opens its sheet */
+.sp-bookrow {
+  display: grid;
+  grid-template-columns: 8.5rem 2.1rem 1fr auto;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.3rem 0.8rem 0.3rem 0.6rem;
+  border: 0.15rem solid #1c1c1c;
+  border-radius: 8px;
+  background-color: #f3ecfc;
+  color: #1c1c1c;
+  text-decoration: none;
+  transition: background-color 150ms;
 }
+.sp-bookrow:hover { background-color: #e5d8f7; color: #1c1c1c !important; text-decoration: none; }
+.sp-bookrow img { width: 2.1rem; height: 3rem; border-radius: 3px; object-fit: cover; background-color: #d5c8e7; }
+.sp-booktime .sp-when small { color: #6b5a8a; }
+.sp-booktime .sp-song-txt span { color: #4a4060; }
+.sp-booktime .sp-tag { font-size: 0.65rem; vertical-align: middle; }
+.sp-go-arrow { font-size: 1.4rem; line-height: 1; color: #6b5a8a; }
+.sp-booktime li::before { top: 1.25rem; }
+
+/* Medals: gold, silver and bronze tucked at the side of a row */
+.sp-medal {
+  position: absolute;
+  right: -0.5rem;
+  top: 0.45rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  border: 0.12rem solid var(--m-edge);
+  background: radial-gradient(circle at 35% 30%, var(--m-light) 0 22%, var(--m-base) 55%, var(--m-dark) 100%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  transform: rotate(-10deg);
+  opacity: 0.92;
+}
+.sp-medal::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 0.7rem;
+  height: 0.5rem;
+  margin-left: -0.35rem;
+  background: linear-gradient(90deg, #6f8fd8 0 50%, #d86f6f 50% 100%);
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
+}
+.sp-medal-gold   { --m-light: #fff6c8; --m-base: #e2b53b; --m-dark: #a87a12; --m-edge: #7d5a0c; }
+.sp-medal-silver { --m-light: #ffffff; --m-base: #c4c9d0; --m-dark: #8b929b; --m-edge: #5f656d; }
+.sp-medal-bronze { --m-light: #ffd9b5; --m-base: #c67c3e; --m-dark: #8a4f22; --m-edge: #5f3416; }
+
+/* Book sheet facts */
+.sp-facts { display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 0.8rem; margin: 0 0 1rem; font-size: 0.9rem; }
+.sp-facts div { display: contents; }
+.sp-facts dt { font-weight: 700; color: #6b5a8a; text-align: left; }
+.sp-facts dd { margin: 0; text-align: left; }
+
+@media only screen and (max-width:750px) {
+  .sp-bookrow { grid-template-columns: 2rem 1fr auto; gap: 0.15rem 0.6rem; padding-left: 0.5rem; }
+  .sp-bookrow .sp-when { grid-column: 1 / -1; }
+  .sp-bookrow img { width: 2rem; height: 2.8rem; }
+  .sp-booktime li::before { top: 0.35rem; }
+  .sp-medal { right: -0.3rem; }
 }

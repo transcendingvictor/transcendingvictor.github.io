@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261102b" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261102c" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -190,28 +190,59 @@
         </section>
 
         <section class="sp-list">
-            <h2><span data-l="es">Libros favoritos</span><span data-l="en">Favourite books</span> <span class="sp-tag">provisional</span></h2>
-            <p class="sp-note"><span data-l="es">Toca un libro para leer un extracto.</span><span data-l="en">Tap a book to read an excerpt.</span></p>
-            <div class="sp-films sp-bookgrid sp-swipe">
-                <a class="sp-film sp-book" href="#nada">
-                    <span class="sp-rank">1</span>
-                    <img src="https://covers.openlibrary.org/b/id/10663896-L.jpg" alt="Nada" loading="lazy">
-                    <h3><i>Nada</i></h3>
-                    <p class="sp-meta">Carmen Laforet · 1945</p>
-                </a>
-                <a class="sp-film sp-book" href="#comeras">
-                    <span class="sp-rank">2</span>
-                    <img src="https://covers.openlibrary.org/b/id/15131618-L.jpg" alt="Comerás flores" loading="lazy">
-                    <h3><i>Comerás flores</i></h3>
-                    <p class="sp-meta">Lucía Solla Sobral · 2023</p>
-                </a>
-                <a class="sp-film sp-book" href="#arbol">
-                    <span class="sp-rank">3</span>
-                    <img src="https://covers.openlibrary.org/b/id/10510356-L.jpg" alt="El árbol de la ciencia" loading="lazy">
-                    <h3><i>El árbol de la ciencia</i></h3>
-                    <p class="sp-meta">Pío Baroja · 1911</p>
-                </a>
-            </div>
+            <h2><span data-l="es">Libros que fueron mis favoritos</span><span data-l="en">Books that were once my favourite</span></h2>
+            <ol class="sp-timeline sp-booktime">
+                <li data-search="el mundo de sofia jostein gaarder filosofia">
+                    <a class="sp-bookrow" href="#sofia">
+                        <span class="sp-when"><b>2015</b></span>
+                        <img src="https://covers.openlibrary.org/b/id/1048142-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>El mundo de Sofía</i></b><span>Jostein Gaarder</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                </li>
+                <li data-search="manifiesto comunista marx engels">
+                    <a class="sp-bookrow" href="#manifiesto">
+                        <span class="sp-when"><b>2018</b><small><span data-l="es">febrero</span><span data-l="en">February</span></small></span>
+                        <img src="https://covers.openlibrary.org/b/id/10601290-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>El manifiesto comunista</i></b><span>Karl Marx <span data-l="es">y</span><span data-l="en">and</span> Friedrich Engels</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                </li>
+                <li data-search="la metamorfosis kafka">
+                    <a class="sp-bookrow" href="#metamorfosis">
+                        <span class="sp-when"><b>2018</b><small><span data-l="es">junio</span><span data-l="en">June</span></small></span>
+                        <img src="https://covers.openlibrary.org/b/id/14073660-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>La metamorfosis</i></b><span>Franz Kafka</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                </li>
+                <li data-search="anarquia estado y utopia robert nozick filosofia">
+                    <a class="sp-bookrow" href="#nozick">
+                        <span class="sp-when"><b>2019</b><small><span data-l="es">verano</span><span data-l="en">summer</span></small></span>
+                        <img src="https://covers.openlibrary.org/b/id/12326832-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>Anarquía, Estado y utopía</i> <span class="sp-tag">provisional</span></b><span>Robert Nozick</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                </li>
+                <li data-search="comeras flores lucia solla sobral">
+                    <a class="sp-bookrow" href="#comeras">
+                        <span class="sp-when"><b>2026</b><small><span data-l="es">abril</span><span data-l="en">April</span></small></span>
+                        <img src="https://covers.openlibrary.org/b/id/15131618-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>Comerás flores</i></b><span>Lucía Solla Sobral</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                    <span class="sp-medal sp-medal-silver" aria-hidden="true"></span>
+                </li>
+                <li data-search="el arbol de la ciencia pio baroja">
+                    <a class="sp-bookrow" href="#arbol">
+                        <span class="sp-when"><b>2026</b><small><span data-l="es">septiembre</span><span data-l="en">September</span></small></span>
+                        <img src="https://covers.openlibrary.org/b/id/10510356-M.jpg" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b><i>El árbol de la ciencia</i></b><span>Pío Baroja</span></span>
+                        <span class="sp-go-arrow" aria-hidden="true">›</span>
+                    </a>
+                    <span class="sp-medal sp-medal-bronze" aria-hidden="true"></span>
+                </li>
+            </ol>
         </section>
 
         <section class="sp-list">
@@ -367,6 +398,7 @@
                         <span class="sp-song-txt"><b>Mi monstruo y yo</b><span>Veintiuno</span></span>
                         <span class="sp-play" aria-hidden="true">▶</span>
                     </button>
+                    <span class="sp-medal sp-medal-gold" aria-hidden="true"></span>
                 </li>
                 <li data-search="apretar + apretar más mvrk">
                     <button type="button" class="sp-song" data-track="2zvvoRLAWTaq0PbbcWUsoc" aria-expanded="false">
@@ -375,6 +407,7 @@
                         <span class="sp-song-txt"><b>Apretar +</b><span>mvrk</span></span>
                         <span class="sp-play" aria-hidden="true">▶</span>
                     </button>
+                    <span class="sp-medal sp-medal-bronze" aria-hidden="true"></span>
                 </li>
                 <li data-search="basureta tiempos raros kase.o kaseo">
                     <button type="button" class="sp-song" data-track="3o4whF6e25WeOnLBdsLFsX" aria-expanded="false">
@@ -399,6 +432,7 @@
                         <span class="sp-song-txt"><b>the arrival</b><span>Yan Qing</span></span>
                         <span class="sp-play" aria-hidden="true">▶</span>
                     </button>
+                    <span class="sp-medal sp-medal-silver" aria-hidden="true"></span>
                 </li>
             </ol>
         </section>
@@ -417,16 +451,6 @@
                         <li><a class="sp-chip-link" href="https://www.youtube.com/watch?v=GMGBK_qhPj8" target="_blank" rel="noopener">Campo amarillo ↗</a></li>
                     </ol>
                     <iframe class="sp-player" title="La M.O.D.A." src="https://open.spotify.com/embed/track/5D0HvEIpQzF3gbjGLHkKIx?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                </div>
-                <div class="sp-artist" data-search="jaloner freestyle argentina">
-                    <div class="sp-artist-head"><img class="sp-artist-pic" src="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb5b823152726f9e91c55d5374" alt="Jaloner" loading="lazy"><span class="sp-poet-txt"><b>Jaloner</b><span class="sp-meta">Rap</span></span></div>
-                    <ol class="sp-chips">
-                        <li><button type="button" data-track="3LrzbbyJK522LWn8tCjsjA" aria-pressed="true">La ley del más fuerte</button></li>
-                        <li><button type="button" data-track="55R4gGpyk0Whx0012zvN2H">El resplandor</button></li>
-                        <li><button type="button" data-track="0LbgSbJ7OfqDMpJCZgXZAs">Eterno retorno</button></li>
-                        <li><button type="button" data-track="5xYu1rkqQvUqRIcYmMkCzt">Capitán del espacio</button></li>
-                    </ol>
-                    <iframe class="sp-player" title="Jaloner" src="https://open.spotify.com/embed/track/3LrzbbyJK522LWn8tCjsjA?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                 </div>
                 <div class="sp-artist" data-search="mvrk">
                     <div class="sp-artist-head"><img class="sp-artist-pic" src="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5ebffc3d0acfa836722752a397d" alt="mvrk" loading="lazy"><span class="sp-poet-txt"><b>mvrk</b><span class="sp-meta">Rap</span></span></div>
@@ -453,6 +477,16 @@
                         </div>
                     </div>
                     <iframe class="sp-player" title="mvrk" src="https://open.spotify.com/embed/track/4z0g53lA8sqINPeJ4bpjNu?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>
+                <div class="sp-artist" data-search="jaloner freestyle argentina">
+                    <div class="sp-artist-head"><img class="sp-artist-pic" src="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb5b823152726f9e91c55d5374" alt="Jaloner" loading="lazy"><span class="sp-poet-txt"><b>Jaloner</b><span class="sp-meta">Rap</span></span></div>
+                    <ol class="sp-chips">
+                        <li><button type="button" data-track="3LrzbbyJK522LWn8tCjsjA" aria-pressed="true">La ley del más fuerte</button></li>
+                        <li><button type="button" data-track="55R4gGpyk0Whx0012zvN2H">El resplandor</button></li>
+                        <li><button type="button" data-track="0LbgSbJ7OfqDMpJCZgXZAs">Eterno retorno</button></li>
+                        <li><button type="button" data-track="5xYu1rkqQvUqRIcYmMkCzt">Capitán del espacio</button></li>
+                    </ol>
+                    <iframe class="sp-player" title="Jaloner" src="https://open.spotify.com/embed/track/3LrzbbyJK522LWn8tCjsjA?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                 </div>
             </div>
         </section>
@@ -684,9 +718,33 @@
     <aside class="sp-sheet" id="sp-sheet" aria-hidden="true">
         <a class="sp-close" href="#">← <span data-l="es">Volver</span><span data-l="en">Back</span></a>
 
+        <article class="sp-poem" data-poem="sofia" hidden>
+            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/1048142-L.jpg" alt=""><figcaption><span data-l="es">Noruega. Sofía, de catorce años, recibe cartas anónimas que le cuentan la historia de la filosofía.</span><span data-l="en">Norway. Sophie, fourteen, receives anonymous letters that tell her the history of philosophy.</span></figcaption></figure>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Jostein Gaarder</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Oslo, 1991</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">noruego</span><span data-l="en">Norwegian</span> (<i>Sofies verden</i>)</dd></div></dl>
+            <h2>El mundo de Sofía</h2>
+        </article>
+
+        <article class="sp-poem" data-poem="manifiesto" hidden>
+            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/10601290-L.jpg" alt=""><figcaption><span data-l="es">El programa de la Liga de los Comunistas, escrito en vísperas de las revoluciones de 1848.</span><span data-l="en">The programme of the Communist League, written on the eve of the revolutions of 1848.</span></figcaption></figure>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autores</span><span data-l="en">Authors</span></dt><dd>Karl Marx <span data-l="es">y</span><span data-l="en">and</span> Friedrich Engels</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd><span data-l="es">Londres</span><span data-l="en">London</span>, 1848</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">alemán</span><span data-l="en">German</span> (<i>Manifest der Kommunistischen Partei</i>)</dd></div></dl>
+            <h2>El manifiesto comunista</h2>
+        </article>
+
+        <article class="sp-poem" data-poem="metamorfosis" hidden>
+            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/14073660-L.jpg" alt=""><figcaption><span data-l="es">Gregor Samsa se despierta convertido en un insecto.</span><span data-l="en">Gregor Samsa wakes up transformed into an insect.</span></figcaption></figure>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Franz Kafka</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Leipzig, 1915</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">alemán</span><span data-l="en">German</span> (<i>Die Verwandlung</i>)</dd></div></dl>
+            <h2>La metamorfosis</h2>
+        </article>
+
+        <article class="sp-poem" data-poem="nozick" hidden>
+            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/12326832-L.jpg" alt=""><figcaption><span data-l="es">Una defensa del Estado mínimo, en respuesta a <i>Teoría de la justicia</i>, de Rawls.</span><span data-l="en">A defence of the minimal state, in response to Rawls's <i>A Theory of Justice</i>.</span></figcaption></figure>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Robert Nozick</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd><span data-l="es">Nueva York</span><span data-l="en">New York</span>, 1974</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">inglés</span><span data-l="en">English</span> (<i>Anarchy, State, and Utopia</i>)</dd></div></dl>
+            <h2>Anarquía, Estado y utopía</h2>
+        </article>
+
         <article class="sp-poem" data-poem="nada" hidden>
             <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/10663896-L.jpg" alt=""><figcaption><span data-l="es">Barcelona, primeros años cuarenta. Andrea llega sola a la calle de Aribau.</span><span data-l="en">Barcelona, early 1940s. Andrea arrives alone at Aribau street.</span></figcaption></figure>
-            <p class="sp-meta">Carmen Laforet · <i>Nada</i> (1945)</p>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Carmen Laforet</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Barcelona, 1945</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">español</span><span data-l="en">Spanish</span></dd></div></dl>
             <h2>Nada</h2>
             <blockquote class="sp-quote">
                 <p>Me marchaba ahora sin haber conocido nada de lo que confusamente esperaba: la vida en su plenitud, la alegría, el interés profundo, el amor. De la casa de la calle de Aribau no me llevaba nada. Al menos, así creía yo entonces.</p>
@@ -696,7 +754,7 @@
 
         <article class="sp-poem" data-poem="comeras" hidden>
             <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/15131618-L.jpg" alt=""><figcaption><span data-l="es">Marina, recién graduada, conoce a Jaime, veinte años mayor.</span><span data-l="en">Marina, just graduated, meets Jaime, twenty years older.</span></figcaption></figure>
-            <p class="sp-meta">Lucía Solla Sobral · <i>Comerás flores</i> (2023)</p>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Lucía Solla Sobral</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Barcelona, 2025</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">español</span><span data-l="en">Spanish</span></dd></div></dl>
             <h2>Comerás flores</h2>
             <blockquote class="sp-quote">
                 <p>El silencio en una casa es como dejarse el gas abierto.</p>
@@ -710,7 +768,7 @@
 
         <article class="sp-poem" data-poem="arbol" hidden>
             <figure class="sp-figure"><div class="sp-hero-pair"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/10510356-L.jpg" alt=""><img class="sp-hero" src="resources/img/autor_pio_baroja.jpg" alt="Pío Baroja"></div><figcaption><span data-l="es">Madrid, finales del XIX. Andrés Hurtado estudia Medicina y busca un sentido. A la derecha, Baroja en 1953.</span><span data-l="en">Madrid, late 19th century. Andrés Hurtado studies medicine and looks for meaning. Right, Baroja in 1953.</span></figcaption></figure>
-            <p class="sp-meta">Pío Baroja · <i>El árbol de la ciencia</i> (1911)</p>
+            <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Pío Baroja</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Madrid, 1911</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">español</span><span data-l="en">Spanish</span></dd></div></dl>
             <h2>El árbol de la ciencia</h2>
             <blockquote class="sp-quote">
                 <p>Pensaba que en la vida ni había ni podía haber justicia. La vida era una corriente tumultuosa e inconsciente donde los actores representaban una tragedia que no comprendían, y los hombres, llegados a un estado de intelectualidad, contemplaban la escena con una mirada compasiva y piadosa.</p>
