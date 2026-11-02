@@ -868,6 +868,8 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .rc-night .rc-goal { border-color: #0f1f16; color: #1c1c1c; }
 .rc-night .rc-goal:hover { box-shadow: 4px 4px #0f1f16; }
 .rc-night .sp-rank { border-color: #0f1f16; }
+.rc-night .sp-ranked li { border-color: #0f1f16; color: #1c1c1c; }
+.rc-night .sp-ranked li:hover { box-shadow: 4px 4px #0f1f16; }
 @media only screen and (max-width:750px) {
   .sp-artists { grid-template-columns: 1fr; }
   .sp-artist { min-width: 0; }
@@ -1013,19 +1015,26 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .rc-chart .rc-now { fill: #5ee0c0; stroke: #f1fcee; stroke-width: 1.5; }
 
 /* Poets as a tier list: no order inside each row */
-.sp-tiers { display: flex; flex-direction: column; gap: 0.5rem; max-width: 42rem; }
+.sp-tiers { display: flex; flex-direction: column; gap: 0.7rem; max-width: 42rem; }
 .sp-tier { display: grid; grid-template-columns: 3.2rem 1fr; border: 0.2rem solid #1c1c1c; border-radius: 10px; overflow: hidden; background-color: #faf6ff; }
 .sp-tier-lab { display: flex; align-items: center; justify-content: center; font-size: 1.6rem; font-weight: 700; border-right: 0.2rem solid #1c1c1c; }
 .sp-tier-s .sp-tier-lab { background-color: #f4a6a6; }
 .sp-tier-a .sp-tier-lab { background-color: #f7c89c; }
 .sp-tier-b .sp-tier-lab { background-color: #f7e39c; }
-.sp-tier ul { list-style: none; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.4rem; padding: 0.55rem; margin: 0; }
-.sp-tier li { padding: 0.25rem 0.7rem; border: 0.12rem solid #1c1c1c; border-radius: 14px; background-color: #e5d8f7; font-size: 0.9rem; line-height: 1.3; text-align: left; }
-.sp-tier li b { font-weight: 700; }
-.sp-tier li small { display: block; font-size: 0.72rem; color: #4a4060; }
-.sp-tier .sp-tier-anon { border-radius: 10px; border-style: dashed; }
+.sp-bards { display: grid; grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr)); gap: 0.6rem; padding: 0.6rem; }
+.sp-bard { display: flex; flex-direction: column; padding: 0.4rem; border: 0.15rem solid #1c1c1c; border-radius: 8px; background-color: #e5d8f7; transition: all 200ms; }
+.sp-bard:hover { transform: translate(-3px, -3px) rotate(-1deg); box-shadow: 3px 3px #1c1c1c; }
+.sp-bard img, .sp-bard-q { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; border-radius: 5px; background-color: #d5c8e7; }
+.sp-bard h3 { margin: 0.35rem 0 0.1rem; font-size: 0.95rem; line-height: 1.2; text-align: left; }
+.sp-bard .sp-meta { font-size: 0.72rem; line-height: 1.3; color: #4a4060; text-align: left; }
+.sp-bard-anon { border-style: dashed; background-color: #f1ebfa; }
+.sp-bard-q { display: flex; align-items: center; justify-content: center; font-size: 3.5rem; font-weight: 700; color: #8a7aa8; background: repeating-linear-gradient(135deg, #e5d8f7 0 8px, #ddd0f0 8px 16px); }
 @media only screen and (max-width:750px) {
-  .sp-tier { grid-template-columns: 2.4rem 1fr; }
-  .sp-tier-lab { font-size: 1.3rem; }
-  .sp-tier li { font-size: 0.85rem; }
+  .sp-tier { display: block; border: none; border-radius: 0; overflow: visible; background: none; }
+  .sp-tier-lab { width: 2.3rem; height: 2.3rem; font-size: 1.3rem; border: 0.2rem solid #1c1c1c; border-radius: 8px; }
+  .sp-bards.sp-swipe { padding-top: 0.5rem; }
+  .sp-bards.sp-swipe > .sp-bard { flex: 0 0 62%; padding: 0.5rem; }
+  .sp-bard h3 { font-size: 1.1rem; }
+  .sp-bard .sp-meta { font-size: 0.8rem; }
+}
 }
