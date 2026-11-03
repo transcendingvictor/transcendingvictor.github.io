@@ -1153,3 +1153,15 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 @media only screen and (max-width:750px) {
   .sp-ranked.sp-stanzas li { grid-template-columns: 1.6rem auto 1fr; }
 }
+
+/* Idols have no order: small roman numerals, no podium */
+.sp-ranked.sp-unranked li:nth-child(n)::before {
+  content: counter(rank, lower-roman);
+  display: inline-block; width: auto; min-width: 1.6rem; height: auto;
+  border: none; border-radius: 0; background: none;
+  font-size: inherit; font-weight: 400; font-style: italic; color: #4a4060; text-align: left;
+}
+
+/* Sayings, in order: gold and silver bubble beside each one */
+.sp-sayings li { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.3rem; }
+.sp-sayings .sp-rank { position: static; flex: none; font-family: sans-serif; font-size: 0.95rem; color: #1c1c1c; }
