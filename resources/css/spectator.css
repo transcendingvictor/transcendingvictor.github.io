@@ -1135,3 +1135,21 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-duel .sp-sky li span { font-size: 0.9rem; }
   .sp-duel .sp-sky .hungry { min-height: 5.4rem; }
 }
+
+/* Podium: wherever there is a first, second and third, the 1 is gold, the 2 silver and the 3 bronze */
+.sp-rank-1, .sp-ranked li:nth-child(1)::before, .sp-words li:nth-child(1)::before { --p-light: #fff4c2; --p-base: #f0c94a; --p-edge: #9a6f0e; }
+.sp-rank-2, .sp-ranked li:nth-child(2)::before, .sp-words li:nth-child(2)::before { --p-light: #ffffff; --p-base: #cdd2d8; --p-edge: #6b7179; }
+.sp-rank-3, .sp-ranked li:nth-child(3)::before, .sp-words li:nth-child(3)::before { --p-light: #ffe0c4; --p-base: #d48f55; --p-edge: #7a4520; }
+.sp-rank.sp-rank-1, .sp-rank.sp-rank-2, .sp-rank.sp-rank-3 { background: radial-gradient(circle at 35% 30%, var(--p-light) 0 18%, var(--p-base) 70%); color: #1c1c1c; }
+.sp-ranked li:nth-child(-n+3)::before, .sp-words li:nth-child(-n+3)::before {
+  display: inline-grid; place-items: center; box-sizing: border-box;
+  width: 1.6rem; min-width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  border: 0.13rem solid var(--p-edge);
+  background: radial-gradient(circle at 35% 30%, var(--p-light) 0 18%, var(--p-base) 70%);
+  font-size: 0.85rem; line-height: 1; vertical-align: middle; color: #1c1c1c;
+}
+.sp-ranked li:nth-child(n+4)::before, .sp-words li:nth-child(n+4)::before { display: inline-block; min-width: 1.6rem; text-align: center; }
+.sp-ranked.sp-stanzas li { grid-template-columns: 1.6rem auto 1fr auto; }
+@media only screen and (max-width:750px) {
+  .sp-ranked.sp-stanzas li { grid-template-columns: 1.6rem auto 1fr; }
+}
