@@ -18,29 +18,29 @@ const Obra = (() => {
   const TEXTOS = {
     es: {
       titulo: "Obra completa", volver: "← Obra completa",
-      entradilla: "Poemas y textos desde 2016, ordenados por fecha. Se publicaron primero en", y: "y en",
-      buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Poemas", banales: "Mentiras banales",
-      cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 pieza" : `${n} piezas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado",
+      entradilla: "Poemas desde 2016, ordenados por fecha.",  leyCs: "del blog", leyMb: "del blog", leyDed: "código de dedicatoria: una pista de a quién va, no necesariamente un nombre",
+      buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Ciencias sociales", banales: "Mentiras banales",
+      cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 poema" : `${n} poemas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado",
       noEncuentro: "No encuentro esa pieza.", publicado: f => ` (publicado el ${f})`,
-      explicacion: "Explicación", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
+      historia: "Historia", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
       analisis: "Análisis", capas: { forma: "Forma", sentido: "Sentido", referencia: "Referencias" }, provisional: "provisional",
       forma: "Forma", estrofa: "Estrofa", medida: "Medida", esquema: "Esquema",
       lectura: "Análisis del autor", notaGeneral: "Nota general",
-      rasgos: { profundidad: "Profundidad", dureza: "Dureza", "interés": "Interés", sonoridad: "Sonoridad" },
+      rasgos: { profundidad: "Profundidad", dureza: "Dureza", "pintar conceptos": "Pintar conceptos", sonoridad: "Sonoridad" },
       meses: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
       fechaLarga: (d, m, a) => d ? `${d} de ${m} de ${a}` : m ? `${m} de ${a}` : a,
     },
     en: {
       titulo: "Complete works", volver: "← Complete works",
-      entradilla: "Poems and texts since 2016, in date order, mostly in Spanish. They first appeared on", y: "and",
-      buscar: "Search a title or a line…", todo: "All", poemas: "Poems", banales: "Mentiras banales",
-      cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 piece" : `${n} pieces`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated",
+      entradilla: "Poems since 2016, in date order, mostly in Spanish.",  leyCs: "from the blog", leyMb: "from the blog", leyDed: "dedication code: a clue to who it is for, not necessarily a name",
+      buscar: "Search a title or a line…", todo: "All", poemas: "Ciencias sociales", banales: "Mentiras banales",
+      cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 poem" : `${n} poems`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated",
       noEncuentro: "I can't find that piece.", publicado: f => ` (published ${f})`,
-      explicacion: "Explanation", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
+      historia: "Story", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
       analisis: "Analysis", capas: { forma: "Form", sentido: "Meaning", referencia: "References" }, provisional: "placeholder",
       forma: "Form", estrofa: "Stanza", medida: "Metre", esquema: "Rhyme scheme",
       lectura: "Author's analysis", notaGeneral: "Overall score",
-      rasgos: { profundidad: "Depth", dureza: "Harshness", "interés": "Interest", sonoridad: "Sound" },
+      rasgos: { profundidad: "Depth", dureza: "Harshness", "pintar conceptos": "Painting concepts", sonoridad: "Sound" },
       meses: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
       fechaLarga: (d, m, a) => d ? `${d} ${m} ${a}` : m ? `${m} ${a}` : a,
     },
@@ -125,7 +125,7 @@ const Obra = (() => {
             el("span", { class: "f" }, fechaLarga(fecha(p)) + marca));
           // Etiquetas: el blog de donde viene y, si la tiene, la dedicatoria con su código
           const etiquetas = el("span", { class: "etiquetas" },
-            el("span", { class: "tipo" }, /mentiras banales/i.test(p.fuente) ? "mentiras banales" : "asuntos personales"));
+            el("span", { class: "tipo" }, /mentiras banales/i.test(p.fuente) ? "mentiras banales" : "ciencias sociales"));
           if (p.dedicatoria_pista) etiquetas.append(el("span", { class: "dedica", title: T("dedicada") }, "✉ " + p.dedicatoria_pista));
           b.append(etiquetas);
           b.style.setProperty("--color", COLORES[k++ % COLORES.length]);
@@ -212,6 +212,7 @@ const Obra = (() => {
     notas.forEach(a => {
       const nota = el("div", { class: `nota capa-${a.capa}` });
       if (a.autor === "provisional") nota.append(el("span", { class: "autor" }, T("provisional")));
+      if (a.aviso) nota.append(el("span", { class: "autor" }, a.aviso));
       nota.append(a.texto);
       let marcados = [], tras;
       if (a.fragmento) {
@@ -285,6 +286,27 @@ const Obra = (() => {
       ul.append(el("li", {}, b, " ", texto));
     });
     if (ul.children.length) s.append(ul);
+    // Personas verbales: quién hace cada verbo, en una tabla
+    const pv = f.personas;
+    if (pv) {
+      s.append(el("h3", {}, T("personas")));
+      if (pv.antes) pv.antes.split(/\n\n/).forEach(t => s.append(el("p", {}, t)));
+      if (pv.filas.length) {
+        const [cab, ...filas] = pv.filas;
+        const tabla = el("table", { class: "personas" },
+          el("thead", {}, el("tr", {}, ...cab.map(c => el("th", {}, c)))),
+          el("tbody", {}, ...filas.map(f => el("tr", {}, ...f.map(c => el("td", {}, c))))));
+        s.append(el("div", { class: "tabla-desliza" }, tabla));
+      }
+      if (pv.despues) pv.despues.split(/\n\n/).forEach(t => s.append(el("p", {}, t)));
+    }
+    return s;
+  }
+
+  function temas(t) {
+    const s = el("section", { class: "temas" }, el("h2", {}, T("temas")));
+    if (t.estado) s.append(el("p", { class: "aviso" }, t.estado));
+    s.append(el("ul", {}, ...t.lista.map(x => el("li", {}, el("b", {}, x.tema), x.sub ? el("span", { class: "sub" }, " › " + x.sub) : ""))));
     return s;
   }
 
@@ -326,7 +348,7 @@ const Obra = (() => {
       // Todo el análisis cuelga de un interruptor: apagado, solo queda el poema
       const todas = [...p.anotaciones, ...(p.lectura ? p.lectura.anotaciones : [])];
       const hay = CAPAS.filter(c => (c === "forma" && p.forma) || todas.some(a => a.capa === c));
-      const conAnalisis = hay.length || p.explicacion || p.valoraciones.length;
+      const conAnalisis = hay.length || p.explicacion || p.historia || p.valoraciones.length;
       let activas = (guardado("obra-capas") || "").split(",").filter(c => hay.includes(c));
       const sw = el("input", { type: "checkbox", role: "switch" });
       sw.checked = guardado("obra-analisis") === "1";
@@ -367,8 +389,15 @@ const Obra = (() => {
         window.addEventListener("resize", ajustar);
       }
 
-      if (p.explicacion) main.append(el("section", {}, el("h2", {}, T("explicacion")), el("p", {}, p.explicacion)));
+      if (p.historia) main.append(el("section", { class: "historia" }, el("h2", {}, T("historia")), ...p.historia.split(/\n\n/).map(t => el("p", {}, t))));
+      if (p.explicacion) {
+        const s = el("section", {}, el("h2", {}, T("explicacion")));
+        if (p.explicacion_estado) s.append(el("p", { class: "aviso" }, p.explicacion_estado));
+        p.explicacion.split(/\n\n/).forEach(t => s.append(el("p", {}, t)));
+        main.append(s);
+      }
       if (p.forma) main.append(forma(p.forma));
+      if (p.temas) main.append(temas(p.temas));
       if (p.valoraciones.length) {
         const s = el("section", {}, el("h2", {}, T("valoracion")));
         const bloque = v => el("div", { class: "valoracion" },

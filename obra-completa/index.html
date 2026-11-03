@@ -7,19 +7,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Vollkorn+SC:wght@400;600&display=swap" rel="stylesheet">
-  <link href="obra.css" rel="stylesheet">
+  <link href="obra.css?v=20261103b" rel="stylesheet">
 </head>
 <body>
   <main class="contenedor">
     <nav class="migas"><a href="../index.html">← Víctor Abia Alonso</a><span id="idioma"></span></nav>
     <h1 data-t="titulo">Obra completa</h1>
-    <p class="entradilla"><span data-t="entradilla">Poemas y textos desde 2016, ordenados por fecha. Se publicaron primero en</span> <a href="https://cienciassocialesyasuntospersonales.blogspot.com/" target="_blank" rel="noopener">Ciencias sociales y asuntos personales</a> <span data-t="y">y en</span> <a href="https://cienciassocialesymentirasbanales.blogspot.com/" target="_blank" rel="noopener">Ciencias sociales y mentiras banales</a>.</p>
+    <p class="entradilla" data-t="entradilla">Poemas desde 2016, ordenados por fecha.</p>
+    <div class="leyenda">
+      <ul>
+        <li><span class="tipo">ciencias sociales</span> <span><span data-t="leyCs">del blog</span> <a href="https://cienciassocialesyasuntospersonales.blogspot.com/" target="_blank" rel="noopener">Ciencias sociales y asuntos personales</a></span></li>
+        <li><span class="tipo">mentiras banales</span> <span><span data-t="leyMb">del blog</span> <a href="https://cienciassocialesymentirasbanales.blogspot.com/" target="_blank" rel="noopener">Cuando ves el capítulo 8 antes que el 9…</a></span></li>
+        <li><span class="dedica">✉ pista</span> <span data-t="leyDed">código de dedicatoria: una pista de a quién va, no necesariamente un nombre</span></li>
+      </ul>
+    </div>
 
     <div class="filtros">
       <input id="buscar" type="search" placeholder="Buscar un título o un verso…" data-t-placeholder="buscar">
       <select id="formato">
         <option value="" data-t="todo">Todo</option>
-        <option value="poema" data-t="poemas">Poemas</option>
+        <option value="poema" data-t="poemas">Ciencias sociales</option>
         <option value="texto-poetico" data-t="banales">Mentiras banales</option>
       </select>
       <select id="etiqueta"><option value="" data-t="cualquier">Cualquier tema</option></select>
@@ -27,7 +34,7 @@
 
     <div id="indice"></div>
   </main>
-  <script src="obra.js"></script>
+  <script src="obra.js?v=20261103b"></script>
   <script>Obra.indice();</script>
 </body>
 </html>

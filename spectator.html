@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261103b" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261103d" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -72,7 +72,7 @@
         </div>
 
         <div class="sc mright" style="margin-top: 1.5rem;">
-        <strong>last modified: Nov, <span class="dsc">2025</span></strong>
+        <strong>last modified: Nov, <span class="dsc">2026</span></strong>
         </div>
 
     <!-- Personal Box (removed) --> 
@@ -550,10 +550,10 @@
 
         <section class="sp-list">
             <h2><span data-l="es">Refranes favoritos</span><span data-l="en">Favourite sayings</span></h2>
-            <ul class="sp-sayings">
-                <li data-search="a buen entendedor a word to the wise"><span data-l="es">A buen entendedor,</span><span data-l="en">A word to the wise,</span></li>
-                <li data-search="lo bueno si breve dos veces bueno good things if brief"><span data-l="es">Lo bueno, si breve,</span><span data-l="en">Good things, if brief,</span></li>
-            </ul>
+            <ol class="sp-sayings">
+                <li data-search="a buen entendedor a word to the wise"><span class="sp-rank sp-rank-1">1</span><span data-l="es">A buen entendedor,</span><span data-l="en">A word to the wise,</span></li>
+                <li data-search="lo bueno si breve dos veces bueno good things if brief"><span class="sp-rank sp-rank-2">2</span><span data-l="es">Lo bueno, si breve,</span><span data-l="en">Good things, if brief,</span></li>
+            </ol>
         </section>
 
         <section class="sp-list">
@@ -681,6 +681,23 @@
             </div>
         </section>
 
+        <p class="sp-chapter">V · <span data-l="es">Ideas</span><span data-l="en">Ideas</span></p>
+
+        <section class="sp-list">
+            <h2><span data-l="es">Ideas</span><span data-l="en">Ideas</span></h2>
+            <div class="sp-ideas sp-swipe">
+                <article class="sp-idea" data-search="hora mundial zonas horarias 24 horas time zones">
+                    <h3><span data-l="es">La misma hora en todo el mundo</span><span data-l="en">The same time all over the world</span></h3>
+                    <p><span data-l="es">En todo el mundo deberían ser las 7:00, o las 19:00, a la vez, siempre en formato de 24 horas, y ya culturalmente entenderíamos a qué hora se come en cada sitio. Tener distintas zonas horarias no supone ningún beneficio.</span><span data-l="en">It should be 07:00, or 19:00, everywhere in the world at once, always on the 24-hour clock, and culturally we would already understand when people eat in each place. Having different time zones brings no benefit.</span></p>
+                </article>
+                <article class="sp-idea" data-search="constitucion constitución 1978 2028 democracia constitution democracy">
+                    <h3><span data-l="es">Constitución 2.0</span><span data-l="en">Constitution 2.0</span></h3>
+                    <p class="sp-idea-note"><span data-l="es">Mis opiniones, por cómo son, por cómo me llegan, por cómo las pienso y por cómo me he criado, muchas veces me llegan desde una visión de la política española.</span><span data-l="en">My opinions, because of what they are, how they reach me, how I think them through and how I was brought up, often come to me from a Spanish political point of view.</span></p>
+                    <p><span data-l="es">En ese contexto, la Constitución española se debería actualizar. En 2028, a los 50 años de la de 1978, me gustaría un proyecto de constitución nueva: una Constitución 2.0, una democracia v.2.</span><span data-l="en">In that context, the Spanish Constitution should be updated. In 2028, fifty years after the one of 1978, I would like a project for a new constitution: a Constitution 2.0, a democracy v.2.</span></p>
+                </article>
+            </div>
+        </section>
+
         <div class="sp-credits">
             <p><b data-l="es">Créditos de las imágenes</b><b data-l="en">Image credits</b></p>
             <ul>
@@ -749,7 +766,7 @@
 
             <section class="sp-list">
                 <h2><span data-l="es">Ídolos de 2026</span><span data-l="en">Idols of 2026</span></h2>
-                <ol class="sp-ranked">
+                <ol class="sp-ranked sp-unranked">
                     <li><b>Marcos</b>, <span data-l="es">amigo gallego del Sigfre</span><span data-l="en">Galician friend of Sigfre's</span></li>
                     <li><b>Miguel</b>, <span data-l="es">¿quién?</span><span data-l="en">who?</span></li>
                     <li><b data-l="es">El teatro</b><b data-l="en">The theatre</b>, <span data-l="es">personificado en Etienne, Miguel y Karla</span><span data-l="en">personified by Etienne, Miguel and Karla</span></li>
@@ -869,7 +886,7 @@
             var term = norm(q.value.trim());
             var anyShown = false;
             document.querySelectorAll('.sp-list').forEach(function (sec) {
-                var items = sec.querySelectorAll('.sp-list > ol > li, .sp-list > ul > li, .sp-bard, .sp-sky > li:not(.sp-empty), .sp-numbers > li, .sp-film, .sp-poet, .sp-artist, .sp-country, .sp-show, .sp-city');
+                var items = sec.querySelectorAll('.sp-list > ol > li, .sp-list > ul > li, .sp-bard, .sp-sky > li:not(.sp-empty), .sp-numbers > li, .sp-film, .sp-poet, .sp-artist, .sp-country, .sp-show, .sp-city, .sp-idea');
                 var title = norm(sec.querySelector('h2').textContent);
                 var shown = 0;
                 items.forEach(function (it) {
@@ -951,7 +968,7 @@
     // On the phone, card lists are swiped sideways: a dot per card shows where you are
     (function () {
         document.querySelectorAll('.sp-swipe').forEach(function (row) {
-            var cards = Array.prototype.filter.call(row.querySelectorAll('.sp-film, .sp-show, .sp-poet, .sp-artist, .rc-goal, .sp-duel-col'),
+            var cards = Array.prototype.filter.call(row.querySelectorAll('.sp-film, .sp-show, .sp-poet, .sp-artist, .rc-goal, .sp-duel-col, .sp-idea'),
                 function (c) { return c.closest('.sp-swipe') === row; });
             if (cards.length < 2) return;
             var dots = document.createElement('div');
