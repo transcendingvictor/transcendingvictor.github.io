@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261103d" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261103e" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -765,6 +765,38 @@
             </section>
 
             <section class="sp-list">
+                <h2><span data-l="es">Filosofía de vida</span><span data-l="en">Philosophy of life</span></h2>
+                <p class="sp-note"><span data-l="es">A lo largo de los últimos años he identificado varios conceptos universales que han vertebrado mi filosofía de vida en distintas etapas.</span><span data-l="en">Over the last few years I have identified several universal concepts that have been the backbone of my philosophy of life at different stages.</span></p>
+                <ol class="rc-eras">
+                    <li data-search="trascender transcender ir mas alla perdurar transcend">
+                        <span class="rc-era-year">2020</span>
+                        <div><h3><span data-l="es">Trascender</span><span data-l="en">Transcend</span></h3>
+                        <p><span data-l="es">Ir más allá: la idea fundamental. Hacer que mi obra perdure, no quedarme en el ahora, perdurar. Rendimientos crecientes a escala.</span><span data-l="en">Going further: the fundamental idea. Making my work last, not staying in the now, enduring. Increasing returns to scale.</span></p></div>
+                    </li>
+                    <li data-search="dar la cara momentos dificiles">
+                        <span class="rc-era-year">2022</span>
+                        <div><h3><span data-l="es">Dar la cara</span><span data-l="en">Facing up</span></h3>
+                        <p><span data-l="es">Dar la cara en los momentos (y medianamente) difíciles.</span><span data-l="en">Facing up in the (even moderately) difficult moments.</span></p></div>
+                    </li>
+                    <li data-search="fluir influir flow influence">
+                        <span class="rc-era-year">2023</span>
+                        <div><h3><span data-l="es">Fluir o influir</span><span data-l="en">Flow or influence</span></h3>
+                        <p><span data-l="es">El dilema entre fluir e influir.</span><span data-l="en">The dilemma between flowing and influencing.</span></p></div>
+                    </li>
+                    <li data-search="vivir a rachas oleadas streaks waves">
+                        <span class="rc-era-year">2026</span>
+                        <div><h3><span data-l="es">Vivir a rachas</span><span data-l="en">Living in streaks</span></h3>
+                        <p><span data-l="es">Entiendo la vida no como una línea continua de rendimiento uniforme, sino como momentos de intensidad, foco o creatividad que se navegan por oleadas y que deben aceptarse sin culpa cuando bajan.</span><span data-l="en">I see life not as a continuous line of uniform performance, but as moments of intensity, focus or creativity that are navigated in waves and should be accepted without guilt when they ebb.</span></p></div>
+                    </li>
+                    <li data-search="desde dentro desde fuera conciencia consciousness">
+                        <span class="rc-era-year rc-era-open">·</span>
+                        <div><h3><span data-l="es">Desde dentro y desde fuera</span><span data-l="en">From inside and from outside</span></h3>
+                        <p><span data-l="es">Estar en la misma con mis colegas. El <a href="https://es.wikipedia.org/wiki/Problema_dif%C3%ADcil_de_la_conciencia" target="_blank" rel="noopener">gran problema de la conciencia</a>.</span><span data-l="en">Being in the same boat as my mates. The <a href="https://en.wikipedia.org/wiki/Hard_problem_of_consciousness" target="_blank" rel="noopener">hard problem of consciousness</a>.</span></p></div>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="sp-list">
                 <h2><span data-l="es">Ídolos de 2026</span><span data-l="en">Idols of 2026</span></h2>
                 <ol class="sp-ranked sp-unranked">
                     <li><b>Marcos</b>, <span data-l="es">amigo gallego del Sigfre</span><span data-l="en">Galician friend of Sigfre's</span></li>
@@ -886,7 +918,7 @@
             var term = norm(q.value.trim());
             var anyShown = false;
             document.querySelectorAll('.sp-list').forEach(function (sec) {
-                var items = sec.querySelectorAll('.sp-list > ol > li, .sp-list > ul > li, .sp-bard, .sp-sky > li:not(.sp-empty), .sp-numbers > li, .sp-film, .sp-poet, .sp-artist, .sp-country, .sp-show, .sp-city, .sp-idea');
+                var items = sec.querySelectorAll('.sp-list > ol > li, .sp-list > ul > li, .sp-bard, .sp-sky > li:not(.sp-empty), .sp-numbers > li, .sp-film, .sp-poet, .sp-artist, .sp-country, .sp-show, .sp-city, .sp-idea, .rc-eras > li');
                 var title = norm(sec.querySelector('h2').textContent);
                 var shown = 0;
                 items.forEach(function (it) {

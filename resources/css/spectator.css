@@ -1180,3 +1180,21 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-idea p { font-size: 1.02rem; }
   .sp-idea .sp-idea-note { font-size: 0.92rem; }
 }
+
+/* Philosophy of life: one concept per stage, year on the left, on the dark «Para mí» background */
+.rc-eras { list-style: none; margin: 0; padding: 0; max-width: 42rem; display: flex; flex-direction: column; gap: 0.7rem; }
+.rc-eras li { display: grid; grid-template-columns: 4.2rem 1fr; gap: 0.9rem; align-items: start; padding: 0.8rem 1rem; border: 0.2rem solid #0f1f16; border-radius: 12px; background-color: #e5d8f7; color: #1c1c1c; text-align: left; }
+.rc-eras li:nth-child(2) { background-color: #fcd8d8; }
+.rc-eras li:nth-child(3) { background-color: #c4e6cc; }
+.rc-eras li:nth-child(4) { background-color: #fde7b0; }
+.rc-eras li:nth-child(5) { background-color: #d6e6f7; }
+.rc-era-year { font: 700 1.25rem/1.2 "Vollkorn SC", serif; padding-top: 0.1rem; }
+.rc-era-open { color: #6b6080; }
+.rc-eras h3 { margin: 0 0 0.25rem; font-size: 1.2rem; text-align: left; }
+.rc-eras p { margin: 0; font-size: 0.95rem; line-height: 1.45; text-align: left; }
+.rc-eras a { color: inherit; }
+@media only screen and (max-width:750px) {
+  .rc-eras li { grid-template-columns: 3.4rem 1fr; gap: 0.6rem; padding: 0.8rem 0.8rem; }
+  .rc-eras h3 { font-size: 1.25rem; }
+  .rc-eras p { font-size: 1.05rem; }
+}
