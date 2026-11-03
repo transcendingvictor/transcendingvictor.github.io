@@ -401,6 +401,7 @@ html[data-lang="en"] [data-l="es"] {
 }
 
 .sp-artist {
+  position: relative;
   padding: 0.6rem;
   border: 0.2rem solid #1c1c1c;
   border-radius: 10px;
@@ -875,26 +876,25 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-artist { min-width: 0; }
 }
 
-/* Stanzas, compact: number | name (with its note under it) | drawing right after, all rows the same width */
+/* Stanzas, compact: number | name with its note right beside it | drawing. One line per stanza on
+   the computer; on the phone the drawing goes underneath, but the note never takes a line of its own */
 .sp-ranked.sp-stanzas { width: fit-content; max-width: 100%; }
 .sp-ranked.sp-stanzas li {
   display: grid;
-  grid-template-columns: 1rem 10.5rem auto;
-  grid-template-areas: "n name rhyme" "n meta rhyme";
+  grid-template-columns: 1rem auto 1fr auto;
+  grid-template-areas: "n name meta rhyme";
   align-items: center;
   column-gap: 0.6rem;
   row-gap: 0;
 }
 .sp-ranked.sp-stanzas li::before { grid-area: n; align-self: center; }
-.sp-stanzas li > b { grid-area: name; align-self: end; }
-.sp-stanzas .sp-meta { grid-area: meta; align-self: start; margin: 0; font-size: 0.78rem; }
-.sp-stanzas li:not(:has(.sp-meta)) > b { grid-row: 1 / 3; align-self: center; }
-.sp-stanzas .sp-rhyme, .sp-stanza-wide .sp-rhyme { grid-area: rhyme; margin: 0; padding: 0; flex: none; }
+.sp-stanzas li > b { grid-area: name; align-self: center; white-space: nowrap; }
+.sp-stanzas .sp-meta { grid-area: meta; align-self: center; margin: 0; font-size: 0.78rem; line-height: 1.25; }
+.sp-stanzas .sp-rhyme, .sp-stanza-wide .sp-rhyme { grid-area: rhyme; margin: 0 0 0 0.8rem; padding: 0; flex: none; }
 @media only screen and (max-width:750px) {
   .sp-ranked.sp-stanzas { width: auto; }
-  .sp-ranked.sp-stanzas li { grid-template-columns: 1rem 1fr; grid-template-areas: "n name" "n meta" "n rhyme"; }
-  .sp-stanzas .sp-rhyme, .sp-stanza-wide .sp-rhyme { margin-top: 0.3rem; }
-  .sp-stanzas li:not(:has(.sp-meta)) > b { grid-row: auto; }
+  .sp-ranked.sp-stanzas li { grid-template-columns: 1rem auto 1fr; grid-template-areas: "n name meta" "n rhyme rhyme"; column-gap: 0.5rem; }
+  .sp-stanzas .sp-rhyme, .sp-stanza-wide .sp-rhyme { margin: 0.3rem 0 0; }
 }
 
 /* ── Phone: made for the thumb ──────────────────────────────────────────
@@ -939,6 +939,7 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .rc-goals.sp-swipe > * { flex-basis: 80%; }
 
   .sp-rank { width: 2rem; height: 2rem; line-height: 1.75rem; font-size: 0.95rem; }
+  .sp-swipe .sp-rank { top: -0.6rem; left: -0.6rem; }
 
   .sp-dots { display: flex; justify-content: center; gap: 0.5rem; margin: 0.2rem 0 0.4rem; }
   .sp-dots button {
@@ -1014,31 +1015,37 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .rc-chart .rc-line { fill: none; stroke: url(#rc-heat); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
 .rc-chart .rc-now { fill: #5ee0c0; stroke: #f1fcee; stroke-width: 1.5; }
 
-/* Poets as a tier list: no order inside each row */
-.sp-tiers { display: flex; flex-direction: column; gap: 0.7rem; max-width: 42rem; }
-.sp-tier { display: grid; grid-template-columns: 3.2rem 1fr; border: 0.2rem solid #1c1c1c; border-radius: 10px; overflow: hidden; background-color: #faf6ff; }
-.sp-tier-lab { display: flex; align-items: center; justify-content: center; font-size: 1.6rem; font-weight: 700; border-right: 0.2rem solid #1c1c1c; }
-.sp-tier-s .sp-tier-lab { background-color: #f4a6a6; }
-.sp-tier-a .sp-tier-lab { background-color: #f7c89c; }
-.sp-tier-b .sp-tier-lab { background-color: #f7e39c; }
-/* Poets: one deck per tier. Unseen cards face down to the right, passed cards face up to the left */
-.sp-tier-lab { grid-row: span 2; }
-.sp-tier > .sp-deck, .sp-tier > .sp-deck-bar { grid-column: 2; }
-.sp-deck { position: relative; width: min(52%, 14rem); aspect-ratio: 5 / 8.6; margin: 1.2rem auto 0.4rem; touch-action: pan-y; outline: none; user-select: none; -webkit-user-select: none; }
-.sp-bard { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 0.6rem; border: 0.2rem solid #1c1c1c; border-radius: 12px; background-color: #e5d8f7; box-shadow: 2px 3px 0 rgba(28, 28, 28, 0.85); transition: transform 300ms cubic-bezier(.2,.8,.25,1), opacity 200ms; will-change: transform; }
+/* Poets: one single deck, tier S first, then A, then B. Each card wears its tier in the top-left
+   corner, and the face-down cards take their tier's colour, so the next tier shows before it arrives */
+.sp-pile { max-width: 42rem; overflow-x: clip; padding-top: 0.4rem; }
+.sp-bard[data-tier="s"] { --tier: #f4a6a6; --tier-pale: #fbe4e4; --tier-deep: #ec9696; }
+.sp-bard[data-tier="a"] { --tier: #f7c89c; --tier-pale: #fdeedf; --tier-deep: #f0b580; }
+.sp-bard[data-tier="b"] { --tier: #f7e39c; --tier-pale: #fdf6dd; --tier-deep: #eed679; }
+.sp-bard-tier { position: absolute; top: -0.8rem; left: -0.8rem; z-index: 2; display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border: 0.2rem solid #1c1c1c; border-radius: 9px; background-color: var(--tier); color: #1c1c1c; font: 700 1.4rem/1 sans-serif; box-shadow: 2px 2px 0 #1c1c1c; transform: rotate(-8deg); }
+.sp-bard.sp-tier-new .sp-bard-tier { animation: sp-tier-pop 520ms cubic-bezier(.3,1.6,.5,1); }
+@keyframes sp-tier-pop { 0% { transform: rotate(-8deg) scale(0.4); } 60% { transform: rotate(-14deg) scale(1.35); } 100% { transform: rotate(-8deg) scale(1); } }
+.sp-tierbar { display: flex; justify-content: center; gap: 0.45rem; margin: 0.2rem 0 0; }
+.sp-tierbar button { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; padding: 0; border: 0.15rem solid #1c1c1c; border-radius: 7px; background-color: #faf6ff; color: #6b6080; font: 700 1.05rem/1 sans-serif; cursor: pointer; opacity: 0.55; transition: transform 200ms, opacity 200ms; }
+.sp-tierbar button.sp-on { opacity: 1; color: #1c1c1c; transform: scale(1.12); box-shadow: 2px 2px 0 #1c1c1c; }
+.sp-tierbar .sp-tb-s.sp-on { background-color: #f4a6a6; }
+.sp-tierbar .sp-tb-a.sp-on { background-color: #f7c89c; }
+.sp-tierbar .sp-tb-b.sp-on { background-color: #f7e39c; }
+.sp-tierbar [hidden] { display: none; }
+.sp-deck { position: relative; width: min(52%, 14rem); aspect-ratio: 5 / 8.6; margin: 1.6rem auto 0.4rem; touch-action: pan-y; outline: none; user-select: none; -webkit-user-select: none; }
+.sp-bard { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 0.6rem; border: 0.2rem solid #1c1c1c; border-radius: 12px; background-color: var(--tier-pale, #e5d8f7); box-shadow: 2px 3px 0 rgba(28, 28, 28, 0.85); transition: transform 300ms cubic-bezier(.2,.8,.25,1), opacity 200ms; will-change: transform; }
 .sp-bard.sp-drag { transition: none; }
 .sp-bard img, .sp-bard-q { display: block; flex: none; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; border-radius: 7px; background-color: #d5c8e7; pointer-events: none; -webkit-user-drag: none; }
 .sp-bard h3 { margin: 0.5rem 0 0.15rem; font-size: 1.05rem; line-height: 1.2; text-align: left; }
 .sp-bard .sp-meta { font-size: 0.75rem; line-height: 1.35; color: #4a4060; text-align: left; }
 .sp-bard.sp-face { cursor: grab; }
-.sp-bard.sp-back { background: repeating-linear-gradient(135deg, #cdb9ec 0 9px, #bfa8e4 9px 18px); }
+.sp-bard.sp-back { background: repeating-linear-gradient(135deg, var(--tier) 0 9px, var(--tier-deep) 9px 18px); }
 .sp-bard.sp-back > * { visibility: hidden; }
 .sp-bard.sp-passed { filter: saturate(0.75) brightness(0.97); }
 .sp-bard.sp-gone { opacity: 0; pointer-events: none; }
 .sp-bard.sp-bump { animation: sp-bump 320ms ease; }
 @keyframes sp-bump { 0%, 100% { translate: 0 0; } 25% { translate: -7px 0; } 50% { translate: 6px 0; } 75% { translate: -3px 0; } }
-.sp-bard-anon { border-style: dashed; background-color: #f1ebfa; }
-.sp-bard-q { display: flex; align-items: center; justify-content: center; font-size: 4rem; font-weight: 700; color: #8a7aa8; background: repeating-linear-gradient(135deg, #e5d8f7 0 8px, #ddd0f0 8px 16px); }
+.sp-bard-anon { border-style: dashed; }
+.sp-bard-q { display: flex; align-items: center; justify-content: center; font-size: 4rem; font-weight: 700; color: #b06a6a; background: repeating-linear-gradient(135deg, #f8d3d3 0 8px, #f4c4c4 8px 16px); }
 .sp-deck-bar { display: flex; align-items: center; justify-content: center; gap: 0.8rem; margin: 0.6rem 0 0.8rem; }
 .sp-deck-bar button { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; padding: 0 0 0.15rem; margin: 0; border: 0.15rem solid #1c1c1c; border-radius: 50%; background-color: #faf6ff; color: #1c1c1c; font: 700 1.5rem/1 sans-serif; cursor: pointer; }
 .sp-deck-bar button:disabled { opacity: 0.3; cursor: default; }
@@ -1048,9 +1055,8 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .sp-deck-n { min-width: 3rem; text-align: center; font-size: 0.85rem; color: #4a4060; font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: reduce) { .sp-bard { transition: none; } .sp-bard.sp-bump { animation: none; } }
 @media only screen and (max-width:750px) {
-  .sp-tier { display: block; border: none; border-radius: 0; overflow: visible; background: none; padding-bottom: 0.6rem; overflow-x: clip; margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
-  .sp-tier-lab { width: 2.3rem; height: 2.3rem; font-size: 1.3rem; border: 0.2rem solid #1c1c1c; border-radius: 8px; }
-  .sp-deck { width: min(56%, 14rem); }
+  .sp-pile { margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+  .sp-deck { width: min(60%, 14.5rem); }
 }
 
 /* Books of my life: same line as the songs, in light colours; each opens its sheet */
