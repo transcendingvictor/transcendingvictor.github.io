@@ -92,7 +92,7 @@ Infinitivos: escapar, emigrar, pasar ×2, pasear (5). Pronombres de 1.ª como ob
 
 ## Temas
 
-Estado: propuesta de Claude, por confirmar (ver analisis/temas-propuesta.md)
+Estado: propuesta, por confirmar
 
 - Los otros › soledad entre la gente, rechazo y exclusión
 - Vacío y rutina › vacío interior, asfixia

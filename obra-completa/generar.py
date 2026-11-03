@@ -184,6 +184,19 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
         p["titulo_en"], p["texto_en"] = lineas[0], "\n".join(lineas[1:])
     piezas.append(p)
 
+def sin_autoria(x):
+    """La web no nombra a Claude: «calculada por Claude el…» se queda en «calculada el…»."""
+    if isinstance(x, str):
+        return re.sub(r" +por Claude\b", "", x)
+    if isinstance(x, list):
+        return [sin_autoria(v) for v in x]
+    if isinstance(x, dict):
+        return {k: (sin_autoria(v) if k in ("estado", "aviso", "explicacion_estado") or not isinstance(v, str) else v)
+                for k, v in x.items()}
+    return x
+
+
+piezas = [sin_autoria(p) for p in piezas]
 piezas.sort(key=lambda p: p["fecha_escritura"] or p["fecha_publicacion"])
 with open(os.path.join(HERE, "datos", "obra.json"), "w", encoding="utf-8") as fh:
     json.dump(piezas, fh, ensure_ascii=False, indent=1)
