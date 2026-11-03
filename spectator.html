@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261102c" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261103b" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -111,19 +111,19 @@
             <h2><span data-l="es">Películas favoritas</span><span data-l="en">Favourite films</span></h2>
             <div class="sp-films sp-swipe">
                 <article class="sp-film">
-                    <span class="sp-rank">1</span>
+                    <span class="sp-rank sp-rank-1">1</span>
                     <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg" alt="Inception" loading="lazy">
                     <h3><span data-l="es">Origen</span><span data-l="en">Inception</span></h3>
                     <p class="sp-meta">Christopher Nolan · 2010</p>
                 </article>
                 <article class="sp-film">
-                    <span class="sp-rank">2</span>
+                    <span class="sp-rank sp-rank-2">2</span>
                     <img src="resources/img/vertigo_poster.jpg" alt="Vertigo" loading="lazy">
                     <h3><span data-l="es">Vértigo</span><span data-l="en">Vertigo</span></h3>
                     <p class="sp-meta">Alfred Hitchcock · 1958</p>
                 </article>
                 <article class="sp-film">
-                    <span class="sp-rank">3</span>
+                    <span class="sp-rank sp-rank-3">3</span>
                     <img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg" alt="Pulp Fiction" loading="lazy">
                     <h3>Pulp Fiction</h3>
                     <p class="sp-meta">Quentin Tarantino · 1994</p>
@@ -136,7 +136,7 @@
             <div class="sp-series sp-swipe">
             <div class="sp-series-big">
                 <article class="sp-show" data-search="paquita salas los javis">
-                    <span class="sp-rank">1</span>
+                    <span class="sp-rank sp-rank-1">1</span>
                     <img class="sp-poster" src="resources/img/serie_paquita_salas.jpg" alt="Paquita Salas" loading="lazy">
                     <div class="sp-show-txt">
                     <h3>Paquita Salas</h3>
@@ -144,7 +144,7 @@
                     </div>
                 </article>
                 <article class="sp-show" data-search="cortar por la linea de puntos strappare lungo i bordi tear along the dotted line zerocalcare netflix">
-                    <span class="sp-rank">2</span>
+                    <span class="sp-rank sp-rank-2">2</span>
                     <img class="sp-poster" src="resources/img/serie_cortar_linea_puntos.jpg" alt="Cortar por la línea de puntos" loading="lazy">
                     <div class="sp-show-txt">
                     <h3><span data-l="es">Cortar por la línea de puntos</span><span data-l="en">Tear Along the Dotted Line</span></h3>
@@ -154,23 +154,15 @@
             </div>
             <div class="sp-series-small">
                 <article class="sp-show sp-show-small" data-search="community dan harmon greendale">
-                    <span class="sp-rank">3</span>
+                    <span class="sp-rank sp-rank-3">3</span>
                     <img class="sp-poster" src="resources/img/serie_community.jpg" alt="Community" loading="lazy">
                     <div class="sp-show-txt">
                     <h3>Community</h3>
                     <p class="sp-meta">2009–2015 · Dan Harmon</p>
                     </div>
                 </article>
-                <article class="sp-show sp-show-small" data-search="the office greg daniels">
-                    <span class="sp-rank">4</span>
-                    <img class="sp-poster" src="resources/img/serie_the_office.jpg" alt="The Office" loading="lazy">
-                    <div class="sp-show-txt">
-                    <h3>The Office</h3>
-                    <p class="sp-meta">2005–2013 · <span data-l="es">la americana</span><span data-l="en">US version</span></p>
-                    </div>
-                </article>
                 <article class="sp-show sp-show-small" data-search="poquita fe">
-                    <span class="sp-rank">5</span>
+                    <span class="sp-rank">4</span>
                     <img class="sp-poster" src="resources/img/serie_poquita_fe.jpg" alt="Poquita fe" loading="lazy">
                     <div class="sp-show-txt">
                     <h3>Poquita fe</h3>
@@ -178,11 +170,19 @@
                     </div>
                 </article>
                 <article class="sp-show sp-show-small" data-search="no game no life anime">
-                    <span class="sp-rank">6</span>
+                    <span class="sp-rank">5</span>
                     <img class="sp-poster" src="resources/img/serie_no_game_no_life.jpg" alt="No Game No Life" loading="lazy">
                     <div class="sp-show-txt">
                     <h3>No Game No Life</h3>
                     <p class="sp-meta">anime · 2014</p>
+                    </div>
+                </article>
+                <article class="sp-show sp-show-small" data-search="the office greg daniels">
+                    <span class="sp-rank">6</span>
+                    <img class="sp-poster" src="resources/img/serie_the_office.jpg" alt="The Office" loading="lazy">
+                    <div class="sp-show-txt">
+                    <h3>The Office</h3>
+                    <p class="sp-meta">2005–2013 · <span data-l="es">la americana</span><span data-l="en">US version</span></p>
                     </div>
                 </article>
             </div>
@@ -195,7 +195,7 @@
                 <li data-search="el mundo de sofia jostein gaarder filosofia">
                     <a class="sp-bookrow" href="#sofia">
                         <span class="sp-when"><b>2015</b></span>
-                        <img src="https://covers.openlibrary.org/b/id/1048142-M.jpg" alt="" loading="lazy">
+                        <img src="resources/img/libro_sofia.jpg" alt="">
                         <span class="sp-song-txt"><b><i>El mundo de Sofía</i></b><span>Jostein Gaarder</span></span>
                         <span class="sp-go-arrow" aria-hidden="true">›</span>
                     </a>
@@ -203,7 +203,7 @@
                 <li data-search="manifiesto comunista marx engels">
                     <a class="sp-bookrow" href="#manifiesto">
                         <span class="sp-when"><b>2018</b><small><span data-l="es">febrero</span><span data-l="en">February</span></small></span>
-                        <img src="https://covers.openlibrary.org/b/id/10601290-M.jpg" alt="" loading="lazy">
+                        <img src="resources/img/libro_manifiesto.jpg" alt="">
                         <span class="sp-song-txt"><b><i>El manifiesto comunista</i></b><span>Karl Marx <span data-l="es">y</span><span data-l="en">and</span> Friedrich Engels</span></span>
                         <span class="sp-go-arrow" aria-hidden="true">›</span>
                     </a>
@@ -211,7 +211,7 @@
                 <li data-search="la metamorfosis kafka">
                     <a class="sp-bookrow" href="#metamorfosis">
                         <span class="sp-when"><b>2018</b><small><span data-l="es">junio</span><span data-l="en">June</span></small></span>
-                        <img src="https://covers.openlibrary.org/b/id/14073660-M.jpg" alt="" loading="lazy">
+                        <img src="resources/img/libro_metamorfosis.jpg" alt="">
                         <span class="sp-song-txt"><b><i>La metamorfosis</i></b><span>Franz Kafka</span></span>
                         <span class="sp-go-arrow" aria-hidden="true">›</span>
                     </a>
@@ -219,7 +219,7 @@
                 <li data-search="anarquia estado y utopia robert nozick filosofia">
                     <a class="sp-bookrow" href="#nozick">
                         <span class="sp-when"><b>2019</b><small><span data-l="es">verano</span><span data-l="en">summer</span></small></span>
-                        <img src="https://covers.openlibrary.org/b/id/12326832-M.jpg" alt="" loading="lazy">
+                        <img src="resources/img/libro_nozick.jpg" alt="">
                         <span class="sp-song-txt"><b><i>Anarquía, Estado y utopía</i> <span class="sp-tag">provisional</span></b><span>Robert Nozick</span></span>
                         <span class="sp-go-arrow" aria-hidden="true">›</span>
                     </a>
@@ -227,7 +227,7 @@
                 <li data-search="comeras flores lucia solla sobral">
                     <a class="sp-bookrow" href="#comeras">
                         <span class="sp-when"><b>2026</b><small><span data-l="es">abril</span><span data-l="en">April</span></small></span>
-                        <img src="https://covers.openlibrary.org/b/id/15131618-M.jpg" alt="" loading="lazy">
+                        <img src="resources/img/libro_comeras.jpg" alt="">
                         <span class="sp-song-txt"><b><i>Comerás flores</i></b><span>Lucía Solla Sobral</span></span>
                         <span class="sp-go-arrow" aria-hidden="true">›</span>
                     </a>
@@ -236,7 +236,7 @@
                 <li data-search="nada carmen laforet">
                     <a class="sp-bookrow" href="#nada">
                         <span class="sp-when"><b>2026</b><small><span data-l="es">junio</span><span data-l="en">June</span></small></span>
-                        <img src="https://covers.openlibrary.org/b/id/10663896-M.jpg" alt="" loading="lazy">
+                        <img src="resources/img/libro_nada.jpg" alt="">
                         <span class="sp-song-txt"><b><i>Nada</i></b><span>Carmen Laforet</span></span>
                         <span class="sp-go-arrow" aria-hidden="true">›</span>
                     </a>
@@ -245,7 +245,7 @@
                 <li data-search="el arbol de la ciencia pio baroja">
                     <a class="sp-bookrow" href="#arbol">
                         <span class="sp-when"><b>2026</b><small><span data-l="es">septiembre</span><span data-l="en">September</span></small></span>
-                        <img src="https://covers.openlibrary.org/b/id/10510356-M.jpg" alt="" loading="lazy">
+                        <img src="resources/img/libro_arbol.jpg" alt="">
                         <span class="sp-song-txt"><b><i>El árbol de la ciencia</i></b><span>Pío Baroja</span></span>
                         <span class="sp-go-arrow" aria-hidden="true">›</span>
                     </a>
@@ -256,92 +256,92 @@
 
         <section class="sp-list">
             <h2><span data-l="es">Poetas</span><span data-l="en">Poets</span></h2>
-            <p class="sp-note"><span data-l="es">Todavía no puedo elegir al mejor.</span><span data-l="en">I still can't choose the best one.</span></p>
-            <div class="sp-tiers">
-                <div class="sp-tier sp-tier-s">
-                    <span class="sp-tier-lab">S</span>
-                    <div class="sp-deck">
-                        <article class="sp-bard" data-search="jorge manrique coplas">
-                            <img src="resources/img/poeta_jorge_manrique.jpg" alt="Jorge Manrique" loading="lazy">
-                            <h3>Jorge Manrique</h3>
-                            <p class="sp-meta"><i>Coplas por la muerte de su padre</i></p>
-                        </article>
-                        <article class="sp-bard" data-search="ruben dario rubén darío azul cantos de vida y esperanza">
-                            <img src="resources/img/poeta_ruben_dario.jpg" alt="Rubén Darío" loading="lazy">
-                            <h3>Rubén Darío</h3>
-                            <p class="sp-meta"><i>Azul…</i> · <i>Cantos de vida y esperanza</i></p>
-                        </article>
-                        <article class="sp-bard" data-search="miguel hernandez hernández rayo que no cesa cancionero">
-                            <img src="resources/img/poeta_miguel_hernandez.jpg" alt="Miguel Hernández" loading="lazy">
-                            <h3>Miguel Hernández</h3>
-                            <p class="sp-meta"><i>El rayo que no cesa</i> · <i>Cancionero y romancero de ausencias</i></p>
-                        </article>
-                        <article class="sp-bard" data-search="blas de otero angel fieramente humano pido la paz">
-                            <img src="resources/img/poeta_blas_de_otero.jpg" alt="Blas de Otero" loading="lazy">
-                            <h3>Blas de Otero</h3>
-                            <p class="sp-meta"><i>Ángel fieramente humano</i> · <i>Pido la paz y la palabra</i></p>
-                        </article>
-                        <article class="sp-bard" data-search="chantal maillard matar a platon hilos">
-                            <img src="resources/img/poeta_chantal_maillard.jpg" alt="Chantal Maillard" loading="lazy">
-                            <h3>Chantal Maillard</h3>
-                            <p class="sp-meta"><i>Matar a Platón</i> · <i>Hilos</i></p>
-                        </article>
-                        <article class="sp-bard sp-bard-anon" data-search="anonimo anónimo anonymous cantar de mio cid romance conde arnaldos no me mueve mi dios">
-                            <div class="sp-bard-q" aria-hidden="true">?</div>
-                            <h3><span data-l="es">Anónimo</span><span data-l="en">Anonymous</span></h3>
-                            <p class="sp-meta"><i>Cantar de mio Cid</i> · <i>Romance del conde Arnaldos</i> · «No me mueve, mi Dios, para quererte»</p>
-                        </article>
-                    </div>
-                </div>
-                <div class="sp-tier sp-tier-a">
-                    <span class="sp-tier-lab">A</span>
-                    <div class="sp-deck">
-                        <article class="sp-bard" data-search="arcipreste de hita juan ruiz libro de buen amor">
-                            <img src="resources/img/poeta_arcipreste_hita.jpg" alt="Arcipreste de Hita" loading="lazy">
-                            <h3>Arcipreste de Hita</h3>
-                            <p class="sp-meta"><i>Libro de buen amor</i></p>
-                        </article>
-                        <article class="sp-bard" data-search="garcilaso de la vega eglogas sonetos">
-                            <img src="resources/img/poeta_garcilaso.jpg" alt="Garcilaso de la Vega" loading="lazy">
-                            <h3>Garcilaso de la Vega</h3>
-                            <p class="sp-meta"><i>Églogas</i> · <i>Sonetos</i></p>
-                        </article>
-                        <article class="sp-bard" data-search="gongora góngora soledades polifemo">
-                            <img src="resources/img/poeta_gongora.jpg" alt="Góngora" loading="lazy">
-                            <h3>Góngora</h3>
-                            <p class="sp-meta"><i>Soledades</i> · <i>Fábula de Polifemo y Galatea</i></p>
-                        </article>
-                        <article class="sp-bard" data-search="quevedo amor constante">
-                            <img src="resources/img/poeta_quevedo.jpg" alt="Quevedo" loading="lazy">
-                            <h3>Quevedo</h3>
-                            <p class="sp-meta">«Amor constante más allá de la muerte»</p>
-                        </article>
-                        <article class="sp-bard" data-search="lorca federico garcia romancero gitano poeta en nueva york">
-                            <img src="resources/img/poeta_lorca.jpg" alt="Lorca" loading="lazy">
-                            <h3>Lorca</h3>
-                            <p class="sp-meta"><i>Romancero gitano</i> · <i>Poeta en Nueva York</i></p>
-                        </article>
-                    </div>
-                </div>
-                <div class="sp-tier sp-tier-b">
-                    <span class="sp-tier-lab">B</span>
-                    <div class="sp-deck">
-                        <article class="sp-bard" data-search="becquer bécquer gustavo adolfo rimas leyendas">
-                            <img src="resources/img/poeta_becquer.jpg" alt="Bécquer" loading="lazy">
-                            <h3>Bécquer</h3>
-                            <p class="sp-meta"><i>Rimas</i> · <i>Leyendas</i></p>
-                        </article>
-                        <article class="sp-bard" data-search="juan ramon jimenez platero">
-                            <img src="resources/img/poeta_juan_ramon_jimenez.jpg" alt="Juan Ramón Jiménez" loading="lazy">
-                            <h3>Juan Ramón Jiménez</h3>
-                            <p class="sp-meta"><i>Platero y yo</i> · <i>Diario de un poeta recién casado</i></p>
-                        </article>
-                        <article class="sp-bard" data-search="sylvia plath ariel colossus">
-                            <img src="resources/img/poeta_sylvia_plath.jpg" alt="Sylvia Plath" loading="lazy">
-                            <h3>Sylvia Plath</h3>
-                            <p class="sp-meta"><i>Ariel</i> · <i>The Colossus</i></p>
-                        </article>
-                    </div>
+            <div class="sp-pile">
+                <div class="sp-deck">
+                    <article class="sp-bard" data-tier="s" data-search="jorge manrique coplas">
+                        <span class="sp-bard-tier">S</span>
+                        <img src="resources/img/poeta_jorge_manrique.jpg" alt="Jorge Manrique" decoding="async">
+                        <h3>Jorge Manrique</h3>
+                        <p class="sp-meta"><i>Coplas por la muerte de su padre</i></p>
+                    </article>
+                    <article class="sp-bard" data-tier="s" data-search="ruben dario rubén darío azul cantos de vida y esperanza">
+                        <span class="sp-bard-tier">S</span>
+                        <img src="resources/img/poeta_ruben_dario.jpg" alt="Rubén Darío" decoding="async">
+                        <h3>Rubén Darío</h3>
+                        <p class="sp-meta"><i>Azul…</i> · <i>Cantos de vida y esperanza</i></p>
+                    </article>
+                    <article class="sp-bard" data-tier="s" data-search="miguel hernandez hernández rayo que no cesa cancionero">
+                        <span class="sp-bard-tier">S</span>
+                        <img src="resources/img/poeta_miguel_hernandez.jpg" alt="Miguel Hernández" decoding="async">
+                        <h3>Miguel Hernández</h3>
+                        <p class="sp-meta"><i>El rayo que no cesa</i> · <i>Cancionero y romancero de ausencias</i></p>
+                    </article>
+                    <article class="sp-bard" data-tier="s" data-search="blas de otero angel fieramente humano pido la paz">
+                        <span class="sp-bard-tier">S</span>
+                        <img src="resources/img/poeta_blas_de_otero.jpg" alt="Blas de Otero" decoding="async">
+                        <h3>Blas de Otero</h3>
+                        <p class="sp-meta"><i>Ángel fieramente humano</i> · <i>Pido la paz y la palabra</i></p>
+                    </article>
+                    <article class="sp-bard" data-tier="s" data-search="chantal maillard matar a platon hilos">
+                        <span class="sp-bard-tier">S</span>
+                        <img src="resources/img/poeta_chantal_maillard.jpg" alt="Chantal Maillard" decoding="async">
+                        <h3>Chantal Maillard</h3>
+                        <p class="sp-meta"><i>Matar a Platón</i> · <i>Hilos</i></p>
+                    </article>
+                    <article class="sp-bard sp-bard-anon" data-tier="s" data-search="anonimo anónimo anonymous cantar de mio cid romance conde arnaldos no me mueve mi dios">
+                        <span class="sp-bard-tier">S</span>
+                        <div class="sp-bard-q" aria-hidden="true">?</div>
+                        <h3><span data-l="es">Anónimo</span><span data-l="en">Anonymous</span></h3>
+                        <p class="sp-meta"><i>Cantar de mio Cid</i> · <i>Romance del conde Arnaldos</i> · «No me mueve, mi Dios, para quererte»</p>
+                    </article>
+                    <article class="sp-bard" data-tier="a" data-search="arcipreste de hita juan ruiz libro de buen amor">
+                        <span class="sp-bard-tier">A</span>
+                        <img src="resources/img/poeta_arcipreste_hita.jpg" alt="Arcipreste de Hita" decoding="async">
+                        <h3>Arcipreste de Hita</h3>
+                        <p class="sp-meta"><i>Libro de buen amor</i></p>
+                    </article>
+                    <article class="sp-bard" data-tier="a" data-search="garcilaso de la vega eglogas sonetos">
+                        <span class="sp-bard-tier">A</span>
+                        <img src="resources/img/poeta_garcilaso.jpg" alt="Garcilaso de la Vega" decoding="async">
+                        <h3>Garcilaso de la Vega</h3>
+                        <p class="sp-meta"><i>Églogas</i> · <i>Sonetos</i></p>
+                    </article>
+                    <article class="sp-bard" data-tier="a" data-search="gongora góngora soledades polifemo">
+                        <span class="sp-bard-tier">A</span>
+                        <img src="resources/img/poeta_gongora.jpg" alt="Góngora" decoding="async">
+                        <h3>Góngora</h3>
+                        <p class="sp-meta"><i>Soledades</i> · <i>Fábula de Polifemo y Galatea</i></p>
+                    </article>
+                    <article class="sp-bard" data-tier="a" data-search="quevedo amor constante">
+                        <span class="sp-bard-tier">A</span>
+                        <img src="resources/img/poeta_quevedo.jpg" alt="Quevedo" decoding="async">
+                        <h3>Quevedo</h3>
+                        <p class="sp-meta">«Amor constante más allá de la muerte»</p>
+                    </article>
+                    <article class="sp-bard" data-tier="a" data-search="lorca federico garcia romancero gitano poeta en nueva york">
+                        <span class="sp-bard-tier">A</span>
+                        <img src="resources/img/poeta_lorca.jpg" alt="Lorca" decoding="async">
+                        <h3>Lorca</h3>
+                        <p class="sp-meta"><i>Romancero gitano</i> · <i>Poeta en Nueva York</i></p>
+                    </article>
+                    <article class="sp-bard" data-tier="b" data-search="becquer bécquer gustavo adolfo rimas leyendas">
+                        <span class="sp-bard-tier">B</span>
+                        <img src="resources/img/poeta_becquer.jpg" alt="Bécquer" decoding="async">
+                        <h3>Bécquer</h3>
+                        <p class="sp-meta"><i>Rimas</i> · <i>Leyendas</i></p>
+                    </article>
+                    <article class="sp-bard" data-tier="b" data-search="juan ramon jimenez platero">
+                        <span class="sp-bard-tier">B</span>
+                        <img src="resources/img/poeta_juan_ramon_jimenez.jpg" alt="Juan Ramón Jiménez" decoding="async">
+                        <h3>Juan Ramón Jiménez</h3>
+                        <p class="sp-meta"><i>Platero y yo</i> · <i>Diario de un poeta recién casado</i></p>
+                    </article>
+                    <article class="sp-bard" data-tier="b" data-search="sylvia plath ariel colossus">
+                        <span class="sp-bard-tier">B</span>
+                        <img src="resources/img/poeta_sylvia_plath.jpg" alt="Sylvia Plath" decoding="async">
+                        <h3>Sylvia Plath</h3>
+                        <p class="sp-meta"><i>Ariel</i> · <i>The Colossus</i></p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -409,6 +409,14 @@
                     </button>
                     <span class="sp-medal sp-medal-gold" aria-hidden="true"></span>
                 </li>
+                <li data-search="supercut lorde melodrama">
+                    <button type="button" class="sp-song" data-track="6K8VQ84MqhsoakN5MjrnVR" aria-expanded="false">
+                        <span class="sp-when"><b>2022</b><small><span data-l="es">junio</span><span data-l="en">June</span></small></span>
+                        <img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00004851f8553e18a11209d4becd0336" alt="" loading="lazy">
+                        <span class="sp-song-txt"><b>Supercut</b><span>Lorde</span></span>
+                        <span class="sp-play" aria-hidden="true">▶</span>
+                    </button>
+                </li>
                 <li data-search="apretar + apretar más mvrk">
                     <button type="button" class="sp-song" data-track="2zvvoRLAWTaq0PbbcWUsoc" aria-expanded="false">
                         <span class="sp-when"><b>2026</b><small><span data-l="es">febrero</span><span data-l="en">February</span></small></span>
@@ -459,6 +467,7 @@
             <p class="sp-note"><span data-l="es">Mis canciones de cada uno, en orden. Toca una para escucharla.</span><span data-l="en">My songs by each of them, in order. Tap one to listen.</span></p>
             <div class="sp-artists sp-swipe">
                 <div class="sp-artist" data-search="la moda la m.o.d.a. maravillosa orquesta del alcohol burgos">
+                    <span class="sp-rank sp-rank-1">1</span>
                     <div class="sp-artist-head"><img class="sp-artist-pic" src="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb597bbff23d5d27da6d3dde14" alt="La M.O.D.A." loading="lazy"><span class="sp-poet-txt"><b>La M.O.D.A.</b><span class="sp-meta">Burgos</span></span></div>
                     <ol class="sp-chips">
                         <li><button type="button" data-track="5D0HvEIpQzF3gbjGLHkKIx" aria-pressed="true">La vida en rosa</button></li>
@@ -470,6 +479,7 @@
                     <iframe class="sp-player" title="La M.O.D.A." src="https://open.spotify.com/embed/track/5D0HvEIpQzF3gbjGLHkKIx?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                 </div>
                 <div class="sp-artist" data-search="mvrk">
+                    <span class="sp-rank sp-rank-2">2</span>
                     <div class="sp-artist-head"><img class="sp-artist-pic" src="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5ebffc3d0acfa836722752a397d" alt="mvrk" loading="lazy"><span class="sp-poet-txt"><b>mvrk</b><span class="sp-meta">Rap</span></span></div>
                     <div class="sp-albums">
                         <div class="sp-album">
@@ -496,6 +506,7 @@
                     <iframe class="sp-player" title="mvrk" src="https://open.spotify.com/embed/track/4z0g53lA8sqINPeJ4bpjNu?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                 </div>
                 <div class="sp-artist" data-search="amaia romero cuando no se quien soy aitana">
+                    <span class="sp-rank sp-rank-3">3</span>
                     <div class="sp-artist-head"><img class="sp-artist-pic" src="https://i.scdn.co/image/ab6761610000e5ebd8c27cf88071ec8df272ac50" alt="Amaia" loading="lazy"><span class="sp-poet-txt"><b>Amaia</b><span class="sp-meta">Pamplona</span></span></div>
                     <div class="sp-albums">
                         <div class="sp-album">
@@ -513,6 +524,7 @@
                     <iframe class="sp-player" title="Amaia" src="https://open.spotify.com/embed/track/5PHEToa3yWlCiagig8MFE9?utm_source=generator&amp;theme=0" height="80" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                 </div>
                 <div class="sp-artist" data-search="jaloner freestyle argentina">
+                    <span class="sp-rank">4</span>
                     <div class="sp-artist-head"><img class="sp-artist-pic" src="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb5b823152726f9e91c55d5374" alt="Jaloner" loading="lazy"><span class="sp-poet-txt"><b>Jaloner</b><span class="sp-meta">Rap</span></span></div>
                     <ol class="sp-chips">
                         <li><button type="button" data-track="3LrzbbyJK522LWn8tCjsjA" aria-pressed="true">La ley del más fuerte</button></li>
@@ -540,6 +552,7 @@
             <h2><span data-l="es">Refranes favoritos</span><span data-l="en">Favourite sayings</span></h2>
             <ul class="sp-sayings">
                 <li data-search="a buen entendedor a word to the wise"><span data-l="es">A buen entendedor,</span><span data-l="en">A word to the wise,</span></li>
+                <li data-search="lo bueno si breve dos veces bueno good things if brief"><span data-l="es">Lo bueno, si breve,</span><span data-l="en">Good things, if brief,</span></li>
             </ul>
         </section>
 
@@ -559,9 +572,9 @@
         <section class="sp-list">
             <h2><span data-l="es">Números favoritos</span><span data-l="en">Favourite numbers</span></h2>
             <ol class="sp-numbers">
-                <li data-search="menos cinco minus five -5"><span class="sp-rank">1</span>−5</li>
-                <li data-search="veintisiete twenty-seven 27"><span class="sp-rank">2</span>27</li>
-                <li data-search="noventa y uno ninety-one 91"><span class="sp-rank">3</span>91</li>
+                <li data-search="menos cinco minus five -5"><span class="sp-rank sp-rank-1">1</span>−5</li>
+                <li data-search="veintisiete twenty-seven 27"><span class="sp-rank sp-rank-2">2</span>27</li>
+                <li data-search="noventa y uno ninety-one 91"><span class="sp-rank sp-rank-3">3</span>91</li>
                 <li data-search="ochenta y cuatro eighty-four 84"><span class="sp-rank">4</span>84</li>
             </ol>
         </section>
@@ -570,22 +583,22 @@
 
         <section class="sp-list">
             <h2><span data-l="es">Momentos del día</span><span data-l="en">Times of day</span></h2>
-            <div class="sp-duel">
+            <div class="sp-duel sp-swipe">
                 <div class="sp-duel-col">
                     <h3><span data-l="es">Favoritos</span><span data-l="en">Favourite</span></h3>
                     <ol class="sp-sky">
-                <li class="nautical"><b data-l="es">Crepúsculo náutico</b><b data-l="en">Nautical twilight</b><span data-l="es">nautical twilight</span><span data-l="en">crepúsculo náutico</span></li>
-                <li class="civil"><b data-l="es">Crepúsculo civil</b><b data-l="en">Civil twilight</b><span data-l="es">civil twilight</span><span data-l="en">crepúsculo civil</span></li>
-                <li class="golden"><b data-l="es">Hora dorada</b><b data-l="en">Golden hour</b><span data-l="es">golden hour</span><span data-l="en">hora dorada</span></li>
+                <li class="nautical"><b data-l="es">Crepúsculo náutico</b><b data-l="en">Nautical twilight</b></li>
+                <li class="civil"><b data-l="es">Crepúsculo civil</b><b data-l="en">Civil twilight</b></li>
+                <li class="golden"><b data-l="es">Hora dorada</b><b data-l="en">Golden hour</b></li>
             </ol>
                 </div>
                 <span class="sp-vs" aria-hidden="true">vs</span>
                 <div class="sp-duel-col">
                     <h3><span data-l="es">Antifavoritos*</span><span data-l="en">Least favourite*</span></h3>
                     <ol class="sp-sky">
-                <li class="hungry"><b data-l="es">Justo antes de comer</b><b data-l="en">Right before lunch</b><span data-l="es">right before lunch</span><span data-l="en">justo antes de comer</span></li>
-                <li class="hungry"><b data-l="es">Justo antes de justo antes de comer</b><b data-l="en">Right before right before lunch</b><span data-l="es">right before right before lunch</span><span data-l="en">justo antes de justo antes de comer</span></li>
-                <li class="hungry"><b data-l="es">Justo antes de cenar</b><b data-l="en">Right before dinner</b><span data-l="es">right before dinner</span><span data-l="en">justo antes de cenar</span></li>
+                <li class="hungry"><b data-l="es">Justo antes de comer</b><b data-l="en">Right before lunch</b></li>
+                <li class="hungry"><b data-l="es">Justo antes de justo antes de comer</b><b data-l="en">Right before right before lunch</b></li>
+                <li class="hungry"><b data-l="es">Justo antes de cenar</b><b data-l="en">Right before dinner</b></li>
             </ol>
                 </div>
             </div>
@@ -596,17 +609,17 @@
             <h2><span data-l="es">Siluetas de país favoritas</span><span data-l="en">Favourite country silhouettes</span></h2>
             <div class="sp-countries">
                 <div class="sp-country" data-search="república democrática del congo democratic republic of the congo">
-                    <span class="sp-rank">1</span>
+                    <span class="sp-rank sp-rank-1">1</span>
                     <svg viewBox="0 0 100.0 97.7" role="img" aria-label="República Democrática del Congo"><path d="M98.2 9.2 L97.9 15.4 L100.0 16.1 L98.3 18.0 L96.3 19.4 L94.3 22.1 L93.2 24.6 L92.9 28.8 L91.6 30.8 L91.6 34.8 L90.1 36.3 L89.9 39.4 L89.2 39.8 L88.7 42.7 L90.0 45.1 L90.3 51.5 L91.3 56.3 L90.8 59.1 L91.8 62.1 L94.9 65.1 L97.7 71.7 L95.6 71.2 L88.6 72.1 L87.2 72.7 L85.7 76.1 L86.8 78.4 L85.9 84.7 L85.2 90.0 L86.7 90.9 L90.4 93.0 L91.8 92.0 L92.2 97.7 L88.2 97.6 L86.0 94.7 L84.1 92.5 L80.1 91.8 L78.9 89.0 L75.7 90.7 L71.5 89.9 L69.7 87.5 L66.3 87.0 L63.9 87.2 L63.6 85.5 L61.8 85.4 L59.4 85.1 L56.1 85.9 L53.8 85.7 L52.5 86.2 L52.8 79.9 L51.0 78.0 L50.7 74.7 L51.4 71.6 L50.4 69.5 L50.3 66.2 L43.9 66.3 L44.3 64.4 L41.6 64.4 L41.4 65.3 L38.1 65.5 L36.8 68.6 L36.0 69.9 L33.1 69.1 L31.3 69.9 L27.9 70.3 L25.8 67.6 L24.6 65.8 L23.1 62.7 L21.8 58.8 L6.3 58.7 L4.4 59.3 L2.9 59.2 L0.7 59.9 L0.0 58.3 L1.3 57.7 L1.5 55.4 L2.4 54.1 L4.3 53.0 L5.7 53.5 L7.5 51.5 L10.3 51.5 L10.7 53.0 L12.6 54.0 L15.7 50.7 L18.8 48.1 L20.1 46.4 L20.0 42.0 L22.2 36.9 L24.7 34.2 L28.1 31.7 L28.7 30.0 L28.9 28.0 L29.7 26.2 L29.4 23.2 L30.1 18.5 L31.1 15.3 L32.7 12.4 L33.0 9.2 L33.5 5.6 L35.5 2.9 L38.4 1.2 L42.7 3.0 L46.0 4.9 L49.9 5.4 L53.8 6.5 L55.4 3.3 L56.1 2.9 L58.5 3.4 L64.4 0.8 L66.5 1.9 L68.2 1.7 L69.0 0.5 L70.9 0.0 L74.9 0.6 L78.3 0.7 L80.0 0.1 L83.2 4.5 L85.5 5.1 L87.0 4.2 L89.4 4.6 L92.3 3.5 L93.6 5.7 L98.2 9.2 Z"/></svg>
                     <h3><span data-l="es">República Democrática del Congo</span><span data-l="en">Democratic Republic of the Congo</span></h3>
                 </div>
                 <div class="sp-country" data-search="croacia croatia">
-                    <span class="sp-rank">2</span>
+                    <span class="sp-rank sp-rank-2">2</span>
                     <svg viewBox="0 0 100.0 99.1" role="img" aria-label="Croacia"><path d="M90.2 14.6 L94.5 24.2 L100.0 31.2 L93.3 40.5 L85.4 35.0 L73.3 35.4 L58.3 31.3 L50.2 31.8 L46.4 36.9 L40.2 31.3 L36.5 41.5 L45.0 53.0 L48.8 60.6 L56.8 69.8 L63.5 75.3 L70.1 85.6 L85.5 94.9 L83.6 99.1 L67.2 89.9 L57.1 81.1 L41.1 73.8 L26.5 55.6 L30.0 53.8 L22.0 43.5 L21.7 35.1 L10.5 31.3 L5.2 41.9 L0.0 33.6 L0.4 25.1 L1.0 24.7 L13.2 25.5 L16.4 21.4 L22.3 25.4 L29.1 25.9 L29.1 19.0 L35.1 16.5 L36.8 6.5 L50.7 0.0 L56.3 3.0 L69.3 13.6 L83.7 18.3 L90.2 14.6 Z"/></svg>
                     <h3><span data-l="es">Croacia</span><span data-l="en">Croatia</span></h3>
                 </div>
                 <div class="sp-country" data-search="chile chile">
-                    <span class="sp-rank">3</span>
+                    <span class="sp-rank sp-rank-3">3</span>
                     <svg viewBox="0 0 17.2 100.0" role="img" aria-label="Chile"><path d="M13.9 92.2 L13.9 98.0 L16.0 98.0 L17.2 98.1 L16.6 99.2 L14.9 100.0 L13.9 99.9 L12.7 99.7 L11.3 98.9 L9.2 98.5 L6.7 97.1 L4.7 95.7 L1.9 92.7 L3.6 93.3 L6.4 95.0 L9.0 96.0 L10.0 94.8 L10.7 93.0 L12.5 91.9 L13.9 92.2 Z M14.7 10.3 L15.5 13.9 L17.0 13.6 L17.2 14.2 L16.5 16.9 L14.3 18.2 L14.4 22.6 L14.0 23.5 L14.6 24.5 L13.2 26.1 L11.9 28.6 L11.2 31.0 L11.4 33.5 L10.1 36.2 L11.1 40.8 L11.6 41.3 L11.6 43.7 L10.4 46.2 L10.5 48.4 L9.0 50.2 L9.0 52.6 L9.6 55.1 L8.4 56.1 L7.9 58.4 L7.4 61.1 L7.7 64.3 L6.9 64.9 L7.4 67.9 L8.3 68.9 L7.6 70.0 L8.6 70.5 L8.8 71.5 L7.9 72.0 L8.1 73.6 L7.4 77.1 L6.3 79.3 L6.6 80.6 L5.9 82.3 L4.4 83.5 L4.6 86.2 L5.3 87.2 L6.6 87.0 L6.6 89.0 L7.4 90.5 L12.2 90.9 L14.0 91.3 L12.3 91.3 L11.3 91.9 L9.5 92.9 L9.2 95.3 L8.4 95.4 L6.1 94.5 L3.9 92.7 L3.9 92.7 L1.4 91.2 L0.8 89.5 L1.3 88.0 L0.3 86.2 L0.1 81.8 L0.9 79.2 L3.0 77.2 L0.0 76.4 L1.9 74.1 L2.6 69.7 L4.8 70.7 L5.8 65.2 L4.5 64.5 L3.9 67.8 L2.6 67.4 L3.2 63.7 L3.9 58.8 L4.8 57.0 L4.2 54.4 L4.1 51.5 L4.9 51.4 L6.1 47.1 L7.5 42.9 L8.4 39.0 L7.9 35.1 L8.5 32.9 L8.2 29.7 L9.4 26.5 L9.8 21.4 L10.4 15.9 L11.0 10.0 L10.9 5.7 L10.5 2.0 L11.5 1.3 L12.0 0.0 L13.0 1.8 L13.3 3.7 L14.3 4.8 L13.7 7.3 L14.7 10.3 Z"/></svg>
                     <h3>Chile</h3>
                 </div>
@@ -617,19 +630,19 @@
             <h2><span data-l="es">Ciudades favoritas</span><span data-l="en">Favourite cities</span></h2>
             <div class="sp-cities">
                 <article class="sp-city" data-search="ciudad de mexico mexico city cdmx">
-                    <span class="sp-rank">1</span>
+                    <span class="sp-rank sp-rank-1">1</span>
                     <img src="resources/img/ciudad_cdmx.jpg" alt="Ciudad de México" loading="lazy">
                     <h3><span data-l="es">Ciudad de México</span><span data-l="en">Mexico City</span></h3>
                     <p class="sp-meta"><span data-l="es">México</span><span data-l="en">Mexico</span></p>
                 </article>
                 <article class="sp-city" data-search="montreal canada">
-                    <span class="sp-rank">2</span>
+                    <span class="sp-rank sp-rank-2">2</span>
                     <img src="resources/img/ciudad_montreal.jpg" alt="Montreal" loading="lazy">
                     <h3>Montreal</h3>
                     <p class="sp-meta"><span data-l="es">Canadá</span><span data-l="en">Canada</span></p>
                 </article>
                 <article class="sp-city" data-search="barcelona españa spain">
-                    <span class="sp-rank">3</span>
+                    <span class="sp-rank sp-rank-3">3</span>
                     <img src="resources/img/ciudad_barcelona.jpg" alt="Barcelona" loading="lazy">
                     <h3>Barcelona<sup class="sp-ast">*</sup></h3>
                     <p class="sp-meta"><span data-l="es">España</span><span data-l="en">Spain</span></p>
@@ -642,19 +655,19 @@
             <h2><span data-l="es">Ciudades a las que quiero ir</span><span data-l="en">Cities I want to visit</span></h2>
             <div class="sp-cities sp-cities-wish">
                 <article class="sp-city sp-city-wish" data-search="buenos aires argentina">
-                    <span class="sp-rank">1</span>
+                    <span class="sp-rank sp-rank-1">1</span>
                     <img src="resources/img/ciudad_buenos_aires.jpg" alt="Buenos Aires" loading="lazy">
                     <h3>Buenos Aires</h3>
                     <p class="sp-meta"><span data-l="es">Argentina</span><span data-l="en">Argentina</span></p>
                 </article>
                 <article class="sp-city sp-city-wish" data-search="vigo galicia españa spain">
-                    <span class="sp-rank">2</span>
+                    <span class="sp-rank sp-rank-2">2</span>
                     <img src="resources/img/ciudad_vigo.jpg" alt="Vigo" loading="lazy">
                     <h3>Vigo</h3>
                     <p class="sp-meta"><span data-l="es">España</span><span data-l="en">Spain</span></p>
                 </article>
                 <article class="sp-city sp-city-wish" data-search="cadiz cádiz españa spain">
-                    <span class="sp-rank">3</span>
+                    <span class="sp-rank sp-rank-3">3</span>
                     <img src="resources/img/ciudad_cadiz.jpg" alt="Cádiz" loading="lazy">
                     <h3>Cádiz</h3>
                     <p class="sp-meta"><span data-l="es">España</span><span data-l="en">Spain</span></p>
@@ -675,7 +688,7 @@
                 <li><span data-l="es">Carteles de las series: The Movie Database (TMDB).</span><span data-l="en">Series posters: The Movie Database (TMDB).</span></li>
                 <li><span data-l="es">Portadas de los libros: Open Library.</span><span data-l="en">Book covers: Open Library.</span></li>
                 <li><span data-l="es">Retrato de Pío Baroja y fotos de ciudades: Wikimedia Commons.</span><span data-l="en">Portrait of Pío Baroja and city photos: Wikimedia Commons.</span></li>
-                <li><span data-l="es">Retratos de poetas: Wikimedia Commons, en dominio público salvo Miguel Hernández (UNED, CC BY 2.0), Blas de Otero (Manuel María Fernández Gochi, CC BY-SA 4.0, recortada) y Chantal Maillard (Martina Chenowitz, CC BY-SA 4.0, recortada). Para el Arcipreste de Hita, un folio del manuscrito del <i>Libro de buen amor</i>.</span><span data-l="en">Poet portraits: Wikimedia Commons, public domain except Miguel Hernández (UNED, CC BY 2.0), Blas de Otero (Manuel María Fernández Gochi, CC BY-SA 4.0, cropped) and Chantal Maillard (Martina Chenowitz, CC BY-SA 4.0, cropped). For the Arcipreste de Hita, a folio from the manuscript of the <i>Libro de buen amor</i>.</span></li>
+                <li><span data-l="es">Retratos de poetas: Wikimedia Commons, en dominio público salvo Miguel Hernández (UNED, CC BY 2.0), Blas de Otero (Manuel María Fernández Gochi, CC BY-SA 4.0, recortada) y Chantal Maillard (Martina Chenowitz, CC BY-SA 4.0, recortada). No se conserva ningún retrato del Arcipreste de Hita: en su carta va un juglar de las <i>Cantigas de Santa María</i> (códice de los músicos, siglo XIII, dominio público).</span><span data-l="en">Poet portraits: Wikimedia Commons, public domain except Miguel Hernández (UNED, CC BY 2.0), Blas de Otero (Manuel María Fernández Gochi, CC BY-SA 4.0, cropped) and Chantal Maillard (Martina Chenowitz, CC BY-SA 4.0, cropped). No portrait of the Arcipreste de Hita survives: his card shows a minstrel from the <i>Cantigas de Santa María</i> (musicians' codex, 13th century, public domain).</span></li>
                 <li><span data-l="es">Fotos de artistas, carátulas y reproductores: Spotify.</span><span data-l="en">Artist photos, cover art and players: Spotify.</span></li>
                 <li><span data-l="es">Siluetas de países: Natural Earth (dominio público).</span><span data-l="en">Country silhouettes: Natural Earth (public domain).</span></li>
                 <li><span data-l="es">Los extractos de libros pertenecen a sus autores y editoriales; se citan como fragmentos.</span><span data-l="en">The book excerpts belong to their authors and publishers; they are quoted as fragments.</span></li>
@@ -696,17 +709,17 @@
                 <p class="sp-note"><span data-l="es">Me los puse en julio de 2026. Ser más…</span><span data-l="en">I set them in July 2026. To be more…</span></p>
                 <div class="rc-goals sp-swipe">
                     <article class="rc-goal">
-                        <span class="sp-rank">1</span>
+                        <span class="sp-rank sp-rank-1">1</span>
                         <h3><span data-l="es">Infantil</span><span data-l="en">Childlike</span></h3>
                         <p><span data-l="es">Disfrutar más del juego y de las situaciones con inocencia. Hacer más el tonto.</span><span data-l="en">Enjoy play more, and enjoy situations with innocence. Fool around more.</span></p>
                     </article>
                     <article class="rc-goal">
-                        <span class="sp-rank">2</span>
+                        <span class="sp-rank sp-rank-2">2</span>
                         <h3><span data-l="es">Trabajador</span><span data-l="en">Hard-working</span></h3>
-                        <p><span data-l="es">No nos medimos por resultados, sino por esfuerzo. No necesariamente productivo, pero sentirme orgulloso de mi esfuerzo, y buscarlo.</span><span data-l="en">We don't measure ourselves by results, but by effort. Not necessarily productive, but proud of my effort, and seeking it out.</span></p>
+                        <p><span data-l="es">No necesariamente productivo; no nos medimos por resultados, sino por esfuerzo. Buscar el <a href="https://www.lesswrong.com/posts/7hLWZf6kFkduecH2g/play-in-hard-mode" target="_blank" rel="noopener">modo difícil</a>.</span><span data-l="en">Not necessarily productive; we don't measure ourselves by results, but by effort. Seeking out <a href="https://www.lesswrong.com/posts/7hLWZf6kFkduecH2g/play-in-hard-mode" target="_blank" rel="noopener">hard mode</a>.</span></p>
                     </article>
                     <article class="rc-goal">
-                        <span class="sp-rank">3</span>
+                        <span class="sp-rank sp-rank-3">3</span>
                         <h3><span data-l="es">Reflexivo</span><span data-l="en">Reflective</span></h3>
                         <p><span data-l="es">Muchas veces es mi manera de vivir el presente. Y me gusta cómo pienso.</span><span data-l="en">It is often my way of living in the present. And I like the way I think.</span></p>
                     </article>
@@ -753,31 +766,31 @@
         <a class="sp-close" href="#">← <span data-l="es">Volver</span><span data-l="en">Back</span></a>
 
         <article class="sp-poem" data-poem="sofia" hidden>
-            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/1048142-L.jpg" alt=""><figcaption><span data-l="es">Noruega. Sofía, de catorce años, recibe cartas anónimas que le cuentan la historia de la filosofía.</span><span data-l="en">Norway. Sophie, fourteen, receives anonymous letters that tell her the history of philosophy.</span></figcaption></figure>
+            <figure class="sp-figure"><img class="sp-hero" src="resources/img/libro_sofia.jpg" alt=""><figcaption><span data-l="es">Noruega. Sofía, de catorce años, recibe cartas anónimas que le cuentan la historia de la filosofía.</span><span data-l="en">Norway. Sophie, fourteen, receives anonymous letters that tell her the history of philosophy.</span></figcaption></figure>
             <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Jostein Gaarder</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Oslo, 1991</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">noruego</span><span data-l="en">Norwegian</span> (<i>Sofies verden</i>)</dd></div></dl>
             <h2>El mundo de Sofía</h2>
         </article>
 
         <article class="sp-poem" data-poem="manifiesto" hidden>
-            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/10601290-L.jpg" alt=""><figcaption><span data-l="es">El programa de la Liga de los Comunistas, escrito en vísperas de las revoluciones de 1848.</span><span data-l="en">The programme of the Communist League, written on the eve of the revolutions of 1848.</span></figcaption></figure>
+            <figure class="sp-figure"><img class="sp-hero" src="resources/img/libro_manifiesto.jpg" alt=""><figcaption><span data-l="es">El programa de la Liga de los Comunistas, escrito en vísperas de las revoluciones de 1848.</span><span data-l="en">The programme of the Communist League, written on the eve of the revolutions of 1848.</span></figcaption></figure>
             <dl class="sp-facts"><div><dt><span data-l="es">Autores</span><span data-l="en">Authors</span></dt><dd>Karl Marx <span data-l="es">y</span><span data-l="en">and</span> Friedrich Engels</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd><span data-l="es">Londres</span><span data-l="en">London</span>, 1848</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">alemán</span><span data-l="en">German</span> (<i>Manifest der Kommunistischen Partei</i>)</dd></div></dl>
             <h2>El manifiesto comunista</h2>
         </article>
 
         <article class="sp-poem" data-poem="metamorfosis" hidden>
-            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/14073660-L.jpg" alt=""><figcaption><span data-l="es">Gregor Samsa se despierta convertido en un insecto.</span><span data-l="en">Gregor Samsa wakes up transformed into an insect.</span></figcaption></figure>
+            <figure class="sp-figure"><img class="sp-hero" src="resources/img/libro_metamorfosis.jpg" alt=""><figcaption><span data-l="es">Gregor Samsa se despierta convertido en un insecto.</span><span data-l="en">Gregor Samsa wakes up transformed into an insect.</span></figcaption></figure>
             <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Franz Kafka</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Leipzig, 1915</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">alemán</span><span data-l="en">German</span> (<i>Die Verwandlung</i>)</dd></div></dl>
             <h2>La metamorfosis</h2>
         </article>
 
         <article class="sp-poem" data-poem="nozick" hidden>
-            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/12326832-L.jpg" alt=""><figcaption><span data-l="es">Una defensa del Estado mínimo, en respuesta a <i>Teoría de la justicia</i>, de Rawls.</span><span data-l="en">A defence of the minimal state, in response to Rawls's <i>A Theory of Justice</i>.</span></figcaption></figure>
+            <figure class="sp-figure"><img class="sp-hero" src="resources/img/libro_nozick.jpg" alt=""><figcaption><span data-l="es">Una defensa del Estado mínimo, en respuesta a <i>Teoría de la justicia</i>, de Rawls.</span><span data-l="en">A defence of the minimal state, in response to Rawls's <i>A Theory of Justice</i>.</span></figcaption></figure>
             <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Robert Nozick</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd><span data-l="es">Nueva York</span><span data-l="en">New York</span>, 1974</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">inglés</span><span data-l="en">English</span> (<i>Anarchy, State, and Utopia</i>)</dd></div></dl>
             <h2>Anarquía, Estado y utopía</h2>
         </article>
 
         <article class="sp-poem" data-poem="nada" hidden>
-            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/10663896-L.jpg" alt=""><figcaption><span data-l="es">Barcelona, primeros años cuarenta. Andrea llega sola a la calle de Aribau.</span><span data-l="en">Barcelona, early 1940s. Andrea arrives alone at Aribau street.</span></figcaption></figure>
+            <figure class="sp-figure"><img class="sp-hero" src="resources/img/libro_nada.jpg" alt=""><figcaption><span data-l="es">Barcelona, primeros años cuarenta. Andrea llega sola a la calle de Aribau.</span><span data-l="en">Barcelona, early 1940s. Andrea arrives alone at Aribau street.</span></figcaption></figure>
             <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Carmen Laforet</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Barcelona, 1945</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">español</span><span data-l="en">Spanish</span></dd></div></dl>
             <h2>Nada</h2>
             <blockquote class="sp-quote">
@@ -787,7 +800,7 @@
         </article>
 
         <article class="sp-poem" data-poem="comeras" hidden>
-            <figure class="sp-figure"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/15131618-L.jpg" alt=""><figcaption><span data-l="es">Marina, recién graduada, conoce a Jaime, veinte años mayor.</span><span data-l="en">Marina, just graduated, meets Jaime, twenty years older.</span></figcaption></figure>
+            <figure class="sp-figure"><img class="sp-hero" src="resources/img/libro_comeras.jpg" alt=""><figcaption><span data-l="es">Marina, recién graduada, conoce a Jaime, veinte años mayor.</span><span data-l="en">Marina, just graduated, meets Jaime, twenty years older.</span></figcaption></figure>
             <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Lucía Solla Sobral</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Barcelona, 2025</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">español</span><span data-l="en">Spanish</span></dd></div></dl>
             <h2>Comerás flores</h2>
             <blockquote class="sp-quote">
@@ -801,7 +814,7 @@
         </article>
 
         <article class="sp-poem" data-poem="arbol" hidden>
-            <figure class="sp-figure"><div class="sp-hero-pair"><img class="sp-hero" src="https://covers.openlibrary.org/b/id/10510356-L.jpg" alt=""><img class="sp-hero" src="resources/img/autor_pio_baroja.jpg" alt="Pío Baroja"></div><figcaption><span data-l="es">Madrid, finales del XIX. Andrés Hurtado estudia Medicina y busca un sentido. A la derecha, Baroja en 1953.</span><span data-l="en">Madrid, late 19th century. Andrés Hurtado studies medicine and looks for meaning. Right, Baroja in 1953.</span></figcaption></figure>
+            <figure class="sp-figure"><div class="sp-hero-pair"><img class="sp-hero" src="resources/img/libro_arbol.jpg" alt=""><img class="sp-hero" src="resources/img/autor_pio_baroja.jpg" alt="Pío Baroja"></div><figcaption><span data-l="es">Madrid, finales del XIX. Andrés Hurtado estudia Medicina y busca un sentido. A la derecha, Baroja en 1953.</span><span data-l="en">Madrid, late 19th century. Andrés Hurtado studies medicine and looks for meaning. Right, Baroja in 1953.</span></figcaption></figure>
             <dl class="sp-facts"><div><dt><span data-l="es">Autor</span><span data-l="en">Author</span></dt><dd>Pío Baroja</dd></div><div><dt><span data-l="es">Publicado</span><span data-l="en">Published</span></dt><dd>Madrid, 1911</dd></div><div><dt><span data-l="es">Idioma original</span><span data-l="en">Original language</span></dt><dd><span data-l="es">español</span><span data-l="en">Spanish</span></dd></div></dl>
             <h2>El árbol de la ciencia</h2>
             <blockquote class="sp-quote">
@@ -938,7 +951,7 @@
     // On the phone, card lists are swiped sideways: a dot per card shows where you are
     (function () {
         document.querySelectorAll('.sp-swipe').forEach(function (row) {
-            var cards = Array.prototype.filter.call(row.querySelectorAll('.sp-film, .sp-show, .sp-poet, .sp-artist, .rc-goal'),
+            var cards = Array.prototype.filter.call(row.querySelectorAll('.sp-film, .sp-show, .sp-poet, .sp-artist, .rc-goal, .sp-duel-col'),
                 function (c) { return c.closest('.sp-swipe') === row; });
             if (cards.length < 2) return;
             var dots = document.createElement('div');
@@ -974,55 +987,94 @@
     })();
     </script>
     <script>
-    // Poets: each tier is a deck of cards. Only the top card is seen; a flick sends it away and shows the next
+    // Poets: one single deck, tier S first, then A, then B. Unseen cards wait face down on the right
+    // (in their tier's colour), the top card is face up in the middle, and passed cards pile up face up
+    // on the left. Each card wears its tier; when the tier changes, the badge pops. No wrap-around: at
+    // the end, a button rewinds the whole deck card by card.
     (function () {
+        // Load and decode every portrait now, so a card is never blank when it turns over
+        document.querySelectorAll('.sp-bard img').forEach(function (im) {
+            im.loading = 'eager';
+            if (im.decode) im.decode().catch(function () {});
+        });
         var decks = [];
         document.querySelectorAll('.sp-deck').forEach(function (deck) {
             var all = Array.prototype.slice.call(deck.querySelectorAll('.sp-bard'));
             var idx = 0, busy = false;
             var bar = document.createElement('div');
             bar.className = 'sp-deck-bar';
-            bar.innerHTML = '<button type="button" class="sp-deck-prev" aria-label="‹">‹</button><span class="sp-deck-n"></span><button type="button" class="sp-deck-next" aria-label="›">›</button>';
+            bar.innerHTML = '<button type="button" class="sp-deck-prev" aria-label="‹">‹</button><span class="sp-deck-n"></span><button type="button" class="sp-deck-next" aria-label="›">›</button><button type="button" class="sp-deck-again" hidden><span data-l="es">↺ Volver al inicio</span><span data-l="en">↺ Back to the start</span></button>';
             deck.after(bar);
-            var n = bar.querySelector('.sp-deck-n');
-            function cards() { return all.filter(function (c) { return !c.classList.contains('sp-hide'); }); }
-            function render() {
-                var cs = cards();
-                if (idx >= cs.length) idx = 0;
-                all.forEach(function (c) { c.className = c.className.replace(/ ?sp-pos-\S+/g, ''); c.style.transform = ''; c.setAttribute('aria-hidden', 'true'); });
-                cs.forEach(function (c, k) {
-                    var d = (k - idx + cs.length) % cs.length;
-                    c.classList.add('sp-pos-' + (d > 2 ? 'x' : d));
-                    if (d === 0) c.removeAttribute('aria-hidden');
+            // S · A · B above the deck: shows where you are, and jumps to the start of a tier
+            var tb = document.createElement('div');
+            tb.className = 'sp-tierbar';
+            ['s', 'a', 'b'].forEach(function (t) {
+                var b = document.createElement('button');
+                b.type = 'button'; b.className = 'sp-tb-' + t; b.textContent = t.toUpperCase(); b.dataset.tier = t;
+                b.addEventListener('click', function () {
+                    var k = cards().findIndex(function (c) { return c.dataset.tier === t; });
+                    if (k >= 0 && !busy) { idx = k; place(); }
                 });
+                tb.appendChild(b);
+            });
+            deck.before(tb);
+            var shownTier = null;
+            var n = bar.querySelector('.sp-deck-n'), prev = bar.querySelector('.sp-deck-prev'),
+                next = bar.querySelector('.sp-deck-next'), again = bar.querySelector('.sp-deck-again');
+            function cards() { return all.filter(function (c) { return !c.classList.contains('sp-hide'); }); }
+            function place() {
+                var cs = cards();
+                if (idx > cs.length - 1) idx = Math.max(0, cs.length - 1);
+                cs.forEach(function (c, k) {
+                    var d = k - idx, t, z, cls;
+                    if (d === 0) { t = 'none'; z = 50; cls = 'sp-face'; }
+                    else if (d > 0) { t = d > 3 ? 'translateX(30%) rotate(10deg)' : 'translateX(' + (d * 9) + '%) rotate(' + (d * 3.5) + 'deg)'; z = 40 - d; cls = 'sp-back' + (d > 3 ? ' sp-gone' : ''); }
+                    else { var p = -d - 1; t = 'translateX(' + (-34 - p * 5) + '%) rotate(' + (-6 - p * 3) + 'deg)'; z = 30 - p; cls = 'sp-face sp-passed' + (p > 3 ? ' sp-gone' : ''); }
+                    c.style.transform = t; c.style.zIndex = z;
+                    c.classList.remove('sp-face', 'sp-back', 'sp-passed', 'sp-gone');
+                    cls.split(' ').forEach(function (x) { c.classList.add(x); });
+                    if (d === 0) c.removeAttribute('aria-hidden'); else c.setAttribute('aria-hidden', 'true');
+                });
+                var top = cs[idx], tier = top ? top.dataset.tier : null;
+                if (top && shownTier && tier !== shownTier) {
+                    top.classList.remove('sp-tier-new'); top.getBoundingClientRect(); top.classList.add('sp-tier-new');
+                }
+                shownTier = tier;
+                tb.querySelectorAll('button').forEach(function (b) {
+                    b.classList.toggle('sp-on', b.dataset.tier === tier);
+                    b.hidden = !cs.some(function (c) { return c.dataset.tier === b.dataset.tier; });
+                });
+                var last = idx >= cs.length - 1;
                 n.textContent = cs.length ? (idx + 1) + ' / ' + cs.length : '';
+                prev.disabled = idx === 0;
+                next.hidden = last; again.hidden = !last || cs.length < 2;
                 bar.hidden = cs.length < 2;
-                deck.closest('.sp-tier').classList.toggle('sp-hide', cs.length === 0);
+                deck.classList.toggle('sp-deck-end', last && cs.length > 1);
+                deck.closest('.sp-pile').classList.toggle('sp-hide', cs.length === 0);
+            }
+            function bump() {
+                var top = cards()[idx]; if (!top) return;
+                top.classList.remove('sp-bump'); top.getBoundingClientRect(); top.classList.add('sp-bump');
             }
             function go(dir) {
                 var cs = cards();
-                if (busy || cs.length < 2) return;
-                busy = true;
-                var top = cs[idx];
-                if (dir > 0) {
-                    top.classList.add('sp-fly');
-                    top.style.transform = 'translateX(-130%) rotate(-14deg)';
-                    setTimeout(function () { top.classList.remove('sp-fly'); idx = (idx + 1) % cs.length; render(); busy = false; }, 260);
-                } else {
-                    idx = (idx - 1 + cs.length) % cs.length;
-                    var back = cs[idx];
-                    back.style.transform = 'translateX(130%) rotate(14deg)';
-                    render();
-                    back.style.transform = 'translateX(130%) rotate(14deg)';
-                    back.getBoundingClientRect();
-                    back.classList.add('sp-fly');
-                    back.style.transform = '';
-                    setTimeout(function () { back.classList.remove('sp-fly'); busy = false; }, 260);
-                }
+                if (busy) return;
+                if (idx + dir < 0 || idx + dir > cs.length - 1) { place(); bump(); return; }
+                idx += dir; place();
             }
-            bar.querySelector('.sp-deck-prev').addEventListener('click', function () { go(-1); });
-            bar.querySelector('.sp-deck-next').addEventListener('click', function () { go(1); });
-            // Drag with the thumb: the card follows the finger and leaves if pulled far enough
+            function rewind() {
+                if (busy) return;
+                busy = true;
+                (function step() {
+                    if (idx === 0) { busy = false; return; }
+                    idx--; place();
+                    setTimeout(step, 110);
+                })();
+            }
+            prev.addEventListener('click', function () { go(-1); });
+            next.addEventListener('click', function () { go(1); });
+            again.addEventListener('click', rewind);
+            // Thumb: the top card follows the finger; far enough to the left passes it, to the right brings one back
             var x0 = null, y0 = 0, dx = 0, drag = false, card = null;
             deck.addEventListener('pointerdown', function (e) {
                 if (busy) return;
@@ -1032,31 +1084,26 @@
             deck.addEventListener('pointermove', function (e) {
                 if (x0 === null) return;
                 dx = e.clientX - x0;
-                if (!drag && Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(e.clientY - y0)) { drag = true; deck.setPointerCapture(e.pointerId); }
-                if (drag) card.style.transform = 'translateX(' + dx + 'px) rotate(' + (dx / 18) + 'deg)';
+                if (!drag && Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(e.clientY - y0)) { drag = true; deck.setPointerCapture(e.pointerId); card.classList.add('sp-drag'); }
+                if (drag) card.style.transform = 'translateX(' + dx + 'px) rotate(' + (dx / 20) + 'deg)';
             });
             function end() {
                 if (x0 === null) return;
                 x0 = null;
-                if (!drag) { return; }
-                if (Math.abs(dx) > 60) {
-                    if (dx < 0) { go(1); }
-                    else { card.style.transform = ''; go(-1); }
-                } else {
-                    card.classList.add('sp-fly'); card.style.transform = '';
-                    setTimeout(function () { card.classList.remove('sp-fly'); }, 260);
-                }
+                if (!drag) return;
+                card.classList.remove('sp-drag');
+                if (dx < -50) go(1); else if (dx > 50) go(-1); else place();
             }
             deck.addEventListener('pointerup', end);
             deck.addEventListener('pointercancel', end);
-            deck.addEventListener('click', function (e) { if (Math.abs(dx) < 8 && window.matchMedia('(hover: hover)').matches) go(1); });
+            deck.addEventListener('click', function () { if (Math.abs(dx) < 8 && window.matchMedia('(hover: hover)').matches) go(1); });
             deck.tabIndex = 0;
             deck.addEventListener('keydown', function (e) {
                 if (e.key === 'ArrowRight') { go(1); e.preventDefault(); }
                 if (e.key === 'ArrowLeft') { go(-1); e.preventDefault(); }
             });
-            decks.push(function () { idx = 0; render(); });
-            render();
+            decks.push(function () { idx = 0; place(); });
+            place();
         });
         var q = document.getElementById('sp-q');
         if (q) q.addEventListener('input', function () { decks.forEach(function (f) { f(); }); });
