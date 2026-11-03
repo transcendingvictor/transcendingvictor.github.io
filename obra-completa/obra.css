@@ -217,3 +217,13 @@ details summary { cursor: pointer; font-size: 0.85rem; color: var(--suave); padd
 .temas ul { list-style: none; padding: 0; }
 .temas li { padding: 0.2rem 0; }
 .temas .sub { color: var(--suave); }
+
+/* «Quitar colores»: solo se ve con el análisis encendido; deja la medida y la letra de rima */
+.quitar-colores { padding: 0.35rem 0.9rem; border: 1px solid var(--tinta); border-radius: 999px; background: transparent; color: var(--tinta); font: inherit; font-size: 0.85rem; cursor: pointer; }
+.quitar-colores[aria-pressed="true"] { background: var(--tinta); color: #fff; }
+main:not(.analisis) .quitar-colores { display: none; }
+.sin-colores .rima { background: none !important; }
+.sin-colores .anotado:not(.activo) { box-shadow: none !important; border-left-color: transparent !important; }
+/* Imagen del poema */
+.imagen-poema { margin: 2rem auto 1rem; max-width: 26rem; }
+.imagen-poema img { display: block; width: 100%; height: auto; }
