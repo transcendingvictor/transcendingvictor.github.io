@@ -204,3 +204,16 @@ details summary { cursor: pointer; font-size: 0.85rem; color: var(--suave); padd
 .leyenda .tipo, .leyenda .dedica { padding: 0.05rem 0.5rem; border: 1px solid var(--tinta); font-size: 0.75rem; color: var(--tinta); background: rgba(255,255,255,0.6); }
 .leyenda .tipo { border-radius: 999px; }
 .leyenda .dedica { border-radius: 2px; border-style: dashed; }
+
+/* Forma: subsección de personas verbales, con su tabla (se desliza si no cabe) */
+.forma h3 { font-size: 1.05rem; margin: 1.3rem 0 0.5rem; }
+.forma p { margin-bottom: 0.6rem; font-size: 0.95rem; }
+.tabla-desliza { overflow-x: auto; margin: 0.4rem 0 0.8rem; }
+.personas { border-collapse: collapse; font-size: 0.88rem; min-width: 30rem; }
+.personas th, .personas td { padding: 0.35rem 0.6rem; border-bottom: 1px solid var(--linea); text-align: left; vertical-align: top; }
+.personas th { font-weight: 600; color: var(--suave); }
+.personas td:nth-child(3), .personas td:nth-child(4), .personas th:nth-child(3), .personas th:nth-child(4) { text-align: right; white-space: nowrap; }
+/* Temas: tema › subtema */
+.temas ul { list-style: none; padding: 0; }
+.temas li { padding: 0.2rem 0; }
+.temas .sub { color: var(--suave); }

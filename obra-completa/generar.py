@@ -6,9 +6,16 @@ Formato de las anotaciones (ver anotaciones/_PLANTILLA.md):
   - v3-4: texto                anota los versos 3 y 4 (se cuentan solo las líneas con texto)
   - "fragmento": texto         anota ese trozo exacto del poema
   - v3 [forma]: texto          capa de la nota: forma, sentido (por defecto) o referencia
+  ## Historia                  cuándo y dónde se escribió (va antes de la explicación)
+  ## Explicación               «Estado: …» en la primera línea si es un borrador
   ## Forma                     esquema, rimas (- a: …) y cada verso (- v1: 11 A · nota);
+                               ### Figuras (notas por verso, capa forma) y ### Personas verbales (tabla)
                                «Escalonado: v15» = verso partido que empieza donde acaba el anterior
-  ## Análisis del autor        fecha, nota, rasgos sobre 5, párrafo y notas («Estado: provisional» mientras sea un borrador)
+  ## Temas                     - Tema › subtema (y «Estado: …» si es una propuesta)
+  ## Análisis del autor        fecha, nota, rasgos sobre 5 (Profundidad, Dureza, Pintar conceptos, Sonoridad),
+                               párrafo y notas («Estado: provisional» mientras sea un borrador)
+  - v1 y v5: texto             la misma nota en dos versos sueltos
+  - v3 [sentido] (aviso): texto  el paréntesis sale como aviso pequeño en la nota
 
 Traducciones al inglés en traducciones/CODIGO.txt: primera línea el título y después el
 poema línea a línea, con las mismas líneas (y huecos) que el original.
@@ -31,15 +38,20 @@ def notas_por_verso(texto, autor):
     """- v3-4 [capa]: texto  ·  - "fragmento" [capa]: texto  (sin capa = sentido)"""
     notas = []
     for linea in texto.splitlines():
-        m = re.match(r'^- *(?:v(\d+)(?:-(\d+))?|"(.+?)") *(?:\[(\w+)\])? *: *(.+)$', linea)
+        m = re.match(r'^- *(?:v(\d+)(?:-(\d+))?(?: +y +v(\d+))?|"(.+?)") *(?:\[(\w+)\])? *(?:\(([^)]*)\))? *: *(.+)$', linea)
         if not m:
             continue
-        capa = (m[4] or "sentido").lower()
-        n = dict(capa=capa if capa in CAPAS else "sentido", autor=autor, texto=m[5].strip())
-        if m[3]:
-            n["fragmento"] = m[3]
+        capa = (m[5] or "sentido").lower()
+        n = dict(capa=capa if capa in CAPAS else "sentido", autor=autor, texto=m[7].strip())
+        if m[6]:
+            n["aviso"] = m[6].strip()
+        if m[4]:
+            n["fragmento"] = m[4]
         else:
             n.update(desde=int(m[1]), hasta=int(m[2] or m[1]))
+            if m[3]:
+                # «v1 y v5»: la misma nota en los dos versos
+                notas.append(dict(n, desde=int(m[3]), hasta=int(m[3])))
         notas.append(n)
     return notas
 
@@ -54,9 +66,31 @@ def claves(texto):
     return d
 
 
+def subsecciones(texto):
+    """Lo que va antes del primer «### » y cada subsección por su título."""
+    partes = re.split(r"^### +(.+)$", texto, flags=re.M)
+    return partes[0], {partes[i].strip().lower(): partes[i + 1].strip() for i in range(1, len(partes), 2)}
+
+
+def leer_tabla(texto):
+    """Una tabla markdown y los párrafos de alrededor: {antes, filas (la primera es la cabecera), despues}."""
+    antes, filas, despues = [], [], []
+    for bloque in re.split(r"\n\s*\n", texto.strip()):
+        lineas = [l for l in bloque.splitlines() if l.strip()]
+        if lineas and all(l.strip().startswith("|") for l in lineas):
+            for l in lineas:
+                celdas = [c.strip() for c in l.strip().strip("|").split("|")]
+                if not all(re.fullmatch(r":?-+:?", c) for c in celdas):
+                    filas.append(celdas)
+        else:
+            (despues if filas else antes).append(" ".join(l.strip() for l in lineas))
+    return dict(antes="\n\n".join(antes), filas=filas, despues="\n\n".join(despues)) if filas or antes else None
+
+
 def leer_forma(texto):
     if not texto:
         return None
+    texto, subs = subsecciones(texto)
     c = claves(texto)
     forma = dict(estado=c.get("estado", ""), estrofa=c.get("estrofa", ""), medida=c.get("medida", ""),
                  esquema=c.get("esquema", ""), rimas={}, versos={},
@@ -69,10 +103,14 @@ def leer_forma(texto):
         m = re.match(r"^- *([A-Za-z]): *(.+)$", linea)
         if m:
             forma["rimas"][m[1].lower()] = m[2].strip()
+    forma["figuras"] = notas_por_verso(subs.get("figuras", ""), "claude")
+    forma["personas"] = leer_tabla(subs.get("personas verbales", "")) if subs.get("personas verbales") else None
     return forma
 
 
-RASGOS = ("profundidad", "dureza", "interés", "sonoridad")
+RASGOS = ("profundidad", "dureza", "pintar conceptos", "sonoridad")
+# «Interés» pasó a llamarse «Pintar conceptos» (Víctor, 2026-11-03); las fichas antiguas se leen igual
+ALIAS_RASGOS = {"pintar conceptos": ("pintar conceptos", "interés")}
 
 
 def leer_lectura(texto):
@@ -85,7 +123,8 @@ def leer_lectura(texto):
     nota = re.match(r"([\d.,]+)", c.get("nota", ""))
     rasgos = {}
     for r in RASGOS:
-        m = re.match(r"(\d)", c.get(r, ""))
+        valor = next((c[k] for k in ALIAS_RASGOS.get(r, (r,)) if k in c), "")
+        m = re.match(r"(\d)", valor)
         if m:
             rasgos[r] = int(m[1])
     return dict(fecha=c.get("fecha", ""), estado=c.get("estado", ""), nota=nota[1] if nota else "", rasgos=rasgos,
@@ -105,13 +144,25 @@ def leer_anotaciones(ruta):
     explicacion = s.get("explicación", "")
     if explicacion.startswith("(Objetiva."):
         explicacion = ""
+    # «Estado: borrador…» en la primera línea: aviso aparte, no texto
+    m = re.match(r"^Estado: *(.+)\n+", explicacion)
+    explicacion_estado = m[1].strip() if m else ""
+    if m:
+        explicacion = explicacion[m.end():].strip()
+    temas_txt = s.get("temas", "")
+    m = re.match(r"^Estado: *(.+)$", temas_txt, flags=re.M)
+    temas = [dict(tema=t.strip(), sub=(sub or "").strip()) for t, sub in
+             re.findall(r"^- *(.+?)(?: *[›>] *(.+))?$", temas_txt, flags=re.M)]
     forma = leer_forma(s.get("forma", ""))
     if forma:
+        notas += forma.pop("figuras")
         # Las observaciones de cada verso también se ven como notas de la capa de forma
         notas += [dict(capa="forma", autor="claude", desde=int(v), hasta=int(v), texto=d["nota"], metro=True)
                   for v, d in forma["versos"].items() if d["nota"]]
     lectura = leer_lectura(s.get("análisis del autor", ""))
-    return dict(explicacion=explicacion, anotaciones=notas, valoraciones=valoraciones, forma=forma, lectura=lectura)
+    return dict(historia=s.get("historia", ""), explicacion=explicacion, explicacion_estado=explicacion_estado,
+                temas=dict(estado=re.sub(r" *\(ver [^)]*\)", "", m[1]).strip() if m else "", lista=temas) if temas else None,
+                anotaciones=notas, valoraciones=valoraciones, forma=forma, lectura=lectura)
 
 
 PUBLICOS = ["codigo", "titulo", "formato", "forma", "fecha_publicacion", "fecha_escritura", "fuente", "url",
@@ -124,7 +175,7 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
     p = {k: r.get(k, "") for k in PUBLICOS}
     p["etiquetas"] = [e for e in p["etiquetas"].split(";") if e]
     ruta = os.path.join(HERE, "anotaciones", r["codigo"] + ".md")
-    p.update(leer_anotaciones(ruta) if os.path.exists(ruta) else dict(explicacion="", anotaciones=[], valoraciones=[], forma=None, lectura=None))
+    p.update(leer_anotaciones(ruta) if os.path.exists(ruta) else dict(historia="", explicacion="", explicacion_estado="", temas=None, anotaciones=[], valoraciones=[], forma=None, lectura=None))
     trad = os.path.join(HERE, "traducciones", r["codigo"] + ".txt")
     if os.path.exists(trad):
         lineas = open(trad, encoding="utf-8").read().rstrip("\n").split("\n")
