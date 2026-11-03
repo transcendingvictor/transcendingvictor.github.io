@@ -18,9 +18,9 @@ const Obra = (() => {
   const TEXTOS = {
     es: {
       titulo: "Obra completa", volver: "← Obra completa",
-      entradilla: "Poemas y textos desde 2016, ordenados por fecha. Se publicaron primero en", y: "y en",
-      buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Poemas", banales: "Mentiras banales",
-      cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 pieza" : `${n} piezas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado",
+      entradilla: "Poemas desde 2016, ordenados por fecha.",  leyCs: "del blog", leyMb: "del blog", leyDed: "código de dedicatoria: una pista de a quién va, no necesariamente un nombre",
+      buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Ciencias sociales", banales: "Mentiras banales",
+      cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 poema" : `${n} poemas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado",
       noEncuentro: "No encuentro esa pieza.", publicado: f => ` (publicado el ${f})`,
       explicacion: "Explicación", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
       analisis: "Análisis", capas: { forma: "Forma", sentido: "Sentido", referencia: "Referencias" }, provisional: "provisional",
@@ -32,9 +32,9 @@ const Obra = (() => {
     },
     en: {
       titulo: "Complete works", volver: "← Complete works",
-      entradilla: "Poems and texts since 2016, in date order, mostly in Spanish. They first appeared on", y: "and",
-      buscar: "Search a title or a line…", todo: "All", poemas: "Poems", banales: "Mentiras banales",
-      cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 piece" : `${n} pieces`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated",
+      entradilla: "Poems since 2016, in date order, mostly in Spanish.",  leyCs: "from the blog", leyMb: "from the blog", leyDed: "dedication code: a clue to who it is for, not necessarily a name",
+      buscar: "Search a title or a line…", todo: "All", poemas: "Ciencias sociales", banales: "Mentiras banales",
+      cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 poem" : `${n} poems`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated",
       noEncuentro: "I can't find that piece.", publicado: f => ` (published ${f})`,
       explicacion: "Explanation", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
       analisis: "Analysis", capas: { forma: "Form", sentido: "Meaning", referencia: "References" }, provisional: "placeholder",
@@ -125,7 +125,7 @@ const Obra = (() => {
             el("span", { class: "f" }, fechaLarga(fecha(p)) + marca));
           // Etiquetas: el blog de donde viene y, si la tiene, la dedicatoria con su código
           const etiquetas = el("span", { class: "etiquetas" },
-            el("span", { class: "tipo" }, /mentiras banales/i.test(p.fuente) ? "mentiras banales" : "asuntos personales"));
+            el("span", { class: "tipo" }, /mentiras banales/i.test(p.fuente) ? "mentiras banales" : "ciencias sociales"));
           if (p.dedicatoria_pista) etiquetas.append(el("span", { class: "dedica", title: T("dedicada") }, "✉ " + p.dedicatoria_pista));
           b.append(etiquetas);
           b.style.setProperty("--color", COLORES[k++ % COLORES.length]);

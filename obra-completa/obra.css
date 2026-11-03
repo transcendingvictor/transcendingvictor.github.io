@@ -192,3 +192,15 @@ details summary { cursor: pointer; font-size: 0.85rem; color: var(--suave); padd
   .navegacion a:last-child { text-align: right; }
   .navegacion span { flex: 1 1 0; }
 }
+
+/* Legend of the labels: small and quiet, above the filters */
+.entradilla { margin-bottom: 0.8rem; }
+.leyenda { margin: 0 0 1.6rem; font-size: 0.85rem; color: var(--suave); }
+.leyenda ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.35rem 0.6rem; align-items: baseline; }
+.leyenda li { display: contents; }
+.leyenda li > :first-child { justify-self: start; }
+@media (max-width: 600px) { .leyenda { font-size: 0.78rem; line-height: 1.35; } .leyenda .tipo, .leyenda .dedica { font-size: 0.7rem; } }
+.leyenda a { color: inherit; }
+.leyenda .tipo, .leyenda .dedica { padding: 0.05rem 0.5rem; border: 1px solid var(--tinta); font-size: 0.75rem; color: var(--tinta); background: rgba(255,255,255,0.6); }
+.leyenda .tipo { border-radius: 999px; }
+.leyenda .dedica { border-radius: 2px; border-style: dashed; }
