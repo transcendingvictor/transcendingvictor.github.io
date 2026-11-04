@@ -22,7 +22,7 @@ const Obra = (() => {
       buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Ciencias sociales", banales: "Mentiras banales",
       cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 poema" : `${n} poemas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado",
       noEncuentro: "No encuentro esa pieza.", publicado: f => ` (publicado el ${f})`,
-      historia: "Historia", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
+      historia: "Historia", quitarColores: "Quitar colores", ponerColores: "Poner colores", imagen: "Imagen del poema", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
       analisis: "Análisis", capas: { forma: "Forma", sentido: "Sentido", referencia: "Referencias" }, provisional: "provisional",
       forma: "Forma", estrofa: "Estrofa", medida: "Medida", esquema: "Esquema",
       lectura: "Análisis del autor", notaGeneral: "Nota general",
@@ -36,7 +36,7 @@ const Obra = (() => {
       buscar: "Search a title or a line…", todo: "All", poemas: "Ciencias sociales", banales: "Mentiras banales",
       cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 poem" : `${n} poems`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated",
       noEncuentro: "I can't find that piece.", publicado: f => ` (published ${f})`,
-      historia: "Story", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
+      historia: "Story", quitarColores: "Remove colours", ponerColores: "Show colours", imagen: "Image of the poem", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
       analisis: "Analysis", capas: { forma: "Form", sentido: "Meaning", referencia: "References" }, provisional: "placeholder",
       forma: "Form", estrofa: "Stanza", medida: "Metre", esquema: "Rhyme scheme",
       lectura: "Author's analysis", notaGeneral: "Overall score",
@@ -223,8 +223,9 @@ const Obra = (() => {
       } else {
         const vs = nodos.slice(a.desde - 1, a.hasta);
         if (!vs.length) return;
-        // Un verso se subraya (o su número, si la nota es de la medida); un tramo lleva raya al margen
-        marcados = vs.length > 1 ? vs : [a.metro && metros[a.desde] ? metros[a.desde] : txt(vs[0])];
+        // Solo se subraya un trozo concreto (o el número, si la nota es de la medida): una nota de
+        // un verso o de un tramo lleva raya al margen, para no llenar el poema de subrayados
+        marcados = a.metro && metros[a.desde] ? [metros[a.desde]] : vs;
         tras = vs[vs.length - 1];
       }
       // Si varias notas caen en el mismo verso, van una detrás de otra
@@ -371,12 +372,25 @@ const Obra = (() => {
         });
         barra.append(b);
       });
+      // «Quitar colores»: el poema sin rimas teñidas ni subrayados; la medida y la letra de rima se quedan
+      const colores = el("button", { type: "button", class: "quitar-colores" });
+      const pintarColores = () => {
+        const sin = guardado("obra-sin-colores") === "1";
+        cuerpo.classList.toggle("sin-colores", sin);
+        colores.textContent = sin ? T("ponerColores") : T("quitarColores");
+        colores.setAttribute("aria-pressed", String(sin));
+      };
+      colores.addEventListener("click", () => {
+        guardado("obra-sin-colores", guardado("obra-sin-colores") === "1" ? "0" : "1");
+        pintarColores();
+      });
+      pintarColores();
       sw.addEventListener("change", () => {
         if (sw.checked && !activas.length) activas = [...hay];
         aplicar();
       });
       if (conAnalisis) main.append(el("div", { class: "herramientas" },
-        el("label", { class: "interruptor" }, sw, el("span", { class: "pista" }), T("analisis")), barra));
+        el("label", { class: "interruptor" }, sw, el("span", { class: "pista" }), T("analisis")), barra, colores));
       cuerpo.append(versos(p));
       main.append(cuerpo);
       aplicar();
@@ -390,6 +404,7 @@ const Obra = (() => {
       }
 
       if (p.historia) main.append(el("section", { class: "historia" }, el("h2", {}, T("historia")), ...p.historia.split(/\n\n/).map(t => el("p", {}, t))));
+      if (p.imagen) main.append(el("figure", { class: "imagen-poema" }, el("img", { src: p.imagen, alt: T("imagen"), width: "600", height: "600" })));
       if (p.explicacion) {
         const s = el("section", {}, el("h2", {}, T("explicacion")));
         if (p.explicacion_estado) s.append(el("p", { class: "aviso" }, p.explicacion_estado));

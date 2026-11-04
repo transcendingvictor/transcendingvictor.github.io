@@ -17,6 +17,8 @@ Formato de las anotaciones (ver anotaciones/_PLANTILLA.md):
   - v1 y v5: texto             la misma nota en dos versos sueltos
   - v3 [sentido] (aviso): texto  el paréntesis sale como aviso pequeño en la nota
 
+Imagen del poema (opcional) en imagenes/CODIGO.svg, .png o .jpg: sale bajo el poema.
+
 Traducciones al inglés en traducciones/CODIGO.txt: primera línea el título y después el
 poema línea a línea, con las mismas líneas (y huecos) que el original.
 """
@@ -176,6 +178,9 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
     p["etiquetas"] = [e for e in p["etiquetas"].split(";") if e]
     ruta = os.path.join(HERE, "anotaciones", r["codigo"] + ".md")
     p.update(leer_anotaciones(ruta) if os.path.exists(ruta) else dict(historia="", explicacion="", explicacion_estado="", temas=None, anotaciones=[], valoraciones=[], forma=None, lectura=None))
+    # Imagen del poema, si la hay: imagenes/CODIGO.svg (o .png / .jpg)
+    p["imagen"] = next((f"imagenes/{r['codigo']}.{ext}" for ext in ("svg", "png", "jpg")
+                        if os.path.exists(os.path.join(HERE, "imagenes", f"{r['codigo']}.{ext}"))), "")
     trad = os.path.join(HERE, "traducciones", r["codigo"] + ".txt")
     if os.path.exists(trad):
         lineas = open(trad, encoding="utf-8").read().rstrip("\n").split("\n")
