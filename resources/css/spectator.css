@@ -1198,3 +1198,7 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .rc-eras h3 { font-size: 1.25rem; }
   .rc-eras p { font-size: 1.05rem; }
 }
+
+/* «Para tener a mano»: refranes (y más adelante chistes) sobre el fondo oscuro */
+.rc-resources h3 { margin: 0.4rem 0 0.6rem; font-size: 1.2rem; text-align: left; }
+.rc-night .sp-sayings li { color: #e5d8f7; }
