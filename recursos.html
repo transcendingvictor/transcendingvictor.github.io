@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css?v=20261109a" type="text/css" rel="stylesheet">
-        <link href="./resources/css/recursos.css?v=20261109a" type="text/css" rel="stylesheet">
+        <link href="./resources/css/recursos.css?v=20261109b" type="text/css" rel="stylesheet">
         <link href="./resources/css/spectator.css?v=20261109f" type="text/css" rel="stylesheet">
     </head>
 <body>
@@ -311,17 +311,17 @@
         tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.dataset.tab); history.replaceState(null, '', '#' + t.dataset.tab); }); });
         if (location.hash === '#chistes') show('chistes');
 
-        // Search and joke filters (one theme and one form at a time, combinable).
+        // Search and joke filters: several themes (or forms) at once show all of them; theme and form combine.
         var norm = function (x) { return x.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); };
         document.querySelectorAll('.rs-panel').forEach(function (panel) {
-            var q = panel.querySelector('.rs-q'), sel = { tema: '', forma: '' };
+            var q = panel.querySelector('.rs-q'), sel = { tema: [], forma: [] };
             var lis = panel.querySelectorAll('.rs-list > li');
             function apply() {
                 var w = norm(q.value.trim());
                 lis.forEach(function (li) {
                     var ok = (!w || norm(li.textContent).indexOf(w) > -1)
-                        && (!sel.tema || li.dataset.tema === sel.tema)
-                        && (!sel.forma || li.dataset.forma === sel.forma);
+                        && (!sel.tema.length || sel.tema.indexOf(li.dataset.tema) > -1)
+                        && (!sel.forma.length || sel.forma.indexOf(li.dataset.forma) > -1);
                     li.hidden = !ok;
                 });
             }
@@ -329,8 +329,9 @@
             panel.querySelectorAll('.jk-f').forEach(function (b) {
                 b.addEventListener('click', function () {
                     var k = b.dataset.k, v = b.dataset.v;
-                    sel[k] = sel[k] === v ? '' : v;
-                    panel.querySelectorAll('.jk-f[data-k="' + k + '"]').forEach(function (o) { o.setAttribute('aria-pressed', String(o.dataset.v === sel[k])); });
+                    var i = sel[k].indexOf(v);
+                    if (i > -1) sel[k].splice(i, 1); else sel[k].push(v);
+                    b.setAttribute('aria-pressed', String(i < 0));
                     apply();
                 });
             });
