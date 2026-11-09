@@ -175,6 +175,9 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
     if r["formato"] == "otro" or not r["texto"]:
         continue
     p = {k: r.get(k, "") for k in PUBLICOS}
+    # «AAAA-MM-DD~» en fecha_escritura = fecha orientativa: la web dice «principios / mediados / finales de mes»
+    p["escritura_aprox"] = p["fecha_escritura"].endswith("~")
+    p["fecha_escritura"] = p["fecha_escritura"].rstrip("~")
     p["etiquetas"] = [e for e in p["etiquetas"].split(";") if e]
     ruta = os.path.join(HERE, "anotaciones", r["codigo"] + ".md")
     p.update(leer_anotaciones(ruta) if os.path.exists(ruta) else dict(historia="", comentario_forma="", explicacion="", explicacion_estado="", temas=None, anotaciones=[], valoraciones=[], forma=None, lectura=None))
@@ -207,6 +210,10 @@ def sin_autoria(x):
 
 
 piezas = [sin_autoria(p) for p in piezas]
+# El primer poema publicado lleva su marca
+primero = min((p for p in piezas if p["formato"] == "poema"), key=lambda p: p["fecha_publicacion"])
+for p in piezas:
+    p["primero"] = p is primero
 piezas.sort(key=lambda p: p["fecha_escritura"] or p["fecha_publicacion"])
 with open(os.path.join(HERE, "datos", "obra.json"), "w", encoding="utf-8") as fh:
     json.dump(piezas, fh, ensure_ascii=False, indent=1)

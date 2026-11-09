@@ -21,7 +21,7 @@ const Obra = (() => {
       entradilla: "Poemas desde 2016, ordenados por fecha.",  leyCs: "del blog", leyMb: "del blog", leyRev: "revisado por mí; el círculo vacío, todavía sin revisar", leyDed: "código de dedicatoria: una pista de a quién va, no necesariamente un nombre",
       buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Ciencias sociales", banales: "Mentiras banales",
       cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 poema" : `${n} poemas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado", revisado: "Revisado por mí", sinRevisar: "Sin revisar",
-      noEncuentro: "No encuentro esa pieza.", publicado: f => ` · publicado el ${f}`, escrito: f => `Escrito hacia el ${f}`,
+      noEncuentro: "No encuentro esa pieza.", publicado: f => ` · publicado el ${f}`, escrito: f => `Escrito hacia el ${f}`, escritoAprox: (parte, m, a) => `Escrito hacia ${["principios", "mediados", "finales"][parte]} de ${m} de ${a}`, primero: "Mi primer poema publicado",
       historia: "Historia", comentarioForma: "Comentario de la forma", quitarColores: "Quitar colores", ponerColores: "Poner colores", imagen: "Imagen del poema", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
       analisis: "Análisis", capas: { forma: "Forma", sentido: "Sentido", referencia: "Referencias" }, provisional: "provisional",
       forma: "Forma", estrofa: "Estrofa", medida: "Medida", esquema: "Esquema",
@@ -35,7 +35,7 @@ const Obra = (() => {
       entradilla: "Poems since 2016, in date order, mostly in Spanish.",  leyCs: "from the blog", leyMb: "from the blog", leyRev: "reviewed by me; the empty circle, not reviewed yet", leyDed: "dedication code: a clue to who it is for, not necessarily a name",
       buscar: "Search a title or a line…", todo: "All", poemas: "Ciencias sociales", banales: "Mentiras banales",
       cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 poem" : `${n} poems`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated", revisado: "Reviewed by me", sinRevisar: "Not reviewed yet",
-      noEncuentro: "I can't find that piece.", publicado: f => ` · published ${f}`, escrito: f => `Written around ${f}`,
+      noEncuentro: "I can't find that piece.", publicado: f => ` · published ${f}`, escrito: f => `Written around ${f}`, escritoAprox: (parte, m, a) => `Written around ${["early", "mid", "late"][parte]} ${m} ${a}`, primero: "My first published poem",
       historia: "Story", comentarioForma: "Commentary on the form", quitarColores: "Remove colours", ponerColores: "Show colours", imagen: "Image of the poem", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
       analisis: "Analysis", capas: { forma: "Form", sentido: "Meaning", referencia: "References" }, provisional: "placeholder",
       forma: "Form", estrofa: "Stanza", medida: "Metre", esquema: "Rhyme scheme",
@@ -55,6 +55,10 @@ const Obra = (() => {
   const fechaLarga = f => {
     const [a, m, d] = f.split("-");
     return T("fechaLarga")(d ? +d : "", m ? T("meses")[+m - 1] : "", a);
+  };
+  const escritoAprox = f => {
+    const [a, m, d] = f.split("-");
+    return T("escritoAprox")(+d <= 10 ? 0 : +d <= 20 ? 1 : 2, T("meses")[+m - 1], a);
   };
   const traducirEstaticos = () => {
     document.documentElement.lang = lang;
@@ -341,10 +345,11 @@ const Obra = (() => {
       const p = piezas[i];
       document.title = `${p.titulo} | Obra completa`;
       main.append(el("h1", {}, p.titulo, p.titulo_en && p.titulo_en !== p.titulo ? el("span", { class: "tr", lang: "en" }, p.titulo_en) : ""));
-      const meta = el("p", { class: "meta" }, p.fecha_escritura ? T("escrito")(fechaLarga(p.fecha_escritura)) : fechaLarga(fecha(p)));
+      const meta = el("p", { class: "meta" }, p.fecha_escritura ? (p.escritura_aprox ? escritoAprox(p.fecha_escritura) : T("escrito")(fechaLarga(p.fecha_escritura))) : fechaLarga(fecha(p)));
       main.append(el("p", { class: "sello" + (p.revisado ? " revisada" : "") }, el("span", { class: "check" }, p.revisado ? "✓" : ""), p.revisado ? T("revisado") : T("sinRevisar")));
       if (p.fecha_escritura) meta.append(T("publicado")(fechaLarga(p.fecha_publicacion)));
       meta.append(" · ", el("a", { href: p.url, target: "_blank", rel: "noopener" }, p.fuente));
+      if (p.primero) main.append(el("p", { class: "primero" }, T("primero")));
       main.append(meta);
 
       const cuerpo = el("div");

@@ -7,7 +7,7 @@ revisado: 2026-11-09
 
 ## Historia
 
-Publicado el 28 de junio de 2018. Escrito hacia el 12 de mayo de 2018 en una libreta, en Vicálvaro (final de cuarto de la ESO), justo después de un viernes y antes del viaje a Lyon. Es muy de esa época: la búsqueda por estar a gusto, por estar bien.
+Lo escribí hacia el 12 de mayo de 2018 en una libreta, en Vicálvaro (final de cuarto de la ESO), justo después de un viernes y antes del viaje a Lyon, y lo publiqué el 28 de junio. Es muy de esa época: mi búsqueda por estar a gusto, por estar bien.
 
 ## Comentario de la forma
 
