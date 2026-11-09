@@ -1202,3 +1202,73 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 /* «Para tener a mano»: refranes (y más adelante chistes) sobre el fondo oscuro */
 .rc-resources h3 { margin: 0.4rem 0 0.6rem; font-size: 1.2rem; text-align: left; }
 .rc-night .sp-sayings li { color: #e5d8f7; }
+
+/* Wide screens: sections that can use the spare width on the right */
+.sp-wide { container-type: inline-size; }
+@container (min-width: 54rem) {
+  .sp-artists { grid-template-columns: repeat(4, 1fr); max-width: 64rem; }
+}
+
+/* Favourite words: a panel that opens beside the list, or over the page when there is no room */
+.sp-wd-has { padding: 0 0 0 0.8rem !important; align-items: center !important; }
+.sp-wd-btn {
+  flex: 1; display: flex; gap: 0.6rem; align-items: baseline;
+  padding: 0.5rem 0.8rem 0.5rem 0; border: 0; background: none;
+  font: inherit; color: inherit; text-align: left; cursor: pointer;
+}
+.sp-wd-btn .es { font-weight: 700; flex: 1; }
+.sp-wd-btn .en { font-style: italic; text-align: right; }
+.sp-wd-ic {
+  font-style: normal; font-weight: 700; display: inline-grid; place-items: center;
+  width: 1.4rem; height: 1.4rem; border: 0.12rem solid #1c1c1c; border-radius: 50%;
+  background: #fffaf2; transition: transform 0.2s; align-self: center;
+}
+.sp-wd-has.sp-wd-on { background-color: #cdb8ef; }
+.sp-wd-on .sp-wd-ic { transform: rotate(45deg); }
+
+.sp-wd-panel[hidden], .sp-wd-dim[hidden] { display: none; }
+.sp-wd-panel {
+  position: fixed; z-index: 60; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: min(100%, 34rem); max-height: 80vh; overflow-y: auto;
+  padding: 1.4rem 1.4rem 2rem; border: 0.2rem solid #1c1c1c; border-bottom: 0;
+  border-radius: 18px 18px 0 0; background: #fffaf2; box-shadow: 0 -6px 0 #1c1c1c;
+  animation: sp-wd-up 0.25s ease-out;
+}
+.sp-wd-dim { position: fixed; inset: 0; z-index: 59; background: rgba(28, 28, 28, 0.35); }
+@keyframes sp-wd-up { from { transform: translate(-50%, 30%); opacity: 0; } }
+.sp-wd-panel h3 { margin: 0 0 0.4rem; font-size: 2rem; line-height: 1.1; }
+.sp-wd-q { color: #8a63c9; }
+.sp-wd-panel p { margin: 0 0 0.8rem; line-height: 1.55; text-align: left; }
+.sp-wd-panel b { background: linear-gradient(transparent 55%, #e5d8f7 55%); }
+.sp-wd-panel a { color: #6a3fb3; font-weight: 600; }
+.sp-wd-close {
+  position: absolute; top: 0.6rem; right: 0.7rem; width: 2.4rem; height: 2.4rem;
+  display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%; background: #e5d8f7; color: #1c1c1c; font-size: 1.5rem; line-height: 1; cursor: pointer;
+}
+.sp-wd-motif {
+  display: flex; gap: 0.7rem; align-items: center; font-weight: 700; color: #4b3f5e;
+  margin-bottom: 1rem !important;
+}
+.sp-wd-motif i { font-style: normal; font-size: 1.3rem; color: #8a63c9; }
+.sp-wd-scale { gap: 0; }
+.sp-wd-scale span { font-weight: 400; color: #9b92a8; font-size: 0.9rem; }
+.sp-wd-scale span:first-child::after, .sp-wd-scale span:last-child::before { content: ""; display: inline-block; width: 1.6rem; height: 0.12rem; margin: 0 0.5rem; vertical-align: middle; background: #c9bde0; }
+.sp-wd-scale b { padding: 0.15rem 0.6rem; border: 0.12rem solid #1c1c1c; border-radius: 1rem; background: #e5d8f7 !important; color: #1c1c1c; }
+@media only screen and (max-width:750px) {
+  .sp-wd-btn { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  .sp-wd-panel { font-size: 1.05rem; padding: 1.4rem 1.2rem 2.4rem; }
+  .sp-wd-panel h3 { font-size: 2.2rem; }
+}
+@container (min-width: 46rem) {
+  .sp-wd { display: grid; grid-template-columns: minmax(18rem, 34rem) minmax(15rem, 24rem); gap: 1.6rem; align-items: start; }
+  .sp-wd .sp-words { grid-row: 1; }
+  .sp-wd-dim { display: none !important; }
+  .sp-wd-panel {
+    position: relative; left: auto; bottom: auto; transform: none; width: auto; max-height: none;
+    grid-column: 2; grid-row: 1; border-bottom: 0.2rem solid #1c1c1c; border-radius: 14px;
+    box-shadow: 5px 5px 0 #1c1c1c; animation: sp-wd-in 0.2s ease-out;
+  }
+  .sp-wd-panel h3 { font-size: 1.7rem; }
+}
+@keyframes sp-wd-in { from { transform: translateX(-10px); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .sp-wd-panel { animation: none; } }

@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261104a" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261109a" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -462,7 +462,7 @@
             </ol>
         </section>
 
-        <section class="sp-list">
+        <section class="sp-list sp-wide">
             <h2><span data-l="es">Artistas favoritos</span><span data-l="en">Favourite artists</span></h2>
             <p class="sp-note"><span data-l="es">Mis canciones de cada uno, en orden. Toca una para escucharla.</span><span data-l="en">My songs by each of them, in order. Tap one to listen.</span></p>
             <div class="sp-artists sp-swipe">
@@ -539,13 +539,46 @@
 
         <p class="sp-chapter">III · <span data-l="es">Lengua</span><span data-l="en">Tongue</span></p>
 
-        <section class="sp-list">
+        <section class="sp-list sp-wide">
             <h2><span data-l="es">Palabras favoritas</span><span data-l="en">Favourite words</span></h2>
+            <div class="sp-wd">
             <ol class="sp-words">
-                <li><span class="es">sabes</span><span class="en">you know</span></li>
-                <li><span class="es">eso</span><span class="en">that's it / exactly</span></li>
+                <li class="sp-wd-has"><button type="button" class="sp-wd-btn" aria-expanded="false" aria-controls="wd-sabes"><span class="es">sabes</span><span class="en">you know</span><i class="sp-wd-ic" aria-hidden="true">+</i></button></li>
+                <li class="sp-wd-has"><button type="button" class="sp-wd-btn" aria-expanded="false" aria-controls="wd-eso"><span class="es">eso</span><span class="en">that</span><i class="sp-wd-ic" aria-hidden="true">+</i></button></li>
                 <li><span class="es">lit</span><span class="en">lit</span></li>
             </ol>
+            <div class="sp-wd-dim" hidden></div>
+            <aside class="sp-wd-panel" id="wd-sabes" role="dialog" aria-labelledby="wd-sabes-t" hidden>
+                <button type="button" class="sp-wd-close" aria-label="Cerrar / Close">×</button>
+                <h3 id="wd-sabes-t">sabes<span class="sp-wd-q">?</span></h3>
+                <p class="sp-wd-motif" aria-hidden="true"><span data-l="es">yo</span><span data-l="en">me</span><i>⇄</i><span data-l="es">tú</span><span data-l="en">you</span></p>
+                <div data-l="es">
+                    <p>La palabra de la interacción entre <b>dos consciencias</b>: algo sale de una y llega a la otra, y <i>¿sabes?</i> comprueba que ha llegado lo mismo.</p>
+                    <p>Es un acto <a href="https://es.wikipedia.org/wiki/Funci%C3%B3n_f%C3%A1tica" target="_blank" rel="noopener">fático</a>: no añade nada al mensaje, cuida el canal. Muy suave, un acompañante que cualquiera puede usar, y aun así con mucha fuerza.</p>
+                    <p>Aunque no lo hayas captado del todo, ya ha hecho su trabajo: <b>yo he dicho algo, tú has escuchado algo</b>, y en ese momento hay complicidad.</p>
+                </div>
+                <div data-l="en">
+                    <p>The word for the interaction between <b>two consciousnesses</b>: something leaves one and reaches the other, and <i>¿sabes?</i> (“you know?”) checks that the same thing arrived.</p>
+                    <p>It is a <a href="https://en.wikipedia.org/wiki/Phatic_expression" target="_blank" rel="noopener">phatic</a> act: it adds nothing to the message, it looks after the channel. Very soft, a companion anyone can use, and still very strong.</p>
+                    <p>Even if you didn't quite get it, it has already done its job: <b>I said something, you heard something</b>, and in that moment there is complicity.</p>
+                </div>
+            </aside>
+            <aside class="sp-wd-panel" id="wd-eso" role="dialog" aria-labelledby="wd-eso-t" hidden>
+                <button type="button" class="sp-wd-close" aria-label="Cerrar / Close">×</button>
+                <h3 id="wd-eso-t">eso</h3>
+                <p class="sp-wd-motif sp-wd-scale" aria-hidden="true"><span>esto</span><b>eso</b><span>aquello</span></p>
+                <div data-l="es">
+                    <p>Todo se puede sustituir por <i>eso</i>. Es <b>señalar</b>: apuntar a algo sin especificar nada, mirándolo desde fuera.</p>
+                    <p>Cualquier concepto se puede tener en las manos, mirar desde fuera, señalar y comentar. Eso es <b>generalizar</b>.</p>
+                    <p>La duda siempre estará entre <i>esto</i> y <i>eso</i>; <i>eso</i> es lo bastante general para quedar en un punto medio mucho más interesante.</p>
+                </div>
+                <div data-l="en">
+                    <p>Anything can be replaced by <i>eso</i> (“that”). It is <b>pointing</b>: aiming at something without specifying anything, looking at it from outside.</p>
+                    <p>Any concept can be held in your hands, looked at from outside, pointed at and talked about. That is <b>generalising</b>.</p>
+                    <p>The doubt will always be between <i>esto</i> (“this”) and <i>eso</i>; <i>eso</i> is general enough to sit at a far more interesting middle point.</p>
+                </div>
+            </aside>
+            </div>
         </section>
 
         <section class="sp-list">
@@ -1157,6 +1190,37 @@
         });
         var q = document.getElementById('sp-q');
         if (q) q.addEventListener('input', function () { decks.forEach(function (f) { f(); }); });
+    })();
+    </script>
+    <script>
+    // Favourite words: open the explanation beside the list (wide) or as a sheet over the page (narrow).
+    (function () {
+        var wrap = document.querySelector('.sp-wd');
+        if (!wrap) return;
+        var dim = wrap.querySelector('.sp-wd-dim');
+        var open = null;
+        function close() {
+            if (!open) return;
+            open.panel.hidden = true; dim.hidden = true;
+            open.btn.setAttribute('aria-expanded', 'false');
+            open.btn.parentNode.classList.remove('sp-wd-on');
+            open = null;
+        }
+        wrap.querySelectorAll('.sp-wd-btn').forEach(function (btn) {
+            var panel = document.getElementById(btn.getAttribute('aria-controls'));
+            btn.addEventListener('click', function () {
+                var same = open && open.btn === btn;
+                close();
+                if (same) return;
+                panel.hidden = false; dim.hidden = false;
+                btn.setAttribute('aria-expanded', 'true');
+                btn.parentNode.classList.add('sp-wd-on');
+                open = { btn: btn, panel: panel };
+            });
+        });
+        wrap.querySelectorAll('.sp-wd-close').forEach(function (b) { b.addEventListener('click', close); });
+        dim.addEventListener('click', close);
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
     })();
     </script>
 </body>
