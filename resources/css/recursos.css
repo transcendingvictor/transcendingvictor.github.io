@@ -5,11 +5,12 @@
 .rs-q { width: 100%; max-width: 24rem; margin: 0 0 0.9rem; padding: 0.45rem 0.8rem; border: 0.12rem solid #c9bde0; border-radius: 1rem; background: #fffaf2; font: inherit; font-size: 0.95rem; }
 .rs-list { list-style: none; margin: 0; padding: 0; max-width: 40rem; }
 .rs-list > li { padding: 0.32rem 0.6rem; border-bottom: 1px dotted #d6cde6; line-height: 1.45; text-align: left; }
-.rf-list > li.rf-top { background: rgba(229, 216, 247, 0.45); border-left: 0.2rem solid #b9a3e0; }
+.rf-list > li.rf-top { background: #f8f4fc; }
 .rf-list details summary { cursor: pointer; list-style: none; }
 .rf-list details summary::-webkit-details-marker { display: none; }
-.rf-list details summary::after { content: " ▸"; color: #8a63c9; font-size: 0.8em; }
-.rf-list details[open] summary::after { content: " ▾"; }
+.rf-list details summary::after { content: "+"; display: inline-grid; place-items: center; width: 1.15rem; height: 1.15rem; margin-left: 0.45rem; border: 1px solid #8a63c9; border-radius: 50%; color: #8a63c9; font-size: 0.8rem; font-weight: 700; line-height: 1; vertical-align: 0.1em; }
+.rf-list details summary:hover::after { background: #8a63c9; color: #fff; }
+.rf-list details[open] summary::after { content: "−"; }
 .rf-list details p { margin: 0.3rem 0 0.2rem 0.8rem; font-size: 0.9rem; color: #4a4060; text-align: left; }
 .rf-mark { font-weight: 800; color: #1c1c1c; quotes: "«" "»"; }
 .rf-dedica { display: inline-block; padding: 0.05rem 0.5rem; border: 1px dashed #1c1c1c; border-radius: 2px; font-size: 0.75rem; background: rgba(255, 255, 255, 0.6); margin-right: 0.3rem; }
