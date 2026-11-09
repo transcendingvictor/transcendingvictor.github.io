@@ -1327,3 +1327,4 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-idea-chips li { font-size: 0.95rem; }
   .sp-conf-mini i { width: 0.35rem; height: 0.65rem; }
 }
+.sp-wd-panel .sp-wd-small { font-size: 0.82rem; color: #5b5168; padding: 0.5rem 0.7rem; border: 1px dashed #c9bde0; border-radius: 8px; }
