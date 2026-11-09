@@ -1328,3 +1328,13 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-conf-mini i { width: 0.35rem; height: 0.65rem; }
 }
 .sp-wd-panel .sp-wd-small { font-size: 0.82rem; color: #5b5168; padding: 0.5rem 0.7rem; border: 1px dashed #c9bde0; border-radius: 8px; }
+/* −5 panel: a number line with the +5 jump to 0 */
+.sp-wd-line { display: block; width: 100%; max-width: 16rem; height: auto; margin: 0 0 1rem; overflow: visible; }
+.sp-wd-line .axis, .sp-wd-line .ticks line { stroke: #4b3f5e; stroke-width: 1.6; stroke-linecap: round; }
+.sp-wd-line .arc { fill: none; stroke: #8a63c9; stroke-width: 2.2; stroke-dasharray: 5 4; }
+.sp-wd-line .from { fill: #fffaf2; stroke: #1c1c1c; stroke-width: 2; }
+.sp-wd-line .to { fill: #8a63c9; stroke: #1c1c1c; stroke-width: 2; }
+.sp-wd-line text { font: 700 13px inherit; text-anchor: middle; fill: #1c1c1c; }
+.sp-wd-line .jump { fill: #8a63c9; font-size: 14px; }
+.sp-pow { font-size: 1.4rem; } .sp-pow sup { font-size: 0.6em; vertical-align: super; line-height: 0; }
+.sp-wd-panel .sp-wd-motif b { background: none; }
