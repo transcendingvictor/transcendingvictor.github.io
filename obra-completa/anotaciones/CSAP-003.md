@@ -81,7 +81,7 @@ Esquema: casi todos los versos tienen pareja asonante, aunque no sigan un orden 
 - "fuera" [sentido]: Te espero fuera: te acompaño, pero desde la orilla, sin mojarme.
 - "Siento algo y lo ignoro" [sentido]: Siente empatía y la ignora. El que falla es él.
 - "No nos vengas con problemas" [sentido]: El lío de lo raro; o el duelo: ya está, a seguir adelante.
-- "(estefana)": Un símbolo de quien le inspiraba estas ideas.
+- "(estefana)": Un símbolo de quien me inspiraba estas ideas.
 
 ## Análisis del autor
 

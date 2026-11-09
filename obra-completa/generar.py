@@ -162,7 +162,7 @@ def leer_anotaciones(ruta):
         # Las observaciones de cada verso también se ven como notas de la capa de forma
         notas += [dict(capa="forma", autor="claude", desde=int(v), hasta=int(v), texto=d["nota"], metro=True)
                   for v, d in forma["versos"].items() if d["nota"]]
-    lectura = leer_lectura(s.get("análisis del autor", ""))
+    lectura = leer_lectura(s.get("mi análisis") or s.get("análisis del autor", ""))
     return dict(historia=s.get("historia", ""), comentario_forma=s.get("comentario de la forma", ""), explicacion=explicacion, explicacion_estado=explicacion_estado,
                 temas=dict(estado=re.sub(r" *\(ver [^)]*\)", "", m[1]).strip() if m else "", lista=temas) if temas else None,
                 anotaciones=notas, valoraciones=valoraciones, forma=forma, lectura=lectura)
