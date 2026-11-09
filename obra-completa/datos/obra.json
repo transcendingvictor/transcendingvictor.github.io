@@ -709,8 +709,8 @@
   "titulo": "Imnoratles",
   "formato": "poema",
   "forma": {
-   "estado": "sin revisar · calculada el 2026-10-30",
-   "estrofa": "seis redondillas",
+   "estado": "revisada con Víctor el 2026-11-09",
+   "estrofa": "intenta asemejarse a seis redondillas",
    "medida": "octosílabos",
    "esquema": "abba cddc effe gaag hiih jkkj. La rima de la primera estrofa (-ales) vuelve en la cuarta",
    "rimas": {
@@ -802,11 +802,6 @@
      "rima": "a",
      "nota": ""
     },
-    "16": {
-     "silabas": 7,
-     "rima": "g",
-     "nota": "un poco corto"
-    },
     "17": {
      "silabas": 8,
      "rima": "h",
@@ -820,7 +815,7 @@
     "19": {
      "silabas": 8,
      "rima": "i",
-     "nota": "leyendo «qué es» (está escrito «ques es»)"
+     "nota": ""
     },
     "20": {
      "silabas": 8,
@@ -835,7 +830,7 @@
     "22": {
      "silabas": 9,
      "rima": "k",
-     "nota": ""
+     "nota": "se coló: aquí no cuadra por ningún lado"
     },
     "23": {
      "silabas": 8,
@@ -852,7 +847,7 @@
    "personas": null
   },
   "fecha_publicacion": "2016-12-15",
-  "fecha_escritura": "",
+  "fecha_escritura": "2016-11-16",
   "fuente": "Ciencias sociales y asuntos personales",
   "url": "https://cienciassocialesyasuntospersonales.blogspot.com/2016/12/imnoratles.html",
   "idioma": "es",
@@ -864,14 +859,62 @@
   ],
   "dedicatoria_pista": "clara",
   "subtitulo": "",
-  "texto": "Se mueren los inmortales\ny todo a tomar por culo\nlos vulgarismos de chulo\nnos dominan, son normales\n\nContinuar viviendo aquí\nno tiene tanto sentido\nlos invencibles se han ido\nahora, ¿quién cuida de mi?\n\nlos infalibles fallaron\ny estos ahora ya no existen\nlo lógico es ahora un chiste\nlos habladores callaron\n\nno es que murieran, murieran\nrecordé que eran mortales\nantes eran iniguales\nhoy, hoy unos cualquiera\n\nYa no tenemos la base\nya todo no es tan perfecto.\n¿Dictaminar ques es correcto\no dejar que el tiempo pase?\n\nLos sinceros nos mintieron .\nLas cosas fueron a mejor\ny empapados de sudor.\nLosInmortalesMurieron⃣\n\n(clara)\nVí. Ab. Al.",
-  "escritura_aprox": false,
-  "historia": "",
-  "comentario_forma": "",
-  "explicacion": "",
+  "texto": "Se mueren los inmortales\ny todo a tomar por culo\nlos vulgarismos de chulo\nnos dominan, son normales\n\nContinuar viviendo aquí\nno tiene tanto sentido\nlos invencibles se han ido\nahora, ¿quién cuida de mí?\n\nlos infalibles fallaron\ny estos ahora ya no existen\nlo lógico es ahora un chiste\nlos habladores callaron\n\nno es que murieran, murieran\nrecordé que eran mortales\nantes eran iniguales\nhoy, hoy unos cualquiera\n\nYa no tenemos la base\nya todo no es tan perfecto.\n¿Dictaminar qué es correcto\no dejar que el tiempo pase?\n\nLos sinceros nos mintieron .\nLas cosas fueron a mejor\ny empapados de sudor.\nLosInmortalesMurieron\n\n(clara)\nVí. Ab. Al.",
+  "escritura_aprox": true,
+  "historia": "Lo escribí hacia la tercera semana de noviembre de 2016 en Vicálvaro y lo publiqué el 15 de diciembre. El título es «inmortales» con la e y la l cambiadas de sitio, un juego de los que me gustaban de pequeño, igual que el último verso, todo pegado. Va por Clara, de los Scouts: me parecía una persona sabia, me inspiraba conocimiento, risa y disfrute de saber y de jugar. La idealizaba mucho, y en algún momento debí de sentir que era una persona normal, que no iba a cumplir todas mis fantasías vitales e intelectuales. Los Scouts me daban entonces un espacio nuevo para socializar y sentirme más querido y más pleno; idealizar a la gente era parte de vivir ya una vida bastante social.",
+  "comentario_forma": "Intenta asemejarse a seis redondillas: octosílabos con rima abba, siempre con rimas nuevas, sin apenas repetir ninguna. Es una estrofa que deja jugar y traer ideas nuevas con un ritmo constante, muy para contar algo, y el poema suena mucho. No cuida del todo la métrica, como en «hoy, hoy unos cualquiera», donde la coma hace de tiempo, o en «Las cosas fueron a mejor», que se cuela con nueve.\n\nAbre con una **paradoja**: «Se mueren los inmortales». Y la sostiene con una serie de palabras con prefijo de negación, inmortales, invencibles, infalibles, iniguales, que el poema desmiente una a una, a veces desde la misma raíz: «los infalibles fallaron». Otras **antítesis** apuntan a la gente: «los habladores callaron», «Los sinceros nos mintieron». La coma de «nos dominan, son normales» es una **yuxtaposición**: une las dos ideas sin nexo, como unos dos puntos. Hay **reduplicaciones** que pesan: «no es que murieran, murieran» (murieran de verdad) y «hoy, hoy unos cualquiera». Y dos **preguntas retóricas** donde el poema se para a pensar: «ahora, ¿quién cuida de mí?» y «¿Dictaminar qué es correcto / o dejar que el tiempo pase?», que enfrenta actuar y dejar estar.",
+  "explicacion": "Habla de la realidad y la ficción, de idealizar a ciertas personas y de qué pasa cuando se rompe el mito. Por eso el título desordena «inmortales»: ya no son perfectos, pero tampoco son mortales del todo, porque te queda ese resquicio de perfección. Al caer los ídolos, el mundo parece una mierda: «los vulgarismos de chulo / nos dominan, son normales», con una mirada adolescente, casi de niño, de sentir que los de alrededor son mala gente y nadie les pone en su sitio. Sin ídolos, el camino tiene menos sentido: «Continuar viviendo aquí / no tiene tanto sentido», y la pregunta «¿quién cuida de mí?» suena a caída de Occidente, a la muerte de Dios de Nietzsche, en pequeño.\n\nLuego recopila: «los infalibles fallaron / y estos ahora ya no existen». Si fallan, como infalibles dejan de existir, de golpe y en presente: ahora, ya. «Lo lógico es ahora un chiste»: caos. Pero «los habladores callaron» puede ser algo bueno, y ahí empieza la esperanza. El poema se replantea: «no es que murieran, murieran / recordé que eran mortales». Ya desde fuera, cuenta lo que ha pasado: «antes eran iniguales / hoy, hoy unos cualquiera».\n\nDesde ahí pregunta qué hacer cuando se caen los mitos: ¿dictaminar qué es correcto, buscar nuevos mitos que salgan de nosotros, convertirnos en nuestros propios mitos, o dejar que el tiempo pase? Y al final se moja: «Los sinceros nos mintieron. / Las cosas fueron a mejor». Romper los ídolos, agotar la batería de la fantasía hasta que cae por su propio peso, es bueno. Tiene que ver con una idea mía de fondo: aprovechar la vida al máximo, exprimir todo lo que te ilusiona, quemar una canción bonita hasta que deje de gustarte, y cuando un día vuelva a gustarte, escucharla tres veces más.",
   "explicacion_estado": "",
   "temas": null,
   "anotaciones": [
+   {
+    "capa": "forma",
+    "autor": "victor",
+    "texto": "Paradoja: lo que no puede morir, muere.",
+    "fragmento": "Se mueren los inmortales"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "El mundo sin ídolos parece una mierda: mirada de niño que siente que nadie pone a los chulos en su sitio.",
+    "fragmento": "nos dominan, son normales"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "La caída de los ídolos, como una pequeña muerte de Dios.",
+    "fragmento": "¿quién cuida de mí?"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Puede ser bueno: aquí empieza la esperanza.",
+    "fragmento": "los habladores callaron"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "La repetición pesa: no murieron de verdad.",
+    "fragmento": "no es que murieran, murieran"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "¿Buscar nuevos mitos, ser nuestros propios mitos, o dejar que el tiempo pase?",
+    "fragmento": "¿Dictaminar qué es correcto"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Aquí se moja: romper los ídolos es bueno.",
+    "fragmento": "Las cosas fueron a mejor"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Todo pegado, como el título desordenado: juegos de mi infancia.",
+    "fragmento": "Murieron"
+   },
    {
     "capa": "forma",
     "autor": "claude",
@@ -899,82 +942,101 @@
    {
     "capa": "forma",
     "autor": "claude",
-    "desde": 16,
-    "hasta": 16,
-    "texto": "un poco corto",
-    "metro": true
-   },
-   {
-    "capa": "forma",
-    "autor": "claude",
-    "desde": 19,
-    "hasta": 19,
-    "texto": "leyendo «qué es» (está escrito «ques es»)",
+    "desde": 22,
+    "hasta": 22,
+    "texto": "se coló: aquí no cuadra por ningún lado",
     "metro": true
    }
   ],
   "valoraciones": [],
   "lectura": {
-   "fecha": "2026-10-30",
-   "estado": "provisional",
-   "nota": "7",
+   "fecha": "2026-11-09",
+   "estado": "",
+   "nota": "6",
    "rasgos": {
     "profundidad": 3,
     "dureza": 3,
-    "pintar conceptos": 4,
+    "pintar conceptos": 2,
     "sonoridad": 4
    },
-   "texto": "Una elegía con ironía por la caída de los que parecían intocables. Cada estrofa nombra una categoría con prefijo de negación (inmortales, invencibles, infalibles, iniguales) y la desmiente: los infalibles fallaron, los sinceros mintieron. El registro baja a propósito («a tomar por culo») justo al lado del tono solemne. El título desordena las letras de «inmortales», igual que el último verso pega todas las palabras.",
+   "texto": "",
+   "anotaciones": []
+  },
+  "revisado": "2026-11-09",
+  "imagen": "",
+  "en": {
+   "historia": "I wrote it around the third week of November 2016 in Vicálvaro and published it on 15 December. The title is *inmortales* (\"immortals\") with the e and the l swapped, one of the word games I liked as a child, like the last line, all run together. It is for Clara, from the Scouts: she seemed to me a wise person, she inspired knowledge, laughter and the joy of knowing and playing. I idealised her a lot, and at some point I must have felt she was an ordinary person, who wasn't going to fulfil all my vital and intellectual fantasies. The Scouts were then giving me a new space to socialise and to feel more loved and more whole; idealising people was part of already living a fairly social life.",
+   "comentario_forma": "It tries to resemble six *redondillas* (a Spanish quatrain of eight-syllable lines rhyming abba), always with new rhymes, hardly repeating any. It is a stanza that lets you play and bring in new ideas with a steady rhythm, made for telling something, and the poem sounds a lot. It doesn't fully mind the metre, as in «hoy, hoy unos cualquiera» (\"today, today just anybodies\"), where the comma works as a beat, or «Las cosas fueron a mejor» (\"Things got better\"), which slips in with nine.\n\nIt opens with a **paradox**: «Se mueren los inmortales» (\"The immortals are dying\"). And it sustains it with a series of words with a negating prefix, *inmortales, invencibles, infalibles, iniguales* (immortal, invincible, infallible, \"unequalled\"), which the poem disproves one by one, sometimes from the same root: «los infalibles fallaron» (\"the infallible failed\"). Other **antitheses** point at people: «los habladores callaron» (\"the talkers fell silent\"), «Los sinceros nos mintieron» (\"The sincere lied to us\"). The comma in «nos dominan, son normales» (\"they rule us, they're normal\") is a **juxtaposition**: it joins the two ideas without a connector, like a colon. There are weighty **reduplications**: «no es que murieran, murieran» (\"it's not that they died, died\", that is, really died) and «hoy, hoy unos cualquiera». And two **rhetorical questions** where the poem stops to think: «ahora, ¿quién cuida de mí?» (\"now, who looks after me?\") and «¿Dictaminar qué es correcto / o dejar que el tiempo pase?» (\"To rule on what is right / or let time pass?\"), which sets acting against letting be.",
+   "explicacion": "It is about reality and fiction, about idealising certain people and what happens when the myth breaks. That is why the title scrambles *inmortales*: they are no longer perfect, but not entirely mortal either, because a trace of perfection stays with you. When the idols fall, the world seems like shit: «los vulgarismos de chulo / nos dominan, son normales» (\"the show-offs' vulgarities / rule us, they're normal\"), with a teenage, almost childlike outlook, the feeling that those around you are bad people and nobody puts them in their place. Without idols, the path makes less sense: «Continuar viviendo aquí / no tiene tanto sentido» (\"Carrying on living here / doesn't make so much sense\"), and the question \"who looks after me?\" sounds like the fall of the West, like Nietzsche's death of God, on a small scale.\n\nThen it takes stock: «los infalibles fallaron / y estos ahora ya no existen» (\"the infallible failed / and now they no longer exist\"). If they fail, as infallible they cease to exist, all at once and in the present: now, already. «Lo lógico es ahora un chiste» (\"What's logical is now a joke\"): chaos. But \"the talkers fell silent\" may be a good thing, and that is where hope begins. The poem reconsiders: «no es que murieran, murieran / recordé que eran mortales» (\"it's not that they really died / I remembered they were mortal\"). Now from outside, it tells what happened: «antes eran iniguales / hoy, hoy unos cualquiera» (\"before they were unequalled / today, today just anybodies\").\n\nFrom there it asks what to do when myths fall: rule on what is right, look for new myths that come from ourselves, become our own myths, or let time pass? And in the end it commits: «Los sinceros nos mintieron. / Las cosas fueron a mejor» (\"The sincere lied to us. / Things got better\"). Breaking idols, running the battery of fantasy down until it falls under its own weight, is good. It has to do with an idea of mine at heart: making the most of life, squeezing everything that excites you, playing a beautiful song to death until you stop liking it, and when one day you like it again, listening to it three more times.",
    "anotaciones": [
     {
-     "capa": "sentido",
-     "autor": "provisional",
-     "texto": "Primera redondilla: la noticia y el tono. Lo solemne («se mueren los inmortales») pegado a lo vulgar («a tomar por culo»).",
-     "desde": 1,
-     "hasta": 4
+     "capa": "forma",
+     "autor": "victor",
+     "texto": "Paradox: what cannot die, dies.",
+     "fragmento": "Se mueren los inmortales"
     },
     {
      "capa": "sentido",
-     "autor": "provisional",
-     "texto": "Cada estrofa nombra una categoría con prefijo de negación (inmortales, invencibles, infalibles) y la desmiente.",
-     "fragmento": "los invencibles se han ido"
+     "autor": "victor",
+     "texto": "The world without idols seems like shit: a child's view that nobody puts the show-offs in their place.",
+     "fragmento": "nos dominan, son normales"
     },
     {
      "capa": "sentido",
-     "autor": "provisional",
-     "texto": "La paradoja sale de la misma raíz.",
-     "fragmento": "los infalibles fallaron"
+     "autor": "victor",
+     "texto": "\"Who looks after me?\": the fall of idols, like a small death of God.",
+     "fragmento": "¿quién cuida de mí?"
     },
     {
      "capa": "sentido",
-     "autor": "provisional",
-     "texto": "No murieron de verdad: lo que cambia es que el yo se da cuenta de que eran mortales.",
-     "fragmento": "recordé que eran mortales"
+     "autor": "victor",
+     "texto": "\"The talkers fell silent\": it may be good, hope begins here.",
+     "fragmento": "los habladores callaron"
     },
     {
      "capa": "sentido",
-     "autor": "provisional",
-     "texto": "Palabra inventada, por «sin igual».",
-     "fragmento": "iniguales"
+     "autor": "victor",
+     "texto": "The repetition weighs: they didn't really die.",
+     "fragmento": "no es que murieran, murieran"
     },
     {
      "capa": "sentido",
-     "autor": "provisional",
-     "texto": "La última categoría que cae.",
-     "fragmento": "Los sinceros nos mintieron"
+     "autor": "victor",
+     "texto": "Look for new myths, be our own myths, or let time pass?",
+     "fragmento": "¿Dictaminar qué es correcto"
     },
     {
      "capa": "sentido",
-     "autor": "provisional",
-     "texto": "Todo junto, como un título o una etiqueta. El título del poema desordena las letras de «inmortales».",
-     "fragmento": "LosInmortalesMurieron"
+     "autor": "victor",
+     "texto": "\"Things got better\": here it commits, breaking idols is good.",
+     "fragmento": "Las cosas fueron a mejor"
+    },
+    {
+     "capa": "sentido",
+     "autor": "victor",
+     "texto": "\"Died\": all run together, like the scrambled title: games from my childhood.",
+     "fragmento": "Murieron"
+    },
+    {
+     "capa": "forma",
+     "autor": "claude",
+     "texto": "8*: the comma in «hoy, hoy» counts as a beat in the reading: the indifference of \"just anybodies\".",
+     "desde": 16,
+     "hasta": 16,
+     "metro": true
+    },
+    {
+     "capa": "forma",
+     "autor": "claude",
+     "texto": "9: it slipped in, it doesn't fit any way you take it.",
+     "desde": 22,
+     "hasta": 22,
+     "metro": true
     }
    ]
   },
-  "revisado": "",
-  "imagen": "",
   "titulo_en": "Imnortals",
-  "texto_en": "The immortals are dying\nand everything goes to hell\nthe vulgarisms of a show-off\nrule us, they are normal\n\nGoing on living here\ndoesn't make that much sense\nthe invincible are gone\nnow, who looks after me?\n\nthe infallible failed\nand now these no longer exist\nlogic now is a joke\nthe talkers went quiet\n\nit's not that they died, died\nI remembered they were mortal\nbefore they were unequalled\ntoday, today just anybody\n\nWe no longer have the base\nit's all not so perfect anymore.\nRule on what is right\nor let the time go by?\n\nThe sincere lied to us .\nThings went for the better\nand drenched in sweat.\nTheImmortalsDied⃣\n\n(clara)\nVí. Ab. Al.",
+  "texto_en": "The immortals are dying\nand everything goes to hell\nthe vulgarisms of a show-off\nrule us, they are normal\n\nGoing on living here\ndoesn't make that much sense\nthe invincible are gone\nnow, who looks after me?\n\nthe infallible failed\nand now these no longer exist\nlogic now is a joke\nthe talkers went quiet\n\nit's not that they died, died\nI remembered they were mortal\nbefore they were unequalled\ntoday, today just anybody\n\nWe no longer have the base\nit's all not so perfect anymore.\nRule on what is right\nor let the time go by?\n\nThe sincere lied to us .\nThings went for the better\nand drenched in sweat.\nTheImmortalsDied\n\n(clara)\nVí. Ab. Al.",
   "primero": false
  },
  {
