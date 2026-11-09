@@ -1284,3 +1284,10 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   .sp-wd .sp-numbers { grid-row: 1; align-self: start; }
 }
 .sp-numbers .sp-rank { font-size: 1rem; }
+/* Honourable mentions after the podium: a small tag, no medal */
+.sp-mention {
+  position: absolute; right: -0.55rem; top: 0.35rem; padding: 0.05rem 0.35rem;
+  border: 0.1rem solid #6b5a8a; border-radius: 0.6rem; background: #fffaf2;
+  font-size: 0.68rem; font-weight: 700; line-height: 1.2; color: #6b5a8a;
+  transform: rotate(-8deg); pointer-events: none;
+}
