@@ -22,7 +22,7 @@ const Obra = (() => {
       buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Ciencias sociales", banales: "Mentiras banales",
       cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 poema" : `${n} poemas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado", revisado: "Revisado por mí", sinRevisar: "Sin revisar",
       noEncuentro: "No encuentro esa pieza.", publicado: f => ` · publicado el ${f}`, escrito: f => `Escrito hacia el ${f}`,
-      historia: "Historia", quitarColores: "Quitar colores", ponerColores: "Poner colores", imagen: "Imagen del poema", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
+      historia: "Historia", comentarioForma: "Comentario de la forma", quitarColores: "Quitar colores", ponerColores: "Poner colores", imagen: "Imagen del poema", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
       analisis: "Análisis", capas: { forma: "Forma", sentido: "Sentido", referencia: "Referencias" }, provisional: "provisional",
       forma: "Forma", estrofa: "Estrofa", medida: "Medida", esquema: "Esquema",
       lectura: "Análisis del autor", notaGeneral: "Nota general",
@@ -36,7 +36,7 @@ const Obra = (() => {
       buscar: "Search a title or a line…", todo: "All", poemas: "Ciencias sociales", banales: "Mentiras banales",
       cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 poem" : `${n} poems`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated", revisado: "Reviewed by me", sinRevisar: "Not reviewed yet",
       noEncuentro: "I can't find that piece.", publicado: f => ` · published ${f}`, escrito: f => `Written around ${f}`,
-      historia: "Story", quitarColores: "Remove colours", ponerColores: "Show colours", imagen: "Image of the poem", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
+      historia: "Story", comentarioForma: "Commentary on the form", quitarColores: "Remove colours", ponerColores: "Show colours", imagen: "Image of the poem", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
       analisis: "Analysis", capas: { forma: "Form", sentido: "Meaning", referencia: "References" }, provisional: "placeholder",
       forma: "Form", estrofa: "Stanza", medida: "Metre", esquema: "Rhyme scheme",
       lectura: "Author's analysis", notaGeneral: "Overall score",
@@ -407,6 +407,9 @@ const Obra = (() => {
 
       if (p.lectura) main.append(lectura(p.lectura));
       if (p.historia) main.append(el("section", { class: "historia" }, el("h2", {}, T("historia")), ...p.historia.split(/\n\n/).map(t => el("p", {}, t))));
+      // Comentario de la forma: prosa con **negritas**
+      const negritas = t => t.split(/\*\*(.+?)\*\*/).map((x, k) => k % 2 ? el("b", {}, x) : x);
+      if (p.comentario_forma) main.append(el("section", { class: "comentario-forma" }, el("h2", {}, T("comentarioForma")), ...p.comentario_forma.split(/\n\n/).map(t => el("p", {}, ...negritas(t)))));
       if (p.explicacion) {
         const s = el("section", {}, el("h2", {}, T("explicacion")));
         if (p.explicacion_estado) s.append(el("p", { class: "aviso" }, p.explicacion_estado));

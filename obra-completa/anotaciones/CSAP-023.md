@@ -9,6 +9,12 @@ revisado: 2026-11-09
 
 Publicado el 28 de junio de 2018. Escrito hacia el 12 de mayo de 2018 en una libreta, en Vicálvaro (final de cuarto de la ESO), justo después de un viernes y antes del viaje a Lyon. Es muy de esa época: la búsqueda por estar a gusto, por estar bien.
 
+## Comentario de la forma
+
+Es un soneto clásico de endecasílabos (ABBA ABBA CDE DCE), y la forma cerrada ya encierra al que habla, como la gente que le rodea. La **anáfora** de «Solo» abre los tres primeros versos («Solo estoy…», «Solo inmerso…», «Solo por no escapar…»): la palabra se repite como un golpe y, al no llevar tilde, cada vez puede ser «sin compañía» o «únicamente». En el v5 las mismas palabras vuelven en otro orden, «Estoy rodeado solo de gente», y el «solo» cambia de sitio y de sentido. Hasta la rima se encierra: «gente» rima consigo misma (v1 y v5), y la «gente» se degrada en «¡Gentuza…!» (v7). El cuarteto segundo cierra el círculo con «Solo y rodeado completamente».
+
+La **anadiplosis** («completamente» al final del v8 y al principio del v9) empuja de los cuartetos a los tercetos sin dejar respirar. Ahí el ritmo se rompe con **encabalgamientos**: «gente / ruin» ya lo anunciaba, pero en los tercetos saltan incluso de una estrofa a otra: «Pasar de quien pasa / de pasar», y «Pasear conocimiento / falso», donde el adjetivo cae al principio del verso y desmonta lo que se acababa de decir. El **juego de palabras** pasar, pasa, pasar, pasear marea como la propia idea de irse y no irse, y «conocimiento» rima con «argumento», el terceto anterior, como si volviera atrás. El final cierra con un **paralelismo** y una **antítesis**: «y te ahoga el vacío, y te ahoga la masa». Y el «me» de todo el poema se vuelve «te»: el que habla se mira desde fuera.
+
 ## Explicación
 
 El poema es un dibujo: una persona en el centro, la gente alrededor y, entre medias, un vacío. Los cuartetos lo pintan dando vueltas sobre la misma imagen. «Solo estoy rodeado de gente»: estoy solo, o no hay nada más que gente. El mundo le ignora, y él no escapa, sin que quede claro si es por él o por ellos. La frialdad que le devora parece venir de fuera, de los que le rodean, pero se siente dentro. Luego la lanza se devuelve: él tampoco entiende a esa «gentuza» que llora. El centro y los de fuera están enfrentados, y el octavo verso lo confirma: «Solo y rodeado completamente».

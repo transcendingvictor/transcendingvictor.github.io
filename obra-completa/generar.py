@@ -162,7 +162,7 @@ def leer_anotaciones(ruta):
         notas += [dict(capa="forma", autor="claude", desde=int(v), hasta=int(v), texto=d["nota"], metro=True)
                   for v, d in forma["versos"].items() if d["nota"]]
     lectura = leer_lectura(s.get("análisis del autor", ""))
-    return dict(historia=s.get("historia", ""), explicacion=explicacion, explicacion_estado=explicacion_estado,
+    return dict(historia=s.get("historia", ""), comentario_forma=s.get("comentario de la forma", ""), explicacion=explicacion, explicacion_estado=explicacion_estado,
                 temas=dict(estado=re.sub(r" *\(ver [^)]*\)", "", m[1]).strip() if m else "", lista=temas) if temas else None,
                 anotaciones=notas, valoraciones=valoraciones, forma=forma, lectura=lectura)
 
@@ -177,7 +177,7 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
     p = {k: r.get(k, "") for k in PUBLICOS}
     p["etiquetas"] = [e for e in p["etiquetas"].split(";") if e]
     ruta = os.path.join(HERE, "anotaciones", r["codigo"] + ".md")
-    p.update(leer_anotaciones(ruta) if os.path.exists(ruta) else dict(historia="", explicacion="", explicacion_estado="", temas=None, anotaciones=[], valoraciones=[], forma=None, lectura=None))
+    p.update(leer_anotaciones(ruta) if os.path.exists(ruta) else dict(historia="", comentario_forma="", explicacion="", explicacion_estado="", temas=None, anotaciones=[], valoraciones=[], forma=None, lectura=None))
     # «revisado: AAAA-MM-DD» en la cabecera de la ficha = Víctor lo ha revisado
     p["revisado"] = ""
     if os.path.exists(ruta):
