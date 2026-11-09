@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261109b" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261109c" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -609,14 +609,45 @@
             </ol>
         </section>
 
-        <section class="sp-list">
+        <section class="sp-list sp-wide">
             <h2><span data-l="es">Números favoritos</span><span data-l="en">Favourite numbers</span></h2>
+            <div class="sp-wd">
             <ol class="sp-numbers">
-                <li data-search="menos cinco minus five -5"><span class="sp-rank sp-rank-1">1</span>−5</li>
-                <li data-search="veintisiete twenty-seven 27"><span class="sp-rank sp-rank-2">2</span>27</li>
-                <li data-search="noventa y uno ninety-one 91"><span class="sp-rank sp-rank-3">3</span>91</li>
-                <li data-search="ochenta y cuatro eighty-four 84"><span class="sp-rank">4</span>84</li>
+                <li data-search="menos cinco minus five -5"><span class="sp-rank sp-rank-1">1</span><button type="button" class="sp-wd-btn sp-num-btn" aria-expanded="false" aria-controls="wd-n-5">−5<i class="sp-wd-ic" aria-hidden="true">+</i></button></li>
+                <li data-search="veintisiete twenty-seven 27"><span class="sp-rank sp-rank-2">2</span><button type="button" class="sp-wd-btn sp-num-btn" aria-expanded="false" aria-controls="wd-n27">27<i class="sp-wd-ic" aria-hidden="true">+</i></button></li>
+                <li data-search="noventa y uno ninety-one 91"><span class="sp-rank sp-rank-3">3</span><button type="button" class="sp-wd-btn sp-num-btn" aria-expanded="false" aria-controls="wd-n91">91<i class="sp-wd-ic" aria-hidden="true">+</i></button></li>
+                <li data-search="ochenta y cuatro eighty-four 84"><span class="sp-rank">4</span><button type="button" class="sp-wd-btn sp-num-btn" aria-expanded="false" aria-controls="wd-n84">84<i class="sp-wd-ic" aria-hidden="true">+</i></button></li>
             </ol>
+            <aside class="sp-wd-panel" id="wd-n-5" role="dialog" aria-labelledby="wd-n-5-t" hidden>
+                <button type="button" class="sp-wd-close" aria-label="Cerrar / Close">×</button>
+                <h3 id="wd-n-5-t">−5</h3>
+                <p class="sp-wd-motif" aria-hidden="true">−5 <i>+5</i> 0</p>
+                <div data-l="es"><p>Desde muy pequeño. Un <b>buen punto de partida</b>: cuando estás triste o rayado, sabes que con cinco más llegas al 0, vuelves a empezar de cero y todo vuelve a salir bien.</p><p>Escribí una canción con esa idea: ojalá hubiera una canasta que valga cinco para empatar.</p><p>Tiene todo lo positivo del −1 y todo lo entero y natural del 5, un número que pega mucho.</p></div>
+                <div data-l="en"><p>Since I was very small. A <b>good starting point</b>: when you feel sad or stuck, you know that five more takes you to 0, you start again from zero and everything works out.</p><p>I wrote a song on that idea: if only there were a basket worth five to tie the game.</p><p>It has all that is positive about −1 and all that is whole and natural about 5, a number that fits everywhere.</p></div>
+            </aside>
+            <aside class="sp-wd-panel" id="wd-n27" role="dialog" aria-labelledby="wd-n27-t" hidden>
+                <button type="button" class="sp-wd-close" aria-label="Cerrar / Close">×</button>
+                <h3 id="wd-n27-t">27</h3>
+                <p class="sp-wd-motif" aria-hidden="true">3<sup>3</sup></p>
+                <div data-l="es"><p>Desde muy pequeño. <b>Tres al cubo</b>. En un examen de 30 preguntas, con 27 ya tienes un 9.</p><p>Muy impar. Y el 2 y el 7 se van acercando: <b>2 − 7 = −5</b>, mi número favorito.</p></div>
+                <div data-l="en"><p>Since I was very small. <b>Three cubed</b>. In a 30-question exam, 27 already gets you a 9 out of 10.</p><p>Very odd. And its 2 and 7 lead somewhere: <b>2 − 7 = −5</b>, my favourite number.</p></div>
+            </aside>
+            <aside class="sp-wd-panel" id="wd-n91" role="dialog" aria-labelledby="wd-n91-t" hidden>
+                <button type="button" class="sp-wd-close" aria-label="Cerrar / Close">×</button>
+                <h3 id="wd-n91-t">91</h3>
+                <p class="sp-wd-motif" aria-hidden="true">7 × 13</p>
+                <div data-l="es"><p>Con las reglas de divisibilidad fáciles (la del 2, el 3, el 5 y el 11) no se puede descartar que sea primo. Parece primo, y <b>no lo es</b>: 7 × 13. No te lo esperas.</p></div>
+                <div data-l="en"><p>The easy divisibility rules (2, 3, 5 and 11) cannot rule out that it is prime. It looks prime, and <b>it isn't</b>: 7 × 13. You don't see it coming.</p></div>
+            </aside>
+            <aside class="sp-wd-panel" id="wd-n84" role="dialog" aria-labelledby="wd-n84-t" hidden>
+                <button type="button" class="sp-wd-close" aria-label="Cerrar / Close">×</button>
+                <h3 id="wd-n84-t">84</h3>
+                <p class="sp-wd-motif" aria-hidden="true"><b>8</b> · 10 + 4</p>
+                <div data-l="es"><p>Desde muy pequeño me sorprendía que un número pudiera tener tantas decenas, que valen <b>diez veces más</b> que las unidades, y solo 4 unidades.</p></div>
+                <div data-l="en"><p>As a child it surprised me that a number could have so many tens, each worth <b>ten times</b> a unit, and only 4 units.</p></div>
+            </aside>
+            <div class="sp-wd-dim" hidden></div>
+            </div>
         </section>
 
         <p class="sp-chapter">IV · <span data-l="es">Tiempo y lugar</span><span data-l="en">Time and place</span></p>
@@ -1210,8 +1241,7 @@
     <script>
     // Favourite words: open the explanation beside the list (wide) or as a sheet over the page (narrow).
     (function () {
-        var wrap = document.querySelector('.sp-wd');
-        if (!wrap) return;
+        document.querySelectorAll('.sp-wd').forEach(function (wrap) {
         var dim = wrap.querySelector('.sp-wd-dim');
         var open = null;
         function close() {
@@ -1236,6 +1266,7 @@
         wrap.querySelectorAll('.sp-wd-close').forEach(function (b) { b.addEventListener('click', close); });
         dim.addEventListener('click', close);
         document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+        });
     })();
     </script>
 </body>
