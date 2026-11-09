@@ -451,7 +451,7 @@
   "titulo": "1+",
   "formato": "poema",
   "forma": {
-   "estado": "sin revisar · calculada el 2026-10-30",
+   "estado": "revisada con Víctor el 2026-11-09 (todos exactos, sin licencias)",
    "estrofa": "seis tercetos",
    "medida": "cada terceto tiene un verso de 6, uno de 10 y un remate de 4",
    "esquema": "aBc aBc aBc / dEf dEf dEf. Las tres primeras estrofas riman en consonante; las tres últimas mezclan consonante y asonante",
@@ -574,61 +574,132 @@
   "subtitulo": "",
   "texto": "No lo hago tan mal\nTodo el mundo sigue esa corriente\nNo soy menos\n\nUn simple chaval\nTengo que ser un adolescente\nQuiero senos\n\nPara ser normal\nSeré el malote desobediente\nNada ameno\n\nCriticar los Oscars\nRegresar tarde en la madrugada\nFumar hierba\n\nLuego ya te coscas\nLa sociedad no va encaminada\nYa te pierdas\n\nUn millón de moscas\nNo pueden estar equivocadas\nCome mierda.\n\nVí. Ab. Al.",
   "escritura_aprox": true,
-  "historia": "",
-  "comentario_forma": "",
-  "explicacion": "",
+  "historia": "Lo escribí hacia principios de noviembre de 2016 en Vicálvaro, Madrid (tercero de la ESO), y lo publiqué el 14 de diciembre: es mi segundo poema. Se asoma un poco la influencia de mis amigos intelectuales de los Scouts, sobre todo Clara. Entonces me obsesionaba sentirme aceptado, sentir que en cada momento de mi vida estaba siendo suficiente: haber estado con suficientes chicas, haber tenido suficientes experiencias, ser lo bastante activo o lo bastante culto. Aquí, lo suficiente era vivir como un adolescente. Y el malote del poema no tenía nada que ver con cómo era yo: era un chico que escribía poemas. El dicho del final, «un millón de moscas no pueden estar equivocadas: come mierda», me lo decía mucho mi padre.",
+  "comentario_forma": "Seis tercetos con una constancia casi de canción: cada uno es un verso de 6 sílabas, uno de 10 y un remate de 4, y la rima aBc se repite tres veces y luego dEf otras tres. La rima se puede llamar **asonante aconsonantada**: «mal», «chaval» y «normal» riman en consonante; «menos», «senos» y «ameno» casi, porque entra y sale una s; y «Oscars», «coscas» y «moscas» suenan prácticamente consonantes. En «hierba», «pierdas» y «mierda» no lo son, pero siempre suenan la r y la a. Los remates de cuatro sílabas caen como golpes secos: «No soy menos», «Quiero senos», «Nada ameno», «Come mierda».\n\nEl poema coge un **dicho popular** y lo convierte en un poema y en una reflexión más larga. El registro es coloquial, con palabras como «malote» o «coscas», del verbo *coscarse*, muy informal: se nota la influencia de la poesía popular. Y la voz se mueve: en las tres primeras estrofas habla un «yo» («No lo hago tan mal», «Tengo que ser…», «Seré…»); en las últimas aparece un «te» («Luego ya te coscas», «Ya te pierdas») y la masa ya no es «todo el mundo», sino «la sociedad», vista desde fuera.",
+  "explicacion": "«1+» se lee «uno más». Empieza quitándose culpa: «No lo hago tan mal», y la justificación es la voluntad popular: «Todo el mundo sigue esa corriente», como si hablara el pueblo. Pero en vez de defender que hace algo distinto dice «No soy menos», que se puede leer de dos maneras: tengo derecho a seguir la corriente de todos, el camino fácil, y está bien; o no llego, no soy suficiente, pero no lo hago mal porque todos lo hacen.\n\nLuego el poema se hace persona y se describe: «Un simple chaval / Tengo que ser un adolescente», como si aún no lo fuera. Se confirma esa visión de no llegar a lo que se pide, a lo normal. «Quiero senos» acepta el deseo sexual, que también es estatus, en presente, casi como una reafirmación. Y entonces, a futuro: «Para ser normal / Seré el malote desobediente / Nada ameno». La normalidad de la época es ser el malote, tener un componente social que dé estatus, aunque quien escribe es un chico que escribe poemas.\n\nLa segunda mitad pinta ese adolescente con tópicos: criticar los Oscars (criticar lo mainstream para ganar estatus, que también es parte de la corriente: una corriente tan genérica que incluye hasta esa crítica), volver tarde de madrugada, fumar hierba. Y llega la reflexión: «Luego ya te coscas», ¿qué haces aquí siendo uno más, queriendo ser lo que no eres solo para sentirte suficiente? «La sociedad no va encaminada / Ya te pierdas», un remate algo forzado por la rima. Y el final le da la vuelta al argumento de la mayoría con el dicho: «Un millón de moscas / No pueden estar equivocadas / Come mierda».",
   "explicacion_estado": "",
   "temas": null,
-  "anotaciones": [],
+  "anotaciones": [
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "La voluntad popular como justificación: el pueblo habla.",
+    "fragmento": "Todo el mundo"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "¿Tengo derecho a seguir la corriente, o no llego pero no lo hago mal porque todos lo hacen?",
+    "fragmento": "No soy menos"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Como si aún no lo fuera.",
+    "fragmento": "Tengo que ser un adolescente"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "El deseo, que también es estatus, dicho en presente, como reafirmándose.",
+    "fragmento": "Quiero senos"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Criticar lo mainstream para ganar estatus: también es la corriente.",
+    "fragmento": "Criticar los Oscars"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "De *coscarse*, darse cuenta: muy coloquial, de la poesía popular.",
+    "fragmento": "coscas"
+   },
+   {
+    "capa": "forma",
+    "autor": "victor",
+    "texto": "Forzado por la rima: el verso más flojo.",
+    "fragmento": "Ya te pierdas"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "El dicho que me decía mucho mi padre.",
+    "fragmento": "Un millón de moscas"
+   }
+  ],
   "valoraciones": [],
   "lectura": {
-   "fecha": "2026-10-30",
-   "estado": "provisional",
-   "nota": "7",
+   "fecha": "2026-11-09",
+   "estado": "",
+   "nota": "6",
    "rasgos": {
-    "profundidad": 3,
-    "dureza": 2,
-    "pintar conceptos": 4,
-    "sonoridad": 4
+    "profundidad": 2,
+    "dureza": 3,
+    "pintar conceptos": 2,
+    "sonoridad": 3
    },
-   "texto": "«1+» se lee «uno más». Es una sátira del adolescente que, para ser normal, se pone el disfraz de rebelde, que también es una norma. La primera mitad es el deseo de encajar; la segunda, la lista de tópicos del malote, y el remate le da la vuelta al argumento de que la mayoría tiene razón. Los versos cortos del final de cada terceto funcionan como golpes de humor.",
+   "texto": "",
+   "anotaciones": []
+  },
+  "revisado": "2026-11-09",
+  "imagen": "",
+  "en": {
+   "historia": "I wrote it around the beginning of November 2016 in Vicálvaro, Madrid (my third year of secondary school, *3.º de la ESO*), and published it on 14 December: it is my second poem. The influence of my intellectual friends from the Scouts peeks through a little, especially Clara. At the time I was obsessed with feeling accepted, with feeling that at every moment of my life I was being enough: having been with enough girls, having had enough experiences, being active enough or cultured enough. Here, being enough meant living like a teenager. And the bad boy in the poem had nothing to do with who I was: I was a boy who wrote poems. The saying at the end, \"a million flies can't be wrong: eat shit\", was something my father used to say to me a lot.",
+   "comentario_forma": "Six tercets with an almost song-like regularity: each one is a line of 6 syllables, one of 10 and a 4-syllable punchline, and the rhyme aBc repeats three times and then dEf three more. The rhyme could be called **near-perfect assonance**: «mal», «chaval» and «normal» rhyme fully; «menos», «senos» and «ameno» almost, because an s comes and goes; and «Oscars», «coscas» and «moscas» sound practically like full rhymes. «hierba», «pierdas» and «mierda» don't, but the r and the a always sound. The 4-syllable endings land like dry blows: «No soy menos» (\"I'm no less\"), «Quiero senos» (\"I want breasts\"), «Nada ameno» (\"Not pleasant at all\"), «Come mierda» (\"Eat shit\").\n\nThe poem takes a **popular saying** and turns it into a poem and a longer reflection. The register is colloquial, with words like «malote» (\"bad boy\") or «coscas», from the very informal verb *coscarse* (\"to catch on\"): the influence of popular poetry shows. And the voice shifts: in the first three stanzas an \"I\" speaks («No lo hago tan mal», \"I'm not doing so badly\"; «Tengo que ser…», \"I have to be…\"; «Seré…», \"I'll be…\"); in the last ones a \"you\" appears («Luego ya te coscas», \"Then you'll catch on\"; «Ya te pierdas», \"Go get lost\") and the mass is no longer \"everyone\" but \"society\", seen from outside.",
+   "explicacion": "\"1+\" reads \"one more\" (*uno más*, one of the crowd). It begins by shedding guilt: «No lo hago tan mal» (\"I'm not doing so badly\"), and the justification is the popular will: «Todo el mundo sigue esa corriente» (\"Everyone follows that current\"), as if the people were speaking. But instead of defending that he does something different, he says «No soy menos» (\"I'm no less\"), which can be read two ways: I have the right to follow everyone's current, the easy path, and that's fine; or I don't measure up, I'm not enough, but I'm not doing badly because everyone does it.\n\nThen the poem becomes a person and describes itself: «Un simple chaval / Tengo que ser un adolescente» (\"Just a simple lad / I have to be a teenager\"), as if he weren't one yet. It confirms that sense of not reaching what is asked of you, the normal. «Quiero senos» (\"I want breasts\") accepts sexual desire, which is also status, in the present tense, almost as a reaffirmation. And then, in the future: «Para ser normal / Seré el malote desobediente / Nada ameno» (\"To be normal / I'll be the disobedient bad boy / Not pleasant at all\"). The normality of the time is being the bad boy, having a social side that gives you status, even though the one writing is a boy who writes poems.\n\nThe second half paints that teenager with clichés: criticising the Oscars (criticising the mainstream to gain status, which is also part of the current: a current so generic it even includes that criticism), coming home late at dawn, smoking weed. And the reflection arrives: «Luego ya te coscas» (\"Then you'll catch on\"), what are you doing here being one more, wanting to be what you're not just to feel enough? «La sociedad no va encaminada / Ya te pierdas» (\"Society is heading nowhere / Go get lost\"), an ending a bit forced by the rhyme. And the close turns the majority argument around with the saying: «Un millón de moscas / No pueden estar equivocadas / Come mierda» (\"A million flies / Can't be wrong / Eat shit\").",
    "anotaciones": [
     {
      "capa": "sentido",
-     "autor": "provisional",
-     "texto": "Las tres primeras estrofas: el deseo de ser normal. Cada terceto acaba en un remate seco de cuatro sílabas.",
-     "desde": 1,
-     "hasta": 9
+     "autor": "victor",
+     "texto": "\"Everyone\": the popular will as justification, the people have spoken.",
+     "fragmento": "Todo el mundo"
     },
     {
      "capa": "sentido",
-     "autor": "provisional",
-     "texto": "El deseo dicho con la misma sequedad que los otros remates, y por eso hace gracia.",
+     "autor": "victor",
+     "texto": "\"I'm no less\": do I have the right to follow the current, or do I not measure up but I'm not doing badly because everyone does it?",
+     "fragmento": "No soy menos"
+    },
+    {
+     "capa": "sentido",
+     "autor": "victor",
+     "texto": "\"I have to be a teenager\": as if he weren't one yet.",
+     "fragmento": "Tengo que ser un adolescente"
+    },
+    {
+     "capa": "sentido",
+     "autor": "victor",
+     "texto": "\"I want breasts\": desire, which is also status, said in the present, as if reaffirming himself.",
      "fragmento": "Quiero senos"
     },
     {
      "capa": "sentido",
-     "autor": "provisional",
-     "texto": "La paradoja del poema: para ser normal hay que ser rebelde, que también es una norma.",
-     "fragmento": "Seré el malote desobediente"
+     "autor": "victor",
+     "texto": "Criticising the mainstream to gain status: that's the current too.",
+     "fragmento": "Criticar los Oscars"
     },
     {
      "capa": "sentido",
-     "autor": "provisional",
-     "texto": "Las tres últimas: la lista de tópicos del rebelde y un remate que se ríe de ella.",
-     "desde": 10,
-     "hasta": 18
+     "autor": "victor",
+     "texto": "From *coscarse*, \"to catch on\": very colloquial, from popular poetry.",
+     "fragmento": "coscas"
+    },
+    {
+     "capa": "forma",
+     "autor": "victor",
+     "texto": "\"Go get lost\": forced by the rhyme, the weakest line.",
+     "fragmento": "Ya te pierdas"
     },
     {
      "capa": "sentido",
-     "autor": "provisional",
-     "texto": "Dicho popular: «Come mierda: un millón de moscas no pueden estar equivocadas», para reírse de quien sigue a la mayoría.",
+     "autor": "victor",
+     "texto": "The saying my father used to tell me a lot.",
      "fragmento": "Un millón de moscas"
     }
    ]
   },
-  "revisado": "",
-  "imagen": "",
   "titulo_en": "1+",
   "texto_en": "I don't do it so badly\nEveryone follows that current\nI'm no less\n\nJust a simple lad\nI have to be a teenager\nI want breasts\n\nSo I can be normal\nI'll be the disobedient bad boy\nNothing pleasant\n\nSlagging off the Oscars\nComing home late in the small hours\nSmoking weed\n\nLater on you catch on\nSociety isn't headed anywhere\nGo get lost\n\nA million flies\nCan't be wrong\nEat shit.\n\nVí. Ab. Al.",
   "primero": false
