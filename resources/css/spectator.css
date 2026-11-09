@@ -1291,3 +1291,23 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
   font-size: 0.68rem; font-weight: 700; line-height: 1.2; color: #6b5a8a;
   transform: rotate(-8deg); pointer-events: none;
 }
+
+/* Confidence in each idea: seven cells, the middle one is indifference.
+   Ochre to the left (not convinced), indigo to the right (sure). */
+.sp-conf { --c-yes: #4b3fb3; --c-no: #d39a2c; display: inline-flex; gap: 2px; padding: 3px; border: 0.12rem solid #1c1c1c; border-radius: 6px; background: #fffaf2; }
+.sp-conf i { width: 0.5rem; height: 0.8rem; border-radius: 2px; background: #e6e0ee; }
+.sp-conf i:nth-child(4) { width: 0.3rem; background: #b9b2c4; }
+.sp-idea > .sp-conf { position: absolute; top: 0.6rem; right: 0.6rem; }
+.sp-idea h3 { padding-right: 4.6rem; }
+.sp-conf[data-c="1"] i:nth-child(5), .sp-conf[data-c="2"] i:nth-child(n+5):nth-child(-n+6), .sp-conf[data-c="3"] i:nth-child(n+5) { background: var(--c-yes); }
+.sp-conf[data-c="-1"] i:nth-child(3), .sp-conf[data-c="-2"] i:nth-child(n+2):nth-child(-n+3), .sp-conf[data-c="-3"] i:nth-child(-n+3) { background: var(--c-no); }
+.sp-conf-key i:nth-child(1) { background: var(--c-no); } .sp-conf-key i:nth-child(2) { background: var(--c-no); opacity: 0.7; } .sp-conf-key i:nth-child(3) { background: var(--c-no); opacity: 0.4; }
+.sp-conf-key i:nth-child(5) { background: var(--c-yes); opacity: 0.4; } .sp-conf-key i:nth-child(6) { background: var(--c-yes); opacity: 0.7; } .sp-conf-key i:nth-child(7) { background: var(--c-yes); }
+.spectator .sp-conf-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.6rem; font-size: 0.85rem; color: #4a4060; margin: -0.3rem 0 1rem; text-align: left; }
+.sp-conf-legend small { flex-basis: 100%; font-size: 0.78rem; color: #6b6b66; }
+.sp-idea .sp-idea-quote { font-weight: 700; font-style: italic; padding: 0.4rem 0.6rem; border-radius: 8px; background: rgba(255, 250, 242, 0.7); }
+@media only screen and (max-width:750px) {
+  .spectator .sp-conf-legend { font-size: 0.95rem; }
+  .sp-conf i { width: 0.6rem; height: 0.95rem; }
+}
+.sp-conf-legend small { display: block; text-align: left; }
