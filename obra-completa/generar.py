@@ -178,6 +178,11 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
     p["etiquetas"] = [e for e in p["etiquetas"].split(";") if e]
     ruta = os.path.join(HERE, "anotaciones", r["codigo"] + ".md")
     p.update(leer_anotaciones(ruta) if os.path.exists(ruta) else dict(historia="", explicacion="", explicacion_estado="", temas=None, anotaciones=[], valoraciones=[], forma=None, lectura=None))
+    # «revisado: AAAA-MM-DD» en la cabecera de la ficha = Víctor lo ha revisado
+    p["revisado"] = ""
+    if os.path.exists(ruta):
+        m = re.search(r"^---\n.*?^revisado:\s*(\S+)", open(ruta, encoding="utf-8").read(), flags=re.S | re.M)
+        if m: p["revisado"] = m.group(1)
     # Imagen del poema, si la hay: imagenes/CODIGO.svg (o .png / .jpg)
     p["imagen"] = next((f"imagenes/{r['codigo']}.{ext}" for ext in ("svg", "png", "jpg")
                         if os.path.exists(os.path.join(HERE, "imagenes", f"{r['codigo']}.{ext}"))), "")

@@ -2,6 +2,7 @@
 codigo: CSAP-023
 titulo: Mi vacío
 dedicatoria_pista: algalex
+revisado: 2026-11-03
 ---
 
 ## Historia

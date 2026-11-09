@@ -18,9 +18,9 @@ const Obra = (() => {
   const TEXTOS = {
     es: {
       titulo: "Obra completa", volver: "← Obra completa",
-      entradilla: "Poemas desde 2016, ordenados por fecha.",  leyCs: "del blog", leyMb: "del blog", leyDed: "código de dedicatoria: una pista de a quién va, no necesariamente un nombre",
+      entradilla: "Poemas desde 2016, ordenados por fecha.",  leyCs: "del blog", leyMb: "del blog", leyRev: "revisado por mí; el círculo vacío, todavía sin revisar", leyDed: "código de dedicatoria: una pista de a quién va, no necesariamente un nombre",
       buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Ciencias sociales", banales: "Mentiras banales",
-      cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 poema" : `${n} poemas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado",
+      cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 poema" : `${n} poemas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado", revisado: "Revisado por mí", sinRevisar: "Sin revisar",
       noEncuentro: "No encuentro esa pieza.", publicado: f => ` (publicado el ${f})`,
       historia: "Historia", quitarColores: "Quitar colores", ponerColores: "Poner colores", imagen: "Imagen del poema", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
       analisis: "Análisis", capas: { forma: "Forma", sentido: "Sentido", referencia: "Referencias" }, provisional: "provisional",
@@ -32,9 +32,9 @@ const Obra = (() => {
     },
     en: {
       titulo: "Complete works", volver: "← Complete works",
-      entradilla: "Poems since 2016, in date order, mostly in Spanish.",  leyCs: "from the blog", leyMb: "from the blog", leyDed: "dedication code: a clue to who it is for, not necessarily a name",
+      entradilla: "Poems since 2016, in date order, mostly in Spanish.",  leyCs: "from the blog", leyMb: "from the blog", leyRev: "reviewed by me; the empty circle, not reviewed yet", leyDed: "dedication code: a clue to who it is for, not necessarily a name",
       buscar: "Search a title or a line…", todo: "All", poemas: "Ciencias sociales", banales: "Mentiras banales",
-      cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 poem" : `${n} poems`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated",
+      cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 poem" : `${n} poems`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated", revisado: "Reviewed by me", sinRevisar: "Not reviewed yet",
       noEncuentro: "I can't find that piece.", publicado: f => ` (published ${f})`,
       historia: "Story", quitarColores: "Remove colours", ponerColores: "Show colours", imagen: "Image of the poem", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
       analisis: "Analysis", capas: { forma: "Form", sentido: "Meaning", referencia: "References" }, provisional: "placeholder",
@@ -119,8 +119,9 @@ const Obra = (() => {
             caja.append(el("h2", { class: "anio" }, a, el("span", { class: "n" }, String(n))));
             ul = caja.appendChild(el("ul", { class: "burbujas" }));
           }
-          const marca = p.anotaciones.some(a => a.autor === "victor") || p.valoraciones.length ? T("comentado") : "";
-          const b = el("a", { class: "burbuja", href: `poema.html?c=${p.codigo}` },
+          const marca = "";
+          const b = el("a", { class: "burbuja" + (p.revisado ? " revisada" : ""), href: `poema.html?c=${p.codigo}` },
+            el("span", { class: "check", title: p.revisado ? T("revisado") : T("sinRevisar"), "aria-label": p.revisado ? T("revisado") : T("sinRevisar") }, p.revisado ? "✓" : ""),
             el("span", { class: "t" }, p.titulo),
             el("span", { class: "f" }, fechaLarga(fecha(p)) + marca));
           // Etiquetas: el blog de donde viene y, si la tiene, la dedicatoria con su código
@@ -341,6 +342,7 @@ const Obra = (() => {
       document.title = `${p.titulo} | Obra completa`;
       main.append(el("h1", {}, p.titulo, p.titulo_en && p.titulo_en !== p.titulo ? el("span", { class: "tr", lang: "en" }, p.titulo_en) : ""));
       const meta = el("p", { class: "meta" }, fechaLarga(fecha(p)));
+      main.append(el("p", { class: "sello" + (p.revisado ? " revisada" : "") }, el("span", { class: "check" }, p.revisado ? "✓" : ""), p.revisado ? T("revisado") : T("sinRevisar")));
       if (p.fecha_escritura) meta.append(T("publicado")(fechaLarga(p.fecha_publicacion)));
       meta.append(" · ", el("a", { href: p.url, target: "_blank", rel: "noopener" }, p.fuente));
       main.append(meta);
