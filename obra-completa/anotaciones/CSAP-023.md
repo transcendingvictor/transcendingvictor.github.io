@@ -2,7 +2,7 @@
 codigo: CSAP-023
 titulo: Mi vacío
 dedicatoria_pista: algalex
-revisado: 2026-11-03
+revisado: 2026-11-09
 ---
 
 ## Historia
@@ -10,8 +10,6 @@ revisado: 2026-11-03
 Publicado el 28 de junio de 2018. Escrito hacia el 12 de mayo de 2018 en una libreta, en Vicálvaro (final de cuarto de la ESO), justo después de un viernes y antes del viaje a Lyon. Es muy de esa época: la búsqueda por estar a gusto, por estar bien.
 
 ## Explicación
-
-Estado: borrador hecho con frases de Víctor (2026-11-03), por revisar
 
 El poema es un dibujo: una persona en el centro, la gente alrededor y, entre medias, un vacío. Los cuartetos lo pintan dando vueltas sobre la misma imagen. «Solo estoy rodeado de gente»: estoy solo, o no hay nada más que gente. El mundo le ignora, y él no escapa, sin que quede claro si es por él o por ellos. La frialdad que le devora parece venir de fuera, de los que le rodean, pero se siente dentro. Luego la lanza se devuelve: él tampoco entiende a esa «gentuza» que llora. El centro y los de fuera están enfrentados, y el octavo verso lo confirma: «Solo y rodeado completamente».
 
