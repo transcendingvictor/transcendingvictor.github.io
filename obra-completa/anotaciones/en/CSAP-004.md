@@ -6,7 +6,7 @@ traducido_de: es
 
 ## Historia
 
-I wrote it around the beginning of November 2016 in Vicálvaro, Madrid (my third year of secondary school, *3.º de la ESO*), and published it on 14 December: it is my second poem. The influence of my intellectual friends from the Scouts peeks through a little, especially Clara. At the time I was obsessed with feeling accepted, with feeling that at every moment of my life I was being enough: having been with enough girls, having had enough experiences, being active enough or cultured enough. Here, being enough meant living like a teenager. And the bad boy in the poem had nothing to do with who I was: I was a boy who wrote poems. The saying at the end, "a million flies can't be wrong: eat shit", was something my father used to say to me a lot.
+I wrote it around the beginning of November 2016 in Vicálvaro, Madrid (my third year of secondary school, *3.º de la ESO*), and published it on 14 December: it is my second poem. At the time I was obsessed with feeling accepted, with feeling that at every moment of my life I was being enough: having been with enough girls, having had enough experiences, being active enough or cultured enough. Here, being enough meant living like a teenager. And the bad boy in the poem had nothing to do with who I was: I was a boy who wrote poems. The saying at the end, "a million flies can't be wrong: eat shit", was something my father used to say to me a lot.
 
 ## Comentario de la forma
 

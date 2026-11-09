@@ -6,7 +6,7 @@ revisado: 2026-11-09
 
 ## Historia
 
-Lo escribí hacia principios de noviembre de 2016 en Vicálvaro, Madrid (tercero de la ESO), y lo publiqué el 14 de diciembre: es mi segundo poema. Se asoma un poco la influencia de mis amigos intelectuales de los Scouts, sobre todo Clara. Entonces me obsesionaba sentirme aceptado, sentir que en cada momento de mi vida estaba siendo suficiente: haber estado con suficientes chicas, haber tenido suficientes experiencias, ser lo bastante activo o lo bastante culto. Aquí, lo suficiente era vivir como un adolescente. Y el malote del poema no tenía nada que ver con cómo era yo: era un chico que escribía poemas. El dicho del final, «un millón de moscas no pueden estar equivocadas: come mierda», me lo decía mucho mi padre.
+Lo escribí hacia principios de noviembre de 2016 en Vicálvaro, Madrid (tercero de la ESO), y lo publiqué el 14 de diciembre: es mi segundo poema. Entonces me obsesionaba sentirme aceptado, sentir que en cada momento de mi vida estaba siendo suficiente: haber estado con suficientes chicas, haber tenido suficientes experiencias, ser lo bastante activo o lo bastante culto. Aquí, lo suficiente era vivir como un adolescente. Y el malote del poema no tenía nada que ver con cómo era yo: era un chico que escribía poemas. El dicho del final, «un millón de moscas no pueden estar equivocadas: come mierda», me lo decía mucho mi padre.
 
 ## Comentario de la forma
 
