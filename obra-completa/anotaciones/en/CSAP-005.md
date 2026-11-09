@@ -6,7 +6,7 @@ traducido_de: es
 
 ## Historia
 
-I wrote it around the third week of November 2016 in Vicálvaro and published it on 15 December. The title is *inmortales* ("immortals") with the e and the l swapped, one of the word games I liked as a child, like the last line, all run together. It is for Clara, from the Scouts: she seemed to me a wise person, she inspired knowledge, laughter and the joy of knowing and playing. I idealised her a lot, and at some point I must have felt she was an ordinary person, who wasn't going to fulfil all my vital and intellectual fantasies. The Scouts were then giving me a new space to socialise and to feel more loved and more whole; idealising people was part of already living a fairly social life.
+I wrote it around the third week of November 2016 in Vicálvaro and published it on 15 December. The title is *inmortales* ("immortals") with the e and the l swapped, one of the word games I liked as a child, like the last line, all run together: the letters are out of place because the immortals are no longer so perfect. It is for someone from the Scouts who seemed wise to me, who inspired knowledge, laughter and the urge to play. I idealised them a lot, and at some point I must have felt they were an ordinary person, who wasn't going to fulfil all my fantasies. The Scouts were then giving me a new space to socialise and feel more loved; idealising people was part of already living a fairly social life.
 
 ## Comentario de la forma
 
