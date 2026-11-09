@@ -2561,7 +2561,7 @@
     "4": {
      "silabas": 11,
      "rima": "A",
-     "nota": "«frialdad» con diptongo; con diéresis, 12"
+     "nota": "«frialdad» con «fria» en una sílaba"
     },
     "5": {
      "silabas": 11,
@@ -2634,27 +2634,7 @@
   "historia": "Publicado el 28 de junio de 2018. Escrito hacia el 12 de mayo de 2018 en una libreta, en Vicálvaro (final de cuarto de la ESO), justo después de un viernes y antes del viaje a Lyon. Es muy de esa época: la búsqueda por estar a gusto, por estar bien.",
   "explicacion": "El poema es un dibujo: una persona en el centro, la gente alrededor y, entre medias, un vacío. Los cuartetos lo pintan dando vueltas sobre la misma imagen. «Solo estoy rodeado de gente»: estoy solo, o no hay nada más que gente. El mundo le ignora, y él no escapa, sin que quede claro si es por él o por ellos. La frialdad que le devora parece venir de fuera, de los que le rodean, pero se siente dentro. Luego la lanza se devuelve: él tampoco entiende a esa «gentuza» que llora. El centro y los de fuera están enfrentados, y el octavo verso lo confirma: «Solo y rodeado completamente».\n\nEn los tercetos el protagonista se cansa. No es un cansancio de apagarse, sino de «estoy cansado, tengo que actuar». Esa guerra de reproches es una película sin argumento, y la salida que se plantea es irse, pasar de quien pasa de pasar: de gente que dice pasar pero en realidad no pasa, porque se mete, rodea y condiciona. Tiene que sacar su conocimiento de ahí, pasearlo por otro sitio.\n\nPero el encabalgamiento rompe esa salida: el conocimiento es «falso». ¿Cuál? El de ellos, el suyo, o lo que el propio poema está diciendo de ellos y de él. La imagen, aunque muy clara, ondula: hace como que va a salir y vuelve a entrar. Y al final le atrapa. El vacío que deja la masa, el hueco que te hacen los demás, es a la vez un vacío físico y uno interior, porque las personas se nutren de sus relaciones sociales. Te ahoga el vacío y te ahoga la masa: lo mismo visto desde dentro y desde fuera.",
   "explicacion_estado": "borrador hecho con frases de Víctor (2026-11-03), por revisar",
-  "temas": {
-   "estado": "propuesta, por confirmar",
-   "lista": [
-    {
-     "tema": "Los otros",
-     "sub": "soledad entre la gente, rechazo y exclusión"
-    },
-    {
-     "tema": "Vacío existencial",
-     "sub": "vacío interior, asfixia"
-    },
-    {
-     "tema": "Autenticidad",
-     "sub": "dudar de uno mismo"
-    },
-    {
-     "tema": "Actuar o no actuar",
-     "sub": "ganas de irse"
-    }
-   ]
-  },
+  "temas": null,
   "anotaciones": [
    {
     "capa": "sentido",
@@ -2715,76 +2695,6 @@
    {
     "capa": "forma",
     "autor": "claude",
-    "texto": "Anáfora: tres versos seguidos empiezan por «Solo».",
-    "desde": 1,
-    "hasta": 3
-   },
-   {
-    "capa": "forma",
-    "autor": "claude",
-    "texto": "«Solo estoy rodeado de gente» / «Estoy rodeado solo de gente»: las mismas palabras en otro orden, y el «solo» cambia de sentido al moverse.",
-    "desde": 5,
-    "hasta": 5
-   },
-   {
-    "capa": "forma",
-    "autor": "claude",
-    "texto": "«Solo estoy rodeado de gente» / «Estoy rodeado solo de gente»: las mismas palabras en otro orden, y el «solo» cambia de sentido al moverse.",
-    "desde": 1,
-    "hasta": 1
-   },
-   {
-    "capa": "forma",
-    "autor": "claude",
-    "texto": "Anadiplosis: «completamente» cierra el v8 y abre el v9. (No es epanadiplosis, que es empezar y acabar el mismo verso con la misma palabra.)",
-    "desde": 8,
-    "hasta": 9
-   },
-   {
-    "capa": "forma",
-    "autor": "claude",
-    "texto": "Encabalgamiento abrupto: «gente / ruin»; el adjetivo cae solo al empezar el verso siguiente.",
-    "desde": 5,
-    "hasta": 6
-   },
-   {
-    "capa": "forma",
-    "autor": "claude",
-    "texto": "Encabalgamiento entre estrofas: «Pasar de quien pasa / de pasar», saltando del primer terceto al segundo.",
-    "desde": 11,
-    "hasta": 12
-   },
-   {
-    "capa": "forma",
-    "autor": "claude",
-    "texto": "Otro encabalgamiento: «Pasear conocimiento / falso».",
-    "desde": 12,
-    "hasta": 13
-   },
-   {
-    "capa": "forma",
-    "autor": "claude",
-    "texto": "Derivación y paronomasia: pasar, pasa, pasar, pasear.",
-    "desde": 11,
-    "hasta": 12
-   },
-   {
-    "capa": "forma",
-    "autor": "claude",
-    "texto": "Paralelismo («y te ahoga… y te ahoga…») y antítesis: vacío frente a masa.",
-    "desde": 14,
-    "hasta": 14
-   },
-   {
-    "capa": "forma",
-    "autor": "claude",
-    "texto": "«Gentuza» deriva de «gente», la palabra rima de los cuartetos, con sufijo despectivo.",
-    "desde": 7,
-    "hasta": 7
-   },
-   {
-    "capa": "forma",
-    "autor": "claude",
     "desde": 1,
     "hasta": 1,
     "texto": "sin sinalefa entre «Solo | estoy»",
@@ -2795,7 +2705,7 @@
     "autor": "claude",
     "desde": 4,
     "hasta": 4,
-    "texto": "«frialdad» con diptongo; con diéresis, 12",
+    "texto": "«frialdad» con «fria» en una sílaba",
     "metro": true
    },
    {
@@ -2830,7 +2740,7 @@
    "anotaciones": []
   },
   "revisado": "2026-11-03",
-  "imagen": "imagenes/CSAP-023.svg",
+  "imagen": "",
   "titulo_en": "My emptiness",
   "texto_en": "I'm alone surrounded by people.\nAlone, immersed in a world that ignores me.\nAlone for not escaping, and I'm devoured\nby the omnipresent murderous coldness.\n\nI'm surrounded only by people\nwho are vile, perverse, manipulative.\nRiffraff I don't understand why they cry!\nAlone and completely surrounded.\n\nCompletely confused and tired\nof films with no plot.\nI'll have to emigrate. Not care about who doesn't care\n\nabout not caring. Parade around false\nknowledge, it's all false! It's assimilated...\nAnd the void drowns you, and the mass drowns you.\n\nVí. Ab. Al.\n\n(algalex)"
  },

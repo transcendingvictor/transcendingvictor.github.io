@@ -21,7 +21,7 @@ const Obra = (() => {
       entradilla: "Poemas desde 2016, ordenados por fecha.",  leyCs: "del blog", leyMb: "del blog", leyRev: "revisado por mí; el círculo vacío, todavía sin revisar", leyDed: "código de dedicatoria: una pista de a quién va, no necesariamente un nombre",
       buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Ciencias sociales", banales: "Mentiras banales",
       cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 poema" : `${n} poemas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado", revisado: "Revisado por mí", sinRevisar: "Sin revisar",
-      noEncuentro: "No encuentro esa pieza.", publicado: f => ` (publicado el ${f})`,
+      noEncuentro: "No encuentro esa pieza.", publicado: f => ` · publicado el ${f}`, escrito: f => `Escrito hacia el ${f}`,
       historia: "Historia", quitarColores: "Quitar colores", ponerColores: "Poner colores", imagen: "Imagen del poema", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
       analisis: "Análisis", capas: { forma: "Forma", sentido: "Sentido", referencia: "Referencias" }, provisional: "provisional",
       forma: "Forma", estrofa: "Estrofa", medida: "Medida", esquema: "Esquema",
@@ -35,7 +35,7 @@ const Obra = (() => {
       entradilla: "Poems since 2016, in date order, mostly in Spanish.",  leyCs: "from the blog", leyMb: "from the blog", leyRev: "reviewed by me; the empty circle, not reviewed yet", leyDed: "dedication code: a clue to who it is for, not necessarily a name",
       buscar: "Search a title or a line…", todo: "All", poemas: "Ciencias sociales", banales: "Mentiras banales",
       cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 poem" : `${n} poems`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated", revisado: "Reviewed by me", sinRevisar: "Not reviewed yet",
-      noEncuentro: "I can't find that piece.", publicado: f => ` (published ${f})`,
+      noEncuentro: "I can't find that piece.", publicado: f => ` · published ${f}`, escrito: f => `Written around ${f}`,
       historia: "Story", quitarColores: "Remove colours", ponerColores: "Show colours", imagen: "Image of the poem", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
       analisis: "Analysis", capas: { forma: "Form", sentido: "Meaning", referencia: "References" }, provisional: "placeholder",
       forma: "Form", estrofa: "Stanza", medida: "Metre", esquema: "Rhyme scheme",
@@ -341,7 +341,7 @@ const Obra = (() => {
       const p = piezas[i];
       document.title = `${p.titulo} | Obra completa`;
       main.append(el("h1", {}, p.titulo, p.titulo_en && p.titulo_en !== p.titulo ? el("span", { class: "tr", lang: "en" }, p.titulo_en) : ""));
-      const meta = el("p", { class: "meta" }, fechaLarga(fecha(p)));
+      const meta = el("p", { class: "meta" }, p.fecha_escritura ? T("escrito")(fechaLarga(p.fecha_escritura)) : fechaLarga(fecha(p)));
       main.append(el("p", { class: "sello" + (p.revisado ? " revisada" : "") }, el("span", { class: "check" }, p.revisado ? "✓" : ""), p.revisado ? T("revisado") : T("sinRevisar")));
       if (p.fecha_escritura) meta.append(T("publicado")(fechaLarga(p.fecha_publicacion)));
       meta.append(" · ", el("a", { href: p.url, target: "_blank", rel: "noopener" }, p.fuente));
@@ -405,15 +405,16 @@ const Obra = (() => {
         window.addEventListener("resize", ajustar);
       }
 
+      if (p.lectura) main.append(lectura(p.lectura));
       if (p.historia) main.append(el("section", { class: "historia" }, el("h2", {}, T("historia")), ...p.historia.split(/\n\n/).map(t => el("p", {}, t))));
-      if (p.imagen) main.append(el("figure", { class: "imagen-poema" }, el("img", { src: p.imagen, alt: T("imagen"), width: "600", height: "600" })));
       if (p.explicacion) {
         const s = el("section", {}, el("h2", {}, T("explicacion")));
         if (p.explicacion_estado) s.append(el("p", { class: "aviso" }, p.explicacion_estado));
         p.explicacion.split(/\n\n/).forEach(t => s.append(el("p", {}, t)));
         main.append(s);
       }
-      if (p.forma) main.append(forma(p.forma));
+      // Un poema revisado no repite la forma en prosa: basta con lo que se ve en el poema
+      if (p.forma && !p.revisado) main.append(forma(p.forma));
       if (p.temas) main.append(temas(p.temas));
       if (p.valoraciones.length) {
         const s = el("section", {}, el("h2", {}, T("valoracion")));
@@ -428,8 +429,6 @@ const Obra = (() => {
         }
         main.append(s);
       }
-
-      if (p.lectura) main.append(lectura(p.lectura));
 
       const nav = el("nav", { class: "navegacion" });
       nav.append(i > 0 ? el("a", { href: `poema.html?c=${piezas[i - 1].codigo}` }, "← " + piezas[i - 1].titulo) : el("span"));

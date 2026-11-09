@@ -35,7 +35,7 @@ Esquema: ABBA ABBA CDE DCE
 - v1: 11 A · sin sinalefa entre «Solo | estoy»
 - v2: 11 B
 - v3: 11 B
-- v4: 11 A · «frialdad» con diptongo; con diéresis, 12
+- v4: 11 A · «frialdad» con «fria» en una sílaba
 - v5: 11 A
 - v6: 11 B · «ruin» como bisílaba (ru-ín), como en la tradición
 - v7: 11 B
@@ -46,18 +46,6 @@ Esquema: ABBA ABBA CDE DCE
 - v12: 11 D · «pasear» en tres sílabas
 - v13: 11 C
 - v14: 11 E
-
-### Figuras
-
-- v1-3 [forma]: Anáfora: tres versos seguidos empiezan por «Solo».
-- v1 y v5 [forma]: «Solo estoy rodeado de gente» / «Estoy rodeado solo de gente»: las mismas palabras en otro orden, y el «solo» cambia de sentido al moverse.
-- v8-9 [forma]: Anadiplosis: «completamente» cierra el v8 y abre el v9. (No es epanadiplosis, que es empezar y acabar el mismo verso con la misma palabra.)
-- v5-6 [forma]: Encabalgamiento abrupto: «gente / ruin»; el adjetivo cae solo al empezar el verso siguiente.
-- v11-12 [forma]: Encabalgamiento entre estrofas: «Pasar de quien pasa / de pasar», saltando del primer terceto al segundo.
-- v12-13 [forma]: Otro encabalgamiento: «Pasear conocimiento / falso».
-- v11-12 [forma]: Derivación y paronomasia: pasar, pasa, pasar, pasear.
-- v14 [forma]: Paralelismo («y te ahoga… y te ahoga…») y antítesis: vacío frente a masa.
-- v7 [forma]: «Gentuza» deriva de «gente», la palabra rima de los cuartetos, con sufijo despectivo.
 
 ## Anotaciones por verso
 
@@ -72,15 +60,6 @@ Esquema: ABBA ABBA CDE DCE
 - "falso" [sentido]: El encabalgamiento rompe la salida. ¿Falso el conocimiento de ellos, el mío o el de este poema?
 - v14 [sentido]: Vacío y masa son lo mismo visto desde dentro y desde fuera.
 - "(algalex)": Dedicatoria oculta: va por dos personas.
-
-## Temas
-
-Estado: propuesta, por confirmar
-
-- Los otros › soledad entre la gente, rechazo y exclusión
-- Vacío existencial › vacío interior, asfixia
-- Autenticidad › dudar de uno mismo
-- Actuar o no actuar › ganas de irse
 
 ## Análisis del autor
 
