@@ -162,7 +162,7 @@ def leer_anotaciones(ruta):
         # Las observaciones de cada verso también se ven como notas de la capa de forma
         notas += [dict(capa="forma", autor="claude", desde=int(v), hasta=int(v), texto=d["nota"], metro=True)
                   for v, d in forma["versos"].items() if d["nota"]]
-    lectura = leer_lectura(s.get("análisis del autor", ""))
+    lectura = leer_lectura(s.get("mi análisis") or s.get("análisis del autor", ""))
     return dict(historia=s.get("historia", ""), comentario_forma=s.get("comentario de la forma", ""), explicacion=explicacion, explicacion_estado=explicacion_estado,
                 temas=dict(estado=re.sub(r" *\(ver [^)]*\)", "", m[1]).strip() if m else "", lista=temas) if temas else None,
                 anotaciones=notas, valoraciones=valoraciones, forma=forma, lectura=lectura)
@@ -190,6 +190,15 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
     # Imagen del poema, si la hay: imagenes/CODIGO.svg (o .png / .jpg)
     p["imagen"] = next((f"imagenes/{r['codigo']}.{ext}" for ext in ("svg", "png", "jpg")
                         if os.path.exists(os.path.join(HERE, "imagenes", f"{r['codigo']}.{ext}"))), "")
+    # Análisis en inglés: anotaciones/en/CODIGO.md (Historia, Comentario de la forma, Explicación y notas de verso)
+    ruta_en = os.path.join(HERE, "anotaciones", "en", r["codigo"] + ".md")
+    if os.path.exists(ruta_en):
+        s_en = secciones(open(ruta_en, encoding="utf-8").read())
+        notas_en = notas_por_verso(s_en.get("anotaciones por verso", ""), "victor")
+        # «## Forma» en inglés solo trae las notas de verso de forma: van al margen, como las españolas
+        notas_en += [dict(n, metro=True) if "desde" in n else n for n in notas_por_verso(s_en.get("forma", ""), "claude")]
+        p["en"] = dict(historia=s_en.get("historia", ""), comentario_forma=s_en.get("comentario de la forma", ""),
+                       explicacion=s_en.get("explicación", ""), anotaciones=notas_en)
     trad = os.path.join(HERE, "traducciones", r["codigo"] + ".txt")
     if os.path.exists(trad):
         lineas = open(trad, encoding="utf-8").read().rstrip("\n").split("\n")
