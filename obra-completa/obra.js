@@ -144,7 +144,7 @@ const Obra = (() => {
   }
 
   // Capas de comentarios: cada nota pertenece a una y cada botón enciende la suya
-  const CAPAS = ["forma", "sentido", "referencia"];
+  const CAPAS = ["forma", "sentido"];
   const COLORES_RIMA = ["#f7c6c6", "#c9e4f7", "#fbe3a6", "#d4c9f2", "#bfe5c8", "#f8d2e8",
     "#d9ecb0", "#f9d7b5", "#c4dede", "#e8d4c0", "#dcd6f7", "#f2e2a0"];
   // Mismo color para la misma rima, en el orden en que aparecen

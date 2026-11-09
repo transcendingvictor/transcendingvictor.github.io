@@ -33,7 +33,8 @@ def secciones(md):
     return {partes[i].strip().lower(): partes[i + 1].strip() for i in range(1, len(partes), 2)}
 
 
-CAPAS = ("forma", "sentido", "referencia")
+# [referencia] ya no es capa aparte: se pinta dentro de Sentido
+CAPAS = ("forma", "sentido")
 
 
 def notas_por_verso(texto, autor):

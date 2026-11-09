@@ -487,7 +487,7 @@
      "hasta": 18
     },
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "Dicho popular: «Come mierda: un millón de moscas no pueden estar equivocadas», para reírse de quien sigue a la mayoría.",
      "fragmento": "Un millón de moscas"
@@ -1490,7 +1490,7 @@
      "hasta": 4
     },
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "Dientes como perlas y cabello como cascada: tópicos de la belleza femenina de la poesía petrarquista, que la estrofa siguiente llama «idealización».",
      "fragmento": "Tus dientes ahora son perlas"
@@ -1502,7 +1502,7 @@
      "fragmento": "fruto de idealización"
     },
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "Romeo, el de Shakespeare, como modelo de amante.",
      "fragmento": "Romeos"
@@ -1515,7 +1515,7 @@
      "hasta": 24
     },
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "Del mito griego: lo que se abre ya no se puede cerrar. Vuelve más abajo: «¿Abrirás la caja un día?».",
      "fragmento": "una caja de Pandora"
@@ -1527,7 +1527,7 @@
      "fragmento": "La verdad es que no hay verdades"
     },
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "Significa «sabiduría» en griego. Puede ser un nombre o un juego con la palabra; no lo sé.",
      "fragmento": "Sofía"
@@ -1709,7 +1709,7 @@
      "fragmento": "no te esposes"
     },
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "La ambrosía o el néctar de la mitología griega.",
      "fragmento": "zumo de dioses"
@@ -2157,7 +2157,7 @@
      "hasta": 8
     },
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "La manzana del Génesis, el fruto prohibido, que enlaza con el «amor prohibido» del verso anterior.",
      "fragmento": "la misma maldita manzana"
@@ -2170,7 +2170,7 @@
      "hasta": 11
     },
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "El pícaro de Quevedo («Historia de la vida del Buscón»), o simplemente el que busca.",
      "fragmento": "buscón"
@@ -3266,7 +3266,7 @@
    "texto": "",
    "anotaciones": [
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "El título viene de «Living is easy with eyes closed», de «Strawberry Fields Forever» de los Beatles, que también da título a la película de David Trueba «Vivir es fácil con los ojos cerrados» (2013).",
      "fragmento": "Es fácil ser con los ojos cerrados"
@@ -3483,7 +3483,7 @@
      "fragmento": "Te odio por abrazarme"
     },
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "Recuerda al «Odi et amo» de Catulo: odio y amo a la vez.",
      "desde": 1,
@@ -3649,7 +3649,7 @@
    "texto": "Un soneto satírico sobre el dinero. Va contra los moralistas que dicen que la felicidad está en los matices, pero no se pone por encima: el último terceto se incluye a sí mismo, que si se encuentra veinte euros se los queda. El tono de usted («mire») le da aire de discurso o de sermón al revés. El título suena parecido a «dinero» (¡Nero!) y también recuerda a Nerón; no sé si va por ahí.",
    "anotaciones": [
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "Recuerda a la letrilla de Quevedo «Poderoso caballero es don Dinero».",
      "fragmento": "El dinero no pasará de moda"
@@ -4251,7 +4251,7 @@
    "texto": "Un soneto de amor construido sobre los cuatro elementos. Los cuartetos los recorren en orden: aire (el viento), agua, fuego y tierra, cada uno con algo que la otra persona le ha hecho. El primer terceto confiesa que no termina de encajar, y el segundo los pide todos a la vez para luego exagerarlos: el final cambia cada elemento por su versión catastrófica, volcán (fuego), tornado (aire), seísmo (tierra) y aguacero (agua).",
    "anotaciones": [
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "Los cuatro elementos de Empédocles y de la tradición clásica: aire, agua, fuego y tierra, en ese orden.",
      "desde": 1,
@@ -4397,7 +4397,7 @@
      "fragmento": "Tu presencia desafía"
     },
     {
-     "capa": "referencia",
+     "capa": "sentido",
      "autor": "provisional",
      "texto": "Esencia y existencia: la pareja de conceptos de la filosofía (el existencialismo dice que la existencia precede a la esencia).",
      "fragmento": "en esencia a mi existencia"
