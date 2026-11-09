@@ -342,7 +342,8 @@ const Obra = (() => {
       const pintar = () => {
       main.replaceChildren(migas);
       if (i < 0) { main.append(el("p", { class: "vacio" }, T("noEncuentro"))); return; }
-      const p = piezas[i];
+      // En inglés, el análisis traducido sustituye al español (fecha, medida, letra y rasgos salen de la ficha española)
+      const p = lang === "en" && piezas[i].en ? { ...piezas[i], ...piezas[i].en } : piezas[i];
       document.title = `${p.titulo} | Obra completa`;
       main.append(el("h1", {}, p.titulo, p.titulo_en && p.titulo_en !== p.titulo ? el("span", { class: "tr", lang: "en" }, p.titulo_en) : ""));
       const meta = el("p", { class: "meta" }, p.fecha_escritura ? (p.escritura_aprox ? escritoAprox(p.fecha_escritura) : T("escrito")(fechaLarga(p.fecha_escritura))) : fechaLarga(fecha(p)));
@@ -410,6 +411,8 @@ const Obra = (() => {
         window.addEventListener("resize", ajustar);
       }
 
+      if (lang === "en" && (p.historia || p.explicacion || p.lectura))
+        main.append(el("p", { class: "aviso-idioma" }, piezas[i].en ? "Analysis translated from the Spanish." : "Analysis available in Spanish only."));
       if (p.lectura) main.append(lectura(p.lectura));
       if (p.historia) main.append(el("section", { class: "historia" }, el("h2", {}, T("historia")), ...p.historia.split(/\n\n/).map(t => el("p", {}, t))));
       // Comentario de la forma: prosa con **negritas**
