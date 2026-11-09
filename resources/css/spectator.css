@@ -1272,3 +1272,6 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 }
 @keyframes sp-wd-in { from { transform: translateX(-10px); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .sp-wd-panel { animation: none; } }
+.sp-wd-cut { gap: 0; font-size: 1.15rem; }
+.sp-wd-cut b { background: none !important; color: #1c1c1c; }
+.sp-wd-cut s { color: #b3a9c2; text-decoration-color: #8a63c9; text-decoration-thickness: 0.12rem; font-weight: 400; }
