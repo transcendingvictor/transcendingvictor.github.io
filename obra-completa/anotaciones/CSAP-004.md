@@ -16,11 +16,11 @@ El poema coge un **dicho popular** y lo convierte en un poema y en una reflexió
 
 ## Explicación
 
-«1+» se lee «uno más». Empieza quitándose culpa: «No lo hago tan mal», y la justificación es la voluntad popular: «Todo el mundo sigue esa corriente», como si hablara el pueblo. Pero en vez de defender que hace algo distinto dice «No soy menos», que se puede leer de dos maneras: tengo derecho a seguir la corriente de todos, el camino fácil, y está bien; o no llego, no soy suficiente, pero no lo hago mal porque todos lo hacen.
+«1+» se lee «uno más». Empieza quitándose culpa: «No lo hago tan mal», y la justificación es la voluntad popular: «Todo el mundo sigue esa corriente», como si hablara el pueblo. Pero en vez de defender que hace algo distinto dice «No soy menos», que se puede leer de dos maneras: tengo derecho a seguir la corriente de todos, el camino fácil, y está bien; o es reafirmar que llego, que soy uno más.
 
 Luego el poema se hace persona y se describe: «Un simple chaval / Tengo que ser un adolescente», como si aún no lo fuera. Se confirma esa visión de no llegar a lo que se pide, a lo normal. «Quiero senos» acepta el deseo sexual, que también es estatus, en presente, casi como una reafirmación. Y entonces, a futuro: «Para ser normal / Seré el malote desobediente / Nada ameno». La normalidad de la época es ser el malote, tener un componente social que dé estatus, aunque quien escribe es un chico que escribe poemas.
 
-La segunda mitad pinta ese adolescente con tópicos: criticar los Oscars (criticar lo mainstream para ganar estatus, que también es parte de la corriente: una corriente tan genérica que incluye hasta esa crítica), volver tarde de madrugada, fumar hierba. Y llega la reflexión: «Luego ya te coscas», ¿qué haces aquí siendo uno más, queriendo ser lo que no eres solo para sentirte suficiente? «La sociedad no va encaminada / Ya te pierdas», un remate algo forzado por la rima. Y el final le da la vuelta al argumento de la mayoría con el dicho: «Un millón de moscas / No pueden estar equivocadas / Come mierda».
+La segunda mitad pinta ese adolescente con tópicos: criticar los Oscars (criticar lo mainstream para ganar estatus, que también es parte de la corriente: una corriente tan genérica que incluye hasta esa crítica), volver tarde de madrugada, fumar hierba. Y llega la reflexión: «Luego ya te coscas», ¿qué haces aquí siendo uno más, queriendo ser lo que no eres solo para sentirte suficiente? «La sociedad no va encaminada / Ya te pierdas». Y el final le da la vuelta al argumento de la mayoría con el dicho: «Un millón de moscas / No pueden estar equivocadas / Come mierda».
 
 ## Forma
 
@@ -50,7 +50,7 @@ Esquema: aBc aBc aBc / dEf dEf dEf. Las tres primeras estrofas riman en consonan
 - v12: 4 f
 - v13: 6 d
 - v14: 10 E
-- v15: 4 f
+- v15: 4 f · forzando la rima
 - v16: 6 d
 - v17: 10 E
 - v18: 4 f
@@ -60,13 +60,12 @@ Esquema: aBc aBc aBc / dEf dEf dEf. Las tres primeras estrofas riman en consonan
 (De Víctor, con sus palabras. Capa entre corchetes.)
 
 - "Todo el mundo" [sentido]: La voluntad popular como justificación: el pueblo habla.
-- "No soy menos" [sentido]: ¿Tengo derecho a seguir la corriente, o no llego pero no lo hago mal porque todos lo hacen?
+- "No soy menos" [sentido]: ¿Tengo derecho a seguir la corriente, o es reafirmar que llego, que soy uno más?
 - "Tengo que ser un adolescente" [sentido]: Como si aún no lo fuera.
-- "Quiero senos" [sentido]: El deseo, que también es estatus, dicho en presente, como reafirmándose.
+- "Quiero senos" [sentido]: El deseo (sexual), que también es estatus, dicho en presente, como reafirmándose.
 - "Criticar los Oscars" [sentido]: Criticar lo mainstream para ganar estatus: también es la corriente.
 - "coscas" [sentido]: De *coscarse*, darse cuenta: muy coloquial, de la poesía popular.
-- "Ya te pierdas" [forma]: Forzado por la rima: el verso más flojo.
-- "Un millón de moscas" [referencia]: El dicho que me decía mucho mi padre.
+- v16-18 [referencia]: El dicho que me decía mucho mi padre.
 
 ## Mi análisis
 

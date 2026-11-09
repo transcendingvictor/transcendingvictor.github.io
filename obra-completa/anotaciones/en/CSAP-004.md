@@ -16,19 +16,22 @@ The poem takes a **popular saying** and turns it into a poem and a longer reflec
 
 ## Explicación
 
-"1+" reads "one more" (*uno más*, one of the crowd). It begins by shedding guilt: «No lo hago tan mal» ("I'm not doing so badly"), and the justification is the popular will: «Todo el mundo sigue esa corriente» ("Everyone follows that current"), as if the people were speaking. But instead of defending that he does something different, he says «No soy menos» ("I'm no less"), which can be read two ways: I have the right to follow everyone's current, the easy path, and that's fine; or I don't measure up, I'm not enough, but I'm not doing badly because everyone does it.
+"1+" reads "one more" (*uno más*, one of the crowd). It begins by shedding guilt: «No lo hago tan mal» ("I'm not doing so badly"), and the justification is the popular will: «Todo el mundo sigue esa corriente» ("Everyone follows that current"), as if the people were speaking. But instead of defending that he does something different, he says «No soy menos» ("I'm no less"), which can be read two ways: I have the right to follow everyone's current, the easy path, and that's fine; or it is reaffirming that I measure up, that I'm one more.
 
-Then the poem becomes a person and describes itself: «Un simple chaval / Tengo que ser un adolescente» ("Just a simple lad / I have to be a teenager"), as if he weren't one yet. It confirms that sense of not reaching what is asked of you, the normal. «Quiero senos» ("I want breasts") accepts sexual desire, which is also status, in the present tense, almost as a reaffirmation. And then, in the future: «Para ser normal / Seré el malote desobediente / Nada ameno» ("To be normal / I'll be the disobedient bad boy / Not pleasant at all"). The normality of the time is being the bad boy, having a social side that gives you status, even though the one writing is a boy who writes poems.
+Then the poem becomes a person and describes itself: «Un simple chaval / Tengo que ser un adolescente» ("Just a simple lad / I have to be a teenager"), as if he weren't one yet. It confirms that sense of not reaching what is asked of you, the normal. «Quiero senos» ("I want breasts") accepts sexual (sexual) desire, which is also status, in the present tense, almost as a reaffirmation. And then, in the future: «Para ser normal / Seré el malote desobediente / Nada ameno» ("To be normal / I'll be the disobedient bad boy / Not pleasant at all"). The normality of the time is being the bad boy, having a social side that gives you status, even though the one writing is a boy who writes poems.
 
-The second half paints that teenager with clichés: criticising the Oscars (criticising the mainstream to gain status, which is also part of the current: a current so generic it even includes that criticism), coming home late at dawn, smoking weed. And the reflection arrives: «Luego ya te coscas» ("Then you'll catch on"), what are you doing here being one more, wanting to be what you're not just to feel enough? «La sociedad no va encaminada / Ya te pierdas» ("Society is heading nowhere / Go get lost"), an ending a bit forced by the rhyme. And the close turns the majority argument around with the saying: «Un millón de moscas / No pueden estar equivocadas / Come mierda» ("A million flies / Can't be wrong / Eat shit").
+The second half paints that teenager with clichés: criticising the Oscars (criticising the mainstream to gain status, which is also part of the current: a current so generic it even includes that criticism), coming home late at dawn, smoking weed. And the reflection arrives: «Luego ya te coscas» ("Then you'll catch on"), what are you doing here being one more, wanting to be what you're not just to feel enough? «La sociedad no va encaminada / Ya te pierdas» ("Society is heading nowhere / Go get lost"). And the close turns the majority argument around with the saying: «Un millón de moscas / No pueden estar equivocadas / Come mierda» ("A million flies / Can't be wrong / Eat shit").
 
 ## Anotaciones por verso
 
 - "Todo el mundo" [sentido]: "Everyone": the popular will as justification, the people have spoken.
-- "No soy menos" [sentido]: "I'm no less": do I have the right to follow the current, or do I not measure up but I'm not doing badly because everyone does it?
+- "No soy menos" [sentido]: "I'm no less": do I have the right to follow the current, or is it reaffirming that I measure up, that I'm one more?
 - "Tengo que ser un adolescente" [sentido]: "I have to be a teenager": as if he weren't one yet.
-- "Quiero senos" [sentido]: "I want breasts": desire, which is also status, said in the present, as if reaffirming himself.
+- "Quiero senos" [sentido]: "I want breasts": (sexual) desire, which is also status, said in the present, as if reaffirming himself.
 - "Criticar los Oscars" [sentido]: Criticising the mainstream to gain status: that's the current too.
 - "coscas" [sentido]: From *coscarse*, "to catch on": very colloquial, from popular poetry.
-- "Ya te pierdas" [forma]: "Go get lost": forced by the rhyme, the weakest line.
-- "Un millón de moscas" [referencia]: The saying my father used to tell me a lot.
+- v16-18 [referencia]: The saying my father used to tell me a lot.
+
+## Forma
+
+- v15 [forma]: 4 syllables, forcing the rhyme.
