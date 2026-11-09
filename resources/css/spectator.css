@@ -1338,3 +1338,8 @@ html[data-lang="en"] .sp-lines .sp-tr[lang="es"] { display: none; }
 .sp-wd-line .jump { fill: #8a63c9; font-size: 14px; }
 .sp-pow { font-size: 1.4rem; } .sp-pow sup { font-size: 0.6em; vertical-align: super; line-height: 0; }
 .sp-wd-panel .sp-wd-motif b { background: none; }
+.sp-wd-blocks { display: block; width: 100%; max-width: 13rem; height: auto; margin: 0 0 1rem; }
+.sp-wd-blocks .rod { fill: #8a63c9; stroke: #1c1c1c; stroke-width: 1.4; }
+.sp-wd-blocks .grid line { stroke: rgba(255, 250, 242, 0.55); stroke-width: 1; }
+.sp-wd-blocks .cube { fill: #e2b53b; stroke: #1c1c1c; stroke-width: 1.2; }
+.sp-wd-blocks text { font: 700 12px inherit; text-anchor: middle; fill: #1c1c1c; }
