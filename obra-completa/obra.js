@@ -422,7 +422,7 @@ const Obra = (() => {
         main.append(s);
       }
       // Un poema revisado no repite la forma en prosa: basta con lo que se ve en el poema
-      if (p.forma && !p.revisado) main.append(forma(p.forma));
+      // El bloque de texto de Forma ya no se pinta: quedan el margen (sílabas y rima), los colores y las notas de verso
       if (p.temas) main.append(temas(p.temas));
       if (p.valoraciones.length) {
         const s = el("section", {}, el("h2", {}, T("valoracion")));
