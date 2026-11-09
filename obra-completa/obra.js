@@ -228,15 +228,14 @@ const Obra = (() => {
       } else {
         const vs = nodos.slice(a.desde - 1, a.hasta);
         if (!vs.length) return;
-        // Solo se subraya un trozo concreto (o el número, si la nota es de la medida): una nota de
-        // un verso o de un tramo lleva raya al margen, para no llenar el poema de subrayados
-        marcados = a.metro && metros[a.desde] ? [metros[a.desde]] : vs;
+        // Una nota de la medida marca el número; una de uno o varios versos subraya los versos enteros
+        marcados = a.metro && metros[a.desde] ? [metros[a.desde]] : vs.map(txt);
         tras = vs[vs.length - 1];
       }
       // Si varias notas caen en el mismo verso, van una detrás de otra
       while (tras.nextElementSibling && tras.nextElementSibling.classList.contains("nota")) tras = tras.nextElementSibling;
       tras.after(nota);
-      const tramo = marcados.length > 1 || marcados[0].classList.contains("verso");
+      const tramo = false;
       const tam = a.fragmento ? 0 : a.hasta - a.desde + 1;
       marcados.forEach(m => m.classList.add("anotado", `${tramo ? "r" : "c"}-${a.capa}`));
       const abrir = () => {

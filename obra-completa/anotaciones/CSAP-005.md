@@ -7,7 +7,7 @@ revisado: 2026-11-09
 
 ## Historia
 
-Lo escribí hacia la tercera semana de noviembre de 2016 en Vicálvaro y lo publiqué el 15 de diciembre. El título es «inmortales» con la e y la l cambiadas de sitio, un juego de los que me gustaban de pequeño, igual que el último verso, todo pegado. Va por Clara, de los Scouts: me parecía una persona sabia, me inspiraba conocimiento, risa y disfrute de saber y de jugar. La idealizaba mucho, y en algún momento debí de sentir que era una persona normal, que no iba a cumplir todas mis fantasías vitales e intelectuales. Los Scouts me daban entonces un espacio nuevo para socializar y sentirme más querido y más pleno; idealizar a la gente era parte de vivir ya una vida bastante social.
+Lo escribí hacia la tercera semana de noviembre de 2016 en Vicálvaro y lo publiqué el 15 de diciembre. El título es «inmortales» con la e y la l cambiadas de sitio, un juego de los que me gustaban de pequeño, como el último verso, todo pegado: las letras ya no están en su sitio porque los inmortales ya no son tan perfectos. Va por una persona de los Scouts que me parecía sabia, que me inspiraba conocimiento, risa y ganas de jugar. La idealizaba mucho, y en algún momento debí de sentir que era una persona normal, que no iba a cumplir todas mis fantasías. Los Scouts me daban entonces un espacio nuevo para socializar y sentirme más querido; idealizar a la gente era parte de vivir ya una vida bastante social.
 
 ## Comentario de la forma
 
