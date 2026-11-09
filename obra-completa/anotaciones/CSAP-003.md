@@ -19,11 +19,11 @@ La medida también habla. El verso más largo, «Y mientras ves cómo la vela no
 
 ## Explicación
 
-Quien habla es un amigo, o un amigo en potencia, de alguien que se va a suicidar. La conoce y le tiene aprecio: «Ya sabemos que te pasa algo», y entiende sus señales, la lluvia, la ventana, la vela que se apaga. Pero no sabe qué hacer. «Siento algo y lo ignoro»: siente empatía y la ignora; no la acompaña, no la ayuda a pedir ayuda, no recoge sus señales. El que falla es él. Y pesa una mirada muy adolescente: «Toda rareza cambia». Lo diferente se critica, molesta, va contra el grupo y se rechaza; cualquier cosa que te haga sentir raro cambia a peor la imagen que tienen de ti. De ahí sale el «No nos vengas con problemas de por medio».
+Quien habla es una amiga, o una amiga en potencia, de alguien que se va a suicidar: el yo lírico es femenino («Nosotras vivas, con luces»). La conoce y le tiene aprecio: «Ya sabemos que te pasa algo», y entiende sus señales, la lluvia, la ventana, la vela que se apaga. Pero no sabe qué hacer. «Siento algo y lo ignoro»: siente empatía y la ignora; no la acompaña, no la ayuda a pedir ayuda, no recoge sus señales. La que falla es ella, la voz. Y pesa una mirada muy adolescente: «Toda rareza cambia». Lo diferente se critica, molesta, va contra el grupo y se rechaza; cualquier cosa que te haga sentir raro cambia a peor la imagen que tienen de ti. De ahí sale el «No nos vengas con problemas de por medio».
 
 En el centro está la parte más confusa: «La marea bajará / Mientras tanto no te ahogues / Que yo te esperaré fuera / Fuera de esta vida ¿oyes?». El mar recuerda a la muerte, y también hay un «aguanta, que vendrán tiempos mejores». «Yo te esperaré fuera» tiene dos caras. Por un lado es acompañar: yo también estoy, te espero, y te prometo un «fuera de esta vida», una amistad para esta vida y para la otra, o la fantasía de que aunque te mueras volveré contigo. Por otro, es quedarse fuera: te miro desde la orilla, no me quiero mojar, no quiero bajar a tu mar, a tus agobios y a tus ahogos. Hay voluntad de acompañar, pero también un pie atrás: no sé qué hacer, no quiero ningún lío, no quiero ser el malo. Es un corazón dividido, que no juzga pero que, hasta cierto punto, acepta que su amiga se puede suicidar.
 
-El final se puede leer como parte de ese duelo, incluso como odio a esa persona: ya está superado, qué pesada era, vamos a seguir adelante. «Nuestras vidas continúan». Por eso la voz no queda clara: puede ser el amigo que falla, alguien que la trata mal y la empuja, o una voz suicida en su cabeza que le promete paz. Y el «tú» es ella, esa persona que se quiere suicidar, pero también eres tú, quien lee. Porque, aunque el tema es el suicidio, el poema habla de algo más general: todo lo que te hace sentir un bicho raro, los bucles mentales en los que uno se encierra, te va alejando de la gente y te quita las ganas de pedir ayuda cuando la necesitas, y eso te hace sentir peor. Es la exclusión y el aislamiento: el «no molestes, no pidas ayuda, muérete a lo tuyo», la intimidad de uno frente al resto.
+El final se puede leer como parte de ese duelo, incluso como odio a esa persona: ya está superado, qué pesada era, vamos a seguir adelante. «Nuestras vidas continúan». Por eso la voz no queda clara: puede ser la amiga que falla, alguien que la trata mal y la empuja, o una voz suicida en su cabeza que le promete paz. Y el «tú» es ella, esa persona que se quiere suicidar, pero también eres tú, quien lee. Porque, aunque el tema es el suicidio, el poema habla de algo más general: todo lo que te hace sentir un bicho raro, los bucles mentales en los que uno se encierra, te va alejando de la gente y te quita las ganas de pedir ayuda cuando la necesitas, y eso te hace sentir peor. Es la exclusión y el aislamiento: el «no molestes, no pidas ayuda, muérete a lo tuyo», la intimidad de uno frente al resto.
 
 ## Forma
 
@@ -75,15 +75,16 @@ Esquema: casi todos los versos tienen pareja asonante, aunque no sigan un orden 
 
 (De Víctor, con sus palabras. Capa entre corchetes.)
 
+- "Nosotras" [sentido]: En femenino. Durante gran parte de mi vida, nombrarme y reconocerme en femenino ha sido una opción plausible con la que me identificaba; se verá en más poemas.
 - "Toda rareza cambia" [sentido]: Todo lo que te haga sentir raro cambia a peor lo que el grupo ve en ti. Anuncia el «no nos vengas con problemas».
 - "A ti la ventana te va a matar" [forma]: Cuatro /t/: cuatro golpes, como señalar con el dedo.
 - "Tú, te apagas." [forma]: El verso más corto, justo tras el más largo: la espera cuesta, apagarse es fácil.
 - "fuera" [sentido]: Te espero fuera: te acompaño, pero desde la orilla, sin mojarme.
-- "Siento algo y lo ignoro" [sentido]: Siente empatía y la ignora. El que falla es él.
+- "Siento algo y lo ignoro" [sentido]: Siente empatía y la ignora. La que falla es la voz.
 - "No nos vengas con problemas" [sentido]: El lío de lo raro; o el duelo: ya está, a seguir adelante.
 - "(estefana)": Un símbolo de quien me inspiraba estas ideas.
 
-## Análisis del autor
+## Mi análisis
 
 Fecha: 2026-11-09
 Nota: 6/10
