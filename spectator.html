@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261109e" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261109f" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -814,7 +814,8 @@
                 <article class="sp-idea" data-search="regularizar regularización pornografía prostitución drogas apuestas mercado regulate">
                     <span class="sp-conf" data-c="2" title="+2" aria-label="confianza +2 / 3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
                     <h3><span data-l="es">Regularizar</span><span data-l="en">Regulate</span></h3>
-                    <p><span data-l="es">Regularizar la pornografía, la prostitución, las drogas y las casas de apuestas. Más control como sociedad sobre lo que pasa en los barrios, con prevención y dando poder a la gente, sabiendo que siempre habrá quien se aproveche.</span><span data-l="en">Regulate pornography, prostitution, drugs and betting shops. More control, as a society, over what happens in the neighbourhoods, with prevention and by empowering people, knowing that someone will always take advantage.</span></p>
+                    <p><span data-l="es">Más control como sociedad sobre lo que pasa en los barrios, con prevención y dando poder a la gente, sabiendo que siempre habrá quien se aproveche. Por ejemplo, sin ser una lista cerrada:</span><span data-l="en">More control, as a society, over what happens in the neighbourhoods, with prevention and by empowering people, knowing that someone will always take advantage. For example, and the list is not closed:</span></p>
+                    <ul class="sp-idea-chips"><li><span data-l="es">prostitución</span><span data-l="en">prostitution</span><span class="sp-conf sp-conf-mini" data-c="1" aria-label="confianza +1 / 3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li><li><span data-l="es">pornografía</span><span data-l="en">pornography</span><span class="sp-conf sp-conf-mini" data-c="1" aria-label="confianza +1 / 3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li><li><span data-l="es">estupefacientes</span><span data-l="en">drugs</span><span class="sp-conf sp-conf-mini" data-c="1" aria-label="confianza +1 / 3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li><li><span data-l="es">casas de apuestas</span><span data-l="en">betting shops</span><span class="sp-conf sp-conf-mini" data-c="1" aria-label="confianza +1 / 3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li></ul>
                     <p><span data-l="es">En un mundo ideal todo esto sería legal: cada persona sería tan libre, autónoma y capaz que sus decisiones serían legítimas por el hecho de tomarlas. Prohibir algo que allí estaría bien necesita muy buenas razones, y eso se decide mirando los datos: si prohibir la prostitución fuera la única manera de acabar con la trata, habría que hacerlo.</span><span data-l="en">In an ideal world all of this would be legal: everyone would be so free, autonomous and capable that their decisions would be legitimate just by being made. Banning something that would be fine there needs very good reasons, and that is decided by looking at the data: if banning prostitution were the only way to end trafficking, it would have to be done.</span></p>
                     <p class="sp-idea-quote"><span data-l="es">«Al mercado no se le interviene salvo por buenos motivos.»</span><span data-l="en">“The market is not intervened except for good reasons.”</span></p>
                 </article>
@@ -1318,6 +1319,24 @@
         wrap.querySelectorAll('.sp-wd-close').forEach(function (b) { b.addEventListener('click', close); });
         dim.addEventListener('click', close);
         document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+        });
+    })();
+    </script>
+    <script>
+    // Ideas: every card starts the same size; long ones end in "…" and open with a tap.
+    (function () {
+        document.querySelectorAll('.sp-idea').forEach(function (card) {
+            if (card.scrollHeight <= card.clientHeight + 4) return;
+            card.classList.add('sp-idea-long');
+            var b = document.createElement('button');
+            b.type = 'button'; b.className = 'sp-idea-more'; b.textContent = '…';
+            b.setAttribute('aria-expanded', 'false');
+            b.addEventListener('click', function () {
+                var open = card.classList.toggle('sp-idea-open');
+                b.setAttribute('aria-expanded', String(open));
+                b.textContent = open ? '−' : '…';
+            });
+            card.appendChild(b);
         });
     })();
     </script>
