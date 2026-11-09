@@ -21,8 +21,8 @@ const Obra = (() => {
       entradilla: "Poemas desde 2016, ordenados por fecha.",  leyCs: "del blog", leyMb: "del blog", leyRev: "revisado por mí; el círculo vacío, todavía sin revisar", leyDed: "código de dedicatoria: una pista de a quién va, no necesariamente un nombre",
       buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Ciencias sociales", banales: "Mentiras banales",
       cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 poema" : `${n} poemas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado", revisado: "Revisado por mí", sinRevisar: "Sin revisar",
-      noEncuentro: "No encuentro esa pieza.", publicado: f => ` · publicado el ${f}`, escrito: f => `Escrito hacia el ${f}`,
-      historia: "Historia", quitarColores: "Quitar colores", ponerColores: "Poner colores", imagen: "Imagen del poema", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
+      noEncuentro: "No encuentro esa pieza.", publicado: f => ` · publicado el ${f}`, escrito: f => `Escrito hacia el ${f}`, escritoAprox: (parte, m, a) => `Escrito hacia ${["principios", "mediados", "finales"][parte]} de ${m} de ${a}`, primero: "Mi primer poema publicado",
+      historia: "Historia", comentarioForma: "Comentario de la forma", quitarColores: "Quitar colores", ponerColores: "Poner colores", imagen: "Imagen del poema", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Valoración del autor", anteriores: n => `Valoraciones anteriores (${n})`,
       analisis: "Análisis", capas: { forma: "Forma", sentido: "Sentido", referencia: "Referencias" }, provisional: "provisional",
       forma: "Forma", estrofa: "Estrofa", medida: "Medida", esquema: "Esquema",
       lectura: "Análisis del autor", notaGeneral: "Nota general",
@@ -35,8 +35,8 @@ const Obra = (() => {
       entradilla: "Poems since 2016, in date order, mostly in Spanish.",  leyCs: "from the blog", leyMb: "from the blog", leyRev: "reviewed by me; the empty circle, not reviewed yet", leyDed: "dedication code: a clue to who it is for, not necessarily a name",
       buscar: "Search a title or a line…", todo: "All", poemas: "Ciencias sociales", banales: "Mentiras banales",
       cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 poem" : `${n} poems`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated", revisado: "Reviewed by me", sinRevisar: "Not reviewed yet",
-      noEncuentro: "I can't find that piece.", publicado: f => ` · published ${f}`, escrito: f => `Written around ${f}`,
-      historia: "Story", quitarColores: "Remove colours", ponerColores: "Show colours", imagen: "Image of the poem", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
+      noEncuentro: "I can't find that piece.", publicado: f => ` · published ${f}`, escrito: f => `Written around ${f}`, escritoAprox: (parte, m, a) => `Written around ${["early", "mid", "late"][parte]} ${m} ${a}`, primero: "My first published poem",
+      historia: "Story", comentarioForma: "Commentary on the form", quitarColores: "Remove colours", ponerColores: "Show colours", imagen: "Image of the poem", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "Author's rating", anteriores: n => `Earlier ratings (${n})`,
       analisis: "Analysis", capas: { forma: "Form", sentido: "Meaning", referencia: "References" }, provisional: "placeholder",
       forma: "Form", estrofa: "Stanza", medida: "Metre", esquema: "Rhyme scheme",
       lectura: "Author's analysis", notaGeneral: "Overall score",
@@ -55,6 +55,10 @@ const Obra = (() => {
   const fechaLarga = f => {
     const [a, m, d] = f.split("-");
     return T("fechaLarga")(d ? +d : "", m ? T("meses")[+m - 1] : "", a);
+  };
+  const escritoAprox = f => {
+    const [a, m, d] = f.split("-");
+    return T("escritoAprox")(+d <= 10 ? 0 : +d <= 20 ? 1 : 2, T("meses")[+m - 1], a);
   };
   const traducirEstaticos = () => {
     document.documentElement.lang = lang;
@@ -140,7 +144,7 @@ const Obra = (() => {
   }
 
   // Capas de comentarios: cada nota pertenece a una y cada botón enciende la suya
-  const CAPAS = ["forma", "sentido", "referencia"];
+  const CAPAS = ["forma", "sentido"];
   const COLORES_RIMA = ["#f7c6c6", "#c9e4f7", "#fbe3a6", "#d4c9f2", "#bfe5c8", "#f8d2e8",
     "#d9ecb0", "#f9d7b5", "#c4dede", "#e8d4c0", "#dcd6f7", "#f2e2a0"];
   // Mismo color para la misma rima, en el orden en que aparecen
@@ -341,10 +345,11 @@ const Obra = (() => {
       const p = piezas[i];
       document.title = `${p.titulo} | Obra completa`;
       main.append(el("h1", {}, p.titulo, p.titulo_en && p.titulo_en !== p.titulo ? el("span", { class: "tr", lang: "en" }, p.titulo_en) : ""));
-      const meta = el("p", { class: "meta" }, p.fecha_escritura ? T("escrito")(fechaLarga(p.fecha_escritura)) : fechaLarga(fecha(p)));
+      const meta = el("p", { class: "meta" }, p.fecha_escritura ? (p.escritura_aprox ? escritoAprox(p.fecha_escritura) : T("escrito")(fechaLarga(p.fecha_escritura))) : fechaLarga(fecha(p)));
       main.append(el("p", { class: "sello" + (p.revisado ? " revisada" : "") }, el("span", { class: "check" }, p.revisado ? "✓" : ""), p.revisado ? T("revisado") : T("sinRevisar")));
       if (p.fecha_escritura) meta.append(T("publicado")(fechaLarga(p.fecha_publicacion)));
       meta.append(" · ", el("a", { href: p.url, target: "_blank", rel: "noopener" }, p.fuente));
+      if (p.primero) main.append(el("p", { class: "primero" }, T("primero")));
       main.append(meta);
 
       const cuerpo = el("div");
@@ -407,6 +412,9 @@ const Obra = (() => {
 
       if (p.lectura) main.append(lectura(p.lectura));
       if (p.historia) main.append(el("section", { class: "historia" }, el("h2", {}, T("historia")), ...p.historia.split(/\n\n/).map(t => el("p", {}, t))));
+      // Comentario de la forma: prosa con **negritas**
+      const negritas = t => t.split(/\*\*(.+?)\*\*/).map((x, k) => k % 2 ? el("b", {}, x) : x);
+      if (p.comentario_forma) main.append(el("section", { class: "comentario-forma" }, el("h2", {}, T("comentarioForma")), ...p.comentario_forma.split(/\n\n/).map(t => el("p", {}, ...negritas(t)))));
       if (p.explicacion) {
         const s = el("section", {}, el("h2", {}, T("explicacion")));
         if (p.explicacion_estado) s.append(el("p", { class: "aviso" }, p.explicacion_estado));
@@ -414,7 +422,7 @@ const Obra = (() => {
         main.append(s);
       }
       // Un poema revisado no repite la forma en prosa: basta con lo que se ve en el poema
-      if (p.forma && !p.revisado) main.append(forma(p.forma));
+      // El bloque de texto de Forma ya no se pinta: quedan el margen (sílabas y rima), los colores y las notas de verso
       if (p.temas) main.append(temas(p.temas));
       if (p.valoraciones.length) {
         const s = el("section", {}, el("h2", {}, T("valoracion")));

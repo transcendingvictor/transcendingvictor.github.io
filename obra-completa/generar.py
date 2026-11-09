@@ -33,7 +33,8 @@ def secciones(md):
     return {partes[i].strip().lower(): partes[i + 1].strip() for i in range(1, len(partes), 2)}
 
 
-CAPAS = ("forma", "sentido", "referencia")
+# [referencia] ya no es capa aparte: se pinta dentro de Sentido
+CAPAS = ("forma", "sentido")
 
 
 def notas_por_verso(texto, autor):
@@ -162,7 +163,7 @@ def leer_anotaciones(ruta):
         notas += [dict(capa="forma", autor="claude", desde=int(v), hasta=int(v), texto=d["nota"], metro=True)
                   for v, d in forma["versos"].items() if d["nota"]]
     lectura = leer_lectura(s.get("análisis del autor", ""))
-    return dict(historia=s.get("historia", ""), explicacion=explicacion, explicacion_estado=explicacion_estado,
+    return dict(historia=s.get("historia", ""), comentario_forma=s.get("comentario de la forma", ""), explicacion=explicacion, explicacion_estado=explicacion_estado,
                 temas=dict(estado=re.sub(r" *\(ver [^)]*\)", "", m[1]).strip() if m else "", lista=temas) if temas else None,
                 anotaciones=notas, valoraciones=valoraciones, forma=forma, lectura=lectura)
 
@@ -175,9 +176,12 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
     if r["formato"] == "otro" or not r["texto"]:
         continue
     p = {k: r.get(k, "") for k in PUBLICOS}
+    # «AAAA-MM-DD~» en fecha_escritura = fecha orientativa: la web dice «principios / mediados / finales de mes»
+    p["escritura_aprox"] = p["fecha_escritura"].endswith("~")
+    p["fecha_escritura"] = p["fecha_escritura"].rstrip("~")
     p["etiquetas"] = [e for e in p["etiquetas"].split(";") if e]
     ruta = os.path.join(HERE, "anotaciones", r["codigo"] + ".md")
-    p.update(leer_anotaciones(ruta) if os.path.exists(ruta) else dict(historia="", explicacion="", explicacion_estado="", temas=None, anotaciones=[], valoraciones=[], forma=None, lectura=None))
+    p.update(leer_anotaciones(ruta) if os.path.exists(ruta) else dict(historia="", comentario_forma="", explicacion="", explicacion_estado="", temas=None, anotaciones=[], valoraciones=[], forma=None, lectura=None))
     # «revisado: AAAA-MM-DD» en la cabecera de la ficha = Víctor lo ha revisado
     p["revisado"] = ""
     if os.path.exists(ruta):
@@ -207,6 +211,10 @@ def sin_autoria(x):
 
 
 piezas = [sin_autoria(p) for p in piezas]
+# El primer poema publicado lleva su marca
+primero = min((p for p in piezas if p["formato"] == "poema"), key=lambda p: p["fecha_publicacion"])
+for p in piezas:
+    p["primero"] = p is primero
 piezas.sort(key=lambda p: p["fecha_escritura"] or p["fecha_publicacion"])
 with open(os.path.join(HERE, "datos", "obra.json"), "w", encoding="utf-8") as fh:
     json.dump(piezas, fh, ensure_ascii=False, indent=1)

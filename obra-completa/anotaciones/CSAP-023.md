@@ -7,7 +7,13 @@ revisado: 2026-11-09
 
 ## Historia
 
-Publicado el 28 de junio de 2018. Escrito hacia el 12 de mayo de 2018 en una libreta, en Vicálvaro (final de cuarto de la ESO), justo después de un viernes y antes del viaje a Lyon. Es muy de esa época: la búsqueda por estar a gusto, por estar bien.
+Lo escribí hacia el 12 de mayo de 2018 en una libreta, en Vicálvaro (final de cuarto de la ESO), justo después de un viernes y antes del viaje a Lyon, y lo publiqué el 28 de junio. Es muy de esa época: mi búsqueda por estar a gusto, por estar bien.
+
+## Comentario de la forma
+
+Es un soneto clásico de endecasílabos (ABBA ABBA CDE DCE), y la forma cerrada ya encierra al que habla, como la gente que le rodea. La **anáfora** de «Solo» abre los tres primeros versos («Solo estoy…», «Solo inmerso…», «Solo por no escapar…»): la palabra se repite como un golpe y, al no llevar tilde, cada vez puede ser «sin compañía» o «únicamente». En el v5 las mismas palabras vuelven en otro orden, «Estoy rodeado solo de gente», y el «solo» cambia de sitio y de sentido. Hasta la rima se encierra: «gente» rima consigo misma (v1 y v5), y la «gente» se degrada en «¡Gentuza…!» (v7). El cuarteto segundo cierra el círculo con «Solo y rodeado completamente».
+
+La **anadiplosis** («completamente» al final del v8 y al principio del v9) empuja de los cuartetos a los tercetos sin dejar respirar. Ahí el ritmo se rompe con **encabalgamientos**: «gente / ruin» ya lo anunciaba, pero en los tercetos saltan incluso de una estrofa a otra: «Pasar de quien pasa / de pasar», y «Pasear conocimiento / falso», donde el adjetivo cae al principio del verso y desmonta lo que se acababa de decir. El **juego de palabras** pasar, pasa, pasar, pasear marea como la propia idea de irse y no irse, y «conocimiento» rima con «argumento», el terceto anterior, como si volviera atrás. El final cierra con un **paralelismo** y una **antítesis**: «y te ahoga el vacío, y te ahoga la masa». Y el «me» de todo el poema se vuelve «te»: el que habla se mira desde fuera.
 
 ## Explicación
 
