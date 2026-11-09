@@ -217,3 +217,28 @@ details summary { cursor: pointer; font-size: 0.85rem; color: var(--suave); padd
 .temas ul { list-style: none; padding: 0; }
 .temas li { padding: 0.2rem 0; }
 .temas .sub { color: var(--suave); }
+
+/* «Quitar colores»: solo se ve con el análisis encendido; deja la medida y la letra de rima */
+.quitar-colores { padding: 0.35rem 0.9rem; border: 1px solid var(--tinta); border-radius: 999px; background: transparent; color: var(--tinta); font: inherit; font-size: 0.85rem; cursor: pointer; }
+.quitar-colores[aria-pressed="true"] { background: var(--tinta); color: #fff; }
+main:not(.analisis) .quitar-colores { display: none; }
+.sin-colores .rima { background: none !important; }
+.sin-colores .anotado:not(.activo) { box-shadow: none !important; border-left-color: transparent !important; }
+/* Imagen del poema */
+.imagen-poema { margin: 2rem auto 1rem; max-width: 26rem; }
+.imagen-poema img { display: block; width: 100%; height: auto; }
+
+/* Revisado por Víctor: un check en la esquina; los demás llevan el círculo vacío */
+.burbuja { position: relative; }
+.burbuja .t { padding-right: 1.6rem; }
+.burbuja .check, .sello .check {
+  display: inline-grid; place-items: center; width: 1.45rem; height: 1.45rem; border-radius: 50%;
+  border: 0.13rem dashed rgba(28, 28, 28, 0.35); font-size: 0.9rem; font-weight: 800; line-height: 1; color: #fff;
+}
+.burbuja .check { position: absolute; top: 0.6rem; right: 0.6rem; }
+.revisada .check { border: 0.13rem solid #1c1c1c; background: #2f8f6b; }
+.sello { display: inline-flex; align-items: center; gap: 0.45rem; margin: -0.3rem 0 0.8rem; padding: 0.2rem 0.75rem 0.2rem 0.3rem; border: 1px dashed rgba(28, 28, 28, 0.35); border-radius: 1rem; font-size: 0.85rem; color: #4a4a45; }
+.sello.revisada { border-style: solid; border-color: #2f8f6b; background: #e3f3ec; color: #1f5c45; font-weight: 700; }
+.leyenda .check { position: static; width: 1.1rem; height: 1.1rem; font-size: 0.7rem; vertical-align: middle; }
+.leyenda li.revisada > .check { display: inline-grid; place-items: center; width: 1.3rem; height: 1.3rem; min-width: 0; padding: 0; border-radius: 50%; color: #fff; font-size: 0.75rem; font-weight: 800; line-height: 1; justify-self: start; }
+main section > p + p { margin-top: 0.8rem; }

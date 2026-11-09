@@ -1,0 +1,38 @@
+/* Recursos: notes kept at hand. Quiet, like flipping through a notebook. */
+.rs-tabs { display: flex; gap: 0.4rem; margin: 0.4rem 0 1.2rem; border-bottom: 0.12rem solid #c9bde0; }
+.rs-tabs button { padding: 0.45rem 1rem; border: 0.12rem solid transparent; border-bottom: 0; border-radius: 10px 10px 0 0; margin-bottom: -0.12rem; background: none; font: inherit; color: #6b5a8a; cursor: pointer; }
+.rs-tabs button[aria-selected="true"] { border-color: #c9bde0; background: #f1fcee; color: #1c1c1c; font-weight: 700; }
+.rs-q { width: 100%; max-width: 24rem; margin: 0 0 0.9rem; padding: 0.45rem 0.8rem; border: 0.12rem solid #c9bde0; border-radius: 1rem; background: #fffaf2; font: inherit; font-size: 0.95rem; }
+.rs-list { list-style: none; margin: 0; padding: 0; max-width: 40rem; }
+.rs-list > li { padding: 0.32rem 0.6rem; border-bottom: 1px dotted #d6cde6; line-height: 1.45; text-align: left; }
+.rf-list > li.rf-top { background: rgba(229, 216, 247, 0.45); border-left: 0.2rem solid #b9a3e0; }
+.rf-list details summary { cursor: pointer; list-style: none; }
+.rf-list details summary::-webkit-details-marker { display: none; }
+.rf-list details summary::after { content: " ▸"; color: #8a63c9; font-size: 0.8em; }
+.rf-list details[open] summary::after { content: " ▾"; }
+.rf-list details p { margin: 0.3rem 0 0.2rem 0.8rem; font-size: 0.9rem; color: #4a4060; text-align: left; }
+.rf-mark { font-weight: 800; color: #1c1c1c; quotes: "«" "»"; }
+.rf-dedica { display: inline-block; padding: 0.05rem 0.5rem; border: 1px dashed #1c1c1c; border-radius: 2px; font-size: 0.75rem; background: rgba(255, 255, 255, 0.6); margin-right: 0.3rem; }
+.jk-filters { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.9rem; }
+.jk-row { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.jk-f { padding: 0.2rem 0.65rem; border: 1px solid #b9b2c4; border-radius: 1rem; background: var(--jk, #fffaf2); font: inherit; font-size: 0.82rem; cursor: pointer; }
+.jk-f[aria-pressed="true"] { border-color: #1c1c1c; box-shadow: inset 0 0 0 1px #1c1c1c; font-weight: 700; }
+.jk-list > li[class*="jk-t-"] { background: var(--jk); }
+.jk-list > li.jk-suyo { border-left: 0.25rem solid #e2b53b; background: #fff6d6; }
+@media only screen and (max-width:750px) {
+  .rs-tabs button { padding: 0.6rem 1.2rem; font-size: 1.05rem; }
+  .rs-list > li { padding: 0.55rem 0.6rem; font-size: 1.02rem; }
+  .jk-f { padding: 0.35rem 0.8rem; font-size: 0.95rem; }
+  .rs-q { max-width: none; font-size: 1rem; }
+}
+.jk-t-camarero { --jk: #f6e7c8; }
+.jk-t-exageraciones { --jk: #d9ecf7; }
+.jk-t-que-le-dice { --jk: #e3f2d9; }
+.jk-t-colmos { --jk: #f7dce6; }
+.jk-t-doctor { --jk: #e6e0f7; }
+.jk-t-mama-mama { --jk: #f3e3d3; }
+.jk-t-jaimito { --jk: #dff2ef; }
+.jk-t-te-sabes-el-chiste { --jk: #f2f0cf; }
+.jk-t-insultos-y-absurdos { --jk: #ead9f2; }
+.jk-t-bombillas { --jk: #d9e4f7; }
+.jk-t-telefono { --jk: #f6e7c8; }
