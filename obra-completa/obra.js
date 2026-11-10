@@ -20,7 +20,7 @@ const Obra = (() => {
       titulo: "Obra completa", volver: "← Obra completa",
       entradilla: "Poemas desde 2016, ordenados por fecha.",  leyCs: "del blog", leyMb: "del blog", leyRev: "revisado por mí; el círculo vacío, todavía sin revisar", leyDed: "código de dedicatoria: una pista de a quién va, no necesariamente un nombre",
       buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Ciencias sociales", banales: "Mentiras banales",
-      cualquier: "Cualquier tema", vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 poema" : `${n} poemas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado", revisado: "Revisado por mí", sinRevisar: "Sin revisar",
+      cualquier: "Cualquier tema", chips: { poema: "Poemas", cancioncilla: "Cancioncillas", cs: "Ciencias sociales", banales: "Mentiras banales", instagram: "Instagram", inedito: "Inéditos", temas: "Temas", limpiar: "Quitar filtros" }, vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 pieza" : `${n} piezas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado", revisado: "Revisado por mí", sinRevisar: "Sin revisar",
       noEncuentro: "No encuentro esa pieza.", publicado: f => ` · publicado el ${f}`, escrito: f => `Escrito hacia el ${f}`, escritoAprox: (parte, m, a) => `Escrito hacia ${["principios", "mediados", "finales"][parte]} de ${m} de ${a}`, primero: "Mi primer poema publicado", reel: "▶ Verla en Instagram", cancioncilla: "Cancioncilla",
       historia: "Historia", comentarioForma: "Comentario de la forma", quitarColores: "Quitar colores", ponerColores: "Poner colores", imagen: "Imagen del poema", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Mi valoración", anteriores: n => `Valoraciones anteriores (${n})`,
       analisis: "Análisis", capas: { forma: "Forma", sentido: "Sentido", referencia: "Referencias" }, provisional: "provisional",
@@ -34,7 +34,7 @@ const Obra = (() => {
       titulo: "Complete works", volver: "← Complete works",
       entradilla: "Poems since 2016, in date order, mostly in Spanish.",  leyCs: "from the blog", leyMb: "from the blog", leyRev: "reviewed by me; the empty circle, not reviewed yet", leyDed: "dedication code: a clue to who it is for, not necessarily a name",
       buscar: "Search a title or a line…", todo: "All", poemas: "Ciencias sociales", banales: "Mentiras banales",
-      cualquier: "Any theme", vacio: "Nothing here.", cuenta: n => n === 1 ? "1 poem" : `${n} poems`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated", revisado: "Reviewed by me", sinRevisar: "Not reviewed yet",
+      cualquier: "Any theme", chips: { poema: "Poems", cancioncilla: "Little songs", cs: "Ciencias sociales", banales: "Mentiras banales", instagram: "Instagram", inedito: "Unpublished", temas: "Themes", limpiar: "Clear filters" }, vacio: "Nothing here.", cuenta: n => n === 1 ? "1 piece" : `${n} pieces`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated", revisado: "Reviewed by me", sinRevisar: "Not reviewed yet",
       noEncuentro: "I can't find that piece.", publicado: f => ` · published ${f}`, escrito: f => `Written around ${f}`, escritoAprox: (parte, m, a) => `Written around ${["early", "mid", "late"][parte]} ${m} ${a}`, primero: "My first published poem", reel: "▶ Watch it on Instagram", cancioncilla: "Little song",
       historia: "Story", comentarioForma: "Commentary on the form", quitarColores: "Remove colours", ponerColores: "Show colours", imagen: "Image of the poem", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "My rating", anteriores: n => `Earlier ratings (${n})`,
       analisis: "Analysis", capas: { forma: "Form", sentido: "Meaning", referencia: "References" }, provisional: "placeholder",
@@ -81,36 +81,67 @@ const Obra = (() => {
     pintar();
   };
 
+  // Pluma de los poemas: un tono de azul por blog (las cancioncillas llevan su nota en morado)
+  const PLUMA = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 3.8c-5.5-.6-11 3.4-12.6 9.6L6 20"/><path d="M20.2 3.8c.5 6-4.3 11.2-10.6 10.8"/><path d="M9 11.5l5-1.5M10.5 8l4.5-1"/></svg>';
+  function pluma(o) {
+    const s = el("span", { class: "nota-musica pluma" + (o === "banales" ? " mb" : ""), "aria-label": T("chips").poema });
+    s.innerHTML = PLUMA;
+    return s;
+  }
+
   function indice() {
     const caja = document.getElementById("indice");
     const buscar = document.getElementById("buscar");
-    const formato = document.getElementById("formato");
-    const etiqueta = document.getElementById("etiqueta");
+    const chips = document.getElementById("chips");
     traducirEstaticos();
     // Mismos colores que el resto de la web; dentro de un año se van alternando
     const COLORES = ["#e5d8f7", "#fcd8d8", "#c4e6cc", "#fde7b0", "#d6e6f7"];
     const cuenta = el("p", { class: "cuenta" });
     caja.before(cuenta);
     cargar().then(piezas => {
-      const temas = [...new Set(piezas.flatMap(p => p.etiquetas))].sort();
-      const encaja = (p, q, conTema) =>
-        (!formato.value || p.formato === formato.value) &&
-        (!conTema || !etiqueta.value || p.etiquetas.includes(etiqueta.value)) &&
-        (!q || (p.titulo + "\n" + p.texto).toLowerCase().includes(q));
+      // Filtros de pulsar: dentro de una fila se suman (o), entre filas se cruzan (y); sin nada marcado, todo
+      const origen = p => p.fuente === "Instagram" ? "instagram" : /mentiras banales/i.test(p.fuente) ? "banales" : /in[eé]dito/i.test(p.fuente) ? "inedito" : "cs";
+      const tipo = p => p.formato === "cancioncilla" ? "cancioncilla" : "poema";
+      const anioDe = p => fecha(p).slice(0, 4);
+      const FILAS = [
+        { k: "anio", f: anioDe, vals: () => [...new Set(piezas.map(anioDe))].sort(), nombre: v => v },
+        { k: "tipo", f: tipo, vals: () => ["poema", "cancioncilla"], nombre: v => T("chips")[v] },
+        { k: "origen", f: origen, vals: () => ["cs", "banales"], nombre: v => T("chips")[v] },
+      ];
+      const sel = Object.fromEntries(FILAS.map(r => [r.k, new Set()]));
+      let temasAbiertos = false;
+      const pasa = (p, r) => { const v = r.f(p); return !sel[r.k].size || (Array.isArray(v) ? v.some(x => sel[r.k].has(x)) : sel[r.k].has(v)); };
+      const encaja = (p, q, salvo) => FILAS.every(r => r.k === salvo || pasa(p, r)) && (!q || (p.titulo + "\n" + p.texto).toLowerCase().includes(q));
       const pintar = () => {
         const q = buscar.value.trim().toLowerCase();
-        // Cuántas piezas hay de cada tema con la búsqueda actual, para no tener que probarlos
-        const sinTema = piezas.filter(p => encaja(p, q, false));
-        const elegido = etiqueta.value;
-        etiqueta.replaceChildren(el("option", { value: "" }, `${T("cualquier")} (${sinTema.length})`),
-          ...temas.map(e => {
-            const n = sinTema.filter(p => p.etiquetas.includes(e)).length;
-            const o = el("option", { value: e }, `${e.replace(/-/g, " ")} (${n})`);
-            if (!n && e !== elegido) o.disabled = true;
-            return o;
-          }));
-        etiqueta.value = elegido;
-        const lista = piezas.filter(p => encaja(p, q, true));
+        chips.replaceChildren();
+        for (const r of FILAS) {
+          // El número de cada chip cuenta lo que saldría al marcarlo, con el resto de filtros puestos
+          const base = piezas.filter(p => encaja(p, q, r.k));
+          const fila = el("div", { class: "fila-chips" });
+          if (r.plegable) {
+            const n = sel[r.k].size;
+            const bt = el("button", { type: "button", class: "chip plegar" + (n ? " on" : "") }, (temasAbiertos ? "▾ " : "▸ ") + T("chips").temas + (n ? ` (${n})` : ""));
+            bt.addEventListener("click", () => { temasAbiertos = !temasAbiertos; pintar(); });
+            fila.append(bt);
+            if (!temasAbiertos) { chips.append(fila); continue; }
+          }
+          for (const v of r.vals()) {
+            const n = base.filter(p => { const x = r.f(p); return Array.isArray(x) ? x.includes(v) : x === v; }).length;
+            const on = sel[r.k].has(v);
+            if (!n && !on && r.plegable) continue;
+            const c = el("button", { type: "button", class: `chip c-${v}` + (on ? " on" : "") + (n ? "" : " cero"), "aria-pressed": on ? "true" : "false" }, r.nombre(v), el("span", { class: "n" }, String(n)));
+            c.addEventListener("click", () => { on ? sel[r.k].delete(v) : sel[r.k].add(v); pintar(); });
+            fila.append(c);
+          }
+          chips.append(fila);
+        }
+        if (FILAS.some(r => sel[r.k].size)) {
+          const x = el("button", { type: "button", class: "chip limpiar" }, "✕ " + T("chips").limpiar);
+          x.addEventListener("click", () => { FILAS.forEach(r => sel[r.k].clear()); pintar(); });
+          chips.lastChild.append(x);
+        }
+        const lista = piezas.filter(p => encaja(p, q, null));
         cuenta.textContent = T("cuenta")(lista.length);
         caja.replaceChildren();
         if (!lista.length) { caja.append(el("p", { class: "vacio" }, T("vacio"))); return; }
@@ -126,19 +157,19 @@ const Obra = (() => {
           const marca = "";
           const b = el("a", { class: "burbuja" + (p.revisado ? " revisada" : "") + (p.formato === "cancioncilla" ? " cancioncilla" : ""), href: `poema.html?c=${p.codigo}` },
             el("span", { class: "check", title: p.revisado ? T("revisado") : T("sinRevisar"), "aria-label": p.revisado ? T("revisado") : T("sinRevisar") }, p.revisado ? "✓" : ""),
-            p.simbolo ? el("span", { class: "nota-musica", "aria-label": T("cancioncilla") }, p.simbolo) : "",
+            p.formato === "cancioncilla" ? el("span", { class: "nota-musica", "aria-label": T("cancioncilla") }, p.simbolo || "♪") : pluma(origen(p)),
             el("span", { class: "t" }, p.titulo),
             el("span", { class: "f" }, fechaLarga(fecha(p)) + marca));
           // Etiquetas: el blog de donde viene y, si la tiene, la dedicatoria con su código
           const etiquetas = el("span", { class: "etiquetas" },
-            el("span", { class: "tipo" }, p.fuente === "Instagram" ? "instagram" : /mentiras banales/i.test(p.fuente) ? "mentiras banales" : "ciencias sociales"));
+            el("span", { class: "tipo" }, { instagram: "cancioncilla", banales: "mentiras banales", inedito: "inédito", cs: "ciencias sociales" }[origen(p)]));
           if (p.dedicatoria_pista) etiquetas.append(el("span", { class: "dedica", title: T("dedicada") }, "✉ " + p.dedicatoria_pista));
           b.append(etiquetas);
           b.style.setProperty("--color", COLORES[k++ % COLORES.length]);
           ul.append(el("li", {}, b));
         }
       };
-      [buscar, formato, etiqueta].forEach(c => c.addEventListener("input", pintar));
+      buscar.addEventListener("input", pintar);
       selectorIdioma(pintar);
       pintar();
     });
@@ -190,7 +221,7 @@ const Obra = (() => {
     // que el subrayado de un verso siga a las letras y no a todo el ancho.
     const lineas = p.texto.split("\n");
     const en = p.texto_en ? p.texto_en.split("\n") : [];
-    const caja = el("div", { class: "poema" });
+    const caja = el("div", { class: "poema" + (p.formato === "cancioncilla" ? "" : " es-poema") });
     const nodos = [];
     let n = 0;
     for (const [i, l] of lineas.entries()) {
@@ -352,9 +383,10 @@ const Obra = (() => {
       const p = lang === "en" && piezas[i].en ? { ...piezas[i], ...piezas[i].en } : piezas[i];
       document.title = `${p.titulo} | Obra completa`;
       main.append(el("h1", {}, p.titulo, p.titulo_en && p.titulo_en !== p.titulo ? el("span", { class: "tr", lang: "en" }, p.titulo_en) : ""));
+      if (p.formato !== "cancioncilla") main.querySelector("h1").prepend(pluma(/mentiras banales/i.test(p.fuente) ? "banales" : "cs"));
       const meta = el("p", { class: "meta" }, p.fecha_escritura ? (p.escritura_aprox ? escritoAprox(p.fecha_escritura) : T("escrito")(fechaLarga(p.fecha_escritura))) : fechaLarga(fecha(p)));
       main.append(el("p", { class: "sello" + (p.revisado ? " revisada" : "") }, el("span", { class: "check" }, p.revisado ? "✓" : ""), p.revisado ? T("revisado") : T("sinRevisar")));
-      if (p.fecha_escritura) meta.append(T("publicado")(fechaLarga(p.fecha_publicacion)));
+      if (p.fecha_escritura && p.fecha_publicacion) meta.append(T("publicado")(fechaLarga(p.fecha_publicacion)));
       meta.append(" · ", p.url ? el("a", { href: p.url, target: "_blank", rel: "noopener" }, p.fuente) : p.fuente);
       // Cancioncilla: cinta en la esquina y enlace a su reel de Instagram
       if (p.formato === "cancioncilla") {

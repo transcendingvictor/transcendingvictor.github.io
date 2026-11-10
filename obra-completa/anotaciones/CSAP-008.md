@@ -14,6 +14,6 @@ Dureza: 2/5
 Pintar conceptos: 2/5
 Sonoridad: 3/5
 
-Esto no es un poema, no sé qué hace aquí. Me llega persiguiendo siempre y no sé muy bien qué decir al respecto.
+Esto no es un poema, no sé qué hace aquí. Me lleva persiguiendo siempre y no sé muy bien qué decir al respecto.
 
 ## Valoraciones
