@@ -225,7 +225,7 @@ def sin_autoria(x):
 
 piezas = [sin_autoria(p) for p in piezas]
 # El primer poema publicado lleva su marca
-primero = min((p for p in piezas if p["formato"] == "poema"), key=lambda p: p["fecha_publicacion"])
+primero = min((p for p in piezas if p["formato"] == "poema" and p["fecha_publicacion"]), key=lambda p: p["fecha_publicacion"])
 for p in piezas:
     p["primero"] = p is primero
 piezas.sort(key=lambda p: p["fecha_escritura"] or p["fecha_publicacion"])

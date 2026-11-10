@@ -253,3 +253,5 @@ h1 .nota-musica { position: relative; top: auto; left: auto; display: inline-gri
 .parte { display: block; margin: 1rem 0 0.3rem; font-weight: 700; letter-spacing: 0.08em; color: #5d4a7a; }
 .reel { margin: -0.4rem 0 1rem; font-size: 0.9rem; }
 .reel a { color: #1f5c34; font-weight: 700; }
+
+.es-poema .verso.hablado .txt { font-family: inherit; color: inherit; font-size: inherit; }

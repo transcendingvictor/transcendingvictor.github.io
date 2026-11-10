@@ -190,7 +190,7 @@ const Obra = (() => {
     // que el subrayado de un verso siga a las letras y no a todo el ancho.
     const lineas = p.texto.split("\n");
     const en = p.texto_en ? p.texto_en.split("\n") : [];
-    const caja = el("div", { class: "poema" });
+    const caja = el("div", { class: "poema" + (p.formato === "cancioncilla" ? "" : " es-poema") });
     const nodos = [];
     let n = 0;
     for (const [i, l] of lineas.entries()) {
@@ -354,7 +354,7 @@ const Obra = (() => {
       main.append(el("h1", {}, p.titulo, p.titulo_en && p.titulo_en !== p.titulo ? el("span", { class: "tr", lang: "en" }, p.titulo_en) : ""));
       const meta = el("p", { class: "meta" }, p.fecha_escritura ? (p.escritura_aprox ? escritoAprox(p.fecha_escritura) : T("escrito")(fechaLarga(p.fecha_escritura))) : fechaLarga(fecha(p)));
       main.append(el("p", { class: "sello" + (p.revisado ? " revisada" : "") }, el("span", { class: "check" }, p.revisado ? "✓" : ""), p.revisado ? T("revisado") : T("sinRevisar")));
-      if (p.fecha_escritura) meta.append(T("publicado")(fechaLarga(p.fecha_publicacion)));
+      if (p.fecha_escritura && p.fecha_publicacion) meta.append(T("publicado")(fechaLarga(p.fecha_publicacion)));
       meta.append(" · ", p.url ? el("a", { href: p.url, target: "_blank", rel: "noopener" }, p.fuente) : p.fuente);
       // Cancioncilla: cinta en la esquina y enlace a su reel de Instagram
       if (p.formato === "cancioncilla") {
