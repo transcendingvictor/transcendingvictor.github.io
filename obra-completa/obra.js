@@ -7,7 +7,7 @@ const Obra = (() => {
     for (const h of hijos) n.append(h);
     return n;
   };
-  const cargar = () => fetch("datos/obra.json").then(r => r.json());
+  const cargar = () => fetch("datos/obra.json", { cache: "no-cache" }).then(r => r.json());
   const fecha = p => p.fecha_escritura || p.fecha_publicacion;
   const guardado = (k, v) => {
     try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; }

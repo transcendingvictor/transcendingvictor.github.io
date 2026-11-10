@@ -1049,9 +1049,79 @@
   "codigo": "CSAP-006",
   "titulo": "PoeMalillo",
   "formato": "poema",
-  "forma": null,
+  "forma": {
+   "estado": "revisada con Víctor el 2026-11-10",
+   "estrofa": "",
+   "medida": "",
+   "esquema": "",
+   "rimas": {},
+   "versos": {
+    "1": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": "«estereotipadas» con «reo» en una sílaba; con «nada», asonante (solo cambia la s)"
+    },
+    "2": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": "con «flipo», asonante (solo cambia la s)"
+    },
+    "3": {
+     "silabas": 4,
+     "rima": "c",
+     "nota": "con «culpa», asonante"
+    },
+    "4": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 4,
+     "rima": "c",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 8,
+     "rima": "d",
+     "nota": ""
+    },
+    "8": {
+     "silabas": 8,
+     "rima": "e",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 4,
+     "rima": "f",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 8,
+     "rima": "d",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 8,
+     "rima": "e",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 4,
+     "rima": "f",
+     "nota": ""
+    }
+   },
+   "escalonados": [],
+   "personas": null
+  },
   "fecha_publicacion": "2016-12-21",
-  "fecha_escritura": "",
+  "fecha_escritura": "2016-12-04",
   "fuente": "Ciencias sociales y asuntos personales",
   "url": "https://cienciassocialesyasuntospersonales.blogspot.com/2016/12/poemalillo.html",
   "idioma": "es",
@@ -1064,17 +1134,205 @@
   "dedicatoria_pista": "lucia",
   "subtitulo": "",
   "texto": "Unas estereotipadas\nno cumplen estereotipos\ny me insultan.\n\nNoto que no saben nada,\ncon cada palabra flipo\nno es mi culpa.\n\nVuestros roles tan cerrados\npara juzgar a personas\n\"anormales\".\n\nDeben ser eliminados\nporque estos cuentos de monas\nson los males.\n\n(lucia)\n\nVí. Ab. Al.",
-  "escritura_aprox": false,
-  "historia": "",
-  "comentario_forma": "",
-  "explicacion": "",
+  "escritura_aprox": true,
+  "historia": "Lo escribí hacia la primera semana de diciembre de 2016, en tercero de la ESO, y lo publiqué el 21 de diciembre junto a «Casi Manrico»: los fui escribiendo y los subí de golpe. No me sentía orgulloso al publicarlo; sabía que era un poema más simple, más tonto, y el título lo dice. Las coplas de Jorge Manrique me marcaron mucho, las escuchaba con mi padre, y parecen fáciles: frases cortitas, al pie, como pildoritas. Y eso me animaba a escribirlas.",
+  "comentario_forma": "Es una copla de pie quebrado, la estrofa de las [Coplas por la muerte de su padre](https://es.wikipedia.org/wiki/Coplas_por_la_muerte_de_su_padre) de Jorge Manrique: dos octosílabos y un tetrasílabo, dos veces (8a 8b 4c 8a 8b 4c). Allí sirve para hablar de la muerte desde algo muy personal; aquí también es personal, pero se usa para responder con rabia, como a despecho. El verso corto cae como un golpe al final de cada mitad (de ahí lo de pie quebrado): «y me insultan», «no es mi culpa», «\"anormales\"», «son los males». La rima es consonante casi siempre, pero asonantiza en la primera estrofa: «estereotipadas» con «nada» y «estereotipos» con «flipo» solo se separan por la s, e «insultan» con «culpa» rima solo en las vocales.\n\nAbre con una **paradoja**: «Unas estereotipadas / no cumplen estereotipos». Si son estereotipadas, será porque cumplen estereotipos; pues estas no. Las comillas de «\"anormales\"» son una **ironía**: ponen la palabra en boca de ellas, que la usan para señalar lo distinto como algo raro, de lo que reírse. Y el cierre hace una **equiparación** directa: «estos cuentos de monas / son los males».",
+  "explicacion": "El poema es una respuesta. Parece que me atacan a mí («y me insultan»), pero con el poema les ataco de vuelta: me defiendo. Es un acto de lenguaje, la contestación a algo que ha pasado. Ellas hablan mucho, se pinta que son parlanchinas («con cada palabra flipo»), y en ese hablar puede que haya venido algo en mi contra.\n\nLuego llega el tema que ya salía en los dos poemas anteriores: un grupo que juzga a otros desde unos roles cerrados, que hay que aceptar porque «así son los adolescentes». Es algo muy de niños, de «me estás juzgando». La respuesta del poema es tajante: «Deben ser eliminados», y pone esos roles juiciosos y cerrados al nivel de los males, del problema. No desarrolla más la idea: es un poema con mucha energía, apasionado, escrito a despecho.",
   "explicacion_estado": "",
   "temas": null,
-  "anotaciones": [],
+  "anotaciones": [
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Si son estereotipadas, ¿no deberían cumplirlos?",
+    "fragmento": "estereotipos"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Y el poema les contesta: es la respuesta a un ataque que no se cuenta.",
+    "fragmento": "me insultan"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Hablan mucho. En ese hablar algo vino contra mí.",
+    "fragmento": "flipo"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Cuentos de niñas, cursiladas: historias bonitas y vacías, sin fundamento.",
+    "fragmento": "cuentos de monas"
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 1,
+    "hasta": 1,
+    "texto": "«estereotipadas» con «reo» en una sílaba; con «nada», asonante (solo cambia la s)",
+    "metro": true
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 2,
+    "hasta": 2,
+    "texto": "con «flipo», asonante (solo cambia la s)",
+    "metro": true
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 3,
+    "hasta": 3,
+    "texto": "con «culpa», asonante",
+    "metro": true
+   }
+  ],
   "valoraciones": [],
-  "lectura": null,
-  "revisado": "",
+  "lectura": {
+   "fecha": "2026-11-10",
+   "estado": "",
+   "nota": "4",
+   "rasgos": {
+    "profundidad": 1,
+    "dureza": 3,
+    "pintar conceptos": 1,
+    "sonoridad": 4
+   },
+   "texto": "",
+   "anotaciones": []
+  },
+  "revisado": "2026-11-10",
   "imagen": "",
+  "en": {
+   "historia": "I wrote it around the first week of December 2016, in the third year of secondary school, and published it on 21 December together with «Casi Manrico»: I wrote them bit by bit and uploaded them all at once. I wasn't proud when I published it; I knew it was a simpler, sillier poem, and the title says so (*poemalillo*, \"a bad little poem\"). Jorge Manrique's *Coplas* marked me deeply, I used to listen to them with my father, and they look easy: short phrases, to the point, like little pills. And that encouraged me to write them.",
+   "comentario_forma": "It is a *copla de pie quebrado* (\"broken-foot stanza\"), the stanza of Jorge Manrique's [Coplas por la muerte de su padre](https://en.wikipedia.org/wiki/Coplas_por_la_muerte_de_su_padre): two eight-syllable lines and one four-syllable line, twice (8a 8b 4c 8a 8b 4c). There it is used to speak of death from something very personal; here it is personal too, but it is used to answer back with rage, out of spite. The short line falls like a blow at the end of each half (hence \"broken foot\"): «y me insultan» (\"and they insult me\"), «no es mi culpa» (\"it's not my fault\"), «\"anormales\"» (\"abnormal\"), «son los males» (\"are the evils\"). The rhyme is almost always full, but it slips into assonance in the first stanza: *estereotipadas* with *nada* and *estereotipos* with *flipo* differ only by the s, and *insultan* with *culpa* rhymes only in the vowels.\n\nIt opens with a **paradox**: «Unas estereotipadas / no cumplen estereotipos» (\"Some stereotyped girls / don't fit stereotypes\"). If they are stereotyped, it must be because they fit stereotypes; well, these don't. The quotation marks around «\"anormales\"» are **irony**: they put the word in their mouths, as they use it to point at anything different as something strange, something to laugh at. And the ending makes a blunt **equation**: «estos cuentos de monas / son los males» (\"these fairy tales / are the evils\").",
+   "explicacion": "The poem is a reply. It seems they are attacking me («y me insultan»), but with the poem I attack them back: I defend myself. It is a speech act, the answer to something that happened. They talk a lot, they come across as chatterboxes («con cada palabra flipo», \"every word they say blows my mind\"), and in all that talking something may have come out against me.\n\nThen comes the theme already present in the two previous poems: a group that judges others from closed roles, which you have to accept because \"that's what teenagers are like\". It is something very childish, very \"you're judging me\". The poem's answer is curt: «Deben ser eliminados» (\"They must be eliminated\"), and it puts those closed, judgemental roles on the level of the evils, of the problem. It doesn't develop the idea further: it is a poem with a lot of energy, passionate, written out of spite.",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "victor",
+     "texto": "If they're stereotyped, shouldn't they fit them?",
+     "fragmento": "estereotipos"
+    },
+    {
+     "capa": "sentido",
+     "autor": "victor",
+     "texto": "And the poem answers them: it is the reply to an attack that isn't told.",
+     "fragmento": "me insultan"
+    },
+    {
+     "capa": "sentido",
+     "autor": "victor",
+     "texto": "They talk a lot. In all that talk, something came against me.",
+     "fragmento": "flipo"
+    },
+    {
+     "capa": "sentido",
+     "autor": "victor",
+     "texto": "Literally \"tales of pretty girls\": cheesy stories, pretty and empty, with no basis.",
+     "fragmento": "cuentos de monas"
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 a · «estereotipadas» with «reo» as one syllable; with «nada», assonant (only the s differs)",
+     "desde": 1,
+     "hasta": 1,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 b · with «flipo», assonant (only the s differs)",
+     "desde": 2,
+     "hasta": 2,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "4 c · with «culpa», assonant",
+     "desde": 3,
+     "hasta": 3,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 a",
+     "desde": 4,
+     "hasta": 4,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 b",
+     "desde": 5,
+     "hasta": 5,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "4 c",
+     "desde": 6,
+     "hasta": 6,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 d",
+     "desde": 7,
+     "hasta": 7,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 e",
+     "desde": 8,
+     "hasta": 8,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "4 f",
+     "desde": 9,
+     "hasta": 9,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 d",
+     "desde": 10,
+     "hasta": 10,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 e",
+     "desde": 11,
+     "hasta": 11,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "4 f",
+     "desde": 12,
+     "hasta": 12,
+     "metro": true
+    }
+   ]
+  },
   "titulo_en": "LittleBadPoem",
   "texto_en": "Some stereotyped girls\ndon't fit stereotypes\nand insult me.\n\nI notice they know nothing,\nwith every word I'm stunned\nit's not my fault.\n\nYour roles, so closed\nfor judging \"abnormal\"\npeople.\n\nThey must be eliminated\nbecause these cute little tales\nare the evils.\n\n(lucia)\n\nVí. Ab. Al.",
   "primero": false
@@ -1083,9 +1341,79 @@
   "codigo": "CSAP-007",
   "titulo": "Casi Manrico",
   "formato": "poema",
-  "forma": null,
+  "forma": {
+   "estado": "revisada con Víctor el 2026-11-10",
+   "estrofa": "",
+   "medida": "",
+   "esquema": "",
+   "rimas": {},
+   "versos": {
+    "1": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 4,
+     "rima": "c",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 8,
+     "rima": "a",
+     "nota": ""
+    },
+    "5": {
+     "silabas": 8,
+     "rima": "b",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 4,
+     "rima": "c",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 8,
+     "rima": "d",
+     "nota": "«no infinitos» con sinalefa"
+    },
+    "8": {
+     "silabas": 8,
+     "rima": "e",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 4,
+     "rima": "f",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 8,
+     "rima": "d",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 8,
+     "rima": "e",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 4,
+     "rima": "f",
+     "nota": ""
+    }
+   },
+   "escalonados": [],
+   "personas": null
+  },
   "fecha_publicacion": "2016-12-21",
-  "fecha_escritura": "",
+  "fecha_escritura": "2016-12-11",
   "fuente": "Ciencias sociales y asuntos personales",
   "url": "https://cienciassocialesyasuntospersonales.blogspot.com/2016/12/casi-manrico.html",
   "idioma": "es",
@@ -1098,18 +1426,192 @@
   ],
   "dedicatoria_pista": "",
   "subtitulo": "",
-  "texto": "La vida con todo pasa\nmientras tu pasas de todo\ny te mueres.\n\nÉl que está feliz arrasa\nasí que cuida tu modo\nsi prefieres.\n\nTus no infinitos instantes\nestán mal aprovechados\nte estás yendo.\n\nPor eso ponte los guantes\ny afronta tiempos helados\nya viniendo.\n\nVí. Ab. Al.",
-  "escritura_aprox": false,
-  "historia": "",
-  "comentario_forma": "",
-  "explicacion": "",
+  "texto": "La vida con todo pasa\nmientras tú pasas de todo\ny te mueres.\n\nEl que está feliz arrasa\nasí que cuida tu modo\nsi prefieres.\n\nTus no infinitos instantes\nestán mal aprovechados\nte estás yendo.\n\nPor eso ponte los guantes\ny afronta tiempos helados\nya viniendo.\n\nVí. Ab. Al.",
+  "escritura_aprox": true,
+  "historia": "Lo escribí hacia la segunda semana de diciembre de 2016, poco después de «PoeMalillo», y los publiqué juntos el 21 de diciembre. Las coplas de Jorge Manrique me marcaron mucho, las escuchaba con mi padre, y parecen fáciles: frases cortitas, al pie, como pildoritas. Y eso me animaba a escribirlas. El título es la prueba: es casi Manrique, «casi manricar». Reconozco que no es de alta calidad, pero los impulsos poéticos me llevaron a escribirlo.",
+  "comentario_forma": "Es una copla de pie quebrado, la estrofa de las [Coplas por la muerte de su padre](https://es.wikipedia.org/wiki/Coplas_por_la_muerte_de_su_padre) (8a 8b 4c 8a 8b 4c), y aquí la forma acompaña al contenido: como en Manrique, habla del paso del tiempo y de la muerte. El verso corto cierra cada mitad como una sentencia: «y te mueres», «si prefieres», «te estás yendo», «ya viniendo». La métrica cuadra sin forzar nada y la rima es consonante de principio a fin.\n\nAbre con una **polisemia** de «pasar»: «La vida con todo pasa / mientras tú pasas de todo». La vida pasa por encima de todo, arrolladora; tú pasas de todo, te desentiendes. El mismo verbo, dos dinámicas opuestas, y además en **quiasmo**: «con todo pasa» frente a «pasas de todo», el orden se invierte como se invierte el sentido. El pie quebrado remata: «y te mueres». Las dos últimas estrofas cierran con un **paralelismo**: «te estás yendo» y «ya viniendo», dos gerundios en el mismo sitio, uno que se va y otro que llega. «Tus no infinitos instantes» es una **lítotes**: podría decir «finitos», pero nombra el infinito para negarlo, y así lo recuerda. El cierre es una **alegoría** del invierno: «ponte los guantes / y afronta tiempos helados», con el frío como malos tiempos o como la muerte.",
+  "explicacion": "El poema va dirigido a una persona conformista que pasa de todo, es decir, que rehúye vivir activamente, buscando verdades, mientras el tiempo y la vida siguen su arrollador camino sobre ella y por encima de ella. El verso «El que está feliz arrasa» es casi propaganda de la felicidad, que siempre me ha ilusionado como respuesta a las preguntas existenciales: para qué se vive, cuál es el objetivo de la vida.\n\nLa gente feliz contagia y se come el mundo, por mucho que no hable de ello. Así que, si no lo estás, replantéatelo: «cuida tu modo». Es una crítica al conformismo.\n\nLuego llega el recordatorio de la muerte: tus instantes no son infinitos, los estás aprovechando mal, te estás yendo. Y el final es una advertencia, como el [«Winter is coming»](https://es.wikipedia.org/wiki/Winter_Is_Coming) de Juego de Tronos, que allí avisa de que vienen tiempos duros y hay que estar preparado: ponte los guantes, que vienen tiempos helados. Puede ser la muerte, o los malos tiempos, o la consciencia de la muerte, que también es un tema duro, algo a lo que enfrentarse y para lo que abrigarse bien. El poema no lo cierra.",
   "explicacion_estado": "",
   "temas": null,
-  "anotaciones": [],
+  "anotaciones": [
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "La vida pasa por encima; tú pasas de largo.",
+    "fragmento": "pasas"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "La felicidad como respuesta: el feliz se come el mundo.",
+    "fragmento": "arrasa"
+   },
+   {
+    "capa": "forma",
+    "autor": "victor",
+    "texto": "Podría decir «finitos», pero el infinito asoma y se niega.",
+    "fragmento": "no infinitos"
+   },
+   {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Winter is coming.",
+    "desde": 10,
+    "hasta": 11
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 7,
+    "hasta": 7,
+    "texto": "«no infinitos» con sinalefa",
+    "metro": true
+   }
+  ],
   "valoraciones": [],
-  "lectura": null,
-  "revisado": "",
+  "lectura": {
+   "fecha": "2026-11-10",
+   "estado": "",
+   "nota": "4",
+   "rasgos": {
+    "profundidad": 2,
+    "dureza": 2,
+    "pintar conceptos": 1,
+    "sonoridad": 4
+   },
+   "texto": "",
+   "anotaciones": []
+  },
+  "revisado": "2026-11-10",
   "imagen": "",
+  "en": {
+   "historia": "I wrote it around the second week of December 2016, shortly after «PoeMalillo», and published them together on 21 December. Jorge Manrique's *Coplas* marked me deeply, I used to listen to them with my father, and they look easy: short phrases, to the point, like little pills. And that encouraged me to write them. The title is the proof: it is \"almost Manrique\", an attempt at \"Manriquing\". I admit it isn't high quality, but my poetic impulses led me to write it.",
+   "comentario_forma": "It is a *copla de pie quebrado*, the stanza of [Coplas por la muerte de su padre](https://en.wikipedia.org/wiki/Coplas_por_la_muerte_de_su_padre) (8a 8b 4c 8a 8b 4c), and here form goes with content: as in Manrique, it speaks of the passing of time and of death. The short line closes each half like a sentence passed: «y te mueres» (\"and you die\"), «si prefieres» (\"if you prefer\"), «te estás yendo» (\"you're leaving\"), «ya viniendo» (\"already coming\"). The metre fits without forcing anything and the rhyme is full from start to finish.\n\nIt opens with a **polysemy** of *pasar*: «La vida con todo pasa / mientras tú pasas de todo» (\"Life passes over everything / while you don't care about anything\"; *pasar de* means \"not to care about\"). Life sweeps over everything; you look away from everything. The same verb, two opposite dynamics, and in **chiasmus** too: «con todo pasa» against «pasas de todo», the order is reversed as the meaning is reversed. The short line finishes it: «y te mueres». The last two stanzas close with a **parallelism**: «te estás yendo» and «ya viniendo», two gerunds in the same slot, one leaving and one arriving. «Tus no infinitos instantes» (\"Your not infinite instants\") is a **litotes**: it could say \"finite\", but it names infinity in order to deny it, and so recalls it. The ending is an **allegory** of winter: «ponte los guantes / y afronta tiempos helados» (\"put your gloves on / and face frozen times\"), with the cold as hard times or as death.",
+   "explicacion": "The poem is addressed to a conformist person who doesn't care about anything, that is, who shies away from living actively, searching for truths, while time and life carry on their sweeping path over them and above them. The line «El que está feliz arrasa» (\"Whoever is happy sweeps all before them\") is almost propaganda for happiness, which has always excited me as an answer to existential questions: what we live for, what the purpose of life is.\n\nHappy people are contagious and eat the world, however little they talk about it. So, if you aren't happy, rethink it: «cuida tu modo» (\"mind your ways\"). It is a critique of conformism.\n\nThen comes the reminder of death: your instants aren't infinite, you're wasting them, you're leaving. And the ending is a warning, like the [\"Winter is coming\"](https://en.wikipedia.org/wiki/Winter_Is_Coming) of Game of Thrones, which there warns that hard times are coming and you must be ready: put your gloves on, frozen times are coming. It may be death, or hard times, or the awareness of death, which is also a hard subject, something to face and to wrap up warm for. The poem doesn't close it.",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "victor",
+     "texto": "Life passes over you; you pass it by.",
+     "fragmento": "pasas"
+    },
+    {
+     "capa": "sentido",
+     "autor": "victor",
+     "texto": "Happiness as an answer: the happy eat the world.",
+     "fragmento": "arrasa"
+    },
+    {
+     "capa": "forma",
+     "autor": "victor",
+     "texto": "It could say \"finite\", but infinity shows up and is denied.",
+     "fragmento": "no infinitos"
+    },
+    {
+     "capa": "sentido",
+     "autor": "victor",
+     "texto": "Winter is coming.",
+     "desde": 10,
+     "hasta": 11
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 a",
+     "desde": 1,
+     "hasta": 1,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 b",
+     "desde": 2,
+     "hasta": 2,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "4 c",
+     "desde": 3,
+     "hasta": 3,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 a",
+     "desde": 4,
+     "hasta": 4,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 b",
+     "desde": 5,
+     "hasta": 5,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "4 c",
+     "desde": 6,
+     "hasta": 6,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 d · «no infinitos» with synalepha",
+     "desde": 7,
+     "hasta": 7,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 e",
+     "desde": 8,
+     "hasta": 8,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "4 f",
+     "desde": 9,
+     "hasta": 9,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 d",
+     "desde": 10,
+     "hasta": 10,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "8 e",
+     "desde": 11,
+     "hasta": 11,
+     "metro": true
+    },
+    {
+     "capa": "sentido",
+     "autor": "claude",
+     "texto": "4 f",
+     "desde": 12,
+     "hasta": 12,
+     "metro": true
+    }
+   ]
+  },
   "titulo_en": "Almost Manrique",
   "texto_en": "Life with everything passes\nwhile you couldn't care less\nand you die.\n\nThe one who's happy sweeps all\nso mind your ways\nif you'd rather.\n\nYour not infinite moments\nare badly spent\nyou are leaving.\n\nSo put on your gloves\nand face the icy times\nalready coming.\n\nVí. Ab. Al.",
   "primero": false
