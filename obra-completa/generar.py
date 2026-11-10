@@ -169,7 +169,7 @@ def leer_anotaciones(ruta):
 
 
 PUBLICOS = ["codigo", "titulo", "formato", "forma", "fecha_publicacion", "fecha_escritura", "fuente", "url",
-            "idioma", "epoca", "tema", "etiquetas", "dedicatoria_pista", "subtitulo", "texto"]
+            "idioma", "epoca", "tema", "etiquetas", "dedicatoria_pista", "subtitulo", "texto", "audio_video"]
 
 piezas = []
 for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encoding="utf-8")):
@@ -184,9 +184,13 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
     p.update(leer_anotaciones(ruta) if os.path.exists(ruta) else dict(historia="", comentario_forma="", explicacion="", explicacion_estado="", temas=None, anotaciones=[], valoraciones=[], forma=None, lectura=None))
     # «revisado: AAAA-MM-DD» en la cabecera de la ficha = Víctor lo ha revisado
     p["revisado"] = ""
+    p["simbolo"] = ""
     if os.path.exists(ruta):
         m = re.search(r"^---\n.*?^revisado:\s*(\S+)", open(ruta, encoding="utf-8").read(), flags=re.S | re.M)
         if m: p["revisado"] = m.group(1)
+        # Cancioncillas: «simbolo: ♪» (ligera) o «simbolo: ♫» (más seria)
+        m = re.search(r"^---\n.*?^simbolo:\s*(\S+)", open(ruta, encoding="utf-8").read(), flags=re.S | re.M)
+        p["simbolo"] = m.group(1) if m else ""
     # Imagen del poema, si la hay: imagenes/CODIGO.svg (o .png / .jpg)
     p["imagen"] = next((f"imagenes/{r['codigo']}.{ext}" for ext in ("svg", "png", "jpg")
                         if os.path.exists(os.path.join(HERE, "imagenes", f"{r['codigo']}.{ext}"))), "")
