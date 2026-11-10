@@ -44,7 +44,7 @@ Estado: revisada con Víctor el 2026-11-10
 - "me insultan" [sentido]: Y el poema les contesta: es la respuesta a un ataque que no se cuenta.
 - "flipo" [sentido]: Hablan mucho. En ese hablar algo vino contra mí.
 - "cuentos de monas" [sentido]: «Cuentos de monas»: cuentos de niñas, cursiladas; historias bonitas y vacías, sin fundamento.
-- "(lucia)": Cosas de Trialdón.
+- "(lucia)": Cosas del triatlón.
 
 ## Mi análisis
 
