@@ -43,6 +43,7 @@ Estado: revisada con Víctor el 2026-11-10
 - "me insultan" [sentido]: And the poem answers them: it is the reply to an attack that isn't told.
 - "flipo" [sentido]: They talk a lot. In all that talk, something came against me.
 - "cuentos de monas" [sentido]: «Cuentos de monas»: literally "tales of pretty girls"; cheesy stories, pretty and empty, with no basis.
+- "(lucia)": Things from Trialdón.
 
 ## Mi análisis
 

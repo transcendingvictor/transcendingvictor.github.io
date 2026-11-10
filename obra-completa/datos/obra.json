@@ -1166,6 +1166,12 @@
     "fragmento": "cuentos de monas"
    },
    {
+    "capa": "sentido",
+    "autor": "victor",
+    "texto": "Cosas de Trialdón.",
+    "fragmento": "(lucia)"
+   },
+   {
     "capa": "forma",
     "autor": "claude",
     "desde": 1,
@@ -1234,6 +1240,12 @@
      "autor": "victor",
      "texto": "«Cuentos de monas»: literally \"tales of pretty girls\"; cheesy stories, pretty and empty, with no basis.",
      "fragmento": "cuentos de monas"
+    },
+    {
+     "capa": "sentido",
+     "autor": "victor",
+     "texto": "Things from Trialdón.",
+     "fragmento": "(lucia)"
     },
     {
      "capa": "sentido",
