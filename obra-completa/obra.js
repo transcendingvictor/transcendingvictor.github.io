@@ -356,7 +356,7 @@ const Obra = (() => {
       // Todo el análisis cuelga de un interruptor: apagado, solo queda el poema
       const todas = [...p.anotaciones, ...(p.lectura ? p.lectura.anotaciones : [])];
       const hay = CAPAS.filter(c => (c === "forma" && p.forma) || todas.some(a => a.capa === c));
-      const conAnalisis = hay.length || p.explicacion || p.historia || p.valoraciones.length;
+      const conAnalisis = hay.length || p.explicacion || p.historia || p.valoraciones.length || p.lectura || p.comentario_forma;
       let activas = (guardado("obra-capas") || "").split(",").filter(c => hay.includes(c));
       const sw = el("input", { type: "checkbox", role: "switch" });
       sw.checked = guardado("obra-analisis") === "1";

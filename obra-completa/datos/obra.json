@@ -1141,9 +1141,27 @@
   "temas": null,
   "anotaciones": [],
   "valoraciones": [],
-  "lectura": null,
-  "revisado": "",
+  "lectura": {
+   "fecha": "2026-11-10",
+   "estado": "",
+   "nota": "1",
+   "rasgos": {
+    "profundidad": 1,
+    "dureza": 2,
+    "pintar conceptos": 2,
+    "sonoridad": 3
+   },
+   "texto": "Esto no es un poema, no sé qué hace aquí. Me llega persiguiendo siempre y no sé muy bien qué decir al respecto.",
+   "anotaciones": []
+  },
+  "revisado": "2026-11-10",
   "imagen": "",
+  "en": {
+   "historia": "",
+   "comentario_forma": "",
+   "explicacion": "",
+   "anotaciones": []
+  },
   "titulo_en": "AlLiTeRaTiOn",
   "texto_en": "The same spoiled silly cuddles suckle me, Mamen.\nHands emanate in Oman.\n\nMonkeys pamper the manna.\n\nNo more nems, fewer gnomes, mum.",
   "primero": false
