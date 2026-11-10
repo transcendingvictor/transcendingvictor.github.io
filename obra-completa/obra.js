@@ -356,7 +356,7 @@ const Obra = (() => {
       // Todo el análisis cuelga de un interruptor: apagado, solo queda el poema
       const todas = [...p.anotaciones, ...(p.lectura ? p.lectura.anotaciones : [])];
       const hay = CAPAS.filter(c => (c === "forma" && p.forma) || todas.some(a => a.capa === c));
-      const conAnalisis = hay.length || p.explicacion || p.historia || p.valoraciones.length;
+      const conAnalisis = hay.length || p.explicacion || p.historia || p.valoraciones.length || p.lectura || p.comentario_forma;
       let activas = (guardado("obra-capas") || "").split(",").filter(c => hay.includes(c));
       const sw = el("input", { type: "checkbox", role: "switch" });
       sw.checked = guardado("obra-analisis") === "1";
@@ -413,14 +413,20 @@ const Obra = (() => {
       if (lang === "en" && (p.historia || p.explicacion || p.lectura))
         main.append(el("p", { class: "aviso-idioma" }, piezas[i].en ? "Analysis translated from the Spanish." : "Analysis available in Spanish only."));
       if (p.lectura) main.append(lectura(p.lectura));
-      if (p.historia) main.append(el("section", { class: "historia" }, el("h2", {}, T("historia")), ...p.historia.split(/\n\n/).map(t => el("p", {}, t))));
-      // Comentario de la forma: prosa con **negritas**
-      const negritas = t => t.split(/\*\*(.+?)\*\*/).map((x, k) => k % 2 ? el("b", {}, x) : x);
-      if (p.comentario_forma) main.append(el("section", { class: "comentario-forma" }, el("h2", {}, T("comentarioForma")), ...p.comentario_forma.split(/\n\n/).map(t => el("p", {}, ...negritas(t)))));
+      // Prosa con **negritas**, *cursivas* y [enlaces](url), que se abren en otra pestaña
+      const rico = t => t.split(/(\*\*.+?\*\*|\*[^*\s][^*]*?\*|\[[^\]]+\]\(https?:\/\/[^)\s]+\))/).map(x => {
+        let m;
+        if ((m = x.match(/^\*\*(.+)\*\*$/))) return el("b", {}, m[1]);
+        if ((m = x.match(/^\[([^\]]+)\]\((.+)\)$/))) return el("a", { href: m[2], target: "_blank", rel: "noopener" }, m[1]);
+        if ((m = x.match(/^\*(.+)\*$/))) return el("i", {}, m[1]);
+        return x;
+      });
+      if (p.historia) main.append(el("section", { class: "historia" }, el("h2", {}, T("historia")), ...p.historia.split(/\n\n/).map(t => el("p", {}, ...rico(t)))));
+      if (p.comentario_forma) main.append(el("section", { class: "comentario-forma" }, el("h2", {}, T("comentarioForma")), ...p.comentario_forma.split(/\n\n/).map(t => el("p", {}, ...rico(t)))));
       if (p.explicacion) {
         const s = el("section", {}, el("h2", {}, T("explicacion")));
         if (p.explicacion_estado) s.append(el("p", { class: "aviso" }, p.explicacion_estado));
-        p.explicacion.split(/\n\n/).forEach(t => s.append(el("p", {}, t)));
+        p.explicacion.split(/\n\n/).forEach(t => s.append(el("p", {}, ...rico(t))));
         main.append(s);
       }
       // Un poema revisado no repite la forma en prosa: basta con lo que se ve en el poema
