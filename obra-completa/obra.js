@@ -338,6 +338,8 @@ const Obra = (() => {
     traducirEstaticos();
     cargar().then(piezas => {
       const i = piezas.findIndex(p => p.codigo === codigo);
+      // El análisis empieza siempre apagado en cada poema; solo dura mientras no se cambie de página
+      let analisisAbierto = false;
       const pintar = () => {
       main.replaceChildren(migas);
       if (i < 0) { main.append(el("p", { class: "vacio" }, T("noEncuentro"))); return; }
@@ -359,7 +361,7 @@ const Obra = (() => {
       const conAnalisis = hay.length || p.explicacion || p.historia || p.valoraciones.length || p.lectura || p.comentario_forma;
       let activas = (guardado("obra-capas") || "").split(",").filter(c => hay.includes(c));
       const sw = el("input", { type: "checkbox", role: "switch" });
-      sw.checked = guardado("obra-analisis") === "1";
+      sw.checked = analisisAbierto;
       const barra = el("div", { class: "capas", role: "group" });
       const aplicar = () => {
         main.classList.toggle("analisis", sw.checked);
@@ -368,7 +370,7 @@ const Obra = (() => {
           if (!CAPAS.some(c => n.classList.contains(`capa-${c}`) && cuerpo.classList.contains(`on-${c}`))) cerrarNota(n);
         });
         barra.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(activas.includes(b.dataset.capa))));
-        guardado("obra-analisis", sw.checked ? "1" : "0");
+        analisisAbierto = sw.checked;
         guardado("obra-capas", activas.join(","));
       };
       hay.forEach(c => {
