@@ -244,3 +244,12 @@ main:not(.analisis) .quitar-colores { display: none; }
 main section > p + p { margin-top: 0.8rem; }
 .primero { margin: 0 0 0.6rem; font-size: 0.85rem; font-style: italic; color: #8a6d1f; }
 .aviso-idioma { margin: 2rem 0 -0.5rem; font-size: 0.8rem; font-style: italic; color: var(--suave); }
+/* Cancioncillas: nota en círculo morado pastel, arriba a la izquierda (♪ ligera, ♫ más seria) */
+.nota-musica { position: absolute; top: -0.85rem; left: -0.85rem; z-index: 2; width: 2.7rem; height: 2.7rem; border-radius: 50%; background: #e5d8f7; color: #1f5c34; border: 2px solid #1c1c1c; display: grid; place-items: center; font-size: 1.75rem; line-height: 1; font-family: "DejaVu Sans", "Segoe UI Symbol", sans-serif; font-weight: 400; transform: rotate(-12deg); }
+/* hueco para que la nota que sobresale no se corte */
+.burbujas { padding-top: 0.9rem; padding-left: 0.9rem; }
+h1 .nota-musica { position: relative; top: auto; left: auto; display: inline-grid; vertical-align: middle; margin-right: 0.6rem; font-size: 1.8rem; width: 2.8rem; height: 2.8rem; }
+.verso.hablado .txt { font-style: italic; font-family: "Aleo", serif; color: #5d4a7a; font-size: 0.92em; }
+.parte { display: block; margin: 1rem 0 0.3rem; font-weight: 700; letter-spacing: 0.08em; color: #5d4a7a; }
+.reel { margin: -0.4rem 0 1rem; font-size: 0.9rem; }
+.reel a { color: #1f5c34; font-weight: 700; }
