@@ -1018,8 +1018,98 @@
                 </ol>
             </section>
 
+            <!-- Recordatorios vitales: at the very bottom; they open on a white screen, one at a time -->
+            <section class="sp-list rv-entry">
+                <h2><span data-l="es">Recordatorios vitales</span><span data-l="en">Life reminders</span></h2>
+                <p class="sp-note"><span data-l="es">Notas a uno mismo, memes compitiendo por mi atención.</span><span data-l="en">Notes to oneself, memes competing for my attention.</span></p>
+                <button type="button" class="rv-open" aria-controls="rv-screen" aria-expanded="false"><span data-l="es">Abrir</span><span data-l="en">Open</span> →</button>
+            </section>
+
         </div>
     </div>
+
+
+    <!-- Recordatorios vitales: full white screen, one card at a time (tap or swipe on the phone, arrows on the computer) -->
+    <div class="rv-screen" id="rv-screen" role="dialog" aria-modal="true" aria-labelledby="rv-label" hidden>
+        <h2 class="rv-label" id="rv-label"><span data-l="es">Recordatorios vitales</span><span data-l="en">Life reminders</span></h2>
+        <div class="rv-top">
+            <div class="rv-mode" role="group">
+                <button type="button" data-rv-mode="random" aria-pressed="true"><span data-l="es">Aleatorio</span><span data-l="en">Shuffled</span></button>
+                <button type="button" data-rv-mode="order" aria-pressed="false"><span data-l="es">En orden</span><span data-l="en">In order</span></button>
+            </div>
+            <button type="button" class="rv-close" aria-label="Cerrar / Close">✕</button>
+        </div>
+        <div class="rv-stage" aria-live="polite">
+            <figure class="rv-card"></figure>
+        </div>
+        <div class="rv-nav">
+            <button type="button" class="rv-prev" aria-label="Anterior / Previous">←</button>
+            <span class="rv-count"></span>
+            <button type="button" class="rv-next" aria-label="Siguiente / Next">→</button>
+        </div>
+    </div>
+    <script type="application/json" id="rv-data">
+[{"id":"RV-001","f":"2021-10-18","t":"I understand. I understand that I will never understand, but I choose to stand."},
+{"id":"RV-058","f":"2022-02-27","t":"wounded healer, u didnt need to be wounded"},
+{"id":"RV-002","f":"2022-02-28","t":"Victor, don't overthink."},
+{"id":"RV-059","f":"2022-03-02","t":"Darkness doesn't drive out darkness, only light can do that. Hate, cannot drive out hate, only love can do that!!!","a":"Martin Luther King"},
+{"id":"RV-003","f":"2022-09-09","t":"Cuando socialice, transmitir toda la vida que tengo dentro."},
+{"id":"RV-004","f":"2022-09-24","t":"Find your right speed: be interested, but not too loose."},
+{"id":"RV-005","f":"2022-09-29","t":"Hay personas que son luz: que a un evento no te apetece ir pero gracias a ellas sí. Buscar personas así."},
+{"id":"RV-006","f":"2022-11-15","t":"Siempre que se pronuncia la frase «esto no tiene ningún sentido», siempre hay un plano de realidad superior en el que tiene todo el sentido del mundo."},
+{"id":"RV-007","f":"2022-11-21","t":"I am superopen to be surprised about the possible significance of every relation."},
+{"id":"RV-008","f":"2023-04-08","t":"Víctor, eres capaz de mazo cosas, no tengas miedo."},
+{"id":"RV-009","f":"2023-04-08","t":"It is the first time in years you have motivation and time!!! That should be exciting, not scary."},
+{"id":"RV-010","f":"2023-06-04","t":"Frustración es probablemente aprendizaje: la loss function sigue actualizándose. But don't stop."},
+{"id":"RV-011","f":"2023-06-23","t":"Achieving perfection starts by letting perfection go and embracing the uncertainty."},
+{"id":"RV-012","f":"2023-07-07","t":"Chill, don't give up 🐌🩷"},
+{"id":"RV-013","f":"2023-08-09","t":"Start telling the truth to oneself and the world."},
+{"id":"RV-014","f":"2023-08-09","t":"Stop playing stupid games, you'll just get stupid prizes. Stop comparing yourself to other people."},
+{"id":"RV-015","f":"2023-08-09","t":"Happiness will never come from an «I'm good enough» game."},
+{"id":"RV-016","f":"2023-08-09","t":"Focus on what you can control, not on what you can't control."},
+{"id":"RV-017","f":"2023-08-10","t":"Self-trust: showing up for oneself, believing that you will be there. First step for self-care."},
+{"id":"RV-018","f":"2023-08-16","t":"No todo es flight or fight, el mundo no se está acabando, te lo prometo."},
+{"id":"RV-019","f":"2023-09-15","t":"Víctor, hay muchas cosas bonitas en la vida. Que no se te olvide."},
+{"id":"RV-020","f":"2023-10-30","t":"A lot of love, Víctor, you are alright 😘"},
+{"id":"RV-021","f":"2023-11-13","t":"Cuando tienes tiempo libre, primero te aburres, y luego empiezan a florecer cosas en el espacio que has dejado."},
+{"id":"RV-022","f":"2023-11-22","t":"Use your beliefs for good, not for bad."},
+{"id":"RV-023","f":"2023-11-29","t":"You don't need everyone to love you."},
+{"id":"RV-024","f":"2023-12-10","t":"You actually just have to compare with yourself yesterday, not with anyone else today."},
+{"id":"RV-025","f":"2023-12-14","t":"Desire is NOT neediness. Wanting is not needing."},
+{"id":"RV-026","f":"2024-01-13","t":"Ganar confianza en mí misma. Showing up for myself 💖"},
+{"id":"RV-027","f":"2024-01-27","t":"Nada es necesario, en el fondo. Todo es contingente."},
+{"id":"RV-028","f":"2024-01-27","t":"Estoy bien, las cosas van bien, no soy la víctima de ninguna novela, soy lo que soy, y punto, y no pasa nada, y no hay ningún problema."},
+{"id":"RV-029","f":"2024-01-27","t":"El mundo ya es increíble y yo no necesito nada más."},
+{"id":"RV-030","f":"2024-02-26","t":"Si yo ya soy excelente, vamos con calma. No te puedes tomar el mundo. Disfruta de la fruta, del dulce."},
+{"id":"RV-031","f":"2024-02-26","t":"No tengas miedo a ser libre. Te la mereces."},
+{"id":"RV-032","f":"2024-03-02","t":"Las acciones tienen consecuencias. Y podemos predecirlas, no es un todo o nada."},
+{"id":"RV-033","f":"2024-03-07","t":"Las cosas no salen siempre a la primera, y es normal."},
+{"id":"RV-034","f":"2024-03-12","t":"Aceptar la vida tal y como es, y ver que es brutal :)"},
+{"id":"RV-035","f":"2024-03-17","t":"I'm already special for myself ✌️ And very special for my friends."},
+{"id":"RV-036","f":"2024-03-20","t":"Saying NO is the starting point!"},
+{"id":"RV-037","f":"2024-05-07","t":"Bby, you are already perfect. Your life already tells an interesting story."},
+{"id":"RV-038","f":"2024-05-22","t":"Sentirme una víctima no me sienta bien: me gusta reaccionar."},
+{"id":"RV-039","f":"2024-05-22","t":"Toca el fondo y nada por el mundo."},
+{"id":"RV-040","f":"2024-06-05","t":"El Víctor productivo nos protege. Hay que protegerle y ayudarle."},
+{"id":"RV-041","f":"2024-06-05","t":"Si me permitiese equivocarme, celebraría estar haciéndolo mal y aprendiendo."},
+{"id":"RV-042","f":"2024-06-26","t":"I did the best I could with the time I was given."},
+{"id":"RV-043","f":"2024-08-29","t":"Las creencias son fantasías ✌️"},
+{"id":"RV-044","f":"2024-08-31","t":"I'm a process, not a product :)"},
+{"id":"RV-045","f":"2024-09-25","t":"I don't like taking too seriously the temporary images I have of myself."},
+{"id":"RV-046","f":"2025-01-19","t":"Viwi, date espacio para hablar contigo."},
+{"id":"RV-047","f":"2025-08-23","t":"Intentar ser más feliz en todo momento, intencionalmente: cuando me dé cuenta, una sonrisa, un esfuerzo."},
+{"id":"RV-048","f":"2025-10-22","t":"Víctor, love the conference energy pump. You still have time. Enjoy it ❤️"},
+{"id":"RV-049","f":"2026-01-02","t":"En la vida hay que tener cara, pero con respeto."},
+{"id":"RV-050","f":"2026-01-10","t":"No te creas tan especial: todos nos sentimos un fracaso. Hay que hacer lo que hay que hacer."},
+{"id":"RV-051","f":"2026-01-23","t":"Creo que nuestras creencias son importantes."},
+{"id":"RV-052","f":"2026-04-17","t":"Con vergüenza no se puede."},
+{"id":"RV-062","f":"2026-06-05","t":"El mayor sufrimiento humano no lo produce la enfermedad, sino la soledad. Nunca dejéis de acompañar al paciente. No solo hay que ser buenos médicos, también hay que ser médicos buenos.","a":"mi amigo Miguel Ángel, en su graduación","a_en":"my friend Miguel Ángel, at his graduation"},
+{"id":"RV-053","f":"2026-06-10","t":"Hay que correr con la cabeza."},
+{"id":"RV-054","f":"2026-07-05","t":"Me mueven mis deseos, eso pasa. Soy eso, es lo de siempre. Mola."},
+{"id":"RV-055","f":"2026-08-19","t":"Estar concentrado es fundamental para vivir la vida al máximo (como yo la entiendo)."},
+{"id":"RV-056","f":"2026-10-26","t":"One should always be in love."},
+{"id":"RV-057","f":"2026-11-08","t":"Vivir ese «¿quiénes somos?». Enorgullecerse de habitar siempre en la relación real."}]
+    </script>
 
     <!-- Book sheet: slides in over the page; the page stays visible behind it -->
     <div class="sp-sheet-bg" hidden></div>
@@ -1462,6 +1552,109 @@
                     light(on ? null : el.dataset.ph);
                 });
             });
+        });
+    })();
+    </script>
+    <script>
+    // Recordatorios vitales: shuffled by default, or in order; after 30 a card asks you to let them rest.
+    (function () {
+        var screen = document.getElementById('rv-screen');
+        if (!screen) return;
+        var all = JSON.parse(document.getElementById('rv-data').textContent);
+        var openBtn = document.querySelector('.rv-open');
+        var card = screen.querySelector('.rv-card');
+        var count = screen.querySelector('.rv-count');
+        var REST = 30;
+        var mode = 'random', deck = [], pos = 0, seen = 0, resting = false;
+        function lang() { return document.documentElement.dataset.lang === 'en' ? 'en' : 'es'; }
+        function shuffle(a) {
+            a = a.slice();
+            for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+            return a;
+        }
+        function build() { deck = mode === 'random' ? shuffle(all) : all.slice(); pos = 0; }
+        function fecha(f) {
+            var p = f.split('-');
+            var d = new Date(+p[0], +p[1] - 1, +p[2]);
+            return d.toLocaleDateString(lang() === 'en' ? 'en-GB' : 'es-ES', { day: 'numeric', month: 'short', year: 'numeric' }).replace('.', '');
+        }
+        function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+        function render() {
+            card.innerHTML = '';
+            var en = lang() === 'en';
+            if (resting) {
+                card.className = 'rv-card rv-rest';
+                card.appendChild(el('blockquote', null, en
+                    ? 'You have already seen ' + REST + ' reminders. Your cognitive abilities are probably saturated: let these ideas rest and come back another time.'
+                    : 'Ya has visto ' + REST + ' reafirmaciones. Probablemente tus capacidades cognitivas estén saturadas: deja reposar estas ideas y vuelve en otro momento.'));
+                card.appendChild(el('figcaption', null, en ? '(or keep going, if you really want to)' : '(o sigue, si de verdad quieres)'));
+                count.textContent = '';
+                return;
+            }
+            var r = deck[pos];
+            card.className = 'rv-card' + (r.t.length > 150 ? ' rv-long' : '');
+            var q = el('blockquote', null, r.t);
+            card.appendChild(q);
+            if (r.a) card.appendChild(el('p', 'rv-author', '— ' + (en && r.a_en ? r.a_en : r.a)));
+            card.appendChild(el('figcaption', null, (en ? 'private chat' : 'chat privado') + ' · ' + fecha(r.f)));
+            count.textContent = (pos + 1) + ' / ' + deck.length;
+        }
+        function next() {
+            seen++;
+            if (seen === REST && !resting) { resting = true; render(); return; }
+            resting = false;
+            pos++;
+            if (pos >= deck.length) { if (mode === 'random') { build(); } else { pos = 0; } }
+            render();
+        }
+        function prev() {
+            if (resting) { resting = false; render(); return; }
+            if (pos > 0) { pos--; render(); }
+        }
+        function setMode(m) {
+            mode = m; resting = false;
+            screen.querySelectorAll('[data-rv-mode]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.rvMode === m)); });
+            build(); render();
+        }
+        function open() {
+            screen.hidden = false;
+            document.documentElement.classList.add('rv-lock');
+            openBtn.setAttribute('aria-expanded', 'true');
+            seen = 0; resting = false; build(); render();
+            screen.querySelector('.rv-next').focus({ preventScroll: true });
+        }
+        function close() {
+            screen.hidden = true;
+            document.documentElement.classList.remove('rv-lock');
+            openBtn.setAttribute('aria-expanded', 'false');
+            openBtn.focus({ preventScroll: true });
+        }
+        openBtn.addEventListener('click', open);
+        screen.querySelector('.rv-close').addEventListener('click', close);
+        screen.querySelector('.rv-next').addEventListener('click', next);
+        screen.querySelector('.rv-prev').addEventListener('click', prev);
+        screen.querySelectorAll('[data-rv-mode]').forEach(function (b) { b.addEventListener('click', function () { setMode(b.dataset.rvMode); }); });
+        document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.addEventListener('click', function () { if (!screen.hidden) render(); }); });
+        // Like stories: a tap on the left third goes back, anywhere else goes forward; a swipe also works.
+        var stage = screen.querySelector('.rv-stage');
+        var x0 = null, y0 = null, swiped = false;
+        stage.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; swiped = false; }, { passive: true });
+        stage.addEventListener('touchend', function (e) {
+            if (x0 === null) return;
+            var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+            if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { swiped = true; if (dx < 0) next(); else prev(); }
+            x0 = null;
+        });
+        stage.addEventListener('click', function (e) {
+            if (swiped) { swiped = false; return; }
+            var box = stage.getBoundingClientRect();
+            if (e.clientX - box.left < box.width / 3) prev(); else next();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (screen.hidden) return;
+            if (e.key === 'Escape') close();
+            else if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+            else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
         });
     })();
     </script>
