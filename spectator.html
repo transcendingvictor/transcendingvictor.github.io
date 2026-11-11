@@ -1018,36 +1018,32 @@
                 </ol>
             </section>
 
-            <!-- Recordatorios vitales: at the very bottom; they open on a white screen, one at a time -->
+            <!-- Recordatorios vitales: at the very bottom, a small white screen inside the page, one card at a time -->
             <section class="sp-list rv-entry">
                 <h2><span data-l="es">Recordatorios vitales</span><span data-l="en">Life reminders</span></h2>
-                <p class="sp-note"><span data-l="es">Notas a uno mismo, memes compitiendo por mi atención.</span><span data-l="en">Notes to oneself, memes competing for my attention.</span></p>
-                <button type="button" class="rv-open" aria-controls="rv-screen" aria-expanded="false"><span data-l="es">Abrir</span><span data-l="en">Open</span> →</button>
+                <p class="sp-note rv-intro"><span data-l="es">Reafirmaciones. Notas a uno mismo. <a href="https://es.wikipedia.org/wiki/Meme" target="_blank" rel="noopener">Memes</a> compitiendo por mi atención. Propaganda de mis subpersonalidades.</span><span data-l="en">Affirmations. Notes to oneself. <a href="https://en.wikipedia.org/wiki/Meme" target="_blank" rel="noopener">Memes</a> competing for my attention. Propaganda from my subpersonalities.</span></p>
+                <div class="rv-screen" id="rv-screen" role="region" aria-roledescription="carrusel" aria-label="Recordatorios vitales" tabindex="0">
+                    <div class="rv-top">
+                        <div class="rv-mode" role="group">
+                            <button type="button" data-rv-mode="random" aria-pressed="true"><span data-l="es">Aleatorio</span><span data-l="en">Shuffled</span></button>
+                            <button type="button" data-rv-mode="order" aria-pressed="false"><span data-l="es">En orden</span><span data-l="en">In order</span></button>
+                        </div>
+                        <span class="rv-count"></span>
+                    </div>
+                    <div class="rv-stage" aria-live="polite">
+                        <figure class="rv-card"></figure>
+                    </div>
+                    <div class="rv-nav">
+                        <button type="button" class="rv-prev" aria-label="Anterior / Previous">←</button>
+                        <button type="button" class="rv-next" aria-label="Siguiente / Next">→</button>
+                    </div>
+                </div>
             </section>
 
         </div>
     </div>
 
 
-    <!-- Recordatorios vitales: full white screen, one card at a time (tap or swipe on the phone, arrows on the computer) -->
-    <div class="rv-screen" id="rv-screen" role="dialog" aria-modal="true" aria-labelledby="rv-label" hidden>
-        <h2 class="rv-label" id="rv-label"><span data-l="es">Recordatorios vitales</span><span data-l="en">Life reminders</span></h2>
-        <div class="rv-top">
-            <div class="rv-mode" role="group">
-                <button type="button" data-rv-mode="random" aria-pressed="true"><span data-l="es">Aleatorio</span><span data-l="en">Shuffled</span></button>
-                <button type="button" data-rv-mode="order" aria-pressed="false"><span data-l="es">En orden</span><span data-l="en">In order</span></button>
-            </div>
-            <button type="button" class="rv-close" aria-label="Cerrar / Close">✕</button>
-        </div>
-        <div class="rv-stage" aria-live="polite">
-            <figure class="rv-card"></figure>
-        </div>
-        <div class="rv-nav">
-            <button type="button" class="rv-prev" aria-label="Anterior / Previous">←</button>
-            <span class="rv-count"></span>
-            <button type="button" class="rv-next" aria-label="Siguiente / Next">→</button>
-        </div>
-    </div>
     <script type="application/json" id="rv-data">
 [{"id":"RV-001","f":"2021-10-18","t":"I understand. I understand that I will never understand, but I choose to stand."},
 {"id":"RV-058","f":"2022-02-27","t":"wounded healer, u didnt need to be wounded"},
@@ -1103,7 +1099,7 @@
 {"id":"RV-050","f":"2026-01-10","t":"No te creas tan especial: todos nos sentimos un fracaso. Hay que hacer lo que hay que hacer."},
 {"id":"RV-051","f":"2026-01-23","t":"Creo que nuestras creencias son importantes."},
 {"id":"RV-052","f":"2026-04-17","t":"Con vergüenza no se puede."},
-{"id":"RV-062","f":"2026-06-05","t":"El mayor sufrimiento humano no lo produce la enfermedad, sino la soledad. Nunca dejéis de acompañar al paciente. No solo hay que ser buenos médicos, también hay que ser médicos buenos.","a":"mi amigo Miguel Ángel, en su graduación","a_en":"my friend Miguel Ángel, at his graduation"},
+{"id":"RV-062","f":"2026-06-05","t":"El mayor sufrimiento humano no lo produce la enfermedad, sino la soledad. Nunca dejéis de acompañar al paciente. No solo hay que ser buenos médicos, también hay que ser médicos buenos."},
 {"id":"RV-053","f":"2026-06-10","t":"Hay que correr con la cabeza."},
 {"id":"RV-054","f":"2026-07-05","t":"Me mueven mis deseos, eso pasa. Soy eso, es lo de siempre. Mola."},
 {"id":"RV-055","f":"2026-08-19","t":"Estar concentrado es fundamental para vivir la vida al máximo (como yo la entiendo)."},
@@ -1556,12 +1552,11 @@
     })();
     </script>
     <script>
-    // Recordatorios vitales: shuffled by default, or in order; after 30 a card asks you to let them rest.
+    // Recordatorios vitales: a small white screen inside the page. Shuffled by default, or in order; after 30 a card asks you to let them rest.
     (function () {
         var screen = document.getElementById('rv-screen');
         if (!screen) return;
         var all = JSON.parse(document.getElementById('rv-data').textContent);
-        var openBtn = document.querySelector('.rv-open');
         var card = screen.querySelector('.rv-card');
         var count = screen.querySelector('.rv-count');
         var REST = 30;
@@ -1592,9 +1587,8 @@
                 return;
             }
             var r = deck[pos];
-            card.className = 'rv-card' + (r.t.length > 150 ? ' rv-long' : '');
-            var q = el('blockquote', null, r.t);
-            card.appendChild(q);
+            card.className = 'rv-card' + (r.t.length > 150 ? ' rv-long' : '') + (r.t.length > 220 ? ' rv-xlong' : '');
+            card.appendChild(el('blockquote', null, r.t));
             if (r.a) card.appendChild(el('p', 'rv-author', '— ' + (en && r.a_en ? r.a_en : r.a)));
             card.appendChild(el('figcaption', null, (en ? 'private chat' : 'chat privado') + ' · ' + fecha(r.f)));
             count.textContent = (pos + 1) + ' / ' + deck.length;
@@ -1612,30 +1606,15 @@
             if (pos > 0) { pos--; render(); }
         }
         function setMode(m) {
-            mode = m; resting = false;
+            mode = m; resting = false; seen = 0;
             screen.querySelectorAll('[data-rv-mode]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.rvMode === m)); });
             build(); render();
         }
-        function open() {
-            screen.hidden = false;
-            document.documentElement.classList.add('rv-lock');
-            openBtn.setAttribute('aria-expanded', 'true');
-            seen = 0; resting = false; build(); render();
-            screen.querySelector('.rv-next').focus({ preventScroll: true });
-        }
-        function close() {
-            screen.hidden = true;
-            document.documentElement.classList.remove('rv-lock');
-            openBtn.setAttribute('aria-expanded', 'false');
-            openBtn.focus({ preventScroll: true });
-        }
-        openBtn.addEventListener('click', open);
-        screen.querySelector('.rv-close').addEventListener('click', close);
         screen.querySelector('.rv-next').addEventListener('click', next);
         screen.querySelector('.rv-prev').addEventListener('click', prev);
         screen.querySelectorAll('[data-rv-mode]').forEach(function (b) { b.addEventListener('click', function () { setMode(b.dataset.rvMode); }); });
-        document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.addEventListener('click', function () { if (!screen.hidden) render(); }); });
-        // Like stories: a tap on the left third goes back, anywhere else goes forward; a swipe also works.
+        document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.addEventListener('click', render); });
+        // Like stories: a tap on the right goes forward, on the left third goes back; a swipe also works.
         var stage = screen.querySelector('.rv-stage');
         var x0 = null, y0 = null, swiped = false;
         stage.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; swiped = false; }, { passive: true });
@@ -1650,12 +1629,11 @@
             var box = stage.getBoundingClientRect();
             if (e.clientX - box.left < box.width / 3) prev(); else next();
         });
-        document.addEventListener('keydown', function (e) {
-            if (screen.hidden) return;
-            if (e.key === 'Escape') close();
-            else if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+        screen.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
             else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
         });
+        build(); render();
     })();
     </script>
 </body>
