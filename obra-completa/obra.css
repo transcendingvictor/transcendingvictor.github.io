@@ -268,8 +268,8 @@ h1 .nota-musica { position: relative; top: auto; left: auto; display: inline-gri
 .chip.plegar.on { background: #fff; color: var(--tinta); border-color: #5a8a5c; }
 .pluma { background: #d6e6f7; color: #1f3f6b; font-size: 1.35rem; }
 .pluma.mb { background: #d3efec; color: #1d5c57; }
-.chip.on.c-cancioncilla { background: #e5d8f7; border-color: #1f5c34; color: #1f5c34; }
-.chip.on.c-cancioncilla .n { color: #1f5c34; }
+.chip.on.c-cancioncilla, .chip.on.c-tema { background: #e5d8f7; border-color: #1f5c34; color: #1f5c34; }
+.chip.on.c-cancioncilla .n, .chip.on.c-tema .n { color: #1f5c34; }
 .chip.on.c-cs { background: #1f3f6b; border-color: #1f3f6b; }
 .chip.on.c-banales { background: #1d5c57; border-color: #1d5c57; }
 .chip.on.c-poema { background: #3d5f8f; border-color: #3d5f8f; }

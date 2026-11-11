@@ -177,7 +177,10 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
         continue
     p = {k: r.get(k, "") for k in PUBLICOS}
     # «AAAA-MM-DD~» en fecha_escritura = fecha orientativa: la web dice «principios / mediados / finales de mes»
-    p["escritura_aprox"] = p["fecha_escritura"].endswith("~")
+    # «≤AAAA-MM» = escrito antes de esa fecha (tope), sin saber cuándo exactamente
+    p["escritura_antes"] = p["fecha_escritura"].startswith("≤")
+    p["fecha_escritura"] = p["fecha_escritura"].lstrip("≤")
+    p["escritura_aprox"] = p["fecha_escritura"].endswith("~") or p["escritura_antes"]
     p["fecha_escritura"] = p["fecha_escritura"].rstrip("~")
     p["etiquetas"] = [e for e in p["etiquetas"].split(";") if e]
     ruta = os.path.join(HERE, "anotaciones", r["codigo"] + ".md")
