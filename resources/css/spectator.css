@@ -1423,3 +1423,13 @@ html.sp-essay-lock { overflow: hidden; }
   .sp-essay h4 > span[data-l] { flex: 1 1 calc(100% - 2.6rem); }
   .sp-essay h4 .sp-conf-mini { margin-left: 2.3rem; }
 }
+/* A message of mine that backs a sentence: a small bubble that opens beside it */
+.sp-chat-btn { display: inline-grid; place-items: center; width: 1.9rem; height: 1.6rem; margin-left: 0.2rem; padding: 0; border: 0.12rem solid #1c1c1c; border-radius: 0.8rem 0.8rem 0.8rem 0.2rem; background: #fffaf2; font-size: 0.85rem; line-height: 1; vertical-align: middle; cursor: pointer; box-shadow: 2px 2px 0 #1c1c1c; }
+.sp-chat-btn[aria-expanded="true"] { background: #dcf8c6; transform: translate(1px, 1px); box-shadow: 1px 1px 0 #1c1c1c; }
+.sp-chat[hidden] { display: none; }
+.sp-chat { max-width: 22rem; margin: -0.2rem 0 0.9rem auto; padding: 0.55rem 0.8rem 0.4rem; border: 0.12rem solid #1c1c1c; border-radius: 14px 14px 4px 14px; background: #dcf8c6; box-shadow: 3px 3px 0 #1c1c1c; animation: sp-chat-in 0.2s ease-out; }
+@keyframes sp-chat-in { from { transform: translateX(10px); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .sp-chat { animation: none; } }
+.sp-chat blockquote { margin: 0; font-size: 0.95rem; line-height: 1.45; color: #1c1c1c; }
+.sp-chat figcaption { margin-top: 0.25rem; font-size: 0.7rem; color: #5b6b55; text-align: right; }
+.sp-chat blockquote, .sp-chat figcaption { text-align: left !important; } .sp-chat figcaption { text-align: right !important; }
