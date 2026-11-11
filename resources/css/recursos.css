@@ -45,3 +45,8 @@
 .jp-sep { color: #8a4fa8; margin: 0 0.4rem; }
 .jk-largo strong { display: block; margin-bottom: 0.3rem; }
 .rs-tabs [data-tab] { text-align: center; }
+.jp-w { font-weight: 700; }
+.jp-ej { font-style: italic; color: #555; margin-left: 0.4rem; }
+.jp details { margin-top: 0.3rem; font-size: 0.95rem; }
+.jp summary { cursor: pointer; color: #8a4fa8; font-size: 0.9rem; }
+.jp details p { margin: 0.4rem 0 0; }
