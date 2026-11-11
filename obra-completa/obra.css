@@ -273,3 +273,6 @@ h1 .nota-musica { position: relative; top: auto; left: auto; display: inline-gri
 .chip.on.c-cs { background: #1f3f6b; border-color: #1f3f6b; }
 .chip.on.c-banales { background: #1d5c57; border-color: #1d5c57; }
 .chip.on.c-poema { background: #3d5f8f; border-color: #3d5f8f; }
+.chip.on.c-instagram { background: #8a4fa8; border-color: #8a4fa8; }
+.chip.on.c-borradores { background: #7a6a55; border-color: #7a6a55; }
+.chip.on.c-libreta { background: #a0692b; border-color: #a0692b; }

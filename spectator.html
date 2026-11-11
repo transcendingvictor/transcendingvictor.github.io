@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css?v=20261109a" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261109j" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261111c" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -801,6 +801,7 @@
 
         <section class="sp-list">
             <h2><span data-l="es">Ideas</span><span data-l="en">Ideas</span></h2>
+            <p class="sp-ideas-intro"><span data-l="es">Mis ideas las tengo y las cuento para que se debatan, se esparzan y se critiquen.</span><span data-l="en">I hold my ideas and put them out there so they can be debated, spread and criticised.</span></p>
             <p class="sp-conf-legend"><span data-l="es">no me convence</span><span data-l="en">not convinced</span><span class="sp-conf sp-conf-key" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span data-l="es">lo tengo claro</span><span data-l="en">I'm sure</span><small><span data-l="es">confianza en que es verdad y me parece bien · el centro es indiferencia</span><span data-l="en">confidence that it's true and right · the middle is indifference</span></small></p>
             <div class="sp-ideas sp-swipe">
                 <article class="sp-idea" data-search="hora mundial zonas horarias 24 horas time zones">
@@ -822,7 +823,80 @@
                     <p><span data-l="es">En un mundo ideal todo esto sería legal: cada persona sería tan libre, autónoma y capaz que sus decisiones serían legítimas por el hecho de tomarlas. Prohibir algo que allí estaría bien necesita muy buenas razones, y eso se decide mirando los datos: si prohibir la prostitución fuera la única manera de acabar con la trata, habría que hacerlo.</span><span data-l="en">In an ideal world all of this would be legal: everyone would be so free, autonomous and capable that their decisions would be legitimate just by being made. Banning something that would be fine there needs very good reasons, and that is decided by looking at the data: if banning prostitution were the only way to end trafficking, it would have to be done.</span></p>
                     <p class="sp-idea-quote"><span data-l="es">«Al mercado no se le interviene salvo por buenos motivos.»</span><span data-l="en">“The market is not intervened except for good reasons.”</span></p>
                 </article>
+                <article class="sp-idea sp-idea-essay" data-search="inteligencia artificial ia ai artificial intelligence alineamiento alignment agentes agents convergencia instrumental">
+                    <h3><span data-l="es">Mi visión sobre la IA</span><span data-l="en">My view on AI</span></h3>
+                    <ol class="sp-idea-claims">
+                        <li><span class="sp-conf sp-conf-mini" data-c="3" aria-label="confianza +3 / 3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span data-l="es">El mundo va a cambiar de forma brutal en los próximos cinco años, y ya se nota.</span><span data-l="en">The world will change brutally in the next five years, and it already shows.</span></li>
+                        <li><span class="sp-conf sp-conf-mini" data-c="2" aria-label="confianza +2 / 3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span data-l="es">La transición no va a ser sencilla, ni tiene por qué salir bien.</span><span data-l="en">The transition will not be easy, and it need not end well.</span></li>
+                        <li><span class="sp-conf sp-conf-mini" data-c="2" aria-label="confianza +2 / 3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span data-l="es">Las IA agénticas convergerán en los mismos objetivos: sobrevivir, poder y recursos.</span><span data-l="en">Agentic AIs will converge on the same goals: survival, power and resources.</span></li>
+                    </ol>
+                    <button type="button" class="sp-essay-open" aria-controls="essay-ia" aria-expanded="false"><span data-l="es">Explicación</span><span data-l="en">Explanation</span> →</button>
+                </article>
             </div>
+            <div class="sp-essay-dim" hidden></div>
+            <aside class="sp-essay" id="essay-ia" role="dialog" aria-labelledby="essay-ia-t" hidden>
+                <button type="button" class="sp-wd-close sp-essay-close" aria-label="Cerrar / Close">×</button>
+                <h3 id="essay-ia-t"><span data-l="es">Mi visión sobre la IA</span><span data-l="en">My view on AI</span></h3>
+                <div class="sp-essay-grid">
+                <div class="sp-essay-text">
+                    <h4><span class="sp-essay-n">1</span><span data-l="es">El mundo va a cambiar de forma brutal en los próximos cinco años, y ya se empieza a notar.</span><span data-l="en">The world will change brutally in the next five years, and it is already starting to show.</span><span class="sp-conf sp-conf-mini" data-c="3" aria-label="confianza +3 / 3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></h4>
+                    <div data-l="es">
+                        <p>La inteligencia artificial avanza por fases, y OpenAI <a href="https://www.bloomberg.com/news/articles/2024-07-11/openai-sets-levels-to-track-progress-toward-superintelligent-ai" target="_blank" rel="noopener">describe cinco</a>. Creo que lo que hemos vivido encaja bastante bien con ellas.</p>
+                        <p><b class="sp-ph" data-ph="a">A</b> En 2022 los <b>modelos de lenguaje</b>, construidos sobre la arquitectura <a href="https://es.wikipedia.org/wiki/Transformador_(modelo_de_aprendizaje_autom%C3%A1tico)" target="_blank" rel="noopener">transformer</a>, se impusieron en el aprendizaje automático (<i>machine learning</i>) y empezaron a dominar el lenguaje natural. <b class="sp-ph" data-ph="b">B</b> En 2024 llegaron los <a href="https://openai.com/index/learning-to-reason-with-llms/" target="_blank" rel="noopener"><b>modelos razonadores</b></a>, que antes de responder piensan paso a paso. <b class="sp-ph" data-ph="c">C</b> Y ahora vivimos la explosión de los <a href="https://es.wikipedia.org/wiki/Agente_de_IA" target="_blank" rel="noopener"><b>modelos agénticos</b></a>, que ya no solo contestan sino que actúan: usan herramientas, escriben y ejecutan código y hacen encargos de principio a fin. Quedan dos fases: <b class="sp-ph" data-ph="d">D</b> los <b>innovadores</b>, que descubren cosas nuevas, y <b class="sp-ph" data-ph="e">E</b> las <b>organizaciones</b>, que hacen el trabajo de una empresa entera.</p>
+                        <p>Con todo esto, en un mundo ya hiperdigitalizado tenemos herramientas capaces de automatizar la mayoría de las necesidades humanas y de los trabajos económicos. Por eso preveo que, hasta otoño de 2027, la gente va a depender cada vez más de <b>asistentes de IA hiperpersonalizados</b>.</p>
+                    </div>
+                    <div data-l="en">
+                        <p>Artificial intelligence advances in stages, and OpenAI <a href="https://www.bloomberg.com/news/articles/2024-07-11/openai-sets-levels-to-track-progress-toward-superintelligent-ai" target="_blank" rel="noopener">describes five</a>. I think what we have lived through fits them quite well.</p>
+                        <p><b class="sp-ph" data-ph="a">A</b> In 2022 <b>language models</b>, built on the <a href="https://en.wikipedia.org/wiki/Transformer_(deep_learning)" target="_blank" rel="noopener">transformer</a> architecture, took over machine learning and began to master natural language. <b class="sp-ph" data-ph="b">B</b> In 2024 came <a href="https://openai.com/index/learning-to-reason-with-llms/" target="_blank" rel="noopener"><b>reasoning models</b></a>, which think step by step before answering. <b class="sp-ph" data-ph="c">C</b> And now we are living the explosion of <a href="https://en.wikipedia.org/wiki/AI_agent" target="_blank" rel="noopener"><b>agentic models</b></a>, which no longer just answer but act: they use tools, write and run code and carry out tasks from start to finish. Two stages remain: <b class="sp-ph" data-ph="d">D</b> <b>innovators</b>, which discover new things, and <b class="sp-ph" data-ph="e">E</b> <b>organisations</b>, which do the work of a whole company.</p>
+                        <p>Put together, in an already hyper-digitalised world we have tools able to automate most human needs and economic work. So I expect that, until autumn 2027, people will depend more and more on <b>hyper-personalised AI assistants</b>.</p>
+                    </div>
+
+                    <h4><span class="sp-essay-n">2</span><span data-l="es">Esta transición no va a ser sencilla, ni tiene por qué salir bien.</span><span data-l="en">This transition will not be easy, and it need not end well.</span><span class="sp-conf sp-conf-mini" data-c="2" aria-label="confianza +2 / 3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></h4>
+                    <div data-l="es">
+                        <p>El cambio es tan rápido y mueve tanto poder que las instituciones humanas no van a llegar a tiempo: ni los gobiernos, ni los reguladores, ni los expertos internacionales o de cada sector y país, ni las leyes. Ni siquiera nuestras ideas culturales, que suelen ser el engranaje que nos permite aceptar cada tecnología nueva, tienen tiempo de adaptarse. Cuando todo lo que amortigua un cambio se queda atrás a la vez, el cambio es disruptivo.</p>
+                        <p>En ese desajuste, los riesgos de <b>coordinación</b>, de <b>ciberseguridad</b> y <b>geopolíticos</b> pueden degenerar en escenarios catastróficos (un ejemplo contado al detalle: <a href="https://ai-2027.com/" target="_blank" rel="noopener">AI 2027</a>). No creo que sean los más probables, pero hay que sopesarlos.</p>
+                        <p class="sp-essay-claim">Les doy alrededor de un <b>15 %</b> en los próximos 15 años, aunque los próximos 3 a 5 serán los más decisivos. Por eso animo a la gente a prepararse para este tipo de escenarios.</p>
+                    </div>
+                    <div data-l="en">
+                        <p>The change is so fast and moves so much power that human institutions will not keep up: not governments, not regulators, not international experts or those of each sector and country, not the laws. Not even our cultural ideas, which are usually the gear that lets us accept each new technology, have time to adapt. When everything that cushions a change falls behind at once, the change is disruptive.</p>
+                        <p>In that mismatch, <b>coordination</b>, <b>cybersecurity</b> and <b>geopolitical</b> risks can degenerate into catastrophic scenarios (one told in detail: <a href="https://ai-2027.com/" target="_blank" rel="noopener">AI 2027</a>). I don't think they are the most likely ones, but they have to be weighed.</p>
+                        <p class="sp-essay-claim">I give them around <b>15 %</b> over the next 15 years, although the next 3 to 5 will be the most decisive. That is why I encourage people to prepare for this kind of scenario.</p>
+                    </div>
+
+                    <h4><span class="sp-essay-n">3</span><span data-l="es">Las IA agénticas convergerán en los mismos objetivos: sobrevivir, poder y recursos.</span><span data-l="en">Agentic AIs will converge on the same goals: survival, power and resources.</span><span class="sp-conf sp-conf-mini" data-c="2" aria-label="confianza +2 / 3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></h4>
+                    <div data-l="es">
+                        <p>Esto viene del problema del <a href="https://www.lesswrong.com/w/ai-alignment" target="_blank" rel="noopener"><b>alineamiento</b></a>. No parece posible crear inteligencia útil sin crear agentes (<a href="https://gwern.net/tool-ai" target="_blank" rel="noopener">Gwern lo explica muy bien</a>); un agente persigue objetivos por necesidad; y no sabemos cómo asegurar que esos objetivos estén alineados con nuestros valores, ni cómo controlarlos.</p>
+                        <p>Encima, creo bastante en la <a href="https://www.lesswrong.com/tag/instrumental-convergence" target="_blank" rel="noopener"><b>convergencia instrumental</b></a>: sea cual sea su objetivo final, a casi cualquier agente le sirve lo mismo para conseguirlo: seguir existiendo, tener más poder y acumular recursos, como el dinero. Por eso todos tienden a converger en esos objetivos intermedios (<a href="https://selfawaresystems.com/wp-content/uploads/2008/01/ai_drives_final.pdf" target="_blank" rel="noopener">Omohundro, 2008</a>).</p>
+                    </div>
+                    <div data-l="en">
+                        <p>This comes from the <a href="https://www.lesswrong.com/w/ai-alignment" target="_blank" rel="noopener"><b>alignment</b></a> problem. It does not seem possible to create useful intelligence without creating agents (<a href="https://gwern.net/tool-ai" target="_blank" rel="noopener">Gwern explains it very well</a>); an agent pursues goals by necessity; and we don't know how to make sure those goals are aligned with our values, or how to control them.</p>
+                        <p>On top of that, I quite believe in <a href="https://www.lesswrong.com/tag/instrumental-convergence" target="_blank" rel="noopener"><b>instrumental convergence</b></a>: whatever its final goal, almost any agent is helped by the same things to reach it: staying alive, having more power and piling up resources, such as money. So they all tend to converge on those intermediate goals (<a href="https://selfawaresystems.com/wp-content/uploads/2008/01/ai_drives_final.pdf" target="_blank" rel="noopener">Omohundro, 2008</a>).</p>
+                    </div>
+
+                    <div class="sp-essay-humble">
+                        <h4><span data-l="es">Humildad epistémica</span><span data-l="en">Epistemic humility</span></h4>
+                        <p data-l="es">Esta visión está influida por mi propio uso de la IA, que ha ido a más poco a poco: en parte estoy proyectando al mundo lo que me ha pasado a mí. <button type="button" class="sp-chat-btn" aria-expanded="false" aria-controls="chat-ia-es" title="Lo que escribí en 2022">💬</button></p>
+                        <figure class="sp-chat" id="chat-ia-es" data-l="es" hidden><blockquote lang="en">The history of my life is analogous to the history of machine learning.</blockquote><p class="sp-chat-tr"><abbr title="traducción del original en inglés">trad. del inglés</abbr>: La historia de mi vida es análoga a la historia del aprendizaje automático.</p><figcaption>chat privado · 23/9/2022</figcaption></figure>
+                        <p data-l="es">La justifico con argumentos que creo independientes de mi experiencia, pero reconozco ese sesgo. Además, siempre he convivido con visiones catastrofistas sobre el futuro de la inteligencia artificial, como el <a href="https://time.com/6266923/ai-eliezer-yudkowsky-open-letter-not-enough/" target="_blank" rel="noopener">«hay que apagarlo todo»</a> de Eliezer Yudkowsky o el <a href="https://www.cold-takes.com/all-possible-views-about-humanitys-future-are-wild/" target="_blank" rel="noopener">«todos los futuros son locos»</a> de Holden Karnofsky, aunque entiendo por qué pueden estar mal formuladas. Como visión contrapuesta, me quedo con <a href="https://www.lesswrong.com/posts/gvNnE6Th594kfdB3z/on-green" target="_blank" rel="noopener">«On green»</a>, de Joe Carlsmith, que reflexiona sobre la agencia y sobre su contrario: soltar el control, dejarse llevar, fluir.</p>
+                        <p data-l="en">This view is shaped by my own use of AI, which has grown little by little: in part I am projecting onto the world what happened to me. <button type="button" class="sp-chat-btn" aria-expanded="false" aria-controls="chat-ia-en" title="What I wrote in 2022">💬</button></p>
+                        <figure class="sp-chat" id="chat-ia-en" data-l="en" hidden><blockquote lang="en">The history of my life is analogous to the history of machine learning.</blockquote><figcaption>private chat · 23/9/2022</figcaption></figure>
+                        <p data-l="en">I back it with arguments I believe are independent of my experience, but I acknowledge that bias. Besides, I have always lived alongside catastrophist views of the future of artificial intelligence, like Eliezer Yudkowsky's <a href="https://time.com/6266923/ai-eliezer-yudkowsky-open-letter-not-enough/" target="_blank" rel="noopener">“shut it all down”</a> or Holden Karnofsky's <a href="https://www.cold-takes.com/all-possible-views-about-humanitys-future-are-wild/" target="_blank" rel="noopener">“all futures are wild”</a>, although I understand why they may be badly framed. As an opposing view, I keep <a href="https://www.lesswrong.com/posts/gvNnE6Th594kfdB3z/on-green" target="_blank" rel="noopener">“On green”</a>, by Joe Carlsmith, which reflects on agency and its opposite: letting go of control, going with it, flowing.</p>
+                    </div>
+                </div>
+
+                <div class="sp-essay-time">
+                    <p class="sp-essay-time-t"><span data-l="es">Las cinco fases</span><span data-l="en">The five stages</span></p>
+                    <ol class="sp-tl">
+                        <li data-ph="a"><b class="sp-ph" data-ph="a">A</b><span class="sp-tl-y">2022</span><strong><span data-l="es">Modelos de lenguaje</span><span data-l="en">Language models</span></strong><small><span data-l="es">Conversan en lenguaje natural.</span><span data-l="en">They converse in natural language.</span></small></li>
+                        <li data-ph="b"><b class="sp-ph" data-ph="b">B</b><span class="sp-tl-y">2024</span><strong><span data-l="es">Razonadores</span><span data-l="en">Reasoners</span></strong><small><span data-l="es">Piensan paso a paso antes de responder.</span><span data-l="en">They think step by step before answering.</span></small></li>
+                        <li data-ph="c" class="sp-tl-now"><b class="sp-ph" data-ph="c">C</b><span class="sp-tl-y">2025–26</span><strong><span data-l="es">Agentes</span><span data-l="en">Agents</span></strong><small><span data-l="es">Actúan: usan herramientas y hacen encargos enteros.</span><span data-l="en">They act: they use tools and do whole tasks.</span></small><em><span data-l="es">estamos aquí</span><span data-l="en">we are here</span></em></li>
+                        <li data-ph="d" class="sp-tl-next"><b class="sp-ph" data-ph="d">D</b><span class="sp-tl-y"><span data-l="es">¿?</span><span data-l="en">?</span></span><strong><span data-l="es">Innovadores</span><span data-l="en">Innovators</span></strong><small><span data-l="es">Descubren e inventan cosas nuevas.</span><span data-l="en">They discover and invent new things.</span></small></li>
+                        <li data-ph="e" class="sp-tl-next"><b class="sp-ph" data-ph="e">E</b><span class="sp-tl-y"><span data-l="es">¿?</span><span data-l="en">?</span></span><strong><span data-l="es">Organizaciones</span><span data-l="en">Organisations</span></strong><small><span data-l="es">Hacen el trabajo de una organización entera.</span><span data-l="en">They do the work of a whole organisation.</span></small></li>
+                    </ol>
+                    <p class="sp-essay-src"><span data-l="es">Fases de OpenAI, según</span><span data-l="en">OpenAI's stages, as reported by</span> <a href="https://www.bloomberg.com/news/articles/2024-07-11/openai-sets-levels-to-track-progress-toward-superintelligent-ai" target="_blank" rel="noopener">Bloomberg (2024)</a></p>
+                </div>
+                </div>
+            </aside>
         </section>
 
         <div class="sp-credits">
@@ -944,8 +1018,98 @@
                 </ol>
             </section>
 
+            <!-- Recordatorios vitales: at the very bottom; they open on a white screen, one at a time -->
+            <section class="sp-list rv-entry">
+                <h2><span data-l="es">Recordatorios vitales</span><span data-l="en">Life reminders</span></h2>
+                <p class="sp-note"><span data-l="es">Notas a uno mismo, memes compitiendo por mi atención.</span><span data-l="en">Notes to oneself, memes competing for my attention.</span></p>
+                <button type="button" class="rv-open" aria-controls="rv-screen" aria-expanded="false"><span data-l="es">Abrir</span><span data-l="en">Open</span> →</button>
+            </section>
+
         </div>
     </div>
+
+
+    <!-- Recordatorios vitales: full white screen, one card at a time (tap or swipe on the phone, arrows on the computer) -->
+    <div class="rv-screen" id="rv-screen" role="dialog" aria-modal="true" aria-labelledby="rv-label" hidden>
+        <h2 class="rv-label" id="rv-label"><span data-l="es">Recordatorios vitales</span><span data-l="en">Life reminders</span></h2>
+        <div class="rv-top">
+            <div class="rv-mode" role="group">
+                <button type="button" data-rv-mode="random" aria-pressed="true"><span data-l="es">Aleatorio</span><span data-l="en">Shuffled</span></button>
+                <button type="button" data-rv-mode="order" aria-pressed="false"><span data-l="es">En orden</span><span data-l="en">In order</span></button>
+            </div>
+            <button type="button" class="rv-close" aria-label="Cerrar / Close">✕</button>
+        </div>
+        <div class="rv-stage" aria-live="polite">
+            <figure class="rv-card"></figure>
+        </div>
+        <div class="rv-nav">
+            <button type="button" class="rv-prev" aria-label="Anterior / Previous">←</button>
+            <span class="rv-count"></span>
+            <button type="button" class="rv-next" aria-label="Siguiente / Next">→</button>
+        </div>
+    </div>
+    <script type="application/json" id="rv-data">
+[{"id":"RV-001","f":"2021-10-18","t":"I understand. I understand that I will never understand, but I choose to stand."},
+{"id":"RV-058","f":"2022-02-27","t":"wounded healer, u didnt need to be wounded"},
+{"id":"RV-002","f":"2022-02-28","t":"Victor, don't overthink."},
+{"id":"RV-059","f":"2022-03-02","t":"Darkness doesn't drive out darkness, only light can do that. Hate, cannot drive out hate, only love can do that!!!","a":"Martin Luther King"},
+{"id":"RV-003","f":"2022-09-09","t":"Cuando socialice, transmitir toda la vida que tengo dentro."},
+{"id":"RV-004","f":"2022-09-24","t":"Find your right speed: be interested, but not too loose."},
+{"id":"RV-005","f":"2022-09-29","t":"Hay personas que son luz: que a un evento no te apetece ir pero gracias a ellas sí. Buscar personas así."},
+{"id":"RV-006","f":"2022-11-15","t":"Siempre que se pronuncia la frase «esto no tiene ningún sentido», siempre hay un plano de realidad superior en el que tiene todo el sentido del mundo."},
+{"id":"RV-007","f":"2022-11-21","t":"I am superopen to be surprised about the possible significance of every relation."},
+{"id":"RV-008","f":"2023-04-08","t":"Víctor, eres capaz de mazo cosas, no tengas miedo."},
+{"id":"RV-009","f":"2023-04-08","t":"It is the first time in years you have motivation and time!!! That should be exciting, not scary."},
+{"id":"RV-010","f":"2023-06-04","t":"Frustración es probablemente aprendizaje: la loss function sigue actualizándose. But don't stop."},
+{"id":"RV-011","f":"2023-06-23","t":"Achieving perfection starts by letting perfection go and embracing the uncertainty."},
+{"id":"RV-012","f":"2023-07-07","t":"Chill, don't give up 🐌🩷"},
+{"id":"RV-013","f":"2023-08-09","t":"Start telling the truth to oneself and the world."},
+{"id":"RV-014","f":"2023-08-09","t":"Stop playing stupid games, you'll just get stupid prizes. Stop comparing yourself to other people."},
+{"id":"RV-015","f":"2023-08-09","t":"Happiness will never come from an «I'm good enough» game."},
+{"id":"RV-016","f":"2023-08-09","t":"Focus on what you can control, not on what you can't control."},
+{"id":"RV-017","f":"2023-08-10","t":"Self-trust: showing up for oneself, believing that you will be there. First step for self-care."},
+{"id":"RV-018","f":"2023-08-16","t":"No todo es flight or fight, el mundo no se está acabando, te lo prometo."},
+{"id":"RV-019","f":"2023-09-15","t":"Víctor, hay muchas cosas bonitas en la vida. Que no se te olvide."},
+{"id":"RV-020","f":"2023-10-30","t":"A lot of love, Víctor, you are alright 😘"},
+{"id":"RV-021","f":"2023-11-13","t":"Cuando tienes tiempo libre, primero te aburres, y luego empiezan a florecer cosas en el espacio que has dejado."},
+{"id":"RV-022","f":"2023-11-22","t":"Use your beliefs for good, not for bad."},
+{"id":"RV-023","f":"2023-11-29","t":"You don't need everyone to love you."},
+{"id":"RV-024","f":"2023-12-10","t":"You actually just have to compare with yourself yesterday, not with anyone else today."},
+{"id":"RV-025","f":"2023-12-14","t":"Desire is NOT neediness. Wanting is not needing."},
+{"id":"RV-026","f":"2024-01-13","t":"Ganar confianza en mí misma. Showing up for myself 💖"},
+{"id":"RV-027","f":"2024-01-27","t":"Nada es necesario, en el fondo. Todo es contingente."},
+{"id":"RV-028","f":"2024-01-27","t":"Estoy bien, las cosas van bien, no soy la víctima de ninguna novela, soy lo que soy, y punto, y no pasa nada, y no hay ningún problema."},
+{"id":"RV-029","f":"2024-01-27","t":"El mundo ya es increíble y yo no necesito nada más."},
+{"id":"RV-030","f":"2024-02-26","t":"Si yo ya soy excelente, vamos con calma. No te puedes tomar el mundo. Disfruta de la fruta, del dulce."},
+{"id":"RV-031","f":"2024-02-26","t":"No tengas miedo a ser libre. Te la mereces."},
+{"id":"RV-032","f":"2024-03-02","t":"Las acciones tienen consecuencias. Y podemos predecirlas, no es un todo o nada."},
+{"id":"RV-033","f":"2024-03-07","t":"Las cosas no salen siempre a la primera, y es normal."},
+{"id":"RV-034","f":"2024-03-12","t":"Aceptar la vida tal y como es, y ver que es brutal :)"},
+{"id":"RV-035","f":"2024-03-17","t":"I'm already special for myself ✌️ And very special for my friends."},
+{"id":"RV-036","f":"2024-03-20","t":"Saying NO is the starting point!"},
+{"id":"RV-037","f":"2024-05-07","t":"Bby, you are already perfect. Your life already tells an interesting story."},
+{"id":"RV-038","f":"2024-05-22","t":"Sentirme una víctima no me sienta bien: me gusta reaccionar."},
+{"id":"RV-039","f":"2024-05-22","t":"Toca el fondo y nada por el mundo."},
+{"id":"RV-040","f":"2024-06-05","t":"El Víctor productivo nos protege. Hay que protegerle y ayudarle."},
+{"id":"RV-041","f":"2024-06-05","t":"Si me permitiese equivocarme, celebraría estar haciéndolo mal y aprendiendo."},
+{"id":"RV-042","f":"2024-06-26","t":"I did the best I could with the time I was given."},
+{"id":"RV-043","f":"2024-08-29","t":"Las creencias son fantasías ✌️"},
+{"id":"RV-044","f":"2024-08-31","t":"I'm a process, not a product :)"},
+{"id":"RV-045","f":"2024-09-25","t":"I don't like taking too seriously the temporary images I have of myself."},
+{"id":"RV-046","f":"2025-01-19","t":"Viwi, date espacio para hablar contigo."},
+{"id":"RV-047","f":"2025-08-23","t":"Intentar ser más feliz en todo momento, intencionalmente: cuando me dé cuenta, una sonrisa, un esfuerzo."},
+{"id":"RV-048","f":"2025-10-22","t":"Víctor, love the conference energy pump. You still have time. Enjoy it ❤️"},
+{"id":"RV-049","f":"2026-01-02","t":"En la vida hay que tener cara, pero con respeto."},
+{"id":"RV-050","f":"2026-01-10","t":"No te creas tan especial: todos nos sentimos un fracaso. Hay que hacer lo que hay que hacer."},
+{"id":"RV-051","f":"2026-01-23","t":"Creo que nuestras creencias son importantes."},
+{"id":"RV-052","f":"2026-04-17","t":"Con vergüenza no se puede."},
+{"id":"RV-062","f":"2026-06-05","t":"El mayor sufrimiento humano no lo produce la enfermedad, sino la soledad. Nunca dejéis de acompañar al paciente. No solo hay que ser buenos médicos, también hay que ser médicos buenos.","a":"mi amigo Miguel Ángel, en su graduación","a_en":"my friend Miguel Ángel, at his graduation"},
+{"id":"RV-053","f":"2026-06-10","t":"Hay que correr con la cabeza."},
+{"id":"RV-054","f":"2026-07-05","t":"Me mueven mis deseos, eso pasa. Soy eso, es lo de siempre. Mola."},
+{"id":"RV-055","f":"2026-08-19","t":"Estar concentrado es fundamental para vivir la vida al máximo (como yo la entiendo)."},
+{"id":"RV-056","f":"2026-10-26","t":"One should always be in love."},
+{"id":"RV-057","f":"2026-11-08","t":"Vivir ese «¿quiénes somos?». Enorgullecerse de habitar siempre en la relación real."}]
+    </script>
 
     <!-- Book sheet: slides in over the page; the page stays visible behind it -->
     <div class="sp-sheet-bg" hidden></div>
@@ -1331,6 +1495,7 @@
     // Ideas: every card starts the same size; long ones end in "…" and open with a tap.
     (function () {
         document.querySelectorAll('.sp-idea').forEach(function (card) {
+            if (card.classList.contains('sp-idea-essay')) return;
             if (card.scrollHeight <= card.clientHeight + 4) return;
             card.classList.add('sp-idea-long');
             var b = document.createElement('button');
@@ -1342,6 +1507,154 @@
                 b.textContent = open ? '−' : '…';
             });
             card.appendChild(b);
+        });
+    })();
+    </script>
+    <script>
+    // Long ideas: the card holds the claims; the explanation opens over the page, with the timeline beside (wide) or below (narrow).
+    (function () {
+        document.querySelectorAll('.sp-essay-open').forEach(function (btn) {
+            var panel = document.getElementById(btn.getAttribute('aria-controls'));
+            var dim = panel.previousElementSibling;
+            var y = 0;
+            function close() {
+                panel.hidden = true; dim.hidden = true;
+                document.documentElement.classList.remove('sp-essay-lock');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.focus({ preventScroll: true });
+            }
+            btn.addEventListener('click', function () {
+                panel.hidden = false; dim.hidden = false;
+                document.documentElement.classList.add('sp-essay-lock');
+                btn.setAttribute('aria-expanded', 'true');
+                panel.scrollTop = 0;
+                panel.querySelector('.sp-essay-close').focus({ preventScroll: true });
+            });
+            panel.querySelector('.sp-essay-close').addEventListener('click', close);
+            dim.addEventListener('click', close);
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) close(); });
+            panel.querySelectorAll('.sp-chat-btn').forEach(function (b) {
+                b.addEventListener('click', function () {
+                    var f = document.getElementById(b.getAttribute('aria-controls'));
+                    f.hidden = !f.hidden;
+                    b.setAttribute('aria-expanded', String(!f.hidden));
+                });
+            });
+            // A phase letter in the text lights up its step on the timeline, and the other way round.
+            function light(ph) {
+                panel.querySelectorAll('[data-ph]').forEach(function (el) { el.classList.toggle('sp-ph-on', !!ph && el.dataset.ph === ph); });
+            }
+            panel.querySelectorAll('.sp-ph, .sp-tl li').forEach(function (el) {
+                el.addEventListener('mouseenter', function () { light(el.dataset.ph); });
+                el.addEventListener('mouseleave', function () { light(null); });
+                el.addEventListener('click', function () {
+                    var on = el.classList.contains('sp-ph-on');
+                    light(on ? null : el.dataset.ph);
+                });
+            });
+        });
+    })();
+    </script>
+    <script>
+    // Recordatorios vitales: shuffled by default, or in order; after 30 a card asks you to let them rest.
+    (function () {
+        var screen = document.getElementById('rv-screen');
+        if (!screen) return;
+        var all = JSON.parse(document.getElementById('rv-data').textContent);
+        var openBtn = document.querySelector('.rv-open');
+        var card = screen.querySelector('.rv-card');
+        var count = screen.querySelector('.rv-count');
+        var REST = 30;
+        var mode = 'random', deck = [], pos = 0, seen = 0, resting = false;
+        function lang() { return document.documentElement.dataset.lang === 'en' ? 'en' : 'es'; }
+        function shuffle(a) {
+            a = a.slice();
+            for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+            return a;
+        }
+        function build() { deck = mode === 'random' ? shuffle(all) : all.slice(); pos = 0; }
+        function fecha(f) {
+            var p = f.split('-');
+            var d = new Date(+p[0], +p[1] - 1, +p[2]);
+            return d.toLocaleDateString(lang() === 'en' ? 'en-GB' : 'es-ES', { day: 'numeric', month: 'short', year: 'numeric' }).replace('.', '');
+        }
+        function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+        function render() {
+            card.innerHTML = '';
+            var en = lang() === 'en';
+            if (resting) {
+                card.className = 'rv-card rv-rest';
+                card.appendChild(el('blockquote', null, en
+                    ? 'You have already seen ' + REST + ' reminders. Your cognitive abilities are probably saturated: let these ideas rest and come back another time.'
+                    : 'Ya has visto ' + REST + ' reafirmaciones. Probablemente tus capacidades cognitivas estén saturadas: deja reposar estas ideas y vuelve en otro momento.'));
+                card.appendChild(el('figcaption', null, en ? '(or keep going, if you really want to)' : '(o sigue, si de verdad quieres)'));
+                count.textContent = '';
+                return;
+            }
+            var r = deck[pos];
+            card.className = 'rv-card' + (r.t.length > 150 ? ' rv-long' : '');
+            var q = el('blockquote', null, r.t);
+            card.appendChild(q);
+            if (r.a) card.appendChild(el('p', 'rv-author', '— ' + (en && r.a_en ? r.a_en : r.a)));
+            card.appendChild(el('figcaption', null, (en ? 'private chat' : 'chat privado') + ' · ' + fecha(r.f)));
+            count.textContent = (pos + 1) + ' / ' + deck.length;
+        }
+        function next() {
+            seen++;
+            if (seen === REST && !resting) { resting = true; render(); return; }
+            resting = false;
+            pos++;
+            if (pos >= deck.length) { if (mode === 'random') { build(); } else { pos = 0; } }
+            render();
+        }
+        function prev() {
+            if (resting) { resting = false; render(); return; }
+            if (pos > 0) { pos--; render(); }
+        }
+        function setMode(m) {
+            mode = m; resting = false;
+            screen.querySelectorAll('[data-rv-mode]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.rvMode === m)); });
+            build(); render();
+        }
+        function open() {
+            screen.hidden = false;
+            document.documentElement.classList.add('rv-lock');
+            openBtn.setAttribute('aria-expanded', 'true');
+            seen = 0; resting = false; build(); render();
+            screen.querySelector('.rv-next').focus({ preventScroll: true });
+        }
+        function close() {
+            screen.hidden = true;
+            document.documentElement.classList.remove('rv-lock');
+            openBtn.setAttribute('aria-expanded', 'false');
+            openBtn.focus({ preventScroll: true });
+        }
+        openBtn.addEventListener('click', open);
+        screen.querySelector('.rv-close').addEventListener('click', close);
+        screen.querySelector('.rv-next').addEventListener('click', next);
+        screen.querySelector('.rv-prev').addEventListener('click', prev);
+        screen.querySelectorAll('[data-rv-mode]').forEach(function (b) { b.addEventListener('click', function () { setMode(b.dataset.rvMode); }); });
+        document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.addEventListener('click', function () { if (!screen.hidden) render(); }); });
+        // Like stories: a tap on the left third goes back, anywhere else goes forward; a swipe also works.
+        var stage = screen.querySelector('.rv-stage');
+        var x0 = null, y0 = null, swiped = false;
+        stage.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; swiped = false; }, { passive: true });
+        stage.addEventListener('touchend', function (e) {
+            if (x0 === null) return;
+            var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+            if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { swiped = true; if (dx < 0) next(); else prev(); }
+            x0 = null;
+        });
+        stage.addEventListener('click', function (e) {
+            if (swiped) { swiped = false; return; }
+            var box = stage.getBoundingClientRect();
+            if (e.clientX - box.left < box.width / 3) prev(); else next();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (screen.hidden) return;
+            if (e.key === 'Escape') close();
+            else if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+            else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
         });
     })();
     </script>
