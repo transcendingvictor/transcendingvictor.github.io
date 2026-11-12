@@ -194,6 +194,21 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
         # Cancioncillas: «simbolo: ♪» (ligera) o «simbolo: ♫» (más seria)
         m = re.search(r"^---\n.*?^simbolo:\s*(\S+)", open(ruta, encoding="utf-8").read(), flags=re.S | re.M)
         p["simbolo"] = m.group(1) if m else ""
+    # Fotos del original (libreta o papeles sueltos): «fotos: originales/a.jpg, originales/b.jpg» en orden de lectura,
+    # y «original: …» con una frase breve sobre de dónde salen
+    p["fotos"], p["original"] = [], ""
+    if os.path.exists(ruta):
+        cab = re.search(r"^---\n(.*?)^---", open(ruta, encoding="utf-8").read(), flags=re.S | re.M)
+        cab = cab.group(1) if cab else ""
+        m = re.search(r"^fotos:\s*(.+)$", cab, flags=re.M)
+        if m: p["fotos"] = [f.strip() for f in m.group(1).split(",") if f.strip()]
+        m = re.search(r"^original:\s*(.+)$", cab, flags=re.M)
+        if m: p["original"] = m.group(1).strip()
+        # «aviso: …» = nota visible encima del texto (p. ej., transcripción provisional)
+        m = re.search(r"^aviso:\s*(.+)$", cab, flags=re.M)
+        p["aviso"] = m.group(1).strip() if m else ""
+    else:
+        p["aviso"] = ""
     # Imagen del poema, si la hay: imagenes/CODIGO.svg (o .png / .jpg)
     p["imagen"] = next((f"imagenes/{r['codigo']}.{ext}" for ext in ("svg", "png", "jpg")
                         if os.path.exists(os.path.join(HERE, "imagenes", f"{r['codigo']}.{ext}"))), "")

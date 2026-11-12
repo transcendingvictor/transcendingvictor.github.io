@@ -2,6 +2,8 @@
 codigo: CSAP-011
 titulo: ¿Miedo?
 dedicatoria_pista: hiacia
+fotos: originales/CSAP-011-miedo-borrador.jpg
+original: Borrador a mano, en una hoja de la libreta que me regaló mi polaca.
 ---
 
 ## Explicación
