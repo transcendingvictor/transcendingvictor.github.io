@@ -204,6 +204,11 @@ for r in csv.DictReader(open(os.path.join(HERE, "datos", "catalogo.csv"), encodi
         if m: p["fotos"] = [f.strip() for f in m.group(1).split(",") if f.strip()]
         m = re.search(r"^original:\s*(.+)$", cab, flags=re.M)
         if m: p["original"] = m.group(1).strip()
+        # «aviso: …» = nota visible encima del texto (p. ej., transcripción provisional)
+        m = re.search(r"^aviso:\s*(.+)$", cab, flags=re.M)
+        p["aviso"] = m.group(1).strip() if m else ""
+    else:
+        p["aviso"] = ""
     # Imagen del poema, si la hay: imagenes/CODIGO.svg (o .png / .jpg)
     p["imagen"] = next((f"imagenes/{r['codigo']}.{ext}" for ext in ("svg", "png", "jpg")
                         if os.path.exists(os.path.join(HERE, "imagenes", f"{r['codigo']}.{ext}"))), "")

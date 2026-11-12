@@ -399,6 +399,7 @@ const Obra = (() => {
       }
       if (p.primero) main.append(el("p", { class: "primero" }, T("primero")));
       main.append(meta);
+      if (p.aviso) main.append(el("p", { class: "aviso-texto" }, p.aviso));
 
       const cuerpo = el("div");
       // Todo el análisis cuelga de un interruptor: apagado, solo queda el poema

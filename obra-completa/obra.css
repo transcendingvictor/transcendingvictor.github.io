@@ -281,3 +281,4 @@ h1 .nota-musica { position: relative; top: auto; left: auto; display: inline-gri
 .original { margin-top: 2.5rem; }
 .original img { display: block; width: 100%; height: auto; margin: 1rem 0; border: 2px solid var(--tinta); border-radius: 6px; }
 @media (min-width: 900px) { .original { width: min(1100px, 92vw); margin-left: 50%; transform: translateX(-50%); } }
+.aviso-texto { margin: 0.8rem 0 1.2rem; padding: 0.6rem 0.9rem; border-left: 3px solid #a0692b; background: #fdf3e3; font-size: 0.9rem; }
