@@ -75,3 +75,8 @@
 .fl-meto { display: flex; gap: 0.5rem; align-items: center; font-size: 1rem; }
 .fl-meto .v { font-size: 1.8rem; } .fl-meto .flecha { color: #8a4fa8; font-size: 1.4rem; }
 .fl-card p { text-align: left; }
+.fl-meto .sala { border: 2px solid #1c1c1c; border-radius: 6px; padding: 0.15rem 0.5rem; background: #fde7b0; font-weight: 700; }
+.fl-meto .gente { font-size: 1.4rem; letter-spacing: 0.1rem; }
+.fl-inef { display: flex; align-items: center; gap: 0.6rem; }
+.fl-inef .dedo { font-size: 2rem; } .fl-inef .duda { font-size: 1.8rem; font-weight: 700; color: #8a4fa8; }
+.fl-auto .yo { color: #8a4fa8; font-size: 1.5rem; margin-left: 0.2rem; }
