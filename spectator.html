@@ -20,7 +20,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css?v=20261109a" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261112c" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261112d" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -935,6 +935,19 @@
             </aside>
             <p class="sp-note rc-intro"><span data-l="es">Ya que has recorrido todo este camino tan personal: aquí hay algunos recordatorios para mí mismo.</span><span data-l="en">Since you have come all this personal way: here are some reminders to myself.</span></p>
 
+            <section class="sp-list jg">
+                <h2><span data-l="es">Ven a jugar conmigo</span><span data-l="en">Come and play with me</span></h2>
+                <p class="sp-note"><span data-l="es">Adivina dónde está el centro de este círculo. Toca.</span><span data-l="en">Guess where the centre of this circle is. Tap.</span></p>
+                <div class="jg-board" id="jg-board" role="button" aria-label="Círculo / Circle">
+                    <svg id="jg-svg" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid meet"></svg>
+                </div>
+                <div class="jg-bar">
+                    <p class="jg-msg" id="jg-msg" aria-live="polite"></p>
+                    <p class="jg-total"><span data-l="es">Puntos</span><span data-l="en">Points</span>: <b id="jg-total">0</b></p>
+                    <button type="button" class="jg-next" id="jg-next" hidden><span data-l="es">Otro círculo</span><span data-l="en">Another circle</span></button>
+                </div>
+            </section>
+
             <section class="sp-list">
                 <h2><span data-l="es">Objetivos de 2026</span><span data-l="en">Goals for 2026</span> <span class="rc-state"><span data-l="es">abierto</span><span data-l="en">open</span></span></h2>
                 <p class="sp-note"><span data-l="es">Me los puse en julio de 2026. Ser más…</span><span data-l="en">I set them in July 2026. To be more…</span></p>
@@ -1647,6 +1660,45 @@
             else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
         });
         build(); render();
+    })();
+    </script>
+    <script>
+    (function () {
+        // Ven a jugar conmigo · Adivina el centro del círculo
+        var svg = document.getElementById('jg-svg'); if (!svg) return;
+        var NS = 'http://www.w3.org/2000/svg', W = 300, H = 200, c = null, done = false;
+        var msg = document.getElementById('jg-msg'), tot = document.getElementById('jg-total'), next = document.getElementById('jg-next');
+        var total = 0; try { total = +localStorage.getItem('jg-centro') || 0; } catch (e) {}
+        tot.textContent = total;
+        var es = function () { return document.documentElement.dataset.lang !== 'en'; };
+        function mk(tag, at) { var e = document.createElementNS(NS, tag); for (var k in at) e.setAttribute(k, at[k]); svg.appendChild(e); return e; }
+        var COL = ['#e5d8f7', '#fcd8d8', '#c4e6cc', '#fde7b0', '#d6e6f7'];
+        function nuevo() {
+            svg.innerHTML = ''; done = false; next.hidden = true;
+            var r = 25 + Math.random() * 60;
+            c = { x: r + 5 + Math.random() * (W - 2 * r - 10), y: r + 5 + Math.random() * (H - 2 * r - 10), r: r };
+            mk('circle', { cx: c.x, cy: c.y, r: r, fill: COL[Math.floor(Math.random() * COL.length)], stroke: '#1c1c1c', 'stroke-width': 2.5 });
+            msg.textContent = es() ? 'Toca donde creas que está el centro.' : 'Tap where you think the centre is.';
+        }
+        svg.addEventListener('click', function (ev) {
+            if (done) return;
+            var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+            var p = pt.matrixTransform(svg.getScreenCTM().inverse());
+            var d = Math.hypot(p.x - c.x, p.y - c.y), f = d / c.r;
+            var pts = Math.max(0, Math.round(100 * (1 - f)));
+            done = true; total += pts; tot.textContent = total;
+            try { localStorage.setItem('jg-centro', total); } catch (e) {}
+            mk('line', { x1: c.x, y1: c.y, x2: p.x, y2: p.y, stroke: '#8a4fa8', 'stroke-width': 2, 'stroke-dasharray': '4 3' });
+            mk('circle', { cx: c.x, cy: c.y, r: Math.max(d, 0.1), fill: 'none', stroke: '#8a4fa8', 'stroke-width': 1, opacity: 0.6 });
+            mk('circle', { cx: c.x, cy: c.y, r: 4, fill: '#1c1c1c' });
+            mk('circle', { cx: p.x, cy: p.y, r: 4, fill: '#d14b4b', stroke: '#fff', 'stroke-width': 1.5 });
+            var pct = Math.round(f * 100);
+            var txt = pts >= 95 ? (es() ? '¡Clavado!' : 'Spot on!') : pts >= 80 ? (es() ? '¡Muy cerca!' : 'Very close!') : pts >= 50 ? (es() ? 'No está mal.' : 'Not bad.') : (es() ? 'Uy…' : 'Oops…');
+            msg.textContent = txt + ' ' + (es() ? ('Te has quedado a un ' + pct + ' % del radio: +' + pts + ' puntos.') : ('You were ' + pct + '% of the radius away: +' + pts + ' points.'));
+            next.hidden = false;
+        });
+        next.addEventListener('click', nuevo);
+        nuevo();
     })();
     </script>
 </body>
