@@ -4257,6 +4257,43 @@
   "primero": false
  },
  {
+  "codigo": "TEM-004",
+  "titulo": "amar como motor",
+  "formato": "tema",
+  "forma": null,
+  "fecha_publicacion": "",
+  "fecha_escritura": "2018-12-31",
+  "fuente": "«Libreta» (hoja suelta, LIB-01)",
+  "url": "",
+  "idioma": "es",
+  "epoca": "",
+  "tema": "",
+  "etiquetas": [],
+  "dedicatoria_pista": "",
+  "subtitulo": "",
+  "texto": "Amar como motor, como un barco de vapor, se guía por la babia y\nsoy yo su conductor.\nNo voy hacia nadie por que dirijo mi timón,\namar como motor no es amor como dolor\n\nAmar como motor para romper ¡¡rraaass!! la rutina\nrutina que te aliena y que te alinea con la pena\ny esa envidia que te frena es el fuego que se prende.\nes el juego que se enciende no es el ciego que se mienta\nes el luego que pretende SER\n    que extiende el quererere\n        que te cambia un ¿QUÉ?\n            por un ¡YES!\n\nY esas luces rotas que llevan aquí desde que llegué\nY esas cosas rojas que no se saben reconocer\nY esas mariposas que parece que están locas\nson las que al final harán que no te calles\n    y no que que te YES\n\nAfirma tu día a día      atrévete a pensar pero atrévete a vivir\nconfirma tu alegría      pero atrévete a atrever si no no sales de ahí.\ny si firmas esta vía      Cambia de color cambia gris por esplendor\ncomo tu forma de vida      y que ese cambio en tu vida se conciba con amor\n\nRecuerdas las mariposas      ya no irás a la deriva\nsácalas ya de estómago      serás la persona activa\nsi al salir por el esófago      que con fuerza de sus alas\nencima de ellas te posas      tan rápido como balas\ncambiarán mucho las cosas      volarás siempre hacia arriba\n\nAmar como motor que arranque más allá del cielo\ncielo que te rodea      con tu vuelo que planea\nsobre el lelo que te vea      pensará que tú estás ido\nno sabrá nunca el sentido      pues saldrá poco del nido\ny querrá sentirse unido a aquel\n        que no lo grite YES\n    que no cambie letras, le cambié a\n\nAmar como motor, motor de todo lo que hagas\nMotor como mortero mártir\nMi trama no es matar fácil\nVoy a meter el motor en un mito más\nmortero como brillar, mortero como quererte\nmortero no como muerte sino como empezar\n\nAprovecha las corrientes      atrévete a pensar…\npero no seas tan corriente      … sales de ahí\nsé seguro al más valiente,      Cambia al mejorar, cambia al cambiar\nantes de eso detente      disfruta de tu vida mientras\n                                cambies a l a m a r",
+  "audio_video": "",
+  "escritura_antes": false,
+  "escritura_aprox": false,
+  "historia": "",
+  "comentario_forma": "",
+  "explicacion": "",
+  "explicacion_estado": "",
+  "temas": null,
+  "anotaciones": [],
+  "valoraciones": [],
+  "lectura": null,
+  "revisado": "",
+  "simbolo": "♫",
+  "fotos": [
+   "originales/TEM-004-amar-como-motor-h1.jpg",
+   "originales/TEM-004-amar-como-motor-h2.jpg"
+  ],
+  "original": "Hoja suelta guardada con mi libreta de la polaquita. La primera cara la escribí el 31 de diciembre de 2018 y la segunda el 1 de enero de 2019.",
+  "imagen": "",
+  "primero": false
+ },
+ {
   "codigo": "CAN-030",
   "titulo": "se empezaron a gritar",
   "formato": "cancioncilla",
@@ -5287,7 +5324,7 @@
   "forma": null,
   "fecha_publicacion": "",
   "fecha_escritura": "2019-08",
-  "fuente": "Borradores del blog",
+  "fuente": "«Libreta» (hoja suelta, LIB-01)",
   "url": "",
   "idioma": "es",
   "epoca": "",
@@ -5309,8 +5346,10 @@
   "lectura": null,
   "revisado": "",
   "simbolo": "♫",
-  "fotos": [],
-  "original": "",
+  "fotos": [
+   "originales/TEM-002-neoposmoderno-h1.jpg"
+  ],
+  "original": "Hoja suelta guardada con mi libreta de la polaquita, con las estrofas numeradas a mano.",
   "imagen": "",
   "primero": false
  },
@@ -5321,7 +5360,7 @@
   "forma": null,
   "fecha_publicacion": "",
   "fecha_escritura": "2020",
-  "fuente": "Borradores del blog",
+  "fuente": "«Libreta» (hoja suelta, LIB-01)",
   "url": "",
   "idioma": "es",
   "epoca": "",
@@ -5343,8 +5382,10 @@
   "lectura": null,
   "revisado": "",
   "simbolo": "♪",
-  "fotos": [],
-  "original": "",
+  "fotos": [
+   "originales/CAN-032-conectarrrr-h1.jpg"
+  ],
+  "original": "Hoja suelta guardada con mi libreta de la polaquita, escrita encima de unos apuntes de química.",
   "imagen": "",
   "primero": false
  },
@@ -5491,7 +5532,7 @@
   "forma": null,
   "fecha_publicacion": "",
   "fecha_escritura": "2020-04",
-  "fuente": "Borradores del blog",
+  "fuente": "«Libreta» (hoja suelta, LIB-01)",
   "url": "",
   "idioma": "es",
   "epoca": "",
@@ -5513,8 +5554,10 @@
   "lectura": null,
   "revisado": "",
   "simbolo": "♪",
-  "fotos": [],
-  "original": "",
+  "fotos": [
+   "originales/CAN-027-la-palabra-h1.jpg"
+  ],
+  "original": "Hoja suelta guardada con mi libreta de la polaquita.",
   "imagen": "",
   "primero": false
  },
