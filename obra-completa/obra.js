@@ -164,7 +164,7 @@ const Obra = (() => {
             el("span", { class: "f" }, fechaLarga(fecha(p)) + marca));
           // Etiquetas: el blog de donde viene y, si la tiene, la dedicatoria con su código
           const etiquetas = el("span", { class: "etiquetas" },
-            el("span", { class: "tipo" }, { banales: "mentiras banales", inedito: "inédito", cs: "ciencias sociales", instagram: "instagram", borradores: "borradores", libreta: "libreta", yosolita: "yo solita" }[origen(p)]));
+            el("span", { class: "tipo" }, { banales: "mentiras banales", inedito: "inédito", cs: "ciencias sociales", instagram: "instagram", borradores: "borradores", libreta: /^«Libreta»/.test(p.fuente) ? "«libreta»" : "libreta", yosolita: "yo solita" }[origen(p)]));
           if (p.dedicatoria_pista) etiquetas.append(el("span", { class: "dedica", title: T("dedicada") }, "✉ " + p.dedicatoria_pista));
           b.append(etiquetas);
           b.style.setProperty("--color", COLORES[k++ % COLORES.length]);
