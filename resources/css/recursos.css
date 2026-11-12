@@ -50,3 +50,28 @@
 .jp details { margin-top: 0.3rem; font-size: 0.95rem; }
 .jp summary { cursor: pointer; color: #8a4fa8; font-size: 0.9rem; }
 .jp details p { margin: 0.4rem 0 0; }
+
+/* Fenómenos del lenguaje favoritos: ranking visual */
+.fl-list { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: 0.9rem; }
+@media (min-width: 760px) { .fl-list { grid-template-columns: 1fr 1fr; } }
+.fl-card { position: relative; border: 2px solid #1c1c1c; border-radius: 12px; background: #fff; padding: 0.9rem 1rem 1rem; }
+.fl-card .sp-rank { position: absolute; top: -0.7rem; left: -0.7rem; display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; border: 2px solid #1c1c1c; background: #e5d8f7; font-weight: 700; }
+.fl-card h3 { margin: 0.2rem 0 0.4rem; font-size: 1.2rem; }
+.fl-card p { margin: 0.3rem 0; font-size: 0.95rem; line-height: 1.45; }
+.fl-ej { font-style: italic; color: #444; }
+.fl-fav { background: #fff4c2; border-radius: 6px; padding: 0.35rem 0.55rem; }
+.fl-fav span { color: #9a6f0e; }
+.fl-visual { min-height: 5.5rem; display: grid; place-items: center; background: #f1fcee; border-radius: 8px; margin-bottom: 0.5rem; }
+.fl-visual svg { width: 100%; max-width: 240px; height: auto; font-family: "Aleo", serif; font-size: 18px; }
+.fl-visual svg line { stroke: #8a4fa8; stroke-width: 2.5; }
+.fl-visual svg .b { font-weight: 700; font-size: 22px; }
+.fl-pal { display: flex; gap: 2px; font-size: 1.5rem; font-weight: 700; }
+.fl-pal span { padding: 0 0.2rem; }
+.fl-pal .eje { border-left: 2px dashed #8a4fa8; border-right: 2px dashed #8a4fa8; color: #8a4fa8; }
+.fl-auto { display: flex; gap: 4px; align-items: center; font-weight: 700; }
+.fl-auto span { border: 2px solid #1c1c1c; border-radius: 6px; padding: 0.15rem 0.4rem; background: #fde7b0; }
+.fl-auto em { margin-left: 0.4rem; color: #8a4fa8; font-style: normal; }
+.fl-inef .bocadillo { display: inline-block; border: 2px solid #1c1c1c; border-radius: 1.2rem; padding: 0.3rem 1.4rem; font-size: 1.6rem; background: #fff; position: relative; }
+.fl-meto { display: flex; gap: 0.5rem; align-items: center; font-size: 1rem; }
+.fl-meto .v { font-size: 1.8rem; } .fl-meto .flecha { color: #8a4fa8; font-size: 1.4rem; }
+.fl-card p { text-align: left; }
