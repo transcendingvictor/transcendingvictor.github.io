@@ -2,6 +2,8 @@
 codigo: CSAP-016
 titulo: Será
 dedicatoria_pista: carmela
+fotos: originales/CSAP-016-sera-borrador.jpg
+original: Borrador a mano, escrito en el campamento de Vera (Cáceres) en julio de 2017.
 ---
 
 ## Explicación

@@ -2029,6 +2029,202 @@
   "primero": false
  },
  {
+  "codigo": "CSAP-011",
+  "titulo": "¿Miedo?",
+  "formato": "poema",
+  "forma": {
+   "estado": "sin revisar · calculada el 2026-10-30",
+   "estrofa": "soneto",
+   "medida": "endecasílabos",
+   "esquema": "ABBA ABBA CDE CDE",
+   "rimas": {
+    "a": "consonante -or · sabor, esplendor, motor, dolor",
+    "b": "consonante -oses · toses, esposes, dioses, poses",
+    "c": "consonante -izca · pellizca, pizca",
+    "d": "consonante -erno · eterno, infierno",
+    "e": "consonante -oto · terremoto, roto"
+   },
+   "versos": {
+    "1": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "2": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "3": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "4": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": "«explendor» por «esplendor»"
+    },
+    "5": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "6": {
+     "silabas": 11,
+     "rima": "B",
+     "nota": ""
+    },
+    "7": {
+     "silabas": 10,
+     "rima": "B",
+     "nota": "11 con hiato en «no | existen»"
+    },
+    "8": {
+     "silabas": 11,
+     "rima": "A",
+     "nota": ""
+    },
+    "9": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "10": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "11": {
+     "silabas": 11,
+     "rima": "E",
+     "nota": ""
+    },
+    "12": {
+     "silabas": 11,
+     "rima": "C",
+     "nota": ""
+    },
+    "13": {
+     "silabas": 11,
+     "rima": "D",
+     "nota": ""
+    },
+    "14": {
+     "silabas": 11,
+     "rima": "E",
+     "nota": ""
+    }
+   },
+   "escalonados": [],
+   "personas": null
+  },
+  "fecha_publicacion": "2017-08-01",
+  "fecha_escritura": "2017-02-15",
+  "fuente": "Ciencias sociales y asuntos personales",
+  "url": "https://cienciassocialesyasuntospersonales.blogspot.com/2017/08/miedo.html",
+  "idioma": "es",
+  "epoca": "E1-adolescencia (2016-2017)",
+  "tema": "Miedo a lo desconocido y adaptarse al cambio",
+  "etiquetas": [
+   "miedo",
+   "cambio"
+  ],
+  "dedicatoria_pista": "hiacia",
+  "subtitulo": "",
+  "texto": "Aunque al principio no guste el sabor\npuesto que con el nuevo ambiente toses\n(cuando todo es extraño) no te esposes,\nintenta desarrollar tu explendor.\n\nPorque cuando arrancamos el motor\ny todo nos sabe a zumo de dioses\nsomos quien somos, no existen poses\nno existen miedos no existe el dolor.\n\nPero llega la cascada y pellizca.\nEl sueño termina en un shock eterno.\nNo sabes qué hacer en un terremoto.\n\nEl sufrimiento te deja una pizca\nde algo que posees en el infierno:\nun vaso vacío en un barco roto.\n\n(hiacia)\n\nVí. Ab. Al.",
+  "audio_video": "",
+  "escritura_antes": false,
+  "escritura_aprox": true,
+  "historia": "",
+  "comentario_forma": "",
+  "explicacion": "",
+  "explicacion_estado": "",
+  "temas": null,
+  "anotaciones": [
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 4,
+    "hasta": 4,
+    "texto": "«explendor» por «esplendor»",
+    "metro": true
+   },
+   {
+    "capa": "forma",
+    "autor": "claude",
+    "desde": 7,
+    "hasta": 7,
+    "texto": "11 con hiato en «no | existen»",
+    "metro": true
+   }
+  ],
+  "valoraciones": [],
+  "lectura": {
+   "fecha": "2026-10-30",
+   "estado": "provisional",
+   "nota": "7",
+   "rasgos": {
+    "profundidad": 3,
+    "dureza": 3,
+    "pintar conceptos": 3,
+    "sonoridad": 4
+   },
+   "texto": "Un ciclo en dos tiempos. Los cuartetos van de la incomodidad del ambiente nuevo al momento en que todo sabe a zumo de dioses y no hay miedo. Los tercetos son la caída: cascada, shock, terremoto, infierno. El último verso es una imagen doble de vacío: un vaso vacío dentro de un barco roto. La pregunta del título queda en el aire: el miedo no aparece en la parte buena y sí en lo que queda después.",
+   "anotaciones": [
+    {
+     "capa": "sentido",
+     "autor": "provisional",
+     "texto": "Los cuartetos: del mal sabor del ambiente nuevo al momento en que no existen miedos.",
+     "desde": 1,
+     "hasta": 8
+    },
+    {
+     "capa": "sentido",
+     "autor": "provisional",
+     "texto": "No te encadenes a lo extraño del principio.",
+     "fragmento": "no te esposes"
+    },
+    {
+     "capa": "sentido",
+     "autor": "provisional",
+     "texto": "La ambrosía o el néctar de la mitología griega.",
+     "fragmento": "zumo de dioses"
+    },
+    {
+     "capa": "sentido",
+     "autor": "provisional",
+     "texto": "Los tercetos son la caída: cascada, shock, terremoto, infierno.",
+     "desde": 9,
+     "hasta": 14
+    },
+    {
+     "capa": "sentido",
+     "autor": "provisional",
+     "texto": "Del sufrimiento queda solo una pizca, que rima con el pellizco de la cascada.",
+     "fragmento": "una pizca"
+    },
+    {
+     "capa": "sentido",
+     "autor": "provisional",
+     "texto": "Un vacío dentro de otro: lo que se posee en el infierno.",
+     "fragmento": "un vaso vacío en un barco roto"
+    }
+   ]
+  },
+  "revisado": "",
+  "simbolo": "",
+  "fotos": [
+   "originales/CSAP-011-miedo-borrador.jpg"
+  ],
+  "original": "Borrador a mano, en una hoja de la libreta que me regaló mi polaca.",
+  "aviso": "",
+  "imagen": "",
+  "titulo_en": "Fear?",
+  "texto_en": "Even if at first you don't like the taste\nsince in the new air you cough\n(when everything is strange) don't handcuff yourself,\ntry to develop your splendour.\n\nBecause when we start the engine\nand everything tastes like the juice of gods\nwe are who we are, there are no poses\nthere are no fears, there is no pain.\n\nBut the waterfall comes and pinches.\nThe dream ends in an eternal shock.\nYou don't know what to do in an earthquake.\n\nSuffering leaves you a pinch\nof something you own in hell:\nan empty glass on a broken boat.\n\n(hiacia)\n\nVí. Ab. Al.",
+  "primero": false
+ },
+ {
   "codigo": "CSAP-010",
   "titulo": "infinitaVIDA MORTÍFERA",
   "formato": "poema",
@@ -2511,26 +2707,25 @@
   "primero": false
  },
  {
-  "codigo": "CSAP-011",
-  "titulo": "¿Miedo?",
+  "codigo": "CSAP-016",
+  "titulo": "Será",
   "formato": "poema",
   "forma": {
    "estado": "sin revisar · calculada el 2026-10-30",
    "estrofa": "soneto",
    "medida": "endecasílabos",
-   "esquema": "ABBA ABBA CDE CDE",
+   "esquema": "ABBA ABBA CDC DCD",
    "rimas": {
-    "a": "consonante -or · sabor, esplendor, motor, dolor",
-    "b": "consonante -oses · toses, esposes, dioses, poses",
-    "c": "consonante -izca · pellizca, pizca",
-    "d": "consonante -erno · eterno, infierno",
-    "e": "consonante -oto · terremoto, roto"
+    "a": "consonante -ente · simplemente, siente, valiente, probablemente",
+    "b": "consonante -ana · manzana, empana, membrana, gana",
+    "c": "consonante -ón · ficción, acción, buscón",
+    "d": "consonante -iva · cautivas, pasiva, arriba (arriba se escribe con b, pero suena igual)"
    },
    "versos": {
     "1": {
      "silabas": 11,
      "rima": "A",
-     "nota": ""
+     "nota": "leyendo «prohibido» en tres sílabas, como se pronuncia; si no, 12"
     },
     "2": {
      "silabas": 11,
@@ -2545,7 +2740,7 @@
     "4": {
      "silabas": 11,
      "rima": "A",
-     "nota": "«explendor» por «esplendor»"
+     "nota": ""
     },
     "5": {
      "silabas": 11,
@@ -2558,9 +2753,9 @@
      "nota": ""
     },
     "7": {
-     "silabas": 10,
+     "silabas": 11,
      "rima": "B",
-     "nota": "11 con hiato en «no | existen»"
+     "nota": ""
     },
     "8": {
      "silabas": 11,
@@ -2579,45 +2774,45 @@
     },
     "11": {
      "silabas": 11,
-     "rima": "E",
+     "rima": "C",
      "nota": ""
     },
     "12": {
      "silabas": 11,
-     "rima": "C",
+     "rima": "D",
      "nota": ""
     },
     "13": {
      "silabas": 11,
-     "rima": "D",
+     "rima": "C",
      "nota": ""
     },
     "14": {
      "silabas": 11,
-     "rima": "E",
+     "rima": "D",
      "nota": ""
     }
    },
    "escalonados": [],
    "personas": null
   },
-  "fecha_publicacion": "2017-08-01",
-  "fecha_escritura": "",
+  "fecha_publicacion": "2018-03-28",
+  "fecha_escritura": "2017-07-08",
   "fuente": "Ciencias sociales y asuntos personales",
-  "url": "https://cienciassocialesyasuntospersonales.blogspot.com/2017/08/miedo.html",
+  "url": "https://cienciassocialesyasuntospersonales.blogspot.com/2018/03/sera.html",
   "idioma": "es",
-  "epoca": "E1-adolescencia (2016-2017)",
-  "tema": "Miedo a lo desconocido y adaptarse al cambio",
+  "epoca": "E2-bachillerato (2018-2019)",
+  "tema": "Un amor prohibido y la pasividad entre dos personas",
   "etiquetas": [
-   "miedo",
-   "cambio"
+   "amor",
+   "prohibido"
   ],
-  "dedicatoria_pista": "hiacia",
+  "dedicatoria_pista": "carmela",
   "subtitulo": "",
-  "texto": "Aunque al principio no guste el sabor\npuesto que con el nuevo ambiente toses\n(cuando todo es extraño) no te esposes,\nintenta desarrollar tu explendor.\n\nPorque cuando arrancamos el motor\ny todo nos sabe a zumo de dioses\nsomos quien somos, no existen poses\nno existen miedos no existe el dolor.\n\nPero llega la cascada y pellizca.\nEl sueño termina en un shock eterno.\nNo sabes qué hacer en un terremoto.\n\nEl sufrimiento te deja una pizca\nde algo que posees en el infierno:\nun vaso vacío en un barco roto.\n\n(hiacia)\n\nVí. Ab. Al.",
+  "texto": "Será un amor prohibido simplemente.\nSerá la misma maldita manzana.\nSerá el no conseguir lo que me empana\no no poder hacer lo que se siente.\n\nSerá que no sé si hay que ser valiente.\n¿Será pasión que cruza la membrana\nde hacer todo lo que nos da la gana?\nSerá olvidar, será, probablemente.\n\nSonrisas sin lágrimas de ficción,\nrecuerdos de esas miradas cautivas,\nla gran historia sin ninguna acción.\n\nSerás tú y tu voluntad pasiva.\nSeré yo por mi afán de ser buscón.\nSerá todo, un mundo patas arriba.\n\n(carmela)\n\nVí. Ab. Al.",
   "audio_video": "",
   "escritura_antes": false,
-  "escritura_aprox": false,
+  "escritura_aprox": true,
   "historia": "",
   "comentario_forma": "",
   "explicacion": "",
@@ -2627,17 +2822,9 @@
    {
     "capa": "forma",
     "autor": "claude",
-    "desde": 4,
-    "hasta": 4,
-    "texto": "«explendor» por «esplendor»",
-    "metro": true
-   },
-   {
-    "capa": "forma",
-    "autor": "claude",
-    "desde": 7,
-    "hasta": 7,
-    "texto": "11 con hiato en «no | existen»",
+    "desde": 1,
+    "hasta": 1,
+    "texto": "leyendo «prohibido» en tres sílabas, como se pronuncia; si no, 12",
     "metro": true
    }
   ],
@@ -2648,60 +2835,63 @@
    "nota": "7",
    "rasgos": {
     "profundidad": 3,
-    "dureza": 3,
-    "pintar conceptos": 3,
+    "dureza": 2,
+    "pintar conceptos": 4,
     "sonoridad": 4
    },
-   "texto": "Un ciclo en dos tiempos. Los cuartetos van de la incomodidad del ambiente nuevo al momento en que todo sabe a zumo de dioses y no hay miedo. Los tercetos son la caída: cascada, shock, terremoto, infierno. El último verso es una imagen doble de vacío: un vaso vacío dentro de un barco roto. La pregunta del título queda en el aire: el miedo no aparece en la parte buena y sí en lo que queda después.",
+   "texto": "",
    "anotaciones": [
     {
      "capa": "sentido",
      "autor": "provisional",
-     "texto": "Los cuartetos: del mal sabor del ambiente nuevo al momento en que no existen miedos.",
+     "texto": "Los cuartetos: una lista de hipótesis sobre por qué un amor no llega a pasar.",
      "desde": 1,
      "hasta": 8
     },
     {
      "capa": "sentido",
      "autor": "provisional",
-     "texto": "No te encadenes a lo extraño del principio.",
-     "fragmento": "no te esposes"
+     "texto": "La manzana del Génesis, el fruto prohibido, que enlaza con el «amor prohibido» del verso anterior.",
+     "fragmento": "la misma maldita manzana"
     },
     {
      "capa": "sentido",
      "autor": "provisional",
-     "texto": "La ambrosía o el néctar de la mitología griega.",
-     "fragmento": "zumo de dioses"
-    },
-    {
-     "capa": "sentido",
-     "autor": "provisional",
-     "texto": "Los tercetos son la caída: cascada, shock, terremoto, infierno.",
+     "texto": "Sonrisas, recuerdos, miradas: una historia con todo menos la acción.",
      "desde": 9,
+     "hasta": 11
+    },
+    {
+     "capa": "sentido",
+     "autor": "provisional",
+     "texto": "El pícaro de Quevedo («Historia de la vida del Buscón»), o simplemente el que busca.",
+     "fragmento": "buscón"
+    },
+    {
+     "capa": "sentido",
+     "autor": "provisional",
+     "texto": "El reparto de culpas acaba en desorden.",
+     "fragmento": "patas arriba"
+    },
+    {
+     "capa": "forma",
+     "autor": "provisional",
+     "texto": "«Será» abre siete versos, y «Serás» y «Seré» otros dos: anáfora que sostiene todo el soneto.",
+     "desde": 1,
      "hasta": 14
-    },
-    {
-     "capa": "sentido",
-     "autor": "provisional",
-     "texto": "Del sufrimiento queda solo una pizca, que rima con el pellizco de la cascada.",
-     "fragmento": "una pizca"
-    },
-    {
-     "capa": "sentido",
-     "autor": "provisional",
-     "texto": "Un vacío dentro de otro: lo que se posee en el infierno.",
-     "fragmento": "un vaso vacío en un barco roto"
     }
    ]
   },
   "revisado": "",
   "simbolo": "",
-  "fotos": [],
-  "original": "",
+  "fotos": [
+   "originales/CSAP-016-sera-borrador.jpg"
+  ],
+  "original": "Borrador a mano, escrito en el campamento de Vera (Cáceres) en julio de 2017.",
   "aviso": "",
   "imagen": "",
-  "titulo_en": "Fear?",
-  "texto_en": "Even if at first you don't like the taste\nsince in the new air you cough\n(when everything is strange) don't handcuff yourself,\ntry to develop your splendour.\n\nBecause when we start the engine\nand everything tastes like the juice of gods\nwe are who we are, there are no poses\nthere are no fears, there is no pain.\n\nBut the waterfall comes and pinches.\nThe dream ends in an eternal shock.\nYou don't know what to do in an earthquake.\n\nSuffering leaves you a pinch\nof something you own in hell:\nan empty glass on a broken boat.\n\n(hiacia)\n\nVí. Ab. Al.",
+  "titulo_en": "It'll be",
+  "texto_en": "It'll be a forbidden love, simply.\nIt'll be the same damned apple.\nIt'll be not getting what blurs me\nor not being able to do what one feels.\n\nIt'll be that I don't know if one must be brave.\nWill it be passion crossing the membrane\nof doing whatever we please?\nIt'll be forgetting, it'll be, probably.\n\nSmiles without fictional tears,\nmemories of those captive glances,\nthe great story without any action.\n\nIt'll be you and your passive will.\nIt'll be me for my eagerness to be a rogue.\nIt'll be everything, a world upside down.\n\n(carmela)\n\nVí. Ab. Al.",
   "primero": false
  },
  {
@@ -3025,192 +3215,6 @@
   "imagen": "",
   "titulo_en": "Simply",
   "texto_en": "If you always draw attention,\nthat you draw attention no longer draws attention,\nso, do you draw attention?\n\nVí. Ab. Al.",
-  "primero": false
- },
- {
-  "codigo": "CSAP-016",
-  "titulo": "Será",
-  "formato": "poema",
-  "forma": {
-   "estado": "sin revisar · calculada el 2026-10-30",
-   "estrofa": "soneto",
-   "medida": "endecasílabos",
-   "esquema": "ABBA ABBA CDC DCD",
-   "rimas": {
-    "a": "consonante -ente · simplemente, siente, valiente, probablemente",
-    "b": "consonante -ana · manzana, empana, membrana, gana",
-    "c": "consonante -ón · ficción, acción, buscón",
-    "d": "consonante -iva · cautivas, pasiva, arriba (arriba se escribe con b, pero suena igual)"
-   },
-   "versos": {
-    "1": {
-     "silabas": 11,
-     "rima": "A",
-     "nota": "leyendo «prohibido» en tres sílabas, como se pronuncia; si no, 12"
-    },
-    "2": {
-     "silabas": 11,
-     "rima": "B",
-     "nota": ""
-    },
-    "3": {
-     "silabas": 11,
-     "rima": "B",
-     "nota": ""
-    },
-    "4": {
-     "silabas": 11,
-     "rima": "A",
-     "nota": ""
-    },
-    "5": {
-     "silabas": 11,
-     "rima": "A",
-     "nota": ""
-    },
-    "6": {
-     "silabas": 11,
-     "rima": "B",
-     "nota": ""
-    },
-    "7": {
-     "silabas": 11,
-     "rima": "B",
-     "nota": ""
-    },
-    "8": {
-     "silabas": 11,
-     "rima": "A",
-     "nota": ""
-    },
-    "9": {
-     "silabas": 11,
-     "rima": "C",
-     "nota": ""
-    },
-    "10": {
-     "silabas": 11,
-     "rima": "D",
-     "nota": ""
-    },
-    "11": {
-     "silabas": 11,
-     "rima": "C",
-     "nota": ""
-    },
-    "12": {
-     "silabas": 11,
-     "rima": "D",
-     "nota": ""
-    },
-    "13": {
-     "silabas": 11,
-     "rima": "C",
-     "nota": ""
-    },
-    "14": {
-     "silabas": 11,
-     "rima": "D",
-     "nota": ""
-    }
-   },
-   "escalonados": [],
-   "personas": null
-  },
-  "fecha_publicacion": "2018-03-28",
-  "fecha_escritura": "",
-  "fuente": "Ciencias sociales y asuntos personales",
-  "url": "https://cienciassocialesyasuntospersonales.blogspot.com/2018/03/sera.html",
-  "idioma": "es",
-  "epoca": "E2-bachillerato (2018-2019)",
-  "tema": "Un amor prohibido y la pasividad entre dos personas",
-  "etiquetas": [
-   "amor",
-   "prohibido"
-  ],
-  "dedicatoria_pista": "carmela",
-  "subtitulo": "",
-  "texto": "Será un amor prohibido simplemente.\nSerá la misma maldita manzana.\nSerá el no conseguir lo que me empana\no no poder hacer lo que se siente.\n\nSerá que no sé si hay que ser valiente.\n¿Será pasión que cruza la membrana\nde hacer todo lo que nos da la gana?\nSerá olvidar, será, probablemente.\n\nSonrisas sin lágrimas de ficción,\nrecuerdos de esas miradas cautivas,\nla gran historia sin ninguna acción.\n\nSerás tú y tu voluntad pasiva.\nSeré yo por mi afán de ser buscón.\nSerá todo, un mundo patas arriba.\n\n(carmela)\n\nVí. Ab. Al.",
-  "audio_video": "",
-  "escritura_antes": false,
-  "escritura_aprox": false,
-  "historia": "",
-  "comentario_forma": "",
-  "explicacion": "",
-  "explicacion_estado": "",
-  "temas": null,
-  "anotaciones": [
-   {
-    "capa": "forma",
-    "autor": "claude",
-    "desde": 1,
-    "hasta": 1,
-    "texto": "leyendo «prohibido» en tres sílabas, como se pronuncia; si no, 12",
-    "metro": true
-   }
-  ],
-  "valoraciones": [],
-  "lectura": {
-   "fecha": "2026-10-30",
-   "estado": "provisional",
-   "nota": "7",
-   "rasgos": {
-    "profundidad": 3,
-    "dureza": 2,
-    "pintar conceptos": 4,
-    "sonoridad": 4
-   },
-   "texto": "",
-   "anotaciones": [
-    {
-     "capa": "sentido",
-     "autor": "provisional",
-     "texto": "Los cuartetos: una lista de hipótesis sobre por qué un amor no llega a pasar.",
-     "desde": 1,
-     "hasta": 8
-    },
-    {
-     "capa": "sentido",
-     "autor": "provisional",
-     "texto": "La manzana del Génesis, el fruto prohibido, que enlaza con el «amor prohibido» del verso anterior.",
-     "fragmento": "la misma maldita manzana"
-    },
-    {
-     "capa": "sentido",
-     "autor": "provisional",
-     "texto": "Sonrisas, recuerdos, miradas: una historia con todo menos la acción.",
-     "desde": 9,
-     "hasta": 11
-    },
-    {
-     "capa": "sentido",
-     "autor": "provisional",
-     "texto": "El pícaro de Quevedo («Historia de la vida del Buscón»), o simplemente el que busca.",
-     "fragmento": "buscón"
-    },
-    {
-     "capa": "sentido",
-     "autor": "provisional",
-     "texto": "El reparto de culpas acaba en desorden.",
-     "fragmento": "patas arriba"
-    },
-    {
-     "capa": "forma",
-     "autor": "provisional",
-     "texto": "«Será» abre siete versos, y «Serás» y «Seré» otros dos: anáfora que sostiene todo el soneto.",
-     "desde": 1,
-     "hasta": 14
-    }
-   ]
-  },
-  "revisado": "",
-  "simbolo": "",
-  "fotos": [],
-  "original": "",
-  "aviso": "",
-  "imagen": "",
-  "titulo_en": "It'll be",
-  "texto_en": "It'll be a forbidden love, simply.\nIt'll be the same damned apple.\nIt'll be not getting what blurs me\nor not being able to do what one feels.\n\nIt'll be that I don't know if one must be brave.\nWill it be passion crossing the membrane\nof doing whatever we please?\nIt'll be forgetting, it'll be, probably.\n\nSmiles without fictional tears,\nmemories of those captive glances,\nthe great story without any action.\n\nIt'll be you and your passive will.\nIt'll be me for my eagerness to be a rogue.\nIt'll be everything, a world upside down.\n\n(carmela)\n\nVí. Ab. Al.",
   "primero": false
  },
  {
