@@ -22,7 +22,7 @@ const Obra = (() => {
       buscar: "Buscar un título o un verso…", todo: "Todo", poemas: "Ciencias sociales", banales: "Mentiras banales",
       cualquier: "Cualquier tema", chips: { poema: "Poemas", cancioncilla: "Cancioncillas", tema: "Temas", cs: "Ciencias sociales", banales: "Mentiras banales", instagram: "Instagram", inedito: "Inéditos", borradores: "Borradores", libreta: "Libreta", yosolita: "Yo Solita", temas: "Temas", limpiar: "Quitar filtros" }, vacio: "Nada por aquí.", cuenta: n => n === 1 ? "1 pieza" : `${n} piezas`, dedicada: "Dedicada a…", banalesMeta: "mentiras banales · ", comentado: " · comentado", revisado: "Revisado por mí", sinRevisar: "Sin revisar",
       noEncuentro: "No encuentro esa pieza.", publicado: f => ` · publicado el ${f}`, escrito: f => `Escrito hacia el ${f}`, escritoAprox: (parte, m, a) => `Escrito hacia ${["principios", "mediados", "finales"][parte]} de ${m} de ${a}`, primero: "Mi primer poema publicado", escritoAntes: f => `Escrito antes de ${f}`, escritoHacia: f => `Escrito hacia ${f}`, escuchar: "▶ Escucharla", tema: "Temas", reel: "▶ Verla en Instagram", cancioncilla: "Cancioncilla",
-      historia: "Historia", comentarioForma: "Comentario de la forma", quitarColores: "Quitar colores", ponerColores: "Poner colores", imagen: "Imagen del poema", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Mi valoración", anteriores: n => `Valoraciones anteriores (${n})`,
+      historia: "Historia", elOriginal: "El original", fotoOriginal: "Foto del original", comentarioForma: "Comentario de la forma", quitarColores: "Quitar colores", ponerColores: "Poner colores", imagen: "Imagen del poema", explicacion: "Explicación", temas: "Temas", figuras: "Figuras", personas: "Personas verbales", valoracion: "Mi valoración", anteriores: n => `Valoraciones anteriores (${n})`,
       analisis: "Análisis", capas: { forma: "Forma", sentido: "Sentido", referencia: "Referencias" }, provisional: "provisional",
       forma: "Forma", estrofa: "Estrofa", medida: "Medida", esquema: "Esquema",
       lectura: "Mi análisis", notaGeneral: "Nota general",
@@ -36,7 +36,7 @@ const Obra = (() => {
       buscar: "Search a title or a line…", todo: "All", poemas: "Ciencias sociales", banales: "Mentiras banales",
       cualquier: "Any theme", chips: { poema: "Poems", cancioncilla: "Little songs", tema: "Raps and songs", cs: "Ciencias sociales", banales: "Mentiras banales", instagram: "Instagram", inedito: "Unpublished", borradores: "Drafts", libreta: "Notebook", yosolita: "Yo Solita", temas: "Themes", limpiar: "Clear filters" }, vacio: "Nothing here.", cuenta: n => n === 1 ? "1 piece" : `${n} pieces`, dedicada: "Dedicated to…", banalesMeta: "mentiras banales · ", comentado: " · annotated", revisado: "Reviewed by me", sinRevisar: "Not reviewed yet",
       noEncuentro: "I can't find that piece.", publicado: f => ` · published ${f}`, escrito: f => `Written around ${f}`, escritoAprox: (parte, m, a) => `Written around ${["early", "mid", "late"][parte]} ${m} ${a}`, primero: "My first published poem", escritoAntes: f => `Written before ${f}`, escritoHacia: f => `Written around ${f}`, escuchar: "▶ Listen", tema: "Raps and songs", reel: "▶ Watch it on Instagram", cancioncilla: "Little song",
-      historia: "Story", comentarioForma: "Commentary on the form", quitarColores: "Remove colours", ponerColores: "Show colours", imagen: "Image of the poem", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "My rating", anteriores: n => `Earlier ratings (${n})`,
+      historia: "Story", elOriginal: "The original", fotoOriginal: "Photo of the original", comentarioForma: "Commentary on the form", quitarColores: "Remove colours", ponerColores: "Show colours", imagen: "Image of the poem", explicacion: "Explanation", temas: "Themes", figuras: "Figures", personas: "Verb persons", valoracion: "My rating", anteriores: n => `Earlier ratings (${n})`,
       analisis: "Analysis", capas: { forma: "Form", sentido: "Meaning", referencia: "References" }, provisional: "placeholder",
       forma: "Form", estrofa: "Stanza", medida: "Metre", esquema: "Rhyme scheme",
       lectura: "My analysis", notaGeneral: "Overall score",
@@ -491,6 +491,15 @@ const Obra = (() => {
           p.valoraciones.slice(1).forEach(v => d.append(bloque(v)));
           s.append(d);
         }
+        main.append(s);
+      }
+
+      // El original: fotos grandes de la libreta o de los papeles sueltos, al final de todo
+      if (p.fotos && p.fotos.length) {
+        const s = el("section", { class: "original" }, el("h2", {}, T("elOriginal")));
+        if (p.original) s.append(el("p", {}, ...rico(p.original)));
+        p.fotos.forEach((f, k) => s.append(el("a", { href: f, target: "_blank", rel: "noopener" },
+          el("img", { src: f, alt: `${T("fotoOriginal")} ${k + 1}/${p.fotos.length}` }))));
         main.append(s);
       }
 

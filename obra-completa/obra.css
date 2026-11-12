@@ -81,7 +81,7 @@ h1 { font-family: "Vollkorn SC", Georgia, serif; font-weight: 600; font-size: 2r
 .interruptor input:checked + .pista { background: var(--verde); }
 .interruptor input:checked + .pista::after { transform: translateX(0.95rem); }
 .interruptor input:focus-visible + .pista { outline: 2px solid var(--verde); outline-offset: 2px; }
-main:not(.analisis) .capas, main:not(.analisis) > section { display: none; }
+main:not(.analisis) .capas, main:not(.analisis) > section:not(.original) { display: none; }
 .capas { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .capas button {
   font: inherit; font-size: 0.85rem; padding: 0.25rem 0.85rem; cursor: pointer;
@@ -276,3 +276,8 @@ h1 .nota-musica { position: relative; top: auto; left: auto; display: inline-gri
 .chip.on.c-instagram { background: #8a4fa8; border-color: #8a4fa8; }
 .chip.on.c-borradores { background: #7a6a55; border-color: #7a6a55; }
 .chip.on.c-libreta { background: #a0692b; border-color: #a0692b; }
+
+/* Fotos del original, al final del poema */
+.original { margin-top: 2.5rem; }
+.original img { display: block; width: 100%; height: auto; margin: 1rem 0; border: 2px solid var(--tinta); border-radius: 6px; }
+@media (min-width: 900px) { .original { width: min(1100px, 92vw); margin-left: 50%; transform: translateX(-50%); } }
