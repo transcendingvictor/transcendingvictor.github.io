@@ -50,3 +50,10 @@
 .jp details { margin-top: 0.3rem; font-size: 0.95rem; }
 .jp summary { cursor: pointer; color: #8a4fa8; font-size: 0.9rem; }
 .jp details p { margin: 0.4rem 0 0; }
+.jp-q { list-style: none; margin-bottom: 0.9rem; }
+.jp-enun { display: block; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 0.3rem; }
+.jp-d { display: inline-block; vertical-align: top; margin: 0 0.5rem 0.3rem 0; }
+.jp-d summary { cursor: pointer; display: inline-block; padding: 0.2rem 0.8rem; border: 0.12rem solid #1c1c1c; border-radius: 999px; background: #fde7b0; font-size: 0.9rem; }
+.jp-sol summary { background: #c4e6cc; }
+.jp-d[open] { display: block; }
+.jp-d p { margin: 0.4rem 0 0; }
