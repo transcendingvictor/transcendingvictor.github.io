@@ -1552,3 +1552,17 @@ html.sp-essay-lock { overflow: hidden; }
 .jgp-sig { font-size: 0.9rem; }
 .jgp-desglose { list-style: none; margin: 0.6rem 0 0; padding: 0; display: grid; gap: 0.2rem; font-size: 0.92rem; }
 .jgp-desglose li { display: flex; justify-content: space-between; border-top: 0.08rem dashed rgba(0,0,0,.25); padding-top: 0.2rem; }
+.sp-fl-body .def { font-size: 1rem; border-left: 0.25rem solid #8a4fa8; padding: 0.15rem 0 0.15rem 0.7rem; margin: 0.7rem 0; }
+.sp-fl-body h4 { margin: 0.8rem 0 0.35rem; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #8a4fa8; }
+.sp-fl-body .ej { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+.sp-fl-body .ej li { background: #f6f2fb; border-radius: 8px; padding: 0.35rem 0.6rem; text-align: left; }
+.sp-fl-body .ej li b { color: #5b2e78; }
+.jgp-pill { display: inline-block; margin: 0 0 0.5rem; padding: 0.15rem 0.7rem; border-radius: 999px; background: #e5d8f7; color: #1c1c1c; font-size: 0.85rem; border: 0.12rem solid #1c1c1c; }
+.jgp-pill.pum { animation: jgp-sube 0.6s ease; }
+.jg-desliza { display: none; font-weight: 700; color: #c4e6cc; }
+@media (max-width: 700px) {
+    .jg-carrusel { display: flex; gap: 0.8rem; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -1rem; padding: 0 1rem 0.6rem; scrollbar-width: none; }
+    .jg-carrusel::-webkit-scrollbar { display: none; }
+    .jg-carrusel > section { flex: 0 0 88%; scroll-snap-align: center; min-width: 0; margin: 0; }
+    .jg-desliza { display: inline; }
+}
