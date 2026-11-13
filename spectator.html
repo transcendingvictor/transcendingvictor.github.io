@@ -501,6 +501,7 @@
                         <span class="sp-play" aria-hidden="true">▶</span>
                     </button>
                     <span class="sp-mention">#4</span>
+                    <a class="sp-margin-note" href="https://www.youtube.com/watch?v=9BeUzoaFriA" target="_blank" rel="noopener"><span data-l="es">psst, el lyric video está muy guapo →</span><span data-l="en">psst, the lyric video is really beautiful →</span></a>
                 </li>
             </ol>
         </section>
@@ -954,6 +955,11 @@
                     <p class="jg-total"><span data-l="es">Media</span><span data-l="en">Average</span>: <b id="jg-total">0</b></p>
                     <button type="button" class="jg-next" id="jg-next" hidden><span data-l="es">Otro círculo</span><span data-l="en">Another circle</span></button>
                 </div>
+                <div class="jg-win" id="jg-win" hidden>
+                    <p class="jg-win-big"><span data-l="es">¡WOW! ¡LO HAS CONSEGUIDO!</span><span data-l="en">WOW! YOU DID IT!</span></p>
+                    <p><span data-l="es">Has superado el nivel Dios de la teoría de la medida. Antes que tú, solo dos personas en el mundo lo habían logrado: <b>Ismael Leal</b> y <b>Jaime Portillo</b> (Picón). Ahora sois tres.</span><span data-l="en">You beat measure theory, the God level. Before you, only two people in the world had done it: <b>Ismael Leal</b> and <b>Jaime Portillo</b> (Picón). Now there are three of you.</span></p>
+                </div>
+                <p class="jgp-live">🏆 <b class="jgp-n">0</b> <span data-l="es">puntos totales</span><span data-l="en">total points</span> · <span class="jgp-rn"></span></p>
             </section>
 
             <section class="sp-list jg" id="pb">
@@ -965,6 +971,7 @@
                     <p class="jg-msg" id="pb-msg" aria-live="polite"></p>
                     <button type="button" class="jg-next" id="pb-next" hidden><span data-l="es">Otra parábola</span><span data-l="en">Another parabola</span></button>
                 </div>
+                <p class="jgp-live">🏆 <b class="jgp-n">0</b> <span data-l="es">puntos totales</span><span data-l="en">total points</span> · <span class="jgp-rn"></span></p>
             </section>
 
             <section class="sp-list jg" id="mt">
@@ -983,6 +990,7 @@
                 </div>
                 <div class="jg-board mt-board"><svg id="mt-svg" viewBox="0 0 340 360" preserveAspectRatio="xMidYMid meet"></svg></div>
                 <p class="sp-note"><span data-l="es">Mapa esquemático de las líneas 1 a 11 en su tramo urbano (sin Metro Norte, Este ni Sur).</span><span data-l="en">Schematic map of lines 1 to 11, city section only.</span></p>
+                <p class="jgp-live">🏆 <b class="jgp-n">0</b> <span data-l="es">puntos totales</span><span data-l="en">total points</span> · <span class="jgp-rn"></span></p>
             </section>
             <section class="sp-list jg-marcador" id="jgp">
                 <h2><span data-l="es">Tu puntuación</span><span data-l="en">Your score</span></h2>
@@ -1741,8 +1749,8 @@
         function pintar(subio) {
             var el = document.getElementById('jgp-total'); if (!el) return;
             var t = total(), r = rango(t), R = RANGOS[r], N = RANGOS[r + 1];
-            el.textContent = t.toLocaleString('es-ES'); document.querySelectorAll('.jgp-n').forEach(function (n) { n.textContent = t.toLocaleString('es-ES'); n.parentNode.classList.remove('pum'); void n.offsetWidth; if (subio !== null) n.parentNode.classList.add('pum'); });
-            document.getElementById('jgp-rango').textContent = (es() ? 'Rango: ' : 'Rank: ') + (es() ? R[1] : R[2]) + (subio ? (es() ? ' · ¡has subido de rango!' : ' · rank up!') : '');
+            el.textContent = t.toLocaleString('es-ES'); document.querySelectorAll('.jgp-n').forEach(function (n) { n.textContent = t.toLocaleString('es-ES'); n.classList.remove('pum'); void n.offsetWidth; if (subio !== null) n.classList.add('pum'); });
+            document.querySelectorAll('.jgp-rn').forEach(function (n) { n.textContent = es() ? R[1] : R[2]; }); document.getElementById('jgp-rango').textContent = (es() ? 'Rango: ' : 'Rank: ') + (es() ? R[1] : R[2]) + (subio ? (es() ? ' · ¡has subido de rango!' : ' · rank up!') : '');
             document.getElementById('jgp-rango').classList.toggle('sube', !!subio);
             document.getElementById('jgp-barra').style.width = (N ? Math.min(100, (t - R[0]) / (N[0] - R[0]) * 100) : 100) + '%';
             document.getElementById('jgp-sig').textContent = N ? (es() ? 'Te faltan ' + (N[0] - t) + ' para ser «' + N[1] + '».' : (N[0] - t) + ' to go to «' + N[2] + '».') : (es() ? 'Has llegado a lo más alto.' : 'You reached the top.');
@@ -1854,7 +1862,7 @@
             if (tiro >= TIROS) {
                 var media = Math.round(suma / tiro), pasa = media >= L.min;
                 txt += ' ' + (es() ? 'Media del nivel: ' + media + '. ' : 'Level average: ' + media + '. ');
-                if (pasa && nivel === NIV.length - 1) { txt += es() ? '¡Has superado el nivel Dios! Has terminado el juego.' : 'You beat God level! Game complete.'; etiqueta(['Volver a empezar', 'Start again']); fin = 'reset'; }
+                if (pasa && nivel === NIV.length - 1) { var win = document.getElementById('jg-win'); if (win) { win.hidden = false; win.classList.remove('on'); void win.offsetWidth; win.classList.add('on'); } txt += es() ? '¡Has superado el nivel Dios! Has terminado el juego.' : 'You beat God level! Game complete.'; etiqueta(['Volver a empezar', 'Start again']); fin = 'reset'; }
                 else if (pasa) { if (window.JGP) JGP.add('centro', 100 * (nivel + 1)); txt += (es() ? '+' + 100 * (nivel + 1) + ' de bonus. ' : '+' + 100 * (nivel + 1) + ' bonus. ') + es() ? '¡Nivel superado!' : 'Level passed!'; etiqueta(['Siguiente nivel', 'Next level']); fin = 'up'; }
                 else { txt += es() ? 'Necesitabas ' + L.min + '. Inténtalo otra vez.' : 'You needed ' + L.min + '. Try again.'; etiqueta(['Repetir nivel', 'Retry level']); fin = 'retry'; }
             } else etiqueta(['Otra figura', 'Another shape']);
@@ -1863,7 +1871,7 @@
         });
         next.addEventListener('click', function () {
             if (fin) {
-                if (fin === 'up') nivel++; else if (fin === 'reset') nivel = 0;
+                if (fin === 'up') nivel++; else if (fin === 'reset') { nivel = 0; var w2 = document.getElementById('jg-win'); if (w2) w2.hidden = true; }
                 tiro = 0; suma = 0; tot.textContent = 0;
                 try { localStorage.setItem('jg-nivel', nivel); } catch (e) {}
             }

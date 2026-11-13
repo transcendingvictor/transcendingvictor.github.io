@@ -82,7 +82,7 @@
             par = [a, b].sort(function (x, y) { return x - y; }); sel = []; hecho = false; res = null; q.value = ''; q.disabled = false; lista.innerHTML = '';
             enunciado();
             msgM.textContent = es() ? 'Escribe y elige las estaciones. Si crees que no se cruzan, dale directamente a «Ya está».' : 'Type and pick the stations. If you think they never cross, just press «Done».';
-            ok.hidden = false; sig.hidden = true; pintarSel(); mapa(null);
+            ok.hidden = false; sig.hidden = true; msgM.className = 'jg-msg'; pintarSel(); mapa(null);
         }
         function pintarSel() {
             elegidas.innerHTML = '';
@@ -117,12 +117,21 @@
             var perfecto = usadas.length === u.length && !mal.length; if (perfecto) aciertos++;
             var ptsM = Math.max(0, usadas.length * 40 - mal.length * 20 - (u.length - usadas.length) * 10 + (perfecto ? (u.length ? 50 : 80) : 0)); if (window.JGP) JGP.add('metro', ptsM);
             mapa(par);
-            u.forEach(function (x) { x.n.forEach(function (s) { var p = EST[s].p; mk(svgM, 'circle', { cx: X(p), cy: Y(p), r: 6, fill: '#fff', stroke: '#1c1c1c', 'stroke-width': 2.5 });
-                mk(svgM, 'text', { x: X(p) + 9, y: Y(p) + 4, 'font-size': 11, 'font-weight': 700, fill: '#1c1c1c', stroke: '#fff', 'stroke-width': 3, 'paint-order': 'stroke' }, s); }); });
+            var cajas = [];
+            u.forEach(function (x) { x.n.forEach(function (s) { var p = EST[s].p, ok = usadas.indexOf(x) >= 0; mk(svgM, 'circle', { cx: X(p), cy: Y(p), r: 6, fill: ok ? '#7fd38a' : '#fff', stroke: '#1c1c1c', 'stroke-width': 2.5 });
+                var w = s.length * 6.2 + 4, lx = X(p) + 9, ly = Y(p) + 4;
+                if (lx + w > 335) lx = X(p) - 9 - w;
+                for (var t = 0; t < 12 && cajas.some(function (c) { return lx < c[0] + c[2] && lx + w > c[0] && ly - 10 < c[1] && ly > c[1] - 10; }); t++) ly += (t % 2 ? -1 : 1) * 13 * (t + 1);
+                cajas.push([lx, ly, w]);
+                if (Math.abs(ly - Y(p) - 4) > 2) mk(svgM, 'line', { x1: X(p), y1: Y(p), x2: lx + (lx < X(p) ? w : 0), y2: ly - 4, stroke: '#1c1c1c', 'stroke-width': 0.8 });
+                mk(svgM, 'text', { x: lx, y: ly, 'font-size': 11, 'font-weight': 700, fill: '#1c1c1c', stroke: '#fff', 'stroke-width': 3, 'paint-order': 'stroke' }, s); }); });
             ronda++;
             res = { u: u, mal: mal, perfecto: perfecto, pts: ptsM, fin: ronda >= PREG, ac: aciertos };
             if (ronda >= PREG) { ronda = 0; aciertos = 0; }
-            textoRes(); ok.hidden = true; sig.hidden = false;
+            textoRes(); ok.hidden = true; sig.hidden = false; sig.disabled = true;
+            msgM.className = 'jg-msg ' + (perfecto ? 'jg-ok' : usadas.length ? 'jg-meh' : 'jg-ko');
+            mt.classList.remove('jg-flash-ok', 'jg-flash-ko'); void mt.offsetWidth; mt.classList.add(perfecto ? 'jg-flash-ok' : 'jg-flash-ko');
+            setTimeout(function () { sig.disabled = false; }, 2500);
         });
         function enunciado() { pregunta.innerHTML = (es() ? 'Pregunta ' : 'Question ') + (ronda + (hecho ? 0 : 1) || PREG) + '/' + PREG + ': ' + (es() ? '¿en qué estaciones se cruzan las líneas ' : 'at which stations do lines ') + chip(par[0]) + (es() ? ' y ' : ' and ') + chip(par[1]) + (es() ? '?' : ' cross?'); }
         document.querySelectorAll('[data-set-lang]').forEach(function (bt) { bt.addEventListener('click', function () { enunciado(); if (hecho) textoRes(); else msgM.textContent = es() ? 'Escribe y elige las estaciones. Si crees que no se cruzan, dale directamente a «Ya está».' : 'Type and pick the stations. If you think they never cross, just press «Done».'; }); });
@@ -137,39 +146,61 @@
         function sx(x) { return (x - X0) / (X1 - X0) * W; } function sy(y) { return H - (y - Y0) / (Y1 - Y0) * H; }
         function ri(a, b) { return a + Math.floor(Math.random() * (b - a + 1)); }
         function fmt(v) { return (Math.round(v * 10) / 10).toString().replace('.', es() ? ',' : '.'); }
-        function nuevaP() {
-            svgP.innerHTML = ''; listo = false; sigP.hidden = true;
-            var h = ri(-3, 3), k = ri(-2, 3), lado = Math.random() < 0.5 ? 1 : -1, d = ri(1, 3), a = [0.5, 1, 1.5, 2][ri(0, 3)];
-            while (k + a * d * d > 12) d--;
-            var yObj; do { yObj = ri(k + 1, 13); } while (Math.abs(yObj - (k + a * d * d)) < 1);
-            var xObj = h + lado * Math.sqrt((yObj - k) / a);
-            if (Math.abs(xObj) > 9.5) return nuevaP();
-            P = { h: h, k: k, a: a, px: h + lado * d, py: k + a * d * d, y: yObj, x: xObj, lado: lado };
+        function rejilla() {
             for (var g = X0; g <= X1; g++) mk(svgP, 'line', { x1: sx(g), x2: sx(g), y1: 0, y2: H, stroke: g === 0 ? '#1c1c1c' : '#e4e2d8', 'stroke-width': g === 0 ? 1.2 : 0.6 });
             for (g = Y0; g <= Y1; g++) mk(svgP, 'line', { y1: sy(g), y2: sy(g), x1: 0, x2: W, stroke: g === 0 ? '#1c1c1c' : '#e4e2d8', 'stroke-width': g === 0 ? 1.2 : 0.6 });
-            mk(svgP, 'line', { x1: 0, x2: W, y1: sy(yObj), y2: sy(yObj), stroke: '#8a4fa8', 'stroke-width': 1.5, 'stroke-dasharray': '5 4' });
-            mk(svgP, 'circle', { cx: sx(h), cy: sy(k), r: 4.5, fill: '#1c1c1c' });
-            mk(svgP, 'text', { x: sx(h) + 6, y: sy(k) + 14, 'font-size': 11, fill: '#1c1c1c' }, 'V(' + h + ', ' + k + ')');
-            mk(svgP, 'circle', { cx: sx(P.px), cy: sy(P.py), r: 4.5, fill: '#2d7fb8' });
-            mk(svgP, 'text', { x: sx(P.px) + (lado > 0 ? 6 : -6), y: sy(P.py) - 6, 'font-size': 11, fill: '#2d7fb8', 'text-anchor': lado > 0 ? 'start' : 'end' }, 'P(' + P.px + ', ' + fmt(P.py) + ')');
-            preP.innerHTML = es() ? 'Una parábola que mira hacia arriba tiene el vértice en <b>V</b> y pasa por <b>P</b>. ¿Dónde corta la línea morada <b>y = ' + yObj + '</b>, ' + (lado > 0 ? 'a la derecha' : 'a la izquierda') + ' del vértice? Toca ese punto.'
-                : 'An upward parabola has its vertex at <b>V</b> and passes through <b>P</b>. Where does it meet the purple line <b>y = ' + yObj + '</b>, to the ' + (lado > 0 ? 'right' : 'left') + ' of the vertex? Tap that point.';
-            msgP.textContent = '';
+        }
+        function punto(x, y, col, txt, izq) {
+            mk(svgP, 'circle', { cx: sx(x), cy: sy(y), r: 4.5, fill: col });
+            mk(svgP, 'text', { x: sx(x) + (izq ? -6 : 6), y: sy(y) - 6, 'font-size': 11, fill: col, 'text-anchor': izq ? 'end' : 'start', stroke: '#fdfcf6', 'stroke-width': 3, 'paint-order': 'stroke' }, txt);
+        }
+        var RONDAS_PAR = 10;
+        function nuevaP() {
+            svgP.innerHTML = ''; listo = false; sigP.hidden = true; rejilla();
+            if (tiros < RONDAS_PAR) {
+                var h = ri(-3, 3), k = ri(-2, 3), lado = Math.random() < 0.5 ? 1 : -1, d = ri(1, 3), a = [0.5, 1, 1.5, 2][ri(0, 3)];
+                while (k + a * d * d > 12) d--;
+                var yObj; do { yObj = ri(k + 1, 13); } while (Math.abs(yObj - (k + a * d * d)) < 1);
+                var xObj = h + lado * Math.sqrt((yObj - k) / a);
+                if (Math.abs(xObj) > 9.5) { svgP.innerHTML = ''; return nuevaP(); }
+                P = { tipo: 'par', h: h, k: k, a: a, y: yObj, x: xObj, ref: h, f: function (x) { return k + a * (x - h) * (x - h); } };
+                mk(svgP, 'line', { x1: 0, x2: W, y1: sy(yObj), y2: sy(yObj), stroke: '#8a4fa8', 'stroke-width': 1.5, 'stroke-dasharray': '5 4' });
+                punto(h, k, '#1c1c1c', 'V(' + h + ', ' + k + ')');
+                punto(h + lado * d, k + a * d * d, '#2d7fb8', 'P(' + (h + lado * d) + ', ' + fmt(k + a * d * d) + ')', lado < 0);
+                P.ec = 'y = ' + fmt(a) + '(x ' + (h < 0 ? '+ ' + (-h) : '− ' + h) + ')² ' + (k < 0 ? '− ' + (-k) : '+ ' + k);
+                preP.innerHTML = (es() ? 'Ronda ' + (tiros + 1) + '/' + RONDAS_PAR + ' de parábolas. ' : 'Parabola round ' + (tiros + 1) + '/' + RONDAS_PAR + '. ') + (es() ? 'Una parábola que mira hacia arriba tiene el vértice en <b>V</b> y pasa por <b>P</b>. ¿Dónde corta la línea morada <b>y = ' + yObj + '</b>, ' + (lado > 0 ? 'a la derecha' : 'a la izquierda') + ' del vértice? Toca ese punto.'
+                    : 'An upward parabola has its vertex at <b>V</b> and passes through <b>P</b>. Where does it meet the purple line <b>y = ' + yObj + '</b>, to the ' + (lado > 0 ? 'right' : 'left') + ' of the vertex? Tap that point.');
+            } else {
+                // Exponencial y = c + 2^((x − x0)/s): la asíntota y = c, y dos puntos que muestran cuánto tarda en duplicarse.
+                var c = ri(-2, 1), x0 = ri(-7, -2), s = [1, 1.5, 2, 2.5][ri(0, 3)], yE = ri(c + 5, 14), xE = x0 + s * Math.log2(yE - c);
+                if (xE > 9.5 || x0 + s > 9) { svgP.innerHTML = ''; return nuevaP(); }
+                P = { tipo: 'exp', y: yE, x: xE, ref: x0, f: function (x) { return c + Math.pow(2, (x - x0) / s); } };
+                mk(svgP, 'line', { x1: 0, x2: W, y1: sy(c), y2: sy(c), stroke: '#999', 'stroke-width': 1.2, 'stroke-dasharray': '2 3' });
+                mk(svgP, 'text', { x: 4, y: sy(c) + 12, 'font-size': 10, fill: '#777' }, (es() ? 'asíntota y = ' : 'asymptote y = ') + c);
+                mk(svgP, 'line', { x1: 0, x2: W, y1: sy(yE), y2: sy(yE), stroke: '#8a4fa8', 'stroke-width': 1.5, 'stroke-dasharray': '5 4' });
+                punto(x0, c + 1, '#1c1c1c', 'A(' + x0 + ', ' + (c + 1) + ')', true);
+                punto(x0 + s, c + 2, '#2d7fb8', 'B(' + fmt(x0 + s) + ', ' + (c + 2) + ')');
+                P.ec = 'y = ' + c + ' + 2^((x ' + (x0 < 0 ? '+ ' + (-x0) : '− ' + x0) + ')/' + fmt(s) + ')';
+                preP.innerHTML = es() ? '<b>Nivel exponencial.</b> Una exponencial que crece se acerca a la asíntota gris por la izquierda y pasa por <b>A</b> y <b>B</b>: de A a B, su distancia a la asíntota se duplica. ¿Dónde corta la línea morada <b>y = ' + yE + '</b>? Toca ese punto.'
+                    : '<b>Exponential level.</b> A growing exponential hugs the grey asymptote on the left and passes through <b>A</b> and <b>B</b>: from A to B its distance to the asymptote doubles. Where does it meet the purple line <b>y = ' + yE + '</b>? Tap that point.';
+            }
+            msgP.textContent = ''; msgP.className = 'jg-msg';
         }
         svgP.addEventListener('click', function (ev) {
             if (listo) return; listo = true;
             var pt = svgP.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY; var m = pt.matrixTransform(svgP.getScreenCTM().inverse());
-            var xu = X0 + m.x / W * (X1 - X0), dx = Math.abs(xu - P.x), ancho = Math.abs(P.x - P.h);
+            var xu = X0 + m.x / W * (X1 - X0), dx = Math.abs(xu - P.x), ancho = Math.max(1.5, Math.abs(P.x - P.ref));
             var pts = Math.max(0, Math.round(100 * (1 - dx / ancho)));
-            var dd = ''; for (var x = X0; x <= X1; x += 0.1) { var y = P.k + P.a * (x - P.h) * (x - P.h); if (y <= Y1 + 1) dd += (dd ? ' L' : 'M') + sx(x).toFixed(1) + ' ' + sy(y).toFixed(1); }
+            var dd = ''; for (var x = X0; x <= X1; x += 0.05) { var y = P.f(x); if (y <= Y1 + 1) dd += (dd ? ' L' : 'M') + sx(x).toFixed(1) + ' ' + sy(y).toFixed(1); }
             mk(svgP, 'path', { d: dd, fill: 'none', stroke: '#2d7fb8', 'stroke-width': 2 });
             mk(svgP, 'line', { x1: sx(xu), x2: sx(P.x), y1: sy(P.y), y2: sy(P.y), stroke: '#d14b4b', 'stroke-width': 3 });
             mk(svgP, 'circle', { cx: sx(P.x), cy: sy(P.y), r: 5, fill: '#1c1c1c' });
             mk(svgP, 'circle', { cx: sx(xu), cy: sy(P.y), r: 5, fill: '#d14b4b', stroke: '#fff', 'stroke-width': 1.5 });
             tiros++; sumaP += pts; if (window.JGP) JGP.add('parabola', pts);
-            var ec = 'y = ' + fmt(P.a) + '(x ' + (P.h < 0 ? '+ ' + (-P.h) : '− ' + P.h) + ')² ' + (P.k < 0 ? '− ' + (-P.k) : '+ ' + P.k);
-            msgP.textContent = (es() ? 'Era x = ' + fmt(P.x) + ' y has dicho ' + fmt(xu) + ': +' + pts + ' puntos. La parábola: ' : 'It was x = ' + fmt(P.x) + ' and you said ' + fmt(xu) + ': +' + pts + ' points. The parabola: ') + ec + '. ' +
-                (es() ? 'Media: ' : 'Average: ') + Math.round(sumaP / tiros) + (es() ? ' en ' + tiros + (tiros === 1 ? ' tiro.' : ' tiros.') : ' over ' + tiros + (tiros === 1 ? ' throw.' : ' throws.'));
+            msgP.textContent = (es() ? 'Era x = ' + fmt(P.x) + ' y has dicho ' + fmt(xu) + ': +' + pts + ' puntos. La curva: ' : 'It was x = ' + fmt(P.x) + ' and you said ' + fmt(xu) + ': +' + pts + ' points. The curve: ') + P.ec + '. ' +
+                (es() ? 'Media: ' : 'Average: ') + Math.round(sumaP / tiros) + (es() ? ' en ' + tiros + (tiros === 1 ? ' tiro.' : ' tiros.') : ' over ' + tiros + (tiros === 1 ? ' throw.' : ' throws.')) +
+                (tiros === RONDAS_PAR ? (es() ? ' ¡Has desbloqueado las exponenciales!' : ' You unlocked exponentials!') : '');
+            msgP.className = 'jg-msg ' + (pts >= 80 ? 'jg-ok' : pts >= 40 ? 'jg-meh' : 'jg-ko');
             sigP.hidden = false;
         });
         sigP.addEventListener('click', nuevaP);
