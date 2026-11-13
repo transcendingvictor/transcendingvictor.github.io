@@ -1566,3 +1566,11 @@ html.sp-essay-lock { overflow: hidden; }
     .jg-carrusel > section { flex: 0 0 88%; scroll-snap-align: center; min-width: 0; margin: 0; }
     .jg-desliza { display: inline; }
 }
+.sp-fls { max-width: 42rem; }
+.sp-fl-ic > span { display: block; }
+.sp-fl-body .fl-big { display: block; width: 100%; max-width: 30rem; height: auto; margin: 0.7rem 0; border-radius: 10px; border: 0.12rem solid #1c1c1c; font-family: "Aleo", serif; }
+.sp-fl-body .fl-big .sm { font-size: 10px; }
+.sp-fl[open] .ej li { animation: fl-in 0.35s ease both; animation-delay: calc(var(--i, 0) * 45ms); }
+.sp-fl[open] .def, .sp-fl[open] .fl-big { animation: fl-in 0.4s ease both; }
+@keyframes fl-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .sp-fl[open] .ej li, .sp-fl[open] .def, .sp-fl[open] .fl-big { animation: none; } }
