@@ -935,8 +935,19 @@
             </aside>
             <p class="sp-note rc-intro"><span data-l="es">Ya que has recorrido todo este camino tan personal: aquí hay algunos recordatorios para mí mismo.</span><span data-l="en">Since you have come all this personal way: here are some reminders to myself.</span></p>
 
-            <section class="sp-list jg">
+            <section class="sp-list jg-marcador" id="jgp">
                 <h2><span data-l="es">Ven a jugar conmigo</span><span data-l="en">Come and play with me</span></h2>
+                <div class="jgp-card">
+                    <p class="jgp-rango" id="jgp-rango"></p>
+                    <p class="jgp-total"><b id="jgp-total">0</b> <span data-l="es">puntos totales</span><span data-l="en">total points</span></p>
+                    <div class="jgp-barra"><i id="jgp-barra"></i></div>
+                    <p class="jgp-sig" id="jgp-sig"></p>
+                    <ul class="jgp-desglose" id="jgp-desglose"></ul>
+                </div>
+            </section>
+
+            <section class="sp-list jg">
+                <h2><span data-l="es">Adivina el centro</span><span data-l="en">Guess the centre</span></h2>
                 <p class="sp-note"><span data-l="es">Adivina dónde está el centro de cada figura: primero círculos, luego triángulos, paralelogramos y figuras raras (ahí, su centro de gravedad). Cada nivel son 5 tiros y para pasar necesitas una media mínima, cada vez más alta.</span><span data-l="en">Guess the centre of each shape: first circles, then triangles, parallelograms and odd shapes (there, its centre of gravity). Each level is 5 throws and you need a minimum average to pass, higher every time.</span></p>
                 <p class="jg-level" id="jg-level"></p>
                 <div class="jg-board" id="jg-board" role="button" aria-label="Círculo / Circle">
@@ -1711,21 +1722,46 @@
     </script>
     <script>
     (function () {
+        // Marcador común de los minijuegos: puntos acumulados, rangos y de dónde viene cada punto.
+        var JUEGOS = { centro: ['Adivina el centro', 'Guess the centre'], parabola: ['La parábola', 'The parabola'], metro: ['Metro de Madrid', 'Madrid Metro'] };
+        var RANGOS = [[0, 'Turista', 'Tourist'], [300, 'Curioso', 'Curious'], [1000, 'Aprendiz', 'Apprentice'], [2500, 'Calculador', 'Calculator'], [5000, 'Geómetra', 'Geometer'], [9000, 'Maestro del centro', 'Master of the centre'], [15000, 'Leyenda', 'Legend']];
+        var d = {}; try { d = JSON.parse(localStorage.getItem('jg-puntos') || '{}') || {}; } catch (e) {}
+        var es = function () { return document.documentElement.dataset.lang !== 'en'; };
+        function total() { var t = 0; for (var k in JUEGOS) t += d[k] || 0; return t; }
+        function rango(t) { var r = 0; RANGOS.forEach(function (x, i) { if (t >= x[0]) r = i; }); return r; }
+        function pintar(subio) {
+            var el = document.getElementById('jgp-total'); if (!el) return;
+            var t = total(), r = rango(t), R = RANGOS[r], N = RANGOS[r + 1];
+            el.textContent = t.toLocaleString('es-ES');
+            document.getElementById('jgp-rango').textContent = (es() ? 'Rango: ' : 'Rank: ') + (es() ? R[1] : R[2]) + (subio ? (es() ? ' · ¡has subido de rango!' : ' · rank up!') : '');
+            document.getElementById('jgp-rango').classList.toggle('sube', !!subio);
+            document.getElementById('jgp-barra').style.width = (N ? Math.min(100, (t - R[0]) / (N[0] - R[0]) * 100) : 100) + '%';
+            document.getElementById('jgp-sig').textContent = N ? (es() ? 'Te faltan ' + (N[0] - t) + ' para ser «' + N[1] + '».' : (N[0] - t) + ' to go to «' + N[2] + '».') : (es() ? 'Has llegado a lo más alto.' : 'You reached the top.');
+            var ul = document.getElementById('jgp-desglose'); ul.innerHTML = '';
+            for (var k in JUEGOS) { var li = document.createElement('li'); li.innerHTML = '<span>' + JUEGOS[k][es() ? 0 : 1] + '</span><b>' + (d[k] || 0) + '</b>'; ul.appendChild(li); }
+        }
+        window.JGP = { add: function (juego, p) { if (!p) return; var antes = rango(total()); d[juego] = Math.max(0, (d[juego] || 0) + p); try { localStorage.setItem('jg-puntos', JSON.stringify(d)); } catch (e) {} pintar(rango(total()) > antes); } };
+        document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.addEventListener('click', function () { pintar(false); }); });
+        pintar(false);
+    })();
+    </script>
+    <script>
+    (function () {
         // Ven a jugar conmigo · Adivina el centro (niveles)
         var svg = document.getElementById('jg-svg'); if (!svg) return;
         var NS = 'http://www.w3.org/2000/svg', W = 300, H = 200, TIROS = 5;
         var msg = document.getElementById('jg-msg'), tot = document.getElementById('jg-total'), next = document.getElementById('jg-next'), lvl = document.getElementById('jg-level');
         var es = function () { return document.documentElement.dataset.lang !== 'en'; };
         var NIV = [
-            { es: 'Suma', en: 'Addition', min: 70, f: ['circ'], bg: ['2+3=5', '7+8=15', '1+1=2', '+', '9+6', '4+4=8'] },
-            { es: 'Resta llevando', en: 'Subtraction with borrowing', min: 75, f: ['circ'], bg: ['52−17=35', '−', '81−49', '100−1=99', '¹4−8'] },
-            { es: 'Números primos', en: 'Prime numbers', min: 80, f: ['tri'], bg: ['2', '3', '5', '7', '11', '13', '17', '19', '23', '29', '31'] },
-            { es: 'Cuadrados perfectos', en: 'Perfect squares', min: 85, f: ['para'], bg: ['1', '4', '9', '16', '25', '36', '49', '64', '81', '100', 'n²'] },
-            { es: 'Ecuación de primer grado', en: 'Linear equation', min: 90, f: ['L', 'T'], bg: ['2x+3=7', 'x=2', '3x−1=8', 'ax+b=0', 'x=−b/a'] },
-            { es: 'Función cuadrática', en: 'Quadratic function', min: 93, f: ['tri', 'para', 'L', 'T', 'U'], bg: ['y=ax²+bx+c', 'x=(−b±√Δ)/2a', 'Δ=b²−4ac', '∪', 'x²'] },
-            { es: 'Derivadas', en: 'Derivatives', min: 95, f: ['C', 'U', 'L'], bg: ["f′(x)", 'd/dx', "(xⁿ)′=nxⁿ⁻¹", 'lim h→0', "(fg)′=f′g+fg′"] },
-            { es: 'Límites', en: 'Limits', min: 96, f: ['circ', 'tri', 'para', 'L', 'T', 'U', 'C'], bg: ['lim', 'x→∞', 'ε', 'δ', '∀ε∃δ', '1/n→0'] },
-            { es: 'Teoría de la medida · nivel Dios', en: 'Measure theory · God level', min: 97, f: ['tri', 'para', 'L', 'T', 'U', 'C'], bg: ['σ', 'μ(A)', '∫f dμ', 'ℝ', '∅', '⋃Aₙ', 'Lebesgue', 'a.e.'] }
+            { es: 'Suma', en: 'Addition', min: 50, f: ['circ'], bg: ['2+3=5', '7+8=15', '1+1=2', '+', '9+6', '4+4=8'] },
+            { es: 'Resta llevando', en: 'Subtraction with borrowing', min: 58, f: ['circ'], bg: ['52−17=35', '−', '81−49', '100−1=99', '¹4−8'] },
+            { es: 'Números primos', en: 'Prime numbers', min: 65, f: ['tri'], bg: ['2', '3', '5', '7', '11', '13', '17', '19', '23', '29', '31'] },
+            { es: 'Cuadrados perfectos', en: 'Perfect squares', min: 71, f: ['para'], bg: ['1', '4', '9', '16', '25', '36', '49', '64', '81', '100', 'n²'] },
+            { es: 'Ecuación de primer grado', en: 'Linear equation', min: 76, f: ['L', 'T'], bg: ['2x+3=7', 'x=2', '3x−1=8', 'ax+b=0', 'x=−b/a'] },
+            { es: 'Función cuadrática', en: 'Quadratic function', min: 80, f: ['tri', 'para', 'L', 'T', 'U'], bg: ['y=ax²+bx+c', 'x=(−b±√Δ)/2a', 'Δ=b²−4ac', '∪', 'x²'] },
+            { es: 'Derivadas', en: 'Derivatives', min: 84, f: ['C', 'U', 'L'], bg: ["f′(x)", 'd/dx', "(xⁿ)′=nxⁿ⁻¹", 'lim h→0', "(fg)′=f′g+fg′"] },
+            { es: 'Límites', en: 'Limits', min: 87, f: ['circ', 'tri', 'para', 'L', 'T', 'U', 'C'], bg: ['lim', 'x→∞', 'ε', 'δ', '∀ε∃δ', '1/n→0'] },
+            { es: 'Teoría de la medida · nivel Dios', en: 'Measure theory · God level', min: 90, f: ['tri', 'para', 'L', 'T', 'U', 'C'], bg: ['σ', 'μ(A)', '∫f dμ', 'ℝ', '∅', '⋃Aₙ', 'Lebesgue', 'a.e.'] }
         ];
         var nivel = 0, tiro = 0, suma = 0, fig = null, done = false, fin = false;
         try { nivel = Math.min(+localStorage.getItem('jg-nivel') || 0, NIV.length - 1); } catch (e) {}
@@ -1797,7 +1833,7 @@
             var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
             var p = pt.matrixTransform(svg.getScreenCTM().inverse()), c = fig.c;
             var d = Math.hypot(p.x - c.x, p.y - c.y), pts = Math.max(0, Math.round(100 * (1 - d / fig.R)));
-            done = true; tiro++; suma += pts;
+            done = true; tiro++; suma += pts; if (window.JGP) JGP.add('centro', pts);
             mk('line', { x1: c.x, y1: c.y, x2: p.x, y2: p.y, stroke: '#8a4fa8', 'stroke-width': 2, 'stroke-dasharray': '4 3' });
             mk('circle', { cx: c.x, cy: c.y, r: 4, fill: '#1c1c1c' });
             mk('circle', { cx: p.x, cy: p.y, r: 4, fill: '#d14b4b', stroke: '#fff', 'stroke-width': 1.5 });
@@ -1810,7 +1846,7 @@
                 var media = Math.round(suma / tiro), pasa = media >= L.min;
                 txt += ' ' + (es() ? 'Media del nivel: ' + media + '. ' : 'Level average: ' + media + '. ');
                 if (pasa && nivel === NIV.length - 1) { txt += es() ? '¡Has superado el nivel Dios! Has terminado el juego.' : 'You beat God level! Game complete.'; etiqueta(['Volver a empezar', 'Start again']); fin = 'reset'; }
-                else if (pasa) { txt += es() ? '¡Nivel superado!' : 'Level passed!'; etiqueta(['Siguiente nivel', 'Next level']); fin = 'up'; }
+                else if (pasa) { if (window.JGP) JGP.add('centro', 100 * (nivel + 1)); txt += (es() ? '+' + 100 * (nivel + 1) + ' de bonus. ' : '+' + 100 * (nivel + 1) + ' bonus. ') + es() ? '¡Nivel superado!' : 'Level passed!'; etiqueta(['Siguiente nivel', 'Next level']); fin = 'up'; }
                 else { txt += es() ? 'Necesitabas ' + L.min + '. Inténtalo otra vez.' : 'You needed ' + L.min + '. Try again.'; etiqueta(['Repetir nivel', 'Retry level']); fin = 'retry'; }
             } else etiqueta(['Otra figura', 'Another shape']);
             msg.textContent = txt; tot.textContent = Math.round(suma / tiro); cabecera();

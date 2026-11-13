@@ -88,6 +88,7 @@
             if (hecho) return; hecho = true; q.disabled = true; lista.innerHTML = '';
             var bien = cruces(par[0], par[1]), acert = sel.filter(function (s) { return bien.indexOf(s) >= 0; }), mal = sel.filter(function (s) { return bien.indexOf(s) < 0; });
             var perfecto = acert.length === bien.length && !mal.length; if (perfecto) aciertos++;
+            var ptsM = acert.length * 40 - mal.length * 20 - (bien.length - acert.length) * 10 + (perfecto ? (bien.length ? 50 : 80) : 0); ptsM = Math.max(0, ptsM); if (window.JGP) JGP.add('metro', ptsM);
             mapa(par);
             bien.forEach(function (s) { var p = EST[s].p; mk(svgM, 'circle', { cx: X(p), cy: Y(p), r: 6, fill: '#fff', stroke: '#1c1c1c', 'stroke-width': 2.5 });
                 var t = mk(svgM, 'text', { x: X(p) + 9, y: Y(p) + 4, 'font-size': 11, 'font-weight': 700, fill: '#1c1c1c', stroke: '#fff', 'stroke-width': 3, 'paint-order': 'stroke' }, s); });
@@ -95,6 +96,7 @@
                 (es() ? 'Se cruzan ' + (bien.length === 1 ? 'una vez: ' : bien.length + ' veces: ') : 'They cross ' + (bien.length === 1 ? 'once: ' : bien.length + ' times: ') ) + bien.join(', ') + '.');
             txt = (perfecto ? (es() ? '¡Perfecto! ' : 'Perfect! ') : (es() ? 'Casi. ' : 'Not quite. ')) + txt;
             if (mal.length) txt += ' ' + (es() ? 'Sobraban: ' : 'Not crossings: ') + mal.join(', ') + '.';
+            txt += ' +' + ptsM + (es() ? ' puntos.' : ' points.');
             ronda++;
             if (ronda >= PREG) { txt += ' ' + (es() ? 'Partida terminada: ' + aciertos + ' de ' + PREG + ' perfectas.' : 'Game over: ' + aciertos + ' of ' + PREG + ' perfect.'); ronda = 0; aciertos = 0; }
             msgM.textContent = txt; ok.hidden = true; sig.hidden = false;
@@ -139,7 +141,7 @@
             mk(svgP, 'line', { x1: sx(xu), x2: sx(P.x), y1: sy(P.y), y2: sy(P.y), stroke: '#d14b4b', 'stroke-width': 3 });
             mk(svgP, 'circle', { cx: sx(P.x), cy: sy(P.y), r: 5, fill: '#1c1c1c' });
             mk(svgP, 'circle', { cx: sx(xu), cy: sy(P.y), r: 5, fill: '#d14b4b', stroke: '#fff', 'stroke-width': 1.5 });
-            tiros++; sumaP += pts;
+            tiros++; sumaP += pts; if (window.JGP) JGP.add('parabola', pts);
             var ec = 'y = ' + fmt(P.a) + '(x ' + (P.h < 0 ? '+ ' + (-P.h) : '− ' + P.h) + ')² ' + (P.k < 0 ? '− ' + (-P.k) : '+ ' + P.k);
             msgP.textContent = (es() ? 'Era x = ' + fmt(P.x) + ' y has dicho ' + fmt(xu) + ': +' + pts + ' puntos. La parábola: ' : 'It was x = ' + fmt(P.x) + ' and you said ' + fmt(xu) + ': +' + pts + ' points. The parabola: ') + ec + '. ' +
                 (es() ? 'Media: ' : 'Average: ') + Math.round(sumaP / tiros) + (es() ? ' en ' + tiros + (tiros === 1 ? ' tiro.' : ' tiros.') : ' over ' + tiros + (tiros === 1 ? ' throw.' : ' throws.'));

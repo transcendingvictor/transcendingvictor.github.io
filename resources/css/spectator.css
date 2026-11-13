@@ -1541,3 +1541,14 @@ html.sp-essay-lock { overflow: hidden; }
 .mt-sel { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.4rem; }
 .mt-chip { background: #fde7b0; }
 .mt-board { margin-top: 0.6rem; }
+.jgp-card { max-width: 34rem; padding: 0.9rem 1rem; border: 0.2rem solid #1c1c1c; border-radius: 14px; background: linear-gradient(135deg, #e5d8f7, #c4e6cc); color: #1c1c1c; }
+.jgp-card p { margin: 0; }
+.jgp-rango { font-weight: 700; color: #8a4fa8; letter-spacing: 0.03em; }
+.jgp-rango.sube { animation: jgp-sube 1.2s ease; }
+@keyframes jgp-sube { 0%, 100% { transform: scale(1); } 40% { transform: scale(1.12); } }
+.jgp-total b { font-size: 2rem; }
+.jgp-barra { height: 0.6rem; border-radius: 999px; background: rgba(255,255,255,.7); border: 0.1rem solid #1c1c1c; overflow: hidden; margin: 0.3rem 0; }
+.jgp-barra i { display: block; height: 100%; width: 0; background: #8a4fa8; transition: width .6s; }
+.jgp-sig { font-size: 0.9rem; }
+.jgp-desglose { list-style: none; margin: 0.6rem 0 0; padding: 0; display: grid; gap: 0.2rem; font-size: 0.92rem; }
+.jgp-desglose li { display: flex; justify-content: space-between; border-top: 0.08rem dashed rgba(0,0,0,.25); padding-top: 0.2rem; }
