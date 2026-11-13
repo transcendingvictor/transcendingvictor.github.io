@@ -1574,3 +1574,9 @@ html.sp-essay-lock { overflow: hidden; }
 .sp-fl[open] .def, .sp-fl[open] .fl-big { animation: fl-in 0.4s ease both; }
 @keyframes fl-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .sp-fl[open] .ej li, .sp-fl[open] .def, .sp-fl[open] .fl-big { animation: none; } }
+.sp-margin-note { display: inline-block; margin: 0.2rem 0 0 3.2rem; font-family: "Caveat", "Segoe Print", "Bradley Hand", cursive; font-style: italic; font-size: 0.88rem; color: #8a4fa8; text-decoration: none; transform: rotate(-2deg); opacity: 0.85; }
+.sp-margin-note:hover { opacity: 1; text-decoration: underline; }
+@media (min-width: 900px) {
+    li:has(> .sp-margin-note) { position: relative; }
+    .sp-margin-note { position: absolute; left: calc(100% + 0.4rem); top: 50%; margin: 0; width: 7.5rem; transform: translateY(-50%) rotate(-4deg); line-height: 1.2; }
+}
