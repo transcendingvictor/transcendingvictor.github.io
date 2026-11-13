@@ -46,6 +46,18 @@
     });
     var NOMBRES = Object.keys(EST).sort(function (a, b) { return a.localeCompare(b, 'es'); });
     function cruces(a, b) { return NOMBRES.filter(function (s) { return EST[s].l[a] && EST[s].l[b]; }); }
+    // Intercambiadores unidos por pasillo: cuentan como un solo cruce y vale cualquiera de sus nombres.
+    var PASILLOS = [['Noviciado', 'Plaza de España'], ['Embajadores', 'Acacias']];
+    function unidades(a, b) {
+        var u = cruces(a, b).map(function (s) { return { n: [s], s: s, pas: false }; });
+        PASILLOS.forEach(function (g) {
+            var directo = u.filter(function (x) { return g.indexOf(x.s) >= 0; })[0];
+            if (directo) { directo.n = g.slice(); return; }
+            var ea = g.filter(function (s) { return EST[s] && EST[s].l[a]; }), eb = g.filter(function (s) { return EST[s] && EST[s].l[b]; });
+            if (ea.length && eb.length) u.push({ n: g.slice(), s: g.join('–'), pas: true });
+        });
+        return u;
+    }
 
     var mt = document.getElementById('mt'); if (mt) {
         var svgM = document.getElementById('mt-svg'), q = document.getElementById('mt-q'), lista = document.getElementById('mt-res'),
@@ -67,8 +79,8 @@
         function nueva() {
             var ks = Object.keys(LINEAS), a = ks[Math.floor(Math.random() * ks.length)], b;
             do { b = ks[Math.floor(Math.random() * ks.length)]; } while (b === a);
-            par = [a, b].sort(function (x, y) { return x - y; }); sel = []; hecho = false; q.value = ''; q.disabled = false; lista.innerHTML = '';
-            pregunta.innerHTML = (es() ? 'Pregunta ' : 'Question ') + (ronda + 1) + '/' + PREG + ': ' + (es() ? '¿en qué estaciones se cruzan las líneas ' : 'at which stations do lines ') + chip(par[0]) + (es() ? ' y ' : ' and ') + chip(par[1]) + (es() ? '?' : ' cross?');
+            par = [a, b].sort(function (x, y) { return x - y; }); sel = []; hecho = false; res = null; q.value = ''; q.disabled = false; lista.innerHTML = '';
+            enunciado();
             msgM.textContent = es() ? 'Escribe y elige las estaciones. Si crees que no se cruzan, dale directamente a «Ya está».' : 'Type and pick the stations. If you think they never cross, just press «Done».';
             ok.hidden = false; sig.hidden = true; pintarSel(); mapa(null);
         }
@@ -84,21 +96,36 @@
             m.slice(0, 6).forEach(function (s) { var li = document.createElement('li'); var b = document.createElement('button'); b.type = 'button'; b.textContent = s;
                 b.onclick = function () { sel.push(s); q.value = ''; lista.innerHTML = ''; pintarSel(); q.focus(); }; li.appendChild(b); lista.appendChild(li); });
         });
+        var res = null;
+        function textoRes() {
+            if (!res) return;
+            var bien = res.u, mal = res.mal, txt;
+            var nombres = bien.map(function (x) { return x.pas ? (es() ? 'el pasillo ' : 'the passage ') + x.s : x.s; });
+            txt = bien.length === 0 ? (es() ? 'No se cruzan nunca.' : 'They never cross.') :
+                (es() ? 'Se cruzan ' + (bien.length === 1 ? 'una vez: ' : bien.length + ' veces: ') : 'They cross ' + (bien.length === 1 ? 'once: ' : bien.length + ' times: ')) + nombres.join(', ') + '.';
+            if (bien.some(function (x) { return x.pas; })) txt += ' ' + (es() ? '(Las estaciones unidas por pasillo cuentan como un solo cruce y vale cualquiera de los dos nombres.)' : '(Stations joined by a passage count as one crossing, and either name is fine.)');
+            txt = (res.perfecto ? (es() ? '¡Perfecto! ' : 'Perfect! ') : (es() ? 'Casi. ' : 'Not quite. ')) + txt;
+            if (mal.length) txt += ' ' + (es() ? 'Sobraban: ' : 'Not crossings: ') + mal.join(', ') + '.';
+            txt += ' +' + res.pts + (es() ? ' puntos.' : ' points.');
+            if (res.fin) txt += ' ' + (es() ? 'Partida terminada: ' + res.ac + ' de ' + PREG + ' perfectas.' : 'Game over: ' + res.ac + ' of ' + PREG + ' perfect.');
+            msgM.textContent = txt;
+        }
         ok.addEventListener('click', function () {
             if (hecho) return; hecho = true; q.disabled = true; lista.innerHTML = '';
-            var bien = cruces(par[0], par[1]), acert = sel.filter(function (s) { return bien.indexOf(s) >= 0; }), mal = sel.filter(function (s) { return bien.indexOf(s) < 0; });
-            var perfecto = acert.length === bien.length && !mal.length; if (perfecto) aciertos++;
+            var u = unidades(par[0], par[1]), usadas = [], mal = [];
+            sel.forEach(function (s) { var k = u.filter(function (x) { return x.n.indexOf(s) >= 0 && usadas.indexOf(x) < 0; })[0]; if (k) usadas.push(k); else if (!u.some(function (x) { return x.n.indexOf(s) >= 0; })) mal.push(s); });
+            var perfecto = usadas.length === u.length && !mal.length; if (perfecto) aciertos++;
+            var ptsM = Math.max(0, usadas.length * 40 - mal.length * 20 - (u.length - usadas.length) * 10 + (perfecto ? (u.length ? 50 : 80) : 0)); if (window.JGP) JGP.add('metro', ptsM);
             mapa(par);
-            bien.forEach(function (s) { var p = EST[s].p; mk(svgM, 'circle', { cx: X(p), cy: Y(p), r: 6, fill: '#fff', stroke: '#1c1c1c', 'stroke-width': 2.5 });
-                var t = mk(svgM, 'text', { x: X(p) + 9, y: Y(p) + 4, 'font-size': 11, 'font-weight': 700, fill: '#1c1c1c', stroke: '#fff', 'stroke-width': 3, 'paint-order': 'stroke' }, s); });
-            var txt = (bien.length === 0 ? (es() ? 'No se cruzan nunca.' : 'They never cross.') :
-                (es() ? 'Se cruzan ' + (bien.length === 1 ? 'una vez: ' : bien.length + ' veces: ') : 'They cross ' + (bien.length === 1 ? 'once: ' : bien.length + ' times: ') ) + bien.join(', ') + '.');
-            txt = (perfecto ? (es() ? '¡Perfecto! ' : 'Perfect! ') : (es() ? 'Casi. ' : 'Not quite. ')) + txt;
-            if (mal.length) txt += ' ' + (es() ? 'Sobraban: ' : 'Not crossings: ') + mal.join(', ') + '.';
+            u.forEach(function (x) { x.n.forEach(function (s) { var p = EST[s].p; mk(svgM, 'circle', { cx: X(p), cy: Y(p), r: 6, fill: '#fff', stroke: '#1c1c1c', 'stroke-width': 2.5 });
+                mk(svgM, 'text', { x: X(p) + 9, y: Y(p) + 4, 'font-size': 11, 'font-weight': 700, fill: '#1c1c1c', stroke: '#fff', 'stroke-width': 3, 'paint-order': 'stroke' }, s); }); });
             ronda++;
-            if (ronda >= PREG) { txt += ' ' + (es() ? 'Partida terminada: ' + aciertos + ' de ' + PREG + ' perfectas.' : 'Game over: ' + aciertos + ' of ' + PREG + ' perfect.'); ronda = 0; aciertos = 0; }
-            msgM.textContent = txt; ok.hidden = true; sig.hidden = false;
+            res = { u: u, mal: mal, perfecto: perfecto, pts: ptsM, fin: ronda >= PREG, ac: aciertos };
+            if (ronda >= PREG) { ronda = 0; aciertos = 0; }
+            textoRes(); ok.hidden = true; sig.hidden = false;
         });
+        function enunciado() { pregunta.innerHTML = (es() ? 'Pregunta ' : 'Question ') + (ronda + (hecho ? 0 : 1) || PREG) + '/' + PREG + ': ' + (es() ? '¿en qué estaciones se cruzan las líneas ' : 'at which stations do lines ') + chip(par[0]) + (es() ? ' y ' : ' and ') + chip(par[1]) + (es() ? '?' : ' cross?'); }
+        document.querySelectorAll('[data-set-lang]').forEach(function (bt) { bt.addEventListener('click', function () { enunciado(); if (hecho) textoRes(); else msgM.textContent = es() ? 'Escribe y elige las estaciones. Si crees que no se cruzan, dale directamente a «Ya está».' : 'Type and pick the stations. If you think they never cross, just press «Done».'; }); });
         sig.addEventListener('click', nueva);
         nueva();
     }
@@ -139,7 +166,7 @@
             mk(svgP, 'line', { x1: sx(xu), x2: sx(P.x), y1: sy(P.y), y2: sy(P.y), stroke: '#d14b4b', 'stroke-width': 3 });
             mk(svgP, 'circle', { cx: sx(P.x), cy: sy(P.y), r: 5, fill: '#1c1c1c' });
             mk(svgP, 'circle', { cx: sx(xu), cy: sy(P.y), r: 5, fill: '#d14b4b', stroke: '#fff', 'stroke-width': 1.5 });
-            tiros++; sumaP += pts;
+            tiros++; sumaP += pts; if (window.JGP) JGP.add('parabola', pts);
             var ec = 'y = ' + fmt(P.a) + '(x ' + (P.h < 0 ? '+ ' + (-P.h) : '− ' + P.h) + ')² ' + (P.k < 0 ? '− ' + (-P.k) : '+ ' + P.k);
             msgP.textContent = (es() ? 'Era x = ' + fmt(P.x) + ' y has dicho ' + fmt(xu) + ': +' + pts + ' puntos. La parábola: ' : 'It was x = ' + fmt(P.x) + ' and you said ' + fmt(xu) + ': +' + pts + ' points. The parabola: ') + ec + '. ' +
                 (es() ? 'Media: ' : 'Average: ') + Math.round(sumaP / tiros) + (es() ? ' en ' + tiros + (tiros === 1 ? ' tiro.' : ' tiros.') : ' over ' + tiros + (tiros === 1 ? ' throw.' : ' throws.'));
