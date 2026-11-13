@@ -949,6 +949,33 @@
                 </div>
             </section>
 
+            <section class="sp-list jg" id="pb">
+                <h2><span data-l="es">La parábola</span><span data-l="en">The parabola</span></h2>
+                <p class="jg-level" id="pb-preg"></p>
+                <div class="jg-board"><svg id="pb-svg" viewBox="0 0 300 260" preserveAspectRatio="xMidYMid meet"></svg></div>
+                <div class="jg-bar">
+                    <p class="jg-msg" id="pb-msg" aria-live="polite"></p>
+                    <button type="button" class="jg-next" id="pb-next" hidden><span data-l="es">Otra parábola</span><span data-l="en">Another parabola</span></button>
+                </div>
+            </section>
+
+            <section class="sp-list jg" id="mt">
+                <h2><span data-l="es">¿Dónde se cruzan? Metro de Madrid</span><span data-l="en">Where do they cross? Madrid Metro</span></h2>
+                <p class="jg-level" id="mt-preg"></p>
+                <div class="mt-box">
+                    <input type="search" id="mt-q" class="mt-q" autocomplete="off" placeholder="Estación… / Station…">
+                    <ul class="mt-res" id="mt-res"></ul>
+                    <div class="mt-sel" id="mt-sel"></div>
+                </div>
+                <div class="jg-bar">
+                    <button type="button" class="jg-next" id="mt-ok"><span data-l="es">Ya está</span><span data-l="en">Done</span></button>
+                    <button type="button" class="jg-next" id="mt-next" hidden><span data-l="es">Siguiente</span><span data-l="en">Next</span></button>
+                    <p class="jg-msg" id="mt-msg" aria-live="polite"></p>
+                </div>
+                <div class="jg-board mt-board"><svg id="mt-svg" viewBox="0 0 340 360" preserveAspectRatio="xMidYMid meet"></svg></div>
+                <p class="sp-note"><span data-l="es">Mapa esquemático de las líneas 1 a 11 en su tramo urbano (sin Metro Norte, Este ni Sur).</span><span data-l="en">Schematic map of lines 1 to 11, city section only.</span></p>
+            </section>
+
             <section class="sp-list">
                 <h2><span data-l="es">Objetivos de 2026</span><span data-l="en">Goals for 2026</span> <span class="rc-state"><span data-l="es">abierto</span><span data-l="en">open</span></span></h2>
                 <p class="sp-note"><span data-l="es">Me los puse en julio de 2026. Ser más…</span><span data-l="en">I set them in July 2026. To be more…</span></p>
@@ -1800,5 +1827,6 @@
         nuevo();
     })();
     </script>
+    <script src="resources/js/juegos.js"></script>
 </body>
 </html>
