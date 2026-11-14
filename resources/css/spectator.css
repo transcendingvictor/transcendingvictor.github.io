@@ -1598,3 +1598,15 @@ html.sp-essay-lock { overflow: hidden; }
 .jg-win-big { font-size: 1.5rem; font-weight: 800; letter-spacing: 0.04em; }
 @keyframes jg-win-bg { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 @media (prefers-reduced-motion: reduce) { .jg-win.on, .jg-flash-ok .mt-board, .jg-flash-ko .mt-board { animation: none; } }
+/* Freno al entrar en «Para mí» */
+.rc-night { position: relative; }
+.rc-night::before { content: ""; position: absolute; left: 50%; top: 0; width: 100vw; height: 0.25rem; background: #0b0b0b; transform: translateX(-50%) scaleX(0.15); transform-origin: center; transition: transform 1.4s cubic-bezier(.2,.8,.2,1), height 1.4s ease; z-index: 1; }
+.rc-night.rc-freno::before { transform: translateX(-50%) scaleX(1); height: 0.6rem; }
+.rc-night.rc-freno .rc-warning { animation: rc-aviso 2.1s cubic-bezier(.2,.8,.2,1) both; transform-origin: left top; }
+@keyframes rc-aviso { 0% { transform: scale(1.7); background: rgba(247,213,156,.25); box-shadow: 0 0 0 0.6rem rgba(247,213,156,.35); } 35% { transform: scale(1.45); } 100% { transform: scale(1); background: transparent; box-shadow: none; } }
+html.rc-pausa, html.rc-pausa body { overflow: hidden; }
+html.rc-pausa body { pointer-events: none; }
+@media (max-width: 600px) { .rc-night.rc-freno .rc-warning { transform-origin: center top; } @keyframes rc-aviso-m { from { transform: scale(1.25); } to { transform: none; } } .rc-night.rc-freno .rc-warning { animation-name: rc-aviso-m; } }
+.jg-board svg { transition: none; }
+.jg-board svg.jg-zoom { animation: jg-zoom-in 0.35s ease; }
+@keyframes jg-zoom-in { from { opacity: 0.6; } to { opacity: 1; } }
