@@ -1184,6 +1184,16 @@
 {"id":"RV-051","f":"2026-01-23","t":"Creo que nuestras creencias son importantes."},
 {"id":"RV-052","f":"2026-04-17","t":"Con vergüenza no se puede."},
 {"id":"RV-062","f":"2026-06-05","t":"El mayor sufrimiento humano no lo produce la enfermedad, sino la soledad. Nunca dejéis de acompañar al paciente. No solo hay que ser buenos médicos, también hay que ser médicos buenos."},
+{"id": "RV-063", "f": "2021-08-16", "src": "diario", "t": "El humor no tiene que ser perfecto."},
+{"id": "RV-064", "f": "2022-08-30", "src": "diario", "t": "A veces simplemente necesitas espacio. No te sientas mal."},
+{"id": "RV-065", "f": "2022-09-03", "src": "diario", "t": "Cuando pida más amor es que necesito más amor."},
+{"id": "RV-066", "f": "2022-09-06", "src": "diario", "t": "The solution to the problem of existence: find new things that truly excite you."},
+{"id": "RV-067", "f": "2022-09-18", "src": "diario", "t": "I love having this Víctor back, in love with life and knowledge."},
+{"id": "RV-068", "f": "2022-10-06", "src": "diario", "t": "Víctor, never pressure someone again.", "sub": "Let them see you superexcited and decide if that is for them, let the motivation to do it arise by itself."},
+{"id": "RV-069", "f": "2022-10-06", "src": "diario", "t": "NEVER try to convince someone or seem like you are trying to convince."},
+{"id": "RV-070", "f": "2022-10", "src": "diario", "t": "Sometimes I try to see a problem where there is no problem."},
+{"id": "RV-071", "f": "2022-10-19", "src": "diario", "t": "Bro, me gusta llevar la ropa al revés…: IT AIN'T DEEP."},
+{"id": "RV-072", "f": "2022-10-20", "src": "diario", "especial": "pensar", "t": "Pensar más no te va a llevar a ningún sitio."},
 {"id":"RV-053","f":"2026-06-10","t":"Hay que correr con la cabeza."},
 {"id":"RV-054","f":"2026-07-05","t":"Me mueven mis deseos, eso pasa. Soy eso, es lo de siempre. Mola."},
 {"id":"RV-055","f":"2026-08-19","t":"Estar concentrado es fundamental para vivir la vida al máximo (como yo la entiendo)."},
@@ -1641,6 +1651,7 @@
         var screen = document.getElementById('rv-screen');
         if (!screen) return;
         var all = JSON.parse(document.getElementById('rv-data').textContent);
+        all.sort(function (a, b) { return a.f < b.f ? -1 : a.f > b.f ? 1 : 0; });
         var card = screen.querySelector('.rv-card');
         var count = screen.querySelector('.rv-count');
         var REST = 10, LOCK = 4000;
@@ -1654,6 +1665,7 @@
         function build() { deck = mode === 'random' ? shuffle(all) : all.slice(); pos = 0; }
         function fecha(f) {
             var p = f.split('-');
+            if (!p[2]) return new Date(+p[0], +p[1] - 1, 1).toLocaleDateString(lang() === 'en' ? 'en-GB' : 'es-ES', { month: 'long', year: 'numeric' });
             var d = new Date(+p[0], +p[1] - 1, +p[2]);
             return d.toLocaleDateString(lang() === 'en' ? 'en-GB' : 'es-ES', { day: 'numeric', month: 'short', year: 'numeric' }).replace('.', '');
         }
@@ -1675,10 +1687,28 @@
                 return;
             }
             var r = deck[pos];
+            var fuente = r.src === 'diario' ? (en ? 'personal diary' : 'diario personal') : (en ? 'private chat' : 'chat privado');
+            if (r.especial === 'pensar') {
+                card.className = 'rv-card rv-pensar';
+                card.innerHTML = '<svg class="rv-pensar-svg" viewBox="0 0 260 150" aria-hidden="true">' +
+                    '<circle cx="34" cy="128" r="5" class="bur"/><circle cx="50" cy="112" r="8" class="bur"/>' +
+                    '<path class="nube" d="M70 90 C52 90 48 66 66 62 C62 40 90 32 102 46 C112 26 146 28 152 46 C170 34 196 46 188 64 C206 70 202 96 182 96 C178 112 150 114 142 102 C128 116 100 114 94 100 C82 106 66 102 70 90 Z"/>' +
+                    '<text x="126" y="80" text-anchor="middle" class="pensar">Pensar</text>' +
+                    '<g class="mas"><circle cx="222" cy="32" r="16"/><path d="M222 23 V41 M213 32 H231"/></g>' +
+                    '<text x="222" y="62" text-anchor="middle" class="mas-t">más</text>' +
+                    '<g class="reloj"><circle cx="226" cy="112" r="13"/><path d="M226 104 V112 L232 116"/></g>' +
+                    '</svg>' +
+                    '<p class="rv-pensar-fin">no te va a llevar a ningún sitio.</p>' +
+                    '<div class="rv-nota"><p>No hay una conclusión última de la vida.</p><p>Una lección que las englobe a todas.</p><p>Un consejo universal.</p></div>';
+                card.appendChild(el('figcaption', null, fuente + ' · ' + fecha(r.f)));
+                count.textContent = (pos + 1) + ' / ' + deck.length;
+                return;
+            }
             card.className = 'rv-card' + (r.t.length > 150 ? ' rv-long' : '') + (r.t.length > 220 ? ' rv-xlong' : '');
             card.appendChild(el('blockquote', null, r.t));
+            if (r.sub) card.appendChild(el('p', 'rv-sub', r.sub));
             if (r.a) card.appendChild(el('p', 'rv-author', '— ' + (en && r.a_en ? r.a_en : r.a)));
-            card.appendChild(el('figcaption', null, (en ? 'private chat' : 'chat privado') + ' · ' + fecha(r.f)));
+            card.appendChild(el('figcaption', null, fuente + ' · ' + fecha(r.f)));
             count.textContent = (pos + 1) + ' / ' + deck.length;
         }
         function next() {

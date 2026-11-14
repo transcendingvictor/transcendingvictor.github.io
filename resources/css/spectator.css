@@ -1610,3 +1610,19 @@ html.rc-pausa body { pointer-events: none; }
 .jg-board svg { transition: none; }
 .jg-board svg.jg-zoom { animation: jg-zoom-in 0.35s ease; }
 @keyframes jg-zoom-in { from { opacity: 0.6; } to { opacity: 1; } }
+.rv-sub { margin: 0.6rem auto 0; max-width: 22rem; font-size: 0.82rem; line-height: 1.4; color: #666; text-align: center; }
+.rv-card.rv-pensar { text-align: center; }
+.rv-pensar-svg { display: block; width: 100%; max-width: 17rem; margin: 0 auto; height: auto; font-family: "Aleo", serif; }
+.rv-pensar-svg .nube, .rv-pensar-svg .bur { fill: #f3ecfb; stroke: #8a4fa8; stroke-width: 2; }
+.rv-pensar-svg .pensar { font-size: 30px; font-weight: 800; fill: #8a4fa8; }
+.rv-pensar-svg .mas circle { fill: #fde7b0; stroke: #1c1c1c; stroke-width: 2; }
+.rv-pensar-svg .mas path { stroke: #1c1c1c; stroke-width: 3; stroke-linecap: round; }
+.rv-pensar-svg .mas-t { font-size: 15px; font-weight: 700; fill: #b07a12; }
+.rv-pensar-svg .reloj circle { fill: none; stroke: #9a9a9a; stroke-width: 1.5; }
+.rv-pensar-svg .reloj path { fill: none; stroke: #9a9a9a; stroke-width: 1.8; stroke-linecap: round; }
+.rv-pensar.rv-card .mas { animation: rv-mas 1.6s ease-in-out infinite; transform-origin: 222px 32px; }
+@keyframes rv-mas { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+.rv-pensar-fin { margin: 0.2rem 0 0.8rem; font-size: 1.15rem; font-weight: 700; color: #1c1c1c; }
+.rv-nota { max-width: 18rem; margin: 0 auto; padding: 0.6rem 0.9rem 0.4rem; background: #fffbea repeating-linear-gradient(#fffbea 0 1.55rem, #e8dfbf 1.55rem 1.6rem); border-left: 0.2rem solid #e3a6a6; border-radius: 4px; transform: rotate(-1deg); box-shadow: 0 2px 6px rgba(0,0,0,.08); text-align: left; }
+.rv-nota p { text-align: left; margin: 0; line-height: 1.6rem; font-size: 0.9rem; font-style: italic; color: #333; text-decoration: underline; text-decoration-color: #8a4fa8; text-underline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .rv-pensar.rv-card .mas { animation: none; } }
