@@ -1739,6 +1739,30 @@
     </script>
     <script>
     (function () {
+        // Al llegar a «Para mí»: freno de 2 s, la frontera se marca y el aviso de sitio privado entra en grande.
+        var night = document.querySelector('.rc-night'); if (!night || !('IntersectionObserver' in window)) return;
+        var hecho = false, reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function bloquear(e) { e.preventDefault(); }
+        var io = new IntersectionObserver(function (es) {
+            es.forEach(function (en) {
+                if (hecho || !en.isIntersecting) return; hecho = true; io.disconnect();
+                var top = night.getBoundingClientRect().top + window.scrollY - 8;
+                window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
+                night.classList.add('rc-freno');
+                if (reduce) return;
+                var root = document.documentElement; root.classList.add('rc-pausa');
+                ['wheel', 'touchmove', 'keydown'].forEach(function (t) { window.addEventListener(t, bloquear, { passive: false }); });
+                setTimeout(function () {
+                    root.classList.remove('rc-pausa');
+                    ['wheel', 'touchmove', 'keydown'].forEach(function (t) { window.removeEventListener(t, bloquear, { passive: false }); });
+                }, 2200);
+            });
+        }, { rootMargin: '0px 0px -55% 0px' });
+        io.observe(night);
+    })();
+    </script>
+    <script>
+    (function () {
         // Marcador común de los minijuegos: puntos acumulados, rangos y de dónde viene cada punto.
         var JUEGOS = { centro: ['Adivina el centro', 'Guess the centre'], parabola: ['La parábola', 'The parabola'], metro: ['Metro de Madrid', 'Madrid Metro'] };
         var RANGOS = [[0, 'Turista', 'Tourist'], [300, 'Curioso', 'Curious'], [1000, 'Aprendiz', 'Apprentice'], [2500, 'Calculador', 'Calculator'], [5000, 'Geómetra', 'Geometer'], [9000, 'Maestro del centro', 'Master of the centre'], [15000, 'Leyenda', 'Legend']];
@@ -1854,6 +1878,9 @@
             mk('line', { x1: c.x, y1: c.y, x2: p.x, y2: p.y, stroke: '#8a4fa8', 'stroke-width': 2, 'stroke-dasharray': '4 3' });
             mk('circle', { cx: c.x, cy: c.y, r: 4, fill: '#1c1c1c' });
             mk('circle', { cx: p.x, cy: p.y, r: 4, fill: '#d14b4b', stroke: '#fff', 'stroke-width': 1.5 });
+            var zr = Math.max(d * 2.2, 18), vb0 = '0 0 300 200', vb1 = (c.x - zr * 1.5) + ' ' + (c.y - zr) + ' ' + (zr * 3) + ' ' + (zr * 2);
+            svg.classList.add('jg-zoom'); svg.setAttribute('viewBox', vb1); next.disabled = true;
+            setTimeout(function () { svg.setAttribute('viewBox', vb0); svg.classList.remove('jg-zoom'); next.disabled = false; }, 1500);
             var txt = pts >= 95 ? (es() ? '¡Clavado!' : 'Spot on!') : pts >= 80 ? (es() ? '¡Muy cerca!' : 'Very close!') : pts >= 50 ? (es() ? 'No está mal.' : 'Not bad.') : (es() ? 'Uy…' : 'Oops…');
             txt += ' +' + pts + (es() ? ' puntos.' : ' points.');
             if (fig.fuera) txt += es() ? ' ¡Ojo! Aquí el centro de gravedad cae fuera de la figura: es el punto donde se equilibraría si fuera una lámina de cartón, aunque no haya material en él (como en un boomerang o una herradura).'
