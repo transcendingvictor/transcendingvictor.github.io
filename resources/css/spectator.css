@@ -1664,3 +1664,25 @@ html.rc-pausa body { pointer-events: none; }
 .rv-esp-universo figcaption { position: relative; color: #a99fd0; }
 @media (prefers-reduced-motion: reduce) { .rv-rayo { animation: none; } }
 .rv-narr, .rv-narr2, .rv-esp blockquote { text-align: center; }
+.rv-tri { display: block; width: 6.5rem; margin: 0 auto 0.6rem; }
+.rv-c1 { color: #d9467a; font-weight: 700; } .rv-c2 { color: #2d7fb8; font-weight: 700; } .rv-c3 { color: #c48a00; font-weight: 700; }
+.rv-tri-nota { margin: 0.5rem 0 0; font-size: 0.7rem; font-style: italic; color: #aaa; text-align: center; }
+.rv-esp-calor { position: relative; }
+.rv-calor { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.45; pointer-events: none; }
+.rv-calor .ola { fill: none; stroke: #f5a35c; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 8 10; animation: rv-sube 3s linear infinite; }
+.rv-calor .gente { fill: none; stroke: #c45a2a; stroke-width: 2; animation: rv-eleva 4s ease-in-out infinite alternate; }
+.rv-calor .gente circle { fill: #ffd9b3; }
+@keyframes rv-sube { to { stroke-dashoffset: 36; } }
+@keyframes rv-eleva { from { transform: translateY(14px); } to { transform: translateY(-6px); } }
+.rv-esp-calor blockquote, .rv-esp-calor figcaption { position: relative; z-index: 1; }
+.rv-esp-nubes { position: relative; overflow: hidden; background: linear-gradient(#f3ecfb, #fff); border-radius: 12px; padding: 1.4rem 0.8rem; }
+.rv-nubes { position: absolute; inset: auto 0 0.3rem; height: 2.2rem; white-space: nowrap; animation: rv-bucle 14s linear infinite; opacity: 0.6; }
+.rv-nubes span { display: inline-block; width: 33%; font-size: 1.6rem; }
+@keyframes rv-bucle { from { transform: translateX(0); } to { transform: translateX(-66%); } }
+.rv-esp-nubes blockquote { position: relative; font-size: 1.05rem; }
+.rv-esp-lineas { background: radial-gradient(circle at 50% 30%, #2e2340, #0f0b17); color: #efe6ff; border-radius: 12px; padding: 1.2rem 0.8rem; }
+.rv-lineas p { margin: 0.15rem 0; font-size: 0.98rem; text-align: center; animation: fl-in 0.5s ease both; animation-delay: calc(var(--i) * 0.25s); }
+.rv-lineas p:nth-child(6) { font-weight: 700; color: #ffd1ec; }
+.rv-esp-lineas figcaption { color: #9d86b8; }
+@media (prefers-reduced-motion: reduce) { .rv-calor .ola, .rv-calor .gente, .rv-nubes, .rv-lineas p { animation: none; } }
+.rv-esp-calor { padding: 2.5rem 0.5rem; background: linear-gradient(transparent, #fff1e2); border-radius: 12px; } .rv-esp-calor .rv-calor { opacity: 0.7; }
