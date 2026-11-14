@@ -1598,3 +1598,69 @@ html.sp-essay-lock { overflow: hidden; }
 .jg-win-big { font-size: 1.5rem; font-weight: 800; letter-spacing: 0.04em; }
 @keyframes jg-win-bg { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 @media (prefers-reduced-motion: reduce) { .jg-win.on, .jg-flash-ok .mt-board, .jg-flash-ko .mt-board { animation: none; } }
+/* Freno al entrar en «Para mí» */
+.rc-night { position: relative; }
+.rc-night::before { content: ""; position: absolute; left: 50%; top: 0; width: 100vw; height: 0.25rem; background: #0b0b0b; transform: translateX(-50%) scaleX(0.15); transform-origin: center; transition: transform 1.4s cubic-bezier(.2,.8,.2,1), height 1.4s ease; z-index: 1; }
+.rc-night.rc-freno::before { transform: translateX(-50%) scaleX(1); height: 0.6rem; }
+.rc-night.rc-freno .rc-warning { animation: rc-aviso 2.1s cubic-bezier(.2,.8,.2,1) both; transform-origin: left top; }
+@keyframes rc-aviso { 0% { transform: scale(1.7); background: rgba(247,213,156,.25); box-shadow: 0 0 0 0.6rem rgba(247,213,156,.35); } 35% { transform: scale(1.45); } 100% { transform: scale(1); background: transparent; box-shadow: none; } }
+html.rc-pausa, html.rc-pausa body { overflow: hidden; }
+html.rc-pausa body { pointer-events: none; }
+@media (max-width: 600px) { .rc-night.rc-freno .rc-warning { transform-origin: center top; } @keyframes rc-aviso-m { from { transform: scale(1.25); } to { transform: none; } } .rc-night.rc-freno .rc-warning { animation-name: rc-aviso-m; } }
+.jg-board svg { transition: none; }
+.jg-board svg.jg-zoom { animation: jg-zoom-in 0.35s ease; }
+@keyframes jg-zoom-in { from { opacity: 0.6; } to { opacity: 1; } }
+.rv-sub { margin: 0.6rem auto 0; max-width: 22rem; font-size: 0.82rem; line-height: 1.4; color: #666; text-align: center; }
+.rv-card.rv-pensar { text-align: center; }
+.rv-pensar-svg { display: block; width: 100%; max-width: 17rem; margin: 0 auto; height: auto; font-family: "Aleo", serif; }
+.rv-pensar-svg .nube, .rv-pensar-svg .bur { fill: #f3ecfb; stroke: #8a4fa8; stroke-width: 2; }
+.rv-pensar-svg .pensar { font-size: 30px; font-weight: 800; fill: #8a4fa8; }
+.rv-pensar-svg .mas circle { fill: #fde7b0; stroke: #1c1c1c; stroke-width: 2; }
+.rv-pensar-svg .mas path { stroke: #1c1c1c; stroke-width: 3; stroke-linecap: round; }
+.rv-pensar-svg .mas-t { font-size: 15px; font-weight: 700; fill: #b07a12; }
+.rv-pensar-svg .reloj circle { fill: none; stroke: #9a9a9a; stroke-width: 1.5; }
+.rv-pensar-svg .reloj path { fill: none; stroke: #9a9a9a; stroke-width: 1.8; stroke-linecap: round; }
+.rv-pensar.rv-card .mas { animation: rv-mas 1.6s ease-in-out infinite; transform-origin: 222px 32px; }
+@keyframes rv-mas { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+.rv-pensar-fin { margin: 0.2rem 0 0.8rem; font-size: 1.15rem; font-weight: 700; color: #1c1c1c; }
+.rv-nota { max-width: 18rem; margin: 0 auto; padding: 0.6rem 0.9rem 0.4rem; background: #fffbea repeating-linear-gradient(#fffbea 0 1.55rem, #e8dfbf 1.55rem 1.6rem); border-left: 0.2rem solid #e3a6a6; border-radius: 4px; transform: rotate(-1deg); box-shadow: 0 2px 6px rgba(0,0,0,.08); text-align: left; }
+.rv-nota p { text-align: left; margin: 0; line-height: 1.6rem; font-size: 0.9rem; font-style: italic; color: #333; text-decoration: underline; text-decoration-color: #8a4fa8; text-underline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .rv-pensar.rv-card .mas { animation: none; } }
+/* Recordatorios: tamaños según longitud y tarjetas especiales */
+.rv-card.rv-short blockquote { font-size: 1.7rem; font-weight: 600; }
+.rv-card.rv-long blockquote { font-size: 1rem; line-height: 1.45; }
+.rv-card.rv-xlong blockquote { font-size: 0.88rem; line-height: 1.5; text-align: left; background: #fffbea; padding: 0.7rem 0.9rem; border-radius: 6px; border-left: 0.2rem solid #e3a6a6; }
+.rv-esp blockquote { margin: 0; }
+.rv-esp .rv-small { font-size: 1rem; line-height: 1.5; }
+.rv-esp-misterio { position: relative; background: radial-gradient(circle at 50% 40%, #3a2350, #120b1c); color: #f1e6ff; border-radius: 12px; padding: 1.4rem 0.8rem; overflow: hidden; }
+.rv-mist { position: absolute; inset: 0; display: flex; flex-wrap: wrap; justify-content: space-around; align-content: space-around; font-style: italic; font-size: 0.85rem; color: #c9a8ef; opacity: 0.18; pointer-events: none; }
+.rv-mist span:nth-child(odd) { transform: rotate(-12deg); } .rv-mist span:nth-child(3n) { font-size: 1.3rem; }
+.rv-esp-misterio blockquote { position: relative; font-size: 1.25rem; color: #f1e6ff; }
+.rv-esp-misterio figcaption { position: relative; color: #9d86b8; }
+.rv-q { font-size: 1.1rem; color: #555; }
+.rv-real { margin: 1.2rem 0 0; font-size: 2.1rem; font-weight: 900; letter-spacing: 0.06em; color: #1c1c1c; border-top: 0.25rem solid #1c1c1c; border-bottom: 0.25rem solid #1c1c1c; padding: 0.2rem 0; }
+.rv-narr { margin: 0; font-size: 1.15rem; } .rv-narr-t { display: block; font-family: "Vollkorn SC", serif; font-size: 2.2rem; color: #2d7fb8; letter-spacing: 0.04em; }
+.rv-narr2 { margin: 0.8rem 0 0; font-size: 1rem; line-height: 1.6; } .rv-never { color: #d14b4b; }
+.rv-badmap { position: relative; white-space: nowrap; } .rv-badmap svg { position: absolute; left: 0; top: 0.9em; width: 100%; height: 1.6em; z-index: -1; fill: none; stroke: #e98b84; stroke-width: 2.5; opacity: 0.55; stroke-linecap: round; }
+.rv-esp-narrativas { position: relative; z-index: 0; }
+.rv-hl { background: linear-gradient(transparent 15%, #fde7b0 15%, #fde7b0 90%, transparent 90%); padding: 0 0.15rem; font-weight: 700; color: #1c1c1c; }
+.rv-cam-bt { margin-top: 1rem; font: inherit; padding: 0.5rem 1rem; border: 0.15rem solid #1c1c1c; border-radius: 999px; background: #e5d8f7; cursor: pointer; }
+.rv-cam { display: block; width: 11rem; height: 11rem; object-fit: cover; margin: 1rem auto 0; border-radius: 50%; border: 0.3rem solid #c9b27a; transform: scaleX(-1); box-shadow: 0 0 0 0.3rem #fff6dc; }
+.rv-cam[hidden] { display: none; } .rv-cam-msg { margin: 0.4rem 0 0; font-size: 0.75rem; color: #888; }
+.rv-enam { font-weight: 700; background: linear-gradient(90deg, #d14b4b, #2d7fb8); -webkit-background-clip: text; background-clip: text; color: transparent; } .rv-emo { font-size: 1.4rem; }
+.rv-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; justify-content: center; margin-bottom: 0.9rem; }
+.rv-tags span { font-size: 0.75rem; padding: 0.15rem 0.55rem; border-radius: 999px; border: 0.1rem solid #1c1c1c; }
+.rv-tags .flag { background: #c4e6cc; } .rv-tags .stone { background: #d8d6d0; color: #555; transform: rotate(4deg); }
+.rv-flag { color: #3a7d4f; } .rv-stone { color: #777; }
+.rv-esp-universo { position: relative; background: radial-gradient(circle at 70% 20%, #3b2a6b, #0d0b24 70%); color: #f4efff; border-radius: 12px; padding: 1.6rem 1rem; overflow: hidden; }
+.rv-uni { position: absolute; inset: 0; pointer-events: none; }
+.rv-uni i { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #fff; opacity: 0.8; }
+.rv-uni i:nth-child(1) { left: 10%; top: 15%; } .rv-uni i:nth-child(2) { left: 80%; top: 70%; } .rv-uni i:nth-child(3) { left: 30%; top: 85%; } .rv-uni i:nth-child(4) { left: 65%; top: 10%; } .rv-uni i:nth-child(5) { left: 90%; top: 35%; } .rv-uni i:nth-child(6) { left: 5%; top: 60%; } .rv-uni i:nth-child(7) { left: 50%; top: 50%; opacity: .4; } .rv-uni i:nth-child(8) { left: 40%; top: 25%; opacity: .5; }
+.rv-rayo { position: absolute; left: -20%; top: -30%; width: 45%; height: 170%; background: linear-gradient(90deg, transparent, rgba(255,236,170,.35), transparent); transform: rotate(25deg); animation: rv-rayo 5s ease-in-out infinite; }
+@keyframes rv-rayo { 0%, 100% { left: -30%; } 50% { left: 85%; } }
+.rv-esp-universo blockquote { position: relative; color: #f4efff; font-size: 1.1rem; line-height: 1.5; }
+.rv-luz { color: #ffe6a0; text-shadow: 0 0 10px rgba(255,230,160,.8); font-weight: 700; }
+.rv-div { color: #ff9ecb; font-weight: 700; } .rv-dul { color: #9fe3c0; font-weight: 700; }
+.rv-esp-universo figcaption { position: relative; color: #a99fd0; }
+@media (prefers-reduced-motion: reduce) { .rv-rayo { animation: none; } }
+.rv-narr, .rv-narr2, .rv-esp blockquote { text-align: center; }

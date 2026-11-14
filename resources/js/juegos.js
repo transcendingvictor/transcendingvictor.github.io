@@ -124,7 +124,7 @@
                 for (var t = 0; t < 12 && cajas.some(function (c) { return lx < c[0] + c[2] && lx + w > c[0] && ly - 10 < c[1] && ly > c[1] - 10; }); t++) ly += (t % 2 ? -1 : 1) * 13 * (t + 1);
                 cajas.push([lx, ly, w]);
                 if (Math.abs(ly - Y(p) - 4) > 2) mk(svgM, 'line', { x1: X(p), y1: Y(p), x2: lx + (lx < X(p) ? w : 0), y2: ly - 4, stroke: '#1c1c1c', 'stroke-width': 0.8 });
-                mk(svgM, 'text', { x: lx, y: ly, 'font-size': 11, 'font-weight': 700, fill: '#1c1c1c', stroke: '#fff', 'stroke-width': 3, 'paint-order': 'stroke' }, s); }); });
+                mk(svgM, 'text', { x: lx, y: ly, 'font-size': 11, 'font-weight': 700, fill: '#1c1c1c', stroke: '#fff', 'stroke-width': 3, 'paint-order': 'stroke' }, (ok ? '✓ ' : '') + s); }); });
             ronda++;
             res = { u: u, mal: mal, perfecto: perfecto, pts: ptsM, fin: ronda >= PREG, ac: aciertos };
             if (ronda >= PREG) { ronda = 0; aciertos = 0; }
