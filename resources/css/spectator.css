@@ -1686,3 +1686,25 @@ html.rc-pausa body { pointer-events: none; }
 .rv-esp-lineas figcaption { color: #9d86b8; }
 @media (prefers-reduced-motion: reduce) { .rv-calor .ola, .rv-calor .gente, .rv-nubes, .rv-lineas p { animation: none; } }
 .rv-esp-calor { padding: 2.5rem 0.5rem; background: linear-gradient(transparent, #fff1e2); border-radius: 12px; } .rv-esp-calor .rv-calor { opacity: 0.7; }
+.rv-card blockquote { white-space: pre-line; }
+.rv-nadie { display: block; margin: 0.3rem 0; font-size: 1.6rem; font-weight: 700; color: #8a4fa8; }
+.rv-esf { font-weight: 800; color: #3a7d4f; } .rv-res { opacity: 0.4; font-style: italic; }
+.rv-camino { display: block; width: 80%; margin: 0.5rem auto 0; } .rv-camino path { fill: none; stroke: #3a7d4f; stroke-width: 2.5; stroke-dasharray: 6 6; stroke-linecap: round; animation: rv-sube 2.5s linear infinite reverse; }
+.rv-vivas { display: inline-block; font-size: 1.5em; font-weight: 800; background: linear-gradient(90deg, #ff5f8f, #ffb347, #3ec7a7); -webkit-background-clip: text; background-clip: text; color: transparent; animation: jgp-sube 1.8s ease-in-out infinite; }
+.rv-gt { font-size: 1.8rem; line-height: 1.5; }
+.rv-game { color: #fff; background: linear-gradient(90deg, #ff5f8f, #ffb347); padding: 0 0.4rem; border-radius: 8px; font-weight: 800; display: inline-block; transform: rotate(-4deg); animation: jgp-sube 1.4s ease-in-out infinite; }
+.rv-test { color: #6b6b6b; font-family: "Courier New", monospace; border: 0.12rem solid #9a9a9a; padding: 0 0.4rem; border-radius: 2px; text-decoration: line-through; text-decoration-color: #d14b4b; }
+.rv-esp-repetir { position: relative; overflow: hidden; padding: 0.5rem 0; }
+.rv-rep { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-around; font-size: 0.8rem; pointer-events: none; }
+.rv-rep p { margin: 0; color: #1c1c1c; white-space: nowrap; }
+.rv-esp-repetir blockquote, .rv-esp-repetir .rv-sub, .rv-esp-repetir figcaption { position: relative; }
+.rv-futuro { font-weight: 800; color: #2d7fb8; border-bottom: 0.15rem dashed #2d7fb8; }
+.rv-esp-tequiero { position: relative; overflow: hidden; background: linear-gradient(135deg, #ffe3ef, #fff4f8); border-radius: 12px; padding: 1.5rem 0.6rem; }
+.rv-tq { position: absolute; inset: 0; display: flex; flex-wrap: wrap; justify-content: space-around; align-content: space-around; color: #ff8fb6; opacity: 0.4; font-style: italic; font-size: 0.85rem; pointer-events: none; }
+.rv-tq span:nth-child(even) { transform: rotate(-10deg); }
+.rv-esp-tequiero blockquote, .rv-esp-tequiero figcaption { position: relative; }
+.rv-tq-t { color: #e0427a; font-weight: 800; font-size: 1.25em; }
+.rv-id { white-space: normal; font-size: 1rem; } .rv-id span { display: block; margin: 0.25rem 0; }
+.rv-id .i1 b { color: #d9467a; } .rv-id .i2 b { color: #c48a00; } .rv-id .i3 b { color: #2d7fb8; }
+@media (prefers-reduced-motion: reduce) { .rv-vivas, .rv-game, .rv-camino path { animation: none; } }
+.rv-id, .rv-id span { text-align: left; }
