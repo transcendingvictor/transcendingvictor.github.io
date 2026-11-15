@@ -1708,3 +1708,7 @@ html.rc-pausa body { pointer-events: none; }
 .rv-id .i1 b { color: #d9467a; } .rv-id .i2 b { color: #c48a00; } .rv-id .i3 b { color: #2d7fb8; }
 @media (prefers-reduced-motion: reduce) { .rv-vivas, .rv-game, .rv-camino path { animation: none; } }
 .rv-id, .rv-id span { text-align: left; }
+.rv-idioma { display: flex; gap: 0.25rem; justify-content: center; margin: 0.35rem 0 0; }
+.rv-idioma button { font: inherit; font-size: 0.66rem; padding: 0.1rem 0.5rem; border: 0.08rem solid #ccc; border-radius: 999px; background: #fff; color: #888; cursor: pointer; }
+.rv-idioma button[aria-pressed="true"] { border-color: #1c1c1c; color: #1c1c1c; background: #f2efe6; }
+.rv-tr { display: block; margin: 0.7rem auto 0; font: inherit; font-size: 0.66rem; font-style: italic; color: #8a4fa8; background: none; border: 0; border-bottom: 0.06rem dotted #8a4fa8; cursor: pointer; padding: 0; }
