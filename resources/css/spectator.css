@@ -1753,3 +1753,17 @@ html.rc-pausa body { pointer-events: none; }
 .pp-result svg{width:64px;flex:none}
 .d3{bottom:auto;top:15.5em;right:.4em}
 .pp-cand,.pp-end{position:relative;z-index:1}
+
+.nm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.9em}
+.nm{background:#fff;border:1px solid #e3dccf;border-radius:14px;padding:1em 1.1em}
+.nm-name{font-size:1.6em;margin:0 0 .4em}
+.nm p{text-align:left;margin:.4em 0;line-height:1.45}
+.nm-todo{color:#999;font-style:italic}
+.nm-vis{font-size:1.5em;font-weight:800;letter-spacing:.03em;color:#222}
+.nm-vis b{color:#c0392b;font-weight:900;background:#ffe3df;border-radius:4px;padding:0 .08em}
+.nm-vis span{font-weight:400;color:#bbb;font-size:.7em}
+.nm-quote{font-size:1.15em;font-weight:700}
+.nm-poem{font-size:1.1em;line-height:1.6}
+.nm-arr{background:linear-gradient(160deg,#eef5ff,#fff)}
+.nm-link{color:#7a4fb5;font-weight:600}
+.sp-names h2 .tc-nr{font-size:.45em;vertical-align:middle;background:#fff3c4;color:#8a6d00;border-radius:999px;padding:.15em .6em}
