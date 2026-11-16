@@ -1730,3 +1730,26 @@ html.rc-pausa body { pointer-events: none; }
 .sp-com-link{display:inline-block;font-weight:600;color:#7a4fb5}
 .sp-com-card{margin-top:.5em;padding:.4em .6em;font-size:.85em}
 .sp-com-card summary{cursor:pointer;color:#7a4fb5}
+
+.pp-card{position:relative;background:#fffbea;border:2px dashed #333;border-radius:14px;padding:2.2em 1.2em 1.4em;overflow:hidden;font-size:1.05em}
+.pp-stamp{display:inline-block;transform:rotate(-4deg);border:3px solid #c0392b;color:#c0392b;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:.2em .6em;font-size:.8em;border-radius:6px}
+.pp-q{font-size:2.1em;line-height:1.05;margin:.5em 0 .3em}
+.pp-q em{font-style:normal;background:linear-gradient(transparent 60%,#ffd84d 60%)}
+.pp-serious{font-size:1.4em;margin:.2em 0 1em}.pp-serious b{font-size:1.4em;color:#c0392b}.pp-serious small{font-size:.6em;color:#666}
+.pp-h{font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.85em;color:#7a4fb5;margin:1.2em 0 .4em}
+.pp-steps{counter-reset:pp;list-style:none;padding:0;margin:0}
+.pp-steps li{counter-increment:pp;position:relative;padding:.3em 0 .9em 2.6em}
+.pp-steps li:before{content:counter(pp);position:absolute;left:0;top:0;width:1.8em;height:1.8em;border:2px solid #333;border-radius:50%;text-align:center;line-height:1.7em;font-weight:800;background:#fff}
+.pp-steps li:not(:last-child):after{content:"";position:absolute;left:.9em;top:2em;bottom:0;border-left:2px dashed #999}
+.pp-steps small,.pp-cats small{color:#777}
+.pp-result{display:flex;align-items:center;gap:.8em;background:#7a4fb5;color:#fff;border-radius:12px;padding:.8em 1em;margin:.6em 0;font-size:1.25em}
+.pp-result svg rect{fill:#ffd84d}.pp-result svg path{stroke:#fff}
+.pp-result small{font-size:.65em;opacity:.8;text-transform:uppercase;letter-spacing:.08em}
+.pp-cats{padding-left:1.1em}.pp-cats li{margin:.3em 0}
+.pp-end{font-size:1.2em;text-align:center;margin-top:1.2em}
+.pp-doo{position:absolute;font-size:1.6em;opacity:.55;pointer-events:none}
+.d1{top:.3em;right:.6em;transform:rotate(12deg)}.d2{top:5.5em;right:.4em}.d3{bottom:5em;right:.5em;transform:rotate(-15deg)}.d4{bottom:.6em;left:.6em}.d5{top:10em;right:1.2em;transform:rotate(8deg)}
+.pp-card p,.pp-card li{text-align:left}.pp-card .pp-end{text-align:center}
+.pp-result svg{width:64px;flex:none}
+.d3{bottom:auto;top:15.5em;right:.4em}
+.pp-cand,.pp-end{position:relative;z-index:1}
