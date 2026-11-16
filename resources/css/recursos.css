@@ -68,3 +68,13 @@
 .tc ol{padding-left:1.2em;margin:.5em 0 0}.tc li{margin:.3em 0;font-size:.95em}
 .tc-nr{position:absolute;top:.6em;right:.6em;font-size:.7em;background:#fff3c4;color:#8a6d00;border-radius:999px;padding:.15em .6em;font-weight:700}
 .tc p,.tc li{text-align:left}
+
+.bt-back a,.bt-link a{color:#7a4fb5;font-weight:600;text-decoration:none}
+.bt-link{margin:.4em 0 1em}
+.bt-h1{font-size:2.2em}.bt-suits{font-size:.7em;letter-spacing:.1em;color:#c0392b}
+.bt-sub{color:#666}.bt-sub .tc-nr{position:static;margin-left:.5em}
+.bt-box{background:#fff;border:1px solid #e3dccf;border-radius:14px;padding:1em 1.2em;margin:1em 0}
+.bt-box li{margin:.45em 0;text-align:left;line-height:1.45}
+.bt-notes{background:#fffbea;border:2px dashed #b89a3a}
+.bt-notes ol li::marker{font-weight:800;color:#c0392b}
+.bt-note{margin:0;color:#888;font-style:italic;font-size:.9em}
