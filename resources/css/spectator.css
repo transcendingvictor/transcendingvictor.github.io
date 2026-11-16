@@ -1724,3 +1724,9 @@ html.rc-pausa body { pointer-events: none; }
 .sp-post small{width:100%;color:#888;font-size:.8em}
 .sp-post .pc{font-style:italic;color:#555}
 .sp-post .plink{display:block;text-align:center;padding:.7em;margin-top:.4em;border-radius:8px;background:#7a4fb5;color:#fff;font-weight:600;text-decoration:none;font-size:1.1em}
+
+.sp-com{margin-top:1.2em;padding:.8em 1em;border-left:3px solid #7a4fb5;background:#faf7ff;border-radius:6px}
+.sp-com-txt{font-style:italic;color:#777;margin:.2em 0 .6em}
+.sp-com-link{display:inline-block;font-weight:600;color:#7a4fb5}
+.sp-com-card{margin-top:.5em;padding:.4em .6em;font-size:.85em}
+.sp-com-card summary{cursor:pointer;color:#7a4fb5}
