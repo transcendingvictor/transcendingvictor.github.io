@@ -1712,3 +1712,7 @@ html.rc-pausa body { pointer-events: none; }
 .rv-idioma button { font: inherit; font-size: 0.66rem; padding: 0.1rem 0.5rem; border: 0.08rem solid #ccc; border-radius: 999px; background: #fff; color: #888; cursor: pointer; }
 .rv-idioma button[aria-pressed="true"] { border-color: #1c1c1c; color: #1c1c1c; background: #f2efe6; }
 .rv-tr { display: block; margin: 0.7rem auto 0; font: inherit; font-size: 0.66rem; font-style: italic; color: #8a4fa8; background: none; border: 0; border-bottom: 0.06rem dotted #8a4fa8; cursor: pointer; padding: 0; }
+.sp-dialogo { max-width: 38rem; display: grid; gap: 0.4rem; }
+.sp-dialogo p { margin: 0; padding: 0.5rem 0.8rem; border-radius: 14px; text-align: left; line-height: 1.5; }
+.sp-dialogo .q { justify-self: start; background: #e5d8f7; font-style: italic; border-bottom-left-radius: 4px; }
+.sp-dialogo .a { justify-self: end; background: #fff7dc; border: 0.08rem solid #f1d98a; border-bottom-right-radius: 4px; max-width: 90%; box-shadow: 0 0 1.2rem rgba(255, 214, 120, 0.25); }
