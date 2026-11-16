@@ -1716,3 +1716,11 @@ html.rc-pausa body { pointer-events: none; }
 .sp-dialogo p { margin: 0; padding: 0.5rem 0.8rem; border-radius: 14px; text-align: left; line-height: 1.5; }
 .sp-dialogo .q { justify-self: start; background: #e5d8f7; font-style: italic; border-bottom-left-radius: 4px; }
 .sp-dialogo .a { justify-self: end; background: #fff7dc; border: 0.08rem solid #f1d98a; border-bottom-right-radius: 4px; max-width: 90%; box-shadow: 0 0 1.2rem rgba(255, 214, 120, 0.25); }
+
+.sp-post{border:1px solid #ddd;border-radius:10px;padding:.7em 1em;margin:.6em 0;background:#fff}
+.sp-post summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;align-items:baseline;gap:.5em}
+.sp-post .pn{font-weight:700;color:#7a4fb5;font-size:1.3em}
+.sp-post .pt{font-weight:600;font-size:1.05em}
+.sp-post small{width:100%;color:#888;font-size:.8em}
+.sp-post .pc{font-style:italic;color:#555}
+.sp-post .plink{display:block;text-align:center;padding:.7em;margin-top:.4em;border-radius:8px;background:#7a4fb5;color:#fff;font-weight:600;text-decoration:none;font-size:1.1em}
