@@ -57,3 +57,14 @@
 .jp-sol summary { background: #c4e6cc; }
 .jp-d[open] { display: block; }
 .jp-d p { margin: 0.4rem 0 0; }
+
+.tc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1em;margin-top:1em}
+.tc{position:relative;background:#fff;border:1px solid #e3dccf;border-radius:14px;padding:1em;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.tc img{display:block;width:100%;height:150px;object-fit:contain;margin-bottom:.5em}
+.tc h3{margin:.1em 0;font-size:1.25em}
+.tc-orig{margin:0;font-size:.8em;color:#999;font-style:italic}
+.tc-frase{font-size:1em;line-height:1.4;margin:.6em 0}
+.tc details summary{cursor:pointer;color:#7a4fb5;font-weight:600}
+.tc ol{padding-left:1.2em;margin:.5em 0 0}.tc li{margin:.3em 0;font-size:.95em}
+.tc-nr{position:absolute;top:.6em;right:.6em;font-size:.7em;background:#fff3c4;color:#8a6d00;border-radius:999px;padding:.15em .6em;font-weight:700}
+.tc p,.tc li{text-align:left}
