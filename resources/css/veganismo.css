@@ -76,3 +76,9 @@
   .vg-tabla td.vg-nota { grid-column: 1 / -1; font-size: 0.9rem; }
   .vg-tabla tr[hidden] { display: none; }
 }
+
+/* Para untar: product photos are packshots, so show them whole on white. */
+.vg-ch img.vg-prod { object-fit: contain; background: #fff; padding: 0.6rem; box-sizing: border-box; }
+.vg-prov { display: inline-block; margin-left: 0.4rem; padding: 0.08rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; background: #fff3c4; color: #8a6d00; }
+.vg-star { border: 2px solid #3b2a20; box-shadow: 0 4px 14px rgba(59,42,32,.18); }
+.vg-untar + .vg-box { margin-top: 1.4rem; }

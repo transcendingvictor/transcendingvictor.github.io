@@ -217,8 +217,8 @@ CHUCHES = [
      'Nestlé Vegan, a bar made with almond flour and certified vegan (<a href="https://www.alimarket.es/alimentacion/noticia/350361/nestle-lleva-a-los-chocolates-su-estrategia-veggie" target="_blank" rel="noopener">2022</a>). And lots of dark chocolate is already vegan, like Nestlé Negro 70%.'),
     ("crema-cacao", "Crema de cacao <small>(Nutella, Nocilla)</small>", "Chocolate spread <small>(Nutella, Nocilla)</small>", "no",
      "Lleva leche.", "It has milk in it.",
-     'Nutella Plant-Based, con certificado de The Vegan Society, en supermercados de España desde <a href="https://www.alimarket.es/alimentacion/noticia/408128/-nutella--plant-based-llega-a-espana" target="_blank" rel="noopener">2025</a>.',
-     'Nutella Plant-Based, certified by The Vegan Society, in Spanish supermarkets since <a href="https://www.alimarket.es/alimentacion/noticia/408128/-nutella--plant-based-llega-a-espana" target="_blank" rel="noopener">2025</a>.'),
+     'Nutella Plant-Based, con certificado de The Vegan Society, en supermercados de España desde <a href="https://www.alimarket.es/alimentacion/noticia/408128/-nutella--plant-based-llega-a-espana" target="_blank" rel="noopener">2025</a>. Y la Nocilla Noir: mira «Para untar».',
+     'Nutella Plant-Based, certified by The Vegan Society, in Spanish supermarkets since <a href="https://www.alimarket.es/alimentacion/noticia/408128/-nutella--plant-based-llega-a-espana" target="_blank" rel="noopener">2025</a>. And Nocilla Noir: see “Spreads”.'),
     ("grageas", "Lacasitos y grageas de chocolate", "Lacasitos and other sugar-coated chocolates", "no",
      "Chocolate con leche por dentro, y el brillo de fuera suele ser goma laca (E904) o cera.", "Milk chocolate inside, and the shine outside is usually shellac (E904) or wax.",
      "Por buscar.", "Still to find."),
@@ -239,6 +239,37 @@ CHUCHES = [
     ("oreo", "Galletas Oreo", "Oreo biscuits", "si",
      "Por receta no llevan leche ni huevo; el «puede contener» es por trazas.", "By recipe they have no milk or egg; the “may contain” is about traces.",
      "", ""),
+]
+
+# ---------------------------------------------------------------- Para untar
+# (img en resources/img/veganismo/untar/, nombre es, nombre en, veredicto, texto es, texto en, provisional, fuente OFF)
+OFF = "https://world.openfoodfacts.org/product/"
+UNTAR = [
+    (("Dulces", "Sweet"), [
+        ("nocilla-noir", "Nocilla Noir", "Nocilla Noir", "si",
+         "La crema de cacao negra de Nocilla, sin leche. Es la primera que enseño cuando me preguntan qué como.",
+         "Nocilla's dark cocoa spread, made without milk. It's the first thing I show when people ask what I eat.",
+         True, "8410052486097"),
+        ("nutella-pb", "Nutella Plant-Based", "Nutella Plant-Based", "si",
+         'La Nutella vegana: garbanzo y sirope de arroz en vez de leche, con certificado de The Vegan Society. En España desde <a href="https://www.alimarket.es/alimentacion/noticia/408128/-nutella--plant-based-llega-a-espana" target="_blank" rel="noopener">2025</a>.',
+         'Vegan Nutella: chickpea and rice syrup instead of milk, certified by The Vegan Society. In Spain since <a href="https://www.alimarket.es/alimentacion/noticia/408128/-nutella--plant-based-llega-a-espana" target="_blank" rel="noopener">2025</a>.',
+         False, "8000500426494"),
+        ("biscoff", "Crema Lotus Biscoff", "Lotus Biscoff spread", "si",
+         "La crema de las galletas Lotus, de sabor a galleta caramelizada. La marca la vende como 100 % vegana.",
+         "The spread made from Lotus biscuits, tasting of caramelised biscuit. The brand sells it as 100% vegan.",
+         False, "5410126116953"),
+    ]),
+    (("Saladas", "Savoury"), [
+        ("philadelphia", "Philadelphia Vegetal", "Philadelphia Vegetal (plant-based)", "si",
+         "Crema para untar de almendra y avena, como el Philadelphia de siempre pero sin lácteos. Vegana según la etiqueta; se vende en Carrefour y Alcampo.",
+         "A cream-cheese-style spread made from almond and oat, like regular Philadelphia but dairy-free. Labelled vegan; sold at Carrefour and Alcampo.",
+         False, "7622201745752"),
+    ]),
+]
+PENDIENTE_UNTAR = [
+    ("Otra crema de cacao negra de marca blanca (Hacendado, Carrefour, Lidl…): por comprobar cuál es vegana.",
+     "A supermarket own-brand dark cocoa spread (Hacendado, Carrefour, Lidl…): still to check which one is vegan."),
+    ("La otra dulce que está muy buena: por apuntar.", "The other really good sweet one: still to write down."),
 ]
 
 # ---------------------------------------------------------------- Mis platos
@@ -299,7 +330,7 @@ def build():
     head, rest = tpl.split('<div class="mainbody spectator">', 1)
     tail = rest[rest.index("    <script>"):]
     head = head.replace("<title>Recursos | Víctor Abia Alonso</title>", "<title>Veganismo | Víctor Abia Alonso</title>")
-    head = head.replace('</head>', '    <link href="./resources/css/veganismo.css?v=20261116a" type="text/css" rel="stylesheet">\n    </head>', 1)
+    head = head.replace('</head>', '    <link href="./resources/css/veganismo.css?v=20261117a" type="text/css" rel="stylesheet">\n    </head>', 1)
     tail = tail.replace("document.title = 'La butifarra'", "document.title = (l === 'es' ? 'Veganismo' : 'Veganism')")
 
     o = []
@@ -312,7 +343,7 @@ def build():
     o.append(f'        <p class="bt-back"><a href="recursos.html">← {L("Recursos", "Resources")}</a></p>\n')
     o.append(f'        <h1 class="bt-h1">{L("Veganismo", "Veganism")}</h1>\n')
     o.append(f'        <p class="bt-sub">{L("Lo que suelen preguntarme, resumido. <span class=\'tc-nr\'>No revisado</span>", "What people usually ask me, in short. <span class=\'tc-nr\'>Not reviewed</span>")}</p>\n')
-    tabs = [("empezar", "Para empezar", "Getting started"), ("preguntas", "Preguntas", "Questions"),
+    tabs = [("empezar", "Para empezar", "Getting started"), ("untar", "Para untar", "Spreads"), ("preguntas", "Preguntas", "Questions"),
             ("aditivos", "Aditivos (E)", "Additives (E)"), ("chuches", "Chuches", "Sweets"), ("platos", "Mis platos", "My dishes")]
     o.append('        <div class="rs-tabs vg-tabs" role="tablist">\n')
     for i, (k, a, b) in enumerate(tabs):
@@ -329,6 +360,23 @@ def build():
     o.append(f'<h2 class="vg-h vg-no-h">{L("No", "No")}</h2>\n<div class="vg-box vg-no">{lst(NO)}</div>\n')
     o.append(f'<h2 class="vg-h">{L("Fácil de cambiar", "Easy swaps")}</h2>\n<div class="vg-box vg-swap">{lst(FACIL)}</div>\n')
     o.append('        </section>\n')
+
+    # Para untar
+    o.append('        <section class="vg-panel" id="untar" role="tabpanel" hidden>\n')
+    for (ga, gb), items in UNTAR:
+        o.append(f'<h2 class="vg-h">{L(ga, gb)}</h2>\n<div class="vg-chuches vg-untar">\n')
+        for img, na, nb, v, ta, tb, prov, code in items:
+            a, b = VERED[v]
+            pv = L('<span class="vg-prov">Provisional</span>', '<span class="vg-prov">Provisional</span>') if prov else ""
+            star = " vg-star" if img == "nocilla-noir" else ""
+            o.append(f'<article class="vg-ch{star}"><img src="resources/img/veganismo/untar/{img}.jpg" alt="" class="vg-prod"><div class="vg-ch-b"><span class="vg-badge vg-v-{v}">{L(a, b)}</span>{pv}<h3>{L(na, nb)}</h3><p>{L(ta, tb)}</p></div></article>\n')
+        o.append('</div>\n')
+    o.append(f'<div class="vg-box vg-swap"><h3>{L("Por añadir", "Still to add")}</h3>{lst(PENDIENTE_UNTAR)}</div>\n')
+    o.append(f'<details class="vg-cred"><summary>{L("Créditos de las fotos", "Photo credits")}</summary><ul>\n')
+    for _, items in UNTAR:
+        for img, na, nb, v, ta, tb, prov, code in items:
+            o.append(f'<li>{e(na)}: <a href="{OFF}{code}" target="_blank" rel="noopener">Open Food Facts</a>, {L("colaboradores", "contributors")}, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>.</li>\n')
+    o.append('</ul></details>\n        </section>\n')
 
     # Preguntas
     o.append('        <section class="vg-panel" id="preguntas" role="tabpanel" hidden>\n<div class="vg-faq">\n')
