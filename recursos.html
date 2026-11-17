@@ -299,6 +299,26 @@
 <details class="jp-d"><summary><span data-l="es">Pista</span><span data-l="en">Hint</span></summary><p>Un prefijo que significa «uno» y lo que tiene un poema.</p></details>
 <details class="jp-d jp-sol"><summary><span data-l="es">Solución</span><span data-l="en">Solution</span></summary><p><b>UNI-VERSOS</b> → <b>universos</b>.</p></details></li>
             </ul>
+            <h2 class="jp-h"><span data-l="es">Palíndromos</span><span data-l="en">Palindromes</span></h2>
+            <p class="jp-note"><span data-l="es">Se leen igual del derecho y del revés. Dale a ⇄ para comprobarlo.</span><span data-l="en">They read the same forwards and backwards. Tap ⇄ to check.</span></p>
+            <ul class="rs-list jp-list" lang="es" data-l="es">
+<li class="jp jp-pal"><span class="jp-pt">Oirás orar a Rosario.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+<li class="jp jp-pal"><span class="jp-pt">Acaso hubo búhos acá.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+<li class="jp jp-pal"><span class="jp-pt">Sé verlas al revés.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+<li class="jp jp-pal"><span class="jp-pt">Ana, la tacaña catalana.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+<li class="jp jp-pal"><span class="jp-pt">No traces en ese cartón.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+<li class="jp jp-pal"><span class="jp-pt">A mamá Roma le aviva el amor a papá, y a papá Roma le aviva el amor a mamá.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+<li class="jp jp-pal"><span class="jp-pt">Somos o no somos.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+<li class="jp jp-pal"><span class="jp-pt">La tele letal.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+            </ul>
+            <ul class="rs-list jp-list" lang="en" data-l="en">
+<li class="jp jp-pal"><span class="jp-pt">Rats live on no evil star.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+<li class="jp jp-pal"><span class="jp-pt">Too hot to hoot.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+<li class="jp jp-pal"><span class="jp-pt">Was it Eliot's toilet I saw?</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+<li class="jp jp-pal"><span class="jp-pt">Live not on evil.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+<li class="jp jp-pal"><span class="jp-pt">Murder for a jar of red rum.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+<li class="jp jp-pal"><span class="jp-pt">No 'x' in Nixon.</span><button type="button" class="jp-flip" aria-label="Dar la vuelta / Flip">⇄</button></li>
+            </ul>
             <h2 class="jp-h"><span data-l="es">Palabras imposibles</span><span data-l="en">Impossible words</span></h2>
             <ul class="rs-list jp-list" lang="es">
 <li class="jp"><span class="jp-w">sal-le</span> <span class="jp-ej">«Salle a buscar.»</span><details><summary>¿Por qué es imposible?</summary><p>Al juntar «sal» y «le», las dos eles quedan pegadas y en español «ll» se lee como una sola letra (elle). Escrita, «salle» se pronuncia «saye»; nadie la lee como «sal-le».</p></details></li>
@@ -551,6 +571,8 @@
     <script>
     (function () {
         // Tabs: Refranes / Chistes / Juegos de palabras (remembered in the address, #chistes, #juegos).
+        // Palíndromos: ⇄ da la vuelta a la frase letra a letra
+        document.querySelectorAll('.jp-flip').forEach(function (b) { b.addEventListener('click', function () { var t = b.previousElementSibling; t.classList.add('jp-girando'); setTimeout(function () { if (!t.dataset.o) t.dataset.o = t.textContent; t.textContent = t.dataset.r === '1' ? t.dataset.o : Array.from(t.dataset.o.toLowerCase().replace(/[.,;:¿?¡!'«»]/g, '')).reverse().join(''); t.dataset.r = t.dataset.r === '1' ? '0' : '1'; t.classList.remove('jp-girando'); }, 250); }); });
         var tabs = document.querySelectorAll('.rs-tabs [data-tab]');
         function show(id) {
             tabs.forEach(function (t) {
