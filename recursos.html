@@ -92,14 +92,16 @@
 
         <h1><span data-l="es">Recursos</span><span data-l="en">Resources</span></h1>
 
-        <p class="bt-link"><a href="veganismo.html"><span data-l="es">Veganismo · lo básico, preguntas, aditivos, chuches y mis platos →</span><span data-l="en">Veganism · the basics, questions, additives, sweets and my dishes →</span></a></p>
-        <p class="bt-link"><a href="butifarra.html">La butifarra <span data-l="es">· reglas y normas no escritas →</span><span data-l="en">· rules and unwritten rules →</span></a></p>
-        <p class="bt-link"><a href="recomendaciones.html"><span data-l="es">Contenido recomendado →</span><span data-l="en">Recommended content →</span></a></p>
         <div class="rs-tabs" role="tablist">
             <button type="button" role="tab" data-tab="refranes" aria-selected="true"><span data-l="es">Refranes</span><span data-l="en">Sayings</span></button>
             <button type="button" role="tab" data-tab="chistes" aria-selected="false"><span data-l="es">Chistes</span><span data-l="en">Jokes</span></button>
             <button type="button" role="tab" data-tab="juegos" aria-selected="false"><span data-l="es">Juegos de palabras</span><span data-l="en">Wordplay</span></button>
             <button type="button" role="tab" data-tab="tecnicas" aria-selected="false"><span data-l="es">Técnicas</span><span data-l="en">Techniques</span></button>
+            <a class="rs-tab-link" href="butifarra.html">La butifarra ↗</a>
+            <a class="rs-tab-link" href="veganismo.html"><span data-l="es">Dieta: veganismo ↗</span><span data-l="en">Diet: veganism ↗</span></a>
+            <a class="rs-tab-link" href="recomendaciones.html"><span data-l="es">Lo que recomiendo ↗</span><span data-l="en">What I recommend ↗</span></a>
+            <a class="rs-tab-link" href="recomendaciones.html#recomendado"><span data-l="es">Lo que me han recomendado ↗</span><span data-l="en">What people recommended to me ↗</span></a>
+            <button type="button" role="tab" data-tab="mios" aria-selected="false"><span data-l="es">Mis recursos</span><span data-l="en">My own resources</span></button>
         </div>
 
         <section class="rs-panel" id="refranes" role="tabpanel">
@@ -324,6 +326,9 @@
 <li class="jp"><span class="jp-w">sal-le</span> <span class="jp-ej">«Salle a buscar.»</span><details><summary>¿Por qué es imposible?</summary><p>Al juntar «sal» y «le», las dos eles quedan pegadas y en español «ll» se lee como una sola letra (elle). Escrita, «salle» se pronuncia «saye»; nadie la lee como «sal-le».</p></details></li>
 <li class="jp"><span class="jp-w">di-itas</span> <span class="jp-ej">«Buenos diitas.»</span><details><summary>¿Por qué es imposible?</summary><p>Las dos íes van seguidas y dos vocales iguales no forman diptongo: habría que separarlas, «di-i-tas», y casi nadie lo consigue. Al decirla en voz alta sale «ditas».</p></details></li>
             </ul>
+        </section>
+        <section class="rs-panel-tc" id="mios" role="tabpanel" hidden>
+            <p class="rc-pend"><span data-l="es">Aquí irán cosas mías que me gusta enseñar cuando alguien me pregunta: vídeos de un parque de atracciones, algo chulo que haga en casa… Todavía no hay nada.</span><span data-l="en">This is where my own things will go, the ones I like to show when someone asks: videos from a theme park, something cool I make at home… Nothing here yet.</span></p>
         </section>
         <section class="rs-panel-tc" id="tecnicas" role="tabpanel" hidden>
             <div class="tc-grid">
@@ -582,7 +587,7 @@
             });
         }
         tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.dataset.tab); history.replaceState(null, '', '#' + t.dataset.tab); }); });
-        if (location.hash === '#chistes' || location.hash === '#juegos' || location.hash === '#tecnicas') show(location.hash.slice(1));
+        if (location.hash === '#chistes' || location.hash === '#juegos' || location.hash === '#tecnicas' || location.hash === '#mios') show(location.hash.slice(1));
 
         // Search and joke filters: several themes (or forms) at once show all of them; theme and form combine.
         var norm = function (x) { return x.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); };

@@ -140,7 +140,7 @@
         var chips=document.querySelectorAll('.rc-chip');
         function filt(f){chips.forEach(function(c){c.setAttribute('aria-pressed',String(c.dataset.f===f));});document.querySelectorAll('.rc-group').forEach(function(g){g.hidden=!!f&&g.dataset.g!==f;});}
         chips.forEach(function(c){c.addEventListener('click',function(){filt(c.dataset.f);history.replaceState(null,'',c.dataset.f?'?tipo='+c.dataset.f:location.pathname);});});
-        var t=new URLSearchParams(location.search).get('tipo'); if(t) filt(t);
+        var t=new URLSearchParams(location.search).get('tipo'); if(t) filt(t); if(location.hash==='#recomendado') show('recomendado');
     })();
     </script>
 </body>
