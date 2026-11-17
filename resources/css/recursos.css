@@ -90,3 +90,9 @@
 .rc-from{font-size:.8em;color:#999}.rc-from a{color:#7a4fb5}
 .rc-pend{color:#888;font-style:italic;margin-top:1em}
 .rc-list li *,.mainbody h1{text-align:left}
+
+.jp-pal{display:flex;align-items:center;justify-content:space-between;gap:.6em}
+.jp-pt{transition:transform .25s,opacity .25s;display:inline-block}
+.jp-girando{transform:scaleX(-1);opacity:.3}
+.jp-flip{border:1px solid #c9bfe0;background:#fff;border-radius:999px;width:2.2em;height:2.2em;cursor:pointer;color:#7a4fb5;font-size:1em;flex:none}
+.jp-note{color:#888;font-size:.9em;margin:.2em 0 .5em}

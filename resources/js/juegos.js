@@ -170,6 +170,19 @@
                 P.ec = 'y = ' + fmt(a) + '(x ' + (h < 0 ? '+ ' + (-h) : '− ' + h) + ')² ' + (k < 0 ? '− ' + (-k) : '+ ' + k);
                 preP.innerHTML = (es() ? 'Ronda ' + (tiros + 1) + '/' + RONDAS_PAR + ' de parábolas. ' : 'Parabola round ' + (tiros + 1) + '/' + RONDAS_PAR + '. ') + (es() ? 'Una parábola que mira hacia arriba tiene el vértice en <b>V</b> y pasa por <b>P</b>. ¿Dónde corta la línea morada <b>y = ' + yObj + '</b>, ' + (lado > 0 ? 'a la derecha' : 'a la izquierda') + ' del vértice? Toca ese punto.'
                     : 'An upward parabola has its vertex at <b>V</b> and passes through <b>P</b>. Where does it meet the purple line <b>y = ' + yObj + '</b>, to the ' + (lado > 0 ? 'right' : 'left') + ' of the vertex? Tap that point.');
+            } else if (tiros >= 2 * RONDAS_PAR) {
+                // Elipse de centro C(h, k) y semiejes a (horizontal) y b (vertical): se ven C, el vértice derecho R y el de arriba T.
+                var h = ri(-3, 3), k = ri(3, 7), a = ri(3, 6), b = ri(3, 6), lado = Math.random() < 0.5 ? 1 : -1, yObj;
+                do { yObj = k + ri(-b + 1, b - 1); } while (yObj === k);
+                var xObj = h + lado * a * Math.sqrt(1 - Math.pow((yObj - k) / b, 2));
+                P = { tipo: 'eli', y: yObj, x: xObj, ref: h, dib: function () { var d = ''; for (var t = 0; t <= 6.30; t += 0.05) d += (d ? ' L' : 'M') + sx(h + a * Math.cos(t)).toFixed(1) + ' ' + sy(k + b * Math.sin(t)).toFixed(1); return d + ' Z'; } };
+                mk(svgP, 'line', { x1: 0, x2: W, y1: sy(yObj), y2: sy(yObj), stroke: '#8a4fa8', 'stroke-width': 1.5, 'stroke-dasharray': '5 4' });
+                punto(h, k, '#1c1c1c', 'C(' + h + ', ' + k + ')');
+                punto(h + a, k, '#2d7fb8', 'R(' + (h + a) + ', ' + k + ')');
+                punto(h, k + b, '#2d7fb8', 'T(' + h + ', ' + (k + b) + ')');
+                P.ec = '(x ' + (h < 0 ? '+ ' + (-h) : '− ' + h) + ')²/' + a * a + ' + (y ' + (k < 0 ? '+ ' + (-k) : '− ' + k) + ')²/' + b * b + ' = 1';
+                preP.innerHTML = es() ? '<b>Nivel elipse.</b> Una elipse tiene el centro en <b>C</b>; <b>R</b> es su punto más a la derecha y <b>T</b> el más alto. ¿Dónde corta la línea morada <b>y = ' + yObj + '</b>, ' + (lado > 0 ? 'a la derecha' : 'a la izquierda') + ' del centro? Toca ese punto.'
+                    : '<b>Ellipse level.</b> An ellipse is centred at <b>C</b>; <b>R</b> is its rightmost point and <b>T</b> its highest. Where does it meet the purple line <b>y = ' + yObj + '</b>, to the ' + (lado > 0 ? 'right' : 'left') + ' of the centre? Tap that point.';
             } else {
                 // Exponencial y = c + 2^((x − x0)/s): la asíntota y = c, y dos puntos que muestran cuánto tarda en duplicarse.
                 var c = ri(-2, 1), x0 = ri(-7, -2), s = [1, 1.5, 2, 2.5][ri(0, 3)], yE = ri(c + 5, 14), xE = x0 + s * Math.log2(yE - c);
@@ -191,7 +204,7 @@
             var pt = svgP.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY; var m = pt.matrixTransform(svgP.getScreenCTM().inverse());
             var xu = X0 + m.x / W * (X1 - X0), dx = Math.abs(xu - P.x), ancho = Math.max(1.5, Math.abs(P.x - P.ref));
             var pts = Math.max(0, Math.round(100 * (1 - dx / ancho)));
-            var dd = ''; for (var x = X0; x <= X1; x += 0.05) { var y = P.f(x); if (y <= Y1 + 1) dd += (dd ? ' L' : 'M') + sx(x).toFixed(1) + ' ' + sy(y).toFixed(1); }
+            var dd = ''; if (P.dib) dd = P.dib(); else for (var x = X0; x <= X1; x += 0.05) { var y = P.f(x); if (y <= Y1 + 1) dd += (dd ? ' L' : 'M') + sx(x).toFixed(1) + ' ' + sy(y).toFixed(1); }
             mk(svgP, 'path', { d: dd, fill: 'none', stroke: '#2d7fb8', 'stroke-width': 2 });
             mk(svgP, 'line', { x1: sx(xu), x2: sx(P.x), y1: sy(P.y), y2: sy(P.y), stroke: '#d14b4b', 'stroke-width': 3 });
             mk(svgP, 'circle', { cx: sx(P.x), cy: sy(P.y), r: 5, fill: '#1c1c1c' });
@@ -199,7 +212,7 @@
             tiros++; sumaP += pts; if (window.JGP) JGP.add('parabola', pts);
             msgP.textContent = (es() ? 'Era x = ' + fmt(P.x) + ' y has dicho ' + fmt(xu) + ': +' + pts + ' puntos. La curva: ' : 'It was x = ' + fmt(P.x) + ' and you said ' + fmt(xu) + ': +' + pts + ' points. The curve: ') + P.ec + '. ' +
                 (es() ? 'Media: ' : 'Average: ') + Math.round(sumaP / tiros) + (es() ? ' en ' + tiros + (tiros === 1 ? ' tiro.' : ' tiros.') : ' over ' + tiros + (tiros === 1 ? ' throw.' : ' throws.')) +
-                (tiros === RONDAS_PAR ? (es() ? ' ¡Has desbloqueado las exponenciales!' : ' You unlocked exponentials!') : '');
+                (tiros === RONDAS_PAR ? (es() ? ' ¡Has desbloqueado las exponenciales!' : ' You unlocked exponentials!') : tiros === 2 * RONDAS_PAR ? (es() ? ' ¡Has desbloqueado las elipses!' : ' You unlocked ellipses!') : '');
             msgP.className = 'jg-msg ' + (pts >= 80 ? 'jg-ok' : pts >= 40 ? 'jg-meh' : 'jg-ko');
             sigP.hidden = false;
         });
