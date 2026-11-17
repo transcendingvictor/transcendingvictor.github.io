@@ -1768,3 +1768,4 @@ html.rc-pausa body { pointer-events: none; }
 .nm-link{color:#7a4fb5;font-weight:600}
 .sp-names h2 .tc-nr{font-size:.45em;vertical-align:middle;background:#fff3c4;color:#8a6d00;border-radius:999px;padding:.15em .6em}
 .nm-quote a{color:inherit;text-decoration:underline wavy #c0392b}
+.rc-xlink{font-size:.85em;margin:.8em 0 0;text-align:right}.rc-xlink a{color:#7a4fb5}
