@@ -282,3 +282,18 @@ h1 .nota-musica { position: relative; top: auto; left: auto; display: inline-gri
 .original img { display: block; width: 100%; height: auto; margin: 1rem 0; border: 2px solid var(--tinta); border-radius: 6px; }
 @media (min-width: 900px) { .original { width: min(1100px, 92vw); margin-left: 50%; transform: translateX(-50%); } }
 .aviso-texto { margin: 0.8rem 0 1.2rem; padding: 0.6rem 0.9rem; border-left: 3px solid #a0692b; background: #fdf3e3; font-size: 0.9rem; }
+
+/* Colores pastel por origen: los blogs en azules y lilas, Instagram en rosa, lo de papel y privado en tonos cálidos */
+.tipo.t-cs { background: #d7e6f7; }
+.tipo.t-banales { background: #e3dcf5; }
+.tipo.t-borradores { background: #dde7ee; }
+.tipo.t-instagram { background: #f8dbe6; }
+.tipo.t-libreta { background: #f6ecc9; }
+.tipo.t-yosolita { background: #d9eed6; }
+.tipo.t-inedito { background: #f7e0cc; }
+.chip.c-cs:not(.on) { background: #d7e6f7; }
+.chip.c-banales:not(.on) { background: #e3dcf5; }
+.chip.c-borradores:not(.on) { background: #dde7ee; }
+.chip.c-instagram:not(.on) { background: #f8dbe6; }
+.chip.c-libreta:not(.on) { background: #f6ecc9; }
+.chip.c-yosolita:not(.on) { background: #d9eed6; }
