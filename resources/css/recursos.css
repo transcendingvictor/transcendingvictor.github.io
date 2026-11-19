@@ -96,3 +96,7 @@
 .jp-girando{transform:scaleX(-1);opacity:.3}
 .jp-flip{border:1px solid #c9bfe0;background:#fff;border-radius:999px;width:2.2em;height:2.2em;cursor:pointer;color:#7a4fb5;font-size:1em;flex:none}
 .jp-note{color:#888;font-size:.9em;margin:.2em 0 .5em}
+
+.rs-tabs{flex-wrap:wrap}
+.rs-tab-link{padding:.45rem 1rem;color:#6b5a8a;text-decoration:none;border-radius:10px 10px 0 0}
+.rs-tab-link:hover{background:#f6f2fc}
