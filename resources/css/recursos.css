@@ -100,3 +100,12 @@
 .rs-tabs{flex-wrap:wrap}
 .rs-tab-link{padding:.45rem 1rem;color:#6b5a8a;text-decoration:none;border-radius:10px 10px 0 0}
 .rs-tab-link:hover{background:#f6f2fc}
+
+/* Técnicas: texto antes de las tarjetas */
+.tc-intro{max-width:44rem;background:#fff;border:1px solid #e3dccf;border-left:.35rem solid #8a63c9;border-radius:14px;padding:.4em 1.2em;margin:.2em 0 1.2em}
+.tc-intro p{text-align:left;line-height:1.5;margin:.6em 0}
+.tc-intro a{color:#7a4fb5}
+/* Pestañas dentro de una pestaña (Veganismo, Recomendaciones): un poco más pequeñas */
+.rs-sub{margin-top:.8rem}
+.rs-sub button{font-size:.92em;padding:.35rem .85rem}
+.rc-name{color:#222;font-size:1.05em}
