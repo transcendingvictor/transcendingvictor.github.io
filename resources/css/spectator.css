@@ -1803,13 +1803,3 @@ html.rc-pausa body { pointer-events: none; }
 .nmf-tv{font:italic 500 2em/1 "Cormorant Garamond",Georgia,serif;color:#3a3a5a}
 .nmf-tv>span{display:inline-block;transform:translateY(calc(var(--i) * -.025em));letter-spacing:calc(var(--i) * .005em);opacity:calc(1 - var(--i) * .018)}
 @media (max-width:600px){.nm-cloud{gap:1.1em 1.6em}.nmf-victor{font-size:1.8em}.nmf-rabia{font-size:2.1em}.nmf-sebas{font-size:2.1em}.nmf-arr{font-size:1.7em}.nmf-tv{font-size:1.55em}}
-
-/* Manías: cada una es un dibujo con su nombre; al tocar, la explicación */
-.mn-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1.2em 1.4em;padding:.6em 0 1em}
-.mn-btn{all:unset;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:.45em;transition:transform .2s}
-.mn-btn svg{width:170px;max-width:42vw;height:auto;display:block;border-radius:12px;box-shadow:0 6px 18px rgba(60,40,10,.10)}
-.mn-btn:hover{transform:translateY(-3px) rotate(-1deg)}
-.mn-btn:focus-visible{outline:2px solid #7a4fb5;outline-offset:4px;border-radius:12px}
-.mn-t{font-family:"Vollkorn SC",Georgia,serif;font-weight:700;font-size:1.05em;color:#2b2b2b}
-.mn.open{flex-basis:100%;display:flex;flex-direction:column;align-items:center}
-.mn.open .mn-body{margin-top:.7em;width:100%;display:flex;justify-content:center}
