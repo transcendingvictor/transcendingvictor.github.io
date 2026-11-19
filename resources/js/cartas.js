@@ -9,6 +9,10 @@
  *   Cartas.svg('xb')                     -> hueco tachado (no tener bastos)
  *   Cartas.pintar(raiz, {estrella: [9]}) -> rellena cada [data-cards="9o 1c 12e"] dentro de raiz
  * Códigos: número (1-12) + palo (o oros, c copas, e espadas, b bastos). Un «*» final pone estrella.
+ * Tapete con triunfo: <span data-triunfo="c" data-cards="9c+ 4o 9e-"> envuelve cada carta y marca
+ *   las del palo de triunfo (brillo + etiqueta «triunfo»); las demás quedan apagadas. data-triunfo="-" =
+ *   butifarra (sin triunfo: ninguna se marca ni se apaga). Sufijos: «+» gana la baza, «-» la pierde, «^» sale.
+ *   Con la clase bt-baza, las 4 cartas van en cruz: tú (abajo), rival, compañero (arriba), rival.
  */
 (function (w) {
     'use strict';
@@ -142,7 +146,7 @@
     }
 
     function nombre(code, lang) {
-        code = String(code).trim().replace(/\*$/, '');
+        code = String(code).trim().replace(/[*+^-]+$/, '');
         var s = code.slice(-1), r = code.slice(0, -1), n = parseInt(r, 10);
         if (lang === 'en') {
             var EN = { o: 'coins', c: 'cups', e: 'swords', b: 'clubs' }, FEN = { 1: 'ace', 10: 'jack', 11: 'knight', 12: 'king' };
@@ -151,13 +155,20 @@
         return r === 'x' ? 'sin ' + NOMBRE[s] : (FIG[n] || n) + ' de ' + NOMBRE[s];
     }
 
+    var TAG = '<b class="bt-tag"><span data-l="es">triunfo</span><span data-l="en">trump</span></b>';
     function pintar(raiz, o) {
         (raiz || document).querySelectorAll('[data-cards]').forEach(function (el) {
-            var codes = el.dataset.cards.trim().split(/\s+/);
-            el.innerHTML = codes.map(function (c) { return svg(c, o); }).join('');
+            var codes = el.dataset.cards.trim().split(/\s+/), tr = el.dataset.triunfo;
+            var esTr = function (c) { var b = c.replace(/[*+^-]+$/, ''); return tr && tr !== '-' && b.slice(-1) === tr && b[0] !== 'x'; };
+            el.innerHTML = codes.map(function (c) {
+                if (!tr) return svg(c, o);
+                var fin = (c.match(/[+^-]+$/) || [''])[0], t = esTr(c);
+                var cls = 'bt-c' + (tr === '-' ? '' : t ? ' bt-tr' : ' bt-no') + (fin.indexOf('+') >= 0 ? ' bt-gana' : '') + (fin.indexOf('-') >= 0 ? ' bt-pierde' : '') + (fin.indexOf('^') >= 0 ? ' bt-sale' : '');
+                return '<span class="' + cls + '">' + svg(c.slice(0, c.length - fin.length), o) + (t ? TAG : '') + '</span>';
+            }).join('');
             if (!el.closest('[role="img"]')) {
                 el.setAttribute('role', 'img');
-                el.setAttribute('aria-label', codes.map(function (c) { return nombre(c); }).join(', '));
+                el.setAttribute('aria-label', codes.map(function (c) { return nombre(c) + (esTr(c) ? ' (triunfo)' : ''); }).join(', '));
             }
         });
     }

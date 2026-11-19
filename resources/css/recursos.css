@@ -154,3 +154,54 @@
 .bt-a{color:#7a4fb5}.bt-b{color:#d9822b}
 .bt-strip .bt-card{width:54px;height:81px}
 @media only screen and (max-width:750px){.bt-strip{gap:4px}.bt-strip .bt-card{width:44px;height:66px}}
+
+/* Butifarra: foto y mesa lado a lado; tapete verde con el triunfo resaltado */
+.bt-duo{display:flex;flex-wrap:wrap;align-items:center;gap:1em 1.6em;margin:.6em 0 .4em}
+.bt-duo .bt-hero{margin:0;flex:0 1 20rem}
+.bt-duo .bt-mesa{margin:0;flex:0 1 17rem}
+.bt-tapete{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4em .5em;padding:1.7em .5em .55em;border-radius:12px;border:3px solid #7a4a22;background:radial-gradient(ellipse at 50% 35%,#46a05a 0%,#2f8040 65%,#256b34 100%);box-shadow:inset 0 0 12px rgba(0,0,0,.28);align-self:stretch}
+.bt-tapete.bt-inline{margin:.5em 0 .2em;max-width:20rem;justify-content:flex-start;padding-left:.8em}
+.bt-tapete small{color:#eef7ea;font-size:.8em;line-height:1.3;flex:1 1 9rem}
+.bt-chip{position:absolute;top:.35em;left:.45em;background:rgba(0,0,0,.32);color:#fff;font-size:.7em;font-weight:700;padding:.15em .6em;border-radius:99px;letter-spacing:.02em}
+.bt-tapete:not(:has(.bt-chip)){padding-top:.55em}
+.bt-c{position:relative;display:inline-flex;flex-direction:column;align-items:center}
+.bt-tapete .bt-card{width:38px;height:57px}
+.bt-tr .bt-card{filter:drop-shadow(0 0 2px #fff3b0) drop-shadow(0 0 5px #ffd23f)}
+.bt-no .bt-card{opacity:.55;filter:grayscale(.55)}
+.bt-tag{margin-top:2px;background:#ffd23f;color:#3d2b00;font-size:9px;line-height:1;padding:2px 4px;border-radius:4px;font-weight:800;letter-spacing:.02em}
+.bt-mano .bt-c+.bt-c{margin-left:3px}
+.bt-mano .bt-no{padding-bottom:13px}
+.bt-gana::after,.bt-pierde::after{position:absolute;top:-5px;right:-5px;width:15px;height:15px;border-radius:50%;font-size:10px;line-height:15px;text-align:center;font-weight:900;color:#fff;box-shadow:0 0 0 1.5px #fff}
+.bt-gana::after{content:"✓";background:#2a9d4b}
+.bt-pierde::after{content:"✗";background:#c0392b}
+.bt-pierde .bt-card{opacity:.6}
+.bt-sale::before{content:"▸";position:absolute;left:-9px;top:50%;transform:translateY(-50%);color:#fff;font-size:12px;line-height:1;text-shadow:0 0 2px #000}
+/* Baza en cruz: tú abajo, rival a la izquierda, compañero arriba, rival a la derecha */
+.bt-baza{position:relative;display:block;width:84px;height:98px;flex:none}
+.bt-baza .bt-c{position:absolute;border-radius:5px}
+.bt-baza .bt-card{width:28px;height:42px}
+.bt-baza .bt-c:nth-child(1){left:28px;top:56px;box-shadow:0 3px 0 -1px #b79cf0}
+.bt-baza .bt-c:nth-child(2){left:0;top:28px;box-shadow:0 3px 0 -1px #f0a868}
+.bt-baza .bt-c:nth-child(3){left:28px;top:0;box-shadow:0 3px 0 -1px #b79cf0}
+.bt-baza .bt-c:nth-child(4){left:56px;top:28px;box-shadow:0 3px 0 -1px #f0a868}
+.bt-baza .bt-tag{display:none}
+.bt-baza .bt-gana::after,.bt-baza .bt-pierde::after{width:13px;height:13px;line-height:13px;font-size:9px;top:-4px;right:-4px}
+.bt-paso{display:inline-flex;flex-direction:column;align-items:center;gap:.2em}
+.bt-paso small{flex:none;font-weight:700;font-size:.7em;color:#eef7ea}
+.bt-flecha{color:#fff;font-size:1.2em;text-shadow:0 0 3px rgba(0,0,0,.4)}
+.bt-duelo{gap:4px}
+.bt-duelo .bt-tag{display:none}
+.bt-dos{gap:.4em 1em;padding-top:.55em}
+.bt-dos .bt-card{width:32px;height:48px}
+.bt-dos .bt-paso small{font-weight:600;max-width:7.5rem;text-align:center}
+.bt-canta{display:flex;align-items:center;gap:.4em}
+.bt-cara{width:34px;height:39px;flex:none}
+.bt-bubble{position:relative;background:#fff;border:2px solid #2b2118;border-radius:12px;padding:.15em .6em;font-weight:800;color:#c8312b;font-size:.95em}
+.bt-bubble::before{content:"";position:absolute;left:-8px;top:50%;margin-top:-5px;border:5px solid transparent;border-right:7px solid #2b2118;border-left:0}
+.bt-def h3{margin:0;font-size:1.15em;color:#2f8040}
+.bt-def p{font-size:.95em}
+.bt-pair{display:inline-flex;align-items:center;gap:.5em}.bt-pair>b{font-size:1.3em;color:#7a4fb5}
+.bt-leyenda{font-style:normal;font-size:.95em;color:#777}
+.bt-rule{flex-basis:16.5rem}
+@media only screen and (max-width:750px){.bt-rule{flex-basis:84%}.bt-duo .bt-hero,.bt-duo .bt-mesa{flex-basis:100%;max-width:17rem}}
+.bt-baza .bt-no .bt-card,.bt-duelo .bt-no .bt-card{opacity:.8;filter:grayscale(.3)}
