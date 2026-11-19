@@ -82,3 +82,13 @@
 .vg-prov { display: inline-block; margin-left: 0.4rem; padding: 0.08rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; background: #fff3c4; color: #8a6d00; }
 .vg-star { border: 2px solid #3b2a20; box-shadow: 0 4px 14px rgba(59,42,32,.18); }
 .vg-untar + .vg-box { margin-top: 1.4rem; }
+
+/* Preguntas: puntos cortos, el aparte de las proteínas y la plantita del hierro */
+.vg-puntos{margin:.5rem 0 .3rem;padding-left:1.2em;max-width:40rem}
+.vg-puntos li{text-align:left;line-height:1.45;margin:.3em 0}
+.vg-aparte{font-family:"Aleo",serif;font-style:italic;color:#4f6b45;border-left:.25rem solid #9fcf8f;padding:.2em 0 .2em .8em;margin-top:.7rem !important}
+.vg-hierro{display:flex;align-items:flex-start;gap:1rem}
+.vg-hierro>div{flex:1;min-width:0}
+.vg-hierro h3{margin:.6rem 0 0;font-size:1.05rem;text-align:left}
+.vg-planta{flex:none;width:96px;height:auto;margin-top:1.4rem}
+@media only screen and (max-width:750px){.vg-planta{width:64px}.vg-hierro{gap:.4rem}}

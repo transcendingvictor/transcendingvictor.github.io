@@ -109,3 +109,42 @@
 .rs-sub{margin-top:.8rem}
 .rs-sub button{font-size:.92em;padding:.35rem .85rem}
 .rc-name{color:#222;font-size:1.05em}
+
+/* La butifarra: foto, dibujos de cartas y normas no escritas como tarjetas que se deslizan */
+.bt-hero{margin:.6em 0 .4em;max-width:22rem}
+.bt-hero img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.bt-hero figcaption{font-size:.85em;color:#888;margin-top:.3em;text-align:left}
+.bt-intro{text-align:left;margin:.4em 0 1em}.bt-intro a{color:#7a4fb5;font-weight:600}
+.bt-cards{display:inline-flex;align-items:flex-end;vertical-align:middle}
+.bt-card{width:46px;height:69px;flex:none;filter:drop-shadow(0 1px 1.5px rgba(0,0,0,.18))}
+.bt-fan .bt-card{margin-left:-14px}.bt-fan .bt-card:first-child{margin-left:0}
+.bt-says .bt-card+.bt-card{margin-left:22px;position:relative}
+.bt-says{position:relative}.bt-says::after{content:"→";position:absolute;left:46px;width:22px;text-align:center;top:40%;color:#7a4fb5;font-weight:800}
+.bt-strip{display:flex;flex-wrap:wrap;gap:.45em;margin:.6em 0 .2em}
+.bt-strip figure{margin:0;display:flex;flex-direction:column;align-items:center}
+.bt-strip figcaption{font-size:.75em;color:#666;text-align:center;line-height:1.2}
+.bt-strip figcaption b{display:block;color:#c0392b}
+.bt-strip .bt-rest .bt-card{opacity:.6}.bt-strip .bt-rest .bt-card+.bt-card{margin-left:-24px}
+.bt-strip figure:first-child .bt-card{filter:drop-shadow(0 0 4px #e2b53b)}
+.bt-deck-wrap{position:relative;display:flex;align-items:center;gap:.4em}
+.bt-deck{list-style:none;margin:.6em 0 .2em;padding:.3em .2em .8em;display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none;flex:1;min-width:0}
+.bt-deck::-webkit-scrollbar{display:none}
+.bt-deck:focus-visible{outline:2px solid #7a4fb5;outline-offset:2px;border-radius:10px}
+.bt-rule{position:relative;flex:0 0 15rem;min-height:12rem;scroll-snap-align:start;background:#fff;border:1px solid #e3dccf;border-radius:14px;padding:1.4em 1em 1em;margin:0 !important;box-shadow:0 2px 8px rgba(0,0,0,.06);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7em}
+.bt-rule p{margin:0;text-align:center !important;line-height:1.4;font-size:1.02em}
+.bt-n{position:absolute;top:.5em;left:.7em;font-weight:800;color:#c0392b;font-size:.9em}
+.bt-what{display:block;color:#888;font-size:.8em;text-align:center;line-height:1.3}
+.bt-arrow{flex:none;width:2.2em;height:2.2em;border:1px solid #c9bfe0;border-radius:50%;background:#fff;color:#7a4fb5;font-size:1.2em;line-height:1;cursor:pointer}
+.bt-arrow:disabled{opacity:.3;cursor:default}
+.bt-dots{display:flex;justify-content:center;gap:.5rem;margin:.1rem 0 .2rem}
+.bt-dots button{width:.6rem;height:.6rem;padding:0;border:.12rem solid #1c1c1c;border-radius:50%;background:transparent;cursor:pointer;transition:background-color .2s,transform .2s}
+.bt-dots button[aria-current="true"]{background:#1c1c1c;transform:scale(1.25)}
+.bt-hint{color:#7a4fb5;font-style:normal;font-weight:600}
+@media (hover:hover) and (pointer:fine){.bt-hint{display:none}}
+@media only screen and (max-width:750px){
+  .bt-arrow{display:none}
+  .bt-deck{margin:.6em -1.2em .2em;padding:.3em 1.2em .8em;scroll-padding-inline:1.2em}
+  .bt-rule{flex-basis:80%}
+  .bt-rule:last-child{margin-right:1.2em !important}
+  .bt-hero{max-width:15rem}
+}
