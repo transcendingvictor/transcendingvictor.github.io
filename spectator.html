@@ -2169,7 +2169,7 @@
         }
         function nuevo() {
             var L = NIV[nivel];
-            svg.innerHTML = ''; done = false; fin = false; next.hidden = true;
+            svg.innerHTML = ''; done = false; fin = false; next.hidden = true; svg.setAttribute('viewBox', '0 0 300 200');
             fondo(L);
             fig = figura(L.f[Math.floor(Math.random() * L.f.length)]);
             if (fig.k === 'circ') mk('circle', { cx: fig.c.x, cy: fig.c.y, r: fig.R, fill: COL[Math.floor(Math.random() * COL.length)], stroke: '#1c1c1c', 'stroke-width': 2.5 });
@@ -2179,18 +2179,35 @@
             cabecera();
         }
         function etiqueta(t) { next.querySelector('[data-l="es"]').textContent = t[0]; next.querySelector('[data-l="en"]').textContent = t[1]; }
+        var anim = null, auto = null, listoSeguir = 0;
+        function vbAnim(a, b, ms, cb) {
+            if (anim) cancelAnimationFrame(anim);
+            var t0 = performance.now(), red = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function paso(t) {
+                var u = red ? 1 : Math.min(1, (t - t0) / ms), e = u < .5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2;
+                svg.setAttribute('viewBox', a.map(function (v, i) { return (v + (b[i] - v) * e).toFixed(2); }).join(' '));
+                if (u < 1) anim = requestAnimationFrame(paso); else { anim = null; if (cb) cb(); }
+            }
+            anim = requestAnimationFrame(paso);
+        }
+        function seguir() { if (auto) { clearTimeout(auto); auto = null; } var cd = svg.querySelector('.jg-cd'); if (cd) cd.remove(); nuevo(); }
         svg.addEventListener('click', function (ev) {
-            if (done) return;
+            if (done) { if (!fin && performance.now() > listoSeguir) seguir(); return; }
             var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
             var p = pt.matrixTransform(svg.getScreenCTM().inverse()), c = fig.c;
             var d = Math.hypot(p.x - c.x, p.y - c.y), pts = Math.max(0, Math.round(100 * (1 - d / fig.R)));
             done = true; tiro++; suma += pts; if (window.JGP) JGP.add('centro', pts);
-            mk('line', { x1: c.x, y1: c.y, x2: p.x, y2: p.y, stroke: '#8a4fa8', 'stroke-width': 2, 'stroke-dasharray': '4 3' });
-            mk('circle', { cx: c.x, cy: c.y, r: 4, fill: '#1c1c1c' });
-            mk('circle', { cx: p.x, cy: p.y, r: 4, fill: '#d14b4b', stroke: '#fff', 'stroke-width': 1.5 });
-            var zr = Math.max(d * 2.2, 18), vb0 = '0 0 300 200', vb1 = (c.x - zr * 1.5) + ' ' + (c.y - zr) + ' ' + (zr * 3) + ' ' + (zr * 2);
-            svg.classList.add('jg-zoom'); svg.setAttribute('viewBox', vb1); next.disabled = true;
-            setTimeout(function () { svg.setAttribute('viewBox', vb0); svg.classList.remove('jg-zoom'); next.disabled = false; }, 1500);
+            // Zoom suave y moderado: se sigue viendo parte del contorno
+            var zr = Math.min(100, Math.max(d * 1.8, fig.R * 0.55, 22)), k = 100 / zr, mx = (c.x + p.x) / 2, my = (c.y + p.y) / 2;
+            var vb1 = [mx - zr * 1.5, my - zr, zr * 3, zr * 2];
+            var u = 1 / k, cr = 5 * u, sw = 1.4 * u;
+            mk('line', { x1: c.x, y1: c.y, x2: p.x, y2: p.y, stroke: '#8a4fa8', 'stroke-width': sw, 'stroke-dasharray': (3 * u) + ' ' + (2.5 * u) });
+            mk('line', { x1: c.x - cr, y1: c.y, x2: c.x + cr, y2: c.y, stroke: '#1c1c1c', 'stroke-width': sw });
+            mk('line', { x1: c.x, y1: c.y - cr, x2: c.x, y2: c.y + cr, stroke: '#1c1c1c', 'stroke-width': sw });
+            mk('circle', { cx: p.x, cy: p.y, r: 2.6 * u, fill: '#d14b4b', stroke: '#fff', 'stroke-width': 0.9 * u });
+            var pct = Math.round(100 * d / fig.R), lab = mk('text', { x: mx + 4 * u, y: my - 4 * u, 'font-size': 9 * u, fill: '#5b2f86', 'font-weight': 600, 'font-family': 'system-ui,sans-serif', 'paint-order': 'stroke', stroke: '#fff', 'stroke-width': 2.5 * u }, pct + '%');
+            lab.setAttribute('class', 'jg-pct');
+            vbAnim([0, 0, 300, 200], vb1, 750);
             var txt = pts >= 95 ? (es() ? '¡Clavado!' : 'Spot on!') : pts >= 80 ? (es() ? '¡Muy cerca!' : 'Very close!') : pts >= 50 ? (es() ? 'No está mal.' : 'Not bad.') : (es() ? 'Uy…' : 'Oops…');
             txt += ' +' + pts + (es() ? ' puntos.' : ' points.');
             if (fig.fuera) txt += es() ? ' ¡Ojo! Aquí el centro de gravedad cae fuera de la figura: es el punto donde se equilibraría si fuera una lámina de cartón, aunque no haya material en él (como en un boomerang o una herradura).'
@@ -2202,9 +2219,22 @@
                 if (pasa && nivel === NIV.length - 1) { var win = document.getElementById('jg-win'); if (win) { win.hidden = false; win.classList.remove('on'); void win.offsetWidth; win.classList.add('on'); } txt += es() ? '¡Has superado el nivel Dios! Has terminado el juego.' : 'You beat God level! Game complete.'; etiqueta(['Volver a empezar', 'Start again']); fin = 'reset'; }
                 else if (pasa) { if (window.JGP) JGP.add('centro', 100 * (nivel + 1)); txt += (es() ? '+' + 100 * (nivel + 1) + ' de bonus. ' : '+' + 100 * (nivel + 1) + ' bonus. ') + es() ? '¡Nivel superado!' : 'Level passed!'; etiqueta(['Siguiente nivel', 'Next level']); fin = 'up'; }
                 else { txt += es() ? 'Necesitabas ' + L.min + '. Inténtalo otra vez.' : 'You needed ' + L.min + '. Try again.'; etiqueta(['Repetir nivel', 'Retry level']); fin = 'retry'; }
-            } else etiqueta(['Otra figura', 'Another shape']);
+            }
             msg.textContent = txt; tot.textContent = Math.round(suma / tiro); cabecera();
-            next.hidden = false;
+            if (fin) next.hidden = false;
+            else {
+                // Sin botón: cuenta atrás de 3 s o toca otra vez para la siguiente figura
+                listoSeguir = performance.now() + 700;
+                var cd = mk('g', { class: 'jg-cd' });
+                var cx0 = vb1[0] + vb1[2] - 12 * u, cy0 = vb1[1] + 12 * u, rr = 7 * u, L2 = 2 * Math.PI * rr;
+                var ring = document.createElementNS(NS, 'circle'); ['cx', 'cy', 'r'].forEach(function (a, i) { ring.setAttribute(a, [cx0, cy0, rr][i]); });
+                ring.setAttribute('fill', 'none'); ring.setAttribute('stroke', '#8a4fa8'); ring.setAttribute('stroke-width', 2 * u);
+                ring.setAttribute('stroke-dasharray', L2); ring.setAttribute('stroke-dashoffset', 0);
+                ring.style.transition = 'stroke-dashoffset 3s linear'; cd.appendChild(ring);
+                requestAnimationFrame(function () { requestAnimationFrame(function () { ring.setAttribute('stroke-dashoffset', L2); }); });
+                auto = setTimeout(seguir, 3000);
+                msg.textContent += es() ? ' (Toca para la siguiente.)' : ' (Tap for the next one.)';
+            }
         });
         next.addEventListener('click', function () {
             if (fin) {
