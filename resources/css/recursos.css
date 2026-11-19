@@ -148,3 +148,9 @@
   .bt-rule:last-child{margin-right:1.2em !important}
   .bt-hero{max-width:15rem}
 }
+.bt-mesa{margin:.6em 0 .3em}
+.bt-mesa svg{display:block;width:100%;max-width:290px;height:auto}
+.bt-mesa figcaption{font-size:.85em;color:#666;text-align:left;line-height:1.35;margin-top:.2em}
+.bt-a{color:#7a4fb5}.bt-b{color:#d9822b}
+.bt-strip .bt-card{width:54px;height:81px}
+@media only screen and (max-width:750px){.bt-strip{gap:4px}.bt-strip .bt-card{width:44px;height:66px}}
