@@ -1790,6 +1790,7 @@ html.rc-pausa body { pointer-events: none; }
 .nm-btn:focus-visible{outline:2px solid #7a4fb5;outline-offset:4px}
 .nm-cloud .nm.open{flex-basis:100%;transform:none;animation:none;text-align:center}
 .nm-cloud .nm.open .nm-body{background:#fff;border:1px solid #e3dccf;border-radius:14px;padding:.8em 1.1em;margin:.6em auto 0;max-width:560px;text-align:left}
+.nm-since{margin:0 0 .4em;font:600 .72em/1.2 ui-monospace,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:#9a8f7e}
 .nmf{display:inline-flex;align-items:baseline;line-height:1}
 .nmf-victor{font:600 2.3em/1 "Cinzel",Georgia,serif;letter-spacing:.12em;color:#2b2b2b}
 .nmf-victor .acc{color:#7a4fb5;position:relative}
