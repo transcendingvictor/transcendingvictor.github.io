@@ -1975,3 +1975,21 @@ a.sp-cm-card:hover { color: #fff !important; text-decoration: none; }
 .sp-st-btn[aria-expanded="true"] { transform: rotate(45deg); }
 .sp-stanzas > li:has(.sp-st-btn) { cursor: pointer; }
 .sp-stanzas .sp-st-panel { cursor: auto; }
+
+/* Línea al revés: lo más reciente arriba, con los puntos de lo que viene encima */
+.sp-cm-wrap { padding-top: 3.4rem; padding-bottom: 1rem; }
+@keyframes tlFluye { to { stroke-dashoffset: 38; } }
+
+/* mvrk: tarjeta más ancha y apretada, de golpe de vista */
+.sp-list .sp-artists.sp-swipe > .sp-artist:has(.sp-albums) { width: 19.5rem; }
+.sp-artist .sp-albums { gap: 0.35rem; }
+.sp-artist .sp-album { column-gap: 0.45rem; margin: 0 0 0.35rem; }
+.sp-artist .sp-album img { width: 1.8rem; height: 1.8rem; }
+.sp-artist .sp-album p { font-size: 0.74rem; }
+.sp-artist .sp-album .sp-chips { margin: 0.15rem 0 0; gap: 0.2rem; }
+.sp-artist .sp-album .sp-chips button { font-size: 0.68rem; padding: 0.05rem 0.4rem; }
+@media only screen and (max-width:750px) {
+  .sp-list .sp-artists.sp-swipe > .sp-artist:has(.sp-albums) { width: 86vw; max-width: 19.5rem; }
+}
+/* motes pequeños ahora se abren */
+.nm-cloud .nm-mini .nm-btn { padding: 0.1em 0.2em; }
