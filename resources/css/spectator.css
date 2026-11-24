@@ -2144,3 +2144,9 @@ a.sp-cm-card:hover { color: #fff !important; text-decoration: none; }
 html.sp-lock, html.sp-lock body { overflow: hidden; }
 .sp-sheet { overscroll-behavior: contain; }
 .sp-poem .sp-com .sp-com-link { display: block; margin: 0.25rem 0; text-indent: 0; padding-left: 0; }
+
+/* Enlaces discretos a las playlists de «Canciones que fueron mis favoritas» */
+.sp-cm-lists { margin: -3.4rem 0 1rem 2.1rem; font-size: 0.78rem; color: #8b8b85; position: relative; }
+.sp-cm-lists a { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
+.sp-cm-lists a:hover { color: #8a4fa8; }
+@media (max-width: 600px) { .sp-cm-lists { margin-top: -1.2rem; margin-left: 2.6rem; } }
