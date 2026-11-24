@@ -1866,3 +1866,48 @@ a.sp-song:hover { color: #fff !important; text-decoration: none; }
 .nmf-torvik span:nth-child(2){animation-delay:.15s}.nmf-torvik span:nth-child(3){animation-delay:.3s}.nmf-torvik span:nth-child(4){animation-delay:.45s}.nmf-torvik span:nth-child(5){animation-delay:.6s}.nmf-torvik span:nth-child(6){animation-delay:.75s}
 @keyframes nmBote{0%,100%{translate:0 0}30%{translate:0 -.25em}}
 @media (prefers-reduced-motion:reduce){.nmf-viwi i,.nmf-torvik span{animation:none}}
+
+/* Canciones de mi vida, compactas: viñetas en serpentín sobre una línea curva */
+.sp-tl-wrap { position: relative; max-width: 46rem; padding: 0.4rem 2.1rem 0.9rem; }
+.sp-tl-line { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
+.sp-tl-line path { fill: none; stroke: #1c1c1c; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.sp-tl { --cols: 4; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); gap: 1.35rem 1.1rem; position: relative; }
+.sp-tl-item { position: relative; min-width: 0; }
+.sp-tl-card {
+  display: grid; grid-template-columns: 2.1rem minmax(0, 1fr); align-items: center; gap: 0.45rem;
+  width: 100%; height: 3.1rem; padding: 0.3rem 0.45rem 0.3rem 0.3rem; box-sizing: border-box;
+  border: 0.15rem solid #1c1c1c; border-radius: 9px; position: relative;
+  background: linear-gradient(135deg, var(--c, #333) 0%, color-mix(in srgb, var(--c, #333) 55%, #141414) 100%);
+  color: #fff; font: inherit; text-align: left; cursor: pointer; text-decoration: none;
+  transition: transform 150ms, box-shadow 150ms;
+}
+a.sp-tl-card:hover { color: #fff !important; text-decoration: none; }
+.sp-tl-card:hover { transform: translate(-2px, -2px); box-shadow: 3px 3px #1c1c1c; }
+.sp-tl-card[aria-pressed="true"] { box-shadow: 0 0 0 0.18rem #1ed760; }
+.sp-tl-card img { width: 2.1rem; height: 2.1rem; border-radius: 4px; object-fit: cover; }
+.sp-tl-txt { display: flex; flex-direction: column; min-width: 0; line-height: 1.12; }
+.sp-tl-txt > * { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sp-tl-when { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(255,255,255,0.75); }
+.sp-tl-txt b { font-size: 0.8rem; }
+.sp-tl-txt > span:last-child { font-size: 0.66rem; color: rgba(255,255,255,0.7); }
+.sp-tl-play {
+  position: absolute; right: 0.3rem; bottom: 0.3rem; width: 1.1rem; height: 1.1rem; border-radius: 50%;
+  background: rgba(255,255,255,0.9); color: #1c1c1c; font-size: 0.5rem; line-height: 1.1rem; text-align: center;
+  opacity: 0; transition: opacity 150ms;
+}
+.sp-tl-card:hover .sp-tl-play, .sp-tl-card:focus-visible .sp-tl-play { opacity: 1; }
+.sp-tl-card[aria-pressed="true"] .sp-tl-play { opacity: 1; background: #1ed760; }
+.sp-tl-item .sp-medal { right: -0.45rem; top: -0.35rem; }
+.sp-tl-item .sp-mention { right: -0.45rem; top: -0.55rem; }
+.sp-tl-item .sp-margin-note { position: absolute; left: 0.2rem; top: 100%; margin: 0.1rem 0 0; font-size: 0.66rem; transform: none; white-space: nowrap; z-index: 1; }
+.sp-tl-now { position: sticky; bottom: 0.5rem; z-index: 5; max-width: 42rem; margin: 0.8rem auto 0; display: flex; gap: 0.4rem; align-items: start; }
+.sp-tl-now[hidden] { display: none; }
+.sp-tl-now iframe { flex: 1; border: 0; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); }
+.sp-tl-close { border: 0.12rem solid #1c1c1c; border-radius: 50%; width: 1.8rem; height: 1.8rem; background: #fffaf2; cursor: pointer; font-size: 0.75rem; }
+@media only screen and (max-width:750px) {
+  .sp-tl-wrap { padding: 0.4rem 1.5rem 0.6rem; }
+  .sp-tl { gap: 1.2rem 0.8rem; }
+}
+.sp-list .sp-tl > li.sp-tl-item { display: block; margin: 0; padding: 0; border: 0; background: none; box-shadow: none; transform: none; }
+.sp-list .sp-tl > li.sp-tl-item::before, .sp-list .sp-tl > li.sp-tl-item::after { content: none; display: none; }
+.sp-list ol.sp-tl::before, .sp-list ol.sp-tl::after { content: none; display: none; }
