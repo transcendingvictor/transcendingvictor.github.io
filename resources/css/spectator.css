@@ -2085,3 +2085,5 @@ a.sp-cm-card:hover { color: #fff !important; text-decoration: none; }
 .sp-cm-line .tl-fut-glow { stroke: url(#tlFut); stroke-width: 24; opacity: 0.3; filter: blur(4px); fill: none; stroke-linecap: round; }
 .sp-cm-line .tl-past { stroke: url(#tlPast); stroke-width: 5; stroke-dasharray: 2 11; fill: none; stroke-linecap: round; }
 .sp-cm-line .tl-q text { fill: #5b6fd8; font-family: "Caveat", "Segoe Print", cursive; font-weight: 600; }
+.nm-quiet { color: inherit; text-decoration: underline dotted rgba(0,0,0,0.35); text-underline-offset: 3px; }
+.nm-quiet:hover { text-decoration-color: currentColor; }
