@@ -2034,3 +2034,16 @@ a.sp-cm-card:hover { color: #fff !important; text-decoration: none; }
   .sp-top-podio .sp-top-list li:nth-child(6) { grid-column: 1 / span 8; }
   .sp-top .sp-song-txt span { display: none; }
 }
+
+/* Hilo de energía: más gordo, más intenso */
+.sp-cm-line .tl-glow { stroke-width: 26; opacity: 0.32; filter: blur(4px); }
+.sp-cm-line .tl-main { stroke-width: 7; }
+.sp-cm-line .tl-flow { stroke-width: 3; stroke-dasharray: 2 16; opacity: 0.95; animation-duration: 1.6s; }
+.sp-cm-line .tl-fut { stroke-width: 6; stroke-dasharray: 1 12; }
+.sp-cm { row-gap: 1.9rem; }
+
+/* Cuadrícula: todas pequeñitas, como el resto del podio */
+.sp-top-cuadro .sp-top-list li, .sp-top-cuadro .sp-top-list li:nth-child(n+6) { grid-column: span 5; }
+@media only screen and (max-width:750px) {
+  .sp-top-cuadro .sp-top-list li, .sp-top-cuadro .sp-top-list li:nth-child(n+6) { grid-column: span 8; }
+}

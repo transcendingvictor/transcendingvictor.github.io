@@ -21,7 +21,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css?v=20261109a" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261125f" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261125g" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -1667,8 +1667,8 @@
         var ol = wrap.querySelector('.sp-cm'), svg = wrap.querySelector('.sp-cm-line');
         var NS = 'http://www.w3.org/2000/svg';
         svg.innerHTML = '<defs><linearGradient id="tlGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="1">' +
-            '<stop offset="0" stop-color="#f2b84b"/><stop offset="0.45" stop-color="#e98bb5"/><stop offset="1" stop-color="#b9a3e0"/></linearGradient>' +
-            '<linearGradient id="tlFut" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2b84b"/><stop offset="1" stop-color="#f2b84b" stop-opacity="0"/></linearGradient></defs>' +
+            '<stop offset="0" stop-color="#ffb000"/><stop offset="0.22" stop-color="#ff6a3d"/><stop offset="0.45" stop-color="#ff3d8b"/><stop offset="0.7" stop-color="#9b4dff"/><stop offset="1" stop-color="#3d7bff"/></linearGradient>' +
+            '<linearGradient id="tlFut" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffb000"/><stop offset="1" stop-color="#ffb000" stop-opacity="0"/></linearGradient></defs>' +
             '<path class="tl-glow"/><path class="tl-main"/><path class="tl-flow"/><path class="tl-fut"/>';
         var pGlow = svg.querySelector('.tl-glow'), pMain = svg.querySelector('.tl-main'), pFlow = svg.querySelector('.tl-flow'), pFut = svg.querySelector('.tl-fut');
         var grad = svg.querySelector('#tlGrad'), fut = svg.querySelector('#tlFut');
