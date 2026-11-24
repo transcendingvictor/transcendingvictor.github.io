@@ -2121,3 +2121,10 @@ a.sp-cm-card:hover { color: #fff !important; text-decoration: none; }
   .sp-skyinfo-i { flex-direction: column; align-items: stretch; gap: 0.4rem; }
   .sp-skyinfo .sky-svg { width: 100%; max-width: none; }
 }
+
+/* A quién escucho: una fila por artista y, a la derecha, sus canciones */
+.sp-seg-list ol.sp-seg-arts { display: grid; grid-template-columns: max-content 1fr; gap: 0.25rem 0.8rem; list-style: none; margin: 0; padding: 0; }
+.sp-seg-list ol.sp-seg-arts li { display: contents; }
+.sp-seg-arts li > b { font-size: 0.82rem; color: #1c1c1c; white-space: nowrap; }
+.sp-seg-arts .sp-seg-songs { font-size: 0.78rem; color: #6b6b66; line-height: 1.35; }
+.sp-seg-arts .sp-seg-songs a { color: #5b2e78; }
