@@ -2129,3 +2129,8 @@ a.sp-cm-card:hover { color: #fff !important; text-decoration: none; }
 .sp-seg-arts .sp-seg-songs { font-size: 0.78rem; color: #6b6b66; line-height: 1.35; }
 .sp-seg-arts .sp-seg-songs a { color: #5b2e78; }
 .sp-fl-body h4 .sp-h4-note { text-transform: none; letter-spacing: 0; font-weight: 400; color: #6b6b66; font-size: 0.72rem; }
+.sp-fl-body .sp-who { display: none; font-style: normal; font-size: 0.72rem; color: #8a4fa8; }
+.sp-fl-body .sp-show-who .sp-who { display: inline; }
+.sp-fl-body .sp-show-who .sp-who::before { content: "— "; }
+.sp-who-toggle { display: inline-flex; align-items: center; gap: 0.3rem; margin: 0 0 0.2rem; font-size: 0.75rem; color: #6b6b66; cursor: pointer; }
+.sp-who-toggle input { accent-color: #8a4fa8; }
