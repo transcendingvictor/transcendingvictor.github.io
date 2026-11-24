@@ -1911,3 +1911,36 @@ a.sp-tl-card:hover { color: #fff !important; text-decoration: none; }
 .sp-list .sp-tl > li.sp-tl-item { display: block; margin: 0; padding: 0; border: 0; background: none; box-shadow: none; transform: none; }
 .sp-list .sp-tl > li.sp-tl-item::before, .sp-list .sp-tl > li.sp-tl-item::after { content: none; display: none; }
 .sp-list ol.sp-tl::before, .sp-list ol.sp-tl::after { content: none; display: none; }
+
+/* Un paseo: viñetas algo sueltas y una línea de color que fluye */
+.sp-tl-wrap { padding-bottom: 4.2rem; }
+.sp-list .sp-tl > li.sp-tl-item { transform: translate(var(--dx, 0), var(--dy, 0)); }
+.sp-tl { row-gap: 1.6rem; }
+.sp-tl-line .tl-glow { fill: none; stroke: url(#tlGrad); stroke-width: 12; stroke-linecap: round; opacity: 0.18; }
+.sp-tl-line .tl-main { fill: none; stroke: url(#tlGrad); stroke-width: 3.2; stroke-linecap: round; }
+.sp-tl-line .tl-flow { fill: none; stroke: #fff; stroke-width: 1.6; stroke-linecap: round; stroke-dasharray: 1 18; opacity: 0.85; animation: tlFluye 2.4s linear infinite; }
+.sp-tl-line .tl-fut { fill: none; stroke: url(#tlFut); stroke-width: 3.2; stroke-linecap: round; stroke-dasharray: 2 9; }
+@keyframes tlFluye { to { stroke-dashoffset: -38; } }
+@media (prefers-reduced-motion: reduce) { .sp-tl-line .tl-flow { animation: none; } }
+.sp-tl-next { position: absolute; font-family: "Caveat", "Segoe Print", cursive; font-size: 1.05rem; color: #c98a1e; white-space: nowrap; transform: rotate(-4deg); pointer-events: none; }
+
+.sp-tl-card { border-color: rgba(28,28,28,0.85); box-shadow: 0 2px 6px rgba(0,0,0,0.12); }
+
+/* Artistas: fila con scroll a la derecha; cada tarjeta del tamaño que pide */
+.sp-list .sp-artists.sp-swipe {
+  display: flex; align-items: flex-start; gap: 1rem; overflow-x: auto; scroll-snap-type: x proximity;
+  max-width: 46rem; padding: 1rem 2.5rem 1rem 1.1rem; margin: 0 0 0 -0.6rem;
+  -webkit-mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 3rem), transparent);
+          mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 3rem), transparent);
+  scrollbar-width: thin;
+}
+.sp-list .sp-artists.sp-swipe > .sp-artist { flex: 0 0 auto; width: 12.5rem; scroll-snap-align: start; }
+.sp-list .sp-artists.sp-swipe > .sp-artist:has(.sp-albums) { width: 15.5rem; }
+.sp-list .sp-artists.sp-swipe > .sp-artist:has(.sp-chips > li:nth-child(6)) { width: 14rem; }
+.sp-artists .sp-player { height: 80px; }
+.sp-artists-more { display: block; margin: -0.2rem 0 0; font-size: 0.75rem; color: #6b6b66; }
+@media only screen and (max-width:750px) {
+  .sp-list .sp-artists.sp-swipe > .sp-artist { width: 72vw; max-width: 15rem; }
+  .sp-list .sp-artists.sp-swipe > .sp-artist:has(.sp-albums) { width: 80vw; max-width: 17rem; }
+}
+.sp-tl-wrap { overflow-x: clip; }

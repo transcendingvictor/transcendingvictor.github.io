@@ -21,7 +21,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css?v=20261109a" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261125a" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261125b" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -358,7 +358,8 @@
             <h2><span data-l="es">Canciones que fueron mis favoritas</span><span data-l="en">Songs that were once my favourite</span></h2>
             <p class="sp-note"><span data-l="es">En algún momento de mi vida, cada una de estas fue la canción: la del mes, o la de una semana que me obsesionaba. Toca una para escucharla.</span><span data-l="en">At some point in my life, each of these was the song: the song of the month, or of a week I was obsessed with it. Tap one to listen.</span></p>
             <div class="sp-tl-wrap">
-            <svg class="sp-tl-line" aria-hidden="true"><path/></svg>
+            <svg class="sp-tl-line" aria-hidden="true"></svg>
+            <span class="sp-tl-next" aria-hidden="true"><span data-l="es">¿hacia dónde voy?</span><span data-l="en">where am I headed?</span></span>
             <ol class="sp-tl">
                 <li class="sp-tl-item" data-search="el secreto de las tortugas maldita nerea" style="--c:#15191b"><button type="button" class="sp-tl-card" data-track="1sMgCr1RH0HfAazVZt9xmZ" aria-pressed="false" title="El secreto de las tortugas · Maldita Nerea"><img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00004851305402355d5af22c06b2fe36" alt="" loading="lazy"><span class="sp-tl-txt"><span class="sp-tl-when">2012</span><b>El secreto de las tortugas</b><span>Maldita Nerea</span></span><span class="sp-tl-play" aria-hidden="true">▶</span></button></li>
                 <li class="sp-tl-item" data-search="let her go passenger" style="--c:#313738"><button type="button" class="sp-tl-card" data-track="0JmiBCpWc1IAc0et7Xm7FL" aria-pressed="false" title="Let Her Go · Passenger"><img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00004851a7c10595167c713a2df0f187" alt="" loading="lazy"><span class="sp-tl-txt"><span class="sp-tl-when"><span data-l="es">feb 2014</span><span data-l="en">Feb 2014</span></span><b>Let Her Go</b><span>Passenger</span></span><span class="sp-tl-play" aria-hidden="true">▶</span></button></li>
@@ -1656,12 +1657,37 @@
     </script>
 
     <script>
-    // Canciones de mi vida: viñetas en serpentín unidas por una línea curva; un solo reproductor abajo
+    // Canciones de mi vida: un paseo. Viñetas algo sueltas, una línea suave de color que fluye y sigue hacia lo que viene
     (function () {
         var wrap = document.querySelector('.sp-tl-wrap');
         if (!wrap) return;
-        var ol = wrap.querySelector('.sp-tl'), path = wrap.querySelector('.sp-tl-line path'), svg = wrap.querySelector('.sp-tl-line');
+        var ol = wrap.querySelector('.sp-tl'), svg = wrap.querySelector('.sp-tl-line');
+        var NS = 'http://www.w3.org/2000/svg';
+        svg.innerHTML = '<defs><linearGradient id="tlGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="1">' +
+            '<stop offset="0" stop-color="#b9a3e0"/><stop offset="0.55" stop-color="#e98bb5"/><stop offset="1" stop-color="#f2b84b"/></linearGradient>' +
+            '<linearGradient id="tlFut" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2b84b"/><stop offset="1" stop-color="#f2b84b" stop-opacity="0"/></linearGradient></defs>' +
+            '<path class="tl-glow"/><path class="tl-main"/><path class="tl-flow"/><path class="tl-fut"/>';
+        var pGlow = svg.querySelector('.tl-glow'), pMain = svg.querySelector('.tl-main'), pFlow = svg.querySelector('.tl-flow'), pFut = svg.querySelector('.tl-fut');
+        var grad = svg.querySelector('#tlGrad'), fut = svg.querySelector('#tlFut');
+        var label = wrap.querySelector('.sp-tl-next');
         var items = Array.prototype.slice.call(ol.children);
+        // pequeños desplazamientos fijos para que no parezca una cuadrícula
+        items.forEach(function (li, i) {
+            var a = Math.sin(i * 2.399) , b = Math.cos(i * 1.7);
+            li.style.setProperty('--dy', (a * 7).toFixed(1) + 'px');
+            li.style.setProperty('--dx', (b * 5).toFixed(1) + 'px');
+        });
+        function smooth(P) {
+            // Catmull-Rom a Bézier: una curva que pasa por todos los puntos sin esquinas
+            if (P.length < 2) return '';
+            var d = 'M' + P[0][0] + ' ' + P[0][1];
+            for (var i = 0; i < P.length - 1; i++) {
+                var p0 = P[i - 1] || P[i], p1 = P[i], p2 = P[i + 1], p3 = P[i + 2] || p2, t = 0.18;
+                d += ' C' + (p1[0] + (p2[0] - p0[0]) * t).toFixed(1) + ' ' + (p1[1] + (p2[1] - p0[1]) * t).toFixed(1) + ' ' +
+                     (p2[0] - (p3[0] - p1[0]) * t).toFixed(1) + ' ' + (p2[1] - (p3[1] - p1[1]) * t).toFixed(1) + ' ' + p2[0].toFixed(1) + ' ' + p2[1].toFixed(1);
+            }
+            return d;
+        }
         function layout() {
             var w = ol.clientWidth, cols = w >= 640 ? 4 : w >= 440 ? 3 : 2;
             ol.style.setProperty('--cols', cols);
@@ -1671,24 +1697,40 @@
                 if (r % 2) c = cols - 1 - c;
                 li.style.gridRow = r + 1; li.style.gridColumn = c + 1;
             });
-            var box = wrap.getBoundingClientRect(), pts = vis.map(function (li) {
+            var box = wrap.getBoundingClientRect(), W = box.width, H = box.height;
+            var pts = vis.map(function (li) {
                 var b = li.firstElementChild.getBoundingClientRect();
-                return [b.left - box.left + b.width / 2, b.top - box.top + b.height / 2, b.width];
+                return { x: b.left - box.left + b.width / 2, y: b.top - box.top + b.height / 2, w: b.width, h: b.height, r: li.style.gridRow };
             });
-            svg.setAttribute('width', box.width); svg.setAttribute('height', box.height);
-            var d = '';
+            var P = [];
             pts.forEach(function (p, i) {
-                if (!i) { d = 'M' + p[0] + ' ' + p[1]; return; }
                 var q = pts[i - 1];
-                if (Math.abs(q[1] - p[1]) < 2) { d += ' L' + p[0] + ' ' + p[1]; return; }
-                var right = q[0] > box.width / 2, k = (q[2] / 2 + 20) / 0.75, x = right ? q[0] + k : q[0] - k;
-                d += ' C' + x + ' ' + q[1] + ' ' + x + ' ' + p[1] + ' ' + p[0] + ' ' + p[1];
+                if (q && q.r !== p.r) {
+                    // vuelta suave por fuera de la fila
+                    var right = q.x > W / 2, x = right ? Math.min(W - 6, q.x + q.w / 2 + 22) : Math.max(6, q.x - q.w / 2 - 22);
+                    P.push([x, (q.y + p.y) / 2]);
+                }
+                P.push([p.x, p.y]);
             });
-            path.setAttribute('d', d);
+            svg.setAttribute('width', W); svg.setAttribute('height', H);
+            grad.setAttribute('y2', H);
+            var d = smooth(P);
+            pGlow.setAttribute('d', d); pMain.setAttribute('d', d); pFlow.setAttribute('d', d);
+            // hacia dónde voy: la línea sigue, se desdibuja
+            var L = pts[pts.length - 1];
+            if (L) {
+                var dir = (Math.floor((vis.length - 1) / cols) % 2) ? -1 : 1;
+                var room = dir > 0 ? W - (L.x + L.w / 2) : L.x - L.w / 2, s = Math.max(0.35, Math.min(1, (room - 8) / 110));
+                var x0 = L.x + dir * L.w / 2, y0 = L.y, x1 = x0 + dir * 70 * s, y1 = y0 + 44, x2 = x1 + dir * 40 * s, y2 = y1 + 30;
+                pFut.setAttribute('d', 'M' + L.x + ' ' + L.y + ' C' + (x0 + dir * 40) + ' ' + y0 + ' ' + (x1 - dir * 20) + ' ' + (y1 - 26) + ' ' + x1 + ' ' + y1 + ' S' + (x2 - dir * 10) + ' ' + (y2 - 4) + ' ' + x2 + ' ' + y2);
+                fut.setAttribute('x1', L.x); fut.setAttribute('y1', L.y); fut.setAttribute('x2', x2); fut.setAttribute('y2', y2);
+                if (label) { var lw = label.offsetWidth, left = dir > 0 ? x2 + 6 : x2 - 6 - lw; if (left + lw > W - 4) left = W - 4 - lw; if (left < 4) left = 4; label.style.left = left + 'px'; label.style.top = (y2 + (left + lw > x2 && left < x2 ? 10 : -8)) + 'px'; }
+            }
         }
         layout();
         window.addEventListener('resize', layout);
         window.addEventListener('load', layout);
+        if (document.fonts) document.fonts.ready.then(layout);
         var q = document.getElementById('sp-q');
         if (q) q.addEventListener('input', function () { setTimeout(layout, 0); });
 
