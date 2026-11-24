@@ -2134,3 +2134,11 @@ a.sp-cm-card:hover { color: #fff !important; text-decoration: none; }
 .sp-fl-body .sp-show-who .sp-who::before { content: "— "; }
 .sp-who-toggle { display: inline-flex; align-items: center; gap: 0.3rem; margin: 0 0 0.2rem; font-size: 0.75rem; color: #6b6b66; cursor: pointer; }
 .sp-who-toggle input { accent-color: #8a4fa8; }
+
+/* Fichas: la portada entera (sin recortar) y la página quieta mientras está abierta */
+.sp-poem .sp-figure .sp-hero { width: auto; max-width: 100%; max-height: 20rem; margin: 0 auto; object-fit: contain; }
+.sp-poem .sp-figure { text-align: center; }
+.sp-poem .sp-figure figcaption { text-align: left; }
+html.sp-lock, html.sp-lock body { overflow: hidden; }
+.sp-sheet { overscroll-behavior: contain; }
+.sp-poem .sp-com .sp-com-link { display: block; margin: 0.25rem 0; text-indent: 0; padding-left: 0; }
