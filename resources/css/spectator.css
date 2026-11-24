@@ -2128,3 +2128,4 @@ a.sp-cm-card:hover { color: #fff !important; text-decoration: none; }
 .sp-seg-arts li > b { font-size: 0.82rem; color: #1c1c1c; white-space: nowrap; }
 .sp-seg-arts .sp-seg-songs { font-size: 0.78rem; color: #6b6b66; line-height: 1.35; }
 .sp-seg-arts .sp-seg-songs a { color: #5b2e78; }
+.sp-fl-body h4 .sp-h4-note { text-transform: none; letter-spacing: 0; font-weight: 400; color: #6b6b66; font-size: 0.72rem; }
