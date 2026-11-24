@@ -1804,3 +1804,342 @@ html.rc-pausa body { pointer-events: none; }
 .nmf-tv{font:italic 500 2em/1 "Cormorant Garamond",Georgia,serif;color:#3a3a5a}
 .nmf-tv>span{display:inline-block;transform:translateY(calc(var(--i) * -.025em));letter-spacing:calc(var(--i) * .005em);opacity:calc(1 - var(--i) * .018)}
 @media (max-width:600px){.nm-cloud{gap:1.1em 1.6em}.nmf-victor{font-size:1.8em}.nmf-rabia{font-size:2.1em}.nmf-sebas{font-size:2.1em}.nmf-arr{font-size:1.7em}.nmf-tv{font-size:1.55em}}
+
+/* Canciones sin Spotify: abren YouTube Music */
+a.sp-song { text-decoration: none; color: #fff; }
+a.sp-song:hover { color: #fff !important; text-decoration: none; }
+
+/* Jaloner: el paréntesis de Rimas x Métrica x Skills enlaza a la sesión */
+.sp-chips li:has(.sp-chip-paren) { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem; }
+.sp-chips button { text-align: left; }
+.sp-chips .sp-n { margin-left: 0.2rem; }
+.sp-chip-paren { font-size: 0.68rem; color: #6b5a8a; text-decoration: none; }
+.sp-chip-paren:hover { text-decoration: underline; }
+.sp-chips button small { font-size: 0.85em; font-weight: 400; }
+
+/* «Ver lo que de verdad escucho»: discreto, como una nota al margen */
+.sp-real { margin: -0.3rem 0 0.9rem; }
+.sp-real-btn, .sp-top-btn {
+  font: inherit; font-size: 0.78rem; color: #6b6b66; background: none; border: none; padding: 0;
+  cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px;
+}
+.sp-real-btn:hover, .sp-top-btn:hover { color: #1c1c1c; }
+.sp-real-btn[aria-pressed="true"] { color: #8a4fa8; }
+.sp-real-date { margin: 0.2rem 0 0; font-size: 0.72rem; color: #9a9a94; }
+.sp-n { font-size: 0.66rem; color: #8a7aa6; font-weight: 400; font-variant-numeric: tabular-nums; }
+.sp-n-tot { margin-left: 0.35rem; }
+.sp-is-real .sp-chips button::before { content: none; }
+
+.sp-real-more { margin: 1rem 0 0.6rem; max-width: 42rem; }
+.sp-top { margin-top: 0.8rem; }
+.sp-top-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+.sp-top-list button {
+  display: grid; grid-template-columns: 1.4rem 2rem 1fr auto 1.5rem; align-items: center; gap: 0.6rem;
+  width: 100%; padding: 0.25rem 0.7rem 0.25rem 0.5rem; border: none; border-radius: 8px;
+  background-color: #282828; color: #fff; font: inherit; text-align: left; cursor: pointer; transition: background-color 150ms;
+}
+.sp-top-list button:hover, .sp-top-list button[aria-pressed="true"] { background-color: #3a3a3a; }
+.sp-top-list img { width: 2rem; height: 2rem; border-radius: 4px; object-fit: cover; }
+.sp-top-pos { font-size: 0.75rem; color: #b9a8dc; text-align: right; }
+.sp-top-n { font-size: 0.68rem; color: #8f8f8f; font-variant-numeric: tabular-nums; }
+.sp-top-list .sp-play { width: 1.5rem; height: 1.5rem; line-height: 1.5rem; font-size: 0.6rem; opacity: 0.55; }
+.sp-top-list button:hover .sp-play { opacity: 1; }
+.sp-top-list button[aria-pressed="true"] .sp-play { background-color: #1ed760; opacity: 1; }
+.sp-top-big button { grid-template-columns: 1.4rem 3.6rem 1fr auto 1.7rem; padding-top: 0.4rem; padding-bottom: 0.4rem; }
+.sp-top-big img { width: 3.6rem; height: 3.6rem; }
+.sp-top-big .sp-song-txt b { font-size: 1rem; }
+.sp-top-big .sp-top-pos { font-size: 0.95rem; color: #fff; font-weight: 700; }
+.sp-top-small .sp-song-txt b { font-size: 0.82rem; }
+.sp-top-small .sp-song-txt span { font-size: 0.72rem; }
+.sp-top-list li:nth-child(5) { margin-bottom: 0.5rem; }
+.sp-top-player { margin: 0.1rem 0 0.3rem; }
+
+/* Motes pequeños: Viwi (mono) y Torvik (juguetón) */
+.nm-cloud .nm-mini:nth-child(7){--rot:6deg;--dy:.9em;--del:-6s}
+.nm-cloud .nm-mini:nth-child(8){--rot:-5deg;--dy:-.6em;--del:-2.5s}
+.nmf-viwi{font:600 1.35em/1 "Fredoka","Comic Sans MS",sans-serif;color:#e07aa8;letter-spacing:.02em;background:#fde8f1;padding:.25em .6em .3em;border-radius:999px;gap:.15em}
+.nmf-viwi i{font-style:normal;font-size:.75em;color:#f29bc0;animation:nmLatido 1.6s ease-in-out infinite}
+@keyframes nmLatido{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+.nmf-torvik{font:1.25em/1 "Bungee",Impact,sans-serif;gap:.04em}
+.nm-cloud .nmf-torvik span{font:inherit;display:inline-block;animation:nmBote 1.8s ease-in-out infinite}
+.nmf-torvik span:nth-child(odd){color:#e8892b;transform:rotate(-8deg)}
+.nmf-torvik span:nth-child(even){color:#3a7bd5;transform:rotate(7deg)}
+.nmf-torvik span:nth-child(2){animation-delay:.15s}.nmf-torvik span:nth-child(3){animation-delay:.3s}.nmf-torvik span:nth-child(4){animation-delay:.45s}.nmf-torvik span:nth-child(5){animation-delay:.6s}.nmf-torvik span:nth-child(6){animation-delay:.75s}
+@keyframes nmBote{0%,100%{translate:0 0}30%{translate:0 -.25em}}
+@media (prefers-reduced-motion:reduce){.nmf-viwi i,.nmf-torvik span{animation:none}}
+
+/* Canciones de mi vida, compactas: viñetas en serpentín sobre una línea curva */
+.sp-cm-wrap { position: relative; max-width: 46rem; padding: 0.4rem 2.1rem 0.9rem; }
+.sp-cm-line { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
+.sp-cm-line path { fill: none; stroke: #1c1c1c; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.sp-cm { --cols: 4; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); gap: 1.35rem 1.1rem; position: relative; }
+.sp-cm-item { position: relative; min-width: 0; }
+.sp-cm-card {
+  display: grid; grid-template-columns: 2.1rem minmax(0, 1fr); align-items: center; gap: 0.45rem;
+  width: 100%; height: 3.1rem; padding: 0.3rem 0.45rem 0.3rem 0.3rem; box-sizing: border-box;
+  border: 0.15rem solid #1c1c1c; border-radius: 9px; position: relative;
+  background: linear-gradient(135deg, var(--c, #333) 0%, color-mix(in srgb, var(--c, #333) 55%, #141414) 100%);
+  color: #fff; font: inherit; text-align: left; cursor: pointer; text-decoration: none;
+  transition: transform 150ms, box-shadow 150ms;
+}
+a.sp-cm-card:hover { color: #fff !important; text-decoration: none; }
+.sp-cm-card:hover { transform: translate(-2px, -2px); box-shadow: 3px 3px #1c1c1c; }
+.sp-cm-card[aria-pressed="true"] { box-shadow: 0 0 0 0.18rem #1ed760; }
+.sp-cm-card img { width: 2.1rem; height: 2.1rem; border-radius: 4px; object-fit: cover; }
+.sp-cm-txt { display: flex; flex-direction: column; min-width: 0; line-height: 1.12; }
+.sp-cm-txt > * { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sp-cm-when { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(255,255,255,0.75); }
+.sp-cm-txt b { font-size: 0.8rem; }
+.sp-cm-txt > span:last-child { font-size: 0.66rem; color: rgba(255,255,255,0.7); }
+.sp-cm-play {
+  position: absolute; right: 0.3rem; bottom: 0.3rem; width: 1.1rem; height: 1.1rem; border-radius: 50%;
+  background: rgba(255,255,255,0.9); color: #1c1c1c; font-size: 0.5rem; line-height: 1.1rem; text-align: center;
+  opacity: 0; transition: opacity 150ms;
+}
+.sp-cm-card:hover .sp-cm-play, .sp-cm-card:focus-visible .sp-cm-play { opacity: 1; }
+.sp-cm-card[aria-pressed="true"] .sp-cm-play { opacity: 1; background: #1ed760; }
+.sp-cm-item .sp-medal { right: -0.45rem; top: -0.35rem; }
+.sp-cm-item .sp-mention { right: -0.45rem; top: -0.55rem; }
+.sp-cm-item .sp-margin-note { position: absolute; left: 0.2rem; top: 100%; margin: 0.1rem 0 0; font-size: 0.66rem; transform: none; white-space: nowrap; z-index: 1; }
+.sp-cm-now { position: sticky; bottom: 0.5rem; z-index: 5; max-width: 42rem; margin: 0.8rem auto 0; display: flex; gap: 0.4rem; align-items: start; }
+.sp-cm-now[hidden] { display: none; }
+.sp-cm-now iframe { flex: 1; border: 0; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); }
+.sp-cm-close { border: 0.12rem solid #1c1c1c; border-radius: 50%; width: 1.8rem; height: 1.8rem; background: #fffaf2; cursor: pointer; font-size: 0.75rem; }
+@media only screen and (max-width:750px) {
+  .sp-cm-wrap { padding: 0.4rem 1.5rem 0.6rem; }
+  .sp-cm { gap: 1.2rem 0.8rem; }
+}
+.sp-list .sp-cm > li.sp-cm-item { display: block; margin: 0; padding: 0; border: 0; background: none; box-shadow: none; transform: none; }
+.sp-list .sp-cm > li.sp-cm-item::before, .sp-list .sp-cm > li.sp-cm-item::after { content: none; display: none; }
+.sp-list ol.sp-cm::before, .sp-list ol.sp-cm::after { content: none; display: none; }
+
+/* Un paseo: viñetas algo sueltas y una línea de color que fluye */
+.sp-cm-wrap { padding-bottom: 4.2rem; }
+.sp-list .sp-cm > li.sp-cm-item { transform: translate(var(--dx, 0), var(--dy, 0)); }
+.sp-cm { row-gap: 1.6rem; }
+.sp-cm-line .tl-glow { fill: none; stroke: url(#tlGrad); stroke-width: 12; stroke-linecap: round; opacity: 0.18; }
+.sp-cm-line .tl-main { fill: none; stroke: url(#tlGrad); stroke-width: 3.2; stroke-linecap: round; }
+.sp-cm-line .tl-flow { fill: none; stroke: #fff; stroke-width: 1.6; stroke-linecap: round; stroke-dasharray: 1 18; opacity: 0.85; animation: tlFluye 2.4s linear infinite; }
+.sp-cm-line .tl-fut { fill: none; stroke: url(#tlFut); stroke-width: 3.2; stroke-linecap: round; stroke-dasharray: 2 9; }
+@keyframes tlFluye { to { stroke-dashoffset: -38; } }
+@media (prefers-reduced-motion: reduce) { .sp-cm-line .tl-flow { animation: none; } }
+.sp-cm-next { position: absolute; font-family: "Caveat", "Segoe Print", cursive; font-size: 1.05rem; color: #c98a1e; white-space: nowrap; transform: rotate(-4deg); pointer-events: none; }
+
+.sp-cm-card { border-color: rgba(28,28,28,0.85); box-shadow: 0 2px 6px rgba(0,0,0,0.12); }
+
+/* Artistas: fila con scroll a la derecha; cada tarjeta del tamaño que pide */
+.sp-list .sp-artists.sp-swipe {
+  display: flex; align-items: flex-start; gap: 1rem; overflow-x: auto; scroll-snap-type: x proximity;
+  max-width: 46rem; padding: 1rem 2.5rem 1rem 1.1rem; margin: 0 0 0 -0.6rem;
+  -webkit-mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 3rem), transparent);
+          mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 3rem), transparent);
+  scrollbar-width: thin;
+}
+.sp-list .sp-artists.sp-swipe > .sp-artist { flex: 0 0 auto; width: 12.5rem; scroll-snap-align: start; }
+.sp-list .sp-artists.sp-swipe > .sp-artist:has(.sp-albums) { width: 15.5rem; }
+.sp-list .sp-artists.sp-swipe > .sp-artist:has(.sp-chips > li:nth-child(6)) { width: 14rem; }
+.sp-artists .sp-player { height: 80px; }
+.sp-artists-more { display: block; margin: -0.2rem 0 0; font-size: 0.75rem; color: #6b6b66; }
+@media only screen and (max-width:750px) {
+  .sp-list .sp-artists.sp-swipe > .sp-artist { width: 72vw; max-width: 15rem; }
+  .sp-list .sp-artists.sp-swipe > .sp-artist:has(.sp-albums) { width: 80vw; max-width: 17rem; }
+}
+.sp-cm-wrap { overflow-x: clip; }
+
+/* Estrofas: puntito que despliega un ejemplo mío y mis favoritos */
+.sp-ranked.sp-stanzas li { grid-template-columns: 1rem auto 1fr auto auto; grid-template-areas: "n name meta rhyme tog"; }
+.sp-st-btn { grid-area: tog; align-self: center; width: 1.35rem; height: 1.35rem; margin-left: 0.4rem; padding: 0; border: 0.12rem solid #1c1c1c; border-radius: 50%; background: #fffaf2; color: #6b5a8a; font-size: 0.7rem; line-height: 1; cursor: pointer; transition: transform 200ms, background-color 150ms; }
+.sp-st-btn:hover { background: #d5c8e7; }
+.sp-st-btn[aria-expanded="true"] { transform: rotate(180deg); background: #b9a3e0; }
+.sp-st-panel { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 0.8rem 1.4rem; margin: 0.7rem 0 0.2rem; padding: 0.8rem 1rem; background: #fffaf2; border: 0.12rem solid #1c1c1c; border-radius: 10px; text-align: left; }
+.sp-st-panel[hidden] { display: none; }
+.sp-st-panel:has(> :only-child) { grid-template-columns: 1fr; }
+.sp-st-h { margin: 0 0 0.3rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #8a4fa8; }
+.sp-st-t { margin: 0 0 0.3rem; }
+.sp-st-poem { font-family: "Cormorant Garamond", Georgia, serif; font-size: 0.98rem; line-height: 1.3; }
+.sp-st-poem p { margin: 0 0 0.55rem; }
+.sp-st-link { font-size: 0.78rem; }
+.sp-st-favs ul { margin: 0; padding-left: 1rem; font-size: 0.88rem; }
+.sp-st-favs li { margin: 0 0 0.3rem; padding: 0; background: none; display: list-item; }
+.sp-st-favs li::before { content: none; }
+.sp-st-favs li:hover { transform: none; background: none; }
+.sp-st-favs .sp-meta { font-size: 0.75rem; color: #6b6b66; }
+.sp-st-pronto p:last-child, .sp-st-nota { margin: 0; font-size: 0.88rem; color: #6b6b66; font-style: italic; }
+.sp-stanzas li.sp-st-open:hover { transform: none; }
+@media only screen and (max-width:750px) {
+  .sp-ranked.sp-stanzas li { grid-template-columns: 1rem auto 1fr auto; grid-template-areas: "n name meta tog" "n rhyme rhyme rhyme"; }
+  .sp-st-panel { grid-template-columns: 1fr; }
+}
+.sp-ranked.sp-stanzas .sp-st-favs li { display: list-item; grid-template-columns: none; grid-template-areas: none; counter-increment: none; padding: 0; margin: 0 0 0.3rem; border-radius: 0; background: none; transform: none; }
+.sp-ranked.sp-stanzas .sp-st-favs li::before { content: none; display: none; }
+.sp-st-btn { font-size: 0.95rem; font-weight: 700; }
+.sp-st-btn[aria-expanded="true"] { transform: rotate(45deg); }
+.sp-stanzas > li:has(.sp-st-btn) { cursor: pointer; }
+.sp-stanzas .sp-st-panel { cursor: auto; }
+
+/* Línea al revés: lo más reciente arriba, con los puntos de lo que viene encima */
+.sp-cm-wrap { padding-top: 3.4rem; padding-bottom: 1rem; }
+@keyframes tlFluye { to { stroke-dashoffset: 38; } }
+
+/* mvrk: tarjeta más ancha y apretada, de golpe de vista */
+.sp-list .sp-artists.sp-swipe > .sp-artist:has(.sp-albums) { width: 19.5rem; }
+.sp-artist .sp-albums { gap: 0.35rem; }
+.sp-artist .sp-album { column-gap: 0.45rem; margin: 0 0 0.35rem; }
+.sp-artist .sp-album img { width: 1.8rem; height: 1.8rem; }
+.sp-artist .sp-album p { font-size: 0.74rem; }
+.sp-artist .sp-album .sp-chips { margin: 0.15rem 0 0; gap: 0.2rem; }
+.sp-artist .sp-album .sp-chips button { font-size: 0.68rem; padding: 0.05rem 0.4rem; }
+@media only screen and (max-width:750px) {
+  .sp-list .sp-artists.sp-swipe > .sp-artist:has(.sp-albums) { width: 86vw; max-width: 19.5rem; }
+}
+/* motes pequeños ahora se abren */
+.nm-cloud .nm-mini .nm-btn { padding: 0.1em 0.2em; }
+
+/* Top 20 en cuadros: «podio» (1-3 en podio, 4 y 5 al lado, el resto en cuadritos) o «cuadrícula» (todos iguales) */
+.sp-top-modo { margin: 0 0 0.6rem; font-size: 0.75rem; color: #6b6b66; }
+.sp-top-modo button { font: inherit; background: none; border: none; padding: 0; color: #6b6b66; cursor: pointer; text-decoration: underline dotted; }
+.sp-top-modo button[aria-pressed="true"] { color: #8a4fa8; font-weight: 700; text-decoration: none; }
+.sp-top .sp-top-list { display: grid; grid-template-columns: repeat(40, minmax(0, 1fr)); gap: 0.5rem; align-items: end; }
+.sp-top .sp-top-list li { grid-column: span 5; min-width: 0; margin: 0; }
+.sp-top .sp-top-list li:nth-child(n+6) { align-self: start; }
+.sp-top .sp-top-list button {
+  display: flex; flex-direction: column; align-items: stretch; gap: 0.2rem; width: 100%; padding: 0; border: none; border-radius: 0;
+  background: none; color: #1c1c1c; text-align: left; position: relative; grid-template-columns: none;
+}
+.sp-top .sp-top-list button:hover, .sp-top .sp-top-list button[aria-pressed="true"] { background: none; }
+.sp-top .sp-top-list img { width: 100%; height: auto; aspect-ratio: 1; border-radius: 6px; border: 0.12rem solid #1c1c1c; object-fit: cover; }
+.sp-top .sp-top-list button[aria-pressed="true"] img { box-shadow: 0 0 0 0.2rem #1ed760; }
+.sp-top .sp-top-pos { position: absolute; top: 0.25rem; left: 0.25rem; min-width: 1.2rem; padding: 0 0.25rem; border-radius: 0.6rem; background: #1c1c1c; color: #fff; font-size: 0.62rem; font-weight: 700; text-align: center; line-height: 1.2rem; }
+.sp-top .sp-song-txt b { font-size: 0.66rem; color: #1c1c1c; }
+.sp-top .sp-song-txt span { font-size: 0.6rem; color: #6b6b66; }
+.sp-top .sp-top-n { position: absolute; top: 0.25rem; right: 0.25rem; padding: 0 0.3rem; border-radius: 0.6rem; background: rgba(255,255,255,0.85); color: #6b5a8a; font-size: 0.6rem; line-height: 1.2rem; }
+.sp-top .sp-top-list .sp-play { display: none; }
+/* podio */
+.sp-top-podio .sp-top-list li:nth-child(1) { grid-column: 13 / span 10; order: 3; }
+.sp-top-podio .sp-top-list li:nth-child(2) { grid-column: 5 / span 8; order: 2; margin-bottom: 1.2rem; }
+.sp-top-podio .sp-top-list li:nth-child(3) { grid-column: 23 / span 8; order: 4; margin-bottom: 2.2rem; }
+.sp-top-podio .sp-top-list li:nth-child(4) { grid-column: 1 / span 4; order: 1; margin-bottom: 3rem; }
+.sp-top-podio .sp-top-list li:nth-child(5) { grid-column: 31 / span 4; order: 5; margin-bottom: 3rem; }
+.sp-top-podio .sp-top-list li:nth-child(n+6) { order: 6; }
+.sp-top-podio .sp-top-list li:nth-child(-n+3) .sp-song-txt b { font-size: 0.8rem; }
+.sp-top-podio .sp-top-list li:nth-child(1) .sp-top-pos { background: #e2b53b; color: #1c1c1c; font-size: 0.8rem; }
+.sp-top-podio .sp-top-list li:nth-child(2) .sp-top-pos { background: #c4c9d0; color: #1c1c1c; }
+.sp-top-podio .sp-top-list li:nth-child(3) .sp-top-pos { background: #c67c3e; }
+.sp-top-podio .sp-top-list li:nth-child(6) { grid-column: 1 / span 5; }
+/* cuadrícula técnica: 20 iguales, 5 por fila */
+.sp-top-cuadro .sp-top-list { align-items: start; }
+.sp-top-cuadro .sp-top-list li { grid-column: span 8; }
+.sp-top-cuadro .sp-top-list li:nth-child(n+6) { grid-column: span 8; }
+@media only screen and (max-width:750px) {
+  .sp-top .sp-top-list li:nth-child(n+6) { grid-column: span 8; }
+  .sp-top-podio .sp-top-list li:nth-child(6) { grid-column: 1 / span 8; }
+  .sp-top .sp-song-txt span { display: none; }
+}
+
+/* Hilo de energía: más gordo, más intenso */
+.sp-cm-line .tl-glow { stroke-width: 26; opacity: 0.32; filter: blur(4px); }
+.sp-cm-line .tl-main { stroke-width: 7; }
+.sp-cm-line .tl-flow { stroke-width: 3; stroke-dasharray: 2 16; opacity: 0.95; animation-duration: 1.6s; }
+.sp-cm-line .tl-fut { stroke-width: 6; stroke-dasharray: 1 12; }
+.sp-cm { row-gap: 1.9rem; }
+
+/* Cuadrícula: todas pequeñitas, como el resto del podio */
+.sp-top-cuadro .sp-top-list li, .sp-top-cuadro .sp-top-list li:nth-child(n+6) { grid-column: span 5; }
+@media only screen and (max-width:750px) {
+  .sp-top-cuadro .sp-top-list li, .sp-top-cuadro .sp-top-list li:nth-child(n+6) { grid-column: span 8; }
+}
+.sp-st-nota2 { margin: 0.4rem 0 0; font-size: 0.82rem; color: #6b6b66; }
+.sp-list .sp-artists.sp-swipe > .sp-artist[hidden] { display: none; }
+
+/* Fenómenos: ejemplos juntos, en pocas líneas */
+.sp-fl-body .ej.ej-chips { display: flex; flex-wrap: wrap; gap: 0.3rem 0.35rem; margin: 0.2rem 0 0.5rem; }
+.sp-fl-body .ej.ej-chips li { padding: 0.12rem 0.55rem; border-radius: 999px; font-size: 0.86rem; line-height: 1.4; }
+.sp-fl-body .ej.ej-frases li { border-radius: 8px; font-style: italic; font-size: 0.84rem; }
+.sp-fl-body .ej.ej-emo li { display: inline-flex; align-items: center; gap: 0.35rem; }
+.sp-fl-body .ej.ej-emo .emo { letter-spacing: 0.08em; font-size: 0.95rem; }
+.sp-fl-small { margin: 0.1rem 0 0.4rem; font-size: 0.8rem; color: #6b6b66; }
+.sp-fl-q { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.4rem 1rem; margin: 0.4rem 0 0.2rem; padding: 0.45rem 0.7rem; background: #fff4c2; border-radius: 8px; }
+.sp-fl-q p { margin: 0; font-weight: 700; color: #5b2e78; }
+.sp-fl-q a { font-size: 0.85rem; }
+/* Artistas: sin palabra clave debajo del nombre */
+.sp-artist-head .sp-meta { display: none; }
+
+/* A quién escucho: tres barras; al pulsar un trozo, mis canciones de ahí */
+.sp-stats { max-width: 42rem; margin: 0.6rem 0 0.4rem; }
+.sp-stats[hidden] { display: none; }
+.sp-stats-h { margin: 0 0 0.4rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8a4fa8; }
+.sp-stat { margin: 0 0 0.55rem; }
+.sp-stat-t { margin: 0 0 0.15rem; font-size: 0.75rem; color: #6b6b66; }
+.sp-bar { display: flex; height: 1.7rem; border: 0.12rem solid #1c1c1c; border-radius: 8px; overflow: hidden; }
+.sp-seg { flex: 0 0 var(--w); min-width: 0; padding: 0 0.35rem; border: none; border-right: 0.1rem solid rgba(28,28,28,0.35); background: var(--c); color: #1c1c1c; font: inherit; font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; text-align: left; }
+.sp-seg:last-child { border-right: none; }
+.sp-seg:hover { filter: brightness(1.08); }
+.sp-seg[aria-pressed="true"] { box-shadow: inset 0 -0.25rem 0 #1c1c1c; }
+.sp-seg-list { display: flex; flex-wrap: wrap; gap: 0.25rem 0.4rem; list-style: none; margin: 0.35rem 0 0; padding: 0; }
+.sp-seg-list[hidden] { display: none; }
+.sp-seg-list li { padding: 0.1rem 0.55rem; border-radius: 999px; background: #f6f2fb; font-size: 0.78rem; }
+.sp-seg-list li span { color: #6b6b66; font-size: 0.7rem; }
+
+/* Hilo: sigue más allá de hoy (arriba) y viene de antes (abajo, con interrogaciones) */
+.sp-cm-wrap { padding-top: 4.8rem; padding-bottom: 7rem; }
+.sp-cm-line .tl-fut { stroke: url(#tlFut); stroke-width: 7; stroke-dasharray: none; fill: none; stroke-linecap: round; }
+.sp-cm-line .tl-fut-glow { stroke: url(#tlFut); stroke-width: 24; opacity: 0.3; filter: blur(4px); fill: none; stroke-linecap: round; }
+.sp-cm-line .tl-past { stroke: url(#tlPast); stroke-width: 5; stroke-dasharray: 2 11; fill: none; stroke-linecap: round; }
+.sp-cm-line .tl-q text { fill: #5b6fd8; font-family: "Caveat", "Segoe Print", cursive; font-weight: 600; }
+.nm-quiet { color: inherit; text-decoration: underline dotted rgba(0,0,0,0.35); text-underline-offset: 3px; }
+.nm-quiet:hover { text-decoration-color: currentColor; }
+
+/* Barras finas y leyenda pulsable debajo (se lee entera, también lo pequeño) */
+.sp-stats .sp-bar { height: 0.8rem; border-width: 0.1rem; border-radius: 999px; }
+.sp-segbar { flex: 0 0 var(--w); background: var(--c); border-right: 0.08rem solid rgba(28,28,28,0.3); transition: filter 150ms; }
+.sp-segbar:last-child { border-right: none; }
+.sp-segbar.on { filter: brightness(0.85) saturate(1.3); }
+.sp-leg { display: flex; flex-wrap: wrap; gap: 0.15rem 0.7rem; margin: 0.25rem 0 0; }
+.sp-leg .sp-seg { flex: none; display: inline-flex; align-items: center; gap: 0.3rem; padding: 0; border: none; background: none; box-shadow: none; font-size: 0.74rem; color: #3a3a3a; overflow: visible; }
+.sp-leg .sp-seg i { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--c); border: 0.08rem solid rgba(28,28,28,0.5); }
+.sp-leg .sp-seg b { font-weight: 600; color: #6b6b66; }
+.sp-leg .sp-seg:hover { filter: none; text-decoration: underline dotted; }
+.sp-leg .sp-seg[aria-pressed="true"] { box-shadow: none; font-weight: 700; color: #1c1c1c; }
+.sp-seg-list p { margin: 0.35rem 0 0.2rem; font-size: 0.7rem; font-weight: 700; color: #8a4fa8; }
+.sp-seg-list ol { display: flex; flex-wrap: wrap; gap: 0.25rem 0.4rem; list-style: none; margin: 0; padding: 0; }
+.sp-seg-list li { padding: 0.1rem 0.55rem; border-radius: 999px; background: #f6f2fb; font-size: 0.78rem; }
+.sp-seg-list li span { color: #6b6b66; font-size: 0.7rem; }
+.sp-seg-list { display: block; }
+
+/* Momentos del día: franja pequeña con el cielo y los grados del sol */
+.sp-sky li[data-sky] { cursor: pointer; }
+.sp-sky li[data-sky][aria-expanded="true"] { outline: 0.18rem solid #1c1c1c; outline-offset: 2px; }
+.sp-skyinfo { max-width: 42rem; margin: 0.7rem 0 0.2rem; }
+.sp-skyinfo[hidden], .sp-skyinfo-i[hidden] { display: none; }
+.sp-skyinfo-i { display: flex; align-items: center; gap: 0.9rem; }
+.sp-skyinfo .sky-svg { flex: none; width: 19rem; max-width: 55%; height: auto; border: 0.12rem solid #1c1c1c; border-radius: 10px; }
+.sp-skyinfo p { margin: 0; font-size: 0.84rem; line-height: 1.4; text-align: left; }
+.sky-svg .band { fill: rgba(255,255,255,0.13); stroke: rgba(255,255,255,0.35); stroke-dasharray: 3 3; stroke-width: 0.8; }
+.sky-svg .hz { stroke: #d9d4c6; stroke-width: 1.2; }
+.sky-svg .ticks line { stroke: rgba(255,255,255,0.55); stroke-width: 1; }
+.sky-svg .ticks text { fill: rgba(255,255,255,0.9); font-size: 11px; font-family: "Aleo", serif; }
+@media only screen and (max-width:750px) {
+  .sp-skyinfo-i { flex-direction: column; align-items: stretch; gap: 0.4rem; }
+  .sp-skyinfo .sky-svg { width: 100%; max-width: none; }
+}
+
+/* A quién escucho: una fila por artista y, a la derecha, sus canciones */
+.sp-seg-list ol.sp-seg-arts { display: grid; grid-template-columns: max-content 1fr; gap: 0.25rem 0.8rem; list-style: none; margin: 0; padding: 0; }
+.sp-seg-list ol.sp-seg-arts li { display: contents; }
+.sp-seg-arts li > b { font-size: 0.82rem; color: #1c1c1c; white-space: nowrap; }
+.sp-seg-arts .sp-seg-songs { font-size: 0.78rem; color: #6b6b66; line-height: 1.35; }
+.sp-seg-arts .sp-seg-songs a { color: #5b2e78; }
+.sp-fl-body h4 .sp-h4-note { text-transform: none; letter-spacing: 0; font-weight: 400; color: #6b6b66; font-size: 0.72rem; }
+.sp-fl-body .sp-who { display: none; font-style: normal; font-size: 0.72rem; color: #8a4fa8; }
+.sp-fl-body .sp-show-who .sp-who { display: inline; }
+.sp-fl-body .sp-show-who .sp-who::before { content: "— "; }
+.sp-who-toggle { display: inline-flex; align-items: center; gap: 0.3rem; margin: 0 0 0.2rem; font-size: 0.75rem; color: #6b6b66; cursor: pointer; }
+.sp-who-toggle input { accent-color: #8a4fa8; }
+
+/* Fichas: la portada entera (sin recortar) y la página quieta mientras está abierta */
+.sp-poem .sp-figure .sp-hero { width: auto; max-width: 100%; max-height: 20rem; margin: 0 auto; object-fit: contain; }
+.sp-poem .sp-figure { text-align: center; }
+.sp-poem .sp-figure figcaption { text-align: left; }
+html.sp-lock, html.sp-lock body { overflow: hidden; }
+.sp-sheet { overscroll-behavior: contain; }
+.sp-poem .sp-com .sp-com-link { display: block; margin: 0.25rem 0; text-indent: 0; padding-left: 0; }
