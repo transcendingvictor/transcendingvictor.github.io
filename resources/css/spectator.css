@@ -2061,6 +2061,7 @@ a.sp-cm-card:hover { color: #fff !important; text-decoration: none; }
 .sp-fl-q { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.4rem 1rem; margin: 0.4rem 0 0.2rem; padding: 0.45rem 0.7rem; background: #fff4c2; border-radius: 8px; }
 .sp-fl-q p { margin: 0; font-weight: 700; color: #5b2e78; }
 .sp-fl-q a { font-size: 0.85rem; }
+.sp-fl-aside { display: block; margin-top: 0.15rem; font-size: 0.72rem; font-style: italic; color: #8a7a5a; }
 /* Artistas: sin palabra clave debajo del nombre */
 .sp-artist-head .sp-meta { display: none; }
 
