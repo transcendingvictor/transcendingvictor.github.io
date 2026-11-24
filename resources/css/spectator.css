@@ -2104,3 +2104,20 @@ a.sp-cm-card:hover { color: #fff !important; text-decoration: none; }
 .sp-seg-list li { padding: 0.1rem 0.55rem; border-radius: 999px; background: #f6f2fb; font-size: 0.78rem; }
 .sp-seg-list li span { color: #6b6b66; font-size: 0.7rem; }
 .sp-seg-list { display: block; }
+
+/* Momentos del día: franja pequeña con el cielo y los grados del sol */
+.sp-sky li[data-sky] { cursor: pointer; }
+.sp-sky li[data-sky][aria-expanded="true"] { outline: 0.18rem solid #1c1c1c; outline-offset: 2px; }
+.sp-skyinfo { max-width: 42rem; margin: 0.7rem 0 0.2rem; }
+.sp-skyinfo[hidden], .sp-skyinfo-i[hidden] { display: none; }
+.sp-skyinfo-i { display: flex; align-items: center; gap: 0.9rem; }
+.sp-skyinfo .sky-svg { flex: none; width: 19rem; max-width: 55%; height: auto; border: 0.12rem solid #1c1c1c; border-radius: 10px; }
+.sp-skyinfo p { margin: 0; font-size: 0.84rem; line-height: 1.4; text-align: left; }
+.sky-svg .band { fill: rgba(255,255,255,0.13); stroke: rgba(255,255,255,0.35); stroke-dasharray: 3 3; stroke-width: 0.8; }
+.sky-svg .hz { stroke: #d9d4c6; stroke-width: 1.2; }
+.sky-svg .ticks line { stroke: rgba(255,255,255,0.55); stroke-width: 1; }
+.sky-svg .ticks text { fill: rgba(255,255,255,0.9); font-size: 11px; font-family: "Aleo", serif; }
+@media only screen and (max-width:750px) {
+  .sp-skyinfo-i { flex-direction: column; align-items: stretch; gap: 0.4rem; }
+  .sp-skyinfo .sky-svg { width: 100%; max-width: none; }
+}

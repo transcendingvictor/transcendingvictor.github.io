@@ -21,7 +21,7 @@
     
         <!-- Stylesheet-->
         <link href="./resources/css/style.css?v=20261109a" type="text/css" rel="stylesheet">
-        <link href="./resources/css/spectator.css?v=20261125k" type="text/css" rel="stylesheet">
+        <link href="./resources/css/spectator.css?v=20261125l" type="text/css" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -903,9 +903,9 @@
                 <div class="sp-duel-col">
                     <h3><span data-l="es">Favoritos</span><span data-l="en">Favourite</span></h3>
                     <ol class="sp-sky">
-                <li class="nautical"><b data-l="es">Crepúsculo náutico</b><b data-l="en">Nautical twilight</b></li>
-                <li class="civil"><b data-l="es">Crepúsculo civil</b><b data-l="en">Civil twilight</b></li>
-                <li class="golden"><b data-l="es">Hora dorada</b><b data-l="en">Golden hour</b></li>
+                <li class="nautical" tabindex="0" role="button" aria-expanded="false" data-sky="nautical"><b data-l="es">Crepúsculo náutico</b><b data-l="en">Nautical twilight</b></li>
+                <li class="civil" tabindex="0" role="button" aria-expanded="false" data-sky="civil"><b data-l="es">Crepúsculo civil</b><b data-l="en">Civil twilight</b></li>
+                <li class="golden" tabindex="0" role="button" aria-expanded="false" data-sky="golden"><b data-l="es">Hora dorada</b><b data-l="en">Golden hour</b></li>
             </ol>
                 </div>
                 <span class="sp-vs" aria-hidden="true">vs</span>
@@ -918,6 +918,7 @@
             </ol>
                 </div>
             </div>
+            <div class="sp-skyinfo" hidden><div class="sp-skyinfo-i" data-sky="nautical" hidden><svg class="sky-svg" viewBox="0 0 320 88" role="img" aria-label="Sol entre 6 y 12 grados bajo el horizonte"><defs><linearGradient id="skn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#06122e"/><stop offset="1" stop-color="#1f3d7a"/></linearGradient><radialGradient id="sgn"><stop offset="0" stop-color="#fff3b0"/><stop offset="0.45" stop-color="#ffc94d"/><stop offset="1" stop-color="#ff9d2e" stop-opacity="0"/></radialGradient></defs><rect width="320" height="38" fill="url(#skn)"/><rect y="38" width="320" height="50" fill="#1b2130"/><rect x="0" y="52.4" width="320" height="14.4" class="band"/><circle cx="118" cy="59.6" r="16" fill="url(#sgn)" opacity="0.55"/><circle cx="118" cy="59.6" r="6.5" fill="#ffd24d" opacity="0.6"/><line x1="0" x2="320" y1="38" y2="38" class="hz"/><g class="ticks"><line x1="276" x2="282" y1="38.0" y2="38.0"/><text x="286" y="41.0">0°</text><line x1="276" x2="282" y1="52.4" y2="52.4"/><text x="286" y="55.4">−6°</text><line x1="276" x2="282" y1="66.8" y2="66.8"/><text x="286" y="69.8">−12°</text><line x1="276" x2="282" y1="81.2" y2="81.2"/><text x="286" y="84.2">−18°</text></g></svg><p><span data-l="es">El sol, entre 6° y 12° bajo el horizonte. El cielo, azul profundo.</span><span data-l="en">The sun between 6° and 12° below the horizon. The sky, deep blue.</span></p></div><div class="sp-skyinfo-i" data-sky="civil" hidden><svg class="sky-svg" viewBox="0 0 320 88" role="img" aria-label="Sol entre 0 y 6 grados bajo el horizonte"><defs><linearGradient id="skc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a5ea8"/><stop offset="1" stop-color="#f2b49d"/></linearGradient><radialGradient id="sgc"><stop offset="0" stop-color="#fff3b0"/><stop offset="0.45" stop-color="#ffc94d"/><stop offset="1" stop-color="#ff9d2e" stop-opacity="0"/></radialGradient></defs><rect width="320" height="38" fill="url(#skc)"/><rect y="38" width="320" height="50" fill="#1b2130"/><rect x="0" y="38.0" width="320" height="14.4" class="band"/><circle cx="118" cy="45.2" r="16" fill="url(#sgc)" opacity="0.55"/><circle cx="118" cy="45.2" r="6.5" fill="#ffd24d" opacity="0.6"/><line x1="0" x2="320" y1="38" y2="38" class="hz"/><g class="ticks"><line x1="276" x2="282" y1="38.0" y2="38.0"/><text x="286" y="41.0">0°</text><line x1="276" x2="282" y1="52.4" y2="52.4"/><text x="286" y="55.4">−6°</text><line x1="276" x2="282" y1="66.8" y2="66.8"/><text x="286" y="69.8">−12°</text><line x1="276" x2="282" y1="81.2" y2="81.2"/><text x="286" y="84.2">−18°</text></g></svg><p><span data-l="es">El sol, entre 0° y 6° bajo el horizonte. El cielo se aclara: azul suave que se tiñe de rosa.</span><span data-l="en">The sun between 0° and 6° below the horizon. The sky lightens: soft blue tinged with pink.</span></p></div><div class="sp-skyinfo-i" data-sky="golden" hidden><svg class="sky-svg" viewBox="0 0 320 88" role="img" aria-label="Sol justo por encima del horizonte"><defs><linearGradient id="skg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#79aee0"/><stop offset="1" stop-color="#ffcf7a"/></linearGradient><radialGradient id="sgg"><stop offset="0" stop-color="#fff3b0"/><stop offset="0.45" stop-color="#ffc94d"/><stop offset="1" stop-color="#ff9d2e" stop-opacity="0"/></radialGradient></defs><rect width="320" height="38" fill="url(#skg)"/><rect y="38" width="320" height="50" fill="#1b2130"/><rect x="0" y="23.6" width="320" height="14.4" class="band"/><circle cx="118" cy="30.8" r="16" fill="url(#sgg)" opacity="1"/><circle cx="118" cy="30.8" r="6.5" fill="#ffd24d" opacity="1"/><line x1="0" x2="320" y1="38" y2="38" class="hz"/><g class="ticks"><line x1="276" x2="282" y1="23.6" y2="23.6"/><text x="286" y="26.6">+6°</text><line x1="276" x2="282" y1="38.0" y2="38.0"/><text x="286" y="41.0">0°</text><line x1="276" x2="282" y1="52.4" y2="52.4"/><text x="286" y="55.4">−6°</text><line x1="276" x2="282" y1="66.8" y2="66.8"/><text x="286" y="69.8">−12°</text></g></svg><p><span data-l="es">Sin una definición exacta: el sol, bajo pero todavía por encima del horizonte. La hora de las fotos: todo pasa en los colores del cielo y de la atmósfera.</span><span data-l="en">No exact definition: the sun low, but still above the horizon. The hour of photos: it's all about the colours in the sky and the air.</span></p></div></div>
             <p class="sp-note sp-asterisk"><span data-l="es">* Si un momento favorito y uno antifavorito suceden a la vez, prima el favorito.</span><span data-l="en">* If a favourite and a least favourite moment happen at the same time, the favourite wins.</span></p>
         </section>
 
@@ -1782,6 +1783,25 @@
                 rows.forEach(function (o) { set(o, false); });
                 set(li, open);
             });
+        });
+    })();
+    </script>
+
+    <script>
+    // Momentos del día: al pulsar un crepúsculo, su cielo y dónde está el sol
+    (function () {
+        var box = document.querySelector('.sp-skyinfo');
+        if (!box) return;
+        var rows = document.querySelectorAll('.sp-sky li[data-sky]');
+        function pick(li) {
+            var open = li.getAttribute('aria-expanded') !== 'true';
+            rows.forEach(function (r) { r.setAttribute('aria-expanded', 'false'); });
+            box.querySelectorAll('.sp-skyinfo-i').forEach(function (i) { i.hidden = !(open && i.dataset.sky === li.dataset.sky); });
+            box.hidden = !open; if (open) li.setAttribute('aria-expanded', 'true');
+        }
+        rows.forEach(function (li) {
+            li.addEventListener('click', function () { pick(li); });
+            li.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(li); } });
         });
     })();
     </script>
