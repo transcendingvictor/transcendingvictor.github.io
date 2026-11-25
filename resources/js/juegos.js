@@ -142,25 +142,29 @@
         }
         function nuevaFriki() {
             caja.hidden = true; ok.hidden = true; sig.hidden = true; hecho = false; msgM.className = 'jg-msg';
-            var tipo, a, b, va, vb, t = 0;
-            do { tipo = Math.random() < 0.5 ? 'est' : 'con'; a = KS[Math.floor(Math.random() * KS.length)]; do { b = KS[Math.floor(Math.random() * KS.length)]; } while (b === a);
-                va = tipo === 'est' ? nEst(a) : nCon(a); vb = tipo === 'est' ? nEst(b) : nCon(b); } while (va === vb && ++t < 40);
-            par = [a, b]; fq = { tipo: tipo, v: {} }; fq.v[a] = va; fq.v[b] = vb;
+            var ac = leer('mt-friki-ok', 0), n = ac >= 10 ? 4 : ac >= 4 ? 3 : 2, tipo, ls, vs, mx, t = 0;
+            do { tipo = Math.random() < 0.5 ? 'est' : 'con'; ls = KS.slice().sort(function () { return Math.random() - 0.5; }).slice(0, n);
+                vs = ls.map(function (l) { return tipo === 'est' ? nEst(l) : nCon(l); }); mx = Math.max.apply(0, vs);
+            } while (vs.filter(function (v) { return v === mx; }).length > 1 && ++t < 60);
+            par = ls; fq = { tipo: tipo, v: {}, n: n }; ls.forEach(function (l, i) { fq.v[l] = vs[i]; });
             enunciado(); mapa(null);
             msgM.textContent = es() ? 'Toca la línea que creas.' : 'Tap the line you think.';
             opciones.innerHTML = ''; opciones.hidden = false;
             par.forEach(function (n) { var bt = document.createElement('button'); bt.type = 'button'; bt.className = 'mt-opb'; bt.innerHTML = chip(n); bt.onclick = function () { responderFriki(n); }; opciones.appendChild(bt); });
         }
         function textoFriki() {
-            var a = par[0], b = par[1], u = fq.tipo === 'est' ? (es() ? ' estaciones' : ' stations') : (es() ? ' líneas' : ' lines');
-            msgM.textContent = (fq.bien ? (es() ? '¡Eso es! ' : 'Right! ') : (es() ? 'Nop. ' : 'Nope. ')) + (es() ? 'La ' : 'Line ') + a + ': ' + fq.v[a] + u + '; ' + (es() ? 'la ' : 'line ') + b + ': ' + fq.v[b] + u + '.' +
-                (fq.tipo === 'con' ? ' ' + (es() ? '(Cuenta con cuántas otras líneas comparte estación o pasillo.)' : '(Counts how many other lines it shares a station or passage with.)') : '') + ' +' + fq.pts + (es() ? ' puntos.' : ' points.');
+            var u = fq.tipo === 'est' ? (es() ? ' estaciones' : ' stations') : (es() ? ' líneas' : ' lines');
+            msgM.textContent = (fq.bien ? (es() ? '¡Eso es! ' : 'Right! ') : (es() ? 'Nop. ' : 'Nope. ')) + par.map(function (l, i) { var v = fq.v[l]; return (es() ? (i ? 'la ' : 'La ') : (i ? 'line ' : 'Line ')) + l + ': ' + v + (v === 1 ? u.replace(/s$/, '') : u); }).join('; ') + '.' +
+                (fq.tipo === 'con' ? ' ' + (es() ? '(Cuenta con cuántas otras líneas comparte estación o pasillo.)' : '(Counts how many other lines it shares a station or passage with.)') : '') + ' +' + fq.pts + (es() ? ' puntos.' : ' points.') +
+                (fq.sube ? ' ' + (es() ? '🤓 Subes de nivel friki: ahora salen ' + (fq.n + 1) + ' líneas.' : '🤓 Geek level up: now ' + (fq.n + 1) + ' lines.') : '');
         }
         function responderFriki(n) {
             if (hecho) return; hecho = true;
-            var otra = par[0] === n ? par[1] : par[0]; fq.bien = fq.v[n] > fq.v[otra]; fq.pts = fq.bien ? 60 : 0;
+            var mx = Math.max.apply(0, par.map(function (l) { return fq.v[l]; }));
+            fq.bien = fq.v[n] === mx; fq.pts = fq.bien ? 40 + 20 * fq.n : 0;
+            if (fq.bien) { var ac = leer('mt-friki-ok', 0) + 1; guardar('mt-friki-ok', ac); if (ac === 4 || ac === 10) fq.sube = true; }
             if (window.JGP) JGP.add('metro', fq.pts);
-            opciones.querySelectorAll('button').forEach(function (bt, i) { bt.disabled = true; bt.classList.add(fq.v[par[i]] >= fq.v[par[1 - i]] ? 'mt-opb-ok' : 'mt-opb-ko'); });
+            opciones.querySelectorAll('button').forEach(function (bt, i) { bt.disabled = true; bt.classList.add(fq.v[par[i]] === mx ? 'mt-opb-ok' : 'mt-opb-ko'); });
             mapa(par); ronda++; textoFriki();
             msgM.className = 'jg-msg ' + (fq.bien ? 'jg-ok' : 'jg-ko');
             mt.classList.remove('jg-flash-ok', 'jg-flash-ko'); void mt.offsetWidth; mt.classList.add(fq.bien ? 'jg-flash-ok' : 'jg-flash-ko');
@@ -193,7 +197,8 @@
             setTimeout(function () { sig.disabled = false; }, 2500);
         });
         function enunciado() {
-            if (modo === 'friki') { pregunta.innerHTML = '🤓 ' + (es() ? 'Modo friki: ' : 'Geek mode: ') + (fq.tipo === 'est' ? (es() ? '¿qué línea tiene <b>más estaciones</b>, ' : 'which line has <b>more stations</b>, ') : (es() ? '¿qué línea conecta con <b>más líneas de metro</b>, ' : 'which line connects with <b>more metro lines</b>, ')) + chip(par[0]) + (es() ? ' o ' : ' or ') + chip(par[1]) + '?'; return; }
+            if (modo === 'friki') { var ch = par.map(chip), lista = ch.slice(0, -1).join(', ') + (es() ? ' o ' : ' or ') + ch[ch.length - 1];
+                pregunta.innerHTML = '🤓 ' + (es() ? 'Modo friki · ' + fq.n + ' líneas: ' : 'Geek mode · ' + fq.n + ' lines: ') + (fq.tipo === 'est' ? (es() ? '¿cuál tiene <b>más estaciones</b>: ' : 'which has <b>the most stations</b>: ') : (es() ? '¿cuál conecta con <b>más líneas de metro</b>: ' : 'which connects with <b>the most metro lines</b>: ')) + lista + '?'; return; }
             var vis = leer('mt-vistas', []).length;
             pregunta.innerHTML = '<small class="mt-prog">' + (es() ? 'Parejas descubiertas: ' : 'Pairs discovered: ') + vis + '/' + TODAS.length + '</small><br>' + (es() ? 'Pregunta ' : 'Question ') + (ronda + (hecho ? 0 : 1) || PREG) + '/' + PREG + ': ' + (es() ? '¿en qué estaciones se cruzan las líneas ' : 'at which stations do lines ') + chip(par[0]) + (es() ? ' y ' : ' and ') + chip(par[1]) + (es() ? '?' : ' cross?'); }
         document.querySelectorAll('[data-set-lang]').forEach(function (bt) { bt.addEventListener('click', function () { rotuloFriki(); enunciado(); if (modo === 'friki') { if (hecho) textoFriki(); else msgM.textContent = es() ? 'Toca la línea que creas.' : 'Tap the line you think.'; return; } if (par.join('-') === '1-7' && hecho) curiosidad17(); if (hecho) textoRes(); else msgM.textContent = es() ? 'Escribe y elige las estaciones. Si crees que no se cruzan, dale directamente a «Ya está».' : 'Type and pick the stations. If you think they never cross, just press «Done».'; }); });

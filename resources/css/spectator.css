@@ -1538,7 +1538,7 @@ html.sp-essay-lock { overflow: hidden; }
 .mt-q { width: 100%; box-sizing: border-box; font: inherit; padding: 0.5rem 0.8rem; border: 0.15rem solid #1c1c1c; border-radius: 10px; }
 .mt-logo { height: 2.3em; width: auto; vertical-align: -0.75em; margin: -0.3em 0.05em; }
 .mt-prog { opacity: 0.75; font-weight: 400; }
-.mt-op { display: flex; gap: 0.8rem; margin: 0.6rem 0; }
+.mt-op { display: grid; grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); gap: 0.8rem; margin: 0.6rem 0; }
 .mt-opb { flex: 1; font: inherit; font-size: 1.4rem; padding: 0.7rem; border: 0.2rem solid #1c1c1c; border-radius: 14px; background: #fdfcf6; cursor: pointer; box-shadow: 0 4px 0 #1c1c1c; }
 .mt-opb:active { transform: translateY(3px); box-shadow: 0 1px 0 #1c1c1c; }
 .mt-opb-ok { background: #c4e6cc; } .mt-opb-ko { opacity: 0.5; }
