@@ -205,3 +205,10 @@
 .bt-rule{flex-basis:16.5rem}
 @media only screen and (max-width:750px){.bt-rule{flex-basis:84%}.bt-duo .bt-hero,.bt-duo .bt-mesa{flex-basis:100%;max-width:17rem}}
 .bt-baza .bt-no .bt-card,.bt-duelo .bt-no .bt-card{opacity:.8;filter:grayscale(.3)}
+/* Recomendaciones: vídeos (miniatura de YouTube + título + autor) */
+.rc-videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.8em}
+.rc-videos li{margin:0;padding:0;overflow:hidden}
+.rc-videos li>a{display:flex;flex-direction:column;gap:.5em}
+.rc-videos img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#eee}
+.rc-videos b,.rc-videos small{padding:0 .8em}
+.rc-videos small{padding-bottom:.7em}
