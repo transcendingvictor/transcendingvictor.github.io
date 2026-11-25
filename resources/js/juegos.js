@@ -13,11 +13,13 @@
         '4': ['#B65518', 'Argüelles|San Bernardo|Bilbao|Alonso Martínez|Colón|Serrano|Velázquez|Goya|Lista|Diego de León|Avenida de América|Prosperidad|Alfonso XIII|Avenida de la Paz|Arturo Soria|Esperanza|Canillas|Mar de Cristal|San Lorenzo|Parque de Santa María|Hortaleza|Manoteras|Pinar de Chamartín'],
         '5': ['#8FD400', 'Alameda de Osuna|El Capricho|Canillejas|Torre Arias|Suanzes|Ciudad Lineal|Pueblo Nuevo|Quintana|El Carmen|Ventas|Diego de León|Núñez de Balboa|Rubén Darío|Alonso Martínez|Chueca|Gran Vía|Callao|Ópera|La Latina|Puerta de Toledo|Acacias|Pirámides|Marqués de Vadillo|Urgel|Oporto|Vista Alegre|Carabanchel|Eugenia de Montijo|Aluche|Empalme|Campamento|Casa de Campo'],
         '6': ['#98989B', 'Laguna|Carpetana|Oporto|Opañel|Plaza Elíptica|Usera|Legazpi|Arganzuela-Planetario|Méndez Álvaro|Pacífico|Conde de Casal|Sainz de Baranda|O\'Donnell|Manuel Becerra|Diego de León|Avenida de América|República Argentina|Nuevos Ministerios|Cuatro Caminos|Guzmán el Bueno|Vicente Aleixandre|Ciudad Universitaria|Moncloa|Argüelles|Príncipe Pío|Puerta del Ángel|Alto de Extremadura|Lucero|Laguna'],
-        '7': ['#EE7518', 'Estadio Metropolitano|Las Musas|San Blas|Simancas|García Noblejas|Ascao|Pueblo Nuevo|Barrio de la Concepción|Parque de las Avenidas|Cartagena|Avenida de América|Gregorio Marañón|Alonso Cano|Canal|Islas Filipinas|Guzmán el Bueno|Francos Rodríguez|Valdezarza|Antonio Machado|Peñagrande|Avenida de la Ilustración|Lacoma|Arroyofresno|Pitis'],
+        '7': ['#EE7518', 'Hospital del Henares|Henares|Jarama|San Fernando|La Rambla|Coslada Central|Barrio del Puerto|Estadio Metropolitano|Las Musas|San Blas|Simancas|García Noblejas|Ascao|Pueblo Nuevo|Barrio de la Concepción|Parque de las Avenidas|Cartagena|Avenida de América|Gregorio Marañón|Alonso Cano|Canal|Islas Filipinas|Guzmán el Bueno|Francos Rodríguez|Valdezarza|Antonio Machado|Peñagrande|Avenida de la Ilustración|Lacoma|Arroyofresno|Pitis'],
         '8': ['#EC82B1', 'Nuevos Ministerios|Colombia|Pinar del Rey|Mar de Cristal|Feria de Madrid|Aeropuerto T1-T2-T3|Barajas|Aeropuerto T4'],
-        '9': ['#A60084', 'Paco de Lucía|Mirasierra|Herrera Oria|Barrio del Pilar|Ventilla|Plaza de Castilla|Duque de Pastrana|Pío XII|Colombia|Concha Espina|Cruz del Rayo|Avenida de América|Núñez de Balboa|Príncipe de Vergara|Ibiza|Sainz de Baranda|Estrella|Vinateros|Artilleros|Pavones|Valdebernardo|Vicálvaro|San Cipriano|Puerta de Arganda'],
-        '10': ['#005AA9', 'Tres Olivos|Fuencarral|Begoña|Chamartín|Plaza de Castilla|Cuzco|Santiago Bernabéu|Nuevos Ministerios|Gregorio Marañón|Alonso Martínez|Tribunal|Plaza de España|Príncipe Pío|Lago|Batán|Casa de Campo|Colonia Jardín|Aviación Española|Cuatro Vientos|Joaquín Vilumbrales|Puerta del Sur'],
-        '11': ['#009B3A', 'Plaza Elíptica|Abrantes|Pan Bendito|San Francisco|Carabanchel Alto|La Peseta|La Fortuna']
+        '9': ['#A60084', 'Paco de Lucía|Mirasierra|Herrera Oria|Barrio del Pilar|Ventilla|Plaza de Castilla|Duque de Pastrana|Pío XII|Colombia|Concha Espina|Cruz del Rayo|Avenida de América|Núñez de Balboa|Príncipe de Vergara|Ibiza|Sainz de Baranda|Estrella|Vinateros|Artilleros|Pavones|Valdebernardo|Vicálvaro|San Cipriano|Puerta de Arganda|Rivas Urbanizaciones|Rivas Futura|Rivas Vaciamadrid|La Poveda|Arganda del Rey'],
+        '10': ['#005AA9', 'Hospital Infanta Sofía|Reyes Católicos|Baunatal|Manuel de Falla|Marqués de la Valdavia|La Moraleja|La Granja|Ronda de la Comunicación|Las Tablas|Montecarmelo|Tres Olivos|Fuencarral|Begoña|Chamartín|Plaza de Castilla|Cuzco|Santiago Bernabéu|Nuevos Ministerios|Gregorio Marañón|Alonso Martínez|Tribunal|Plaza de España|Príncipe Pío|Lago|Batán|Casa de Campo|Colonia Jardín|Aviación Española|Cuatro Vientos|Joaquín Vilumbrales|Puerta del Sur'],
+        '11': ['#009B3A', 'Plaza Elíptica|Abrantes|Pan Bendito|San Francisco|Carabanchel Alto|La Peseta|La Fortuna'],
+        '12': ['#A49A00', 'Puerta del Sur|Parque Lisboa|Alcorcón Central|Parque Oeste|Universidad Rey Juan Carlos|Móstoles Central|Pradillo|Hospital de Móstoles|Manuela Malasaña|Loranca|Hospital de Fuenlabrada|Parque Europa|Fuenlabrada Central|Parque de los Estados|Arroyo Culebro|Conservatorio|Alonso de Mendoza|Getafe Central|Juan de la Cierva|El Casar|Los Espartales|El Bercial|El Carrascal|Julián Besteiro|Casa del Reloj|Hospital Severo Ochoa|Leganés Central|San Nicasio|Puerta del Sur'],
+        'R': ['#FFFFFF', 'Ópera|Príncipe Pío']
     };
     // Posición aproximada (km desde Sol: x al este, y al norte) de cruces y cabeceras; el resto se reparte entre ellas.
     var POS = {
@@ -30,7 +32,7 @@
         'Estación del Arte': [0.9, -0.9], 'Atocha': [1.3, -1.2], 'Pacífico': [2.6, -1.2], 'Valdecarros': [6.5, -6.5], 'Sainz de Baranda': [3.3, 0.2],
         'Legazpi': [0.6, -2.4], 'Plaza Elíptica': [-0.4, -3.3], 'Oporto': [-1.7, -3], 'Laguna': [-3, -2.2], 'Casa de Campo': [-5, -1.6], 'Puerta del Sur': [-6.5, -6],
         'El Casar': [0.5, -7.5], 'La Fortuna': [-5.5, -5], 'Las Rosas': [7, 0.5], 'Alameda de Osuna': [8.5, 6], 'Estadio Metropolitano': [8, 3],
-        'Aeropuerto T4': [9, 9], 'Puerta de Arganda': [8, -1.5], 'Retiro': [1.7, 0.5], 'La Latina': [-0.5, -0.3], 'Embajadores': [0, -1]
+        'Aeropuerto T4': [9, 9], 'Hospital del Henares': [17.5, 3.5], 'Coslada Central': [12, 1.5], 'Arganda del Rey': [20, -10], 'Rivas Vaciamadrid': [15, -7.5], 'Hospital Infanta Sofía': [2.5, 17], 'Las Tablas': [3, 11], 'Alcorcón Central': [-10.5, -6.5], 'Móstoles Central': [-15, -8], 'Hospital de Móstoles': [-14, -10.5], 'Loranca': [-12.5, -12.5], 'Fuenlabrada Central': [-10, -14], 'Conservatorio': [-6, -14], 'Getafe Central': [-1.5, -11.5], 'El Bercial': [-2.5, -9], 'Leganés Central': [-5.5, -10],  'Puerta de Arganda': [8, -1.5], 'Retiro': [1.7, 0.5], 'La Latina': [-0.5, -0.3], 'Embajadores': [0, -1]
     };
     var EST = {}, TRAZOS = {};
     Object.keys(LINEAS).forEach(function (n) {
@@ -64,13 +66,13 @@
             elegidas = document.getElementById('mt-sel'), ok = document.getElementById('mt-ok'), sig = document.getElementById('mt-next'),
             msgM = document.getElementById('mt-msg'), pregunta = document.getElementById('mt-preg'), PREG = 5;
         var ronda = 0, aciertos = 0, par = null, sel = [], hecho = false, modo = 'cruces', fq = null;
-        // Las 55 parejas de líneas salen sin repetirse; el progreso se queda en este dispositivo.
+        // Todas las parejas de líneas salen sin repetirse; el progreso se queda en este dispositivo.
         var TODAS = [], KS = Object.keys(LINEAS);
         KS.forEach(function (a, i) { KS.slice(i + 1).forEach(function (b) { TODAS.push(a + '-' + b); }); });
         function leer(k, def) { try { return JSON.parse(localStorage.getItem(k)) || def; } catch (e) { return def; } }
         function guardar(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
         function marcar(k) { var v = leer('mt-vistas', []); if (v.indexOf(k) < 0) { v.push(k); guardar('mt-vistas', v); } }
-        // Datos del modo friki (sobre este mapa: tramo urbano de las líneas 1 a 11)
+        // Datos del modo friki: las 12 líneas enteras y el Ramal
         function nEst(n) { var v = {}; LINEAS[n][1].split('|').forEach(function (s) { v[s] = 1; }); return Object.keys(v).length; }
         function nCon(n) { return KS.filter(function (m) { return m !== n && unidades(n, m).length; }).length; }
         var botonFriki = document.createElement('button'); botonFriki.type = 'button'; botonFriki.className = 'jg-next mt-friki-btn'; botonFriki.hidden = !leer('mt-friki', false);
@@ -82,13 +84,14 @@
         function rotuloFriki() { botonFriki.textContent = modo === 'friki' ? (es() ? '← Volver a los cruces' : '← Back to crossings') : (es() ? 'Modo friki 🤓' : 'Geek mode 🤓'); }
         botonFriki.addEventListener('click', function () { modo = modo === 'friki' ? 'cruces' : 'friki'; ronda = 0; aciertos = 0; rotuloFriki(); nueva(); });
         // x: -7..10, y: -8..10 (km) → viewBox 0..340 × 0..360
-        function X(p) { return 20 + (p[0] + 7) * 18; } function Y(p) { return 20 + (10 - p[1]) * 18; }
-        function chip(n) { return '<span class="mt-l" style="--c:' + LINEAS[n][0] + '">' + n + '</span>'; }
+        function cmp(p) { var r = Math.hypot(p[0], p[1]); if (r <= 6) return p; var k = (6 + (r - 6) * 0.35) / r; return [p[0] * k, p[1] * k]; }
+        function X(p) { return 20 + (cmp(p)[0] + 12) * 14.5; } function Y(p) { return 20 + (11 - cmp(p)[1]) * 14.5; }
+        function chip(n) { return '<span class="mt-l" style="--c:' + (n === 'R' ? '#6b6b6b' : LINEAS[n][0]) + '">' + n + '</span>'; }
         function mapa(resaltar) {
             svgM.innerHTML = '';
             Object.keys(TRAZOS).forEach(function (n) {
                 var on = !resaltar || resaltar.indexOf(n) >= 0;
-                mk(svgM, 'polyline', { points: TRAZOS[n].map(function (p) { return X(p).toFixed(1) + ',' + Y(p).toFixed(1); }).join(' '), fill: 'none', stroke: LINEAS[n][0],
+                mk(svgM, 'polyline', { points: TRAZOS[n].map(function (p) { return X(p).toFixed(1) + ',' + Y(p).toFixed(1); }).join(' '), fill: 'none', stroke: n === 'R' ? '#6b6b6b' : LINEAS[n][0],
                     'stroke-width': on ? 5 : 3, opacity: on ? 1 : (resaltar ? 0.12 : 0.85), 'stroke-linejoin': 'round', 'stroke-linecap': 'round' });
             });
             if (resaltar) resaltar.forEach(function (n) { TRAZOS[n].forEach(function (p) { mk(svgM, 'circle', { cx: X(p), cy: Y(p), r: 2.2, fill: '#fff', stroke: LINEAS[n][0], 'stroke-width': 1.2 }); }); });
@@ -151,7 +154,7 @@
         function textoFriki() {
             var a = par[0], b = par[1], u = fq.tipo === 'est' ? (es() ? ' estaciones' : ' stations') : (es() ? ' líneas' : ' lines');
             msgM.textContent = (fq.bien ? (es() ? '¡Eso es! ' : 'Right! ') : (es() ? 'Nop. ' : 'Nope. ')) + (es() ? 'La ' : 'Line ') + a + ': ' + fq.v[a] + u + '; ' + (es() ? 'la ' : 'line ') + b + ': ' + fq.v[b] + u + '.' +
-                (fq.tipo === 'con' ? ' ' + (es() ? '(Cuenta con cuántas otras líneas comparte estación o pasillo.)' : '(Counts how many other lines it shares a station or passage with.)') : ' ' + (es() ? '(En este mapa, sin Metro Norte, Este ni Sur.)' : '(On this map, without Metro Norte, Este or Sur.)')) + ' +' + fq.pts + (es() ? ' puntos.' : ' points.');
+                (fq.tipo === 'con' ? ' ' + (es() ? '(Cuenta con cuántas otras líneas comparte estación o pasillo.)' : '(Counts how many other lines it shares a station or passage with.)') : '') + ' +' + fq.pts + (es() ? ' puntos.' : ' points.');
         }
         function responderFriki(n) {
             if (hecho) return; hecho = true;
@@ -173,7 +176,7 @@
             var cajas = [];
             u.forEach(function (x) { x.n.forEach(function (s) { var p = EST[s].p, ok = usadas.indexOf(x) >= 0; mk(svgM, 'circle', { cx: X(p), cy: Y(p), r: 6, fill: ok ? '#7fd38a' : '#fff', stroke: '#1c1c1c', 'stroke-width': 2.5 });
                 var w = s.length * 6.2 + 4, lx = X(p) + 9, ly = Y(p) + 4;
-                if (lx + w > 335) lx = X(p) - 9 - w;
+                if (lx + w > 395) lx = X(p) - 9 - w;
                 for (var t = 0; t < 12 && cajas.some(function (c) { return lx < c[0] + c[2] && lx + w > c[0] && ly - 10 < c[1] && ly > c[1] - 10; }); t++) ly += (t % 2 ? -1 : 1) * 13 * (t + 1);
                 cajas.push([lx, ly, w]);
                 if (Math.abs(ly - Y(p) - 4) > 2) mk(svgM, 'line', { x1: X(p), y1: Y(p), x2: lx + (lx < X(p) ? w : 0), y2: ly - 4, stroke: '#1c1c1c', 'stroke-width': 0.8 });
