@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Cinzel:wght@600&family=Cormorant+Garamond:ital,wght@1,500&family=Permanent+Marker&family=VT323&family=Fredoka:wght@600&family=Bungee&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Cinzel:wght@600&family=Cormorant+Garamond:ital,wght@1,500&family=Permanent+Marker&family=VT323&family=Fredoka:wght@600&family=Bungee&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
     
         <!-- Icons -->
@@ -1124,15 +1124,28 @@
             <p class="sp-note rc-intro"><span data-l="es">Ya que has recorrido todo este camino tan personal: aquí hay algunos recordatorios para mí mismo.</span><span data-l="en">Since you have come all this personal way: here are some reminders to myself.</span></p>
 
 
+            <div class="jg-zona" id="jg-zona">
             <div class="jg-intro">
-                <h2><span data-l="es">Ven a jugar conmigo</span><span data-l="en">Come and play with me</span></h2>
-                <p class="sp-note"><span data-l="es">Tres minijuegos. Los puntos de cada uno se suman a tu total; al final ves tu rango y de dónde viene cada punto.</span><span data-l="en">Three mini-games. Every point adds to your total; at the end you see your rank and where each point came from.</span> <span class="jg-desliza"><span data-l="es">Desliza →</span><span data-l="en">Swipe →</span></span></p>
+                <h2 class="jg-titulo"><span data-l="es">Ven a jugar conmigo</span><span data-l="en">Come and play with me</span></h2>
+                <p class="jg-sub"><span data-l="es">3 minijuegos. Los puntos de los tres se suman en este marcador.</span><span data-l="en">3 mini-games. Points from all three add up on this scoreboard.</span> <span class="jg-desliza"><span data-l="es">Desliza →</span><span data-l="en">Swipe →</span></span></p>
+                <ol class="jg-indice">
+                    <li><a href="#jg-1"><b>#1</b> <span data-l="es">Adivina el centro</span><span data-l="en">Guess the centre</span></a></li>
+                    <li><a href="#pb"><b>#2</b> <span data-l="es">La parábola</span><span data-l="en">The parabola</span></a></li>
+                    <li><a href="#mt"><b>#3</b> <span data-l="es">¿Dónde se cruzan?</span><span data-l="en">Where do they cross?</span></a></li>
+                </ol>
+                <div class="jgp-card" id="jgp">
+                    <p class="jgp-rango" id="jgp-rango"></p>
+                    <p class="jgp-total"><b id="jgp-total">0</b> <span data-l="es">puntos totales</span><span data-l="en">total points</span></p>
+                    <div class="jgp-barra"><i id="jgp-barra"></i></div>
+                    <p class="jgp-sig" id="jgp-sig"></p>
+                    <ul class="jgp-desglose" id="jgp-desglose"></ul>
+                </div>
             </div>
             <div class="jg-carrusel">
-            <section class="sp-list jg">
-                <h2><span data-l="es">Adivina el centro</span><span data-l="en">Guess the centre</span></h2>
-                <span class="jgp-pill"><span data-l="es">Total</span><span data-l="en">Total</span> <b class="jgp-n">0</b></span>
+            <section class="sp-list jg" id="jg-1">
+                <h2><span class="jg-num">#1</span> <span data-l="es">Adivina el centro</span><span data-l="en">Guess the centre</span></h2>
                 <p class="sp-note"><span data-l="es">Adivina dónde está el centro de cada figura: primero círculos, luego triángulos, paralelogramos y figuras raras (ahí, su centro de gravedad). Cada nivel son 5 tiros y para pasar necesitas una media mínima, cada vez más alta.</span><span data-l="en">Guess the centre of each shape: first circles, then triangles, parallelograms and odd shapes (there, its centre of gravity). Each level is 5 throws and you need a minimum average to pass, higher every time.</span></p>
+                <p class="jg-fama" id="jg-fama">🏆 <span data-l="es">Solo dos personas se lo han pasado entero:</span><span data-l="en">Only two people have ever beaten it:</span> <b>Ismael Leal</b> <span data-l="es">y</span><span data-l="en">and</span> <b>Jaime Portillo</b> (Picón)<span class="jg-fama-tu" hidden>… <span data-l="es">y <b>tú</b>, desde este móvil.</span><span data-l="en">and <b>you</b>, on this device.</span></span></p>
                 <p class="jg-level" id="jg-level"></p>
                 <div class="jg-board" id="jg-board" role="button" aria-label="Círculo / Circle">
                     <svg id="jg-svg" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid meet"></svg>
@@ -1146,24 +1159,20 @@
                     <p class="jg-win-big"><span data-l="es">¡WOW! ¡LO HAS CONSEGUIDO!</span><span data-l="en">WOW! YOU DID IT!</span></p>
                     <p><span data-l="es">Has superado el nivel Dios de la teoría de la medida. Antes que tú, solo dos personas en el mundo lo habían logrado: <b>Ismael Leal</b> y <b>Jaime Portillo</b> (Picón). Ahora sois tres.</span><span data-l="en">You beat measure theory, the God level. Before you, only two people in the world had done it: <b>Ismael Leal</b> and <b>Jaime Portillo</b> (Picón). Now there are three of you.</span></p>
                 </div>
-                <p class="jgp-live">🏆 <b class="jgp-n">0</b> <span data-l="es">puntos totales</span><span data-l="en">total points</span> · <span class="jgp-rn"></span></p>
             </section>
 
             <section class="sp-list jg" id="pb">
-                <h2><span data-l="es">La parábola</span><span data-l="en">The parabola</span></h2>
-                <span class="jgp-pill"><span data-l="es">Total</span><span data-l="en">Total</span> <b class="jgp-n">0</b></span>
+                <h2><span class="jg-num">#2</span> <span data-l="es">La parábola</span><span data-l="en">The parabola</span></h2>
                 <p class="jg-level" id="pb-preg"></p>
                 <div class="jg-board"><svg id="pb-svg" viewBox="0 0 300 260" preserveAspectRatio="xMidYMid meet"></svg></div>
                 <div class="jg-bar">
                     <p class="jg-msg" id="pb-msg" aria-live="polite"></p>
                     <button type="button" class="jg-next" id="pb-next" hidden><span data-l="es">Otra parábola</span><span data-l="en">Another parabola</span></button>
                 </div>
-                <p class="jgp-live">🏆 <b class="jgp-n">0</b> <span data-l="es">puntos totales</span><span data-l="en">total points</span> · <span class="jgp-rn"></span></p>
             </section>
 
             <section class="sp-list jg" id="mt">
-                <h2><span data-l="es">¿Dónde se cruzan? Metro de Madrid</span><span data-l="en">Where do they cross? Madrid Metro</span></h2>
-                <span class="jgp-pill"><span data-l="es">Total</span><span data-l="en">Total</span> <b class="jgp-n">0</b></span>
+                <h2 class="mt-tit"><span class="jg-num">#3</span> <span data-l="es">¿Dónde se cruzan? <svg class="mt-logo" viewBox="0 0 120 70" role="img" aria-label="Metro"><polygon points="60,3 117,35 60,67 3,35" fill="#fff" stroke="#e3121b" stroke-width="7" stroke-linejoin="round"/><rect x="4" y="23" width="112" height="24" fill="#0b4ea2"/><text x="60" y="42" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="20" fill="#fff">Metro</text></svg> de Madrid</span><span data-l="en">Where do they cross? <svg class="mt-logo"  viewBox="0 0 120 70" role="img" aria-label="Metro"><polygon points="60,3 117,35 60,67 3,35" fill="#fff" stroke="#e3121b" stroke-width="7" stroke-linejoin="round"/><rect x="4" y="23" width="112" height="24" fill="#0b4ea2"/><text x="60" y="42" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="20" fill="#fff">Metro</text></svg> Madrid</span></h2>
                 <p class="jg-level" id="mt-preg"></p>
                 <div class="mt-box">
                     <input type="search" id="mt-q" class="mt-q" autocomplete="off" placeholder="Estación… / Station…">
@@ -1175,20 +1184,11 @@
                     <button type="button" class="jg-next" id="mt-next" hidden><span data-l="es">Siguiente</span><span data-l="en">Next</span></button>
                     <p class="jg-msg" id="mt-msg" aria-live="polite"></p>
                 </div>
-                <div class="jg-board mt-board"><svg id="mt-svg" viewBox="0 0 340 360" preserveAspectRatio="xMidYMid meet"></svg></div>
-                <p class="sp-note"><span data-l="es">Mapa esquemático de las líneas 1 a 11 en su tramo urbano (sin Metro Norte, Este ni Sur).</span><span data-l="en">Schematic map of lines 1 to 11, city section only.</span></p>
-                <p class="jgp-live">🏆 <b class="jgp-n">0</b> <span data-l="es">puntos totales</span><span data-l="en">total points</span> · <span class="jgp-rn"></span></p>
+                <div class="jg-board mt-board"><svg id="mt-svg" viewBox="0 0 400 380" preserveAspectRatio="xMidYMid meet"></svg></div>
+                <p class="sp-note"><span data-l="es">Mapa esquemático de las 12 líneas y el Ramal, enteras: también Metro Norte, Este y Sur (el centro a escala, las afueras encogidas para que quepan).</span><span data-l="en">Schematic map of all 12 lines and the Ramal, end to end, including Metro Norte, Este and Sur (centre to scale, outskirts squeezed in).</span></p>
             </section>
-            <section class="sp-list jg-marcador" id="jgp">
-                <h2><span data-l="es">Tu puntuación</span><span data-l="en">Your score</span></h2>
-                <div class="jgp-card">
-                    <p class="jgp-rango" id="jgp-rango"></p>
-                    <p class="jgp-total"><b id="jgp-total">0</b> <span data-l="es">puntos totales</span><span data-l="en">total points</span></p>
-                    <div class="jgp-barra"><i id="jgp-barra"></i></div>
-                    <p class="jgp-sig" id="jgp-sig"></p>
-                    <ul class="jgp-desglose" id="jgp-desglose"></ul>
-                </div>
-            </section>
+            </div>
+            <a class="jgp-mini" id="jgp-mini" href="#jgp" hidden>🏆 <b class="jgp-n">0</b> <span data-l="es">puntos</span><span data-l="en">points</span> · <span class="jgp-rn"></span></a>
             </div>
 
             <section class="sp-list">
@@ -1285,7 +1285,7 @@
                     <li><b>Miguel</b>, <span data-l="es">¿quién?</span><span data-l="en">who?</span></li>
                     <li><b data-l="es">El teatro</b><b data-l="en">The theatre</b>, <span data-l="es">personificado en Etienne, Miguel y Karla</span><span data-l="en">personified by Etienne, Miguel and Karla</span></li>
                     <li><b>Jimbo</b></li>
-                    <li><b>Alba</b></li>
+                    <li><b>Mayday</b></li>
                 </ol>
             </section>
 
@@ -2403,7 +2403,7 @@
     <script>
     (function () {
         // Marcador común de los minijuegos: puntos acumulados, rangos y de dónde viene cada punto.
-        var JUEGOS = { centro: ['Adivina el centro', 'Guess the centre'], parabola: ['La parábola', 'The parabola'], metro: ['Metro de Madrid', 'Madrid Metro'] };
+        var JUEGOS = { centro: ['#1 Adivina el centro', '#1 Guess the centre'], parabola: ['#2 La parábola', '#2 The parabola'], metro: ['#3 ¿Dónde se cruzan? (metro)', '#3 Where do they cross? (metro)'] };
         var RANGOS = [[0, 'Turista', 'Tourist'], [300, 'Curioso', 'Curious'], [1000, 'Aprendiz', 'Apprentice'], [2500, 'Calculador', 'Calculator'], [5000, 'Geómetra', 'Geometer'], [9000, 'Maestro del centro', 'Master of the centre'], [15000, 'Leyenda', 'Legend']];
         var d = {}; try { d = JSON.parse(localStorage.getItem('jg-puntos') || '{}') || {}; } catch (e) {}
         var es = function () { return document.documentElement.dataset.lang !== 'en'; };
@@ -2423,6 +2423,14 @@
         window.JGP = { add: function (juego, p) { if (!p) return; var antes = rango(total()); d[juego] = Math.max(0, (d[juego] || 0) + p); try { localStorage.setItem('jg-puntos', JSON.stringify(d)); } catch (e) {} pintar(rango(total()) > antes); } };
         document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.addEventListener('click', function () { pintar(false); }); });
         pintar(false);
+        var zona = document.getElementById('jg-zona'), card = document.getElementById('jgp'), mini = document.getElementById('jgp-mini');
+        if (zona && card && mini && 'IntersectionObserver' in window) {
+            var enZona = false, verCard = false;
+            function toca() { mini.hidden = !(enZona && !verCard); }
+            function mira() { var r = zona.getBoundingClientRect(), h = window.innerHeight; enZona = r.top < h * 0.6 && r.bottom > h * 0.95; toca(); }
+            window.addEventListener('scroll', mira, { passive: true }); window.addEventListener('resize', mira); mira();
+            new IntersectionObserver(function (e) { verCard = e[0].isIntersecting; toca(); }).observe(card);
+        }
     })();
     </script>
     <script>
@@ -2444,6 +2452,8 @@
             { es: 'Teoría de la medida · nivel Dios', en: 'Measure theory · God level', min: 93, f: ['tri', 'para', 'L', 'T', 'U', 'C'], bg: ['σ', 'μ(A)', '∫f dμ', 'ℝ', '∅', '⋃Aₙ', 'Lebesgue', 'a.e.'] }
         ];
         var nivel = 0, tiro = 0, suma = 0, fig = null, done = false, fin = false;
+        function famaTu() { var g = null; try { g = localStorage.getItem('jg-ganador'); } catch (e) {} var t = document.querySelector('.jg-fama-tu'); if (t) t.hidden = !g; }
+        famaTu();
         try { nivel = Math.min(+localStorage.getItem('jg-nivel') || 0, NIV.length - 1); } catch (e) {}
         function mk(tag, at, txt) { var e = document.createElementNS(NS, tag); for (var k in at) e.setAttribute(k, at[k]); if (txt) e.textContent = txt; svg.appendChild(e); return e; }
         var COL = ['#e5d8f7', '#fcd8d8', '#c4e6cc', '#fde7b0', '#d6e6f7'];
@@ -2534,7 +2544,7 @@
             mk('line', { x1: c.x - cr, y1: c.y, x2: c.x + cr, y2: c.y, stroke: '#1c1c1c', 'stroke-width': sw });
             mk('line', { x1: c.x, y1: c.y - cr, x2: c.x, y2: c.y + cr, stroke: '#1c1c1c', 'stroke-width': sw });
             mk('circle', { cx: p.x, cy: p.y, r: 2.6 * u, fill: '#d14b4b', stroke: '#fff', 'stroke-width': 0.9 * u });
-            var pct = Math.round(100 * d / fig.R), lab = mk('text', { x: mx + 4 * u, y: my - 4 * u, 'font-size': 9 * u, fill: '#5b2f86', 'font-weight': 600, 'font-family': 'system-ui,sans-serif', 'paint-order': 'stroke', stroke: '#fff', 'stroke-width': 2.5 * u }, pct + '%');
+            var pct = Math.round(100 * d / fig.R), lab = mk('text', { x: mx + 4 * u, y: my - 4 * u, 'font-size': 9 * u, fill: '#5b2f86', 'font-weight': 600, 'font-family': 'system-ui,sans-serif', 'paint-order': 'stroke', stroke: '#fff', 'stroke-width': 2.5 * u }, pct === 0 ? (es() ? '¡0 %! clavado' : '0%! spot on') : (es() ? 'a ' + pct + ' %' : pct + '% off'));
             lab.setAttribute('class', 'jg-pct');
             vbAnim([0, 0, 300, 200], vb1, 750);
             var txt = pts >= 95 ? (es() ? '¡Clavado!' : 'Spot on!') : pts >= 80 ? (es() ? '¡Muy cerca!' : 'Very close!') : pts >= 50 ? (es() ? 'No está mal.' : 'Not bad.') : (es() ? 'Uy…' : 'Oops…');
@@ -2545,8 +2555,8 @@
             if (tiro >= TIROS) {
                 var media = Math.round(suma / tiro), pasa = media >= L.min;
                 txt += ' ' + (es() ? 'Media del nivel: ' + media + '. ' : 'Level average: ' + media + '. ');
-                if (pasa && nivel === NIV.length - 1) { var win = document.getElementById('jg-win'); if (win) { win.hidden = false; win.classList.remove('on'); void win.offsetWidth; win.classList.add('on'); } txt += es() ? '¡Has superado el nivel Dios! Has terminado el juego.' : 'You beat God level! Game complete.'; etiqueta(['Volver a empezar', 'Start again']); fin = 'reset'; }
-                else if (pasa) { if (window.JGP) JGP.add('centro', 100 * (nivel + 1)); txt += (es() ? '+' + 100 * (nivel + 1) + ' de bonus. ' : '+' + 100 * (nivel + 1) + ' bonus. ') + es() ? '¡Nivel superado!' : 'Level passed!'; etiqueta(['Siguiente nivel', 'Next level']); fin = 'up'; }
+                if (pasa && nivel === NIV.length - 1) { try { localStorage.setItem('jg-ganador', new Date().toISOString().slice(0, 10)); } catch (e) {} famaTu(); var win = document.getElementById('jg-win'); if (win) { win.hidden = false; win.classList.remove('on'); void win.offsetWidth; win.classList.add('on'); } txt += es() ? '¡Has superado el nivel Dios! Has terminado el juego.' : 'You beat God level! Game complete.'; etiqueta(['Volver a empezar', 'Start again']); fin = 'reset'; }
+                else if (pasa) { if (window.JGP) JGP.add('centro', 100 * (nivel + 1)); txt += (es() ? '+' + 100 * (nivel + 1) + ' de bonus. ' : '+' + 100 * (nivel + 1) + ' bonus. ') + (es() ? '¡Nivel superado!' : 'Level passed!'); etiqueta(['Siguiente nivel', 'Next level']); fin = 'up'; }
                 else { txt += es() ? 'Necesitabas ' + L.min + '. Inténtalo otra vez.' : 'You needed ' + L.min + '. Try again.'; etiqueta(['Repetir nivel', 'Retry level']); fin = 'retry'; }
             }
             msg.textContent = txt; tot.textContent = Math.round(suma / tiro); cabecera();
