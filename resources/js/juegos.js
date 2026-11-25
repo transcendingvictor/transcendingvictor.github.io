@@ -63,7 +63,24 @@
         var svgM = document.getElementById('mt-svg'), q = document.getElementById('mt-q'), lista = document.getElementById('mt-res'),
             elegidas = document.getElementById('mt-sel'), ok = document.getElementById('mt-ok'), sig = document.getElementById('mt-next'),
             msgM = document.getElementById('mt-msg'), pregunta = document.getElementById('mt-preg'), PREG = 5;
-        var ronda = 0, aciertos = 0, par = null, sel = [], hecho = false;
+        var ronda = 0, aciertos = 0, par = null, sel = [], hecho = false, modo = 'cruces', fq = null;
+        // Las 55 parejas de líneas salen sin repetirse; el progreso se queda en este dispositivo.
+        var TODAS = [], KS = Object.keys(LINEAS);
+        KS.forEach(function (a, i) { KS.slice(i + 1).forEach(function (b) { TODAS.push(a + '-' + b); }); });
+        function leer(k, def) { try { return JSON.parse(localStorage.getItem(k)) || def; } catch (e) { return def; } }
+        function guardar(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+        function marcar(k) { var v = leer('mt-vistas', []); if (v.indexOf(k) < 0) { v.push(k); guardar('mt-vistas', v); } }
+        // Datos del modo friki (sobre este mapa: tramo urbano de las líneas 1 a 11)
+        function nEst(n) { var v = {}; LINEAS[n][1].split('|').forEach(function (s) { v[s] = 1; }); return Object.keys(v).length; }
+        function nCon(n) { return KS.filter(function (m) { return m !== n && unidades(n, m).length; }).length; }
+        var botonFriki = document.createElement('button'); botonFriki.type = 'button'; botonFriki.className = 'jg-next mt-friki-btn'; botonFriki.hidden = !leer('mt-friki', false);
+        sig.parentNode.insertBefore(botonFriki, sig.nextSibling);
+        var opciones = document.createElement('div'); opciones.className = 'mt-op'; opciones.hidden = true;
+        var caja = document.querySelector('#mt .mt-box'); caja.parentNode.insertBefore(opciones, caja.nextSibling);
+        var extra = document.createElement('div'); extra.className = 'mt-extra'; extra.hidden = true;
+        msgM.parentNode.parentNode.insertBefore(extra, msgM.parentNode.nextSibling);
+        function rotuloFriki() { botonFriki.textContent = modo === 'friki' ? (es() ? '← Volver a los cruces' : '← Back to crossings') : (es() ? 'Modo friki 🤓' : 'Geek mode 🤓'); }
+        botonFriki.addEventListener('click', function () { modo = modo === 'friki' ? 'cruces' : 'friki'; ronda = 0; aciertos = 0; rotuloFriki(); nueva(); });
         // x: -7..10, y: -8..10 (km) → viewBox 0..340 × 0..360
         function X(p) { return 20 + (p[0] + 7) * 18; } function Y(p) { return 20 + (10 - p[1]) * 18; }
         function chip(n) { return '<span class="mt-l" style="--c:' + LINEAS[n][0] + '">' + n + '</span>'; }
@@ -77,9 +94,12 @@
             if (resaltar) resaltar.forEach(function (n) { TRAZOS[n].forEach(function (p) { mk(svgM, 'circle', { cx: X(p), cy: Y(p), r: 2.2, fill: '#fff', stroke: LINEAS[n][0], 'stroke-width': 1.2 }); }); });
         }
         function nueva() {
-            var ks = Object.keys(LINEAS), a = ks[Math.floor(Math.random() * ks.length)], b;
-            do { b = ks[Math.floor(Math.random() * ks.length)]; } while (b === a);
-            par = [a, b].sort(function (x, y) { return x - y; }); sel = []; hecho = false; res = null; q.value = ''; q.disabled = false; lista.innerHTML = '';
+            extra.hidden = true; extra.innerHTML = ''; rotuloFriki(); delete msgM.dataset.friki;
+            if (modo === 'friki') return nuevaFriki();
+            caja.hidden = false; opciones.hidden = true;
+            var v = leer('mt-vistas', []), quedan = TODAS.filter(function (k) { return v.indexOf(k) < 0; });
+            if (!quedan.length) { guardar('mt-vistas', []); quedan = TODAS.slice(); }
+            par = quedan[Math.floor(Math.random() * quedan.length)].split('-'); sel = []; hecho = false; res = null; q.value = ''; q.disabled = false; lista.innerHTML = '';
             enunciado();
             msgM.textContent = es() ? 'Escribe y elige las estaciones. Si crees que no se cruzan, dale directamente a «Ya está».' : 'Type and pick the stations. If you think they never cross, just press «Done».';
             ok.hidden = false; sig.hidden = true; msgM.className = 'jg-msg'; pintarSel(); mapa(null);
@@ -90,12 +110,13 @@
                 b.onclick = function () { if (hecho) return; sel.splice(sel.indexOf(s), 1); pintarSel(); }; elegidas.appendChild(b); });
         }
         q.addEventListener('input', function () {
-            lista.innerHTML = ''; var t = norm(q.value.trim()); if (t.length < 3) return;
+            lista.innerHTML = ''; var t = norm(q.value.trim()); if (t.length < 2) return;
             var m = NOMBRES.filter(function (s) { return norm(s).indexOf(t) >= 0 && sel.indexOf(s) < 0; });
             m.sort(function (a, b) { return (norm(b) === t) - (norm(a) === t) || (norm(b).indexOf(t) === 0) - (norm(a).indexOf(t) === 0); });
             m.slice(0, 6).forEach(function (s) { var li = document.createElement('li'); var b = document.createElement('button'); b.type = 'button'; b.textContent = s;
                 b.onclick = function () { sel.push(s); q.value = ''; lista.innerHTML = ''; pintarSel(); q.focus(); }; li.appendChild(b); lista.appendChild(li); });
         });
+        q.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') { ev.preventDefault(); var b = lista.querySelector('button'); if (b) b.click(); else if (!q.value.trim()) ok.click(); } });
         var res = null;
         function textoRes() {
             if (!res) return;
@@ -108,7 +129,39 @@
             if (mal.length) txt += ' ' + (es() ? 'Sobraban: ' : 'Not crossings: ') + mal.join(', ') + '.';
             txt += ' +' + res.pts + (es() ? ' puntos.' : ' points.');
             if (res.fin) txt += ' ' + (es() ? 'Partida terminada: ' + res.ac + ' de ' + PREG + ' perfectas.' : 'Game over: ' + res.ac + ' of ' + PREG + ' perfect.');
+            if (msgM.dataset.friki) txt += ' ' + (es() ? '🤓 ¡Desbloqueado el modo friki!' : '🤓 Geek mode unlocked!');
             msgM.textContent = txt;
+        }
+        function curiosidad17() {
+            extra.innerHTML = '<p><b>' + (es() ? 'Curiosidad guapa:' : 'Cool fact:') + '</b> ' + (es() ? 'la 1 y la 7 no comparten ninguna estación, pero en el plano sí se cruzan. Aquí lo explican:' : 'lines 1 and 7 share no station, yet they do cross on the map. Here is why:') + '</p>' +
+                '<div class="mt-yt"><iframe src="https://www.youtube-nocookie.com/embed/dD19zJIeGvk" title="Metro de Madrid: líneas 1 y 7" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>';
+            extra.hidden = false;
+        }
+        function nuevaFriki() {
+            caja.hidden = true; ok.hidden = true; sig.hidden = true; hecho = false; msgM.className = 'jg-msg';
+            var tipo, a, b, va, vb, t = 0;
+            do { tipo = Math.random() < 0.5 ? 'est' : 'con'; a = KS[Math.floor(Math.random() * KS.length)]; do { b = KS[Math.floor(Math.random() * KS.length)]; } while (b === a);
+                va = tipo === 'est' ? nEst(a) : nCon(a); vb = tipo === 'est' ? nEst(b) : nCon(b); } while (va === vb && ++t < 40);
+            par = [a, b]; fq = { tipo: tipo, v: {} }; fq.v[a] = va; fq.v[b] = vb;
+            enunciado(); mapa(null);
+            msgM.textContent = es() ? 'Toca la línea que creas.' : 'Tap the line you think.';
+            opciones.innerHTML = ''; opciones.hidden = false;
+            par.forEach(function (n) { var bt = document.createElement('button'); bt.type = 'button'; bt.className = 'mt-opb'; bt.innerHTML = chip(n); bt.onclick = function () { responderFriki(n); }; opciones.appendChild(bt); });
+        }
+        function textoFriki() {
+            var a = par[0], b = par[1], u = fq.tipo === 'est' ? (es() ? ' estaciones' : ' stations') : (es() ? ' líneas' : ' lines');
+            msgM.textContent = (fq.bien ? (es() ? '¡Eso es! ' : 'Right! ') : (es() ? 'Nop. ' : 'Nope. ')) + (es() ? 'La ' : 'Line ') + a + ': ' + fq.v[a] + u + '; ' + (es() ? 'la ' : 'line ') + b + ': ' + fq.v[b] + u + '.' +
+                (fq.tipo === 'con' ? ' ' + (es() ? '(Cuenta con cuántas otras líneas comparte estación o pasillo.)' : '(Counts how many other lines it shares a station or passage with.)') : ' ' + (es() ? '(En este mapa, sin Metro Norte, Este ni Sur.)' : '(On this map, without Metro Norte, Este or Sur.)')) + ' +' + fq.pts + (es() ? ' puntos.' : ' points.');
+        }
+        function responderFriki(n) {
+            if (hecho) return; hecho = true;
+            var otra = par[0] === n ? par[1] : par[0]; fq.bien = fq.v[n] > fq.v[otra]; fq.pts = fq.bien ? 60 : 0;
+            if (window.JGP) JGP.add('metro', fq.pts);
+            opciones.querySelectorAll('button').forEach(function (bt, i) { bt.disabled = true; bt.classList.add(fq.v[par[i]] >= fq.v[par[1 - i]] ? 'mt-opb-ok' : 'mt-opb-ko'); });
+            mapa(par); ronda++; textoFriki();
+            msgM.className = 'jg-msg ' + (fq.bien ? 'jg-ok' : 'jg-ko');
+            mt.classList.remove('jg-flash-ok', 'jg-flash-ko'); void mt.offsetWidth; mt.classList.add(fq.bien ? 'jg-flash-ok' : 'jg-flash-ko');
+            sig.hidden = false; sig.disabled = false;
         }
         ok.addEventListener('click', function () {
             if (hecho) return; hecho = true; q.disabled = true; lista.innerHTML = '';
@@ -128,13 +181,19 @@
             ronda++;
             res = { u: u, mal: mal, perfecto: perfecto, pts: ptsM, fin: ronda >= PREG, ac: aciertos };
             if (ronda >= PREG) { ronda = 0; aciertos = 0; }
+            marcar(par.join('-'));
+            if (res.fin && !leer('mt-friki', false)) { guardar('mt-friki', true); botonFriki.hidden = false; rotuloFriki(); msgM.dataset.friki = '1'; }
             textoRes(); ok.hidden = true; sig.hidden = false; sig.disabled = true;
+            if (par.join('-') === '1-7') curiosidad17();
             msgM.className = 'jg-msg ' + (perfecto ? 'jg-ok' : usadas.length ? 'jg-meh' : 'jg-ko');
             mt.classList.remove('jg-flash-ok', 'jg-flash-ko'); void mt.offsetWidth; mt.classList.add(perfecto ? 'jg-flash-ok' : 'jg-flash-ko');
             setTimeout(function () { sig.disabled = false; }, 2500);
         });
-        function enunciado() { pregunta.innerHTML = (es() ? 'Pregunta ' : 'Question ') + (ronda + (hecho ? 0 : 1) || PREG) + '/' + PREG + ': ' + (es() ? '¿en qué estaciones se cruzan las líneas ' : 'at which stations do lines ') + chip(par[0]) + (es() ? ' y ' : ' and ') + chip(par[1]) + (es() ? '?' : ' cross?'); }
-        document.querySelectorAll('[data-set-lang]').forEach(function (bt) { bt.addEventListener('click', function () { enunciado(); if (hecho) textoRes(); else msgM.textContent = es() ? 'Escribe y elige las estaciones. Si crees que no se cruzan, dale directamente a «Ya está».' : 'Type and pick the stations. If you think they never cross, just press «Done».'; }); });
+        function enunciado() {
+            if (modo === 'friki') { pregunta.innerHTML = '🤓 ' + (es() ? 'Modo friki: ' : 'Geek mode: ') + (fq.tipo === 'est' ? (es() ? '¿qué línea tiene <b>más estaciones</b>, ' : 'which line has <b>more stations</b>, ') : (es() ? '¿qué línea conecta con <b>más líneas de metro</b>, ' : 'which line connects with <b>more metro lines</b>, ')) + chip(par[0]) + (es() ? ' o ' : ' or ') + chip(par[1]) + '?'; return; }
+            var vis = leer('mt-vistas', []).length;
+            pregunta.innerHTML = '<small class="mt-prog">' + (es() ? 'Parejas descubiertas: ' : 'Pairs discovered: ') + vis + '/' + TODAS.length + '</small><br>' + (es() ? 'Pregunta ' : 'Question ') + (ronda + (hecho ? 0 : 1) || PREG) + '/' + PREG + ': ' + (es() ? '¿en qué estaciones se cruzan las líneas ' : 'at which stations do lines ') + chip(par[0]) + (es() ? ' y ' : ' and ') + chip(par[1]) + (es() ? '?' : ' cross?'); }
+        document.querySelectorAll('[data-set-lang]').forEach(function (bt) { bt.addEventListener('click', function () { rotuloFriki(); enunciado(); if (modo === 'friki') { if (hecho) textoFriki(); else msgM.textContent = es() ? 'Toca la línea que creas.' : 'Tap the line you think.'; return; } if (par.join('-') === '1-7' && hecho) curiosidad17(); if (hecho) textoRes(); else msgM.textContent = es() ? 'Escribe y elige las estaciones. Si crees que no se cruzan, dale directamente a «Ya está».' : 'Type and pick the stations. If you think they never cross, just press «Done».'; }); });
         sig.addEventListener('click', nueva);
         nueva();
     }

@@ -1133,6 +1133,7 @@
                 <h2><span data-l="es">Adivina el centro</span><span data-l="en">Guess the centre</span></h2>
                 <span class="jgp-pill"><span data-l="es">Total</span><span data-l="en">Total</span> <b class="jgp-n">0</b></span>
                 <p class="sp-note"><span data-l="es">Adivina dónde está el centro de cada figura: primero círculos, luego triángulos, paralelogramos y figuras raras (ahí, su centro de gravedad). Cada nivel son 5 tiros y para pasar necesitas una media mínima, cada vez más alta.</span><span data-l="en">Guess the centre of each shape: first circles, then triangles, parallelograms and odd shapes (there, its centre of gravity). Each level is 5 throws and you need a minimum average to pass, higher every time.</span></p>
+                <p class="jg-fama" id="jg-fama">🏆 <span data-l="es">Solo dos personas se lo han pasado entero:</span><span data-l="en">Only two people have ever beaten it:</span> <b>Ismael Leal</b> <span data-l="es">y</span><span data-l="en">and</span> <b>Jaime Portillo</b> (Picón)<span class="jg-fama-tu" hidden>… <span data-l="es">y <b>tú</b>, desde este móvil.</span><span data-l="en">and <b>you</b>, on this device.</span></span></p>
                 <p class="jg-level" id="jg-level"></p>
                 <div class="jg-board" id="jg-board" role="button" aria-label="Círculo / Circle">
                     <svg id="jg-svg" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid meet"></svg>
@@ -2444,6 +2445,8 @@
             { es: 'Teoría de la medida · nivel Dios', en: 'Measure theory · God level', min: 93, f: ['tri', 'para', 'L', 'T', 'U', 'C'], bg: ['σ', 'μ(A)', '∫f dμ', 'ℝ', '∅', '⋃Aₙ', 'Lebesgue', 'a.e.'] }
         ];
         var nivel = 0, tiro = 0, suma = 0, fig = null, done = false, fin = false;
+        function famaTu() { var g = null; try { g = localStorage.getItem('jg-ganador'); } catch (e) {} var t = document.querySelector('.jg-fama-tu'); if (t) t.hidden = !g; }
+        famaTu();
         try { nivel = Math.min(+localStorage.getItem('jg-nivel') || 0, NIV.length - 1); } catch (e) {}
         function mk(tag, at, txt) { var e = document.createElementNS(NS, tag); for (var k in at) e.setAttribute(k, at[k]); if (txt) e.textContent = txt; svg.appendChild(e); return e; }
         var COL = ['#e5d8f7', '#fcd8d8', '#c4e6cc', '#fde7b0', '#d6e6f7'];
@@ -2534,7 +2537,7 @@
             mk('line', { x1: c.x - cr, y1: c.y, x2: c.x + cr, y2: c.y, stroke: '#1c1c1c', 'stroke-width': sw });
             mk('line', { x1: c.x, y1: c.y - cr, x2: c.x, y2: c.y + cr, stroke: '#1c1c1c', 'stroke-width': sw });
             mk('circle', { cx: p.x, cy: p.y, r: 2.6 * u, fill: '#d14b4b', stroke: '#fff', 'stroke-width': 0.9 * u });
-            var pct = Math.round(100 * d / fig.R), lab = mk('text', { x: mx + 4 * u, y: my - 4 * u, 'font-size': 9 * u, fill: '#5b2f86', 'font-weight': 600, 'font-family': 'system-ui,sans-serif', 'paint-order': 'stroke', stroke: '#fff', 'stroke-width': 2.5 * u }, pct + '%');
+            var pct = Math.round(100 * d / fig.R), lab = mk('text', { x: mx + 4 * u, y: my - 4 * u, 'font-size': 9 * u, fill: '#5b2f86', 'font-weight': 600, 'font-family': 'system-ui,sans-serif', 'paint-order': 'stroke', stroke: '#fff', 'stroke-width': 2.5 * u }, pct === 0 ? (es() ? '¡0 %! clavado' : '0%! spot on') : (es() ? 'a ' + pct + ' %' : pct + '% off'));
             lab.setAttribute('class', 'jg-pct');
             vbAnim([0, 0, 300, 200], vb1, 750);
             var txt = pts >= 95 ? (es() ? '¡Clavado!' : 'Spot on!') : pts >= 80 ? (es() ? '¡Muy cerca!' : 'Very close!') : pts >= 50 ? (es() ? 'No está mal.' : 'Not bad.') : (es() ? 'Uy…' : 'Oops…');
@@ -2545,8 +2548,8 @@
             if (tiro >= TIROS) {
                 var media = Math.round(suma / tiro), pasa = media >= L.min;
                 txt += ' ' + (es() ? 'Media del nivel: ' + media + '. ' : 'Level average: ' + media + '. ');
-                if (pasa && nivel === NIV.length - 1) { var win = document.getElementById('jg-win'); if (win) { win.hidden = false; win.classList.remove('on'); void win.offsetWidth; win.classList.add('on'); } txt += es() ? '¡Has superado el nivel Dios! Has terminado el juego.' : 'You beat God level! Game complete.'; etiqueta(['Volver a empezar', 'Start again']); fin = 'reset'; }
-                else if (pasa) { if (window.JGP) JGP.add('centro', 100 * (nivel + 1)); txt += (es() ? '+' + 100 * (nivel + 1) + ' de bonus. ' : '+' + 100 * (nivel + 1) + ' bonus. ') + es() ? '¡Nivel superado!' : 'Level passed!'; etiqueta(['Siguiente nivel', 'Next level']); fin = 'up'; }
+                if (pasa && nivel === NIV.length - 1) { try { localStorage.setItem('jg-ganador', new Date().toISOString().slice(0, 10)); } catch (e) {} famaTu(); var win = document.getElementById('jg-win'); if (win) { win.hidden = false; win.classList.remove('on'); void win.offsetWidth; win.classList.add('on'); } txt += es() ? '¡Has superado el nivel Dios! Has terminado el juego.' : 'You beat God level! Game complete.'; etiqueta(['Volver a empezar', 'Start again']); fin = 'reset'; }
+                else if (pasa) { if (window.JGP) JGP.add('centro', 100 * (nivel + 1)); txt += (es() ? '+' + 100 * (nivel + 1) + ' de bonus. ' : '+' + 100 * (nivel + 1) + ' bonus. ') + (es() ? '¡Nivel superado!' : 'Level passed!'); etiqueta(['Siguiente nivel', 'Next level']); fin = 'up'; }
                 else { txt += es() ? 'Necesitabas ' + L.min + '. Inténtalo otra vez.' : 'You needed ' + L.min + '. Try again.'; etiqueta(['Repetir nivel', 'Retry level']); fin = 'retry'; }
             }
             msg.textContent = txt; tot.textContent = Math.round(suma / tiro); cabecera();
