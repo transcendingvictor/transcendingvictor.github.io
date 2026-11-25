@@ -1590,7 +1590,7 @@ html.sp-essay-lock { overflow: hidden; }
     li:has(> .sp-margin-note) { position: relative; }
     .sp-margin-note { position: absolute; left: calc(100% + 0.4rem); top: 50%; margin: 0; width: 7.5rem; transform: translateY(-50%) rotate(-4deg); line-height: 1.2; }
 }
-.jgp-live { position: sticky; bottom: 0.6rem; z-index: 2; max-width: 34rem; margin: 0.8rem 0 0; padding: 0.55rem 0.9rem; border: 0.2rem solid #1c1c1c; border-radius: 999px; background: linear-gradient(90deg, #fde7b0, #e5d8f7); color: #1c1c1c; font-size: 1rem; box-shadow: 0 4px 0 #1c1c1c; }
+.jgp-live-viejo { position: sticky; bottom: 0.6rem; z-index: 2; max-width: 34rem; margin: 0.8rem 0 0; padding: 0.55rem 0.9rem; border: 0.2rem solid #1c1c1c; border-radius: 999px; background: linear-gradient(90deg, #fde7b0, #e5d8f7); color: #1c1c1c; font-size: 1rem; box-shadow: 0 4px 0 #1c1c1c; }
 .jgp-live b { font-size: 1.35rem; }
 .jgp-live:has(.pum) b, .jgp-live .pum { animation: jgp-sube 0.6s ease; }
 .jgp-pill { display: none; }
@@ -2159,3 +2159,17 @@ a.sp-cm-card:hover { color: #fff !important; text-decoration: none; }
 html.sp-lock, html.sp-lock body { overflow: hidden; }
 .sp-sheet { overscroll-behavior: contain; }
 .sp-poem .sp-com .sp-com-link { display: block; margin: 0.25rem 0; text-indent: 0; padding-left: 0; }
+
+/* Zona de juegos: portada con índice y marcador completo; cada juego en su tarjeta; un marcador pequeño pegado abajo */
+.jg-titulo { font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.1; margin-bottom: 0.3rem; }
+.jg-sub { font-size: 1.05rem; margin: 0 0 0.7rem; }
+.jg-indice { list-style: none; margin: 0 0 0.9rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.jg-indice a { display: inline-block; padding: 0.35rem 0.85rem; border: 0.15rem solid #1c1c1c; border-radius: 999px; background: #fde7b0; color: #1c1c1c; text-decoration: none; font-weight: 600; box-shadow: 0 3px 0 #1c1c1c; }
+.jg-indice a:hover { background: #fff2c9; }
+.jg-indice b, .jg-num { font-family: "Bungee", Impact, sans-serif; font-weight: 400; }
+.jg-num { display: inline-block; margin-right: 0.15em; padding: 0 0.3em; border-radius: 8px; background: #fde7b0; color: #1c1c1c; font-size: 0.8em; vertical-align: 0.08em; }
+.jg-intro .jgp-card { margin-bottom: 1.6rem; }
+.jg-carrusel > .jg { margin: 0 0 1.6rem; padding: 1rem 1rem 1.2rem; border: 0.15rem solid rgba(255,255,255,.28); border-radius: 18px; background: rgba(255,255,255,.04); scroll-margin-top: 1rem; }
+.jgp-mini { position: fixed; left: 50%; bottom: max(0.8rem, env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 20; padding: 0.45rem 1rem; border: 0.2rem solid #1c1c1c; border-radius: 999px; background: linear-gradient(90deg, #fde7b0, #e5d8f7); color: #1c1c1c; text-decoration: none; font-size: 1rem; white-space: nowrap; box-shadow: 0 4px 0 #1c1c1c; }
+.jgp-mini b { font-size: 1.3rem; }
+.jgp-mini .pum { display: inline-block; animation: jgp-sube 0.6s ease; }
