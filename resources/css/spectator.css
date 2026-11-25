@@ -1808,7 +1808,7 @@ html.rc-pausa body { pointer-events: none; }
 .nmf-rabia{font:2.6em/1 "Permanent Marker","Comic Sans MS",cursive;color:#222}
 .nmf-rabia b{color:#c0392b;font-weight:400;font-size:1.25em;transform:rotate(-8deg);display:inline-block}
 .nmf-sebas{font:600 2.5em/1 "Caveat","Segoe Print",cursive;color:#2c6e8f;gap:.12em}
-.nmf-sebas .mirror{transform:scaleX(-1);opacity:.35;border-left:2px solid #9cc3d5;padding-left:.12em;margin-left:.08em}
+.nmf-sebas .mirror{font:inherit;display:inline-block;transform:scaleX(-1);color:#7fb6cf;opacity:.2;border-left:1px solid rgba(156,195,213,.5);padding-left:.12em;margin-left:.08em}
 .nmf-arr{font:2.1em/1 "VT323",ui-monospace,monospace;gap:.08em;color:#ffd84d}
 .nmf-arr>span{background:#1d2633;padding:.08em .14em;border-radius:3px;background-image:linear-gradient(transparent 49%,#0b1017 49%,#0b1017 53%,transparent 53%)}
 .nmf-arr i{font-style:normal;color:#1d2633;font-size:.8em;margin-left:.2em;transform:rotate(25deg) translateY(.2em);display:inline-block}
@@ -1871,16 +1871,14 @@ a.sp-song:hover { color: #fff !important; text-decoration: none; }
 .nmf-viwi{font:600 1.35em/1 "Fredoka","Comic Sans MS",sans-serif;color:#e07aa8;letter-spacing:.02em;background:#fde8f1;padding:.25em .6em .3em;border-radius:999px;gap:.15em}
 .nmf-viwi i{font-style:normal;font-size:.75em;color:#f29bc0;animation:nmLatido 1.6s ease-in-out infinite}
 @keyframes nmLatido{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
-/* Torvic: punk, letras recortadas tipo nota de rescate */
-.nmf-torvik{font-size:1.7em;line-height:1;gap:.1em}
-.nmf-torvik span{display:inline-block;padding:.08em .14em .04em;border:.09em solid #111;box-shadow:.08em .1em 0 #111;text-transform:uppercase}
+/* Torvic: grafiti, relleno en degradado, contorno negro, sombra en bloque y chorretones */
+.nmf-torvik{font:3.2em/1 "Sedgwick Ave Display","Permanent Marker",cursive;gap:0;filter:drop-shadow(.06em .07em 0 #111)}
+.nmf-torvik span{display:inline-block;position:relative;margin:0 -.03em;background:linear-gradient(180deg,#ff3fa4 0%,#ff7a2f 55%,#ffe03a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:.025em #111;text-transform:uppercase}
 .nm-cloud .nmf-torvik span{animation:nmBote 1.8s ease-in-out infinite}
-.nmf-torvik span:nth-child(1){font-family:"Bungee",Impact,sans-serif;background:#111;color:#ff2f92;transform:rotate(-9deg)}
-.nmf-torvik span:nth-child(2){font-family:"Permanent Marker",cursive;background:#fff200;color:#111;transform:rotate(6deg) translateY(.1em);text-transform:lowercase}
-.nmf-torvik span:nth-child(3){font-family:"VT323",monospace;font-size:1.25em;background:#fff;color:#111;transform:rotate(-4deg)}
-.nmf-torvik span:nth-child(4){font-family:"Cinzel",serif;background:#ff2f92;color:#111;transform:rotate(10deg) translateY(-.08em)}
-.nmf-torvik span:nth-child(5){font-family:"Permanent Marker",cursive;background:#111;color:#fff200;transform:rotate(-7deg) translateY(.06em);text-transform:lowercase}
-.nmf-torvik span:nth-child(6){font-family:"Bungee",Impact,sans-serif;background:#fff;color:#e3121b;transform:rotate(5deg);text-decoration:line-through #111 .08em}
+.nmf-torvik span:nth-child(odd){transform:rotate(-6deg)}
+.nmf-torvik span:nth-child(even){transform:rotate(5deg) translateY(.06em)}
+.nmf-torvik span:nth-child(2)::after,.nmf-torvik span:nth-child(5)::after{content:"";position:absolute;left:45%;top:82%;width:.09em;height:.32em;border-radius:0 0 .06em .06em;background:#ff3fa4;border:.02em solid #111;border-top:0}
+.nmf-torvik span:nth-child(5)::after{height:.22em;left:30%;background:#ffe03a}
 .nmf-torvik span:nth-child(2){animation-delay:.15s}.nmf-torvik span:nth-child(3){animation-delay:.3s}.nmf-torvik span:nth-child(4){animation-delay:.45s}.nmf-torvik span:nth-child(5){animation-delay:.6s}.nmf-torvik span:nth-child(6){animation-delay:.75s}
 @keyframes nmBote{0%,100%{translate:0 0}30%{translate:0 -.25em}}
 @media (prefers-reduced-motion:reduce){.nmf-viwi i,.nmf-torvik span{animation:none}}
